@@ -1,0 +1,5 @@
+jinja2>=2.10
+pygments
+markdown<3.0
+pyyaml
+beautifulsoup4
