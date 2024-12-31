@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: R_plus
+Version: 0.0.1
+Summary: R+ implementation
+Home-page: https:/github.com/incpink-Liu/DNA-storage-R_plus
+Author: Incpink Liu, Zhi Ping
+Author-email: liuderuilin@genomics.cn, liuderuilin22@mails.ucas.ac.cn
+Maintainer: BGI-research
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+License-File: LICENSE
+
+R+ is a DNA storage transcoding strategy developed by BGI-research. 
+Briefly, it can provide a direct mapping refence between expanded molecular alphabet and N-nary digits in the absence of high-performance transcoding algorithm at present.
+The detailed information is available in the Github Repository (create a new page to open it): https:/github.com/incpink-Liu/DNA-storage-R_plus
