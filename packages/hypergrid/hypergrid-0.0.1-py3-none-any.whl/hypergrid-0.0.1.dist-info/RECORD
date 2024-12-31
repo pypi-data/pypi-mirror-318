@@ -1,0 +1,16 @@
+hypergrid/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hypergrid/dimension.py,sha256=bhgUyN0qqFJzDq_y25uVNPvvdf9kkAVOSJ8NGnv6yZA,1200
+hypergrid/dsl.py,sha256=6k3odcHiMDrmB0zwD89lturaUI3obuiJnWAnLCQGjkU,245
+hypergrid/grid.py,sha256=zOi9Etd9fxU3zlr0iLLbrngZnAPj9b8v_iRNY4UghuY,11504
+hypergrid/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hypergrid/util.py,sha256=YsP813uwdMB2H-WCmXvZFPYjCLVx1CEFukR_24aLFYQ,125
+hypergrid/ext/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hypergrid/ext/sklearn.py,sha256=4pzH4uoLEgqmRrKyhbUW1rIgAkC5Gq74Zuyg9rAnHhY,1333
+hypergrid/gen/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hypergrid/gen/distribution.py,sha256=rKOf76VOa1whSGpKBRIN03CZKufKwYyrcCZgwnSP-0s,658
+hypergrid/gen/iterable.py,sha256=KA8IdL-RTm22CMV9IiFaPE-u8WE8P9Z_ZJR-o5ua-rg,786
+hypergrid-0.0.1.dist-info/LICENSE,sha256=lbBJkxhX6qbAMLKmtt3dZBI8MlnQlNl6Gz2Nx3Ji8a8,1062
+hypergrid-0.0.1.dist-info/METADATA,sha256=ccrEE9Y8vipGFPwTfgd5WJmuwnvgc5IkO3FSOa7B_Pg,4549
+hypergrid-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+hypergrid-0.0.1.dist-info/top_level.txt,sha256=V3CNpgOUi7UIrZ57fcYKkKq2K6O_Tjxjbf__ymPl468,10
+hypergrid-0.0.1.dist-info/RECORD,,
