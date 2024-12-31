@@ -1,0 +1,2 @@
+[console_scripts]
+typ2anki = typ2anki.main:main
