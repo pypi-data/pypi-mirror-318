@@ -1,0 +1,16 @@
+item_matching/README.md,sha256=HTGYRffpf1REIIJO_E8H1HnlVNIvMVpjFl5E-gdML9c,1752
+item_matching/__init__.py,sha256=H1eRvrNDjwN7OJKeUAOods9-ArtUtB0aPmKmITeMuZA,289
+item_matching/main_match.py,sha256=rt0kuMQRqZIdmB5I_20aDDrpOyo_2w_5Zk09jBaiPTI,5956
+item_matching/func/check_brand.py,sha256=FYZZW0W1LAN3Bwxmp7ZXly1IodHdc3I8EjvWKb22vJs,1006
+item_matching/func/function_image.py,sha256=aLb7FpUdDMrPAkzNzmAIINOBBgQFGEeSF0I4BATSnHw,2353
+item_matching/func/function_text.py,sha256=hDos4ZsPib1D_7m1KSlBr7o63joMp3hO3HYcYk8567A,1018
+item_matching/func/post_processing.py,sha256=SQzwHU13NjAPX6zGwVwNCbssEywfCeejuDoLG4EFSy8,2459
+item_matching/func/validation.py,sha256=SR74BrfJCSM6zNoH68ixhXBkjv2rL3-vpJUDQLJeRZI,2539
+item_matching/model/model.py,sha256=MKop1aTVrU-Rd69yqdeB5SoJvxx641iJ721JIlRc-0c,1909
+item_matching/pipeline/build_index_and_query.py,sha256=SRmtQaHTtMdP-gLYA7JVmvypceg-flgcE7nAVYgeLB4,7013
+item_matching/pipeline/data_loading.py,sha256=tmk7ZRTs9Ihz8a2lwC4diLvdPD0WJf8zU2ncY6K9n7A,3892
+item_matching/pipeline/rerank.py,sha256=tBXmx2VBr5vSqWkggdU5C5Xu9Jh-_CVNEkZHQGMASrA,4091
+item_matching-0.0.86.dist-info/METADATA,sha256=3ta1wxh9lu6zkXIf4QYd63GRPL2kglcVCTVWr9zX0IY,2356
+item_matching-0.0.86.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+item_matching-0.0.86.dist-info/licenses/LICENSE,sha256=e52nUM7JfwNPEdg6TvBFl07OHaXfeQqSdQSsDPyRssE,1054
+item_matching-0.0.86.dist-info/RECORD,,
