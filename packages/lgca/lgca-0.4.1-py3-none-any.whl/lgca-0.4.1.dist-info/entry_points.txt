@@ -1,0 +1,3 @@
+[console_scripts]
+gen = lgca.entrypoints:gen.main
+lgca = lgca.entrypoints:gui.main
