@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]  # Minimum versions of required build tools
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geometry_packer"
+version = "0.1.0"
+description = "A Python package for efficient packing and manipulation of geometric shapes in 2D and 3D domains, tailored for RVE and related applications."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Rajesh Nakka", email = "338rajesh@gmail.com" }
+]
+maintainers = [
+    { name = "Rajesh Nakka", email = "338rajesh@gmail.com" }
+]
+keywords = ["RVE", "RUC", "Unit Cell"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "numpy==2.2.0",
+    "matplotlib==3.10.0",
+    "gbox==0.2.0",
+]
+
+[project.urls]
+documentation = "https://geometry_packer.readthedocs.io"
+repository = "https://github.com/338rajesh/geometry_packer"
+# homepage = "https://your_project_homepage.com"
+# changelog = "https://your_changelog_page.com"

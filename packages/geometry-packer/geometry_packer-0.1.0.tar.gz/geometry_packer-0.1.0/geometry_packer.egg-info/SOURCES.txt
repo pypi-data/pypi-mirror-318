@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+geometry_packer/__init__.py
+geometry_packer/geometry_packer.py
+geometry_packer/utils.py
+geometry_packer.egg-info/PKG-INFO
+geometry_packer.egg-info/SOURCES.txt
+geometry_packer.egg-info/dependency_links.txt
+geometry_packer.egg-info/requires.txt
+geometry_packer.egg-info/top_level.txt
