@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: tagy
+Version: 0.2.0
+Summary: Static site generator
+Home-page: https://github.com/melnikov-ivan/tagy
+Author: Ivan Melnikov
+Author-email: melnikov.ivan@gmail.com
+License: MIT
+Keywords: Jinja2 fully customizable static site generator
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Requires-Dist: Jinja2==3.1
+Requires-Dist: PyYAML
+Requires-Dist: mistune==0.8.1
+Requires-Dist: Pillow
