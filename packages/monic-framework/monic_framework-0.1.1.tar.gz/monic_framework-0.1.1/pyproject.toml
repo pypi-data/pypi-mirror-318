@@ -1,0 +1,24 @@
+[project]
+name = "monic-framework"
+version = "0.1.1"
+description = "Monic Framework"
+requires-python = ">=3.10"
+dependencies = ["fastapi[standard]>=0.115.6", "sqlmodel>=0.0.22"]
+authors = [{ name = "Cognica, Inc.", email = "support@cognica.io" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+
+[project.optional-dependencies]
+dev = ["coverage>=7.6.10", "pytest>=8.3.4", "pytest-cov>=6.0.0"]
+
+[build-system]
+requires = ["setuptools>=40.8.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 80
+target-version = ["py310", "py311", "py312", "py313"]
+include = '\.pyi?$'
+
+[tool.mypy]
+ignore_missing_imports = true
