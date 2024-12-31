@@ -1,0 +1,4 @@
+dist
+gw2api
+res
+test
