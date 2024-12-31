@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: django-class-registry
+Version: 1.1.2
+Summary: Register any classes like Django's admin.
+Home-page: http://github.com/imtapps/django-class-registry
+Author: IMT Computer Services
+Author-email: imtapps@apps-system.com
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+License-File: LICENSE
+
+Allows you to create any Registry, similar to how django's admin
+has you register classes, or their template library has you register tags.
+
+
+Usage
+======
+
+::
+
+    from class_registry import Registry
+
+    site = Registry()
+
+    @site.register
+    class MyCoolClass(object):
+      """
+      My class that should be registered.
+      """
+      key = "ABC"
+
+
+    >>> site["ABC"]
+    <class 'MyCoolClass'>
+
+Alternate use
+-------------
+
+Or, if you want your own key name, specify it when you register the class.::
+
+    container = Registry(key_name="other_key")
+
+    @container.register
+    class MyCoolClass(object):
+      other_key = "POL-COOL-CLS"
+
