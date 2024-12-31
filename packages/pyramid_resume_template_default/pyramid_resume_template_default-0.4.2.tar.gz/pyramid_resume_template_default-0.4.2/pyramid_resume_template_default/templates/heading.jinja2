@@ -1,0 +1,40 @@
+<div class="ContactInfo">
+    <div class="NameHeader">
+        <h1 class="PersonName">{{ contact_info.name }}</h1>
+        <p class="Objective">{{ contact_info.objective }}</p>
+    </div>
+    <div class="ContactMethod">
+        <div class="PostalAddress">{{ contact_info.street_address }}<br/>
+            <span class="Municipality">{{ contact_info.city }}</span>, <span
+                    class="Region">{{ contact_info.state }}</span> {{ contact_info.zip }}
+        </div>
+        <a href="tel:+{{ contact_info.phone }}">{{ contact_info.phone }}</a>
+        <br/>
+        <a class="InternetEmailAddress" href="mailto:{{ contact_info.email }}">
+            <span class="InternetEmailAddress-User">{{ contact_info.email_user }}</span>@<span
+                class="InternetEmailAddress-Domain">{{ contact_info.email_domain }}</span>
+        </a>
+        {% if contact_info.website %}
+        <br/>
+        <a class="InternetWebAddress" href="{{ contact_info.website }}"
+           onclick="window.open(this.href);return false;">{{ contact_info.website }}</a>
+        {% endif %}
+        {% if contact_info.linkedin %}
+        <br/>
+        <a style="text-decoration: none;" href="{{ contact_info.linkedin }}">
+            <i class="fab fa-linkedin mr-2 mt-1 text-right"></i>
+            <span class="text-right">{{ contact_info.linkedin_short }}</span>
+        </a>
+        {% endif %}
+        {% if contact_info.github %}
+        <br/>
+        <a style="text-decoration: none;" href="{{ contact_info.github }}">
+            <i class="fab fa-github mr-2 mt-1" style="font-size: 1rem"></i>
+            <span class="text-right">{{ contact_info.github_short }}</span>
+        </a>
+        {% endif %}
+    </div>
+</div>
+<div class="ExecutiveSummary">
+    {{ executive_summary }}
+</div>
