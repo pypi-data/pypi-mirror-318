@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: math_calculator_ahd
+Version: 0.1
+Summary: A simple math calculator
+Home-page: https://github.com/yourusername/math_calculator
+Author: akida2002
+Author-email: aihedan_1122@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Math Calculator
+
+A simple math calculator application.
+
+## Installation
+
+You can install the math calculator using pip:
+
+```bash
+pip install .
+```
+
+## Usage
+
+Run the calculator with:
+
+```bash
+python calculator.py
+```
+
+## Features
+
+- Add new tasks
+- Complete tasks
+- Delete tasks

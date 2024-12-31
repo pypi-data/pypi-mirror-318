@@ -1,0 +1,6 @@
+README.md
+setup.py
+math_calculator_ahd.egg-info/PKG-INFO
+math_calculator_ahd.egg-info/SOURCES.txt
+math_calculator_ahd.egg-info/dependency_links.txt
+math_calculator_ahd.egg-info/top_level.txt
