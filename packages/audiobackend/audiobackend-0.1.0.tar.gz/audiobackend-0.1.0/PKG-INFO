@@ -1,0 +1,100 @@
+Metadata-Version: 2.1
+Name: audiobackend
+Version: 0.1.0
+Summary: High-quality audio playback library with DSD support and efficient buffer management
+Author-email: Niamorro <niamorrodev@gmail.com>
+License: GPL-3.0-or-later
+Project-URL: Homepage, https://github.com/Niamorro/audiobackend
+Project-URL: Documentation, https://niamorro.github.io/audiobackend/
+Project-URL: Repository, https://github.com/Niamorro/audiobackend.git
+Project-URL: Issues, https://github.com/Niamorro/audiobackend/issues
+Keywords: audio,playback,DSD,sound,music,player,high-quality,buffer
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Multimedia :: Sound/Audio :: Players
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: av>=10.0.0
+Requires-Dist: sounddevice>=0.4.5
+Requires-Dist: numpy>=1.20.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: build>=0.10.0; extra == "dev"
+Requires-Dist: twine>=4.0.0; extra == "dev"
+Requires-Dist: mkdocs-material>=9.0.0; extra == "dev"
+Requires-Dist: mkdocs-git-revision-date-localized-plugin>=1.0.0; extra == "dev"
+Requires-Dist: mkdocs-minify-plugin>=0.7.0; extra == "dev"
+
+# audiobackend
+
+A high-quality audio playback library for Python with DSD support and efficient buffer management.
+
+## Features
+
+- High-quality audio playback with various formats support (MP3, WAV, FLAC, DSD)
+- Efficient buffer management for optimal memory usage
+- Automatic sample rate detection and resampling
+- Thread-safe implementation
+- Simple and intuitive API
+
+## Installation
+
+```bash
+pip install audiobackend
+```
+
+### Requirements
+
+- Python 3.7 or higher
+- FFmpeg (required by PyAV)
+
+#### System Dependencies
+
+Ubuntu/Debian:
+```bash
+sudo apt-get install libav-tools portaudio19-dev
+```
+
+macOS:
+```bash
+brew install ffmpeg portaudio
+```
+
+Windows:
+- FFmpeg and PortAudio are included in the package dependencies
+
+## Quick Example
+
+```python
+from audiobackend import AudioBackend
+
+player = AudioBackend()
+player.load_file("music.mp3")
+player.play()
+```
+
+## Documentation
+
+For detailed information about usage, API reference, and advanced features, visit our [documentation](https://niamorro.github.io/audiobackend/).
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) file for details.
