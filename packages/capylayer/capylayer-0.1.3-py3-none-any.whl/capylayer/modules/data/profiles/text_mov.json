@@ -1,0 +1,21 @@
+{
+    "name": "text_mov",
+    "key_layers": [
+        {
+            "mod_hotkey": [
+                "CapsLock"
+            ],
+            "mod_mode": "switch",
+            "key_remaps": {
+                "i": "Up",
+                "j": "Left",
+                "k": "Down",
+                "l": "Right",
+                "e": "PgUp",
+                "s": "Home",
+                "d": "PgDn",
+                "f": "End"
+            }
+        }
+    ] 
+}
