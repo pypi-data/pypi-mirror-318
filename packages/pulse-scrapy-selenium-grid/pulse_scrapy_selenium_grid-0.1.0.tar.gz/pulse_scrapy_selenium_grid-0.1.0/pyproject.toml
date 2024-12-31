@@ -1,0 +1,44 @@
+[build-system]
+requires = [
+    "setuptools>=65.0.0",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pulse-scrapy-selenium-grid"  # The PyPI package name (use dashes here, underscores in folder).
+version = "0.1.0"
+description = "Scrapy + Selenium Grid integration."
+authors = [
+    { name = "Vlad Tiazhov", email = "vlad.tiazhov@pulseintelligence.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.13"
+
+[project.urls]
+Repository="https://github.com/Pulse-Intelligence-Partners/pulse-scrapy-selenium-grid/"
+
+
+[tool.black]
+line-length = 120
+target-version = ["py312"]
+
+[tool.autoflake]
+exclude = [
+    ".git",
+    "__pycache__",
+]
+remove-all-unused-imports = true
+remove-unused-variables = true
+in-place = true
+recursive = true
+ignore-init-module-imports = true
+
+[tool.isort]
+line_length = 120
+py_version = 312
+include_trailing_comma = true
+multi_line_output = 3
