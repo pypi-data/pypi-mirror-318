@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kamera Stream</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      let currentSettings = {};
+
+      async function getSettings() {
+        try {
+          const response = await fetch("/settings", { method: "GET" });
+          if (!response.ok) {
+            throw new Error("Failed to fetch settings");
+          }
+          currentSettings = await response.json();
+          updateUI(currentSettings);
+        } catch (error) {
+          console.error("Error fetching settings:", error);
+        }
+      }
+
+      async function updateSetting(name, value) {
+        currentSettings[name] = value;
+
+        try {
+          const response = await fetch("/settings", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(currentSettings),
+          });
+          if (!response.ok) {
+            throw new Error("Failed to update setting");
+          }
+
+          // If the camera index is updated, refresh the video feed
+          if (name === "camera_index") {
+            const videoFeed = document.querySelector("#video-feed img");
+            videoFeed.src = "/video_feed?timestamp=" + new Date().getTime(); // Add a cache-buster
+          }
+        } catch (error) {
+          console.error("Error updating setting:", error);
+        }
+      }
+
+      async function resetSettings() {
+        const defaultSettings = {
+          rotate: 0,
+          brightness: 1.0,
+          grayscale: false,
+          mirror: false,
+          filter_name: "none",
+          camera_index: 0,
+        };
+
+        try {
+          currentSettings = { ...defaultSettings };
+          const response = await fetch("/settings", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(currentSettings),
+          });
+          if (!response.ok) {
+            throw new Error("Failed to reset settings");
+          }
+          updateUI(currentSettings);
+        } catch (error) {
+          console.error("Error resetting settings:", error);
+        }
+      }
+
+      function updateUI(settings) {
+        document.getElementById("rotate").value = settings.rotate ?? "0";
+        document.getElementById("brightness").value =
+          settings.brightness ?? "1.0";
+        document.getElementById("grayscale").checked =
+          settings.grayscale ?? false;
+        document.getElementById("mirror").checked = settings.mirror ?? false;
+        document.getElementById("filter_name").value =
+          settings.filter_name ?? "none";
+        document.getElementById("camera_index").value =
+          settings.camera_index ?? "0";
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        getSettings();
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Kamera Stream</h1>
+    </header>
+
+    <main>
+      <section id="video-feed">
+        <p>
+          Video streaming is available at:
+          <strong><a href="/video_feed">/video_feed</a></strong>
+        </p>
+        <img
+          src="/video_feed"
+          id="video-feed-image"
+          width="640"
+          height="480"
+          alt="Video Feed"
+          aria-label="Video feed display"
+        />
+      </section>
+
+      <section id="settings">
+        <h2>Camera Settings</h2>
+        <div class="setting">
+          <label for="camera_index">Camera Index:</label>
+          <select
+            id="camera_index"
+            name="camera_index"
+            onchange="updateSetting('camera_index', this.value)"
+          >
+            <option value="0">Camera 0</option>
+            <option value="1">Camera 1</option>
+            <option value="2">Camera 2</option>
+          </select>
+        </div>
+
+        <div class="setting">
+          <label for="rotate">Rotate:</label>
+          <select
+            id="rotate"
+            name="rotate"
+            onchange="updateSetting('rotate', this.value)"
+          >
+            <option value="0">0°</option>
+            <option value="90">90°</option>
+            <option value="180">180°</option>
+            <option value="270">270°</option>
+          </select>
+        </div>
+
+        <div class="setting">
+          <label for="mirror">Mirror:</label>
+          <input
+            type="checkbox"
+            id="mirror"
+            name="mirror"
+            onchange="updateSetting('mirror', this.checked)"
+          />
+        </div>
+
+        <div class="setting">
+          <label for="brightness">Brightness:</label>
+          <input
+            type="range"
+            id="brightness"
+            name="brightness"
+            min="0.1"
+            max="2.0"
+            step="0.1"
+            value="1.0"
+            oninput="updateSetting('brightness', this.value)"
+            aria-label="Adjust brightness"
+          />
+        </div>
+
+        <div class="setting">
+          <label for="grayscale">Grayscale:</label>
+          <input
+            type="checkbox"
+            id="grayscale"
+            name="grayscale"
+            onchange="updateSetting('grayscale', this.checked)"
+          />
+        </div>
+
+        <div class="setting">
+          <label for="filter_name">Filter:</label>
+          <select
+            id="filter_name"
+            name="filter_name"
+            onchange="updateSetting('filter_name', this.value)"
+          >
+            <option value="none">None</option>
+            <option value="sepia">Sepia</option>
+            <option value="blur">Blur</option>
+            <option value="edges">Edges</option>
+          </select>
+        </div>
+
+        <button type="button" onclick="resetSettings()">
+          Reset to Default
+        </button>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Kamera Stream</p>
+    </footer>
+  </body>
+</html>
