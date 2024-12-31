@@ -1,0 +1,9 @@
+target_starrocks/__init__.py,sha256=XqO7Fq4gMulDCqcAHkqyqqmQEEnXMXPU-zcIYqwn0AM,28
+target_starrocks/__main__.py,sha256=vQdzeNiuORsK29rdyv_ekEqYMhYGDNkLa_XfstjwTUs,141
+target_starrocks/sinks.py,sha256=sYfZTUYQn-93jnlLLxkehfW1tsCvJhJ-WOGb-Jcgsfw,3011
+target_starrocks/target.py,sha256=I-bHWlW0j4MGS0MG_5gJMCvUbeYPWydvwsH12BiF8fY,1396
+target_starrocks-0.0.1a2.dist-info/LICENSE,sha256=R7yOG1J8LOZLANx0ngv68vRDV2tnLcqr9qs52GCrgd4,11355
+target_starrocks-0.0.1a2.dist-info/METADATA,sha256=u8DsuUsq_ZXE5WmhLUvH7MfMfCyv2aZKPqVM5G38cJM,12691
+target_starrocks-0.0.1a2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+target_starrocks-0.0.1a2.dist-info/entry_points.txt,sha256=hOC_IQFZHLYBj6AOjk61v7i3TAGlesU7581LSNS_uDY,80
+target_starrocks-0.0.1a2.dist-info/RECORD,,
