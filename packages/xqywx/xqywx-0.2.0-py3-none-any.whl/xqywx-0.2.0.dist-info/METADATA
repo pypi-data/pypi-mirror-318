@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: xqywx
+Version: 0.2.0
+Summary: 企业微信应用API客户端
+Home-page: http://qy.softinit.com
+Author: Your Name
+Author-email: your.email@example.com
+Keywords: 企业微信,API,客户端
+Requires-Dist: requests (>=2.25.0)
+
