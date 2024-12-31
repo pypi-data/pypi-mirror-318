@@ -1,0 +1,5 @@
+pyproject.toml
+goldbar.egg-info/PKG-INFO
+goldbar.egg-info/SOURCES.txt
+goldbar.egg-info/dependency_links.txt
+goldbar.egg-info/top_level.txt
