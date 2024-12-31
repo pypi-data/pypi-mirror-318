@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: file_util_deepsec
+Version: 1.0.0
+Summary: Provide utility method for file related operations.
+Author-email: Yuchen Li <lyuchengz@163.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12.3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: joblib==1.4.2
+
+# File Utility Class
+
+A Python utility class for interacting with files like json, csv, and joblib using corresponding library. This class simplifies loading and saving data from these files.
+
+Currently, it support the following files:
+- json
+- csv
+- joblib
