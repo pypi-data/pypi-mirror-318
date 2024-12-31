@@ -1,0 +1,10 @@
+flora_translator/__init__.py,sha256=ZhUu76sQE1_SPfwHsVvTUKSM7JcIYpZzQfUlSJpGlH8,106
+flora_translator/google_support_language.py,sha256=ePt37uqg3RNCK1tiAhHWKOPqqfrnXHDlum2yPTrMdds,3583
+flora_translator/translate_controls_content.py,sha256=hcEJQCSE-nya1BxhQXpsnKZI1csRjKPU-y5d7D-b86M,2657
+flora_translator/translate_page.py,sha256=0AKxVb0CWo2N6xywzUQq-FmncZUgBekdKJCZFab_4XI,3829
+flora_translator/translate_using_google.py,sha256=tTP1kq4I3fIDAec4Qbf_AwpTWjhCLJxjQy0R9naGpBk,1554
+flora_translator-2.0.1.dist-info/LICENSE,sha256=RyOeFIJJ6qI8KHvE3Ua2edtE0miPTmHM_BkDYrgA3H8,1062
+flora_translator-2.0.1.dist-info/METADATA,sha256=8BerUmgENjZEr8gIERfrHrtXbqFFjMLA1piiRRrn320,622
+flora_translator-2.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+flora_translator-2.0.1.dist-info/top_level.txt,sha256=iEk1MH_jGhCNWc_o5Eac25o1Zm0BKpObVWUPH9RbWxk,17
+flora_translator-2.0.1.dist-info/RECORD,,
