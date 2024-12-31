@@ -1,0 +1,2 @@
+[console_scripts]
+sar = python.aws:get_sts_assume_role
