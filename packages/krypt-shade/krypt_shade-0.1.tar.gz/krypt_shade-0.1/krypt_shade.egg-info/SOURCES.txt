@@ -1,0 +1,8 @@
+README.md
+setup.py
+krypt_shade/__init__.py
+krypt_shade/color.py
+krypt_shade.egg-info/PKG-INFO
+krypt_shade.egg-info/SOURCES.txt
+krypt_shade.egg-info/dependency_links.txt
+krypt_shade.egg-info/top_level.txt

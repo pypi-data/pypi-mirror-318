@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: krypt_shade
+Version: 0.1
+Summary: A library to manipulate colors (HEX to RGB, brightness adjustment, shade generation)
+Home-page: https://github.com/krypton-0x00/krypt_shade
+Author: krypton-0x00
+Author-email: krypton0x00@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# ColorLib
+
+ColorLib is a Python library that provides utilities for color manipulation, including:
+
+- Conversion between HEX and RGB
+- Brightness adjustment
+- Generation of color shades
+
+## Installation
+
+You can install the library using pip:
+
+```bash
+pip install krypt_shade
+```
+## Usage
+```python
+from krypt_shade import Color
+
+# Create a Color object from a HEX color
+color = Color.from_hex("#ff5733")
+
+# Generate 5 shades of the color
+shades = color.generate_shades()
+for shade in shades:
+    print(shade)
+
+```
