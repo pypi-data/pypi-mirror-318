@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+src/dataxi/__init__.py
+src/dataxi/save_secret.py
+src/dataxi.egg-info/PKG-INFO
+src/dataxi.egg-info/SOURCES.txt
+src/dataxi.egg-info/dependency_links.txt
+src/dataxi.egg-info/requires.txt
+src/dataxi.egg-info/top_level.txt
