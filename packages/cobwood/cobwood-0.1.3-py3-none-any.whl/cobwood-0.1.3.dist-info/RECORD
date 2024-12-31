@@ -1,0 +1,16 @@
+cobwood/__init__.py,sha256=D1S2Lc1JSzhGkV6871M88yxWWKWdjP8atL3Wc71QZG8,871
+cobwood/faostat.py,sha256=CMAyuKaWytsoFP0zTBFwSBUWPvGw-QcGSiAVdLaTwvA,3283
+cobwood/gfpmx.py,sha256=lLJsLQiD85tDwS2RnAbdUkCveWFT0NlYsFdx3bSmA6M,10010
+cobwood/gfpmx_data.py,sha256=o62EwPI6GkzSNNM7ymA4YmSOZW5RGmxGQ5Vhf7diCE8,23713
+cobwood/gfpmx_equations.py,sha256=n6Zmu8AwKG9AnIf9JjYI33VQV6cZ9W31V_AsMWQefKg,12316
+cobwood/gfpmx_plot.py,sha256=sfMAA1Gd1XhRrDiIzV_CxcM_KeOse6USsVs4AbsC8Kk,2519
+cobwood/gfpmx_qaqc.py,sha256=P2QLZjIwGrB0dnmftenOVbMpLdwTDYTOMr8dh7hlpzA,2859
+cobwood/gfpmx_spreadsheet_to_csv.py,sha256=TNjrAqXF87c5Fmao3r4DXDJz8LR_hODvqgG8VwRv4lc,6599
+cobwood/logger.py,sha256=lgA-Yp2TnELEZIuR17NJfWM22QDEAGSlgD7Gusqd88Q,1441
+cobwood/eurostat/population.py,sha256=TBanj8bbcTAX8jTSCN1Iq-jLrBsVzf1Mdjb9c-u4-bg,4768
+cobwood/tests/test_gfpmx_equations.py,sha256=eOJTBXr5e7vN6PbIN_txB5ys-yGka8_1EmRY_WBQOhk,5602
+cobwood-0.1.3.dist-info/METADATA,sha256=sqCNrSEWtMo0MFuGe6ZiR5QdhZBpQnKkLZZHaj898aU,4406
+cobwood-0.1.3.dist-info/NOTICE.txt,sha256=apeeNHIsVcvT6x7eJxd9NrNWeOtRckv8Z8P8Az9e1Eo,17484
+cobwood-0.1.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+cobwood-0.1.3.dist-info/top_level.txt,sha256=Q1GKKTrwV7sg_n2sZiLe7cfqjNJOHQIQEVr3eFu3zjM,8
+cobwood-0.1.3.dist-info/RECORD,,
