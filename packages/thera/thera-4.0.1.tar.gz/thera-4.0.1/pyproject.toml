@@ -1,0 +1,31 @@
+[project]
+name = "thera"
+version = "4.0.1"
+authors = [{name = "Craig Howard", email = "craig@seagrape.us"}]    
+description = "Static site generator"
+readme = {file = "README", content-type = "text/markdown"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "mako",
+    "markdown",
+    "pyaml",
+]    
+
+[project.urls]
+Homepage = "https://seagrape.us/thera.html"
+Repository = "https://pypi.org/project/thera/"
+Changelog = "https://seagrape.us/thera-history.html"
+
+[project.scripts]
+thera = "thera:thera.main"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["thera"]
