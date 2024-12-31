@@ -1,0 +1,10 @@
+fb_data/.DS_Store,sha256=bw-hDl2OV_HxVcxW5ejXAWoEepcZNowaNoAN0oO2yIo,6148
+fb_data/__init__.py,sha256=lkRxbWBiCtQToglMedZzxakVGeTKpuyEFOjDS40iNw4,207
+fb_data/google_analytics.py,sha256=tNPtqG3RLvAxSrloUkQp3iMQerdQ8bIETV6Tds-mX2k,3089
+fb_data/google_search_console.py,sha256=_kaKHvtUm418XP-ZIGuZJGce3zhkKzEW6btkDv8i4SM,4986
+fb_data/snowflake_helper.py,sha256=BCAdF-n8EQAT-7bX9TKrIvFcigr6p_IDEde2nghlttc,14417
+fb_data/utils.py,sha256=d2wue7QH5d6SrBRDCSnkmoiSA55RKjr08SbiNurGf40,778
+fb_data-1.0.0.dist-info/LICENSE,sha256=mI9GgmMpQf3vkYU7QHNN_VuSnkMaThHlI0Vw1riIeyc,1075
+fb_data-1.0.0.dist-info/METADATA,sha256=s_usGsux5hBVay0FfN-gSwlnnZYWu9Qrd9AAR79GPaU,1338
+fb_data-1.0.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+fb_data-1.0.0.dist-info/RECORD,,
