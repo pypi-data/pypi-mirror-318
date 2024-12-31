@@ -1,0 +1,29 @@
+{% load i18n %}{% autoescape off %}{% blocktrans with user=recipient %}Hello {{ user }}!{% endblocktrans %}
+
+{% trans 'New order created' %}:
+
+{% trans 'Number' %}: {{ order.number }}
+{% trans 'Customer' %}: {{ order.user }}
+
+{% trans 'Billing details' %}:
+{{ order.billing_name }}
+{{ order.billing_street }}
+{{ order.billing_postcode }} {{ order.billing_city }}
+{{ order.billing_country }}
+
+{% trans 'Company Registration No.' %}: {{ order.reg_id }}
+{% trans 'TAX ID' %}: {{ order.tax_id }}
+{% trans 'VAT ID' %}: {{ order.vat_id }}
+
+{% trans 'Purchased items' %}:{% for item in order.purchaseditem_set.all %}
+{{ item }} ({{ item.quantity }}x): {{ item.get_subtotal_display }}{% endfor %}
+
+{% trans 'Shipping' %}: {{ order.shipping_option }}
+{% trans 'Payment method' %}: {{ order.payment_method }}
+{% if order.loyalty_points > 0 %}{% trans 'Loyalty points' %}: {{ order.get_loyalty_points_display }}{% endif %}
+{% trans 'Total' %}: {{ order.get_total_display }}
+
+{% blocktrans with site_name=site.name site_domain=site.domain %}{{ site_name }} team!
+{{ site_domain }}
+{% endblocktrans %}
+{% endautoescape %}

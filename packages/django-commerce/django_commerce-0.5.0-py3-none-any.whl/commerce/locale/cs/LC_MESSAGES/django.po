@@ -1,0 +1,1298 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-12 21:33+0100\n"
+"PO-Revision-Date: 2022-11-05 10:18+0000\n"
+"Last-Translator: Peter Rusinak <peter.rusinak@transportly.eu>\n"
+"Language-Team: Czech <https://weblate.swida.sk/projects/django-commerce/app/"
+"cs/>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n "
+"<= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+"X-Generator: Weblate 4.9.1\n"
+
+#: admin.py:45 admin.py:99 forms.py:113
+#: templates/commerce/checkout_summary.html:7
+msgid "Delivery address"
+msgstr "Doručovací adresa"
+
+#: admin.py:46 admin.py:100
+msgid "Billing address"
+msgstr "Fakturační adresa"
+
+#: admin.py:47 admin.py:101 forms.py:146
+#: templates/commerce/checkout_summary.html:20
+msgid "Billing details"
+msgstr "Fakturační údaje"
+
+#: admin.py:48 admin.py:102 forms.py:135
+msgid "Contact details"
+msgstr "Kontaktní údaje"
+
+#: admin.py:49 admin.py:103 templates/commerce/mails/order_created.txt:9
+#: templates/commerce/mails/order_details.txt:7
+#: templates/commerce/mails/order_reminder.txt:7
+msgid "Shipping"
+msgstr "Doprava"
+
+#: admin.py:50
+msgid "Others"
+msgstr "Jiné"
+
+#: admin.py:51 admin.py:105
+msgid "Timestamps"
+msgstr "Časové údaje"
+
+#: admin.py:104
+msgid "Billing"
+msgstr "Fakturace"
+
+#: admin.py:128
+msgid "Missing bank API token"
+msgstr "Chybí token pro API banky"
+
+#: admin.py:132
+msgid "Missing bank API"
+msgstr "Chybí API banky"
+
+#: admin.py:168
+#, python-brace-format
+msgid "Bank API {commerce_settings.BANK_API} not implemented"
+msgstr "API banky {commerce_settings.BANK_API} není implementováno"
+
+#: admin.py:186
+msgid "Order not found"
+msgstr "Objednávka nenalezena"
+
+#: admin.py:197
+msgid "Currency mismatch"
+msgstr "Měna se liší"
+
+#: admin.py:199
+msgid "Total value mismatch"
+msgstr "Nesoulad celkové hodnoty"
+
+#: admin.py:206
+msgid "Missing variable symbol"
+msgstr "Chybí variabilní symbol"
+
+#: admin.py:209
+msgid "Sync transactions"
+msgstr "Synchronizovat transakce"
+
+#: admin.py:214
+msgid "Create invoice"
+msgstr "Vystavit fakturu"
+
+#: admin.py:219
+msgid "Send details"
+msgstr "Odeslat podrobnosti"
+
+#: admin.py:224
+msgid "Send reminder"
+msgstr "Odeslat připomínku"
+
+#: admin.py:228
+msgid "Loyalty program is disabled"
+msgstr "Věrnostní program je vypnutý"
+
+#: admin.py:241
+#, python-format
+msgid "User %s has %d loyalty points"
+msgstr "Uživatel %s má %d věrnostních bodů"
+
+#: admin.py:243
+#, python-format
+msgid "Loyalty reminder sent to %d users"
+msgstr "Věrnostní připomínka odeslána %d uživatelem"
+
+#: admin.py:244
+msgid "Send loyalty reminder"
+msgstr "Odeslat věrnostní připomínku"
+
+#: admin.py:248
+msgid "valid"
+msgstr "platné"
+
+#: admin.py:253
+msgid "yes"
+msgstr "ano"
+
+#: admin.py:254
+msgid "no"
+msgstr "ne"
+
+#: admin.py:281
+msgid "Products"
+msgstr "Produkty"
+
+#: apps.py:11
+msgid "Commerce"
+msgstr "Obchod"
+
+#: forms.py:19 forms.py:39
+msgid "Discount code"
+msgstr "Slevový kód"
+
+#: forms.py:20 loyalty.py:66 templates/commerce/checkout_summary.html:37
+#: templates/commerce/mails/order_created.txt:11
+#: templates/commerce/orders_table.html:10
+msgid "Loyalty points"
+msgstr "Věrnostní body"
+
+#: forms.py:49
+#, python-format
+msgid "You can use %d points"
+msgstr "Můžete použít %d bodů"
+
+#: forms.py:60
+msgid "Apply"
+msgstr "Aplikovat"
+
+#: forms.py:75
+#, python-format
+msgid "Discount code %s is not assigned to you"
+msgstr "Slevový kód %s vám není přiřazen"
+
+#: forms.py:78
+#, python-format
+msgid "Discount code %s is not valid anymore"
+msgstr "Slevový kód %s již není platný"
+
+#: forms.py:81
+#, python-format
+msgid "Discount code %s was used already"
+msgstr "Slevový kód %s již byl použit"
+
+#: forms.py:84
+#, python-format
+msgid "Discount code %s can be applied to at most %d items"
+msgstr "Slevový kód %s může být použit nejvýše na %d položek"
+
+#: forms.py:90
+msgid "Discount product is not in the cart"
+msgstr "Slevový produkt se nenachází v košíku"
+
+#: forms.py:93
+msgid "There is no such discount code"
+msgstr "Takový slevový kód neexistuje"
+
+#: forms.py:178 forms.py:241
+msgid "Continue"
+msgstr "Pokračovat"
+
+#: forms.py:218
+msgid "Choose Payment Type"
+msgstr "Zvolte typ platby"
+
+#: forms.py:232
+msgid "Select Shipping Option"
+msgstr "Vyberte možnost dopravy"
+
+#: forms.py:250
+#, python-format
+msgid "This payment method is not available for shipping option %s"
+msgstr "Tato platební metoda není dostupná pro možnost dopravy %s"
+
+#: gateways/globalpayments/managers.py:22
+#: gateways/stripe/templates/commerce/stripe_button.html:7
+msgid "Pay"
+msgstr "Platit"
+
+#: gateways/globalpayments/managers.py:146
+msgid "Invalid payment signature."
+msgstr "Nesprávný podpis platby."
+
+#: gateways/globalpayments/managers.py:154
+msgid "Payment failed. Error detail:"
+msgstr "Platba selhala. Chyba:"
+
+#: gateways/globalpayments/managers.py:158
+msgid "Transaction not recognised"
+msgstr "Transakce nebyla rozpoznána"
+
+#: gateways/globalpayments/managers.py:170
+msgid "Order successfully paid."
+msgstr "Objednávka úspěšně uhrazena."
+
+#: gateways/globalpayments/managers.py:173
+msgid "Payment without result."
+msgstr "Platba bez výsledku."
+
+#: gateways/globalpayments/models.py:16
+msgid "processing"
+msgstr "zpracovává se"
+
+#: gateways/globalpayments/models.py:17
+msgid "approved"
+msgstr "schváleno"
+
+#: gateways/globalpayments/models.py:18
+msgid "paid"
+msgstr "zaplaceno"
+
+#: gateways/globalpayments/models.py:19
+msgid "partial"
+msgstr "částečně zaplaceno"
+
+#: gateways/globalpayments/models.py:20
+msgid "canceled"
+msgstr "zrušeno"
+
+#: gateways/globalpayments/models.py:21
+msgid "unpaid"
+msgstr "nezaplaceno"
+
+#: gateways/globalpayments/models.py:22
+msgid "returned"
+msgstr "vráceno"
+
+#: gateways/globalpayments/models.py:24 gateways/globalpayments/models.py:40
+#: models.py:695
+msgid "order"
+msgstr "objednávka"
+
+#: gateways/globalpayments/models.py:25 models.py:645
+msgid "status"
+msgstr "stav"
+
+#: gateways/globalpayments/models.py:26 gateways/globalpayments/models.py:63
+#: gateways/stripe/models.py:10 models.py:278 models.py:564 models.py:689
+#: models.py:965
+msgid "created"
+msgstr "vytvořené"
+
+#: gateways/globalpayments/models.py:27 gateways/globalpayments/models.py:64
+#: gateways/stripe/models.py:11 models.py:279 models.py:565 models.py:690
+#: models.py:966
+msgid "modified"
+msgstr "upraveno"
+
+#: gateways/globalpayments/models.py:30
+msgid "payment"
+msgstr "platba"
+
+#: gateways/globalpayments/models.py:31
+msgid "payments"
+msgstr "platby"
+
+#: gateways/globalpayments/models.py:41
+msgid "operation"
+msgstr "operace"
+
+#: gateways/globalpayments/models.py:42
+msgid "order number"
+msgstr "číslo objednávky"
+
+#: gateways/globalpayments/models.py:43
+msgid "merchant order number"
+msgstr "číslo objednávky obchodníka"
+
+#: gateways/globalpayments/models.py:44
+msgid "md"
+msgstr "md"
+
+#: gateways/globalpayments/models.py:45
+msgid "primary code"
+msgstr "primární kód"
+
+#: gateways/globalpayments/models.py:46
+msgid "secondary code"
+msgstr "sekundární kód"
+
+#: gateways/globalpayments/models.py:47
+msgid "result text"
+msgstr "návratový text"
+
+#: gateways/globalpayments/models.py:48
+msgid "user param 1"
+msgstr "uživatelský parametr 1"
+
+#: gateways/globalpayments/models.py:49
+msgid "additional information"
+msgstr "dodatečné informace"
+
+#: gateways/globalpayments/models.py:50
+msgid "token"
+msgstr "token"
+
+#: gateways/globalpayments/models.py:51
+msgid "expiration"
+msgstr "expirace"
+
+#: gateways/globalpayments/models.py:52
+msgid "authorisation centre result"
+msgstr "výsledek autorizačního centra"
+
+#: gateways/globalpayments/models.py:53
+msgid "authorisation centre code"
+msgstr "kód autorizačního centra"
+
+#: gateways/globalpayments/models.py:54
+msgid "masked card number"
+msgstr "maskované číslo karty"
+
+#: gateways/globalpayments/models.py:55
+msgid "day to capture"
+msgstr "zachytit dne"
+
+#: gateways/globalpayments/models.py:56
+msgid "token registration status"
+msgstr "stav registrace tokenu"
+
+#: gateways/globalpayments/models.py:57
+msgid "authorisation centre result code"
+msgstr "návratový kód z autorizačního centra"
+
+#: gateways/globalpayments/models.py:58
+msgid "retrieval reference number"
+msgstr "referenční číslo vyhledávání"
+
+#: gateways/globalpayments/models.py:59
+msgid "payment account reference"
+msgstr "odkaz na platební účet"
+
+#: gateways/globalpayments/models.py:60
+msgid "trace ID"
+msgstr "trace ID"
+
+#: gateways/globalpayments/models.py:61
+msgid "digest"
+msgstr "digest"
+
+#: gateways/globalpayments/models.py:62
+msgid "digest 1"
+msgstr "digest 1"
+
+#: gateways/globalpayments/models.py:67
+msgid "result"
+msgstr "výsledek"
+
+#: gateways/globalpayments/models.py:68
+msgid "results"
+msgstr "výsledky"
+
+#: gateways/stripe/models.py:7 models.py:161
+msgid "user"
+msgstr "uživatel"
+
+#: gateways/stripe/models.py:8
+msgid "Stripe ID"
+msgstr "Stripe ID"
+
+#: gateways/stripe/models.py:9
+msgid "Payment method ID"
+msgstr "ID platební metody"
+
+#: gateways/stripe/models.py:14
+msgid "customer"
+msgstr "zákazník"
+
+#: gateways/stripe/models.py:15
+msgid "customers"
+msgstr "zákazníky"
+
+#: gateways/stripe/views.py:42 views/order.py:26
+msgid "It is not possible to pay this order anymore."
+msgstr "Tuto objednávku již nelze uhradit."
+
+#: gateways/stripe/views.py:58
+msgid "Order number"
+msgstr "Číslo objednávky"
+
+#: gateways/stripe/views.py:82 models.py:912
+#: templates/commerce/checkout_summary.html:43
+msgid "Shipping fee"
+msgstr "Poplatek za doručení"
+
+#: gateways/stripe/views.py:94 models.py:924
+#: templates/commerce/checkout_summary.html:47
+msgid "Payment fee"
+msgstr "Poplatek za platbu"
+
+#: gateways/stripe/views.py:135
+msgid "Payment was successful."
+msgstr "Platba proběhla úspěšně."
+
+#: gateways/stripe/views.py:142
+msgid "Payment failed."
+msgstr "Platba selhala."
+
+#: models.py:40
+msgid "stock"
+msgstr "skladem"
+
+#: models.py:41 models.py:149
+msgid "infinite"
+msgstr "nekonečné"
+
+#: models.py:42
+msgid "digital goods"
+msgstr "digitální zboží"
+
+#: models.py:43
+msgid "sale ended"
+msgstr "prodej skončil"
+
+#: models.py:45
+msgid "availability"
+msgstr "dostupnost"
+
+#: models.py:49 models.py:963
+msgid "price"
+msgstr "cena"
+
+#: models.py:52
+msgid "awaiting"
+msgstr "očekáváme"
+
+#: models.py:53 models.py:524
+msgid "options"
+msgstr "možnosti"
+
+#: models.py:92 models.py:125 models.py:515
+msgid "title"
+msgstr "název"
+
+#: models.py:93 models.py:127
+msgid "fee"
+msgstr "poplatek"
+
+#: models.py:94
+msgid "countries"
+msgstr "zemí"
+
+#: models.py:95 models.py:249 models.py:256 models.py:653 models.py:660
+msgid "country"
+msgstr "země"
+
+#: models.py:101 models.py:268
+msgid "shipping option"
+msgstr "možnost dopravy"
+
+#: models.py:102
+msgid "shipping options"
+msgstr "možnosti dopravy"
+
+#: models.py:119
+msgid "cash on delivery"
+msgstr "dobírka"
+
+#: models.py:120
+msgid "wire transfer"
+msgstr "bankovní převod"
+
+#: models.py:121
+msgid "online payment"
+msgstr "online platba"
+
+#: models.py:126
+msgid "method"
+msgstr "metoda"
+
+#: models.py:132 models.py:269
+msgid "payment method"
+msgstr "způsob platby"
+
+#: models.py:133
+msgid "payment methods"
+msgstr "platební metody"
+
+#: models.py:148
+msgid "one-time only"
+msgstr "jednorázové"
+
+#: models.py:154
+msgid "percentage"
+msgstr "procento"
+
+#: models.py:155
+msgid "currency"
+msgstr "měna"
+
+#: models.py:157
+msgid "code"
+msgstr "kód"
+
+#: models.py:158
+msgid "amount"
+msgstr "množství"
+
+#: models.py:159
+msgid "unit"
+msgstr "jednotka"
+
+#: models.py:160
+msgid "usage"
+msgstr "použití"
+
+#: models.py:163 models.py:1009
+msgid "description"
+msgstr "popis"
+
+#: models.py:164
+msgid "valid until"
+msgstr "platné do"
+
+#: models.py:165
+msgid "promoted"
+msgstr "promováno"
+
+#: models.py:165
+msgid "show in topbar"
+msgstr "zobrazit na horní liště"
+
+#: models.py:166
+msgid "add to cart"
+msgstr "přidat do košíku"
+
+#: models.py:166
+msgid "automatically"
+msgstr "automaticky"
+
+#: models.py:167
+msgid "content types"
+msgstr "typy obsahu"
+
+#: models.py:168
+msgid "max items in cart"
+msgstr "maximální počet položek v košíku"
+
+#: models.py:169
+msgid "products"
+msgstr "produkty"
+
+#: models.py:174 models.py:272 models.py:682
+#: templates/commerce/discount_topbar.html:8
+msgid "discount"
+msgstr "sleva"
+
+#: models.py:175
+msgid "discounts"
+msgstr "slevy"
+
+#: models.py:191
+msgid "Amount of percentage has to be from interval 0-100."
+msgstr "Procenta musí být z intervalu od 0-100."
+
+#: models.py:195
+msgid "Content types can't be used together with currency type"
+msgstr "Typy obsahu nemohou být použity spolu s typem \"měna\"."
+
+#: models.py:245 models.py:252 models.py:649 models.py:656
+msgid "full name or company name"
+msgstr "celé jméno nebo název společnosti"
+
+#: models.py:246 models.py:253 models.py:650
+msgid "street and number"
+msgstr "ulice a číslo"
+
+#: models.py:247 models.py:254 models.py:651 models.py:658
+msgid "postcode"
+msgstr "PSČ"
+
+#: models.py:248 models.py:255 models.py:652 models.py:659
+msgid "city"
+msgstr "město"
+
+#: models.py:259 models.py:662 templates/commerce/checkout_summary.html:25
+msgid "Company Registration No."
+msgstr "IČO"
+
+#: models.py:260 models.py:663 templates/commerce/checkout_summary.html:26
+msgid "TAX ID"
+msgstr "DIČ"
+
+#: models.py:261 models.py:664 templates/commerce/checkout_summary.html:27
+msgid "VAT ID"
+msgstr "IČ DPH"
+
+#: models.py:264 models.py:667
+msgid "email"
+msgstr "email"
+
+#: models.py:265 models.py:668
+msgid "phone"
+msgstr "telefon"
+
+#: models.py:275 models.py:685
+msgid "loyalty points"
+msgstr "věrnostní body"
+
+#: models.py:275 models.py:685
+msgid "used to lower the total price"
+msgstr "použitých ke snížení celkové ceny"
+
+#: models.py:284
+msgid "shopping cart"
+msgstr "nákupní košík"
+
+#: models.py:285
+msgid "shopping carts"
+msgstr "nákupní košíky"
+
+#: models.py:288
+#, python-brace-format
+msgid "Shopping cart of {self.user}"
+msgstr "Nákupní košík uživatele {self.user}"
+
+#: models.py:518
+msgid "content type"
+msgstr "typ obsahu"
+
+#: models.py:523
+msgid "option"
+msgstr "možnost"
+
+#: models.py:563 models.py:962 models.py:1007
+msgid "quantity"
+msgstr "množství"
+
+#: models.py:568
+msgid "item"
+msgstr "položka"
+
+#: models.py:569
+msgid "items"
+msgstr "položky"
+
+#: models.py:626
+msgid "Awaiting Payment"
+msgstr "Čeká na platbu"
+
+#: models.py:627
+msgid "Pending"
+msgstr "Čekající"
+
+#: models.py:628
+msgid "Payment received"
+msgstr "Platba přijata"
+
+#: models.py:629
+msgid "Processing"
+msgstr "Zpracovává se"
+
+#: models.py:630
+msgid "Awaiting Fulfillment"
+msgstr "Očekáváme naskladnění"
+
+#: models.py:631
+msgid "Awaiting Shipment"
+msgstr "Čeká na expedici"
+
+#: models.py:632
+msgid "Awaiting Pickup"
+msgstr "Čeká na vyzvednutí"
+
+#: models.py:633
+msgid "Partially Shipped"
+msgstr "Částečně odesláno"
+
+#: models.py:634
+msgid "Shipped"
+msgstr "Odesláno"
+
+#: models.py:635
+msgid "Completed"
+msgstr "Dokončeno"
+
+#: models.py:636
+msgid "Cancelled"
+msgstr "Zrušeno"
+
+#: models.py:637
+msgid "Declined"
+msgstr "Odmítnuto"
+
+#: models.py:638
+msgid "Refunded"
+msgstr "Vráceno"
+
+#: models.py:639
+msgid "Partially Refunded"
+msgstr "Částečně vráceno"
+
+#: models.py:640
+msgid "Disputed"
+msgstr "Ve sporu"
+
+#: models.py:641
+msgid "On hold"
+msgstr "Zadržená"
+
+#: models.py:646
+msgid "number"
+msgstr "číslo"
+
+#: models.py:657
+msgid "street"
+msgstr "ulice"
+
+#: models.py:672
+msgid "shipping fee"
+msgstr "poštovné"
+
+#: models.py:676
+msgid "payment fee"
+msgstr "poplatek za platbu"
+
+#: models.py:679
+msgid "invoices"
+msgstr "faktury"
+
+#: models.py:688
+msgid "reminder sent"
+msgstr "upomínka odeslána"
+
+#: models.py:696
+msgid "orders"
+msgstr "objednávky"
+
+#: models.py:940
+#, python-format
+msgid "Order details: %d"
+msgstr "Detaily objednávky: %d"
+
+#: models.py:950
+#, python-format
+msgid "Order reminder: %d"
+msgstr "Připomínka objednávky: %d"
+
+#: models.py:964
+msgid "files"
+msgstr "soubory"
+
+#: models.py:970
+msgid "purchased item"
+msgstr "zakoupená položka"
+
+#: models.py:971
+msgid "purchased items"
+msgstr "zakoupené položky"
+
+#: models.py:1008
+msgid "datetime"
+msgstr "datum a čas"
+
+#: models.py:1012
+msgid "supply"
+msgstr "zásobování"
+
+#: models.py:1013
+msgid "supplies"
+msgstr "zásobování"
+
+#: tasks.py:16
+msgid "New order"
+msgstr "Nová objednávka"
+
+#: tasks.py:27
+#, python-format
+msgid "Status of order %d changed"
+msgstr "Stav objednávky %d změněn"
+
+#: templates/commerce/add_to_cart_form.html:7
+msgid "Choose option"
+msgstr "Zvolte možnost"
+
+#: templates/commerce/add_to_cart_form.html:10
+msgid "in stock"
+msgstr "na skladě"
+
+#: templates/commerce/add_to_cart_form.html:15
+msgid "Purchase"
+msgstr "Koupit"
+
+#: templates/commerce/add_to_cart_form.html:16
+msgid "Soon"
+msgstr "Brzy"
+
+#: templates/commerce/admin/sync_transactions.html:5
+msgid "Transactions"
+msgstr "Transakce"
+
+#: templates/commerce/admin/sync_transactions.html:10
+#: templates/commerce/orders_table.html:6
+msgid "Date"
+msgstr "Datum"
+
+#: templates/commerce/admin/sync_transactions.html:11
+msgid "Value"
+msgstr "Hodnota"
+
+#: templates/commerce/admin/sync_transactions.html:12
+#: templates/commerce/payment_information_wire_transfer.html:8
+msgid "Variable symbol"
+msgstr "Variabilní symbol"
+
+#: templates/commerce/admin/sync_transactions.html:13
+msgid "Order details"
+msgstr "Detaily objednávky"
+
+#: templates/commerce/admin/sync_transactions.html:14
+msgid "Sender"
+msgstr "Odesílatel"
+
+#: templates/commerce/admin/sync_transactions.html:15
+msgid "Information"
+msgstr "Informace"
+
+#: templates/commerce/admin/sync_transactions.html:16
+msgid "Errors"
+msgstr "Chyby"
+
+#: templates/commerce/admin/sync_transactions.html:29
+msgid "Status before"
+msgstr "Stav před"
+
+#: templates/commerce/admin/sync_transactions.html:30
+msgid "Status after"
+msgstr "Stav po"
+
+#: templates/commerce/admin/sync_transactions.html:44
+msgid "No transactions"
+msgstr "Žádné transakce"
+
+#: templates/commerce/cart_detail.html:2
+msgid "Shopping cart"
+msgstr "Nákupní košík"
+
+#: templates/commerce/cart_detail.html:5
+msgid "Shopping cart is empty"
+msgstr "Nákupní košík je prázdný"
+
+#: templates/commerce/cart_detail.html:14
+#: templates/commerce/checkout_summary.html:40
+msgid "Discount"
+msgstr "Sleva"
+
+#: templates/commerce/cart_detail.html:16
+#: templates/commerce/cart_items_table.html:8
+msgid "Subtotal"
+msgstr "Mezisoučet"
+
+#: templates/commerce/cart_detail.html:20
+msgid "Proceed to checkout"
+msgstr "Pokračujte k pokladně"
+
+#: templates/commerce/cart_items_table.html:5
+msgid "Item"
+msgstr "Položka"
+
+#: templates/commerce/cart_items_table.html:6
+msgid "Price"
+msgstr "Cena"
+
+#: templates/commerce/cart_items_table.html:7
+msgid "Quantity"
+msgstr "Množství"
+
+#: templates/commerce/cart_items_table.html:21
+msgid "Remove"
+msgstr "Smazat"
+
+#: templates/commerce/checkout_form.html:2
+#: templates/commerce/checkout_summary.html:2
+msgid "Checkout"
+msgstr "Nákup"
+
+#: templates/commerce/checkout_steps.html:4
+#: templates/commerce/checkout_steps.html:8
+#: templates/commerce/checkout_steps.html:12
+msgid "Addresses"
+msgstr "Adresy"
+
+#: templates/commerce/checkout_steps.html:5
+#: templates/commerce/checkout_steps.html:9
+#: templates/commerce/checkout_steps.html:13
+msgid "Shipping and payment"
+msgstr "Doprava a platba"
+
+#: templates/commerce/checkout_steps.html:6
+#: templates/commerce/checkout_steps.html:10
+#: templates/commerce/checkout_steps.html:14
+msgid "Summary"
+msgstr "Sumář"
+
+#: templates/commerce/checkout_summary.html:14
+msgid "Contact information"
+msgstr "Kontaktní informace"
+
+#: templates/commerce/checkout_summary.html:15
+msgid "Phone"
+msgstr "Telefon"
+
+#: templates/commerce/checkout_summary.html:16
+msgid "E-mail"
+msgstr "E-mail"
+
+#: templates/commerce/checkout_summary.html:35
+msgid "Sum"
+msgstr "Celková částka"
+
+#: templates/commerce/checkout_summary.html:42
+msgid "Shipping option"
+msgstr "Způsob doručení"
+
+#: templates/commerce/checkout_summary.html:46
+#: templates/commerce/mails/order_created.txt:10
+#: templates/commerce/mails/order_details.txt:9
+#: templates/commerce/mails/order_reminder.txt:8
+#: templates/commerce/orders_table.html:12
+msgid "Payment method"
+msgstr "Způsob platby"
+
+#: templates/commerce/checkout_summary.html:50
+#: templates/commerce/mails/order_created.txt:12
+#: templates/commerce/mails/order_details.txt:10
+#: templates/commerce/mails/order_reminder.txt:9
+#: templates/commerce/orders_table.html:8
+msgid "Total"
+msgstr "Celkem"
+
+#: templates/commerce/checkout_summary.html:55
+msgid "Finish"
+msgstr "Dokončit"
+
+#: templates/commerce/checkout_summary.html:57 views/cart.py:259
+msgid "Checkout process can not be finished yet"
+msgstr "Nákupní proces ještě nemůže být ukončen"
+
+#: templates/commerce/discount_topbar.html:8
+msgid "Use code"
+msgstr "Použít kód"
+
+#: templates/commerce/discount_topbar.html:9
+msgid "Ends in"
+msgstr "Končí o"
+
+#: templates/commerce/discount_topbar.html:18
+#: templates/commerce/discount_topbar.html:19
+msgid "ms|s|m|h|d|w|m|y"
+msgstr "ms|s|m|h|d|t|m|r"
+
+#: templates/commerce/discount_topbar.html:22
+msgid "now"
+msgstr "nyní"
+
+#: templates/commerce/discount_topbar.html:32
+msgid "Expired"
+msgstr "Platnost vypršela"
+
+#: templates/commerce/fees.html:3
+msgid "Fees"
+msgstr "Poplatky"
+
+#: templates/commerce/loyalty.html:2
+msgid "Loyalty program"
+msgstr "Věrnostní program"
+
+#: templates/commerce/mails/order_created.txt:1
+#, python-format
+msgid ""
+"Hello %(user)s!\n"
+"\n"
+"New order created:\n"
+"\n"
+"Number: %(number)s\n"
+"Customer: %(customer)s\n"
+msgstr ""
+"Dobrý den, %(user)s!\n"
+"\n"
+"Byla vytvořena nová objednávka:\n"
+"\n"
+"Číslo: %(number)s\n"
+"Zákazník: %(customer)s\n"
+
+#: templates/commerce/mails/order_created.txt:14
+#: templates/commerce/mails/order_details.txt:14
+#: templates/commerce/mails/order_loyalty_reminder.txt:9
+#: templates/commerce/mails/order_reminder.txt:19
+#: templates/commerce/mails/order_status_changed.txt:5
+#, python-format
+msgid ""
+"%(site_name)s team!\n"
+"%(site_domain)s\n"
+msgstr ""
+"%(site_name)s tým!\n"
+"%(site_domain)s\n"
+
+#: templates/commerce/mails/order_details.txt:1
+#: templates/commerce/mails/order_loyalty_reminder.txt:1
+#: templates/commerce/mails/order_reminder.txt:1
+#, python-format
+msgid "Hello %(user)s!"
+msgstr "Dobrý den, %(user)s!"
+
+#: templates/commerce/mails/order_details.txt:3
+msgid "Thank you for your order."
+msgstr "Děkujeme za Vaši objednávku."
+
+#: templates/commerce/mails/order_details.txt:5
+#: templates/commerce/mails/order_reminder.txt:5
+#: templates/commerce/orders_table.html:7
+msgid "Purchased items"
+msgstr "Zakoupené položky"
+
+#: templates/commerce/mails/order_details.txt:11
+#: templates/commerce/mails/order_reminder.txt:11
+msgid "Payment"
+msgstr "Platba"
+
+#: templates/commerce/mails/order_loyalty_reminder.txt:3
+#, python-format
+msgid ""
+"We would like to remind you that you have %(points)s unspent loyalty points "
+"you can use as a discount for your next order!"
+msgstr ""
+"Rádi bychom vám připomněli, že máte %(points)s nevyčerpaných věrnostních "
+"bodů, které můžete použít jako slevu na vaši další objednávku!"
+
+#: templates/commerce/mails/order_loyalty_reminder.txt:5
+msgid "You can read more about our loyalty program at following URL:"
+msgstr "Více o našem věrnostním programu si můžete přečíst na následující URL:"
+
+#: templates/commerce/mails/order_reminder.txt:3
+#, python-format
+msgid ""
+"On %(date)s you ordered following items but we do not register payment to "
+"the associated order."
+msgstr ""
+"Dne %(date)s jste si objednali následující položky, ale neevidujeme platbu k "
+"související objednávce."
+
+#: templates/commerce/mails/order_reminder.txt:14
+msgid ""
+"Payment due is 14 days since checkout. Orders without payments after due "
+"date will be cancelled automatically."
+msgstr ""
+"Datum splatnosti je 14 dní ode dne vytvoření objednávky. Pokud do tohoto "
+"data nebudeme evidovat vaši platbu, objednávka bude automaticky stornována."
+
+#: templates/commerce/mails/order_reminder.txt:15
+msgid ""
+"If you already paid for your order and its status hasn't changed, please "
+"double check the entered variable symbol for your payment or contact us."
+msgstr ""
+"Pokud jste již objednávku zaplatili a její stav se nezměnil, zkontrolujte "
+"prosím zadaný variabilní symbol platby nebo nás kontaktujte."
+
+#: templates/commerce/mails/order_reminder.txt:17
+msgid "Thank you for understanding."
+msgstr "Děkuji za pochopení."
+
+#: templates/commerce/mails/order_status_changed.txt:1
+#, python-format
+msgid ""
+"Hello %(user)s!\n"
+"\n"
+"Status of your order %(number)s changed to: %(status)s\n"
+msgstr ""
+"Dobrý den, %(user)s!\n"
+"\n"
+"Stav Vaší objednávky %(number)s byl změněn na: %(status)s\n"
+
+#: templates/commerce/order_list.html:2
+msgid "Orders"
+msgstr "Objednávky"
+
+#: templates/commerce/order_list.html:5
+#, python-format
+msgid ""
+"You have %(points)s unused point in total value of "
+"%(unused_points_in_currency_unit)s %(currency)s."
+msgid_plural ""
+"You have %(points)s unused points in total value of "
+"%(unused_points_in_currency_unit)s %(currency)s."
+msgstr[0] ""
+"Máte %(points)s nevyužitý bod v celkové hodnotě "
+"%(unused_points_in_currency_unit)s %(currency)s."
+msgstr[1] ""
+"Máte %(points)s nevyužité body v celkové hodnotě "
+"%(unused_points_in_currency_unit)s %(currency)s."
+msgstr[2] ""
+msgstr[3] ""
+"Máte %(points)s nevyužitých bodů v celkové hodnotě "
+"%(unused_points_in_currency_unit)s %(currency)s."
+
+#: templates/commerce/orders_table.html:5
+msgid "Number"
+msgstr "Číslo"
+
+#: templates/commerce/orders_table.html:13
+msgid "Status"
+msgstr "Stav"
+
+#: templates/commerce/orders_table.html:14
+msgid "Invoice"
+msgstr "Faktura"
+
+#: templates/commerce/orders_table.html:50
+msgid "Preparing..."
+msgstr "Připravuje se..."
+
+#: templates/commerce/payment_information_wire_transfer.html:4
+msgid "IBAN"
+msgstr "IBAN"
+
+#: templates/commerce/payment_information_wire_transfer.html:5
+msgid "BIC/SWIFT"
+msgstr "BIC/SWIFT"
+
+#: templates/commerce/payment_information_wire_transfer.html:6
+msgid "Amount"
+msgstr "Částka"
+
+#: templates/commerce/payment_information_wire_transfer.html:7
+msgid "Note"
+msgstr "Poznámka"
+
+#: templates/commerce/payment_information_wire_transfer.html:8
+msgid "Reference"
+msgstr "Reference"
+
+#: templates/commerce/payment_information_wire_transfer.html:11
+msgid "Some banks may require following information"
+msgstr "Některé banky mohou vyžadovat následující informace"
+
+#: templates/commerce/payment_information_wire_transfer.html:12
+msgid "Recipient"
+msgstr "Příjemce"
+
+#: templates/commerce/payment_information_wire_transfer.html:13
+msgid "Address"
+msgstr "Adresa"
+
+#: templates/commerce/payment_information_wire_transfer.html:14
+msgid "Bank name"
+msgstr "Název banky"
+
+#: templates/commerce/payment_information_wire_transfer.html:15
+msgid "Bank address"
+msgstr "Adresa banky"
+
+#: templates/commerce/payment_information_wire_transfer.html:18
+msgid ""
+"It is important to use variable symbol / reference above to correctly pair "
+"your payment with the order!"
+msgstr ""
+"Je důležité uvést správný variabilní symbol/referenci kvůli korektnímu "
+"spárování Vaší platby s objednávkou."
+
+#: urls.py:13
+msgctxt "url"
+msgid "add-to-cart/<int:content_type_id>/<int:object_id>/"
+msgstr "pridat-do-kosiku/<int:content_type_id>/<int:object_id>/"
+
+#: urls.py:14
+msgctxt "url"
+msgid "remove-from-cart/<int:item_id>/"
+msgstr "odebrat-z-kosiku/<int:item_id>/"
+
+#: urls.py:15
+msgctxt "url"
+msgid "unapply-discount/"
+msgstr "neuplatnit-slevu/"
+
+#: urls.py:16
+msgctxt "url"
+msgid "cart/"
+msgstr "kosik/"
+
+#: urls.py:17
+msgctxt "url"
+msgid "checkout/addresses/"
+msgstr "pokladna/adresy/"
+
+#: urls.py:18
+msgctxt "url"
+msgid "checkout/shipping-and-payment/"
+msgstr "pokladna/doprava-a-platba/"
+
+#: urls.py:19
+msgctxt "url"
+msgid "checkout/summary/"
+msgstr "pokladna/sumar/"
+
+#: urls.py:20
+msgctxt "url"
+msgid "checkout/finish/"
+msgstr "pokladna/dokoncit/"
+
+#: urls.py:21
+msgctxt "url"
+msgid "order/<int:number>/payment/"
+msgstr "objednavka/<int:number>/platba/"
+
+#: urls.py:22
+msgctxt "url"
+msgid "order/<int:number>/payment/return/"
+msgstr "objednavka/<int:number>/platba/vraceni/"
+
+#: urls.py:23
+msgctxt "url"
+msgid "orders/"
+msgstr "objednavky/"
+
+#: urls.py:31
+msgctxt "url"
+msgid "stripe/create-session/<int:pk>/"
+msgstr "stripe/vytvorit-relaci/<int:pk>/"
+
+#: urls.py:32
+msgctxt "url"
+msgid "stripe/success/"
+msgstr "stripe/hotovo/"
+
+#: urls.py:33
+msgctxt "url"
+msgid "stripe/cancel/"
+msgstr "stripe/zrusit/"
+
+#: urls.py:34
+msgctxt "url"
+msgid "stripe/webhook/"
+msgstr "stripe/webhook/"
+
+#: urls.py:39
+msgctxt "url"
+msgid "loyalty-program/"
+msgstr "vernostni-program/"
+
+#: views/cart.py:30
+#, python-format
+msgid "You can order at most %d items at once"
+msgstr "Najednou můžete objednat maximálně %d položek"
+
+#: views/cart.py:50
+#, python-format
+msgid "Discount %s was removed from cart"
+msgstr "Sleva %s byla odebrána z košíku"
+
+#: views/cart.py:52
+#, python-format
+msgid "%s was added into cart"
+msgstr "%s byl přidán do košíku"
+
+#: views/cart.py:54
+#, python-format
+msgid "%s is already in cart"
+msgstr "%s je již v košíku"
+
+#: views/cart.py:86
+#, python-format
+msgid "%s removed from cart"
+msgstr "%s byl odstraněn z košíku"
+
+#: views/cart.py:270
+msgid "Missing payment method"
+msgstr "Chybí způsob platby"

@@ -1,0 +1,1301 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-12 21:33+0100\n"
+"PO-Revision-Date: 2022-11-22 22:51+0000\n"
+"Last-Translator: Rafal Szczepanowicz <rafal@transportly.eu>\n"
+"Language-Team: Polish <https://weblate.swida.sk/projects/django-commerce/app/"
+"pl/>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && "
+"(n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && "
+"n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"X-Generator: Weblate 4.9.1\n"
+
+#: admin.py:45 admin.py:99 forms.py:113
+#: templates/commerce/checkout_summary.html:7
+msgid "Delivery address"
+msgstr "Adres dostawy"
+
+#: admin.py:46 admin.py:100
+msgid "Billing address"
+msgstr "Adres rozliczeniowy"
+
+#: admin.py:47 admin.py:101 forms.py:146
+#: templates/commerce/checkout_summary.html:20
+msgid "Billing details"
+msgstr "Szczegóły płatności"
+
+#: admin.py:48 admin.py:102 forms.py:135
+msgid "Contact details"
+msgstr "Dane kontaktowe"
+
+#: admin.py:49 admin.py:103 templates/commerce/mails/order_created.txt:9
+#: templates/commerce/mails/order_details.txt:7
+#: templates/commerce/mails/order_reminder.txt:7
+msgid "Shipping"
+msgstr "Wysyłka"
+
+#: admin.py:50
+msgid "Others"
+msgstr "Inne"
+
+#: admin.py:51 admin.py:105
+msgid "Timestamps"
+msgstr "Dane czasowe"
+
+#: admin.py:104
+msgid "Billing"
+msgstr "Fakturowanie"
+
+#: admin.py:128
+msgid "Missing bank API token"
+msgstr "Brak tokena API banku"
+
+#: admin.py:132
+msgid "Missing bank API"
+msgstr "Brak bankowego API"
+
+#: admin.py:168
+#, python-brace-format
+msgid "Bank API {commerce_settings.BANK_API} not implemented"
+msgstr "Bankowe API {commerce_settings.BANK_API} nie zaimplementowano"
+
+#: admin.py:186
+msgid "Order not found"
+msgstr "Nie znaleziono zamówienia"
+
+#: admin.py:197
+msgid "Currency mismatch"
+msgstr "Niezgodność waluty"
+
+#: admin.py:199
+msgid "Total value mismatch"
+msgstr "Niezgodność wartości całkowitej"
+
+#: admin.py:206
+msgid "Missing variable symbol"
+msgstr "Brak wariabilnego symbolu"
+
+#: admin.py:209
+msgid "Sync transactions"
+msgstr "Synchronizacja transakcji"
+
+#: admin.py:214
+msgid "Create invoice"
+msgstr "Wystaw fakturę"
+
+#: admin.py:219
+msgid "Send details"
+msgstr "Wyślij szczegóły"
+
+#: admin.py:224
+msgid "Send reminder"
+msgstr "Wyślij przypomnienie"
+
+#: admin.py:228
+msgid "Loyalty program is disabled"
+msgstr "Program lojalnościowy jest wyłączony"
+
+#: admin.py:241
+#, python-format
+msgid "User %s has %d loyalty points"
+msgstr "Użytkownik %s ma %d punktów lojalnościowych"
+
+#: admin.py:243
+#, python-format
+msgid "Loyalty reminder sent to %d users"
+msgstr "Przypomnienie lojalnościowe wysłane do %d użytkowników"
+
+#: admin.py:244
+msgid "Send loyalty reminder"
+msgstr "Wyślij przypomnienie lojalnościowe"
+
+#: admin.py:248
+msgid "valid"
+msgstr "ważny"
+
+#: admin.py:253
+msgid "yes"
+msgstr "tak"
+
+#: admin.py:254
+msgid "no"
+msgstr "nie"
+
+#: admin.py:281
+msgid "Products"
+msgstr "Produkty"
+
+#: apps.py:11
+msgid "Commerce"
+msgstr "Handel"
+
+#: forms.py:19 forms.py:39
+msgid "Discount code"
+msgstr "Kod rabatowy"
+
+#: forms.py:20 loyalty.py:66 templates/commerce/checkout_summary.html:37
+#: templates/commerce/mails/order_created.txt:11
+#: templates/commerce/orders_table.html:10
+msgid "Loyalty points"
+msgstr "Punkty lojalnościowe"
+
+#: forms.py:49
+#, python-format
+msgid "You can use %d points"
+msgstr "Możesz użyć %d punktów"
+
+#: forms.py:60
+msgid "Apply"
+msgstr "Zastosuj"
+
+#: forms.py:75
+#, python-format
+msgid "Discount code %s is not assigned to you"
+msgstr "Kod rabatowy %s nie jest do Ciebie przypisany"
+
+#: forms.py:78
+#, python-format
+msgid "Discount code %s is not valid anymore"
+msgstr "Kod rabatowy %s nie jest już ważny"
+
+#: forms.py:81
+#, python-format
+msgid "Discount code %s was used already"
+msgstr "Kod rabatowy %s został już wykorzystany"
+
+#: forms.py:84
+#, python-format
+msgid "Discount code %s can be applied to at most %d items"
+msgstr "Kod rabatowy %s można zastosować do maksymalnie %d przedmiotów"
+
+#: forms.py:90
+msgid "Discount product is not in the cart"
+msgstr "Produkt rabatowy nie znajduje się w koszyku"
+
+#: forms.py:93
+msgid "There is no such discount code"
+msgstr "Nie ma takiego kodu rabatowego"
+
+#: forms.py:178 forms.py:241
+msgid "Continue"
+msgstr "Kontynuować"
+
+#: forms.py:218
+msgid "Choose Payment Type"
+msgstr "Wybierz Rodzaj Płatności"
+
+#: forms.py:232
+msgid "Select Shipping Option"
+msgstr "Wybierz Metodę Dostawy"
+
+#: forms.py:250
+#, python-format
+msgid "This payment method is not available for shipping option %s"
+msgstr "Ta metoda płatności nie jest dostępna dla opcji wysyłki %s"
+
+#: gateways/globalpayments/managers.py:22
+#: gateways/stripe/templates/commerce/stripe_button.html:7
+msgid "Pay"
+msgstr "Zapłać"
+
+#: gateways/globalpayments/managers.py:146
+msgid "Invalid payment signature."
+msgstr "Nieprawidłowy podpis płatności."
+
+#: gateways/globalpayments/managers.py:154
+msgid "Payment failed. Error detail:"
+msgstr "Płatność nie powiodła się. Szczegóły błędu:"
+
+#: gateways/globalpayments/managers.py:158
+msgid "Transaction not recognised"
+msgstr "Transakcja nierozpoznana"
+
+#: gateways/globalpayments/managers.py:170
+msgid "Order successfully paid."
+msgstr "Zamówienie opłacone pomyślnie."
+
+#: gateways/globalpayments/managers.py:173
+msgid "Payment without result."
+msgstr "Płatność bez rezultatu."
+
+#: gateways/globalpayments/models.py:16
+msgid "processing"
+msgstr "przetwarzanie"
+
+#: gateways/globalpayments/models.py:17
+msgid "approved"
+msgstr "zatwierdzono"
+
+#: gateways/globalpayments/models.py:18
+msgid "paid"
+msgstr "zapłacono"
+
+#: gateways/globalpayments/models.py:19
+msgid "partial"
+msgstr "częściowo"
+
+#: gateways/globalpayments/models.py:20
+msgid "canceled"
+msgstr "anulowane"
+
+#: gateways/globalpayments/models.py:21
+msgid "unpaid"
+msgstr "niezapłacony"
+
+#: gateways/globalpayments/models.py:22
+msgid "returned"
+msgstr "zwrócona"
+
+#: gateways/globalpayments/models.py:24 gateways/globalpayments/models.py:40
+#: models.py:695
+msgid "order"
+msgstr "zamówienie"
+
+#: gateways/globalpayments/models.py:25 models.py:645
+msgid "status"
+msgstr "status"
+
+#: gateways/globalpayments/models.py:26 gateways/globalpayments/models.py:63
+#: gateways/stripe/models.py:10 models.py:278 models.py:564 models.py:689
+#: models.py:965
+msgid "created"
+msgstr "utworzono"
+
+#: gateways/globalpayments/models.py:27 gateways/globalpayments/models.py:64
+#: gateways/stripe/models.py:11 models.py:279 models.py:565 models.py:690
+#: models.py:966
+msgid "modified"
+msgstr "zmodifikowano"
+
+#: gateways/globalpayments/models.py:30
+msgid "payment"
+msgstr "zapłata"
+
+#: gateways/globalpayments/models.py:31
+msgid "payments"
+msgstr "płatności"
+
+#: gateways/globalpayments/models.py:41
+msgid "operation"
+msgstr "operacja"
+
+#: gateways/globalpayments/models.py:42
+msgid "order number"
+msgstr "numer zamówienia"
+
+#: gateways/globalpayments/models.py:43
+msgid "merchant order number"
+msgstr "numer zamówienia sprzedawcy"
+
+#: gateways/globalpayments/models.py:44
+msgid "md"
+msgstr "md"
+
+#: gateways/globalpayments/models.py:45
+msgid "primary code"
+msgstr "kod podstawowy"
+
+#: gateways/globalpayments/models.py:46
+msgid "secondary code"
+msgstr "kod dodatkowy"
+
+#: gateways/globalpayments/models.py:47
+msgid "result text"
+msgstr "tekst wyniku"
+
+#: gateways/globalpayments/models.py:48
+msgid "user param 1"
+msgstr "parametr użytkownika 1"
+
+#: gateways/globalpayments/models.py:49
+msgid "additional information"
+msgstr "dodatkowe informacje"
+
+#: gateways/globalpayments/models.py:50
+msgid "token"
+msgstr "token"
+
+#: gateways/globalpayments/models.py:51
+msgid "expiration"
+msgstr "wygaśnięcie"
+
+#: gateways/globalpayments/models.py:52
+msgid "authorisation centre result"
+msgstr "wynik centrum autoryzacji"
+
+#: gateways/globalpayments/models.py:53
+msgid "authorisation centre code"
+msgstr "kod centrum autoryzacji"
+
+#: gateways/globalpayments/models.py:54
+msgid "masked card number"
+msgstr "zamaskowany numer karty"
+
+#: gateways/globalpayments/models.py:55
+msgid "day to capture"
+msgstr "dzień do schwytania"
+
+#: gateways/globalpayments/models.py:56
+msgid "token registration status"
+msgstr "status rejestracji tokena"
+
+#: gateways/globalpayments/models.py:57
+msgid "authorisation centre result code"
+msgstr "kod wyniku centrum autoryzacji"
+
+#: gateways/globalpayments/models.py:58
+msgid "retrieval reference number"
+msgstr "numer referencyjny wyszukiwania"
+
+#: gateways/globalpayments/models.py:59
+msgid "payment account reference"
+msgstr "numer rachunku płatniczego"
+
+#: gateways/globalpayments/models.py:60
+msgid "trace ID"
+msgstr "identyfikator śledzenia"
+
+#: gateways/globalpayments/models.py:61
+msgid "digest"
+msgstr "strawić"
+
+#: gateways/globalpayments/models.py:62
+msgid "digest 1"
+msgstr "strawić 1"
+
+#: gateways/globalpayments/models.py:67
+msgid "result"
+msgstr "wynik"
+
+#: gateways/globalpayments/models.py:68
+msgid "results"
+msgstr "wyniki"
+
+#: gateways/stripe/models.py:7 models.py:161
+msgid "user"
+msgstr "użytkownik"
+
+#: gateways/stripe/models.py:8
+msgid "Stripe ID"
+msgstr "Identyfikator paska"
+
+#: gateways/stripe/models.py:9
+msgid "Payment method ID"
+msgstr "Identyfikator metody płatności"
+
+#: gateways/stripe/models.py:14
+msgid "customer"
+msgstr "klient"
+
+#: gateways/stripe/models.py:15
+msgid "customers"
+msgstr "klienci"
+
+#: gateways/stripe/views.py:42 views/order.py:26
+msgid "It is not possible to pay this order anymore."
+msgstr "Nie można już opłacić tego zamówienia."
+
+#: gateways/stripe/views.py:58
+msgid "Order number"
+msgstr "Numer zamówienia"
+
+#: gateways/stripe/views.py:82 models.py:912
+#: templates/commerce/checkout_summary.html:43
+msgid "Shipping fee"
+msgstr "Opłata za wysyłkę"
+
+#: gateways/stripe/views.py:94 models.py:924
+#: templates/commerce/checkout_summary.html:47
+msgid "Payment fee"
+msgstr "Opłata"
+
+#: gateways/stripe/views.py:135
+msgid "Payment was successful."
+msgstr "Płatność powiodła się."
+
+#: gateways/stripe/views.py:142
+msgid "Payment failed."
+msgstr "Płatność nie powiodła się."
+
+#: models.py:40
+msgid "stock"
+msgstr "magazyn"
+
+#: models.py:41 models.py:149
+msgid "infinite"
+msgstr "nieskończone"
+
+#: models.py:42
+msgid "digital goods"
+msgstr "towary cyfrowe"
+
+#: models.py:43
+msgid "sale ended"
+msgstr "sprzedaż zakończona"
+
+#: models.py:45
+msgid "availability"
+msgstr "dostępność"
+
+#: models.py:49 models.py:963
+msgid "price"
+msgstr "cena"
+
+#: models.py:52
+msgid "awaiting"
+msgstr "oczekuję"
+
+#: models.py:53 models.py:524
+msgid "options"
+msgstr "opcje"
+
+#: models.py:92 models.py:125 models.py:515
+msgid "title"
+msgstr "tytuł"
+
+#: models.py:93 models.py:127
+msgid "fee"
+msgstr "opłata"
+
+#: models.py:94
+msgid "countries"
+msgstr "kraje"
+
+#: models.py:95 models.py:249 models.py:256 models.py:653 models.py:660
+msgid "country"
+msgstr "kraj"
+
+#: models.py:101 models.py:268
+msgid "shipping option"
+msgstr "metoda dostawy"
+
+#: models.py:102
+msgid "shipping options"
+msgstr "metody dostawy"
+
+#: models.py:119
+msgid "cash on delivery"
+msgstr "płatność gotówką przy odbiorze"
+
+#: models.py:120
+msgid "wire transfer"
+msgstr "przelew"
+
+#: models.py:121
+msgid "online payment"
+msgstr "płatność online"
+
+#: models.py:126
+msgid "method"
+msgstr "metoda"
+
+#: models.py:132 models.py:269
+msgid "payment method"
+msgstr "metoda płatności"
+
+#: models.py:133
+msgid "payment methods"
+msgstr "metody płatności"
+
+#: models.py:148
+msgid "one-time only"
+msgstr "tylko jeden raz"
+
+#: models.py:154
+msgid "percentage"
+msgstr "procenty"
+
+#: models.py:155
+msgid "currency"
+msgstr "waluta"
+
+#: models.py:157
+msgid "code"
+msgstr "kod"
+
+#: models.py:158
+msgid "amount"
+msgstr "ilość"
+
+#: models.py:159
+msgid "unit"
+msgstr "jednostka"
+
+#: models.py:160
+msgid "usage"
+msgstr "użycie"
+
+#: models.py:163 models.py:1009
+msgid "description"
+msgstr "opis"
+
+#: models.py:164
+msgid "valid until"
+msgstr "ważny do"
+
+#: models.py:165
+msgid "promoted"
+msgstr "promowane"
+
+#: models.py:165
+msgid "show in topbar"
+msgstr "pokaż w górnym pasku"
+
+#: models.py:166
+msgid "add to cart"
+msgstr "dodaj do koszyka"
+
+#: models.py:166
+msgid "automatically"
+msgstr "automatycznie"
+
+#: models.py:167
+msgid "content types"
+msgstr "typy zawartości"
+
+#: models.py:168
+msgid "max items in cart"
+msgstr "maksymalna ilość pozycji w koszyku"
+
+#: models.py:169
+msgid "products"
+msgstr "produkty"
+
+#: models.py:174 models.py:272 models.py:682
+#: templates/commerce/discount_topbar.html:8
+msgid "discount"
+msgstr "rabat"
+
+#: models.py:175
+msgid "discounts"
+msgstr "rabaty"
+
+#: models.py:191
+msgid "Amount of percentage has to be from interval 0-100."
+msgstr "Kwota procentowa musi być z przedziału 0-100."
+
+#: models.py:195
+msgid "Content types can't be used together with currency type"
+msgstr "Typy treści nie mogą być używane razem z typem waluty"
+
+#: models.py:245 models.py:252 models.py:649 models.py:656
+msgid "full name or company name"
+msgstr "imię i nazwisko lub nazwa firmy"
+
+#: models.py:246 models.py:253 models.py:650
+msgid "street and number"
+msgstr "ulica i numer"
+
+#: models.py:247 models.py:254 models.py:651 models.py:658
+msgid "postcode"
+msgstr "kod pocztowy"
+
+#: models.py:248 models.py:255 models.py:652 models.py:659
+msgid "city"
+msgstr "miasto"
+
+#: models.py:259 models.py:662 templates/commerce/checkout_summary.html:25
+msgid "Company Registration No."
+msgstr "REGON"
+
+#: models.py:260 models.py:663 templates/commerce/checkout_summary.html:26
+msgid "TAX ID"
+msgstr "NIP"
+
+#: models.py:261 models.py:664 templates/commerce/checkout_summary.html:27
+msgid "VAT ID"
+msgstr "Numer identyfikacji VAT"
+
+#: models.py:264 models.py:667
+msgid "email"
+msgstr "email"
+
+#: models.py:265 models.py:668
+msgid "phone"
+msgstr "telefon"
+
+#: models.py:275 models.py:685
+msgid "loyalty points"
+msgstr "punkty lojalnościowe"
+
+#: models.py:275 models.py:685
+msgid "used to lower the total price"
+msgstr "użyte do obniżenia ceny całkowitej"
+
+#: models.py:284
+msgid "shopping cart"
+msgstr "koszyk"
+
+#: models.py:285
+msgid "shopping carts"
+msgstr "koszyki"
+
+#: models.py:288
+#, python-brace-format
+msgid "Shopping cart of {self.user}"
+msgstr "Koszyk {self.user}"
+
+#: models.py:518
+msgid "content type"
+msgstr "typ zawartości"
+
+#: models.py:523
+msgid "option"
+msgstr "opcja"
+
+#: models.py:563 models.py:962 models.py:1007
+msgid "quantity"
+msgstr "ilość"
+
+#: models.py:568
+msgid "item"
+msgstr "przedmiot"
+
+#: models.py:569
+msgid "items"
+msgstr "przedmioty"
+
+#: models.py:626
+msgid "Awaiting Payment"
+msgstr "Oczekiwanie na Zapłatę"
+
+#: models.py:627
+msgid "Pending"
+msgstr "Oczekuję"
+
+#: models.py:628
+msgid "Payment received"
+msgstr "Zapłata otrzymana"
+
+#: models.py:629
+msgid "Processing"
+msgstr "Przetwarzanie"
+
+#: models.py:630
+msgid "Awaiting Fulfillment"
+msgstr "Oczekiwanie na Zmagazynowanie"
+
+#: models.py:631
+msgid "Awaiting Shipment"
+msgstr "Oczekiwanie na Wysyłkę"
+
+#: models.py:632
+msgid "Awaiting Pickup"
+msgstr "Oczekiwanie na Odbiór"
+
+#: models.py:633
+msgid "Partially Shipped"
+msgstr "Częściowo Wysłane"
+
+#: models.py:634
+msgid "Shipped"
+msgstr "Wysłane"
+
+#: models.py:635
+msgid "Completed"
+msgstr "Zakończony"
+
+#: models.py:636
+msgid "Cancelled"
+msgstr "Anulowany"
+
+#: models.py:637
+msgid "Declined"
+msgstr "Odrzucono"
+
+#: models.py:638
+msgid "Refunded"
+msgstr "Zrefundowane"
+
+#: models.py:639
+msgid "Partially Refunded"
+msgstr "Częściowo Zrefundowane"
+
+#: models.py:640
+msgid "Disputed"
+msgstr "Sporne"
+
+#: models.py:641
+msgid "On hold"
+msgstr "Wstrzymano"
+
+#: models.py:646
+msgid "number"
+msgstr "numer"
+
+#: models.py:657
+msgid "street"
+msgstr "ulica"
+
+#: models.py:672
+msgid "shipping fee"
+msgstr "opłata przewozowa"
+
+#: models.py:676
+msgid "payment fee"
+msgstr "opłata"
+
+#: models.py:679
+msgid "invoices"
+msgstr "faktury"
+
+#: models.py:688
+msgid "reminder sent"
+msgstr "przypomnienie wysłane"
+
+#: models.py:696
+msgid "orders"
+msgstr "zamówienia"
+
+#: models.py:940
+#, python-format
+msgid "Order details: %d"
+msgstr "Szczegóły zamówienia: %d"
+
+#: models.py:950
+#, python-format
+msgid "Order reminder: %d"
+msgstr "Przypomnienie o zamówieniu: %d"
+
+#: models.py:964
+msgid "files"
+msgstr "pliki"
+
+#: models.py:970
+msgid "purchased item"
+msgstr "zakupiony przedmiot"
+
+#: models.py:971
+msgid "purchased items"
+msgstr "zakupione przedmioty"
+
+#: models.py:1008
+msgid "datetime"
+msgstr "data i godzina"
+
+#: models.py:1012
+msgid "supply"
+msgstr "dzień dodania"
+
+#: models.py:1013
+msgid "supplies"
+msgstr "zaopatrzenie"
+
+#: tasks.py:16
+msgid "New order"
+msgstr "Nowe zamówienie"
+
+#: tasks.py:27
+#, python-format
+msgid "Status of order %d changed"
+msgstr "Zmieniono status zamówienia %d"
+
+#: templates/commerce/add_to_cart_form.html:7
+msgid "Choose option"
+msgstr "Wybierz opcję"
+
+#: templates/commerce/add_to_cart_form.html:10
+msgid "in stock"
+msgstr "na stanie"
+
+#: templates/commerce/add_to_cart_form.html:15
+msgid "Purchase"
+msgstr "Zakup"
+
+#: templates/commerce/add_to_cart_form.html:16
+msgid "Soon"
+msgstr "Wkrótce"
+
+#: templates/commerce/admin/sync_transactions.html:5
+msgid "Transactions"
+msgstr "Transakcje"
+
+#: templates/commerce/admin/sync_transactions.html:10
+#: templates/commerce/orders_table.html:6
+msgid "Date"
+msgstr "Data"
+
+#: templates/commerce/admin/sync_transactions.html:11
+msgid "Value"
+msgstr "Wartość"
+
+#: templates/commerce/admin/sync_transactions.html:12
+#: templates/commerce/payment_information_wire_transfer.html:8
+msgid "Variable symbol"
+msgstr "Zmienny symbol"
+
+#: templates/commerce/admin/sync_transactions.html:13
+msgid "Order details"
+msgstr "Szczegóły zamówienia"
+
+#: templates/commerce/admin/sync_transactions.html:14
+msgid "Sender"
+msgstr "Nadawca"
+
+#: templates/commerce/admin/sync_transactions.html:15
+msgid "Information"
+msgstr "Informacja"
+
+#: templates/commerce/admin/sync_transactions.html:16
+msgid "Errors"
+msgstr "Błędy"
+
+#: templates/commerce/admin/sync_transactions.html:29
+msgid "Status before"
+msgstr "Status przed"
+
+#: templates/commerce/admin/sync_transactions.html:30
+msgid "Status after"
+msgstr "Status po"
+
+#: templates/commerce/admin/sync_transactions.html:44
+msgid "No transactions"
+msgstr "Brak transakcji"
+
+#: templates/commerce/cart_detail.html:2
+msgid "Shopping cart"
+msgstr "Koszyk"
+
+#: templates/commerce/cart_detail.html:5
+msgid "Shopping cart is empty"
+msgstr "Koszyk jest pusty"
+
+#: templates/commerce/cart_detail.html:14
+#: templates/commerce/checkout_summary.html:40
+msgid "Discount"
+msgstr "Rabat"
+
+#: templates/commerce/cart_detail.html:16
+#: templates/commerce/cart_items_table.html:8
+msgid "Subtotal"
+msgstr "Suma częściowa"
+
+#: templates/commerce/cart_detail.html:20
+msgid "Proceed to checkout"
+msgstr "Przejdź do kasy"
+
+#: templates/commerce/cart_items_table.html:5
+msgid "Item"
+msgstr "Przedmiot"
+
+#: templates/commerce/cart_items_table.html:6
+msgid "Price"
+msgstr "Cena"
+
+#: templates/commerce/cart_items_table.html:7
+msgid "Quantity"
+msgstr "Ilość"
+
+#: templates/commerce/cart_items_table.html:21
+msgid "Remove"
+msgstr "Usuń"
+
+#: templates/commerce/checkout_form.html:2
+#: templates/commerce/checkout_summary.html:2
+msgid "Checkout"
+msgstr "Do kasy"
+
+#: templates/commerce/checkout_steps.html:4
+#: templates/commerce/checkout_steps.html:8
+#: templates/commerce/checkout_steps.html:12
+msgid "Addresses"
+msgstr "Adresy"
+
+#: templates/commerce/checkout_steps.html:5
+#: templates/commerce/checkout_steps.html:9
+#: templates/commerce/checkout_steps.html:13
+msgid "Shipping and payment"
+msgstr "Wysyłka i płatność"
+
+#: templates/commerce/checkout_steps.html:6
+#: templates/commerce/checkout_steps.html:10
+#: templates/commerce/checkout_steps.html:14
+msgid "Summary"
+msgstr "Podsumowanie"
+
+#: templates/commerce/checkout_summary.html:14
+msgid "Contact information"
+msgstr "Informacje kontaktowe"
+
+#: templates/commerce/checkout_summary.html:15
+msgid "Phone"
+msgstr "Telefon"
+
+#: templates/commerce/checkout_summary.html:16
+msgid "E-mail"
+msgstr "E-mail"
+
+#: templates/commerce/checkout_summary.html:35
+msgid "Sum"
+msgstr "Suma"
+
+#: templates/commerce/checkout_summary.html:42
+msgid "Shipping option"
+msgstr "Metoda dostawy"
+
+#: templates/commerce/checkout_summary.html:46
+#: templates/commerce/mails/order_created.txt:10
+#: templates/commerce/mails/order_details.txt:9
+#: templates/commerce/mails/order_reminder.txt:8
+#: templates/commerce/orders_table.html:12
+msgid "Payment method"
+msgstr "Metoda płatności"
+
+#: templates/commerce/checkout_summary.html:50
+#: templates/commerce/mails/order_created.txt:12
+#: templates/commerce/mails/order_details.txt:10
+#: templates/commerce/mails/order_reminder.txt:9
+#: templates/commerce/orders_table.html:8
+msgid "Total"
+msgstr "Razem"
+
+#: templates/commerce/checkout_summary.html:55
+msgid "Finish"
+msgstr "Zakończyć"
+
+#: templates/commerce/checkout_summary.html:57 views/cart.py:259
+msgid "Checkout process can not be finished yet"
+msgstr "Proces kasy nie może się jeszcze zakończyć"
+
+#: templates/commerce/discount_topbar.html:8
+msgid "Use code"
+msgstr "Użyj kodu"
+
+#: templates/commerce/discount_topbar.html:9
+msgid "Ends in"
+msgstr "Kończy się w"
+
+#: templates/commerce/discount_topbar.html:18
+#: templates/commerce/discount_topbar.html:19
+msgid "ms|s|m|h|d|w|m|y"
+msgstr "ms|s|m|h|d|w|m|y"
+
+#: templates/commerce/discount_topbar.html:22
+msgid "now"
+msgstr "teraz"
+
+#: templates/commerce/discount_topbar.html:32
+msgid "Expired"
+msgstr "Wygasło"
+
+#: templates/commerce/fees.html:3
+msgid "Fees"
+msgstr "Opłaty"
+
+#: templates/commerce/loyalty.html:2
+msgid "Loyalty program"
+msgstr "Program lojalnościowy"
+
+#: templates/commerce/mails/order_created.txt:1
+#, python-format
+msgid ""
+"Hello %(user)s!\n"
+"\n"
+"New order created:\n"
+"\n"
+"Number: %(number)s\n"
+"Customer: %(customer)s\n"
+msgstr ""
+"Witaj %(user)s!\n"
+"\n"
+"Utworzono nowe zamówienie:\n"
+"\n"
+"Numer: %(number)s\n"
+"Klient: %(customer)s\n"
+
+#: templates/commerce/mails/order_created.txt:14
+#: templates/commerce/mails/order_details.txt:14
+#: templates/commerce/mails/order_loyalty_reminder.txt:9
+#: templates/commerce/mails/order_reminder.txt:19
+#: templates/commerce/mails/order_status_changed.txt:5
+#, python-format
+msgid ""
+"%(site_name)s team!\n"
+"%(site_domain)s\n"
+msgstr ""
+"%(site_name)s zespół!\n"
+"%(site_domain)s\n"
+
+#: templates/commerce/mails/order_details.txt:1
+#: templates/commerce/mails/order_loyalty_reminder.txt:1
+#: templates/commerce/mails/order_reminder.txt:1
+#, python-format
+msgid "Hello %(user)s!"
+msgstr "Witaj %(user)s!"
+
+#: templates/commerce/mails/order_details.txt:3
+msgid "Thank you for your order."
+msgstr "Dziękujemy za Twoje zamówienie."
+
+#: templates/commerce/mails/order_details.txt:5
+#: templates/commerce/mails/order_reminder.txt:5
+#: templates/commerce/orders_table.html:7
+msgid "Purchased items"
+msgstr "Zakupione przedmioty"
+
+#: templates/commerce/mails/order_details.txt:11
+#: templates/commerce/mails/order_reminder.txt:11
+msgid "Payment"
+msgstr "Zapłata"
+
+#: templates/commerce/mails/order_loyalty_reminder.txt:3
+#, python-format
+msgid ""
+"We would like to remind you that you have %(points)s unspent loyalty points "
+"you can use as a discount for your next order!"
+msgstr ""
+"Przypominamy, że masz %(points)s niewydanych punktów lojalnościowych, które "
+"możesz wykorzystać jako zniżkę na kolejne zamówienie!"
+
+#: templates/commerce/mails/order_loyalty_reminder.txt:5
+msgid "You can read more about our loyalty program at following URL:"
+msgstr ""
+"Możesz przeczytać więcej o naszym programie lojalnościowym pod następującym "
+"adresem URL:"
+
+#: templates/commerce/mails/order_reminder.txt:3
+#, python-format
+msgid ""
+"On %(date)s you ordered following items but we do not register payment to "
+"the associated order."
+msgstr ""
+"W dniu %(date)s zamówiłeś następujące przedmioty, ale nie rejestrujemy "
+"płatności za powiązane zamówienie."
+
+#: templates/commerce/mails/order_reminder.txt:14
+msgid ""
+"Payment due is 14 days since checkout. Orders without payments after due "
+"date will be cancelled automatically."
+msgstr ""
+"Termin płatności to 14 dni od dnia wytworzenia zamówienia. Zamówienia bez "
+"płatności po terminie zapłaty zostaną automatycznie anulowane."
+
+#: templates/commerce/mails/order_reminder.txt:15
+msgid ""
+"If you already paid for your order and its status hasn't changed, please "
+"double check the entered variable symbol for your payment or contact us."
+msgstr ""
+"Jeśli zapłaciłeś już za zamówienie, a jego status się nie zmienił, sprawdź "
+"ponownie wprowadzony symbol zmiennej dla płatności lub skontaktuj się z nami."
+
+#: templates/commerce/mails/order_reminder.txt:17
+msgid "Thank you for understanding."
+msgstr "Dziękujemy za zrozumienie."
+
+#: templates/commerce/mails/order_status_changed.txt:1
+#, python-format
+msgid ""
+"Hello %(user)s!\n"
+"\n"
+"Status of your order %(number)s changed to: %(status)s\n"
+msgstr ""
+"Witaj %(user)s!\n"
+"\n"
+"Status Twojego zamówienia %(number)s znieniono na: %(status)s\n"
+
+#: templates/commerce/order_list.html:2
+msgid "Orders"
+msgstr "Zamówienia"
+
+#: templates/commerce/order_list.html:5
+#, python-format
+msgid ""
+"You have %(points)s unused point in total value of "
+"%(unused_points_in_currency_unit)s %(currency)s."
+msgid_plural ""
+"You have %(points)s unused points in total value of "
+"%(unused_points_in_currency_unit)s %(currency)s."
+msgstr[0] ""
+"Masz %(points)s niewykorzystany punkt o łącznej wartości "
+"%(unused_points_in_currency_unit)s %(currency)s."
+msgstr[1] ""
+"Masz %(points)s niewykorzystane punkty o łącznej wartości "
+"%(unused_points_in_currency_unit)s %(currency)s."
+msgstr[2] ""
+"Masz %(points)s niewykorzystanych punktów o łącznej wartości "
+"%(unused_points_in_currency_unit)s %(currency)s."
+msgstr[3] ""
+
+#: templates/commerce/orders_table.html:5
+msgid "Number"
+msgstr "Numer"
+
+#: templates/commerce/orders_table.html:13
+msgid "Status"
+msgstr "Status"
+
+#: templates/commerce/orders_table.html:14
+msgid "Invoice"
+msgstr "Faktura"
+
+#: templates/commerce/orders_table.html:50
+msgid "Preparing..."
+msgstr "Przygotowuję..."
+
+#: templates/commerce/payment_information_wire_transfer.html:4
+msgid "IBAN"
+msgstr "IBAN"
+
+#: templates/commerce/payment_information_wire_transfer.html:5
+msgid "BIC/SWIFT"
+msgstr "BIC/SWIFT"
+
+#: templates/commerce/payment_information_wire_transfer.html:6
+msgid "Amount"
+msgstr "Ilość"
+
+#: templates/commerce/payment_information_wire_transfer.html:7
+msgid "Note"
+msgstr "Notatka"
+
+#: templates/commerce/payment_information_wire_transfer.html:8
+msgid "Reference"
+msgstr "Referencja"
+
+#: templates/commerce/payment_information_wire_transfer.html:11
+msgid "Some banks may require following information"
+msgstr "Niektóre banki mogą wymagać następujących informacji"
+
+#: templates/commerce/payment_information_wire_transfer.html:12
+msgid "Recipient"
+msgstr "Odbiorca"
+
+#: templates/commerce/payment_information_wire_transfer.html:13
+msgid "Address"
+msgstr "Adres"
+
+#: templates/commerce/payment_information_wire_transfer.html:14
+msgid "Bank name"
+msgstr "Nazwa banku"
+
+#: templates/commerce/payment_information_wire_transfer.html:15
+msgid "Bank address"
+msgstr "Adres banku"
+
+#: templates/commerce/payment_information_wire_transfer.html:18
+msgid ""
+"It is important to use variable symbol / reference above to correctly pair "
+"your payment with the order!"
+msgstr ""
+"Ważne jest, aby użyć powyższego symbolu zmiennej / referencji, aby poprawnie "
+"sparować Twoj płatność z zamówieniem!"
+
+#: urls.py:13
+msgctxt "url"
+msgid "add-to-cart/<int:content_type_id>/<int:object_id>/"
+msgstr "dodaj-do-koszyka/<int:content_type_id>/<int:object_id>/"
+
+#: urls.py:14
+msgctxt "url"
+msgid "remove-from-cart/<int:item_id>/"
+msgstr "usun-z-koszyka/<int:item_id>/"
+
+#: urls.py:15
+msgctxt "url"
+msgid "unapply-discount/"
+msgstr "anuluj-rabat/"
+
+#: urls.py:16
+msgctxt "url"
+msgid "cart/"
+msgstr "koszyk/"
+
+#: urls.py:17
+msgctxt "url"
+msgid "checkout/addresses/"
+msgstr "kasa/adresy/"
+
+#: urls.py:18
+msgctxt "url"
+msgid "checkout/shipping-and-payment/"
+msgstr "kasa/wysylka-i-platnosc/"
+
+#: urls.py:19
+msgctxt "url"
+msgid "checkout/summary/"
+msgstr "kasa/podsumowanie/"
+
+#: urls.py:20
+msgctxt "url"
+msgid "checkout/finish/"
+msgstr "kasa/zakoncz/"
+
+#: urls.py:21
+msgctxt "url"
+msgid "order/<int:number>/payment/"
+msgstr "zamowienie/<int:number>/platnosc/"
+
+#: urls.py:22
+msgctxt "url"
+msgid "order/<int:number>/payment/return/"
+msgstr "zamowienie/<int:number>/platnosc/zwrot/"
+
+#: urls.py:23
+msgctxt "url"
+msgid "orders/"
+msgstr "zamowienia/"
+
+#: urls.py:31
+msgctxt "url"
+msgid "stripe/create-session/<int:pk>/"
+msgstr "pasek/utworz-sesje/<int:pk>/"
+
+#: urls.py:32
+msgctxt "url"
+msgid "stripe/success/"
+msgstr "pasek/sukces/"
+
+#: urls.py:33
+msgctxt "url"
+msgid "stripe/cancel/"
+msgstr "pasek/anuluj/"
+
+#: urls.py:34
+msgctxt "url"
+msgid "stripe/webhook/"
+msgstr "pasek/webhook/"
+
+#: urls.py:39
+msgctxt "url"
+msgid "loyalty-program/"
+msgstr "program-lojalnosciowy/"
+
+#: views/cart.py:30
+#, python-format
+msgid "You can order at most %d items at once"
+msgstr "Możesz zamówić maksymalnie %d pozycji jednocześnie"
+
+#: views/cart.py:50
+#, python-format
+msgid "Discount %s was removed from cart"
+msgstr "Rabat %s został usunięty z koszyka"
+
+#: views/cart.py:52
+#, python-format
+msgid "%s was added into cart"
+msgstr "%s został dodany do koszyka"
+
+#: views/cart.py:54
+#, python-format
+msgid "%s is already in cart"
+msgstr "%s jest już w koszyku"
+
+#: views/cart.py:86
+#, python-format
+msgid "%s removed from cart"
+msgstr "%s usunięto z koszyka"
+
+#: views/cart.py:270
+msgid "Missing payment method"
+msgstr "Brak metody płatności"
