@@ -1,0 +1,8 @@
+README.md
+setup.py
+SuarimHelloPack.egg-info/PKG-INFO
+SuarimHelloPack.egg-info/SOURCES.txt
+SuarimHelloPack.egg-info/dependency_links.txt
+SuarimHelloPack.egg-info/top_level.txt
+Suarimhellopack/__init__.py
+Suarimhellopack/hello.py
