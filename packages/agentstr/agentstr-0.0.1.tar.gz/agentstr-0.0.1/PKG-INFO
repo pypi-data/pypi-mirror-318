@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: agentstr
+Version: 0.0.1
+Summary: A library for collaborative AI agents
+Home-page: https://github.com/synvya/agentstr
+Author: Alejandro Gil
+Author-email: Alejandro Gil <info@synvya.com>
+License: MIT
+Project-URL: Homepage, https://github.com/synvya/agentstr
+Project-URL: Documentation, https://github.com/synvya/agentstr#readme
+Project-URL: BugTracker, https://github.com/synvya/agentstr/issues
+Keywords: AI,agents,collaboration,library
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# agentstr
+Nostr based communication library for agents
