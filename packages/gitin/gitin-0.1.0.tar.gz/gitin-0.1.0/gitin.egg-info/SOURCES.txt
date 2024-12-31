@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+gitin/__init__.py
+gitin/__version__.py
+gitin/gitin.py
+gitin.egg-info/PKG-INFO
+gitin.egg-info/SOURCES.txt
+gitin.egg-info/dependency_links.txt
+gitin.egg-info/entry_points.txt
+gitin.egg-info/requires.txt
+gitin.egg-info/top_level.txt
