@@ -1,0 +1,3 @@
+[console_scripts]
+pcb-jigify=pcb_jigify.cli:main
+
