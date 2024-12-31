@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: pyfair
+Version: 0.1a13
+Summary: Open FAIR Monte Carlo creator
+Home-page: https://github.com/Hive-Systems/pyfair
+Author: Hive Systems
+Author-email: pyfair@hivesystems.com
+License: MIT
+Keywords: FAIR,risk,monte carlo,cyber risk,risk analysis
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Security
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: xlrd
+
+
+        Factor Analysis of Information Risk (Open FAIR) model in Python.
+
+        This package endeavors to create a simple API for automating the
+        creation of FAIR Monte Carlo risk simulations.
+
+        This is based on the terms found in:
+
+        1. Open FAIR™ RISK TAXONOMY (O-RT); and,
+        2. Open FAIR™ RISK ANALYSIS (O-RA).
+
+        "Open FAIR" is a trademark of the Open Group.
+
+    
