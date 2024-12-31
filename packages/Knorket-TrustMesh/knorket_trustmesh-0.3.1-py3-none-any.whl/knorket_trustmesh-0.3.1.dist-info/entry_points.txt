@@ -1,0 +1,2 @@
+[console_scripts]
+Knorket-TrustMesh = knorket_trustmesh:cli
