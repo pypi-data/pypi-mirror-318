@@ -1,0 +1,10 @@
+plane_py/__init__.py,sha256=XPht5h5wk9n6DZ2q8m35BjWsrx58DWTV7lLd4ag4Ov8,8354
+plane_py/_http_client.py,sha256=mxid1jXQcexzOe53UMy75EKe_tDD0CLbDtlz-ow5SyY,614
+plane_py/_types.py,sha256=p4mXT6m4Uf6QZcWQFOD74d7Ho2f7pVhC8QWGgqiygV4,29282
+plane_py/_utils.py,sha256=35k2WJdHsr6erIsxc9ZJe80DIMRkPCh_DeHIP7SV6p4,199
+plane_py/api.py,sha256=n3nv3kqw0tcPGw9iyW3u_8zvR2HGFdkcTgDfJximuQ4,122175
+plane_py/errors.py,sha256=Ab8be9ZTsi9ZFT2DIHX-nXi-iVublpZDXNDikkqH070,369
+plane_py-1.0.0.dist-info/METADATA,sha256=tQ8PM6gXgZ-1ERAsZio44XHRe21-jUzSzQ40tTg5rgI,429
+plane_py-1.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+plane_py-1.0.0.dist-info/licenses/LICENSE,sha256=HE_YRGA5S07jdMoFwqm4DQsMRnqoXGpDZIRvblo4qew,1073
+plane_py-1.0.0.dist-info/RECORD,,
