@@ -1,0 +1,6 @@
+requests
+yemot
+yemot-flow
+
+[advanced]
+pytest
