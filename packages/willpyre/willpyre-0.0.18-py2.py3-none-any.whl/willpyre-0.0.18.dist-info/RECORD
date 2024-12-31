@@ -1,0 +1,14 @@
+willpyre/__init__.py,sha256=g3C_r81pIkkjtea8odVb8sa7DVEeH1SsdlWCv--PPY4,552
+willpyre/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+willpyre/app.py,sha256=rq-31lrCx7eIOW0tTlVTTuo7cz7MHQ7oP59GwyaVNdk,1200
+willpyre/asgi.py,sha256=L1HGnOEa0zkBhJuXxkfAWVP9UARI7Skyk_WuL3MHmnc,3231
+willpyre/common.py,sha256=0e-nXZKVeNTnFxmyMRndlKOQl-R4bCRBd87WONzgJGM,667
+willpyre/kua.py,sha256=otShLtaeDHdUj7UkJohE7K952c9fEPmINaTYNH75hTQ,12253
+willpyre/openapi.py,sha256=jAHGlYUMKU6ypMVyYp8IvTge9jFCSovP0ZqFgqHqy6c,6466
+willpyre/router.py,sha256=Wp2uDcjKihKXpYWkp6DV42SpcFHLr2UKCLU4Pu893xc,32739
+willpyre/schema.py,sha256=_UrpwUYa5EV9XShvTjxiZh_MWgTEmHO5UUSWx7NDDDE,7104
+willpyre/structure.py,sha256=SUtgMhtLln1YCEUnFewClIhSo9pfMnejC1wrlCOn_6E,14233
+willpyre-0.0.18.dist-info/LICENSE,sha256=CJ6AH9DNjgJYoeH-ImoQRrstcCpTSaDvWg4jKzmilZQ,1067
+willpyre-0.0.18.dist-info/WHEEL,sha256=Sgu64hAMa6g5FdzHxXv9Xdse9yxpGGMeagVtPMWpJQY,99
+willpyre-0.0.18.dist-info/METADATA,sha256=kkbjkYVEY5ZMcb6QvZc9z_1C89-WcfDgymDDC_0v2WM,2193
+willpyre-0.0.18.dist-info/RECORD,,
