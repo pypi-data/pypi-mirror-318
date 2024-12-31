@@ -1,0 +1,7 @@
+README.md
+setup.py
+sbuuid/__init__.py
+sbuuid.egg-info/PKG-INFO
+sbuuid.egg-info/SOURCES.txt
+sbuuid.egg-info/dependency_links.txt
+sbuuid.egg-info/top_level.txt
