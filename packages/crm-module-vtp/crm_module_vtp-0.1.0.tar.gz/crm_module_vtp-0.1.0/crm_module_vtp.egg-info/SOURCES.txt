@@ -1,0 +1,9 @@
+README.md
+setup.py
+crm_module_vtp/__init__.py
+crm_module_vtp/client.py
+crm_module_vtp.egg-info/PKG-INFO
+crm_module_vtp.egg-info/SOURCES.txt
+crm_module_vtp.egg-info/dependency_links.txt
+crm_module_vtp.egg-info/entry_points.txt
+crm_module_vtp.egg-info/top_level.txt
