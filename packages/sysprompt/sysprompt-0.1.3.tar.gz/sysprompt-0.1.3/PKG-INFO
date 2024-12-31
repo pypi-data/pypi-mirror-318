@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: sysprompt
+Version: 0.1.3
+Summary: Official Python SDK for managing and consuming LLM prompts hosted on SysPrompt
+Author-email: "SysPrompt (powered by DailyBot)" <sdk@sysprompt.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+
+# Sysprompt
+
+Sysprompt is a Python library that provides a simple way to interact with the system prompt.
+
+## Installation
+
+```bash
+pip install sysprompt
+```
