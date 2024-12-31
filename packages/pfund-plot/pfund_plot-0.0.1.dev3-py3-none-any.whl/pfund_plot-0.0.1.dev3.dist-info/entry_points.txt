@@ -1,0 +1,5 @@
+[console_scripts]
+pfplot=pfund_plot.main:run_cli
+pfplt=pfund_plot.main:run_cli
+pfund-plot=pfund_plot.main:run_cli
+
