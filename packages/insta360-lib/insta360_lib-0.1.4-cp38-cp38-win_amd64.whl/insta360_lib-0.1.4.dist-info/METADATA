@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: insta360_lib
+Version: 0.1.4
+Summary: Python bindings for sunnyinstaSFR using pybind11
+Home-page: https://gitlab.insta360.com/test2/production-testing-tools/insta360_lib.git
+Author: rain
+Author-email: chenrunming@insta360.com
+Requires-Python: >=3.8
+
