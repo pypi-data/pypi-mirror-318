@@ -1,0 +1,4 @@
+tiktoken
+stripe
+aiohttp
+numpy
