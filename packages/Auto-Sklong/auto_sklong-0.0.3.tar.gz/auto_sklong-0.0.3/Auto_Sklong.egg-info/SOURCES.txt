@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+Auto_Sklong.egg-info/PKG-INFO
+Auto_Sklong.egg-info/SOURCES.txt
+Auto_Sklong.egg-info/dependency_links.txt
+Auto_Sklong.egg-info/entry_points.txt
+Auto_Sklong.egg-info/requires.txt
+Auto_Sklong.egg-info/top_level.txt
