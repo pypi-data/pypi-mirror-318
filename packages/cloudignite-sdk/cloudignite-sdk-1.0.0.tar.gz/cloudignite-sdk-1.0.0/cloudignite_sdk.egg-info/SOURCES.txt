@@ -1,0 +1,8 @@
+setup.py
+cloudignite/__init__.py
+cloudignite/sdk.py
+cloudignite_sdk.egg-info/PKG-INFO
+cloudignite_sdk.egg-info/SOURCES.txt
+cloudignite_sdk.egg-info/dependency_links.txt
+cloudignite_sdk.egg-info/requires.txt
+cloudignite_sdk.egg-info/top_level.txt
