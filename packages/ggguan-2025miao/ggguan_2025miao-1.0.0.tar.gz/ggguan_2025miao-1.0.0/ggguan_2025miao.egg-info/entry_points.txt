@@ -1,0 +1,2 @@
+[console_scripts]
+ggguan_2025miao = ggguan_2025miao.main:NewYearApp
