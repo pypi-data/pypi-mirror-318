@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: overkiz-runner
+Version: 0.0.1
+Summary: 
+Author: François Schmidts
+Author-email: francois@schmidts.fr
+Requires-Python: >=3.12,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Home Automation
+Classifier: Topic :: System :: Monitoring
+Requires-Dist: pyoverkiz (>=1.15.3,<2.0.0)
+Requires-Dist: the-conf (>=1.0.3,<2.0.0)
+Description-Content-Type: text/markdown
+
+![PyPI - Version](https://img.shields.io/pypi/v/overkiz-runner) ![Docker Image Version](https://img.shields.io/docker/v/jaesivsm/overkiz-runner)
+
+# Overkiz Runner
+
+## Example configuration
+
+```json
+{
+    "credentials": [
+        {
+            "username": "<login to your atlantic account>",
+            "password": "<password to your atlantic account>",
+            "servertype": "ATLANTIC_COZYTOUCH"
+        }
+    ]
+}
+```
+
+## Running it
+
+For the next few bits of code, we'll suppose you have a working configuration above in `~/.config/overkiz.json`.
+
+### ... with python:
+
+```shell
+pip install overkiz-runner
+python -m overkiz_runner
+```
+
+### ... with docker
+
+```shell
+ docker run -v /home/jaes/.config/:/etc/overkiz/:ro overkiz-runner:main
+```
+
