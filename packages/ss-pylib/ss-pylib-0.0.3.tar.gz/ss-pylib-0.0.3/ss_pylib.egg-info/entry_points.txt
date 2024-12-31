@@ -1,0 +1,3 @@
+[console_scripts]
+hey = src.main:main
+
