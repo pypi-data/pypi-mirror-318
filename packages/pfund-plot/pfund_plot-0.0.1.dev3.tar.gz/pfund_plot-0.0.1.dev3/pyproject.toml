@@ -1,0 +1,82 @@
+[tool.poetry]
+name = "pfund-plot"
+version = "0.0.1.dev3"
+description = "A library for financial data visualization, dashboard creation, and template sharing."
+license = "Apache-2.0"
+authors = ["stephenyau <softwareentrepreneer+pfund-plot@gmail.com>"]
+readme = "README.md"
+homepage = "https://pfund.ai"
+repository = "https://github.com/PFund-Software-Ltd/pfund-plot"
+documentation = "https://pfund-plot-docs.pfund.ai"
+keywords = ["financial data", "plotting", "dashboards", "charts", "data visualization", "graphs", "plots"]
+classifiers = [
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Information Technology",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Topic :: Software Development :: Libraries",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pfeed = "^0.0.2"
+hvplot = {extras = ["plotly", "datashader"], version = "^0.11.2"}
+panel = "^1.5.5"
+pywebview = "^5.3.2"
+papermill = "^2.6.0"
+voila = "^0.5.8"
+jupyter-bokeh = "^4.0.5"
+narwhals = "^1.19.1"
+streamlit = {version = "^1.41.1", optional = true}
+dash = {version = "^2.18.1", optional = true}
+taipy = {version = "^4.0.0", optional = true}
+gradio = {version = "^5.9.1", optional = true}
+
+[tool.poetry.extras]
+streamlit = ["streamlit"]
+dash = ["dash"]
+taipy = ["taipy"]
+gradio = ["gradio"]
+solara = ["solara"]
+all = [
+    "streamlit", "dash", "taipy", "gradio", "solara",
+]
+
+[tool.poetry.scripts]
+pfund-plot = "pfund_plot.main:run_cli"
+pfplot = "pfund_plot.main:run_cli"
+pfplt = "pfund_plot.main:run_cli"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+pfeed = {path = "../pfeed", develop = true}
+pfund = {path = "../pfund", develop = true}
+bokeh-sampledata = "^2024.2"
+marimo = "^0.10.7"
+notebook = "^7.3.2"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.3"
+pytest-cov = "^6.0.0"
+pytest-mock = "^3.14.0"
+pytest-xdist = "^3.6.1"
+tox = "^4.23.2"
+faker = "^33.1.0"
+bandit = "^1.7.10"
+pre-commit = "^4.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
