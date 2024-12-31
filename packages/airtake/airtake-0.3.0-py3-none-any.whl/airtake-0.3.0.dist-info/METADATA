@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: airtake
+Version: 0.3.0
+Summary: Airtake
+Author-email: Bae Junehyeon <devunt@gmail.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# Airtake SDK for Python
