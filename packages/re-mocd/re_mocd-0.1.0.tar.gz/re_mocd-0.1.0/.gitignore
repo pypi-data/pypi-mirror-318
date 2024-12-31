@@ -1,0 +1,14 @@
+# Ide
+.vscode
+
+# Langs
+__pycache__
+/target
+/myenv
+.venv/
+
+# Specific output files
+output.json
+mocd_output.csv
+*.png
+*.edgelist
