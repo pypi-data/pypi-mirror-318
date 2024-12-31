@@ -1,0 +1,4 @@
+dash>=2.18.2
+dash-iconify>=0.1.2
+dash-mantine-components>=0.15.1
+dash-snap-grid==0.1.0
