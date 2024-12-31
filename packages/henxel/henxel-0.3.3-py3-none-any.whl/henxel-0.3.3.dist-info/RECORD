@@ -1,0 +1,16 @@
+henxel/__init__.py,sha256=44b57dVUCkXL1WNa1LztXbWktXCt_mYInExMUBn5mOY,252037
+henxel/changefont.py,sha256=hVO8N4CJHqVX6gDP29-eItvjJEWSfuce2_dJwwIf3ig,7046
+henxel/editor.png,sha256=kSPQ0Q1xOjqTwHc7jNcwa6O_S4PJwEZmRDbnsETks34,359
+henxel/fdialog.py,sha256=LhiRt7CEyl63LuECMqu8yyMt2gLWf_B_VOG838LPo7s,7878
+henxel/help.txt,sha256=PLuT_TfaEjIJYKPTuJmKwx6aifYtgWNwzphRYwV1zbs,12296
+henxel/help_mac.txt,sha256=amDkUWVvduLcdy2UxQM12HDJN8Y-lNq5EWeNXTNPuc4,12176
+henxel/restart_editor.scpt,sha256=4ytrQULxmkZGGsIrCX-V1nGxQ7HduMg41KEzIgCRPj8,412
+henxel/restart_editor_todo.bat,sha256=rpG6FDLGzK5EDsGeccZmwiIyf3MSOwS811YlVNKnfkM,11
+henxel/restart_editor_todo.sh,sha256=ttaY6sFuWby1NlFUmq_4Pimoymj6LYxk_YlsoUrTSxg,28
+henxel/wordexpand.py,sha256=H3Hb6SKM-gfG23-TbDlsfsI5huZjB0q-Cpb9C-z6HCA,5789
+importflags/__init__.py,sha256=dvXrAMPDo-6YjazhaaA2_TEpXz8e61gZSfQRd0SXMB0,1565
+henxel-0.3.3.dist-info/LICENSE,sha256=TP2aSsEcnh3Hn2kk3ialdmwiv4w57Rkg6f8_8-4pPBc,34801
+henxel-0.3.3.dist-info/METADATA,sha256=MI09C6BLlgjvIxi1mgXh4ZJ22LTyO9LqP5N-0kG21Tc,5488
+henxel-0.3.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+henxel-0.3.3.dist-info/top_level.txt,sha256=Y-dr3QRv-YEKE1_Jcsyd0OAYPfrN-9ATCFQfrhFacVU,19
+henxel-0.3.3.dist-info/RECORD,,
