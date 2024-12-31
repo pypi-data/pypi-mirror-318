@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+kamera/__init__.py
+kamera/camera.py
+kamera/settings.py
+kamera.egg-info/PKG-INFO
+kamera.egg-info/SOURCES.txt
+kamera.egg-info/dependency_links.txt
+kamera.egg-info/requires.txt
+kamera.egg-info/top_level.txt
