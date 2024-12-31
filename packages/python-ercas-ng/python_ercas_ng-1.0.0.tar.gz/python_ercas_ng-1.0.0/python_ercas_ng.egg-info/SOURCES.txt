@@ -1,0 +1,10 @@
+LICENCE
+README.md
+pyproject.toml
+setup.py
+Ercarsng/__init__.py
+Ercarsng/ercaspay.py
+python_ercas_ng.egg-info/PKG-INFO
+python_ercas_ng.egg-info/SOURCES.txt
+python_ercas_ng.egg-info/dependency_links.txt
+python_ercas_ng.egg-info/top_level.txt
