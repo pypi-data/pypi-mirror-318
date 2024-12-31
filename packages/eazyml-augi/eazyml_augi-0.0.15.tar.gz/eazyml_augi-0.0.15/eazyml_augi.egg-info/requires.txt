@@ -1,0 +1,7 @@
+werkzeug
+unidecode
+pandas
+scikit-learn
+nltk
+getmac
+cryptography
