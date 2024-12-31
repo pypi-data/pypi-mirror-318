@@ -1,0 +1,11 @@
+pcb_jigify/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pcb_jigify/cli.py,sha256=6BiAQSGbnrGnnRlz67EJXb4AC3wVWi4kqxSIfEeF__Y,5718
+pcb_jigify/jigs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pcb_jigify/jigs/base.py,sha256=xAJUaprvhIbh6ZdO1jV9HNnJssw2JwmleJOaFCESP9Q,964
+pcb_jigify/jigs/holding.py,sha256=UPIWILE5s5iy6ykPqP-Kz_YXuMagHkiicvtXf1XZNEg,2796
+pcb_jigify/jigs/settings.py,sha256=LxWVkYab4X05Y090K053GjV7kpSnfMpBgtQoh6qlI8o,468
+pcb_jigify/jigs/testing.py,sha256=d13wa40t0hS0ChJ5u-IBNzUfgVUPzjkF92VCt0L1C5c,2417
+pcb_jigify-0.1.0.post1.dist-info/METADATA,sha256=BlwnoHfH9D-38yEwr4ZnjxU9ReRih8P4hEhcx9ttRXc,4136
+pcb_jigify-0.1.0.post1.dist-info/WHEEL,sha256=iAMR_6Qh95yyjYIwRxyjpiFq4FhDPemrEV-SyWIQB3U,92
+pcb_jigify-0.1.0.post1.dist-info/entry_points.txt,sha256=NxU9tqBmqiebMX7GmHXm8YrNtg4_xt7lNy9gK8HkEI8,50
+pcb_jigify-0.1.0.post1.dist-info/RECORD,,
