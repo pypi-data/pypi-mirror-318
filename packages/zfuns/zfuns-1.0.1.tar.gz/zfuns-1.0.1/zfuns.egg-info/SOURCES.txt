@@ -1,0 +1,8 @@
+setup.py
+zfuns/__init__.py
+zfuns/test.py
+zfuns.egg-info/PKG-INFO
+zfuns.egg-info/SOURCES.txt
+zfuns.egg-info/dependency_links.txt
+zfuns.egg-info/requires.txt
+zfuns.egg-info/top_level.txt
