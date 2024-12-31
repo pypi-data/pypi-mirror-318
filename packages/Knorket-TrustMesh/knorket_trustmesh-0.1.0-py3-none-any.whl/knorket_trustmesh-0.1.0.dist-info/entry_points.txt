@@ -1,0 +1,2 @@
+[console_scripts]
+router-script = knorket_trustmesh:cli
