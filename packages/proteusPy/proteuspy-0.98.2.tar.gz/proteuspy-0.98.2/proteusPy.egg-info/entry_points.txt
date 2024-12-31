@@ -1,0 +1,2 @@
+[console_scripts]
+proteusPy.qt5viewer = proteusPy.qt5viewer:main
