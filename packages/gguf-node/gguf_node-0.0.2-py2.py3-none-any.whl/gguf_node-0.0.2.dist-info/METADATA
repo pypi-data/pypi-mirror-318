@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: gguf-node
+Version: 0.0.2
+Summary: gguf node for comfyui
+Author-email: calcuis <info@calcu.io>
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: tqdm
+Project-URL: Download, https://github.com/calcuis/gguf/releases
+Project-URL: GitHub, https://github.com/calcuis/gguf
+Project-URL: Homepage, https://gguf.org
+Project-URL: Issues, https://github.com/calcuis/gguf/issues
+Project-URL: reddit, https://www.reddit.com/r/gguf
+
+## gguf node for comfyui [![Static Badge](https://img.shields.io/badge/ver-0.0.2-black?logo=github)](https://github.com/calcuis/gguf/releases)
+
+clone this repo to custom_nodes folder (./ComfyUI/custom_nodes)
+```
+git clone https://github.com/calcuis/gguf
+```
+check the dropdown menu for `gguf`
+
+- cooking; please wait...
+
