@@ -1,0 +1,10 @@
+LICENSE
+README.rst
+pyproject.toml
+src/matricity/__init__.py
+src/matricity/matricity.py
+src/matricity.egg-info/PKG-INFO
+src/matricity.egg-info/SOURCES.txt
+src/matricity.egg-info/dependency_links.txt
+src/matricity.egg-info/requires.txt
+src/matricity.egg-info/top_level.txt
