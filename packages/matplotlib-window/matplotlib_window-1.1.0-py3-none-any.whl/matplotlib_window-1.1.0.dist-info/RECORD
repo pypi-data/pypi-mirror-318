@@ -1,0 +1,7 @@
+matplotlib_window/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+matplotlib_window/base.py,sha256=ab-US1NrWF8TlIJPHsoVmBU-oAuNprHgtvBN6cBzaU0,22550
+matplotlib_window/window.py,sha256=svs62GPFuEynkDhJ5HzabmWEB6Y6J0xbAJgWkzMn7O0,3173
+matplotlib_window-1.1.0.dist-info/METADATA,sha256=cw1ag7So4mS2TP-x2MEhhnFVq9L69UukgwR9pltdhko,6168
+matplotlib_window-1.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+matplotlib_window-1.1.0.dist-info/licenses/LICENSE,sha256=KPpHPEL3-DJGCJcKiY2YKhQlcfdhTaMhgR8c40u7wPE,1073
+matplotlib_window-1.1.0.dist-info/RECORD,,
