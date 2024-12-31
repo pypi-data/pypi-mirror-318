@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: navvy
+Version: 1.0.0
+Summary: Automation tool for managing Git repositories with AI (OpenAI).
+Author-email: Rofly António <mitangerofly@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2024 Rofly António
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/itsrofly/navvy-package
+Keywords: automation,ai,openai,git,code
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: annotated-types==0.7.0
+Requires-Dist: anyio==4.6.2.post1
+Requires-Dist: certifi==2024.8.30
+Requires-Dist: distro==1.9.0
+Requires-Dist: gitdb==4.0.11
+Requires-Dist: GitPython==3.1.43
+Requires-Dist: h11==0.14.0
+Requires-Dist: httpcore==1.0.7
+Requires-Dist: httpx==0.27.2
+Requires-Dist: idna==3.10
+Requires-Dist: jiter==0.7.1
+Requires-Dist: openai==1.54.5
+Requires-Dist: pydantic==2.9.2
+Requires-Dist: pydantic_core==2.23.4
+Requires-Dist: smmap==5.0.1
+Requires-Dist: sniffio==1.3.1
+Requires-Dist: tqdm==4.67.0
+Requires-Dist: typing_extensions==4.12.2
+
+# Navvy
+
+The navvy package is a Python-based automation tool for managing Git repositories. It leverages the OpenAI API to perform tasks such as editing, creating, and deleting files within a repository.
+
+## Installation
+
+You can install the Navvy package using pip:
+
+```sh
+pip install navvy
+```
+
+## Usage
+
+```python
+from navvy import Navvy
+
+# Initialize Navvy
+navvy = Navvy(project_path="./repo_project_path", model="gpt-4o", api_key="your_openai_api_key")
+
+# Send a message to create a snake game
+chunks = navvy.send_message("Create a snake game!")
+
+for chunk in chunks:
+    print(chunk, end="", flush=True)
+```
+
+Here is an example of how to undo a commit using the Navvy package:
+
+```python
+from navvy import Navvy
+
+# Initialize Navvy
+# Using OPENAI_API_KEY environment variable
+navvy = Navvy(project_path="./repo_project_path") 
+
+# Send a message to create a snake game
+chunks = navvy.send_message("Create a snake game!")
+
+for chunk in chunks:
+    print(chunk, end="", flush=True)
+
+# Undo the last commit
+navvy.undo_commit_changes()
+```
+
+## Requirements
+
+Git            
+Python 3.8 or higher.
+
+Note: The project path need be initialized with Git.
