@@ -1,0 +1,32 @@
+{
+  "manifest": {
+    "rid": "orn:slack.message:TA2E6KPK3/C082YTFAA83/1735223865.374829",
+    "timestamp": "2024-12-30T08:44:13.883315+00:00",
+    "sha256_hash": "4c52112325360a74cbe99f61661a848e0354311a9109d9ff49331720aafd410c"
+  },
+  "contents": {
+    "user": "U04PMMHGERJ",
+    "type": "message",
+    "ts": "1735223865.374829",
+    "client_msg_id": "1fc65fbe-a299-4931-848e-4df6e915a71c",
+    "text": "new message",
+    "team": "TA2E6KPK3",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "eoYsI",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "new message"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
