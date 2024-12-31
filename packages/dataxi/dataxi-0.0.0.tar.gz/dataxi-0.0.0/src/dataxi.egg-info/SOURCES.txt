@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+pyproject.toml
+src/dataxi/__init__.py
+src/dataxi/save_secret.py
+src/dataxi.egg-info/PKG-INFO
+src/dataxi.egg-info/SOURCES.txt
+src/dataxi.egg-info/dependency_links.txt
+src/dataxi.egg-info/top_level.txt
+src/dataxi/connectors/__init__.py
+src/dataxi/connectors/mysql_connector.py
+src/dataxi/operators/__init__.py

@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dataxi"
+version = "0.0.0"
+description = "Dataxi is a cross-DBMS server tool that can help you centralize the data extraction and transfer from different data sources."
+readme = "README.md"
+license = {text = "MIT License"}
+keywords = ["ETL"]
+authors = [{name = "Yuan Yuan", email = "yyccphil@gmail.com"}]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+dependencies = []
+requires-python = ">=3.6"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.dynamic]
+version = {file = "VERSION"}
+dependencies = {file = "requirements.txt"}
+
+[project.urls]
+"Project" = "https://github.com/yyccPhil/dataxi"
