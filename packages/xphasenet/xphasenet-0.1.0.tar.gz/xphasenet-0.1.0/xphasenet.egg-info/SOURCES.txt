@@ -1,0 +1,6 @@
+setup.py
+xphasenet.egg-info/PKG-INFO
+xphasenet.egg-info/SOURCES.txt
+xphasenet.egg-info/dependency_links.txt
+xphasenet.egg-info/requires.txt
+xphasenet.egg-info/top_level.txt
