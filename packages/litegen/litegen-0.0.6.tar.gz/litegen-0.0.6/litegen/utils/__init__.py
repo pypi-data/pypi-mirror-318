@@ -1,0 +1,1 @@
+from .ocr_surya import run_surya_ocr
