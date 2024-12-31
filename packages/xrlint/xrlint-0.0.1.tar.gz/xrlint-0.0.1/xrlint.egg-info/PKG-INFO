@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: xrlint
+Version: 0.0.1
+Summary: A linter for xarray datasets.
+Author: Norman Fomferra (Brockmann Consult GmbH)
+License: MIT
+Project-URL: Documentation, https://bcdev.github.io/xrlint
+Project-URL: Repository, https://github.com/bcdev/xrlint
+Project-URL: Changelog, https://github.com/bcdev/xrlint/blob/main/CHANGES.md
+Project-URL: Issues, https://github.com/bcdev/xrlint/issues
+Keywords: xarray
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Typing :: Typed
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: fsspec
+Requires-Dist: pyaml
+Requires-Dist: tabulate
+Requires-Dist: xarray
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: hatch; extra == "dev"
+Requires-Dist: netcdf4; extra == "dev"
+Requires-Dist: numpy; extra == "dev"
+Requires-Dist: pandas; extra == "dev"
+Requires-Dist: zarr; extra == "dev"
+Provides-Extra: doc
+Requires-Dist: mkdocs; extra == "doc"
+Requires-Dist: mkdocs-material; extra == "doc"
+Requires-Dist: mkdocstrings; extra == "doc"
+Requires-Dist: mkdocstrings-python; extra == "doc"
+
+[![CI](https://github.com/bcdev/xrlint/actions/workflows/tests.yml/badge.svg)](https://github.com/bcdev/xrlint/actions/workflows/tests.yml)
+[![codecov](https://codecov.io/gh/bcdev/xrlint/graph/badge.svg?token=GVKuJao97t)](https://codecov.io/gh/bcdev/xrlint)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![GitHub License](https://img.shields.io/github/license/bcdev/xrlint)](https://github.com/bcdev/xrlint)
+
+# XRLint - A linter for xarray datasets
+
+
+XRLint is a [linting](https://en.wikipedia.org/wiki/Lint_(software)) 
+tool and library for [xarray]() datasets.
+Its design is heavily inspired by [ESLint](https://eslint.org/).
+
+**IMPORTANT NOTE**: This project just started and is under development, 
+there is no stable release yet.
+
+## Features 
+
+- Flexible validation for `xarray.Dataset` objects by configurable _rules_.
+- Available from _CLI_ and _Python API_.
+- _Custom plugins_ providing _custom rule_ sets allow addressing 
+  different dataset conventions.
+- _Project-specific configurations_ including configuration of individual 
+  rules and file-specific settings.
+
+## Inbuilt Rules
+
+The following rule plugins are currently built into the code base:
+
+- `core`: Implementing the rules for
+  [tiny data](https://tutorial.xarray.dev/intermediate/data_cleaning/05.1_intro.html)
+  and the 
+  [CF-Conventions](https://cfconventions.org/cf-conventions/cf-conventions.html).
+
+- `xcube`: Implementing the rules for 
+  [xcube datasets](https://xcube.readthedocs.io/en/latest/cubespec.html).
+  Note this plugins will be moved into a separate GitHub repo later 
+  once XRLint is mature enough. 
+
