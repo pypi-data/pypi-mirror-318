@@ -1,0 +1,16 @@
+objwatch/__init__.py,sha256=ncJWYjzUBCq72jdINaMc9OUJvljGmIt0a5G0hRzrWPY,67
+objwatch/core.py,sha256=XYD5DZDdFS_y9LEZknPHwBC8yh0o94hpEwCSHFQukJk,1014
+objwatch/event_handls.py,sha256=YBP040NUFl8NNIdZHw3iQehz0Mbl_vkKLy-3kLgNDew,3110
+objwatch/tracer.py,sha256=mJgxwnOtp-54s2H4PW8it71He7X64Q-JwPfwuIDByCU,7248
+objwatch/wrappers.py,sha256=IY7ah9XuyA7TLkcXfKPN6mHXHzgIRcLaWgKTgEgmHKA,4292
+objwatch/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+objwatch/utils/logger.py,sha256=qHwWW_eZGGwCpa146o6nsebQ0sHMrWFN93viy5S7rXI,1450
+objwatch/utils/weak.py,sha256=aGYx0Dv0_3pKlUbsW8zhpsiLgbOdkgMOIqrVWqrApr4,6802
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test.py,sha256=q7kT8lHY9tON_l868atHZPaDZcg0DjAmYX6YvE46O60,11278
+tests/test_torch_train.py,sha256=DWABjT6skQiZ3xuDuNlKAQ4y2nQUTPCYv6F00cv6Q2Q,2466
+objwatch-0.2.3.dist-info/LICENSE,sha256=4VcFDIRnCJwTve0lfBrYhSu4KOJ3MG2-eYqbCyYnwls,1065
+objwatch-0.2.3.dist-info/METADATA,sha256=_C2yw1nLnfyranUGNAZ8LDw7XQ-97pNAUaL9c8uBpEo,14249
+objwatch-0.2.3.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+objwatch-0.2.3.dist-info/top_level.txt,sha256=Wu4OAkDodBZ2SrolrEYCGdehMOMEv9jBP1pFoGWniw0,15
+objwatch-0.2.3.dist-info/RECORD,,
