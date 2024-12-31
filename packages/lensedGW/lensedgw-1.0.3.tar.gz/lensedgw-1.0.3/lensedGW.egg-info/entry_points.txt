@@ -1,0 +1,2 @@
+[pycbc.waveform.fd]
+lensedGW = lensedGW:lensed_fd_waveform
