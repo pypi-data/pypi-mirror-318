@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+dataframe_with_button/__init__.py
+dataframe_with_button/example2.py
+dataframe_with_button.egg-info/PKG-INFO
+dataframe_with_button.egg-info/SOURCES.txt
+dataframe_with_button.egg-info/dependency_links.txt
+dataframe_with_button.egg-info/requires.txt
+dataframe_with_button.egg-info/top_level.txt
