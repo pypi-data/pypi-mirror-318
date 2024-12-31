@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: liteboty
+Version: 0.1.0
+Summary: LiteBoty 是一个轻量级的机器人开发框架
+Home-page: https://github.com/yejue/liteboty
+Keywords: liteboty,litebot,ros,bot
+Author: yejue
+Author-email: 1145331931@qq.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: click (>=8.0.0,<9.0.0)
+Requires-Dist: pydantic (>=2.0.0,<3.0.0)
+Requires-Dist: pydantic-settings (>=2.0.0,<3.0.0)
+Requires-Dist: redis (>=5.0.0,<6.0.0)
+Description-Content-Type: text/markdown
+
+
