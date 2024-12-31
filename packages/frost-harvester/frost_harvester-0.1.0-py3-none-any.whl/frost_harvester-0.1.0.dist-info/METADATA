@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: frost-harvester
+Version: 0.1.0
+Summary: FROST Harvester ingests sensor data in the SensorThingsAPI format, outputting it in the format desired by our teleclass_classifier
+License: MIT
+Author: Jeffrey Limnardy
+Author-email: jeffreylimnardy@yahoo.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pydantic (>=2.10.4,<3.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+FROST Harvester
+
+FROST Harvester is a tool to ingest data from FROST servers coming in the SensorThings API format. It also has translation capabilities into english when you specify a LibreTranslate translation endpoint.
+
+The output of FROST Harvester will be in the format of `Thing`, which will be then ingested by our classification service.
