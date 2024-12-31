@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "dorm-project"
+version = "0.1.0"
+description = "Use the best ORM everywhere!"
+authors = ["Harsh Bhikadia <harsh@bhikadia.com>"]
+readme = "README.md"
+packages = [
+    { include = "dorm" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
