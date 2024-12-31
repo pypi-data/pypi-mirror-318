@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+sheets_manager/__init__.py
+sheets_manager/sheets_manager.py
+spreadsheet_manager.egg-info/PKG-INFO
+spreadsheet_manager.egg-info/SOURCES.txt
+spreadsheet_manager.egg-info/dependency_links.txt
+spreadsheet_manager.egg-info/requires.txt
+spreadsheet_manager.egg-info/top_level.txt
