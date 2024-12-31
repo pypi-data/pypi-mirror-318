@@ -1,0 +1,7 @@
+pandas
+matplotlib
+openpyxl
+scikit-learn
+scipy
+getmac
+cryptography
