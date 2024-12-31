@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: cloudignite-sdk
+Version: 1.0.1
+Summary: A Python SDK for interacting with CloudIgnite services
+Home-page: https://cloudignite.in
+Author: CloudIgnite
+Author-email: arpitrangi72@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: requests
+
+UNKNOWN
+
