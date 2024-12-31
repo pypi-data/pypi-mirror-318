@@ -1,0 +1,34 @@
+[project.urls]
+homepage = "https://github.com/0xBitzz/cpfeed/"
+repository = "https://github.com/0xBitzz/cpfeed.git"
+
+[tool.poetry]
+name = "cpfeed"
+version = "0.8.0"
+description = "CLI to check out current prices of cryptocurrencies. Powered by CoinGecko."
+authors = ["0xBitzz"]
+readme = "README.md"
+license = "MIT"
+keywords = [
+    "console",
+    "CLI",
+]
+
+[tool.poetry.scripts]
+cpfeed = "cpfeed.cpf:main"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+typer = {extras = ["all"], version = "^0.9.0"}
+requests = "^2.31.0"
+
+[tool.poetry.dev-dependencies]
+twine = "5.0.0"
+
+[[tool.poetry.source]]
+name = "cpfeed"
+url = "https://github.com/0xBitzz/cpfeed"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
