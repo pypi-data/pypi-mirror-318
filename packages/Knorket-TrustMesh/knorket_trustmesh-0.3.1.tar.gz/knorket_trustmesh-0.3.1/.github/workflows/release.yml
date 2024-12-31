@@ -1,0 +1,41 @@
+---
+name: Release
+
+on:
+  push:
+    branches:    
+      - main      
+
+jobs:
+  uv-example:
+    name: python
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          # Install a specific version of uv.
+          version: "0.5.13"
+
+      - name: Set up Python
+        run: uv python install
+  
+      - name: build
+        run: uv build
+
+      - name: check pypi
+        run: |
+          version=$(basename "$(ls dist/*.tar.gz | head -n 1)" | cut -d'-' -f2 | sed 's/.tar.gz//')
+          status_code=$(curl -o /dev/null -s -w "%{http_code}" https://pypi.org/pypi/Knorket-TrustMesh/$version/json)
+          echo $status_code
+          echo "status_code=$status_code" >> $GITHUB_ENV
+
+      - name: publish
+        if: env.status_code == '404'
+        env:
+          UV_PUBLISH_TOKEN: ${{ secrets.UV_PUBLISH_TOKEN }}
+        run: uv publish
+
