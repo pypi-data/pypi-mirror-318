@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: lyrical
+Version: 1.1.2
+Summary: Python package to fetch song lyrics from Genius
+Author-email: SnarkyDev <snarkydev@outlook.com>
+Maintainer-email: SnarkyDev <snarkydev@outlook.com>
+License: # MIT License
+        
+        Copyright (c) 2024 SnarkyDev
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/SnarkyDeveloper/Lyrical
+Project-URL: Bug Reports, https://github.com/SnarkyDeveloper/Lyrical/issues
+Project-URL: Source, https://github.com/SnarkyDeveloper/Lyrical
+Keywords: lyrics,genius,music,songs
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx
+Requires-Dist: beautifulsoup4
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+
+# Lyrical
+
+A Python package to fetch song lyrics from Genius.
+
+## Installation
+
+```bash
+pip install lyrical
+```
+
+## Info
+
+- **Author:** SnarkyDev
+- **Version:** 1.1.2
+- **LICENSE:** MIT
+- **USE:** Scrapes Genius for lyrics, in an async way
+
+## Usage
+
+```python
+import lyrical
+import asyncio
+import json
+url = asyncio.run(lyrical.Lyrics.search("Hello World"))
+lyrics = asyncio.run(lyrical.Lyrics.get_lyrics(url))
+artist = asyncio.run(lyrical.Lyrics.get_artists(url))
+title = asyncio.run(lyrical.Lyrics.get_title(url))
+print(f'Lyrics: {lyrics}\nArtists: {artist}\nTitle: {title}')
+
+overall = asyncio.run(lyrical.Lyrics.lyrics("Hello World"))
+print(json.loads(overall))
+```
+
+### API
+
+```python
+import lyrical
+import asyncio
+lyrics = asyncio.run(lyrical.Lyrics.start_api())
+```
