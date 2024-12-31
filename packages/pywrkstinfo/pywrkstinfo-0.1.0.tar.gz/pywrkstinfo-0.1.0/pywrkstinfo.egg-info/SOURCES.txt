@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+pywrkstinfo.py
+pywrkstinfo.egg-info/PKG-INFO
+pywrkstinfo.egg-info/SOURCES.txt
+pywrkstinfo.egg-info/dependency_links.txt
+pywrkstinfo.egg-info/entry_points.txt
+pywrkstinfo.egg-info/top_level.txt
