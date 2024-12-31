@@ -1,0 +1,12 @@
+dompa/__init__.py,sha256=-5awXjJodSaMr5XRL0UfJECJBcF5qftCXJCyqjZZLMs,26
+dompa/dompa.py,sha256=H0k6u8NwH9LY9ax8fFqy1wFb2ayqjJKhuMUVdRul5rA,11520
+dompa/dompa_test.py,sha256=37RT8SSL6ZZfj_KRpM04wlUJt1l_rS4trSmahd9J8Pg,584
+dompa/nodes/__init__.py,sha256=E7jloTvqIUYwsZZ72T7Em8hgGdezwcAM_gUJwGsxVwQ,84
+dompa/nodes/ir_node.py,sha256=RTDNfIM0W6ei-C0Amyz0SudxykezpzK80KCrsm_LGZc,297
+dompa/nodes/node.py,sha256=w5hw-8Zhw63-_JEFeGdVPYMEgR1j-AjvSkvzjBVEKpY,419
+dompa/nodes/text_node.py,sha256=0EuSzaj3DHfgaSc1RXvrc2FbQSQXxn4kU-7bDLJ-D5w,106
+dompa-0.4.0.dist-info/LICENSE.txt,sha256=ERYxR8MpI4BA2oEuphoteju4_Il5gYIOYIjHnnVRmZw,1063
+dompa-0.4.0.dist-info/METADATA,sha256=cQwD-ybhTmEDXbqPzSaALp4IM49XfZ-CeEXC1p7Oczw,2123
+dompa-0.4.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+dompa-0.4.0.dist-info/top_level.txt,sha256=ZTumkBeosVYsCDheh7EZ8WzzB28sgU2dxHhPlxdIRo8,6
+dompa-0.4.0.dist-info/RECORD,,
