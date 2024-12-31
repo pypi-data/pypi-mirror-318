@@ -1,0 +1,9 @@
+sqlite_wikidata/__about__.py,sha256=7nnTEIA3rzouqhb6roZunaLoPXifwCyGZkmuOVxYmYw,120
+sqlite_wikidata/__init__.py,sha256=MKWm1IEh3aTVdSyYXAoNdO3h7dUgX9lPBGwvh7gKeOQ,98
+sqlite_wikidata/build_index.py,sha256=tZiM_yOoLnx_SjFW_QFLp9rQIGr5EyGI-OkcZEaQ46Q,1673
+sqlite_wikidata/db.py,sha256=1pTrO6cAAGoeY409bqGVgKsUidS39X3naIhcnjUNmdw,8759
+sqlite_wikidata/process_dump.py,sha256=d0_FtA4hdwiufp4I5-08RJuk5TqaCA0BJKyEhdmB0lA,763
+sqlite_wikidata-0.0.1.dist-info/METADATA,sha256=Qaqo3cnnfl1KTj2AdTU8uoB4WathpjDmGhmhCwSaRKA,1512
+sqlite_wikidata-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+sqlite_wikidata-0.0.1.dist-info/licenses/LICENSE.txt,sha256=aE22mSXAvkdKDGwdO-Rq92DvCLLFU7b8KJYUqhoiKM0,1090
+sqlite_wikidata-0.0.1.dist-info/RECORD,,
