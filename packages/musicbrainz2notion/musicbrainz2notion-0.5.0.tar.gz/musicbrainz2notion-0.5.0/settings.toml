@@ -1,0 +1,40 @@
+# === MusicBrainz2Notion Settings === #
+[musicbrainz2notion]
+artists_to_update = [
+    # "754abc13-d242-4585-8276-2c8c45aa37cf",
+    # "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+]
+
+# === API keys === #
+notion_api_key = ""
+# fanart_api_key = "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
+
+# === Database IDs: Uncomment === #
+artist_db_id = ""
+release_db_id = ""
+track_db_id = ""
+
+# === Release filters === #
+release_type_filter = ["album", "ep"]
+release_secondary_type_exclude = ["compilation", "live"]
+
+# === Misc === #
+min_nb_tags = 3
+cover_size = 500
+force_update_canonical_data = false
+add_track_thumbnail = true
+
+
+[musicbrainz2notion-global]
+# === Icon emojis === #
+ARTIST_ICON = "🧑‍🎤"
+RELEASE_ICON = "💽"
+TRACK_ICON = "🎼"
+
+# === Select Placeholders === #
+EMPTY_TYPE_PLACEHOLDER = "Unknown"
+EMPTY_AREA_PLACEHOLDER = "Unknown"
+EMPTY_LANGUAGE_PLACEHOLDER = "Unknown"
+
+# === Other === #
+REQUEST_TIMEOUT = 10
