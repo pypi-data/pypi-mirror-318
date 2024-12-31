@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: char_processor
+Version: 0.1
+Summary: A simple text processing package
+Home-page: https://github.com/yourusername/char_processor
+Author: Your Name
+Author-email: your.email@example.com
+License-File: LICENSE
+
