@@ -1,0 +1,3 @@
+[console_scripts]
+vizeer=vizeer.cli:main
+
