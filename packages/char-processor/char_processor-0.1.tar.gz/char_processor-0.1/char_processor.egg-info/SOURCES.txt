@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+char_processor/__init__.py
+char_processor/processor.py
+char_processor.egg-info/PKG-INFO
+char_processor.egg-info/SOURCES.txt
+char_processor.egg-info/dependency_links.txt
+char_processor.egg-info/top_level.txt
+tests/test_processor.py
