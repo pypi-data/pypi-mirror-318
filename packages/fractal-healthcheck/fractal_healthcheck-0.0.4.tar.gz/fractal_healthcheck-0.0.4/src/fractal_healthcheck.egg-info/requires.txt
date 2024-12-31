@@ -1,0 +1,9 @@
+click
+psutil
+pyyaml
+pydantic[email]<2.11.0,>=2.10.0
+
+[dev]
+bumpver
+pytest
+requests
