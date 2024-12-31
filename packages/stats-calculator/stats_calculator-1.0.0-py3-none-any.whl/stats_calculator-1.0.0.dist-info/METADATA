@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: stats_calculator
+Version: 1.0.0
+Summary: A simple package for calculating mean and standard deviation
+Home-page: http://www.example.com
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: License.txt
+Provides-Extra: dev
+Requires-Dist: check-manifest; extra == "dev"
+Provides-Extra: test
+Requires-Dist: coverage; extra == "test"
+
+# Stats Calculator
+
+A simple Python package for calculating the mean and standard deviation of a set of numbers.
+
+## Installation
+
+```sh
+pip install stats_calculator
+
+from stats_calculator import calculate_mean, calculate_std_dev
+
+numbers = [1, 2, 3, 4, 5]
+
+# Calculate the mean
+mean_result = calculate_mean(numbers)
+print(mean_result)  # Output: 3
+
+# Calculate the standard deviation
+std_dev_result = calculate_std_dev(numbers)
+print(std_dev_result)  # Output: approximately 1.41421 (depending on precision)
