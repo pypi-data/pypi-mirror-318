@@ -1,0 +1,9 @@
+pycomgrader/__init__.py,sha256=Mnwsyk2Pw_4aFSZ-ibgNFBF4kY3W9cNLNX6xXMbRmio,100
+pycomgrader/cli_grader.py,sha256=AURqXJwE0P789aG_WVM99hFwHOOA0LqqPvO718LnUa8,4691
+pycomgrader/pycomgrader.py,sha256=2NBc0jCirIpUsoxSUpZW8j6Sqcvs4A1rooX-_O5fADQ,10877
+pycomgrader-1.1.0.dist-info/LICENSE,sha256=jOxCc4wvPrsb0RTfbRxGi9K2MxU-XrD1JwsgspONjPw,1066
+pycomgrader-1.1.0.dist-info/METADATA,sha256=DF9oQfyhy_wKmrJb9vMByhUILgG2wJiU-XYjGX38yuE,5398
+pycomgrader-1.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pycomgrader-1.1.0.dist-info/entry_points.txt,sha256=4lNdcdCiDrkiGvli0FCyE0iCJLU8j4wTCz1o9yByyaY,66
+pycomgrader-1.1.0.dist-info/top_level.txt,sha256=nQSGBe4jsb88RttkZ4tnd1gewFqZjK_B1WlSyncSBdk,12
+pycomgrader-1.1.0.dist-info/RECORD,,
