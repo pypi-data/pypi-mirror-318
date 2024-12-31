@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: ultraclean
+Version: 0.2.0
+Summary: UltraClean is a fast and efficient Python library for cleaning and preprocessing text data for AI/ML tasks and data processing.
+Home-page: https://github.com/Kawai-Senpai/UltraClean
+Download-URL: https://github.com/Kawai-Senpai/UltraClean
+Author: Ranit Bhowmick
+Author-email: bhowmickranitking@duck.com
+License: MIT License with attribution requirement
+Keywords: Text Cleaning,Data Preprocessing,AI,ML,Spam Detection
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Classifier: Typing :: Typed
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.rst
+Requires-Dist: transformers>=4.0.0
+Requires-Dist: torch>=1.7.0
+Requires-Dist: emoji>=1.2.0
+Requires-Dist: tf-keras>=2.6.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.21.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: mypy>=0.900; extra == "dev"
+Requires-Dist: flake8>=4.0.0; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx>=4.0.0; extra == "docs"
+Requires-Dist: sphinx-rtd-theme>=1.0.0; extra == "docs"
+
+# UltraClean
+
+UltraClean is a fast and efficient Python library for cleaning and preprocessing text data, specifically designed for AI/ML tasks and data processing.
+
+## Features
+
+- Remove unwanted characters, links, emails, phone numbers, underscores, unicode characters, emojis, numbers, currencies, punctuation, HTML tags, LaTeX commands, and more.
+- Handle multi-dots, extra spaces, and hashtags.
+- Batch processing for efficient text cleaning.
+- Spam detection and filtering using pre-trained models.
+
+## Installation
+
+You can install UltraClean using pip:
+
+```bash
+pip install ultraclean
+```
+
+## Usage
+
+### Text Cleaning
+
+```python
+from ultraclean.clean import cleanup
+
+text = "Congratulations! You've won a free trip to Hawaii. Click here to claim your prize. This is not a scam."
+cleaned_text = cleanup(text)
+print(cleaned_text)
+```
+
+### Spam Detection
+
+```python
+from ultraclean.predict import Spam
+
+spam_detector = Spam()
+text = "Congratulations! You've won a free trip to Hawaii. Click here to claim your prize."
+is_spam = spam_detector.predict(text)
+print(f"Is the text spam? {'Yes' if is_spam else 'No'}")
+
+paragraph = "Congratulations! You've won a free trip to Hawaii. Click here to claim your prize. This is not a scam."
+cleaned_paragraph = spam_detector.filter(paragraph)
+print(cleaned_paragraph)
+```
+
+## License
+
+This project is licensed under the MIT License with attribution requirement.
+
+## Author
+
+Ranit Bhowmick - [bhowmickranitking@duck.com](mailto:bhowmickranitking@duck.com)

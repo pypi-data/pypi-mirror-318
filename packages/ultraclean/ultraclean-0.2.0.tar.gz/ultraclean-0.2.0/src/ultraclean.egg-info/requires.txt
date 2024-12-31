@@ -1,0 +1,15 @@
+transformers>=4.0.0
+torch>=1.7.0
+emoji>=1.2.0
+tf-keras>=2.6.0
+
+[dev]
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
+black>=22.0.0
+mypy>=0.900
+flake8>=4.0.0
+
+[docs]
+sphinx>=4.0.0
+sphinx-rtd-theme>=1.0.0
