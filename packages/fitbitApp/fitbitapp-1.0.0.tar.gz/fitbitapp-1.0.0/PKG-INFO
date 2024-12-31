@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: fitbitApp
+Version: 1.0.0
+Summary: fitbit WEB API wrapper
+Home-page: https://github.com/gitpomtec/fitbitApp
+Author: pom
+Author-email: prgpom@gmail.com
+License: BSD-3-Clause
+Keywords: fitbit
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Database
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: Requests==2.32.3
+
+# fitbitApp
+fitbit WEB API wrapper
