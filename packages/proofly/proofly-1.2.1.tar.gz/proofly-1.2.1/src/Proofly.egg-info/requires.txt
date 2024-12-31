@@ -1,0 +1,6 @@
+dataclasses
+typing
+datetime
+
+[dev]
+pytest
