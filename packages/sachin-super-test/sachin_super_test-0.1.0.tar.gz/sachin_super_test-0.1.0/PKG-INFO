@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: sachin-super-test
+Version: 0.1.0
+Summary: A Python SDK for the Superleap API
+Home-page: https://github.com/superleapai/superleap-sdk
+Author: Sachin Kant
+Author-email: sachin-ext@superleap.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: requests>=2.25.0
+
+# Superleap SDK
+
+A Python SDK for interacting with the Superleap API.
+
+## Installation
+
+```bash
+pip install superleap-sdk
+```
+
+## Usage
+
+```python
+from superleap import SuperleapClient
+
+# Initialize the client
+client = SuperleapClient("YOUR_TOKEN_HERE")
+
+# Fetch user data
+response = client.poll()
+
+# Access the data
+print(f"Success: {response.success}")
+for user in response.data:
+    print(f"User: {user.name} ({user.email})")
+```
