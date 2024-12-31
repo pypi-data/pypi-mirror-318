@@ -1,0 +1,2 @@
+include kamera/templates/*
+include kamera/static/*

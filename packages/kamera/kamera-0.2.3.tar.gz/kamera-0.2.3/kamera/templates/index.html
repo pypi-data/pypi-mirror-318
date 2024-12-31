@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kamera Stream</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script>
+      async function updateSetting(name, value) {
+        const data = {};
+        data[name] = value;
+        await fetch("/settings", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(data),
+        });
+      }
+
+      async function resetSettings() {
+        const defaultSettings = {
+          rotate: 0,
+          brightness: 1.0,
+          grayscale: false,
+          mirror: false,
+          filter_name: "none",
+        };
+        for (const [key, value] of Object.entries(defaultSettings)) {
+          await updateSetting(key, value);
+        }
+        document.getElementById("rotate").value = "0";
+        document.getElementById("brightness").value = "1.0";
+        document.getElementById("grayscale").checked = false;
+        document.getElementById("mirror").checked = false;
+        document.getElementById("filter_name").value = "none";
+      }
+    </script>
+  </head>
+  <body>
+    <section id="video-feed">
+      <h1>Kamera Stream</h1>
+      <p>
+        Video streaming is available at:
+        <strong><a href=http://localhost:4141/video_feed>http://localhost:4141/video_feed</a></strong>
+      </p>
+      <img src="/video_feed" width="640" height="480" alt="Video Feed" />
+    </section>
+    <section id="settings">
+      <h2>Camera Settings</h2>
+      <label for="rotate">Rotate:</label>
+      <select
+        id="rotate"
+        name="rotate"
+        onchange="updateSetting('rotate', this.value)"
+      >
+        <option value="0">0°</option>
+        <option value="90">90°</option>
+        <option value="180">180°</option>
+        <option value="270">270°</option>
+      </select>
+      <label for="mirror">Mirror:</label>
+      <input
+        type="checkbox"
+        id="mirror"
+        name="mirror"
+        onchange="updateSetting('mirror', this.checked ? 'true' : 'false')"
+      />
+      <label for="brightness">Brightness:</label>
+      <input
+        type="range"
+        id="brightness"
+        name="brightness"
+        min="0.1"
+        max="2.0"
+        step="0.1"
+        value="1.0"
+        oninput="updateSetting('brightness', this.value)"
+      />
+      <label for="grayscale">Grayscale:</label>
+      <input
+        type="checkbox"
+        id="grayscale"
+        name="grayscale"
+        onchange="updateSetting('grayscale', this.checked ? 'true' : 'false')"
+      />
+      <label for="filter_name">Filter:</label>
+      <select
+        id="filter_name"
+        name="filter_name"
+        onchange="updateSetting('filter_name', this.value)"
+      >
+        <option value="none">None</option>
+        <option value="sepia">Sepia</option>
+        <option value="blur">Blur</option>
+        <option value="edges">Edges</option>
+      </select>
+      <button type="button" onclick="resetSettings()">Reset to Default</button>
+    </section>
+  </body>
+</html>
