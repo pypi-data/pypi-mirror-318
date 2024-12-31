@@ -1,0 +1,8 @@
+clinical_zeroshot_labeler/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clinical_zeroshot_labeler/labeler.py,sha256=1IqeKA1HUVMApgAc0IZThIbWG5juzhXVP6W10VbP4Q0,54396
+clinical_zeroshot_labeler/model.py,sha256=M2rHbOiTcfhjO_HBaR3eQfjKoiTeLpxxKRuDKgxe2Eg,17941
+clinical_zeroshot_labeler-0.0.3.dist-info/LICENSE,sha256=IEaD8O8QXD4RVw20tYGNLbV_29tP5mXuaH9zfNrwTFw,1066
+clinical_zeroshot_labeler-0.0.3.dist-info/METADATA,sha256=sBtEf_YxQkjTorMJ54qUlMbGnj0bXEF4OJBVe6ERG4g,5006
+clinical_zeroshot_labeler-0.0.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+clinical_zeroshot_labeler-0.0.3.dist-info/top_level.txt,sha256=7bmr6oWs9lPkofr5JlnS1mEM7BdC_HIK73kHc2fhzXA,26
+clinical_zeroshot_labeler-0.0.3.dist-info/RECORD,,
