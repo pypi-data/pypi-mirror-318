@@ -1,0 +1,14 @@
+[project]
+name = "airtake"
+version = "0.3.0"
+description = "Airtake"
+readme = "README.md"
+authors = [
+    { name = "Bae Junehyeon", email = "devunt@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
