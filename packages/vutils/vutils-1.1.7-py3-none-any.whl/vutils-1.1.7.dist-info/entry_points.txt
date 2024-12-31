@@ -1,0 +1,2 @@
+[console_scripts]
+vvcli = vutils.main:main
