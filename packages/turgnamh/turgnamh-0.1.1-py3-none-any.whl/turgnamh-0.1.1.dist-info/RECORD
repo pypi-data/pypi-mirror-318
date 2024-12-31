@@ -1,0 +1,9 @@
+turgnamh/__init__.py,sha256=GX-bjp9fGIGRxLnin2GjdVapPNZsR8Oh7nhcEQSV6cw,24
+turgnamh/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+turgnamh/settings.py,sha256=uQh949cL67Yaj5HMNYSyg9Nxh3e1ypNacwKRiZET4FE,299
+turgnamh/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+turgnamh/core/experiment.py,sha256=ZgaqWG9bzSm0-C_HFAilGboS0xf-7RKoQSLg0mXnjZM,19083
+turgnamh/utils/printing.py,sha256=UXwR8WbW-6COVOqsC3fCOMeu6140yoNbybXrRvoOEeY,148
+turgnamh-0.1.1.dist-info/METADATA,sha256=JVJa0hhK2riW6hqCBojOkFigffJFrpaQQ31avER91LQ,323
+turgnamh-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+turgnamh-0.1.1.dist-info/RECORD,,
