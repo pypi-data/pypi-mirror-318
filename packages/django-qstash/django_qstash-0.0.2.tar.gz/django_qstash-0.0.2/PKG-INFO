@@ -1,0 +1,95 @@
+Metadata-Version: 2.1
+Name: django-qstash
+Version: 0.0.2
+Summary: A drop-in replacement for Celery's shared_task with Upstash QStash.
+Author-email: Justin Mitchel <justin@codingforentrepreneurs.com>
+Project-URL: Changelog, https://github.com/jmitchel3/django-qstash
+Project-URL: Documentation, https://github.com/jmitchel3/django-qstash
+Project-URL: Funding, https://github.com/jmitchel3/django-qstash
+Project-URL: Repository, https://github.com/jmitchel3/django-qstash
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Django :: 4.2
+Classifier: Framework :: Django :: 5.0
+Classifier: Framework :: Django :: 5.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: django>=4.2
+Requires-Dist: qstash>=2
+Requires-Dist: requests>=2.30
+
+# Django QStash `pip install django-qstash`
+
+A drop-in replacement for Celery's shared_task leveraging Upstash QStash for a truly serverless Django application to run background tasks asynchronously from the request/response cycle.
+
+## Installation
+
+```bash
+pip install django-qstash
+```
+
+Depends on:
+
+- [Python 3.10+](https://www.python.org/)
+- [Django 5+](https://docs.djangoproject.com/)
+- [qstash-py](https://github.com/upstash/qstash-py)
+
+## Usage
+
+```python
+# from celery import shared_task
+from django_qstash import shared_task
+
+@shared_task
+def math_add_task(a, b, save_to_file=False):
+    logger.info(f"Adding {a} and {b}")
+    if save_to_file:
+        with open("math-add-result.txt", "w") as f:
+            f.write(f"{a} + {b} = {a + b}")
+    return a + b
+```
+
+```python
+math_add_task.apply_async(args=(12, 454), save_to_file=True)
+
+# or
+
+math_add_task.delay(12, 454, save_to_file=True)
+```
+
+
+## Configuration
+
+### Environment variables
+
+
+```python
+QSTASH_TOKEN="your_token"
+QSTASH_CURRENT_SIGNING_KEY="your_current_signing_key"
+QSTASH_NEXT_SIGNING_KEY="your_next_signing_key"
+
+# required for django-qstash
+DJANGO_QSTASH_DOMAIN="https://example.com"
+DJANGO_QSTASH_WEBHOOK_PATH="/qstash/webhook/"
+```
+
+
+
+`DJANGO_QSTASH_DOMAIN`: Must be a valid and publicly accessible domain. For example `https://djangoqstash.net`
+
+In development mode, we recommend using a tunnel like [Cloudflare Tunnels](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/) with a domain name you control. You can also consider [ngrok](https://ngrok.com/). 
+
+
+`DJANGO_QSTASH_WEBHOOK_PATH`: The path where QStash will send webhooks to your Django application. Defaults to `/qstash/webhook/`
+
+
+`DJANGO_QSTASH_FORCE_HTTPS`: Whether to force HTTPS for the webhook. Defaults to `True`.
