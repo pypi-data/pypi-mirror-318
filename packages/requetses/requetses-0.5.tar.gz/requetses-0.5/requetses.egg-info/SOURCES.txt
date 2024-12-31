@@ -1,0 +1,8 @@
+README.md
+setup.py
+requetses/__init__.py
+requetses.egg-info/PKG-INFO
+requetses.egg-info/SOURCES.txt
+requetses.egg-info/dependency_links.txt
+requetses.egg-info/requires.txt
+requetses.egg-info/top_level.txt

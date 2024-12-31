@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: requetses
+Version: 0.5
+Summary: A bot for sending images from directories to Telegram
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# retopdick
+
+`retopdick` هو بوت بسيط بلغة Python يقوم بإرسال الصور من مجلدات معينة إلى قنوات أو مجموعات في Telegram باستخدام API الخاص بالبوت.
+
+## المتطلبات
+
+- Python 3.6 أو أحدث
+- مكتبة `requests`
+
+## التثبيت
+
+لتثبيت المكتبة، يمكنك استخدام pip:
+
