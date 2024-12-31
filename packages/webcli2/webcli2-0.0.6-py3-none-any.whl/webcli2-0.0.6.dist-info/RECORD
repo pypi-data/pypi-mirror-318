@@ -1,0 +1,12 @@
+webcli2/__init__.py,sha256=J37ez0gAwxZiyTOSwjtU_M6u9je5Eh-xSV0Ysq_le3I,62
+webcli2/main.py,sha256=3veBYIVJQ8VYzq5SM0Vo79eoEm7W9xLqquRCvM0xdzM,30149
+webcli2/db_models/__init__.py,sha256=fSy7RhTcQ8T0oI_Lbw8cyjvPm0Ajq4oO6_oWTze32UY,174
+webcli2/db_models/_common.py,sha256=4VA-UlG0wcH76OOO0Itv3sYwqVnuzY8H5A-uE7uYtN8,95
+webcli2/db_models/main.py,sha256=jmdLyH_6demXBb7VhnyX_nc9yrCIO97GsK25ZXNYFCM,1745
+webcli2/models/__init__.py,sha256=cJrClRYoBKJpZRPlLxjTFMpmZBOkj7LW_HFvg-zR5Sw,25
+webcli2/models/_common.py,sha256=nE-gbfq-QAqT_NOBVky8mCTRUMii-aVtkM5dD_WWfDs,618
+webcli2/models/main.py,sha256=PHCy2x3tc_jZ9le6EPikSL5G9qdK0xPWBGU3dz4IS6U,1192
+webcli2-0.0.6.dist-info/METADATA,sha256=itVXnN44B0wkpDXjez9goC3z4zZP8m7L8S6odNcGUpA,5617
+webcli2-0.0.6.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+webcli2-0.0.6.dist-info/licenses/LICENSE,sha256=fGVVdIrVFLv7iO5sDvIlp10is0LFQdIOPIIQNUy8Qk4,1068
+webcli2-0.0.6.dist-info/RECORD,,
