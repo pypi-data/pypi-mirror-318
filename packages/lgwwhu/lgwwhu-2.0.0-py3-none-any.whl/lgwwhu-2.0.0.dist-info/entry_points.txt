@@ -1,0 +1,2 @@
+[pycbc.waveform.fd]
+compute_lensed_waveform = lgwwhu.main:compute_lensed_waveform
