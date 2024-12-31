@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: mgraph_ai
+Version: 0.3.0
+Summary: MGraph-AI
+Home-page: https://github.com/owasp-sbot/MGraph-AI
+License: Apache 2.0
+Author: Dinis Cruz
+Author-email: dinis.cruz@owasp.org
+Requires-Python: >=3.11,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: osbot-utils
+Project-URL: Repository, https://github.com/owasp-sbot/MGraph-AI
+Description-Content-Type: text/markdown
+
+---
+title: MGraph-AI
+---
+
+# mgraph-ai
+Repo for MGraph-AI
+
+
+## Repo details
+
+![Current Release](https://img.shields.io/badge/release-v0.3.0-blue)
+
+
