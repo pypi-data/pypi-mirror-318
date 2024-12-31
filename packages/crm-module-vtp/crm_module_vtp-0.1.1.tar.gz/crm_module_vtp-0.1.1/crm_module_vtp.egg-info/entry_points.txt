@@ -1,0 +1,2 @@
+[console_scripts]
+vtp-client = crm_module_vtp.client:main
