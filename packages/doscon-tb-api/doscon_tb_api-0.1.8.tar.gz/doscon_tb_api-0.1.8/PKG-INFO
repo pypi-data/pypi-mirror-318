@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: doscon_tb_api
+Version: 0.1.8
+Summary: minmalistic library to connect to the thingsboard API.
+Home-page: https://github.com/DOSCON-development/tb_api
+Author: Aleksander Hykkerud
+Author-email: lorithai@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# tb_api
+Library for connecting to thingsboard to perform API actions. 
+
+# How to use
+TODO
+
+
+# TESTS
+requires<br>
+pytest==7.4.4<br>
+pytest-cov==4.1.0<br>
+
+## To run tests
+pytest
+
+## How to build
+pip install setuptools wheel (first time)<br>
+
+Remove previous dist and update version number in setup.py<br>
+python setup.py sdist bdist_wheel<br>
+
+### upload to pipy
+pip install twine (first time)<br>
+
+twine upload dist/*<br>
+enter username \_\_token\_\_ and api token as password.
