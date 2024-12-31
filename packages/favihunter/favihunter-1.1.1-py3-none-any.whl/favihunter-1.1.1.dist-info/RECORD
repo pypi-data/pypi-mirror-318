@@ -1,0 +1,14 @@
+favihunter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+favihunter/collectors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+favihunter/collectors/collector_functions.py,sha256=IWgyPbqOx5oCXgdinY-xfTVGWXG5k6x5ldY4lO9skM8,4867
+favihunter/engines.yaml,sha256=CYBLQWbtzauc3122nvT9CY_vO00HRz_ji8vyFwDzLfE,1286
+favihunter/favihunter.py,sha256=OGfrBqWsG0en8JyCKOZCsf7qJq8aaFQ1sgYfWaQ8isM,2107
+favihunter/printers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+favihunter/printers/printing_functions.py,sha256=IrWbFfOEDuwfpx80OmavI2usWtd_G2X52FBhX3RnbAM,2199
+favihunter/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+favihunter/utils/utils.py,sha256=hgE2jtuqt3fd6SEEA8F1rxMQtWMn3fWDXgTRjlCtHJ4,6571
+favihunter-1.1.1.dist-info/LICENSE,sha256=CYD_hMb_4KxrZCMDhFsUC6uAmBJqd-5WScIBIRQPWKM,1064
+favihunter-1.1.1.dist-info/METADATA,sha256=A4xUmcHw_8zuyg23P9aQ2M5PmQ47sRDUwfOkvFEJXcQ,2883
+favihunter-1.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+favihunter-1.1.1.dist-info/entry_points.txt,sha256=-OZl4NXqgQywh02V-mHeOd7GKiczLxrEQX9lPLOSW8g,57
+favihunter-1.1.1.dist-info/RECORD,,
