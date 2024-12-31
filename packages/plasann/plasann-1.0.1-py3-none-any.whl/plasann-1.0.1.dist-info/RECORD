@@ -1,0 +1,10 @@
+plasann/__init__.py,sha256=lrwwGgFjOaY-p7JOkJ-IOvK7gc0CbQTandtvGpXILSk,178
+plasann/annotate_plasmid.py,sha256=AHD5n4dGmtWpWp-TpHJV7QBN5argpnfWzIGX5qJfWJI,14296
+plasann/cli.py,sha256=AvexmlPfUtB7-I6KwQBKUfF2w0V62AgxDFPMnqTrmcg,3885
+plasann/draw_plasmid.py,sha256=Orqr_qG4ayBRvsuT_5FNI9DyYHSlykTiW-GcD4to5gQ,7535
+plasann/essential_annotation.py,sha256=HxjUt86FA4LUPj569TnE2pALTk4m-hQdeZtm2Pq1Pfs,51125
+plasann-1.0.1.dist-info/METADATA,sha256=lMzj24hUaUW6CxWpiLtHcJxUDK-qx_rzR1DH41JZtLc,243
+plasann-1.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+plasann-1.0.1.dist-info/entry_points.txt,sha256=pr3_5Ni0DUnmzGVmEq6QsRiuYArNh0x5-gFzUG8yoTw,45
+plasann-1.0.1.dist-info/top_level.txt,sha256=NihKU9FW4q6ipo-aD8OqE-NanghmyeISBHEhnarv5w0,8
+plasann-1.0.1.dist-info/RECORD,,
