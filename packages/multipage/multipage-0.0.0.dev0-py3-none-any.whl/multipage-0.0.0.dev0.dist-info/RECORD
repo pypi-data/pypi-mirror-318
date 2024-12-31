@@ -1,0 +1,9 @@
+multipage/__init__.py,sha256=dMQ2ZqHw6vaJ0baXrtLVZx-Za6XmRJgRwBDbwAZcSYM,87
+multipage/__main__.py,sha256=sEJagWEW3CTMwYSF8-qoUvySsefIOV3p-AzkZ-iltnM,66
+multipage/tests/__init__.py,sha256=Yk4s2RujDByqngPGFhurH8QK3m3szsOs3GobE9LL3G8,230
+multipage/tests/test_1984.py,sha256=GPfy8FPaGbj-w9uGHkJYSjmlSReVAXwiHS8JydJaERw,187
+multipage-0.0.0.dev0.dist-info/LICENSE.txt,sha256=CaheL2V02rrZrnOEABQKmAR_4Egj4bW7vzcDMM1GiYQ,1076
+multipage-0.0.0.dev0.dist-info/METADATA,sha256=1IyN-clvxWefP43uD4kYdfU8Bkz5TtGr9bO7DwFSHMs,2559
+multipage-0.0.0.dev0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+multipage-0.0.0.dev0.dist-info/top_level.txt,sha256=SFTbHFgKYIqRUo2ROWgwSt3rRuqvCVJbzPOGNf9-Eo8,10
+multipage-0.0.0.dev0.dist-info/RECORD,,
