@@ -1,0 +1,3 @@
+[console_scripts]
+create_fastapi_project = fastapi_project_gen.generator:main
+
