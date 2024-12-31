@@ -1,0 +1,104 @@
+/* General body styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Styling for the video feed section */
+#video-feed {
+  flex: 3; /* Make the video feed take up more space */
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#video-feed h1 {
+  margin-bottom: 20px;
+}
+
+#video-feed img {
+  max-width: 90%;
+  height: auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Styling for the settings section */
+#settings {
+  flex: 1; /* Make the settings panel smaller */
+  padding: 15px;
+  background-color: #f4f4f4;
+  border-left: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+}
+
+#settings h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+#settings label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#settings select,
+#settings input[type="range"],
+#settings input[type="checkbox"] {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Adjust the appearance of range inputs */
+#settings input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+#settings input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #007bff;
+  cursor: pointer;
+}
+
+#settings input[type="range"]::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #007bff;
+  cursor: pointer;
+}
+
+/* Footer styling (if added) */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
