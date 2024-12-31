@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simply_useful"
+version = "1.0.0"
+description = "A collection of reusable utility functions, classes, and decorators."
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["utility", "reusable"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+authors = [
+    {name = "Dayton Jones", email = "jones.dayton@gmail.com"}
+]
+maintainers = [
+    {name = "Dayton Jones", email = "jones.dayton@gmail.com"}
+]
+
+[project.urls]
+Homepage = "https://github.com/daytonjones/DevPotluck/tree/main/python/SimplyUseful"
+Issues = "https://github.com/daytonjones/DevPotluck/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

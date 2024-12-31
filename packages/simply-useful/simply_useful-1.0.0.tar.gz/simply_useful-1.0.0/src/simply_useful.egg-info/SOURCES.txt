@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/simply_useful/__init__.py
+src/simply_useful/simply_useful.py
+src/simply_useful.egg-info/PKG-INFO
+src/simply_useful.egg-info/SOURCES.txt
+src/simply_useful.egg-info/dependency_links.txt
+src/simply_useful.egg-info/top_level.txt
+tests/test_simply_useful.py
