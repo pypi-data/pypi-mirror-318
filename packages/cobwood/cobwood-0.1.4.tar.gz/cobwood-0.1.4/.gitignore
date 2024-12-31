@@ -1,0 +1,19 @@
+# Temporary files
+*.pyc
+
+# Archive only the markdown version of notebooks, converted by Jupyttext
+*.ipynb
+*-checkpoint.md
+
+# Auto generated documentation
+public
+
+
+# Build artefacts
+cobwood.egg-info
+dist
+
+
+
+# Vim Tags
+*tags*
