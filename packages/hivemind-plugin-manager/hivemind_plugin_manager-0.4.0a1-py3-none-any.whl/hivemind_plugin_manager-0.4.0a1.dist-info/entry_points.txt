@@ -1,0 +1,3 @@
+[console_scripts]
+hpm = hivemind_plugin_manager.tui:cli
+
