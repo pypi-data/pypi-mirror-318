@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: internal-token-service
+Version: 0.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: PyJWT (>=2.9.0)
+
+UNKNOWN
+
