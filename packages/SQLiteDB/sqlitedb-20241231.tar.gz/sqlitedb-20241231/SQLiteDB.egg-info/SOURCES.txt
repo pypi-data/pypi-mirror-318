@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+sqlitedb.py
+SQLiteDB.egg-info/PKG-INFO
+SQLiteDB.egg-info/SOURCES.txt
+SQLiteDB.egg-info/dependency_links.txt
+SQLiteDB.egg-info/top_level.txt

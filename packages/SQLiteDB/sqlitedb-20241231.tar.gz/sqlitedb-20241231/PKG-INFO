@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: SQLiteDB
+Version: 20241231
+Summary: Thin SQLite wrapper to keep a backup on S3 like Object Store
+Home-page: https://github.com/magicray/SQLiteDB
+Author: Bhupendra Singh
+Author-email: bhsingh@gmail.com
+Keywords: sqlite,s3,replication,backup
+License-File: LICENSE
+
+Thin SQLite wrapper to keep a backup by S3 like Object Store
