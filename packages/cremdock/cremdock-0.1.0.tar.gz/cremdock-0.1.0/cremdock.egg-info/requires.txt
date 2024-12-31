@@ -1,0 +1,9 @@
+
+[crem]
+crem>=0.2.7
+
+[easydock]
+easydock>=0.3.1
+
+[rdkit]
+rdkit>=2017.09
