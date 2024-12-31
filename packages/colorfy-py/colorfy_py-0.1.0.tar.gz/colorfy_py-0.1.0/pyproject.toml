@@ -1,0 +1,20 @@
+[project]
+name = "colorfy-py"
+version = "0.1.0"
+description = "Library for text formatting in Unix-based systems"
+readme = "README.md"
+authors = [{ name = "CelestialEcho", email = "borya.mishchenko2009@example.com" }]
+license = { file = "LICENSE" }
+classifiers = ["Development Status :: 3 - Alpha", "Intended Audience :: Developers", "Programming Language :: Python :: 3", "License :: OSI Approved :: Apache Software License", "Operating System :: OS Independent", "Topic :: Software Development :: Libraries", "Topic :: Text Processing"]
+keywords = ["text-formatting", "colors", "Terminal", "UNIX", "coloring", "colorama", "Windows", "color", "Windows", "formatting"]
+requires-python = ">=3.7"
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"colorfy" = ["py.typed"]
