@@ -1,0 +1,14 @@
+djvite/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djvite/apps.py,sha256=9ufGdb8Pw2KnpiQhnELVgwWrAhkZZuWMz6vSHQ0hPmE,140
+djvite/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djvite/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djvite/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djvite/management/commands/get_nginx_config.py,sha256=qRr4LzIrJJHWdr3v7D3F7mkP3FpBHZwFEuhYmoK3ZFU,1215
+djvite/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djvite/templatetags/djvite.py,sha256=MEkTW6f3d_wqdlVsWvGuUxkg71j329MEFEouk3lxTYM,8721
+djvite/CHANGELOG.md,sha256=EE4mZlKZ4vkhV3Vo5JDGeAMHN9u5Vu_gVB2PagiMxaU,399
+djvite/README.md,sha256=s7KnyfMgcdfsNbMVMH-voWckrmu0GhXJfLZQ0CZCMWU,2150
+djvite-1.0.0.dist-info/METADATA,sha256=sZ94oyhICLrn7i0d-KigvdlHuYJDlFhI5ssdtQV0lTk,3438
+djvite-1.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+djvite-1.0.0.dist-info/licenses/LICENSE,sha256=QhVHUcZBh9AUvM0JjSc2scxfU4Vzs64MhTA5QgY1mdU,1074
+djvite-1.0.0.dist-info/RECORD,,
