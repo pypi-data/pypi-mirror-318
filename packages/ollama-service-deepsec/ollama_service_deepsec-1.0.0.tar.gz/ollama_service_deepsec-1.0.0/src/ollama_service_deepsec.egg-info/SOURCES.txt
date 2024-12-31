@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/ollama_service/__init__.py
+src/ollama_service/ollama_service.py
+src/ollama_service_deepsec.egg-info/PKG-INFO
+src/ollama_service_deepsec.egg-info/SOURCES.txt
+src/ollama_service_deepsec.egg-info/dependency_links.txt
+src/ollama_service_deepsec.egg-info/requires.txt
+src/ollama_service_deepsec.egg-info/top_level.txt
+tests/Test.py
