@@ -1,0 +1,10 @@
+aih_django/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aih_django/mixins/__init__.py,sha256=usjwTsnXC40KZbMHFg3K02dr9B8zZ-GRkzLl9MhqotU,120
+aih_django/mixins/custom_serializer_mixin.py,sha256=Cgg5CO-LN4VGDHw_y6ZQeGEwfNfTCwbMdj8bvQ3nbTc,250
+aih_django/mixins/permission_check_mixin.py,sha256=4y6yZhGl-CzdQ7up5WcY_sLF2O-Sdk7TQwJGAdOWucI,531
+aih_django/models/__init__.py,sha256=d8zNaJRfgFRiPMUkvXQNXVDhLfq_IZvvUqPd86r0jkU,33
+aih_django/models/base_model.py,sha256=MKaZGVg7i2tY1EbgzUjdEfTMwrJ2XDW1MTIZFP2PO4c,196
+aih_django-0.0.3.dist-info/METADATA,sha256=WuxX-kYB1By59NwRmKIUpUzsGiggs3EzjYdzOqVlGrc,525
+aih_django-0.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+aih_django-0.0.3.dist-info/top_level.txt,sha256=r2SbbnRxsTsrn0nPRwMZv998mrq39BcrIVyhZ1S0KU8,11
+aih_django-0.0.3.dist-info/RECORD,,
