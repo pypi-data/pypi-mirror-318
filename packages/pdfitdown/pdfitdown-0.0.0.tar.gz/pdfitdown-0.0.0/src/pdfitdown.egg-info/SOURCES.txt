@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/pdfitdown/__init__.py
+src/pdfitdown/pdfconversion.py
+src/pdfitdown.egg-info/PKG-INFO
+src/pdfitdown.egg-info/SOURCES.txt
+src/pdfitdown.egg-info/dependency_links.txt
+src/pdfitdown.egg-info/requires.txt
+src/pdfitdown.egg-info/top_level.txt
