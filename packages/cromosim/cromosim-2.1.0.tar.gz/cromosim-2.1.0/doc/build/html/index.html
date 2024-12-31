@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Welcome to cromosim’s documentation! &#8212; cromosim  documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/scrolls.css?v=4cde0d18" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Build a domain" href="example_dom.html" /> 
+  </head><body>
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="#"
+          title="back to the documentation overview"><span>Welcome to cromosim’s documentation!</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="Related">
+        <a href="#">Welcome to cromosim’s documentation!</a>
+        | <a href="example_dom.html">Build a domain &raquo;</a>
+      </div>
+      <div id="contentwrapper">
+        <div id="toc" role="navigation" aria-label="Table of contents">
+          <h3>Table of Contents</h3>
+          <ul>
+<li><a class="reference internal" href="#">Welcome to cromosim’s documentation!</a></li>
+<li><a class="reference internal" href="#github-repository">Github repository</a></li>
+<li><a class="reference internal" href="#how-to-use-cromosim">How to use cromosim ?</a></li>
+<li><a class="reference internal" href="#examples-for-users">Examples for users</a></li>
+<li><a class="reference internal" href="#documentation-of-the-code">Documentation of the code</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+        </div>
+        <div role="main">
+        
+  <section id="welcome-to-cromosim-s-documentation">
+<h1>Welcome to cromosim’s documentation!<a class="headerlink" href="#welcome-to-cromosim-s-documentation" title="Link to this heading">¶</a></h1>
+<p>A Python Library for microscopic Crowd Motion Simulation.</p>
+<p>The aim of this open source project is to allow users to run
+simulations based on several models (cellular automata, microscopic simulations
+or using compartments), to test new configurations, and even to investigate the
+possibility to program its own model in complex geometry : do-it yourself !</p>
+<p>This package proposes Python implementations of the numerical methods detailed
+in the following book:</p>
+<div role="list" class="citation-list">
+<div class="citation" id="mf2018" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>MF2018<span class="fn-bracket">]</span></span>
+<p>“<em>Crowds in equations: an introduction to the microscopic modeling of
+crowds</em>” by  B. Maury (ENS Ulm &amp; Univ. Paris-Saclay) and S. Faure (CNRS), World
+Scientific 2018, Advanced textbooks in mathematics.</p>
+</div>
+</div>
+<p>This documentation concerns the <strong>Release 2.X</strong> of cromosim. The old documentation
+corresponding to the <strong>Release 1.0</strong> is available there: <a class="reference external" href="http://www.cromosim.fr/1.0">http://www.cromosim.fr/1.0</a></p>
+<p>Main new features of the <strong>Release 2.X</strong> of cromosim (mainly concerning
+microscopic crowd modeling):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>addition of a Destination class allowing to use a more elaborate color
+code: a door can be represented by a red line, another by a yellow line, etc …</p></li>
+<li><p>possibility of having several elements of the Domain class. It is for
+example possible to define a domain per floor.</p></li>
+<li><p>possibility of having several possible destinations for people and
+chaining them</p></li>
+<li><p>possibility of defining stairs, thanks to the Destination class</p></li>
+<li><p>during the initialization of groups of people, their radius and speed of
+movement can be defined with probability laws (normal or uniform). They are
+also assigned an initial destination.</p></li>
+</ul>
+</div></blockquote>
+<p>Unfortunately these big changes break the backward compatibility with
+<strong>Release 1.0</strong> scripts, at least for microscopic crowd modeling.</p>
+<p>This documentation is hosted on a server of the Mathematics Department of Orsay
+(Univ. Paris-Saclay, France).</p>
+<div align=center>
+<img src="_static/logo_lmo.png" alt="Laboratoire de Mathématiques d'Orsay" width="25%" height="auto"/>
+<img src="_static/logo_Paris-Saclay.png" alt="Université Paris-Saclay" width="25%" height="auto"/>
+<img src="_static/cnrs.png" alt="CNRS" width="9%" height="auto"/>
+</div></section>
+<section id="github-repository">
+<h1>Github repository<a class="headerlink" href="#github-repository" title="Link to this heading">¶</a></h1>
+<p>Download the source code and the examples here:</p>
+<p><a class="reference external" href="https://github.com/sylvain-faure/cromosim/">https://github.com/sylvain-faure/cromosim/</a></p>
+</section>
+<section id="how-to-use-cromosim">
+<h1>How to use cromosim ?<a class="headerlink" href="#how-to-use-cromosim" title="Link to this heading">¶</a></h1>
+<p>You can either install the main modules with pip:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>~$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>cromosim
+</pre></div>
+</div>
+<p>and then download one of the examples:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>~$<span class="w"> </span>wget<span class="w"> </span>https://github.com/sylvain-faure/cromosim/blob/master/examples/domain/domain_room.py
+~$<span class="w"> </span>wget<span class="w"> </span>https://github.com/sylvain-faure/cromosim/blob/master/examples/domain/room.png
+~$<span class="w"> </span>python<span class="w"> </span>domain_room.py
+</pre></div>
+</div>
+<p>Or clone the entire folder with git and install it manually:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>~$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:sylvain-faure/cromosim.git
+~$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>cromosim
+cromosim$<span class="w"> </span>python<span class="w"> </span>setup.py<span class="w"> </span>install
+</pre></div>
+</div>
+<p>and then try one of the scripts in the ‘examples’ folder:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cromosim$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>examples/domain
+cromosim/examples/domain$<span class="w"> </span>python<span class="w"> </span>domain_room.py
+</pre></div>
+</div>
+</section>
+<section id="examples-for-users">
+<h1>Examples for users<a class="headerlink" href="#examples-for-users" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="example_dom.html">Build a domain</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="example_dom.html#the-simplest-example">The simplest example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_dom.html#a-circular-domain">A circular domain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_dom.html#a-domain-with-several-destinations">A domain with several destinations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_dom.html#a-domain-build-from-a-json-file">A domain build from a json file</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="example_ftl.html">Understand one-dimensional microscopic models : the Follow-the-Leader model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_ca.html">Try a cellular automata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_micro.html">Make a microscopic simulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="example_micro.html#social-force-model">Social force model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_micro.html#granular-model">Granular model</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="example_comp.html">Discover the compartment model</a></li>
+</ul>
+</div>
+</section>
+<section id="documentation-of-the-code">
+<h1>Documentation of the code<a class="headerlink" href="#documentation-of-the-code" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents :</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="domain.html">Classes used to build the computational domain</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="domain.html#destination-class-used-to-build-a-destination">Destination class used to build a destination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="domain.html#domain-class-used-to-build-the-computational-domain">Domain class used to build the computational domain</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ftl.html">Module for the Follow the Leader model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ftl.html#cromosim.ftl.plot_people"><code class="docutils literal notranslate"><span class="pre">plot_people()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftl.html#cromosim.ftl.update_positions_ftl_order_1"><code class="docutils literal notranslate"><span class="pre">update_positions_ftl_order_1()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftl.html#cromosim.ftl.update_positions_ftl_order_2"><code class="docutils literal notranslate"><span class="pre">update_positions_ftl_order_2()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ca.html">Module for cellular automata</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ca.html#cromosim.ca.compute_exit_times"><code class="docutils literal notranslate"><span class="pre">compute_exit_times()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ca.html#cromosim.ca.exit"><code class="docutils literal notranslate"><span class="pre">exit()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ca.html#cromosim.ca.parallel_update"><code class="docutils literal notranslate"><span class="pre">parallel_update()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ca.html#cromosim.ca.plot_people_according_to_current_door_distance"><code class="docutils literal notranslate"><span class="pre">plot_people_according_to_current_door_distance()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ca.html#cromosim.ca.plot_people_according_to_exit_times"><code class="docutils literal notranslate"><span class="pre">plot_people_according_to_exit_times()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ca.html#cromosim.ca.plot_people_according_to_initial_door_distance"><code class="docutils literal notranslate"><span class="pre">plot_people_according_to_initial_door_distance()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ca.html#cromosim.ca.plot_people_paths"><code class="docutils literal notranslate"><span class="pre">plot_people_paths()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ca.html#cromosim.ca.sequential_update"><code class="docutils literal notranslate"><span class="pre">sequential_update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="micro.html">Module for microscopic simulations with the granular or the social force models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="micro.html#cromosim.micro.check_people_in_box"><code class="docutils literal notranslate"><span class="pre">check_people_in_box()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="micro.html#cromosim.micro.compute_contacts"><code class="docutils literal notranslate"><span class="pre">compute_contacts()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="micro.html#cromosim.micro.compute_forces"><code class="docutils literal notranslate"><span class="pre">compute_forces()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="micro.html#cromosim.micro.create_people_in_box"><code class="docutils literal notranslate"><span class="pre">create_people_in_box()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="micro.html#cromosim.micro.find_duplicate_people"><code class="docutils literal notranslate"><span class="pre">find_duplicate_people()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="micro.html#cromosim.micro.move_people"><code class="docutils literal notranslate"><span class="pre">move_people()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="micro.html#cromosim.micro.people_initialization"><code class="docutils literal notranslate"><span class="pre">people_initialization()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="micro.html#cromosim.micro.people_update_destination"><code class="docutils literal notranslate"><span class="pre">people_update_destination()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="micro.html#cromosim.micro.plot_people"><code class="docutils literal notranslate"><span class="pre">plot_people()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="micro.html#cromosim.micro.plot_sensors"><code class="docutils literal notranslate"><span class="pre">plot_sensors()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="micro.html#cromosim.micro.projection"><code class="docutils literal notranslate"><span class="pre">projection()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="micro.html#cromosim.micro.remove_overlaps_in_box"><code class="docutils literal notranslate"><span class="pre">remove_overlaps_in_box()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="micro.html#cromosim.micro.sensor"><code class="docutils literal notranslate"><span class="pre">sensor()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="comp.html">Module for the compartment model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="comp.html#cromosim.comp.iteration"><code class="docutils literal notranslate"><span class="pre">iteration()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="comp.html#cromosim.comp.plot_compt"><code class="docutils literal notranslate"><span class="pre">plot_compt()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2018, Sylvain Faure, Bertrand Maury.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    </div>
+  </body>
+</html>

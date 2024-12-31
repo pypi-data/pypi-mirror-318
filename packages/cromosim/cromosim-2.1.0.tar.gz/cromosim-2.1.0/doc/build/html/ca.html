@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Cellular automata &#8212; cromosim  documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/scrolls.css?v=4cde0d18" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Microscopic models : granular and social force model" href="micro.html" />
+    <link rel="prev" title="Module for the Follow-the-Leader model" href="ftl.html" /> 
+  </head><body>
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="index.html"
+          title="back to the documentation overview"><span>Cellular automata</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="Related">
+        <a href="ftl.html">&laquo; Module for the Follow-the-Leader model</a> |
+        <a href="#">Cellular automata</a>
+        | <a href="micro.html">Microscopic models : granular and social force model &raquo;</a>
+      </div>
+      <div id="contentwrapper">
+        <div id="toc" role="navigation" aria-label="Table of contents">
+          <h3>Table of Contents</h3>
+          <ul>
+<li><a class="reference internal" href="#">Cellular automata</a><ul>
+<li><a class="reference internal" href="#cromosim.ca.compute_exit_times"><code class="docutils literal notranslate"><span class="pre">compute_exit_times()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.ca.exit"><code class="docutils literal notranslate"><span class="pre">exit()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.ca.parallel_update"><code class="docutils literal notranslate"><span class="pre">parallel_update()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.ca.plot_people_according_to_current_door_distance"><code class="docutils literal notranslate"><span class="pre">plot_people_according_to_current_door_distance()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.ca.plot_people_according_to_exit_times"><code class="docutils literal notranslate"><span class="pre">plot_people_according_to_exit_times()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.ca.plot_people_according_to_initial_door_distance"><code class="docutils literal notranslate"><span class="pre">plot_people_according_to_initial_door_distance()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.ca.plot_people_paths"><code class="docutils literal notranslate"><span class="pre">plot_people_paths()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.ca.sequential_update"><code class="docutils literal notranslate"><span class="pre">sequential_update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <div role="main">
+        
+  <section id="module-cromosim.ca">
+<span id="cellular-automata"></span><h1>Cellular automata<a class="headerlink" href="#module-cromosim.ca" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.ca.compute_exit_times">
+<span class="sig-prename descclassname"><span class="pre">cromosim.ca.</span></span><span class="sig-name descname"><span class="pre">compute_exit_times</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">results</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/ca.html#compute_exit_times"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.ca.compute_exit_times" title="Link to this definition">¶</a></dt>
+<dd><p>To compute exit times for all the individuals from the results array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dt: float</strong></dt><dd><p>time step</p>
+</dd>
+<dt><strong>results: numpy array</strong></dt><dd><p>positions at each time</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>exit_times: all the exit times</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.ca.exit">
+<span class="sig-prename descclassname"><span class="pre">cromosim.ca.</span></span><span class="sig-name descname"><span class="pre">exit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">people</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">people_ij</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/ca.html#exit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.ca.exit" title="Link to this definition">¶</a></dt>
+<dd><p>To update people and people_ij arrays in removing individuals who     left the domain</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>domain: Domain</strong></dt><dd><p>contains everything for managing the domain</p>
+</dd>
+<dt><strong>people: numpy masked arrays</strong></dt><dd><p>equal to 1 if the cell (i,j) is occupied, 0 elsewhere</p>
+</dd>
+<dt><strong>people_ij: numpy array</strong></dt><dd><p>(i,j) for each individual</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>people: numpy masked arrays</dt><dd><p>new positions equal to 1 if the cell (i,j) is occupied, 0 elsewhere</p>
+</dd>
+<dt>people_id: numpy masked arrays</dt><dd><p>new people index (i,j)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.ca.parallel_update">
+<span class="sig-prename descclassname"><span class="pre">cromosim.ca.</span></span><span class="sig-name descname"><span class="pre">parallel_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">people</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">people_ij</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">friction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">randomstate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/ca.html#parallel_update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.ca.parallel_update" title="Link to this definition">¶</a></dt>
+<dd><p>To move all individuals in parallel according to the following rule:     first, desired moves are precomputed and then the conflicts (two individuals     at the same position) are resolved</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>people: numpy masked arrays</strong></dt><dd><p>equal to 1 if the cell (i,j) is occupied, 0 elsewhere</p>
+</dd>
+<dt><strong>people_ij: numpy array</strong></dt><dd><p>(i,j) for each individual</p>
+</dd>
+<dt><strong>weight: numpy array</strong></dt><dd><p>weights for the probabilities in order to move in such a way like to         reach the door</p>
+</dd>
+<dt><strong>friction: float</strong></dt><dd><p>to designate the effect induced by a modified handling of conflicts,         friction is the probability that a conflict remains unresolved (no one         moves)</p>
+</dd>
+<dt><strong>randomstate: numpy randomstate</strong></dt><dd><p>create a new one or reuse the given random state</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>people: numpy masked arrays</dt><dd><p>new positions equal to 1 if the cell (i,j) is occupied, 0 elsewhere</p>
+</dd>
+<dt>people_id: numpy masked arrays</dt><dd><p>new people index (i,j)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.ca.plot_people_according_to_current_door_distance">
+<span class="sig-prename descclassname"><span class="pre">cromosim.ca.</span></span><span class="sig-name descname"><span class="pre">plot_people_according_to_current_door_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ifig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">people</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fig.png'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/ca.html#plot_people_according_to_current_door_distance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.ca.plot_people_according_to_current_door_distance" title="Link to this definition">¶</a></dt>
+<dd><p>To draw occupied cells with colors depending on current door distances</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ifig: int</strong></dt><dd><p>figure number</p>
+</dd>
+<dt><strong>people: numpy masked arrays</strong></dt><dd><p>equal to 1 if the cell (i,j) is occupied, 0 elsewhere</p>
+</dd>
+<dt><strong>domain: Domain</strong></dt><dd><p>contains everything for managing the domain</p>
+</dd>
+<dt><strong>axis: list</strong></dt><dd><p>matplotlib axis</p>
+</dd>
+<dt><strong>savefig: boolean</strong></dt><dd><p>writes the figure as a png file if true</p>
+</dd>
+<dt><strong>filename: string</strong></dt><dd><p>png filename used to write the figure</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.ca.plot_people_according_to_exit_times">
+<span class="sig-prename descclassname"><span class="pre">cromosim.ca.</span></span><span class="sig-name descname"><span class="pre">plot_people_according_to_exit_times</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ifig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">people</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">results</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fig.png'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/ca.html#plot_people_according_to_exit_times"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.ca.plot_people_according_to_exit_times" title="Link to this definition">¶</a></dt>
+<dd><p>To draw occupied cells with colors depending on the exit times</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ifig: int</strong></dt><dd><p>figure number</p>
+</dd>
+<dt><strong>dt: float</strong></dt><dd><p>time step</p>
+</dd>
+<dt><strong>people: masked ndarray</strong></dt><dd><p>equal to 1 if the cell (i,j) is occupied, 0 elsewhere</p>
+</dd>
+<dt><strong>domain: Domain</strong></dt><dd><p>contains everything for managing the domain</p>
+</dd>
+<dt><strong>results: ndarray</strong></dt><dd><p>positions at each time</p>
+</dd>
+<dt><strong>axis: list</strong></dt><dd><p>matplotlib axis</p>
+</dd>
+<dt><strong>savefig: boolean</strong></dt><dd><p>writes the figure as a png file if true</p>
+</dd>
+<dt><strong>filename: string</strong></dt><dd><p>png filename used to write the figure</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.ca.plot_people_according_to_initial_door_distance">
+<span class="sig-prename descclassname"><span class="pre">cromosim.ca.</span></span><span class="sig-name descname"><span class="pre">plot_people_according_to_initial_door_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ifig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">people</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">results</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fig.png'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/ca.html#plot_people_according_to_initial_door_distance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.ca.plot_people_according_to_initial_door_distance" title="Link to this definition">¶</a></dt>
+<dd><p>To draw occupied cells with colors depending on initial (time=0) door     distances</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ifig: int</strong></dt><dd><p>figure number</p>
+</dd>
+<dt><strong>people: numpy masked arrays</strong></dt><dd><p>equal to 1 if the cell (i,j) is occupied, 0 elsewhere</p>
+</dd>
+<dt><strong>domain: Domain</strong></dt><dd><p>contains everything for managing the domain</p>
+</dd>
+<dt><strong>results: numpy array</strong></dt><dd><p>contains the results for each iteration in time, used here to         determine the initial distance to the door</p>
+</dd>
+<dt><strong>axis: list</strong></dt><dd><p>matplotlib axis</p>
+</dd>
+<dt><strong>savefig: boolean</strong></dt><dd><p>writes the figure as a png file if true</p>
+</dd>
+<dt><strong>filename: string</strong></dt><dd><p>png filename used to write the figure</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.ca.plot_people_paths">
+<span class="sig-prename descclassname"><span class="pre">cromosim.ca.</span></span><span class="sig-name descname"><span class="pre">plot_people_paths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ifig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pixel_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">people</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">results</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fig.png'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/ca.html#plot_people_paths"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.ca.plot_people_paths" title="Link to this definition">¶</a></dt>
+<dd><p>To draw all the individual paths from intial time to final time</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ifig: int</strong></dt><dd><p>figure number</p>
+</dd>
+<dt><strong>dt: float</strong></dt><dd><p>time step</p>
+</dd>
+<dt><strong>pixel_size: float</strong></dt><dd><p>size of one pixel in meters</p>
+</dd>
+<dt><strong>people: numpy masked arrays</strong></dt><dd><p>equal to 1 if the cell (i,j) is occupied, 0 elsewhere</p>
+</dd>
+<dt><strong>domain: Domain</strong></dt><dd><p>contains everything for managing the domain</p>
+</dd>
+<dt><strong>results: numpy.ndarray</strong></dt><dd><p>positions at each time</p>
+</dd>
+<dt><strong>axis: list</strong></dt><dd><p>matplotlib axis</p>
+</dd>
+<dt><strong>savefig: boolean</strong></dt><dd><p>writes the figure as a png file if true</p>
+</dd>
+<dt><strong>filename: string</strong></dt><dd><p>png filename used to write the figure</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.ca.sequential_update">
+<span class="sig-prename descclassname"><span class="pre">cromosim.ca.</span></span><span class="sig-name descname"><span class="pre">sequential_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">people</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">people_ij</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shuffle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">randomstate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/ca.html#sequential_update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.ca.sequential_update" title="Link to this definition">¶</a></dt>
+<dd><p>To move all individuals sequentially according to the following rule:     the update of individual i is determined in a stochastic way by computing     transition probabilities on neighboring cells (including the current     position of i).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>people: numpy masked arrays</strong></dt><dd><p>equal to 1 if the cell (i,j) is occupied, 0 elsewhere</p>
+</dd>
+<dt><strong>people_ij: numpy array</strong></dt><dd><p>(i,j) for each individual</p>
+</dd>
+<dt><strong>weight: numpy array</strong></dt><dd><p>weights for the probabilities in order to move in such a way like to         reach the door</p>
+</dd>
+<dt><strong>shuffle: string</strong></dt><dd><p>shuffle kind (‘random’ or ‘random_frozen’): if the sequential order         changes or not at each time</p>
+</dd>
+<dt><strong>randomstate: numpy randomstate</strong></dt><dd><p>create a new one or reuse the given random state</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>people: numpy masked arrays</dt><dd><p>new positions equal to 1 if the cell (i,j) is occupied, 0 otherwise</p>
+</dd>
+<dt>people_id: numpy masked arrays</dt><dd><p>new people index (i,j)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2018, Sylvain Faure, Bertrand Maury.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    </div>
+  </body>
+</html>

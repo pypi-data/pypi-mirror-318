@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Microscopic models : granular and social force model &#8212; cromosim  documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/scrolls.css?v=4cde0d18" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Compartments" href="comp.html" />
+    <link rel="prev" title="Cellular automata" href="ca.html" /> 
+  </head><body>
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="index.html"
+          title="back to the documentation overview"><span>Microscopic models : granular and social force model</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="Related">
+        <a href="ca.html">&laquo; Cellular automata</a> |
+        <a href="#">Microscopic models : granular and social force model</a>
+        | <a href="comp.html">Compartments &raquo;</a>
+      </div>
+      <div id="contentwrapper">
+        <div id="toc" role="navigation" aria-label="Table of contents">
+          <h3>Table of Contents</h3>
+          <ul>
+<li><a class="reference internal" href="#">Microscopic models : granular and social force model</a><ul>
+<li><a class="reference internal" href="#cromosim.micro.check_people_in_box"><code class="docutils literal notranslate"><span class="pre">check_people_in_box()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.micro.compute_contacts"><code class="docutils literal notranslate"><span class="pre">compute_contacts()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.micro.compute_forces"><code class="docutils literal notranslate"><span class="pre">compute_forces()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.micro.create_people_in_box"><code class="docutils literal notranslate"><span class="pre">create_people_in_box()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.micro.find_duplicate_people"><code class="docutils literal notranslate"><span class="pre">find_duplicate_people()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.micro.move_people"><code class="docutils literal notranslate"><span class="pre">move_people()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.micro.people_initialization"><code class="docutils literal notranslate"><span class="pre">people_initialization()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.micro.people_update_destination"><code class="docutils literal notranslate"><span class="pre">people_update_destination()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.micro.plot_people"><code class="docutils literal notranslate"><span class="pre">plot_people()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.micro.plot_sensors"><code class="docutils literal notranslate"><span class="pre">plot_sensors()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.micro.projection"><code class="docutils literal notranslate"><span class="pre">projection()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.micro.remove_overlaps_in_box"><code class="docutils literal notranslate"><span class="pre">remove_overlaps_in_box()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.micro.sensor"><code class="docutils literal notranslate"><span class="pre">sensor()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <div role="main">
+        
+  <section id="module-cromosim.micro">
+<span id="microscopic-models-granular-and-social-force-model"></span><h1>Microscopic models : granular and social force model<a class="headerlink" href="#module-cromosim.micro" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.micro.check_people_in_box">
+<span class="sig-prename descclassname"><span class="pre">cromosim.micro.</span></span><span class="sig-name descname"><span class="pre">check_people_in_box</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">box</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xyrv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dest_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rng</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/micro.html#check_people_in_box"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.micro.check_people_in_box" title="Link to this definition">¶</a></dt>
+<dd><p>To check that people coordinates are in the given box (test 1) and in an
+usable space i.e. in an area accessible and not concerned by obstacles
+(test 2). On the other hand, one moves the individuals which do not satisfy
+these two tests.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dom: Domain</strong></dt><dd><p>contains everything for managing the domain</p>
+</dd>
+<dt><strong>box: list</strong></dt><dd><p>coordinates of the box [xmin, xmax, ymin, ymax]</p>
+</dd>
+<dt><strong>xyrv: numpy array</strong></dt><dd><p>people coordinates, radius and velocity coefficient: <code class="docutils literal notranslate"><span class="pre">x,y,r,v</span></code></p>
+</dd>
+<dt><strong>dest_names: numpy array</strong></dt><dd><p>people destination names</p>
+</dd>
+<dt><strong>rng: RandomState</strong></dt><dd><p>scipy random state object (see scipy.random.RandomState)</p>
+</dd>
+<dt><strong>verbose: boolean</strong></dt><dd><p>logs for debug</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>xyrv: numpy array</dt><dd><p>new people coordinates <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">y</span> <span class="pre">r</span></code></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.micro.compute_contacts">
+<span class="sig-prename descclassname"><span class="pre">cromosim.micro.</span></span><span class="sig-name descname"><span class="pre">compute_contacts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xyrv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dmax</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/micro.html#compute_contacts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.micro.compute_contacts" title="Link to this definition">¶</a></dt>
+<dd><p>This function uses a KDTree method to find the contacts between
+individuals. Moreover the contacts with the walls are also determined
+from the wall distance (obtained by the fast-marching method).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dom: Domain</strong></dt><dd><p>contains everything for managing the domain</p>
+</dd>
+<dt><strong>xyrv: numpy array</strong></dt><dd><p>people coordinates, radius and velocity coefficient: <code class="docutils literal notranslate"><span class="pre">x,y,r,v</span></code></p>
+</dd>
+<dt><strong>dmax: float</strong></dt><dd><p>threshold value used to consider a contact as active i.e. <code class="docutils literal notranslate"><span class="pre">dij&lt;dmax</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>contacts: numpy array</dt><dd><p>all the contacts <code class="docutils literal notranslate"><span class="pre">i,j,dij,eij_x,eij_y</span></code> such that <code class="docutils literal notranslate"><span class="pre">dij&lt;dmax</span></code> and
+<code class="docutils literal notranslate"><span class="pre">i&lt;j</span></code> (no duplication)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.micro.compute_forces">
+<span class="sig-prename descclassname"><span class="pre">cromosim.micro.</span></span><span class="sig-name descname"><span class="pre">compute_forces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">F</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Fwall</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xyrv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contacts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Vd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda_</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eta</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/micro.html#compute_forces"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.micro.compute_forces" title="Link to this definition">¶</a></dt>
+<dd><p>This function computes all the forces (isentropic interaction and
+friction) and sums them. The correcting pre-factor due to the vision
+angle is also used into the social force term.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>F: float</strong></dt><dd><p>social trend of an individual to keep apart from another (homogeneous
+to a force)</p>
+</dd>
+<dt><strong>Fwall: float</strong></dt><dd><p>social trend of an individual to keep apart from a wall (homogeneous
+to a force)</p>
+</dd>
+<dt><strong>xyrv: numpy array</strong></dt><dd><p>people coordinates, radius and velocity coefficient: <code class="docutils literal notranslate"><span class="pre">x,y,r,v</span></code></p>
+</dd>
+<dt><strong>contacts: numpy array</strong></dt><dd><p>all the contacts: <code class="docutils literal notranslate"><span class="pre">i,j,dij,eij_x,eij_y</span></code></p>
+</dd>
+<dt><strong>U: numpy array</strong></dt><dd><p>people velocities</p>
+</dd>
+<dt><strong>Vd: numpy array</strong></dt><dd><p>people desired velocities</p>
+</dd>
+<dt><strong>lambda_: float</strong></dt><dd><p>quantifies the directional dependence when the vision angle is
+considered (between <code class="docutils literal notranslate"><span class="pre">[0,1]</span></code>, if equal to 1 the fully isotropic case is
+recovered)</p>
+</dd>
+<dt><strong>delta: float</strong></dt><dd><p>maintains a certain distance between neighbors</p>
+</dd>
+<dt><strong>k: float</strong></dt><dd><p>used when there is overlapping, k is a stiffness constant of
+individuals seen as deformable bodies</p>
+</dd>
+<dt><strong>eta: float</strong></dt><dd><p>friction coefficient</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>Forces: numpy array</dt><dd><p>sum of all forces for each individual</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.micro.create_people_in_box">
+<span class="sig-prename descclassname"><span class="pre">cromosim.micro.</span></span><span class="sig-name descname"><span class="pre">create_people_in_box</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">box</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dest_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius_distribution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">velocity_distribution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rng</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/micro.html#create_people_in_box"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.micro.create_people_in_box" title="Link to this definition">¶</a></dt>
+<dd><p>To create nn persons in a given box. The overlaps are not treated for     the moment but one checks that the individuals are located in an area where     the desired velocity is well defined (outside inaccessible areas or     obstacles). If it is not the case, one changes their coordinates in     consequence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>nn: integer</strong></dt><dd><p>number of individuals to create</p>
+</dd>
+<dt><strong>box: list</strong></dt><dd><p>coordinates of the box <code class="docutils literal notranslate"><span class="pre">[xmin,</span> <span class="pre">xmax,</span> <span class="pre">ymin,</span> <span class="pre">ymax]</span></code></p>
+</dd>
+<dt><strong>dest_name: string</strong></dt><dd><p>destination name for all individuals in this group</p>
+</dd>
+<dt><strong>radius_distribution: list</strong></dt><dd><p>distribution with its parameters</p>
+</dd>
+<dt><strong>velocity_distribution: list</strong></dt><dd><p>distribution with its parameters</p>
+</dd>
+<dt><strong>dom: Domain</strong></dt><dd><p>contains everything for managing the domain</p>
+</dd>
+<dt><strong>rng: RandomState</strong></dt><dd><p>scipy random state object (see <code class="docutils literal notranslate"><span class="pre">scipy.random.RandomState</span></code>)</p>
+</dd>
+<dt><strong>verbose: boolean</strong></dt><dd><p>logs for debug</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>p: numpy array</dt><dd><p>new people coordinates, radius and velocity coefficient <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">y</span> <span class="pre">r</span> <span class="pre">v</span></code></p>
+</dd>
+<dt>dest_names: numpy array</dt><dd><p>people destination names</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.micro.find_duplicate_people">
+<span class="sig-prename descclassname"><span class="pre">cromosim.micro.</span></span><span class="sig-name descname"><span class="pre">find_duplicate_people</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">all_people</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domains</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/micro.html#find_duplicate_people"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.micro.find_duplicate_people" title="Link to this definition">¶</a></dt>
+<dd><p>This function determines people who have to be duplicated
+due to their presence in transit boxes (in Destination object)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>all_people: dict</strong></dt><dd><dl class="simple">
+<dt>Has one dictionary <code class="docutils literal notranslate"><span class="pre">&quot;people&quot;</span></code> by domain which has at least:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;xyrv&quot;</span></code>: people coordinates and radius</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;destinations&quot;</span></code>: destination for each individual</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt><strong>domains: dict</strong></dt><dd><p>Contains all the Domain objets</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>virtual_people: dict</dt><dd><p>all duplicated people</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.micro.move_people">
+<span class="sig-prename descclassname"><span class="pre">cromosim.micro.</span></span><span class="sig-name descname"><span class="pre">move_people</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">people</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sensors</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/micro.html#move_people"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.micro.move_people" title="Link to this definition">¶</a></dt>
+<dd><p>Updates the people positions according to the new velocities U.     If there exists crosslines (i.e. sensors), computes also the id, time,     direction and impact points for the individuals who cross the lines.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>time: float</strong></dt><dd><p>current time</p>
+</dd>
+<dt><strong>dt: float</strong></dt><dd><p>time step</p>
+</dd>
+<dt><strong>people: dict</strong></dt><dd><p>dictionary containing everything related to individuals (<code class="docutils literal notranslate"><span class="pre">&quot;xyrv&quot;</span></code>,         <code class="docutils literal notranslate"><span class="pre">&quot;U&quot;</span></code>,…)</p>
+</dd>
+<dt><strong>sensors: dict</strong></dt><dd><p>dictionary containing everything related to sensors (<code class="docutils literal notranslate"><span class="pre">&quot;line&quot;</span></code>,…)</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>people: dict</dt><dd><p>dictionary updated with new people positions after moving</p>
+</dd>
+<dt>sensors: dict</dt><dd><dl class="simple">
+<dt>dictionary enriched by:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;id&quot;</span></code>: people id who cross the sensor lines</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;times&quot;</span></code>: times when people cross the sensor lines</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;xy&quot;</span></code>: impact points for people crossing the sensor lines</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;dir&quot;</span></code>: directions for people crossing the sensor lines (entry or exit)</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.micro.people_initialization">
+<span class="sig-prename descclassname"><span class="pre">cromosim.micro.</span></span><span class="sig-name descname"><span class="pre">people_initialization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dmin_people</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dmin_walls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">itermax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">projection_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cvxopt'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/micro.html#people_initialization"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.micro.people_initialization" title="Link to this definition">¶</a></dt>
+<dd><p>To initialize people.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dom: Domain</strong></dt><dd><p>contains everything for managing the domain</p>
+</dd>
+<dt><strong>groups: dict</strong></dt><dd><dl class="simple">
+<dt>contains all groups related to this domain. A group contains:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;nb&quot;</span></code>: number of persons</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;radius_distribution&quot;</span></code>: <code class="docutils literal notranslate"><span class="pre">[&quot;uniform&quot;,min,max]</span></code> or <code class="docutils literal notranslate"><span class="pre">[&quot;normal&quot;,mean,std_dev]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;velocity_distribution&quot;</span></code>: <code class="docutils literal notranslate"><span class="pre">[&quot;uniform&quot;,min,max]</span></code> or <code class="docutils literal notranslate"><span class="pre">[&quot;normal&quot;,mean,std_dev]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;box&quot;</span></code>: <code class="docutils literal notranslate"><span class="pre">[xmin,xmax,ymin,ymax]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;destination&quot;</span></code>: initial destination</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt><strong>dt: float</strong></dt><dd><p>time step</p>
+</dd>
+<dt><strong>dmin_people: float</strong></dt><dd><p>minimal distance allowed between individuals (0 by default)</p>
+</dd>
+<dt><strong>dmin_walls: float</strong></dt><dd><p>minimal distance allowed between an individual and a wall</p>
+</dd>
+<dt><strong>seed: integer</strong></dt><dd><p>seed to initialize the RandomState (0 by default means different seed         at each run)</p>
+</dd>
+<dt><strong>itermax: integer</strong></dt><dd><p>maximal number of Uzawa projections (10 by default)</p>
+</dd>
+<dt><strong>projection_method: string</strong></dt><dd><p>optimizer name for the projection step: <code class="docutils literal notranslate"><span class="pre">&quot;cvxopt&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;uzawa&quot;</span></code>
+or <code class="docutils literal notranslate"><span class="pre">&quot;mosek&quot;</span></code></p>
+</dd>
+<dt><strong>verbose: boolean</strong></dt><dd><p>logs for debug</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>people: dict</dt><dd><dl class="simple">
+<dt>people dictionary which contains:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;xyrv&quot;</span></code>: coordinates, radius and velocity coefficient for each individual</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;destinations&quot;</span></code>: destination for each individual</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;gpid&quot;</span></code>: group id</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt>rng: RandomState</dt><dd><p>scipy random state object (see <code class="docutils literal notranslate"><span class="pre">scipy.random.RandomState</span></code>)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.micro.people_update_destination">
+<span class="sig-prename descclassname"><span class="pre">cromosim.micro.</span></span><span class="sig-name descname"><span class="pre">people_update_destination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">all_people</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domains</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thld</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">box</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/micro.html#people_update_destination"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.micro.people_update_destination" title="Link to this definition">¶</a></dt>
+<dd><p>This function updates people destinations and domains</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>all_people: dict</strong></dt><dd><dl class="simple">
+<dt>Has one dictionary <code class="docutils literal notranslate"><span class="pre">&quot;people&quot;</span></code> by domain which has at least:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;xyrv&quot;</span></code>: people coordinates and radius</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;destinations&quot;</span></code>: destination for each individual</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt><strong>domains: dict</strong></dt><dd><p>Contains all the Domain objets</p>
+</dd>
+<dt><strong>thld: float</strong></dt><dd><p>threshold value used to decide if an individual has reached its destination</p>
+</dd>
+<dt><strong>box: numpy array</strong></dt><dd><p>box used to remove people outside</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>all_people: dict</dt><dd><p>all people in all domains updated</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.micro.plot_people">
+<span class="sig-prename descclassname"><span class="pre">cromosim.micro.</span></span><span class="sig-name descname"><span class="pre">plot_people</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ifig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">people</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contacts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">virtual_people</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_people</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_contacts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_velocities</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_desired_velocities</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_paths</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_sensors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sensors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fig.png'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">150</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'winter'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/micro.html#plot_people"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.micro.plot_people" title="Link to this definition">¶</a></dt>
+<dd><p>This function draws spheres for the individuals,     lines for the active contacts and arrows for the     (desired or real) velocities.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ifig: int</strong></dt><dd><p>figure number</p>
+</dd>
+<dt><strong>dom: Domain</strong></dt><dd><p>contains everything for managing the domain</p>
+</dd>
+<dt><strong>people: dict</strong></dt><dd><p>contains everything concerning people: <code class="docutils literal notranslate"><span class="pre">x,</span> <span class="pre">y,</span> <span class="pre">r,</span> <span class="pre">v,</span> <span class="pre">U,...</span></code></p>
+</dd>
+<dt><strong>contacts: numpy array</strong></dt><dd><p>all the contacts: <code class="docutils literal notranslate"><span class="pre">i,</span> <span class="pre">j,</span> <span class="pre">dij,</span> <span class="pre">eij_x,</span> <span class="pre">eij_y</span></code></p>
+</dd>
+<dt><strong>colors: numpy array</strong></dt><dd><p>scalar field used to define people colors</p>
+</dd>
+<dt><strong>time: float</strong></dt><dd><p>time in seconds</p>
+</dd>
+<dt><strong>virtual_people: dict</strong></dt><dd><p>contains everything concerning virtual people: <code class="docutils literal notranslate"><span class="pre">x,</span> <span class="pre">y,</span> <span class="pre">r,...</span></code></p>
+</dd>
+<dt><strong>axis: numpy array</strong></dt><dd><p>matplotlib axis: <code class="docutils literal notranslate"><span class="pre">[xmin,</span> <span class="pre">xmax,</span> <span class="pre">ymin,</span> <span class="pre">ymax]</span></code></p>
+</dd>
+<dt><strong>plot_people: boolean</strong></dt><dd><p>draws spheres for people if true</p>
+</dd>
+<dt><strong>plot_paths: boolean</strong></dt><dd><p>draws people paths if true</p>
+</dd>
+<dt><strong>plot_sensors: boolean</strong></dt><dd><p>draws sensor lines if true</p>
+</dd>
+<dt><strong>sensors: numpy array</strong></dt><dd><p>sensor line coordinates (see also the sensor function below)</p>
+</dd>
+<dt><strong>savefig: boolean</strong></dt><dd><p>writes the figure as a png file if true</p>
+</dd>
+<dt><strong>filename: string</strong></dt><dd><p>png filename used to write the figure</p>
+</dd>
+<dt><strong>dpi: integer</strong></dt><dd><p>number of pixel per inch for the saved figure</p>
+</dd>
+<dt><strong>cmap: string</strong></dt><dd><p>matplotlib colormap name</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.micro.plot_sensors">
+<span class="sig-prename descclassname"><span class="pre">cromosim.micro.</span></span><span class="sig-name descname"><span class="pre">plot_sensors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ifig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sensors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flux_timestep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fig.png'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">150</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'winter'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/micro.html#plot_sensors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.micro.plot_sensors" title="Link to this definition">¶</a></dt>
+<dd><p>This function traces, for each sensor, a graph with the passage times
+of the individuals crossing the counting line, as well as the incoming
+and outgoing flows.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ifig: int</strong></dt><dd><p>figure number</p>
+</dd>
+<dt><strong>sensors: dict</strong></dt><dd><p>contains for each sensor, the date, position and direction of an
+individual who cut the counting line</p>
+</dd>
+<dt><strong>time: float</strong></dt><dd><p>time in seconds</p>
+</dd>
+<dt><strong>flux_timestep: float</strong></dt><dd><p>timestep for the fluxes: number of persons per flux_timestep seconds</p>
+</dd>
+<dt><strong>savefig: boolean</strong></dt><dd><p>writes the figure as a png file if true</p>
+</dd>
+<dt><strong>filename: string</strong></dt><dd><p>png filename used to write the figure</p>
+</dd>
+<dt><strong>dpi: integer</strong></dt><dd><p>number of pixel per inch for the saved figure</p>
+</dd>
+<dt><strong>cmap: string</strong></dt><dd><p>matplotlib colormap name</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.micro.projection">
+<span class="sig-prename descclassname"><span class="pre">cromosim.micro.</span></span><span class="sig-name descname"><span class="pre">projection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xyrv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contacts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Vd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dmin_people</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dmin_walls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nb_iter_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cvxopt'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/micro.html#projection"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.micro.projection" title="Link to this definition">¶</a></dt>
+<dd><p>From the desired velocities Vd, this projection step consists of
+computing the global velocity field defined as the closest velocity to the
+desired one among all the feasible fields (i.e. fields which do not lead 
+to disks overlapping).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dt: float</strong></dt><dd><p>time step</p>
+</dd>
+<dt><strong>xyrv: numpy array</strong></dt><dd><p>people coordinates, radius and velocity coefficient: <code class="docutils literal notranslate"><span class="pre">x,y,r,v</span></code></p>
+</dd>
+<dt><strong>contacts: numpy array</strong></dt><dd><p>all the contacts: <code class="docutils literal notranslate"><span class="pre">i,j,dij,eij_x,eij_y</span></code></p>
+</dd>
+<dt><strong>Vd: numpy array</strong></dt><dd><p>people desired velocities</p>
+</dd>
+<dt><strong>dmin_people: float</strong></dt><dd><p>minimum distance guaranteed between individuals</p>
+</dd>
+<dt><strong>dmin_walls: float</strong></dt><dd><p>minimum distance guaranteed between an individual and a wall</p>
+</dd>
+<dt><strong>nb_iter_max: integer</strong></dt><dd><p>maximum number of iterations allowed</p>
+</dd>
+<dt><strong>rho: float</strong></dt><dd><p>parameter of the Uzawa method</p>
+</dd>
+<dt><strong>tol: float</strong></dt><dd><p>tolerance wished</p>
+</dd>
+<dt><strong>log: boolean</strong></dt><dd><p>to print the final accuracy, number of iterations,…</p>
+</dd>
+<dt><strong>method: string</strong></dt><dd><p>optimization algorithm: <code class="docutils literal notranslate"><span class="pre">&quot;cvxopt&quot;</span></code> (default) or <code class="docutils literal notranslate"><span class="pre">&quot;uzawa&quot;</span></code> (or
+<code class="docutils literal notranslate"><span class="pre">&quot;mosek&quot;</span></code> if installed with a license file).</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>info: integer</dt><dd><p>number of iterations needed</p>
+</dd>
+<dt>B: numpy array</dt><dd><p>constraint matrix</p>
+</dd>
+<dt>U: numpy array</dt><dd><p>new people velocities ensuring that there is no overlap between
+individuals</p>
+</dd>
+<dt>L: numpy array</dt><dd><p>Lagrange multipliers (only when <code class="docutils literal notranslate"><span class="pre">method=&quot;uzawa&quot;</span></code>, None otherwise)</p>
+</dd>
+<dt>P: numpy array</dt><dd><p>pressure on each individual (only when <code class="docutils literal notranslate"><span class="pre">method=&quot;uzawa&quot;</span></code>, None
+otherwise)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.micro.remove_overlaps_in_box">
+<span class="sig-prename descclassname"><span class="pre">cromosim.micro.</span></span><span class="sig-name descname"><span class="pre">remove_overlaps_in_box</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">box</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xyrv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dest_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rng</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">projection_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cvxopt'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dmin_people</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dmin_walls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">itermax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/micro.html#remove_overlaps_in_box"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.micro.remove_overlaps_in_box" title="Link to this definition">¶</a></dt>
+<dd><p>To remove the overlaps between individuals (spheres) in the given box.     Several projections are used to give a better robustness to this     process when the number of overlaps is very high e.g. during the     initialization when the individuals have random positions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dom: Domain</strong></dt><dd><p>contains everything for managing the domain</p>
+</dd>
+<dt><strong>box: list</strong></dt><dd><p>coordinates of the box <code class="docutils literal notranslate"><span class="pre">[xmin,</span> <span class="pre">xmax,</span> <span class="pre">ymin,</span> <span class="pre">ymax]</span></code></p>
+</dd>
+<dt><strong>xyrv: numpy array</strong></dt><dd><p>people coordinates <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">y</span></code>, radius <code class="docutils literal notranslate"><span class="pre">r</span></code> and velocity coefficient <code class="docutils literal notranslate"><span class="pre">v</span></code></p>
+</dd>
+<dt><strong>dest_names: numpy array</strong></dt><dd><p>people destination names</p>
+</dd>
+<dt><strong>dt: float</strong></dt><dd><p>time step</p>
+</dd>
+<dt><strong>rng: RandomState</strong></dt><dd><p>scipy random state object (see <code class="docutils literal notranslate"><span class="pre">scipy.random.RandomState</span></code>)</p>
+</dd>
+<dt><strong>dmin_people: float</strong></dt><dd><p>minimal distance allowed between individuals</p>
+</dd>
+<dt><strong>dmin_walls: float</strong></dt><dd><p>minimal distance allowed between an individual and a wall</p>
+</dd>
+<dt><strong>itermax: integer</strong></dt><dd><p>maximal number of Uzawa projections (10 by default)</p>
+</dd>
+<dt><strong>verbose: boolean</strong></dt><dd><p>logs for debug</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>xyrv: numpy array</dt><dd><p>new people coordinates <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">y</span></code>, same radius <code class="docutils literal notranslate"><span class="pre">r</span></code> and velocity
+coefficient <code class="docutils literal notranslate"><span class="pre">v</span></code></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.micro.sensor">
+<span class="sig-prename descclassname"><span class="pre">cromosim.micro.</span></span><span class="sig-name descname"><span class="pre">sensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">door</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xy0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xy1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/micro.html#sensor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.micro.sensor" title="Link to this definition">¶</a></dt>
+<dd><p>Compute the number of entries/exits through a door as a pedestrian
+sensor could do</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>door: numpy array</strong></dt><dd><p>door coordinates <code class="docutils literal notranslate"><span class="pre">[x0,y0,x1,y1]</span></code></p>
+</dd>
+<dt><strong>t0: float</strong></dt><dd><p>time</p>
+</dd>
+<dt><strong>t1: float</strong></dt><dd><p>time</p>
+</dd>
+<dt><strong>xy0: numpy array</strong></dt><dd><p>people coordinates at time <code class="docutils literal notranslate"><span class="pre">t0</span></code></p>
+</dd>
+<dt><strong>xy1: numpy array</strong></dt><dd><p>people coordinates at time <code class="docutils literal notranslate"><span class="pre">t1</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>id: numpy array</dt><dd><p>index of persons who go through the door</p>
+</dd>
+<dt>p: numpy array</dt><dd><p>coordinates of intersection points between the door and people trajectories</p>
+</dd>
+<dt>io: numpy array</dt><dd><p>the exit direction is the normal direction, 1 = exit, -1 = entry</p>
+</dd>
+<dt>times: numpy array</dt><dd><p>exit or entry times</p>
+</dd>
+<dt>entries: int</dt><dd><p>number of entries</p>
+</dd>
+<dt>exits: int</dt><dd><p>number of exits</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2018, Sylvain Faure, Bertrand Maury.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    </div>
+  </body>
+</html>

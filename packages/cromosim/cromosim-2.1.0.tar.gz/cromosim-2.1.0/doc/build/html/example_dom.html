@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Build a domain &#8212; cromosim  documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/scrolls.css?v=4cde0d18" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Understand one-dimensional microscopic models : the Follow-the-Leader model" href="example_ftl.html" />
+    <link rel="prev" title="Welcome to cromosim’s documentation!" href="index.html" /> 
+  </head><body>
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="index.html"
+          title="back to the documentation overview"><span>Build a domain</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="Related">
+        <a href="index.html">&laquo; Welcome to cromosim’s documentation!</a> |
+        <a href="#">Build a domain</a>
+        | <a href="example_ftl.html">Understand one-dimensional microscopic models : the Follow-the-Leader model &raquo;</a>
+      </div>
+      <div id="contentwrapper">
+        <div id="toc" role="navigation" aria-label="Table of contents">
+          <h3>Table of Contents</h3>
+          <ul>
+<li><a class="reference internal" href="#">Build a domain</a><ul>
+<li><a class="reference internal" href="#the-simplest-example">The simplest example</a></li>
+<li><a class="reference internal" href="#a-circular-domain">A circular domain</a></li>
+<li><a class="reference internal" href="#a-domain-with-several-destinations">A domain with several destinations</a></li>
+<li><a class="reference internal" href="#a-domain-build-from-a-json-file">A domain build from a json file</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <div role="main">
+        
+  <section id="build-a-domain">
+<h1>Build a domain<a class="headerlink" href="#build-a-domain" title="Link to this heading">¶</a></h1>
+<p>A <cite>Domain</cite> object contains:</p>
+<ul class="simple">
+<li><p>a geometry defined by a background image (completely white by
+default) and <cite>Matplotlib</cite> shapes that can be added (lines, circles, ellipses,
+rectangles or polygons). Depending on the color chosen for a shape, its
+meaning changes. For example, you can decide that a red line corresponds to
+one door and a green line represents another.
+To build a computational domain, we therefore use a background image
+(drawing, map of the site, satellite photo, etc.) or we leave an entirely
+white background, then we optionally add colored shapes, and finally we
+define a color code. In general the walls are coded in black. All colors
+are taken in rgb format: <cite>[r, g, b]</cite> with <cite>r</cite>, <cite>g</cite> and <cite>b</cite> integers between
+<cite>0</cite> and <cite>255</cite>.</p></li>
+<li><p>a 2D array of the size of the image representing the distance to the nearest
+wall (coded by all the colors defined in <cite>wall_colors</cite>). This means that each
+pixel in the image has its distance to the nearest wall.</p></li>
+<li><p>A set of possible destinations attributable to people. A destination is
+defined by a <cite>Destination</cite> object which contains all the elements useful for
+its construction: the color codes representing the destination on the domain
+(red for a door represented by a red line for example), exclusion zones also
+defined via colors (black for an impassable wall for example), the names of
+the next destination and the next domain (we can chain several destinations
+to go up one floor: one <cite>Domain</cite> object per floor, one <cite>Destination</cite> object
+leading to the stairs, another to climb the stairs, etc …).
+Each destination will contain a 2D array of the size of the image containing
+the distance to the objective (the aimed door for example). The opposite of
+the gradient of this distance represents the desired direction (or named
+desired velocity) for an individual desiring to reach this outcome. This
+desired direction is also stored in an array.</p></li>
+</ul>
+<p>Reference : <a class="reference internal" href="index.html#mf2018" id="id1"><span>[MF2018]</span></a> Chapter 8.</p>
+<p>All the following examples can be found in the directory</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cromosim</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">domain</span><span class="o">/</span>
+</pre></div>
+</div>
+<section id="the-simplest-example">
+<h2>The simplest example<a class="headerlink" href="#the-simplest-example" title="Link to this heading">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">domain_room</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>This domain uses an image as background and two forms: a red line used to
+define a door and a black disc to add an obstacle a few meters before the door.</p>
+<br>
+<table style="width:100%">
+  <tr>
+    <td>
+      <center>
+        <em><small>The image that serves as the background</small></em>
+        <img src="_static/room.png" alt="The image that serves as the background" style="margin:0px" width="80%" height="auto"/>
+      </center>
+    </td>
+    <td>
+      <center>
+        <em><small>The domain: background, black disk and red line added</small></em>
+        <img src="_static/room_domain.png" alt="The domain : background + a shape (black circle)" style="margin:0px auto;display:block" width="80%" height="auto"/>
+      </center>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <center>
+        <em><small>Distance to walls and its gradient</small></em>
+        <img src="_static/room_wall_distance.png" alt="Distance to walls and its gradient" style="margin:0px auto;display:block" width="80%" height="auto"/>
+      </center>
+    </td>
+    <td>
+      <center>
+        <em><small>Distance to destination (red door) and desired velocity</small></em>
+        <img src="_static/room_desired_velocity.png" alt="Distance to destination (red door) and the desired velocity" style="margin:0px auto;display:block" width="80%" height="auto"/>
+      </center>
+    </td>
+  </tr>
+</table>
+<br><div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">domain_room.py</span><a class="headerlink" href="#id2" title="Link to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Circle</span>
+<span class="linenos"> 3</span><span class="kn">from</span> <span class="nn">matplotlib.lines</span> <span class="kn">import</span> <span class="n">Line2D</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kn">from</span> <span class="nn">cromosim.domain</span> <span class="kn">import</span> <span class="n">Domain</span>
+<span class="linenos"> 6</span><span class="kn">from</span> <span class="nn">cromosim.domain</span> <span class="kn">import</span> <span class="n">Destination</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="c1"># To create a Domain object from a background image</span>
+<span class="linenos"> 9</span><span class="n">dom</span> <span class="o">=</span> <span class="n">Domain</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;room&#39;</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s1">&#39;room.png&#39;</span><span class="p">,</span> <span class="n">pixel_size</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="c1"># To define the color for the walls</span>
+<span class="linenos">12</span><span class="n">wall_color</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="c1"># To add an obstacle using a matplotlib shape colored with wall_color :</span>
+<span class="linenos">15</span><span class="c1">#     Circle( (center_x,center_y), radius )</span>
+<span class="linenos">16</span><span class="n">circle</span> <span class="o">=</span> <span class="n">Circle</span><span class="p">((</span><span class="mf">20.0</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">),</span> <span class="mf">1.0</span><span class="p">)</span>
+<span class="linenos">17</span><span class="n">dom</span><span class="o">.</span><span class="n">add_shape</span><span class="p">(</span><span class="n">circle</span><span class="p">,</span> <span class="n">outline_color</span><span class="o">=</span><span class="n">wall_color</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="n">wall_color</span><span class="p">)</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="c1"># To define the color for the issue of the room</span>
+<span class="linenos">20</span><span class="n">door_color</span> <span class="o">=</span> <span class="p">[</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="c1"># To add a door using a matplotlib shape :</span>
+<span class="linenos">23</span><span class="c1">#     Line2D(xdata, ydata, linewidth)</span>
+<span class="linenos">24</span><span class="n">line</span> <span class="o">=</span> <span class="n">Line2D</span><span class="p">([</span><span class="mf">17.0</span><span class="p">,</span> <span class="mf">23.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">3.1</span><span class="p">,</span> <span class="mf">3.1</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="linenos">25</span><span class="n">dom</span><span class="o">.</span><span class="n">add_shape</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">outline_color</span><span class="o">=</span><span class="n">door_color</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="n">door_color</span><span class="p">)</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span><span class="c1"># To build the domain :</span>
+<span class="linenos">28</span><span class="n">dom</span><span class="o">.</span><span class="n">build_domain</span><span class="p">()</span>
+<span class="linenos">29</span>
+<span class="linenos">30</span><span class="c1"># To plot the domain : backgroud + added shapes</span>
+<span class="linenos">31</span><span class="n">dom</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Domain&quot;</span><span class="p">)</span>
+<span class="linenos">32</span>
+<span class="linenos">33</span><span class="c1"># To create a Destination object towards the door</span>
+<span class="linenos">34</span><span class="n">dest</span> <span class="o">=</span> <span class="n">Destination</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;door&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="n">door_color</span><span class="p">],</span>
+<span class="linenos">35</span>                   <span class="n">excluded_colors</span><span class="o">=</span><span class="p">[</span><span class="n">wall_color</span><span class="p">])</span>
+<span class="linenos">36</span><span class="n">dom</span><span class="o">.</span><span class="n">add_destination</span><span class="p">(</span><span class="n">dest</span><span class="p">)</span>
+<span class="linenos">37</span>
+<span class="linenos">38</span><span class="c1"># To plot the wall distance and its gradient</span>
+<span class="linenos">39</span><span class="n">dom</span><span class="o">.</span><span class="n">plot_wall_dist</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+<span class="linenos">40</span>                   <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Distance to walls and its gradient&quot;</span><span class="p">,</span>
+<span class="linenos">41</span>                   <span class="n">savefig</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;room_wall_distance.png&quot;</span><span class="p">)</span>
+<span class="linenos">42</span>
+<span class="linenos">43</span><span class="c1"># To plot the distance to the red door and the correspondant</span>
+<span class="linenos">44</span><span class="c1"># desired velocity</span>
+<span class="linenos">45</span><span class="n">dom</span><span class="o">.</span><span class="n">plot_desired_velocity</span><span class="p">(</span><span class="s1">&#39;door&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+<span class="linenos">46</span>                          <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Distance to the destination and desired velocity&quot;</span><span class="p">,</span>
+<span class="linenos">47</span>                          <span class="n">savefig</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;room_desired_velocity.png&quot;</span><span class="p">)</span>
+<span class="linenos">48</span>
+<span class="linenos">49</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Domain: &quot;</span><span class="p">,</span> <span class="n">dom</span><span class="p">)</span>
+<span class="linenos">50</span>
+<span class="linenos">51</span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="a-circular-domain">
+<h2>A circular domain<a class="headerlink" href="#a-circular-domain" title="Link to this heading">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">domain_stadium</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>This domain contains black walls <cite>rgb=[0,0,0]</cite>, a red line <cite>rgb=[255,0,0]</cite> and
+a green line <cite>rgb=[0,255,0]</cite>, all included in the given background.</p>
+<p>If we calculate the desired velocity leading to the red line by solving the
+Eikonal equation using a Fast-Marching method, then we get arrows directed
+towards this line at any point on the track. For example, a person just to the
+right of the line will go to the left and a person just to the left will go to
+the right, so people will not turn around the track.</p>
+<p>To correct this problem, we add a fictitious wall (green line) used only during
+the Fast-Marching method: thanks to it a person located to the left of the
+red line will go to the left and go around the track.</p>
+<p>Finally if we want people to do several laps, we impose a desired velocity
+equal to <cite>(-1.0)</cite> on the green and red pixels using the
+<cite>desired_velocity_from_color</cite> option of the <cite>Destination</cite> object.</p>
+<br>
+<table style="width:100%">
+  <tr>
+    <td>
+      <center>
+        <em><small>The image that serves as the background</small></em>
+        <img src="_static/stadium.png" alt="The image that serves as the background" style="margin:0px" width="80%" height="auto"/>
+      </center>
+    </td>
+    <td>
+      <center>
+        <em><small>The domain, identical to the background image</small></em>
+        <img src="_static/stadium_domain.png" alt="The domain, identical to the background image" style="margin:0px auto;display:block" width="92%" height="auto"/>
+      </center>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <center>
+        <em><small>Distance to walls and its gradient</small></em>
+        <img src="_static/stadium_wall_distance.png" alt="Distance to walls and its gradient" style="margin:0px auto;display:block" width="80%" height="auto"/>
+      </center>
+    </td>
+    <td>
+      <center>
+        <em><small>Distance to destination (red door) and desired velocity</small></em>
+        <img src="_static/stadium_desired_velocity.png" alt="Distance to destination (red door) and the desired velocity" style="margin:0px auto;display:block" width="92%" height="auto"/>
+      </center>
+    </td>
+  </tr>
+</table>
+<br><div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">domain_stadium.py</span><a class="headerlink" href="#id3" title="Link to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">from</span> <span class="nn">cromosim.domain</span> <span class="kn">import</span> <span class="n">Domain</span>
+<span class="linenos"> 4</span><span class="kn">from</span> <span class="nn">cromosim.domain</span> <span class="kn">import</span> <span class="n">Destination</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="c1"># To create a Domain object from a background image</span>
+<span class="linenos"> 7</span><span class="c1"># By default the black color is for the walls</span>
+<span class="linenos"> 8</span><span class="n">dom</span> <span class="o">=</span> <span class="n">Domain</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;stadium&#39;</span><span class="p">,</span> <span class="n">pixel_size</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;stadium.png&quot;</span><span class="p">)</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="c1"># To build the domain :</span>
+<span class="linenos">11</span><span class="n">dom</span><span class="o">.</span><span class="n">build_domain</span><span class="p">()</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="c1"># To plot the domain : backgroud + added shapes (none here, they were added</span>
+<span class="linenos">14</span><span class="c1"># directly to the drawing using drawing software)</span>
+<span class="linenos">15</span><span class="n">dom</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Domain&quot;</span><span class="p">)</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="c1"># To create a Destination object towards the red line</span>
+<span class="linenos">18</span><span class="c1"># Since the domain is circular here, we want people to go to the red line</span>
+<span class="linenos">19</span><span class="c1"># and then cross it and continue to turn. For this, the color green is used</span>
+<span class="linenos">20</span><span class="c1"># to block one side of the track when calculating the desired velocity (as a</span>
+<span class="linenos">21</span><span class="c1"># temporary wall will do). Once this calculation is done, the desired speed</span>
+<span class="linenos">22</span><span class="c1"># is imposed at [-1,0] on the red and green pixels..</span>
+<span class="linenos">23</span><span class="n">dest</span> <span class="o">=</span> <span class="n">Destination</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;running_track&#39;</span><span class="p">,</span>
+<span class="linenos">24</span>                   <span class="n">colors</span><span class="o">=</span><span class="p">[[</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],</span>
+<span class="linenos">25</span>                   <span class="n">excluded_colors</span><span class="o">=</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],</span>
+<span class="linenos">26</span>                   <span class="n">desired_velocity_from_color</span><span class="o">=</span><span class="p">[[</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
+<span class="linenos">27</span><span class="n">dom</span><span class="o">.</span><span class="n">add_destination</span><span class="p">(</span><span class="n">dest</span><span class="p">)</span>
+<span class="linenos">28</span>
+<span class="linenos">29</span><span class="c1"># To plot the wall distance and its gradient</span>
+<span class="linenos">30</span><span class="n">dom</span><span class="o">.</span><span class="n">plot_wall_dist</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+<span class="linenos">31</span>                   <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Distance to walls and its gradient&quot;</span><span class="p">,</span>
+<span class="linenos">32</span>                   <span class="n">savefig</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;stadium_wall_distance.png&quot;</span><span class="p">)</span>
+<span class="linenos">33</span>
+<span class="linenos">34</span><span class="c1"># To plot the distance to the red line and the correspondant desired velocity</span>
+<span class="linenos">35</span><span class="n">dom</span><span class="o">.</span><span class="n">plot_desired_velocity</span><span class="p">(</span><span class="s1">&#39;running_track&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+<span class="linenos">36</span>                          <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Distance to the destination and desired velocity&quot;</span><span class="p">,</span>
+<span class="linenos">37</span>                          <span class="n">savefig</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;stadium_desired_velocity.png&quot;</span><span class="p">)</span>
+<span class="linenos">38</span>
+<span class="linenos">39</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Domain: &quot;</span><span class="p">,</span> <span class="n">dom</span><span class="p">)</span>
+<span class="linenos">40</span>
+<span class="linenos">41</span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="a-domain-with-several-destinations">
+<h2>A domain with several destinations<a class="headerlink" href="#a-domain-with-several-destinations" title="Link to this heading">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">domain_shibuya_crossing</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Shibuya Crossing is a popular scramble crossing in Shibuya, Tokyo, Japan.
+Here some walls have been added (magenta walls) to channel pedestrians on the pedestrian
+crossings and we have defined five destinations leading to five disks of
+different colors (blue, brown, cyan, green and pink).</p>
+<br>
+<table style="width:100%">
+  <tr>
+    <td>
+      <center>
+        <em><small>The domain, identical to the background image</small></em>
+        <img src="_static/shibuya_crossing_domain.png" alt="The domain, identical to the background image" style="margin:0px auto;display:block" width="80%" height="auto"/>
+      </center>
+    </td>
+    <td>
+      <center>
+        <em><small>Distance to walls and its gradient</small></em>
+        <img src="_static/shibuya_crossing_wall_distance.png" alt="Distance to walls and its gradient" style="margin:0px auto;display:block" width="80%" height="auto"/>
+      </center>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <center>
+        <em><small>Distance to destination (blue disk) and desired velocity</small></em>
+        <img src="_static/shibuya_crossing_blue.png" alt="Distance to destination (blue disk) and the desired velocity" style="margin:0px auto;display:block" width="80%" height="auto"/>
+      </center>
+    </td>
+    <td>
+      <center>
+        <em><small>Distance to destination (brown disk) and desired velocity</small></em>
+        <img src="_static/shibuya_crossing_brown.png" alt="Distance to destination (brown disk) and the desired velocity" style="margin:0px auto;display:block" width="80%" height="auto"/>
+      </center>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <center>
+        <em><small>Distance to destination (cyan disk) and desired velocity</small></em>
+        <img src="_static/shibuya_crossing_cyan.png" alt="Distance to destination (cyan disk) and the desired velocity" style="margin:0px auto;display:block" width="80%" height="auto"/>
+      </center>
+    </td>
+    <td>
+      <center>
+        <em><small>Distance to destination (green disk) and desired velocity</small></em>
+        <img src="_static/shibuya_crossing_green.png" alt="Distance to destination (green disk) and the desired velocity" style="margin:0px auto;display:block" width="80%" height="auto"/>
+      </center>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <center>
+        <em><small>Distance to destination (pink disk) and desired velocity</small></em>
+        <img src="_static/shibuya_crossing_pink.png" alt="Distance to destination (pink disk) and the desired velocity" style="margin:0px auto;display:block" width="80%" height="auto"/>
+      </center>
+    </td>
+    <td>
+    </td>
+  </tr>
+</table>
+<br><div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">domain_shibuya_crossing.py</span><a class="headerlink" href="#id4" title="Link to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="kn">from</span> <span class="nn">cromosim.domain</span> <span class="kn">import</span> <span class="n">Domain</span>
+<span class="linenos"> 4</span><span class="kn">from</span> <span class="nn">cromosim.domain</span> <span class="kn">import</span> <span class="n">Destination</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="c1"># The walls are represented here by the black and magenta colors</span>
+<span class="linenos"> 8</span><span class="n">black</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="linenos"> 9</span><span class="n">magenta</span> <span class="o">=</span> <span class="p">[</span><span class="mi">148</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">146</span><span class="p">]</span>
+<span class="linenos">10</span><span class="n">wall_colors</span> <span class="o">=</span> <span class="p">[</span><span class="n">black</span><span class="p">,</span> <span class="n">magenta</span><span class="p">]</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="c1"># To create a Domain object from a background image</span>
+<span class="linenos">13</span><span class="n">dom</span> <span class="o">=</span> <span class="n">Domain</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;shibuya_crossing&#39;</span><span class="p">,</span>
+<span class="linenos">14</span>             <span class="n">pixel_size</span><span class="o">=</span><span class="mf">0.033</span><span class="p">,</span>
+<span class="linenos">15</span>             <span class="n">background</span><span class="o">=</span><span class="s2">&quot;shibuya_crossing.png&quot;</span><span class="p">,</span>
+<span class="linenos">16</span>             <span class="n">wall_colors</span><span class="o">=</span><span class="n">wall_colors</span><span class="p">)</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="c1"># To build the domain :</span>
+<span class="linenos">19</span><span class="n">dom</span><span class="o">.</span><span class="n">build_domain</span><span class="p">()</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="c1"># To plot the domain</span>
+<span class="linenos">22</span><span class="n">dom</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Domain&quot;</span><span class="p">)</span>
+<span class="linenos">23</span>
+<span class="linenos">24</span><span class="c1"># To define all the destinations</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span><span class="c1"># --&gt; towards the blue disk</span>
+<span class="linenos">27</span><span class="n">blue</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">255</span><span class="p">]</span>
+<span class="linenos">28</span><span class="n">dest_blue</span> <span class="o">=</span> <span class="n">Destination</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="n">blue</span><span class="p">],</span> <span class="n">excluded_colors</span><span class="o">=</span><span class="n">wall_colors</span><span class="p">)</span>
+<span class="linenos">29</span><span class="n">dom</span><span class="o">.</span><span class="n">add_destination</span><span class="p">(</span><span class="n">dest_blue</span><span class="p">)</span>
+<span class="linenos">30</span>
+<span class="linenos">31</span><span class="c1"># --&gt; towards the brown disk</span>
+<span class="linenos">32</span><span class="n">brown</span> <span class="o">=</span> <span class="p">[</span><span class="mi">170</span><span class="p">,</span> <span class="mi">121</span><span class="p">,</span> <span class="mi">66</span><span class="p">]</span>
+<span class="linenos">33</span><span class="n">dest_brown</span> <span class="o">=</span> <span class="n">Destination</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;brown&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="n">brown</span><span class="p">],</span>
+<span class="linenos">34</span>                         <span class="n">excluded_colors</span><span class="o">=</span><span class="n">wall_colors</span><span class="p">)</span>
+<span class="linenos">35</span><span class="n">dom</span><span class="o">.</span><span class="n">add_destination</span><span class="p">(</span><span class="n">dest_brown</span><span class="p">)</span>
+<span class="linenos">36</span>
+<span class="linenos">37</span><span class="c1"># --&gt; towards the cyan disk</span>
+<span class="linenos">38</span><span class="n">cyan</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">253</span><span class="p">,</span> <span class="mi">255</span><span class="p">]</span>
+<span class="linenos">39</span><span class="n">dest_cyan</span> <span class="o">=</span> <span class="n">Destination</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;cyan&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="n">cyan</span><span class="p">],</span>
+<span class="linenos">40</span>                        <span class="n">excluded_colors</span><span class="o">=</span><span class="n">wall_colors</span><span class="p">)</span>
+<span class="linenos">41</span><span class="n">dom</span><span class="o">.</span><span class="n">add_destination</span><span class="p">(</span><span class="n">dest_cyan</span><span class="p">)</span>
+<span class="linenos">42</span>
+<span class="linenos">43</span><span class="c1"># --&gt; towards the green disk</span>
+<span class="linenos">44</span><span class="n">green</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">249</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="linenos">45</span><span class="n">dest_green</span> <span class="o">=</span> <span class="n">Destination</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="n">green</span><span class="p">],</span>
+<span class="linenos">46</span>                         <span class="n">excluded_colors</span><span class="o">=</span><span class="n">wall_colors</span><span class="p">)</span>
+<span class="linenos">47</span><span class="n">dom</span><span class="o">.</span><span class="n">add_destination</span><span class="p">(</span><span class="n">dest_green</span><span class="p">)</span>
+<span class="linenos">48</span>
+<span class="linenos">49</span><span class="c1"># --&gt; towards the pink disk</span>
+<span class="linenos">50</span><span class="n">pink</span> <span class="o">=</span> <span class="p">[</span><span class="mi">255</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">255</span><span class="p">]</span>
+<span class="linenos">51</span><span class="n">dest_pink</span> <span class="o">=</span> <span class="n">Destination</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="n">pink</span><span class="p">],</span>
+<span class="linenos">52</span>                        <span class="n">excluded_colors</span><span class="o">=</span><span class="n">wall_colors</span><span class="p">)</span>
+<span class="linenos">53</span><span class="n">dom</span><span class="o">.</span><span class="n">add_destination</span><span class="p">(</span><span class="n">dest_pink</span><span class="p">)</span>
+<span class="linenos">54</span>
+<span class="linenos">55</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Domain: &quot;</span><span class="p">,</span> <span class="n">dom</span><span class="p">)</span>
+<span class="linenos">56</span>
+<span class="linenos">57</span><span class="c1"># To plot the wall distance and its gradient</span>
+<span class="linenos">58</span><span class="n">dom</span><span class="o">.</span><span class="n">plot_wall_dist</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>
+<span class="linenos">59</span>                   <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Distance to walls and its gradient&quot;</span><span class="p">,</span>
+<span class="linenos">60</span>                   <span class="n">savefig</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;shibuya_crossing_wall_distance.png&quot;</span><span class="p">)</span>
+<span class="linenos">61</span>
+<span class="linenos">62</span><span class="c1"># To plot all the desired velocity fields</span>
+<span class="linenos">63</span><span class="n">dom</span><span class="o">.</span><span class="n">plot_desired_velocity</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>
+<span class="linenos">64</span>                          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Distance to the destination &quot;blue&quot; and desired velocity&#39;</span><span class="p">,</span>
+<span class="linenos">65</span>                          <span class="n">savefig</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;shibuya_crossing_blue.png&quot;</span><span class="p">)</span>
+<span class="linenos">66</span>
+<span class="linenos">67</span><span class="n">dom</span><span class="o">.</span><span class="n">plot_desired_velocity</span><span class="p">(</span><span class="s1">&#39;brown&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>
+<span class="linenos">68</span>                          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Distance to the destination &quot;brown&quot; and desired velocity&#39;</span><span class="p">,</span>
+<span class="linenos">69</span>                          <span class="n">savefig</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;shibuya_crossing_brown.png&quot;</span><span class="p">)</span>
+<span class="linenos">70</span>
+<span class="linenos">71</span><span class="n">dom</span><span class="o">.</span><span class="n">plot_desired_velocity</span><span class="p">(</span><span class="s1">&#39;cyan&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>
+<span class="linenos">72</span>                          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Distance to the destination &quot;cyan&quot; and desired velocity&#39;</span><span class="p">,</span>
+<span class="linenos">73</span>                          <span class="n">savefig</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;shibuya_crossing_cyan.png&quot;</span><span class="p">)</span>
+<span class="linenos">74</span>
+<span class="linenos">75</span><span class="n">dom</span><span class="o">.</span><span class="n">plot_desired_velocity</span><span class="p">(</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>
+<span class="linenos">76</span>                          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Distance to the destination &quot;green&quot; and desired velocity&#39;</span><span class="p">,</span>
+<span class="linenos">77</span>                          <span class="n">savefig</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;shibuya_crossing_green.png&quot;</span><span class="p">)</span>
+<span class="linenos">78</span>
+<span class="linenos">79</span><span class="n">dom</span><span class="o">.</span><span class="n">plot_desired_velocity</span><span class="p">(</span><span class="s1">&#39;pink&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>
+<span class="linenos">80</span>                          <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Distance to the destination &quot;pink&quot; and desired velocity&#39;</span><span class="p">,</span>
+<span class="linenos">81</span>                          <span class="n">savefig</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;shibuya_crossing_pink.png&quot;</span><span class="p">)</span>
+<span class="linenos">82</span>
+<span class="linenos">83</span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="a-domain-build-from-a-json-file">
+<h2>A domain build from a json file<a class="headerlink" href="#a-domain-build-from-a-json-file" title="Link to this heading">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">domain_from_json</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">json</span> <span class="n">input_room</span><span class="o">.</span><span class="n">json</span>
+<span class="n">python</span> <span class="n">domain_from_json</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">json</span> <span class="n">input_stadium</span><span class="o">.</span><span class="n">json</span>
+<span class="n">python</span> <span class="n">domain_from_json</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">json</span> <span class="n">input_shibuya_crossing</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<p>JSON (JavaScript Object Notation) is a lightweight data-interchange format
+which can be used to describe one or more domains. This means in our case
+that with a single python script taking as argument a json file we will be
+able to build several domains.</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">domain_from_json.py</span><a class="headerlink" href="#id5" title="Link to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="linenos">  2</span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="linenos">  3</span><span class="kn">import</span> <span class="nn">json</span>
+<span class="linenos">  4</span><span class="kn">from</span> <span class="nn">optparse</span> <span class="kn">import</span> <span class="n">OptionParser</span>
+<span class="linenos">  5</span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="linenos">  6</span><span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Circle</span><span class="p">,</span> <span class="n">Ellipse</span><span class="p">,</span> <span class="n">Rectangle</span><span class="p">,</span> <span class="n">Polygon</span>
+<span class="linenos">  7</span><span class="kn">from</span> <span class="nn">matplotlib.lines</span> <span class="kn">import</span> <span class="n">Line2D</span>
+<span class="linenos">  8</span>
+<span class="linenos">  9</span><span class="kn">from</span> <span class="nn">cromosim.domain</span> <span class="kn">import</span> <span class="n">Domain</span>
+<span class="linenos"> 10</span><span class="kn">from</span> <span class="nn">cromosim.domain</span> <span class="kn">import</span> <span class="n">Destination</span>
+<span class="linenos"> 11</span>
+<span class="linenos"> 12</span><span class="c1"># Parse the arguments of the python command. Then the json file is loaded.</span>
+<span class="linenos"> 13</span><span class="n">parser</span> <span class="o">=</span> <span class="n">OptionParser</span><span class="p">(</span><span class="n">usage</span><span class="o">=</span><span class="s2">&quot;usage: %prog [options] filename&quot;</span><span class="p">,</span>
+<span class="linenos"> 14</span>                      <span class="n">version</span><span class="o">=</span><span class="s2">&quot;%prog 1.0&quot;</span><span class="p">)</span>
+<span class="linenos"> 15</span><span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span><span class="s1">&#39;--json&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s2">&quot;jsonfilename&quot;</span><span class="p">,</span>
+<span class="linenos"> 16</span>                  <span class="n">default</span><span class="o">=</span><span class="s2">&quot;input.json&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="linenos"> 17</span>                  <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Input json filename&quot;</span><span class="p">)</span>
+<span class="linenos"> 18</span><span class="n">opt</span><span class="p">,</span> <span class="n">remainder</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+<span class="linenos"> 19</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; JSON filename = &quot;</span><span class="p">,</span> <span class="n">opt</span><span class="o">.</span><span class="n">jsonfilename</span><span class="p">)</span>
+<span class="linenos"> 20</span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">opt</span><span class="o">.</span><span class="n">jsonfilename</span><span class="p">)</span> <span class="k">as</span> <span class="n">json_file</span><span class="p">:</span>
+<span class="linenos"> 21</span>    <span class="k">try</span><span class="p">:</span>
+<span class="linenos"> 22</span>        <span class="nb">input</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">json_file</span><span class="p">)</span>
+<span class="linenos"> 23</span>    <span class="k">except</span> <span class="n">json</span><span class="o">.</span><span class="n">JSONDecodeError</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span>
+<span class="linenos"> 24</span>        <span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="linenos"> 25</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Failed to load json file &quot;</span><span class="p">,</span> <span class="n">opt</span><span class="o">.</span><span class="n">jsonfilename</span><span class="p">)</span>
+<span class="linenos"> 26</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Check its content :&quot;</span><span class="p">)</span>
+<span class="linenos"> 27</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;https://fr.wikipedia.org/wiki/JavaScript_Object_Notation)&quot;</span><span class="p">)</span>
+<span class="linenos"> 28</span>        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+<span class="linenos"> 29</span>
+<span class="linenos"> 30</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 31</span><span class="sd">    Get parameters from json file :</span>
+<span class="linenos"> 32</span><span class="sd">    For the domain :</span>
+<span class="linenos"> 33</span><span class="sd">    |    name: string</span>
+<span class="linenos"> 34</span><span class="sd">    |        Domain name</span>
+<span class="linenos"> 35</span><span class="sd">    |    background: string</span>
+<span class="linenos"> 36</span><span class="sd">    |        Image file used as background</span>
+<span class="linenos"> 37</span><span class="sd">    |    px: float</span>
+<span class="linenos"> 38</span><span class="sd">    |        Pixel size in meters (also called space step)</span>
+<span class="linenos"> 39</span><span class="sd">    |    width: integer</span>
+<span class="linenos"> 40</span><span class="sd">    |        Domain width (equal to the width of the background image)</span>
+<span class="linenos"> 41</span><span class="sd">    |    height: integer</span>
+<span class="linenos"> 42</span><span class="sd">    |        Domain height (equal to the height of the background image)</span>
+<span class="linenos"> 43</span><span class="sd">    |    wall_colors: list</span>
+<span class="linenos"> 44</span><span class="sd">    |        rgb colors for walls</span>
+<span class="linenos"> 45</span><span class="sd">    |        [ [r,g,b],[r,g,b],... ]</span>
+<span class="linenos"> 46</span><span class="sd">    |    shape_lines: list</span>
+<span class="linenos"> 47</span><span class="sd">    |        Used to define the Matplotlib Polyline shapes,</span>
+<span class="linenos"> 48</span><span class="sd">    |        [</span>
+<span class="linenos"> 49</span><span class="sd">    |          {</span>
+<span class="linenos"> 50</span><span class="sd">    |             &quot;xx&quot;: [x0,x1,x2,...],</span>
+<span class="linenos"> 51</span><span class="sd">    |             &quot;yy&quot;: [y0,y1,y2,...],</span>
+<span class="linenos"> 52</span><span class="sd">    |             &quot;linewidth&quot;: float,</span>
+<span class="linenos"> 53</span><span class="sd">    |             &quot;outline_color&quot;: [r,g,b],</span>
+<span class="linenos"> 54</span><span class="sd">    |             &quot;fill_color&quot;: [r,g,b]</span>
+<span class="linenos"> 55</span><span class="sd">    |          },...</span>
+<span class="linenos"> 56</span><span class="sd">    |        ]</span>
+<span class="linenos"> 57</span><span class="sd">    |    shape_circles: list</span>
+<span class="linenos"> 58</span><span class="sd">    |        Used to define the Matplotlib Circle shapes,</span>
+<span class="linenos"> 59</span><span class="sd">    |        [</span>
+<span class="linenos"> 60</span><span class="sd">    |           {</span>
+<span class="linenos"> 61</span><span class="sd">    |             &quot;center_x&quot;: float,</span>
+<span class="linenos"> 62</span><span class="sd">    |             &quot;center_y&quot;: float,</span>
+<span class="linenos"> 63</span><span class="sd">    |             &quot;radius&quot;: float,</span>
+<span class="linenos"> 64</span><span class="sd">    |             &quot;outline_color&quot;: [r,g,b],</span>
+<span class="linenos"> 65</span><span class="sd">    |             &quot;fill_color&quot;: [r,g,b]</span>
+<span class="linenos"> 66</span><span class="sd">    |            },...</span>
+<span class="linenos"> 67</span><span class="sd">    |        ]</span>
+<span class="linenos"> 68</span><span class="sd">    |    shape_ellipses: list</span>
+<span class="linenos"> 69</span><span class="sd">    |        Used to define the Matplotlib Ellipse shapes,</span>
+<span class="linenos"> 70</span><span class="sd">    |        [</span>
+<span class="linenos"> 71</span><span class="sd">    |           {</span>
+<span class="linenos"> 72</span><span class="sd">    |             &quot;center_x&quot;: float,</span>
+<span class="linenos"> 73</span><span class="sd">    |             &quot;center_y&quot;: float,</span>
+<span class="linenos"> 74</span><span class="sd">    |             &quot;width&quot;: float,</span>
+<span class="linenos"> 75</span><span class="sd">    |             &quot;height&quot;: float,</span>
+<span class="linenos"> 76</span><span class="sd">    |             &quot;angle_in_degrees_anti-clockwise&quot;: float (degre),</span>
+<span class="linenos"> 77</span><span class="sd">    |             &quot;outline_color&quot;: [r,g,b],</span>
+<span class="linenos"> 78</span><span class="sd">    |             &quot;fill_color&quot;: [r,g,b]</span>
+<span class="linenos"> 79</span><span class="sd">    |            },...</span>
+<span class="linenos"> 80</span><span class="sd">    |        ]</span>
+<span class="linenos"> 81</span><span class="sd">    |    shape_rectangles: list</span>
+<span class="linenos"> 82</span><span class="sd">    |        Used to define the Matplotlib Rectangle shapes,</span>
+<span class="linenos"> 83</span><span class="sd">    |        [</span>
+<span class="linenos"> 84</span><span class="sd">    |           {</span>
+<span class="linenos"> 85</span><span class="sd">    |             &quot;bottom_left_x&quot;: float,</span>
+<span class="linenos"> 86</span><span class="sd">    |             &quot;bottom_left_y&quot;: float,</span>
+<span class="linenos"> 87</span><span class="sd">    |             &quot;width&quot;: float,</span>
+<span class="linenos"> 88</span><span class="sd">    |             &quot;height&quot;: float,</span>
+<span class="linenos"> 89</span><span class="sd">    |             &quot;angle_in_degrees_anti-clockwise&quot;: float (degre),</span>
+<span class="linenos"> 90</span><span class="sd">    |             &quot;outline_color&quot;: [r,g,b],</span>
+<span class="linenos"> 91</span><span class="sd">    |             &quot;fill_color&quot;: [r,g,b]</span>
+<span class="linenos"> 92</span><span class="sd">    |            },...</span>
+<span class="linenos"> 93</span><span class="sd">    |        ]</span>
+<span class="linenos"> 94</span><span class="sd">    |    shape_polygons: list</span>
+<span class="linenos"> 95</span><span class="sd">    |        Used to define the Matplotlib Polygon shapes,</span>
+<span class="linenos"> 96</span><span class="sd">    |        [</span>
+<span class="linenos"> 97</span><span class="sd">    |           {</span>
+<span class="linenos"> 98</span><span class="sd">    |             &quot;xy&quot;: float,</span>
+<span class="linenos"> 99</span><span class="sd">    |             &quot;outline_color&quot;: [r,g,b],</span>
+<span class="linenos">100</span><span class="sd">    |             &quot;fill_color&quot;: [r,g,b]</span>
+<span class="linenos">101</span><span class="sd">    |            },...</span>
+<span class="linenos">102</span><span class="sd">    |        ]</span>
+<span class="linenos">103</span><span class="sd">    |    destinations: list</span>
+<span class="linenos">104</span><span class="sd">    |        Used to define the Destination objects,</span>
+<span class="linenos">105</span><span class="sd">    |        [</span>
+<span class="linenos">106</span><span class="sd">    |           {</span>
+<span class="linenos">107</span><span class="sd">    |             &quot;name&quot;: string,</span>
+<span class="linenos">108</span><span class="sd">    |             &quot;colors&quot;: [[r,g,b],...],</span>
+<span class="linenos">109</span><span class="sd">    |             &quot;excluded_colors&quot;: [[r,g,b],...],</span>
+<span class="linenos">110</span><span class="sd">    |             &quot;desired_velocity_from_color&quot;: [] or</span>
+<span class="linenos">111</span><span class="sd">    |             [</span>
+<span class="linenos">112</span><span class="sd">    |                {</span>
+<span class="linenos">113</span><span class="sd">    |                   &quot;color&quot;: [r,g,b],</span>
+<span class="linenos">114</span><span class="sd">    |                   &quot;desired_velocity&quot;: [ex,ey]</span>
+<span class="linenos">115</span><span class="sd">    |                },...</span>
+<span class="linenos">116</span><span class="sd">    |             ],</span>
+<span class="linenos">117</span><span class="sd">    |             &quot;velocity_scale&quot;: float,</span>
+<span class="linenos">118</span><span class="sd">    |             &quot;next_destination&quot;: null or string,</span>
+<span class="linenos">119</span><span class="sd">    |             &quot;next_domain&quot;: null or string,</span>
+<span class="linenos">120</span><span class="sd">    |             &quot;next_transit_box&quot;: null or [[x0,y0],...,[x3,y3]]</span>
+<span class="linenos">121</span><span class="sd">    |            },...</span>
+<span class="linenos">122</span><span class="sd">    |        ]</span>
+<span class="linenos">123</span><span class="sd">    |--------------------</span>
+<span class="linenos">124</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">125</span>
+<span class="linenos">126</span><span class="n">jdom</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;domain&quot;</span><span class="p">]</span>
+<span class="linenos">127</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; JSON data used to build the domain : &quot;</span><span class="p">,</span> <span class="n">jdom</span><span class="p">)</span>
+<span class="linenos">128</span>
+<span class="linenos">129</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">130</span><span class="sd">    Build the Domain object</span>
+<span class="linenos">131</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">132</span>
+<span class="linenos">133</span><span class="n">jname</span> <span class="o">=</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+<span class="linenos">134</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Build domain &quot;</span><span class="p">,</span> <span class="n">jname</span><span class="p">)</span>
+<span class="linenos">135</span><span class="n">jbg</span> <span class="o">=</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;background&quot;</span><span class="p">]</span>
+<span class="linenos">136</span><span class="n">jpx</span> <span class="o">=</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;px&quot;</span><span class="p">]</span>
+<span class="linenos">137</span><span class="n">jwidth</span> <span class="o">=</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;width&quot;</span><span class="p">]</span>
+<span class="linenos">138</span><span class="n">jheight</span> <span class="o">=</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;height&quot;</span><span class="p">]</span>
+<span class="linenos">139</span><span class="n">jwall_colors</span> <span class="o">=</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;wall_colors&quot;</span><span class="p">]</span>
+<span class="linenos">140</span><span class="k">if</span> <span class="p">(</span><span class="n">jbg</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">):</span>
+<span class="linenos">141</span>    <span class="n">dom</span> <span class="o">=</span> <span class="n">Domain</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">jname</span><span class="p">,</span> <span class="n">pixel_size</span><span class="o">=</span><span class="n">jpx</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">jwidth</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">jheight</span><span class="p">,</span>
+<span class="linenos">142</span>                 <span class="n">wall_colors</span><span class="o">=</span><span class="n">jwall_colors</span><span class="p">)</span>
+<span class="linenos">143</span><span class="k">else</span><span class="p">:</span>
+<span class="linenos">144</span>    <span class="n">dom</span> <span class="o">=</span> <span class="n">Domain</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">jname</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="n">jbg</span><span class="p">,</span> <span class="n">pixel_size</span><span class="o">=</span><span class="n">jpx</span><span class="p">,</span>
+<span class="linenos">145</span>                 <span class="n">wall_colors</span><span class="o">=</span><span class="n">jwall_colors</span><span class="p">)</span>
+<span class="linenos">146</span><span class="c1"># To add lines : Line2D(xdata, ydata, linewidth)</span>
+<span class="linenos">147</span><span class="k">for</span> <span class="n">sl</span> <span class="ow">in</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;shape_lines&quot;</span><span class="p">]:</span>
+<span class="linenos">148</span>    <span class="n">line</span> <span class="o">=</span> <span class="n">Line2D</span><span class="p">(</span><span class="n">sl</span><span class="p">[</span><span class="s2">&quot;xx&quot;</span><span class="p">],</span> <span class="n">sl</span><span class="p">[</span><span class="s2">&quot;yy&quot;</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="n">sl</span><span class="p">[</span><span class="s2">&quot;linewidth&quot;</span><span class="p">])</span>
+<span class="linenos">149</span>    <span class="n">dom</span><span class="o">.</span><span class="n">add_shape</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">outline_color</span><span class="o">=</span><span class="n">sl</span><span class="p">[</span><span class="s2">&quot;outline_color&quot;</span><span class="p">],</span>
+<span class="linenos">150</span>                  <span class="n">fill_color</span><span class="o">=</span><span class="n">sl</span><span class="p">[</span><span class="s2">&quot;fill_color&quot;</span><span class="p">])</span>
+<span class="linenos">151</span><span class="c1"># To add circles : Circle( (center_x,center_y), radius )</span>
+<span class="linenos">152</span><span class="k">for</span> <span class="n">sc</span> <span class="ow">in</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;shape_circles&quot;</span><span class="p">]:</span>
+<span class="linenos">153</span>    <span class="n">circle</span> <span class="o">=</span> <span class="n">Circle</span><span class="p">((</span><span class="n">sc</span><span class="p">[</span><span class="s2">&quot;center_x&quot;</span><span class="p">],</span> <span class="n">sc</span><span class="p">[</span><span class="s2">&quot;center_y&quot;</span><span class="p">]),</span> <span class="n">sc</span><span class="p">[</span><span class="s2">&quot;radius&quot;</span><span class="p">])</span>
+<span class="linenos">154</span>    <span class="n">dom</span><span class="o">.</span><span class="n">add_shape</span><span class="p">(</span><span class="n">circle</span><span class="p">,</span> <span class="n">outline_color</span><span class="o">=</span><span class="n">sc</span><span class="p">[</span><span class="s2">&quot;outline_color&quot;</span><span class="p">],</span>
+<span class="linenos">155</span>                  <span class="n">fill_color</span><span class="o">=</span><span class="n">sc</span><span class="p">[</span><span class="s2">&quot;fill_color&quot;</span><span class="p">])</span>
+<span class="linenos">156</span><span class="c1"># To add ellipses : Ellipse( (center_x,center_y), width, height,</span>
+<span class="linenos">157</span><span class="c1">#                            angle_in_degrees_anti-clockwise )</span>
+<span class="linenos">158</span><span class="k">for</span> <span class="n">se</span> <span class="ow">in</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;shape_ellipses&quot;</span><span class="p">]:</span>
+<span class="linenos">159</span>    <span class="n">ellipse</span> <span class="o">=</span> <span class="n">Ellipse</span><span class="p">((</span><span class="n">se</span><span class="p">[</span><span class="s2">&quot;center_x&quot;</span><span class="p">],</span> <span class="n">se</span><span class="p">[</span><span class="s2">&quot;center_y&quot;</span><span class="p">]),</span>
+<span class="linenos">160</span>                      <span class="n">se</span><span class="p">[</span><span class="s2">&quot;width&quot;</span><span class="p">],</span> <span class="n">se</span><span class="p">[</span><span class="s2">&quot;height&quot;</span><span class="p">],</span>
+<span class="linenos">161</span>                      <span class="n">se</span><span class="p">[</span><span class="s2">&quot;angle_in_degrees_anti-clockwise&quot;</span><span class="p">])</span>
+<span class="linenos">162</span>    <span class="n">dom</span><span class="o">.</span><span class="n">add_shape</span><span class="p">(</span><span class="n">ellipse</span><span class="p">,</span> <span class="n">outline_color</span><span class="o">=</span><span class="n">se</span><span class="p">[</span><span class="s2">&quot;outline_color&quot;</span><span class="p">],</span>
+<span class="linenos">163</span>                  <span class="n">fill_color</span><span class="o">=</span><span class="n">se</span><span class="p">[</span><span class="s2">&quot;fill_color&quot;</span><span class="p">])</span>
+<span class="linenos">164</span><span class="c1"># To add rectangles : Rectangle( (bottom_left_x,bottom_left_y), width,</span>
+<span class="linenos">165</span><span class="c1">#                                 height, angle_in_degrees_anti-clockwise )</span>
+<span class="linenos">166</span><span class="k">for</span> <span class="n">sr</span> <span class="ow">in</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;shape_rectangles&quot;</span><span class="p">]:</span>
+<span class="linenos">167</span>    <span class="n">rectangle</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">((</span><span class="n">sr</span><span class="p">[</span><span class="s2">&quot;bottom_left_x&quot;</span><span class="p">],</span> <span class="n">sr</span><span class="p">[</span><span class="s2">&quot;bottom_left_y&quot;</span><span class="p">]),</span>
+<span class="linenos">168</span>                          <span class="n">sr</span><span class="p">[</span><span class="s2">&quot;width&quot;</span><span class="p">],</span> <span class="n">sr</span><span class="p">[</span><span class="s2">&quot;height&quot;</span><span class="p">],</span>
+<span class="linenos">169</span>                          <span class="n">sr</span><span class="p">[</span><span class="s2">&quot;angle_in_degrees_anti-clockwise&quot;</span><span class="p">])</span>
+<span class="linenos">170</span>    <span class="n">dom</span><span class="o">.</span><span class="n">add_shape</span><span class="p">(</span><span class="n">rectangle</span><span class="p">,</span> <span class="n">outline_color</span><span class="o">=</span><span class="n">sr</span><span class="p">[</span><span class="s2">&quot;outline_color&quot;</span><span class="p">],</span>
+<span class="linenos">171</span>                  <span class="n">fill_color</span><span class="o">=</span><span class="n">sr</span><span class="p">[</span><span class="s2">&quot;fill_color&quot;</span><span class="p">])</span>
+<span class="linenos">172</span><span class="c1"># To add polygons : Polygon( [[x0,y0],[x1,y1],...] )</span>
+<span class="linenos">173</span><span class="k">for</span> <span class="n">spo</span> <span class="ow">in</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;shape_polygons&quot;</span><span class="p">]:</span>
+<span class="linenos">174</span>    <span class="n">polygon</span> <span class="o">=</span> <span class="n">Polygon</span><span class="p">(</span><span class="n">spo</span><span class="p">[</span><span class="s2">&quot;xy&quot;</span><span class="p">])</span>
+<span class="linenos">175</span>    <span class="n">dom</span><span class="o">.</span><span class="n">add_shape</span><span class="p">(</span><span class="n">polygon</span><span class="p">,</span> <span class="n">outline_color</span><span class="o">=</span><span class="n">spo</span><span class="p">[</span><span class="s2">&quot;outline_color&quot;</span><span class="p">],</span>
+<span class="linenos">176</span>                  <span class="n">fill_color</span><span class="o">=</span><span class="n">spo</span><span class="p">[</span><span class="s2">&quot;fill_color&quot;</span><span class="p">])</span>
+<span class="linenos">177</span>
+<span class="linenos">178</span><span class="c1"># To build the domain : background + shapes</span>
+<span class="linenos">179</span><span class="n">dom</span><span class="o">.</span><span class="n">build_domain</span><span class="p">()</span>
+<span class="linenos">180</span>
+<span class="linenos">181</span><span class="c1"># To add all the available destinations</span>
+<span class="linenos">182</span><span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">dd</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;destinations&quot;</span><span class="p">]):</span>
+<span class="linenos">183</span>    <span class="n">desired_velocity_from_color</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos">184</span>    <span class="k">for</span> <span class="n">gg</span> <span class="ow">in</span> <span class="n">dd</span><span class="p">[</span><span class="s2">&quot;desired_velocity_from_color&quot;</span><span class="p">]:</span>
+<span class="linenos">185</span>        <span class="n">desired_velocity_from_color</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+<span class="linenos">186</span>            <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">gg</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">],</span> <span class="n">gg</span><span class="p">[</span><span class="s2">&quot;desired_velocity&quot;</span><span class="p">])))</span>
+<span class="linenos">187</span>    <span class="n">dest</span> <span class="o">=</span> <span class="n">Destination</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span> <span class="n">colors</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;colors&quot;</span><span class="p">],</span>
+<span class="linenos">188</span>                       <span class="n">excluded_colors</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;excluded_colors&quot;</span><span class="p">],</span>
+<span class="linenos">189</span>                       <span class="n">desired_velocity_from_color</span><span class="o">=</span><span class="n">desired_velocity_from_color</span><span class="p">,</span>
+<span class="linenos">190</span>                       <span class="n">velocity_scale</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;velocity_scale&quot;</span><span class="p">],</span>
+<span class="linenos">191</span>                       <span class="n">next_destination</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;next_destination&quot;</span><span class="p">],</span>
+<span class="linenos">192</span>                       <span class="n">next_domain</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;next_domain&quot;</span><span class="p">],</span>
+<span class="linenos">193</span>                       <span class="n">next_transit_box</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;next_transit_box&quot;</span><span class="p">])</span>
+<span class="linenos">194</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Destination : &quot;</span><span class="p">,</span> <span class="n">dest</span><span class="p">)</span>
+<span class="linenos">195</span>    <span class="n">dom</span><span class="o">.</span><span class="n">add_destination</span><span class="p">(</span><span class="n">dest</span><span class="p">)</span>
+<span class="linenos">196</span>
+<span class="linenos">197</span>    <span class="c1"># To plot all the desired velocity field</span>
+<span class="linenos">198</span>    <span class="n">dom</span><span class="o">.</span><span class="n">plot_desired_velocity</span><span class="p">(</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span> <span class="nb">id</span><span class="o">=</span><span class="mi">10</span><span class="o">+</span><span class="n">j</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="linenos">199</span>
+<span class="linenos">200</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Domain: &quot;</span><span class="p">,</span> <span class="n">dom</span><span class="p">)</span>
+<span class="linenos">201</span>
+<span class="linenos">202</span><span class="c1"># To plot the domain</span>
+<span class="linenos">203</span><span class="n">dom</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="linenos">204</span>
+<span class="linenos">205</span><span class="c1"># To plot the wall distance and its gradient</span>
+<span class="linenos">206</span><span class="n">dom</span><span class="o">.</span><span class="n">plot_wall_dist</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="linenos">207</span>
+<span class="linenos">208</span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2018, Sylvain Faure, Bertrand Maury.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Make a microscopic simulation &#8212; cromosim  documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/scrolls.css?v=4cde0d18" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Discover the compartment model" href="example_comp.html" />
+    <link rel="prev" title="Try a cellular automata" href="example_ca.html" /> 
+  </head><body>
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="index.html"
+          title="back to the documentation overview"><span>Make a microscopic simulation</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="Related">
+        <a href="example_ca.html">&laquo; Try a cellular automata</a> |
+        <a href="#">Make a microscopic simulation</a>
+        | <a href="example_comp.html">Discover the compartment model &raquo;</a>
+      </div>
+      <div id="contentwrapper">
+        <div id="toc" role="navigation" aria-label="Table of contents">
+          <h3>Table of Contents</h3>
+          <ul>
+<li><a class="reference internal" href="#">Make a microscopic simulation</a><ul>
+<li><a class="reference internal" href="#social-force-model">Social force model</a></li>
+<li><a class="reference internal" href="#granular-model">Granular model</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <div role="main">
+        
+  <section id="make-a-microscopic-simulation">
+<h1>Make a microscopic simulation<a class="headerlink" href="#make-a-microscopic-simulation" title="Link to this heading">¶</a></h1>
+<p>In the two following models, individuals are seen as spherical particles. They
+move at a desired velocity to reach a goal (typically a door). Doing nothing more
+would lead to many overlaps between individuals. Hence the two families of
+models below can prevent these overlaps through two different approaches. For
+the <cite>Social Force models</cite>, and, for some forces are added to act against overlaps, and for
+the <cite>Granular model</cite> the velocities are projected into a permissible velocity
+space which ensures the absence of overlaps.</p>
+<section id="social-force-model">
+<h2>Social force model<a class="headerlink" href="#social-force-model" title="Link to this heading">¶</a></h2>
+<p>The <cite>Social Force model</cite> has been introduced in the 90’s. Pedestrians are identified
+with inertial particles submitted to a forcing term which implements the
+individual tendencies and extra forces which account for interactions with
+other pedestrians (typically the tendency to preserve a certain distance
+with neighbors).</p>
+<p>Reference : <a class="reference internal" href="index.html#mf2018" id="id1"><span>[MF2018]</span></a> Chapter 3.</p>
+<p>Some examples can be found in the directory</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cromosim</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">micro</span><span class="o">/</span><span class="n">social</span>
+</pre></div>
+</div>
+<p>and can be launched with</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">micro_social</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">json</span> <span class="n">input_room</span><span class="o">.</span><span class="n">json</span>
+<span class="n">python</span> <span class="n">micro_social</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">json</span> <span class="n">input_event</span><span class="o">.</span><span class="n">json</span>
+<span class="n">python</span> <span class="n">micro_social</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">json</span> <span class="n">input_stadium</span><span class="o">.</span><span class="n">json</span>
+<span class="n">python</span> <span class="n">micro_social</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">json</span> <span class="n">input_shibuya_crossing</span><span class="o">.</span><span class="n">json</span>
+<span class="n">python</span> <span class="n">micro_social</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">json</span> <span class="n">input_stairs</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<table style="width:100%">
+  <tr>
+    <th>
+      <center>
+        <em><small>Evacuation of a room, visualization of trajectories</small></em>
+      </center>
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <center>
+        <video style="display:block; margin: 0 auto;" controls poster="_static/micro_social_room_paths.png" width="40%" height="auto">
+          <source src="_static/micro_social_room_paths.mp4" />
+        </video>
+      </center>
+    </td>
+  </tr>
+</table>
+<br>
+<table style="width:100%">
+  <tr>
+    <th>
+      <center>
+        <em><small>Circular track around a stadium</small></em>
+      </center>
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <center>
+        <video style="display:block; margin: 0 auto;" controls poster="_static/micro_social_stadium.png" width="40%" height="auto">
+          <source src="_static/micro_social_stadium.mp4" />
+        </video>
+      </center>
+    </td>
+  </tr>
+</table>
+<br>
+<table style="width:100%">
+  <tr>
+    <th>
+      <center>
+        <em><small>Evacuation of an exhibition hall: two groups of people with the same destination</small></em>
+      </center>
+    </th>
+    <th>
+      <center>
+        <em><small>Evacuation of an exhibition hall: sensors (green lines) results</small></em>
+      </center>
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <center>
+        <video style="display:block; margin: 0 auto;" controls poster="_static/micro_social_event.png" width="40%" height="auto">
+          <source src="_static/micro_social_event.mp4" />
+        </video>
+      </center>
+    </td>
+    <td>
+      <center>
+        <img src="_static/micro_social_event_sensor.png" alt="Evacuation of an exhibition hall : Sensors (green lines) results" style="margin:0px auto;display:block" width="100%" height="auto"/>
+      </center>
+    </td>
+  </tr>
+</table>
+<br>
+<table style="width:100%">
+  <tr>
+    <th>
+      <center>
+        <em><small>Shibuya crossing (Japan) : five groups of people and five different destinations</small></em>
+      </center>
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <center>
+        <video style="display:block; margin: 0 auto;" controls poster="_static/micro_social_shibuya_crossing.png" width="40%" height="auto">
+          <source src="_static/micro_social_shibuya_crossing.mp4" />
+        </video>
+      </center>
+    </td>
+  </tr>
+</table>
+<br>
+<table style="width:100%">
+  <tr>
+    <th>
+      <center>
+        <em><small>Two floors of a building: a group of people goes up and another goes down
+        <br>Floor 1 on the left and 0 on the right</small></em>
+      </center>
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <center>
+        <video style="display:block; margin: 0 auto;" controls poster="_static/micro_social_stairs_0_1.png" width="100%" height="auto">
+          <source src="_static/micro_social_stairs_0_1.mp4" />
+        </video>
+      </center>
+    </td>
+  </tr>
+</table><div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">micro_social.py</span><a class="headerlink" href="#id3" title="Link to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="c1"># Authors:</span>
+<span class="linenos">  2</span><span class="c1">#     Sylvain Faure &lt;sylvain.faure@universite-paris-saclay.fr&gt;</span>
+<span class="linenos">  3</span><span class="c1">#     Bertrand Maury &lt;bertrand.maury@universite-paris-saclay.fr&gt;</span>
+<span class="linenos">  4</span><span class="c1">#</span>
+<span class="linenos">  5</span><span class="c1">#      cromosim/examples/micro/social/micro_social.py</span>
+<span class="linenos">  6</span><span class="c1">#      python micro_social.py --json input.json</span>
+<span class="linenos">  7</span><span class="c1">#</span>
+<span class="linenos">  8</span><span class="c1"># License: GPL</span>
+<span class="linenos">  9</span>
+<span class="linenos"> 10</span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="linenos"> 11</span><span class="kn">import</span> <span class="nn">os</span>
+<span class="linenos"> 12</span><span class="kn">import</span> <span class="nn">json</span>
+<span class="linenos"> 13</span><span class="kn">from</span> <span class="nn">optparse</span> <span class="kn">import</span> <span class="n">OptionParser</span>
+<span class="linenos"> 14</span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="linenos"> 15</span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="linenos"> 16</span><span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Circle</span><span class="p">,</span> <span class="n">Ellipse</span><span class="p">,</span> <span class="n">Rectangle</span><span class="p">,</span> <span class="n">Polygon</span>
+<span class="linenos"> 17</span><span class="kn">from</span> <span class="nn">matplotlib.lines</span> <span class="kn">import</span> <span class="n">Line2D</span>
+<span class="linenos"> 18</span>
+<span class="linenos"> 19</span><span class="kn">from</span> <span class="nn">cromosim.domain</span> <span class="kn">import</span> <span class="n">Domain</span>
+<span class="linenos"> 20</span><span class="kn">from</span> <span class="nn">cromosim.domain</span> <span class="kn">import</span> <span class="n">Destination</span>
+<span class="linenos"> 21</span><span class="kn">from</span> <span class="nn">cromosim.micro</span> <span class="kn">import</span> <span class="n">people_initialization</span><span class="p">,</span> <span class="n">plot_people</span><span class="p">,</span> <span class="n">plot_sensors</span>
+<span class="linenos"> 22</span><span class="kn">from</span> <span class="nn">cromosim.micro</span> <span class="kn">import</span> <span class="n">find_duplicate_people</span><span class="p">,</span> <span class="n">compute_contacts</span>
+<span class="linenos"> 23</span><span class="kn">from</span> <span class="nn">cromosim.micro</span> <span class="kn">import</span> <span class="n">compute_forces</span><span class="p">,</span> <span class="n">move_people</span><span class="p">,</span> <span class="n">people_update_destination</span>
+<span class="linenos"> 24</span>
+<span class="linenos"> 25</span><span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
+<span class="linenos"> 26</span>
+<span class="linenos"> 27</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 28</span><span class="sd">    python micro_social.py --json input.json</span>
+<span class="linenos"> 29</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 30</span><span class="n">parser</span> <span class="o">=</span> <span class="n">OptionParser</span><span class="p">(</span><span class="n">usage</span><span class="o">=</span><span class="s2">&quot;usage: %prog [options] filename&quot;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s2">&quot;%prog 1.0&quot;</span><span class="p">)</span>
+<span class="linenos"> 31</span><span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span><span class="s1">&#39;--json&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s2">&quot;jsonfilename&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;input.json&quot;</span><span class="p">,</span>
+<span class="linenos"> 32</span>                  <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="linenos"> 33</span>                  <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Input json filename&quot;</span><span class="p">)</span>
+<span class="linenos"> 34</span><span class="n">opt</span><span class="p">,</span> <span class="n">remainder</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+<span class="linenos"> 35</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; JSON filename = &quot;</span><span class="p">,</span> <span class="n">opt</span><span class="o">.</span><span class="n">jsonfilename</span><span class="p">)</span>
+<span class="linenos"> 36</span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">opt</span><span class="o">.</span><span class="n">jsonfilename</span><span class="p">)</span> <span class="k">as</span> <span class="n">json_file</span><span class="p">:</span>
+<span class="linenos"> 37</span>    <span class="k">try</span><span class="p">:</span>
+<span class="linenos"> 38</span>        <span class="nb">input</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">json_file</span><span class="p">)</span>
+<span class="linenos"> 39</span>    <span class="k">except</span> <span class="n">json</span><span class="o">.</span><span class="n">JSONDecodeError</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span>
+<span class="linenos"> 40</span>        <span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="linenos"> 41</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Failed to load json file &quot;</span><span class="p">,</span> <span class="n">opt</span><span class="o">.</span><span class="n">jsonfilename</span><span class="p">)</span>
+<span class="linenos"> 42</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Check its content </span><span class="se">\</span>
+<span class="linenos"> 43</span><span class="s2">            (https://fr.wikipedia.org/wiki/JavaScript_Object_Notation)&quot;</span><span class="p">)</span>
+<span class="linenos"> 44</span>        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+<span class="linenos"> 45</span>
+<span class="linenos"> 46</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 47</span><span class="sd">    Get parameters from json file :</span>
+<span class="linenos"> 48</span><span class="sd">    prefix: string</span>
+<span class="linenos"> 49</span><span class="sd">        Folder name to store the results</span>
+<span class="linenos"> 50</span><span class="sd">    with_graphes: bool</span>
+<span class="linenos"> 51</span><span class="sd">        true if all the graphes are shown and saved in png files,</span>
+<span class="linenos"> 52</span><span class="sd">        false otherwise</span>
+<span class="linenos"> 53</span><span class="sd">    seed: integer</span>
+<span class="linenos"> 54</span><span class="sd">        Random seed which can be used to reproduce a random selection</span>
+<span class="linenos"> 55</span><span class="sd">        if &gt;0</span>
+<span class="linenos"> 56</span><span class="sd">    For each domain :</span>
+<span class="linenos"> 57</span><span class="sd">    |    name: string</span>
+<span class="linenos"> 58</span><span class="sd">    |        Domain name</span>
+<span class="linenos"> 59</span><span class="sd">    |    background: string</span>
+<span class="linenos"> 60</span><span class="sd">    |        Image file used as background</span>
+<span class="linenos"> 61</span><span class="sd">    |    px: float</span>
+<span class="linenos"> 62</span><span class="sd">    |        Pixel size in meters (also called space step)</span>
+<span class="linenos"> 63</span><span class="sd">    |    width: integer</span>
+<span class="linenos"> 64</span><span class="sd">    |        Domain width (equal to the width of the background image)</span>
+<span class="linenos"> 65</span><span class="sd">    |    height: integer</span>
+<span class="linenos"> 66</span><span class="sd">    |        Domain height (equal to the height of the background image)</span>
+<span class="linenos"> 67</span><span class="sd">    |    wall_colors: list</span>
+<span class="linenos"> 68</span><span class="sd">    |        rgb colors for walls</span>
+<span class="linenos"> 69</span><span class="sd">    |        [ [r,g,b],[r,g,b],... ]</span>
+<span class="linenos"> 70</span><span class="sd">    |    shape_lines: list</span>
+<span class="linenos"> 71</span><span class="sd">    |        Used to define the Matplotlib Polyline shapes,</span>
+<span class="linenos"> 72</span><span class="sd">    |        [</span>
+<span class="linenos"> 73</span><span class="sd">    |          {</span>
+<span class="linenos"> 74</span><span class="sd">    |             &quot;xx&quot;: [x0,x1,x2,...],</span>
+<span class="linenos"> 75</span><span class="sd">    |             &quot;yy&quot;: [y0,y1,y2,...],</span>
+<span class="linenos"> 76</span><span class="sd">    |             &quot;linewidth&quot;: float,</span>
+<span class="linenos"> 77</span><span class="sd">    |             &quot;outline_color&quot;: [r,g,b],</span>
+<span class="linenos"> 78</span><span class="sd">    |             &quot;fill_color&quot;: [r,g,b]</span>
+<span class="linenos"> 79</span><span class="sd">    |          },...</span>
+<span class="linenos"> 80</span><span class="sd">    |        ]</span>
+<span class="linenos"> 81</span><span class="sd">    |    shape_circles: list</span>
+<span class="linenos"> 82</span><span class="sd">    |        Used to define the Matplotlib Circle shapes,</span>
+<span class="linenos"> 83</span><span class="sd">    |        [</span>
+<span class="linenos"> 84</span><span class="sd">    |           {</span>
+<span class="linenos"> 85</span><span class="sd">    |             &quot;center_x&quot;: float,</span>
+<span class="linenos"> 86</span><span class="sd">    |             &quot;center_y&quot;: float,</span>
+<span class="linenos"> 87</span><span class="sd">    |             &quot;radius&quot;: float,</span>
+<span class="linenos"> 88</span><span class="sd">    |             &quot;outline_color&quot;: [r,g,b],</span>
+<span class="linenos"> 89</span><span class="sd">    |             &quot;fill_color&quot;: [r,g,b]</span>
+<span class="linenos"> 90</span><span class="sd">    |            },...</span>
+<span class="linenos"> 91</span><span class="sd">    |        ]</span>
+<span class="linenos"> 92</span><span class="sd">    |    shape_ellipses: list</span>
+<span class="linenos"> 93</span><span class="sd">    |        Used to define the Matplotlib Ellipse shapes,</span>
+<span class="linenos"> 94</span><span class="sd">    |        [</span>
+<span class="linenos"> 95</span><span class="sd">    |           {</span>
+<span class="linenos"> 96</span><span class="sd">    |             &quot;center_x&quot;: float,</span>
+<span class="linenos"> 97</span><span class="sd">    |             &quot;center_y&quot;: float,</span>
+<span class="linenos"> 98</span><span class="sd">    |             &quot;width&quot;: float,</span>
+<span class="linenos"> 99</span><span class="sd">    |             &quot;height&quot;: float,</span>
+<span class="linenos">100</span><span class="sd">    |             &quot;angle_in_degrees_anti-clockwise&quot;: float (degre),</span>
+<span class="linenos">101</span><span class="sd">    |             &quot;outline_color&quot;: [r,g,b],</span>
+<span class="linenos">102</span><span class="sd">    |             &quot;fill_color&quot;: [r,g,b]</span>
+<span class="linenos">103</span><span class="sd">    |            },...</span>
+<span class="linenos">104</span><span class="sd">    |        ]</span>
+<span class="linenos">105</span><span class="sd">    |    shape_rectangles: list</span>
+<span class="linenos">106</span><span class="sd">    |        Used to define the Matplotlib Rectangle shapes,</span>
+<span class="linenos">107</span><span class="sd">    |        [</span>
+<span class="linenos">108</span><span class="sd">    |           {</span>
+<span class="linenos">109</span><span class="sd">    |             &quot;bottom_left_x&quot;: float,</span>
+<span class="linenos">110</span><span class="sd">    |             &quot;bottom_left_y&quot;: float,</span>
+<span class="linenos">111</span><span class="sd">    |             &quot;width&quot;: float,</span>
+<span class="linenos">112</span><span class="sd">    |             &quot;height&quot;: float,</span>
+<span class="linenos">113</span><span class="sd">    |             &quot;angle_in_degrees_anti-clockwise&quot;: float (degre),</span>
+<span class="linenos">114</span><span class="sd">    |             &quot;outline_color&quot;: [r,g,b],</span>
+<span class="linenos">115</span><span class="sd">    |             &quot;fill_color&quot;: [r,g,b]</span>
+<span class="linenos">116</span><span class="sd">    |            },...</span>
+<span class="linenos">117</span><span class="sd">    |        ]</span>
+<span class="linenos">118</span><span class="sd">    |    shape_polygons: list</span>
+<span class="linenos">119</span><span class="sd">    |        Used to define the Matplotlib Polygon shapes,</span>
+<span class="linenos">120</span><span class="sd">    |        [</span>
+<span class="linenos">121</span><span class="sd">    |           {</span>
+<span class="linenos">122</span><span class="sd">    |             &quot;xy&quot;: float,</span>
+<span class="linenos">123</span><span class="sd">    |             &quot;outline_color&quot;: [r,g,b],</span>
+<span class="linenos">124</span><span class="sd">    |             &quot;fill_color&quot;: [r,g,b]</span>
+<span class="linenos">125</span><span class="sd">    |            },...</span>
+<span class="linenos">126</span><span class="sd">    |        ]</span>
+<span class="linenos">127</span><span class="sd">    |    destinations: list</span>
+<span class="linenos">128</span><span class="sd">    |        Used to define the Destination objects,</span>
+<span class="linenos">129</span><span class="sd">    |        [</span>
+<span class="linenos">130</span><span class="sd">    |           {</span>
+<span class="linenos">131</span><span class="sd">    |             &quot;name&quot;: string,</span>
+<span class="linenos">132</span><span class="sd">    |             &quot;colors&quot;: [[r,g,b],...],</span>
+<span class="linenos">133</span><span class="sd">    |             &quot;excluded_colors&quot;: [[r,g,b],...],</span>
+<span class="linenos">134</span><span class="sd">    |             &quot;desired_velocity_from_color&quot;: [] or</span>
+<span class="linenos">135</span><span class="sd">    |             [</span>
+<span class="linenos">136</span><span class="sd">    |                {</span>
+<span class="linenos">137</span><span class="sd">    |                   &quot;color&quot;: [r,g,b],</span>
+<span class="linenos">138</span><span class="sd">    |                   &quot;desired_velocity&quot;: [ex,ey]</span>
+<span class="linenos">139</span><span class="sd">    |                },...</span>
+<span class="linenos">140</span><span class="sd">    |             ],</span>
+<span class="linenos">141</span><span class="sd">    |             &quot;velocity_scale&quot;: float,</span>
+<span class="linenos">142</span><span class="sd">    |             &quot;next_destination&quot;: null or string,</span>
+<span class="linenos">143</span><span class="sd">    |             &quot;next_domain&quot;: null or string,</span>
+<span class="linenos">144</span><span class="sd">    |             &quot;next_transit_box&quot;: null or [[x0,y0],...,[x3,y3]]</span>
+<span class="linenos">145</span><span class="sd">    |            },...</span>
+<span class="linenos">146</span><span class="sd">    |        ]</span>
+<span class="linenos">147</span><span class="sd">    |--------------------</span>
+<span class="linenos">148</span><span class="sd">    For each group of persons, required for the initialization process:</span>
+<span class="linenos">149</span><span class="sd">    |    nb:</span>
+<span class="linenos">150</span><span class="sd">    |        Number of people in the group</span>
+<span class="linenos">151</span><span class="sd">    |    domain:</span>
+<span class="linenos">152</span><span class="sd">    |        Name of the domain where people are located</span>
+<span class="linenos">153</span><span class="sd">    |    radius_distribution:</span>
+<span class="linenos">154</span><span class="sd">    |        Radius distribution used to create people</span>
+<span class="linenos">155</span><span class="sd">    |        [&quot;uniform&quot;,min,max] or [&quot;normal&quot;,mean,sigma]</span>
+<span class="linenos">156</span><span class="sd">    |    velocity_distribution:</span>
+<span class="linenos">157</span><span class="sd">    |        Velocity distribution used to create people</span>
+<span class="linenos">158</span><span class="sd">    |        [&quot;uniform&quot;,min,max] or [&quot;normal&quot;,mean,sigma]</span>
+<span class="linenos">159</span><span class="sd">    |    box:</span>
+<span class="linenos">160</span><span class="sd">    |        Boxe to randomly position people at initialization</span>
+<span class="linenos">161</span><span class="sd">    |        [ [x0,y0],[x1,y1],...]</span>
+<span class="linenos">162</span><span class="sd">    |    destination:</span>
+<span class="linenos">163</span><span class="sd">    |        Initial destination for the group</span>
+<span class="linenos">164</span><span class="sd">    |--------------------</span>
+<span class="linenos">165</span><span class="sd">    For each sensor:</span>
+<span class="linenos">166</span><span class="sd">    |    domain:</span>
+<span class="linenos">167</span><span class="sd">    |        Name of the domain where the sensor is located</span>
+<span class="linenos">168</span><span class="sd">    |    line:</span>
+<span class="linenos">169</span><span class="sd">    |        Segment through which incoming and outgoing flows are measured</span>
+<span class="linenos">170</span><span class="sd">    |        [x0,y0,x1,y1]</span>
+<span class="linenos">171</span><span class="sd">    |--------------------</span>
+<span class="linenos">172</span><span class="sd">    Tf: float</span>
+<span class="linenos">173</span><span class="sd">        Final time</span>
+<span class="linenos">174</span><span class="sd">    dt: float</span>
+<span class="linenos">175</span><span class="sd">        Time step</span>
+<span class="linenos">176</span><span class="sd">    drawper: integer</span>
+<span class="linenos">177</span><span class="sd">        The results will be displayed every &quot;drawper&quot; iterations</span>
+<span class="linenos">178</span><span class="sd">    mass: float</span>
+<span class="linenos">179</span><span class="sd">        Mass of one person (typically 80 kg)</span>
+<span class="linenos">180</span><span class="sd">    tau: float</span>
+<span class="linenos">181</span><span class="sd">        (typically 0.5 s)</span>
+<span class="linenos">182</span><span class="sd">    F: float</span>
+<span class="linenos">183</span><span class="sd">        Coefficient for the repulsion force between individuals</span>
+<span class="linenos">184</span><span class="sd">        (typically 2000 N)</span>
+<span class="linenos">185</span><span class="sd">    kappa: float</span>
+<span class="linenos">186</span><span class="sd">        Stiffness constant to handle overlapping (typically</span>
+<span class="linenos">187</span><span class="sd">        120000 kg s^-2)</span>
+<span class="linenos">188</span><span class="sd">    delta: float</span>
+<span class="linenos">189</span><span class="sd">        To maintain a certain distance from neighbors (typically 0.08 m)</span>
+<span class="linenos">190</span><span class="sd">    Fwall: float</span>
+<span class="linenos">191</span><span class="sd">        Coefficient for the repulsion force between individual and</span>
+<span class="linenos">192</span><span class="sd">        walls (typically 2000 N, like for F)</span>
+<span class="linenos">193</span><span class="sd">    lambda: float</span>
+<span class="linenos">194</span><span class="sd">        Directional dependence (between 0 and 1 = fully isotropic case)</span>
+<span class="linenos">195</span><span class="sd">    eta: float</span>
+<span class="linenos">196</span><span class="sd">        Friction coefficient (typically 240000 kg m^-1 s^-1)</span>
+<span class="linenos">197</span><span class="sd">    projection_method: string</span>
+<span class="linenos">198</span><span class="sd">        Name of the projection method : cvxopt(default),</span>
+<span class="linenos">199</span><span class="sd">        mosek(a licence is needed) or uzawa</span>
+<span class="linenos">200</span><span class="sd">    dmax: float</span>
+<span class="linenos">201</span><span class="sd">        Maximum distance used to detect neighbors</span>
+<span class="linenos">202</span><span class="sd">    dmin_people: float</span>
+<span class="linenos">203</span><span class="sd">        Minimum distance allowed between individuals</span>
+<span class="linenos">204</span><span class="sd">    dmin_walls: float</span>
+<span class="linenos">205</span><span class="sd">        Minimum distance allowed between an individual and a wall</span>
+<span class="linenos">206</span><span class="sd">    plot_people: boolean</span>
+<span class="linenos">207</span><span class="sd">        If true, people are drawn</span>
+<span class="linenos">208</span><span class="sd">    plot_contacts: boolean</span>
+<span class="linenos">209</span><span class="sd">        If true, active contacts between people are drawn</span>
+<span class="linenos">210</span><span class="sd">    plot_desired_velocities: boolean</span>
+<span class="linenos">211</span><span class="sd">        If true, people desired velocities are drawn</span>
+<span class="linenos">212</span><span class="sd">    plot_velocities: boolean</span>
+<span class="linenos">213</span><span class="sd">        If true, people velocities are drawn</span>
+<span class="linenos">214</span><span class="sd">    plot_sensors: boolean</span>
+<span class="linenos">215</span><span class="sd">        If true, plot sensor lines on people graph and sensor data graph</span>
+<span class="linenos">216</span><span class="sd">    plot_paths: boolean</span>
+<span class="linenos">217</span><span class="sd">        If true, people paths are drawn</span>
+<span class="linenos">218</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">219</span>
+<span class="linenos">220</span><span class="n">prefix</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;prefix&quot;</span><span class="p">]</span>
+<span class="linenos">221</span><span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">prefix</span><span class="p">):</span>
+<span class="linenos">222</span>    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span>
+<span class="linenos">223</span><span class="n">seed</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;seed&quot;</span><span class="p">]</span>
+<span class="linenos">224</span><span class="n">with_graphes</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;with_graphes&quot;</span><span class="p">]</span>
+<span class="linenos">225</span><span class="n">json_domains</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;domains&quot;</span><span class="p">]</span>
+<span class="linenos">226</span><span class="c1"># print(&quot;===&gt; JSON data used to build the domains : &quot;,json_domains)</span>
+<span class="linenos">227</span><span class="n">json_people_init</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;people_init&quot;</span><span class="p">]</span>
+<span class="linenos">228</span><span class="c1"># print(&quot;===&gt; JSON data used to create the groups : &quot;,json_people_init)</span>
+<span class="linenos">229</span><span class="n">json_sensors</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;sensors&quot;</span><span class="p">]</span>
+<span class="linenos">230</span><span class="c1"># print(&quot;===&gt; JSON data used to create sensors : &quot;,json_sensors)</span>
+<span class="linenos">231</span><span class="n">Tf</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;Tf&quot;</span><span class="p">]</span>
+<span class="linenos">232</span><span class="n">dt</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;dt&quot;</span><span class="p">]</span>
+<span class="linenos">233</span><span class="n">drawper</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;drawper&quot;</span><span class="p">]</span>
+<span class="linenos">234</span><span class="n">mass</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;mass&quot;</span><span class="p">]</span>
+<span class="linenos">235</span><span class="n">tau</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;tau&quot;</span><span class="p">]</span>
+<span class="linenos">236</span><span class="n">F</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;F&quot;</span><span class="p">]</span>
+<span class="linenos">237</span><span class="n">kappa</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;kappa&quot;</span><span class="p">]</span>
+<span class="linenos">238</span><span class="n">delta</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;delta&quot;</span><span class="p">]</span>
+<span class="linenos">239</span><span class="n">Fwall</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;Fwall&quot;</span><span class="p">]</span>
+<span class="linenos">240</span><span class="n">lambda_</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;lambda&quot;</span><span class="p">]</span>
+<span class="linenos">241</span><span class="n">eta</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;eta&quot;</span><span class="p">]</span>
+<span class="linenos">242</span><span class="n">projection_method</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;projection_method&quot;</span><span class="p">]</span>
+<span class="linenos">243</span><span class="n">dmax</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;dmax&quot;</span><span class="p">]</span>
+<span class="linenos">244</span><span class="n">dmin_people</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;dmin_people&quot;</span><span class="p">]</span>
+<span class="linenos">245</span><span class="n">dmin_walls</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;dmin_walls&quot;</span><span class="p">]</span>
+<span class="linenos">246</span><span class="n">plot_p</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;plot_people&quot;</span><span class="p">]</span>
+<span class="linenos">247</span><span class="n">plot_c</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;plot_contacts&quot;</span><span class="p">]</span>
+<span class="linenos">248</span><span class="n">plot_v</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;plot_velocities&quot;</span><span class="p">]</span>
+<span class="linenos">249</span><span class="n">plot_vd</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;plot_desired_velocities&quot;</span><span class="p">]</span>
+<span class="linenos">250</span><span class="n">plot_pa</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;plot_paths&quot;</span><span class="p">]</span>
+<span class="linenos">251</span><span class="n">plot_s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;plot_sensors&quot;</span><span class="p">]</span>
+<span class="linenos">252</span><span class="n">plot_pa</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;plot_paths&quot;</span><span class="p">]</span>
+<span class="linenos">253</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Final time, Tf = &quot;</span><span class="p">,</span> <span class="n">Tf</span><span class="p">)</span>
+<span class="linenos">254</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Time step, dt = &quot;</span><span class="p">,</span> <span class="n">dt</span><span class="p">)</span>
+<span class="linenos">255</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; To draw the results each drawper iterations, </span><span class="se">\</span>
+<span class="linenos">256</span><span class="s2">      drawper = &quot;</span><span class="p">,</span> <span class="n">drawper</span><span class="p">)</span>
+<span class="linenos">257</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Maximal distance to find neighbors, dmax = &quot;</span><span class="p">,</span>
+<span class="linenos">258</span>      <span class="n">dmax</span><span class="p">,</span> <span class="s2">&quot;, example : 2*dt&quot;</span><span class="p">)</span>
+<span class="linenos">259</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; ONLY used during initialization ! Minimal distance between </span><span class="se">\</span>
+<span class="linenos">260</span><span class="s2">      persons, dmin_people = &quot;</span><span class="p">,</span> <span class="n">dmin_people</span><span class="p">)</span>
+<span class="linenos">261</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; ONLY used during initialization ! Minimal distance between a </span><span class="se">\</span>
+<span class="linenos">262</span><span class="s2">      person and a wall, dmin_walls = &quot;</span><span class="p">,</span> <span class="n">dmin_walls</span><span class="p">)</span>
+<span class="linenos">263</span>
+<span class="linenos">264</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">265</span><span class="sd">    Build the Domain objects</span>
+<span class="linenos">266</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">267</span><span class="n">domains</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="linenos">268</span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">jdom</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">json_domains</span><span class="p">):</span>
+<span class="linenos">269</span>    <span class="n">jname</span> <span class="o">=</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+<span class="linenos">270</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Build domain number &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot; : &quot;</span><span class="p">,</span> <span class="n">jname</span><span class="p">)</span>
+<span class="linenos">271</span>    <span class="n">jbg</span> <span class="o">=</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;background&quot;</span><span class="p">]</span>
+<span class="linenos">272</span>    <span class="n">jpx</span> <span class="o">=</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;px&quot;</span><span class="p">]</span>
+<span class="linenos">273</span>    <span class="n">jwidth</span> <span class="o">=</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;width&quot;</span><span class="p">]</span>
+<span class="linenos">274</span>    <span class="n">jheight</span> <span class="o">=</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;height&quot;</span><span class="p">]</span>
+<span class="linenos">275</span>    <span class="n">jwall_colors</span> <span class="o">=</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;wall_colors&quot;</span><span class="p">]</span>
+<span class="linenos">276</span>    <span class="k">if</span> <span class="p">(</span><span class="n">jbg</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">):</span>
+<span class="linenos">277</span>        <span class="n">dom</span> <span class="o">=</span> <span class="n">Domain</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">jname</span><span class="p">,</span> <span class="n">pixel_size</span><span class="o">=</span><span class="n">jpx</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">jwidth</span><span class="p">,</span>
+<span class="linenos">278</span>                     <span class="n">height</span><span class="o">=</span><span class="n">jheight</span><span class="p">,</span> <span class="n">wall_colors</span><span class="o">=</span><span class="n">jwall_colors</span><span class="p">)</span>
+<span class="linenos">279</span>    <span class="k">else</span><span class="p">:</span>
+<span class="linenos">280</span>        <span class="n">dom</span> <span class="o">=</span> <span class="n">Domain</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">jname</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="n">jbg</span><span class="p">,</span> <span class="n">pixel_size</span><span class="o">=</span><span class="n">jpx</span><span class="p">,</span>
+<span class="linenos">281</span>                     <span class="n">wall_colors</span><span class="o">=</span><span class="n">jwall_colors</span><span class="p">)</span>
+<span class="linenos">282</span>    <span class="c1"># To add lines : Line2D(xdata, ydata, linewidth)</span>
+<span class="linenos">283</span>    <span class="k">for</span> <span class="n">sl</span> <span class="ow">in</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;shape_lines&quot;</span><span class="p">]:</span>
+<span class="linenos">284</span>        <span class="n">line</span> <span class="o">=</span> <span class="n">Line2D</span><span class="p">(</span><span class="n">sl</span><span class="p">[</span><span class="s2">&quot;xx&quot;</span><span class="p">],</span> <span class="n">sl</span><span class="p">[</span><span class="s2">&quot;yy&quot;</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="n">sl</span><span class="p">[</span><span class="s2">&quot;linewidth&quot;</span><span class="p">])</span>
+<span class="linenos">285</span>        <span class="n">dom</span><span class="o">.</span><span class="n">add_shape</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">outline_color</span><span class="o">=</span><span class="n">sl</span><span class="p">[</span><span class="s2">&quot;outline_color&quot;</span><span class="p">],</span>
+<span class="linenos">286</span>                      <span class="n">fill_color</span><span class="o">=</span><span class="n">sl</span><span class="p">[</span><span class="s2">&quot;fill_color&quot;</span><span class="p">])</span>
+<span class="linenos">287</span>    <span class="c1"># To add circles : Circle( (center_x,center_y), radius )</span>
+<span class="linenos">288</span>    <span class="k">for</span> <span class="n">sc</span> <span class="ow">in</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;shape_circles&quot;</span><span class="p">]:</span>
+<span class="linenos">289</span>        <span class="n">circle</span> <span class="o">=</span> <span class="n">Circle</span><span class="p">((</span><span class="n">sc</span><span class="p">[</span><span class="s2">&quot;center_x&quot;</span><span class="p">],</span> <span class="n">sc</span><span class="p">[</span><span class="s2">&quot;center_y&quot;</span><span class="p">]),</span> <span class="n">sc</span><span class="p">[</span><span class="s2">&quot;radius&quot;</span><span class="p">])</span>
+<span class="linenos">290</span>        <span class="n">dom</span><span class="o">.</span><span class="n">add_shape</span><span class="p">(</span><span class="n">circle</span><span class="p">,</span> <span class="n">outline_color</span><span class="o">=</span><span class="n">sc</span><span class="p">[</span><span class="s2">&quot;outline_color&quot;</span><span class="p">],</span>
+<span class="linenos">291</span>                      <span class="n">fill_color</span><span class="o">=</span><span class="n">sc</span><span class="p">[</span><span class="s2">&quot;fill_color&quot;</span><span class="p">])</span>
+<span class="linenos">292</span>    <span class="c1"># To add ellipses : Ellipse( (center_x,center_y), width, height,</span>
+<span class="linenos">293</span>    <span class="c1">#                            angle_in_degrees_anti-clockwise )</span>
+<span class="linenos">294</span>    <span class="k">for</span> <span class="n">se</span> <span class="ow">in</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;shape_ellipses&quot;</span><span class="p">]:</span>
+<span class="linenos">295</span>        <span class="n">ellipse</span> <span class="o">=</span> <span class="n">Ellipse</span><span class="p">((</span><span class="n">se</span><span class="p">[</span><span class="s2">&quot;center_x&quot;</span><span class="p">],</span> <span class="n">se</span><span class="p">[</span><span class="s2">&quot;center_y&quot;</span><span class="p">]),</span>
+<span class="linenos">296</span>                          <span class="n">se</span><span class="p">[</span><span class="s2">&quot;width&quot;</span><span class="p">],</span> <span class="n">se</span><span class="p">[</span><span class="s2">&quot;height&quot;</span><span class="p">],</span>
+<span class="linenos">297</span>                          <span class="n">se</span><span class="p">[</span><span class="s2">&quot;angle_in_degrees_anti-clockwise&quot;</span><span class="p">])</span>
+<span class="linenos">298</span>        <span class="n">dom</span><span class="o">.</span><span class="n">add_shape</span><span class="p">(</span><span class="n">ellipse</span><span class="p">,</span> <span class="n">outline_color</span><span class="o">=</span><span class="n">se</span><span class="p">[</span><span class="s2">&quot;outline_color&quot;</span><span class="p">],</span>
+<span class="linenos">299</span>                      <span class="n">fill_color</span><span class="o">=</span><span class="n">se</span><span class="p">[</span><span class="s2">&quot;fill_color&quot;</span><span class="p">])</span>
+<span class="linenos">300</span>    <span class="c1"># To add rectangles : Rectangle( (bottom_left_x,bottom_left_y),</span>
+<span class="linenos">301</span>    <span class="c1">#                       width, height, angle_in_degrees_anti-clockwise )</span>
+<span class="linenos">302</span>    <span class="k">for</span> <span class="n">sr</span> <span class="ow">in</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;shape_rectangles&quot;</span><span class="p">]:</span>
+<span class="linenos">303</span>        <span class="n">rectangle</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">((</span><span class="n">sr</span><span class="p">[</span><span class="s2">&quot;bottom_left_x&quot;</span><span class="p">],</span> <span class="n">sr</span><span class="p">[</span><span class="s2">&quot;bottom_left_y&quot;</span><span class="p">]),</span>
+<span class="linenos">304</span>                              <span class="n">sr</span><span class="p">[</span><span class="s2">&quot;width&quot;</span><span class="p">],</span> <span class="n">sr</span><span class="p">[</span><span class="s2">&quot;height&quot;</span><span class="p">],</span>
+<span class="linenos">305</span>                              <span class="n">sr</span><span class="p">[</span><span class="s2">&quot;angle_in_degrees_anti-clockwise&quot;</span><span class="p">])</span>
+<span class="linenos">306</span>        <span class="n">dom</span><span class="o">.</span><span class="n">add_shape</span><span class="p">(</span><span class="n">rectangle</span><span class="p">,</span> <span class="n">outline_color</span><span class="o">=</span><span class="n">sr</span><span class="p">[</span><span class="s2">&quot;outline_color&quot;</span><span class="p">],</span>
+<span class="linenos">307</span>                      <span class="n">fill_color</span><span class="o">=</span><span class="n">sr</span><span class="p">[</span><span class="s2">&quot;fill_color&quot;</span><span class="p">])</span>
+<span class="linenos">308</span>    <span class="c1"># To add polygons : Polygon( [[x0,y0],[x1,y1],...] )</span>
+<span class="linenos">309</span>    <span class="k">for</span> <span class="n">spo</span> <span class="ow">in</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;shape_polygons&quot;</span><span class="p">]:</span>
+<span class="linenos">310</span>        <span class="n">polygon</span> <span class="o">=</span> <span class="n">Polygon</span><span class="p">(</span><span class="n">spo</span><span class="p">[</span><span class="s2">&quot;xy&quot;</span><span class="p">])</span>
+<span class="linenos">311</span>        <span class="n">dom</span><span class="o">.</span><span class="n">add_shape</span><span class="p">(</span><span class="n">polygon</span><span class="p">,</span> <span class="n">outline_color</span><span class="o">=</span><span class="n">spo</span><span class="p">[</span><span class="s2">&quot;outline_color&quot;</span><span class="p">],</span>
+<span class="linenos">312</span>                      <span class="n">fill_color</span><span class="o">=</span><span class="n">spo</span><span class="p">[</span><span class="s2">&quot;fill_color&quot;</span><span class="p">])</span>
+<span class="linenos">313</span>    <span class="c1"># To build the domain : background + shapes</span>
+<span class="linenos">314</span>    <span class="n">dom</span><span class="o">.</span><span class="n">build_domain</span><span class="p">()</span>
+<span class="linenos">315</span>    <span class="c1"># To add all the available destinations</span>
+<span class="linenos">316</span>    <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">dd</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;destinations&quot;</span><span class="p">]):</span>
+<span class="linenos">317</span>        <span class="n">desired_velocity_from_color</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos">318</span>        <span class="k">for</span> <span class="n">gg</span> <span class="ow">in</span> <span class="n">dd</span><span class="p">[</span><span class="s2">&quot;desired_velocity_from_color&quot;</span><span class="p">]:</span>
+<span class="linenos">319</span>            <span class="n">desired_velocity_from_color</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+<span class="linenos">320</span>                <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">gg</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">],</span> <span class="n">gg</span><span class="p">[</span><span class="s2">&quot;desired_velocity&quot;</span><span class="p">])))</span>
+<span class="linenos">321</span>        <span class="n">dest</span> <span class="o">=</span> <span class="n">Destination</span><span class="p">(</span>
+<span class="linenos">322</span>            <span class="n">name</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span> <span class="n">colors</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;colors&quot;</span><span class="p">],</span>
+<span class="linenos">323</span>            <span class="n">excluded_colors</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;excluded_colors&quot;</span><span class="p">],</span>
+<span class="linenos">324</span>            <span class="n">desired_velocity_from_color</span><span class="o">=</span><span class="n">desired_velocity_from_color</span><span class="p">,</span>
+<span class="linenos">325</span>            <span class="n">velocity_scale</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;velocity_scale&quot;</span><span class="p">],</span>
+<span class="linenos">326</span>            <span class="n">next_destination</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;next_destination&quot;</span><span class="p">],</span>
+<span class="linenos">327</span>            <span class="n">next_domain</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;next_domain&quot;</span><span class="p">],</span>
+<span class="linenos">328</span>            <span class="n">next_transit_box</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;next_transit_box&quot;</span><span class="p">])</span>
+<span class="linenos">329</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Destination : &quot;</span><span class="p">,</span> <span class="n">dest</span><span class="p">)</span>
+<span class="linenos">330</span>        <span class="n">dom</span><span class="o">.</span><span class="n">add_destination</span><span class="p">(</span><span class="n">dest</span><span class="p">)</span>
+<span class="linenos">331</span>        <span class="k">if</span> <span class="p">(</span><span class="n">with_graphes</span><span class="p">):</span>
+<span class="linenos">332</span>            <span class="n">dom</span><span class="o">.</span><span class="n">plot_desired_velocity</span><span class="p">(</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span> <span class="nb">id</span><span class="o">=</span><span class="mi">100</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="n">j</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="linenos">333</span>
+<span class="linenos">334</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Domain : &quot;</span><span class="p">,</span> <span class="n">dom</span><span class="p">)</span>
+<span class="linenos">335</span>    <span class="k">if</span> <span class="p">(</span><span class="n">with_graphes</span><span class="p">):</span>
+<span class="linenos">336</span>        <span class="n">dom</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">100</span><span class="o">*</span><span class="n">i</span><span class="p">)</span>
+<span class="linenos">337</span>        <span class="n">dom</span><span class="o">.</span><span class="n">plot_wall_dist</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">100</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="linenos">338</span>
+<span class="linenos">339</span>    <span class="n">domains</span><span class="p">[</span><span class="n">dom</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">dom</span>
+<span class="linenos">340</span>
+<span class="linenos">341</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; All domains = &quot;</span><span class="p">,</span> <span class="n">domains</span><span class="p">)</span>
+<span class="linenos">342</span>
+<span class="linenos">343</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">344</span><span class="sd">    To create the sensors to measure the pedestrian flows</span>
+<span class="linenos">345</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">346</span>
+<span class="linenos">347</span><span class="n">all_sensors</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="linenos">348</span><span class="k">for</span> <span class="n">domain_name</span> <span class="ow">in</span> <span class="n">domains</span><span class="p">:</span>
+<span class="linenos">349</span>    <span class="n">all_sensors</span><span class="p">[</span><span class="n">domain_name</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos">350</span><span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">json_sensors</span><span class="p">:</span>
+<span class="linenos">351</span>    <span class="n">s</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos">352</span>    <span class="n">s</span><span class="p">[</span><span class="s2">&quot;times&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos">353</span>    <span class="n">s</span><span class="p">[</span><span class="s2">&quot;xy&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos">354</span>    <span class="n">s</span><span class="p">[</span><span class="s2">&quot;dir&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos">355</span>    <span class="n">all_sensors</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="s2">&quot;domain&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="linenos">356</span>    <span class="c1"># print(&quot;===&gt; All sensors = &quot;,all_sensors)</span>
+<span class="linenos">357</span>
+<span class="linenos">358</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">359</span><span class="sd">    Initialization</span>
+<span class="linenos">360</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">361</span>
+<span class="linenos">362</span><span class="c1"># Current time</span>
+<span class="linenos">363</span><span class="n">t</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="linenos">364</span><span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="linenos">365</span>
+<span class="linenos">366</span><span class="c1"># Initialize people</span>
+<span class="linenos">367</span><span class="n">all_people</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="linenos">368</span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">peopledom</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">json_people_init</span><span class="p">):</span>
+<span class="linenos">369</span>    <span class="n">dom</span> <span class="o">=</span> <span class="n">domains</span><span class="p">[</span><span class="n">peopledom</span><span class="p">[</span><span class="s2">&quot;domain&quot;</span><span class="p">]]</span>
+<span class="linenos">370</span>    <span class="n">groups</span> <span class="o">=</span> <span class="n">peopledom</span><span class="p">[</span><span class="s2">&quot;groups&quot;</span><span class="p">]</span>
+<span class="linenos">371</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Group number &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;, domain = &quot;</span><span class="p">,</span> <span class="n">peopledom</span><span class="p">[</span><span class="s2">&quot;domain&quot;</span><span class="p">])</span>
+<span class="linenos">372</span>    <span class="n">people</span> <span class="o">=</span> <span class="n">people_initialization</span><span class="p">(</span>
+<span class="linenos">373</span>        <span class="n">dom</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span>
+<span class="linenos">374</span>        <span class="n">dmin_people</span><span class="o">=</span><span class="n">dmin_people</span><span class="p">,</span> <span class="n">dmin_walls</span><span class="o">=</span><span class="n">dmin_walls</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="n">seed</span><span class="p">,</span>
+<span class="linenos">375</span>        <span class="n">itermax</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">projection_method</span><span class="o">=</span><span class="n">projection_method</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos">376</span>    <span class="n">I</span><span class="p">,</span> <span class="n">J</span><span class="p">,</span> <span class="n">Vd</span> <span class="o">=</span> <span class="n">dom</span><span class="o">.</span><span class="n">people_desired_velocity</span><span class="p">(</span>
+<span class="linenos">377</span>        <span class="n">people</span><span class="p">[</span><span class="s2">&quot;xyrv&quot;</span><span class="p">],</span>
+<span class="linenos">378</span>        <span class="n">people</span><span class="p">[</span><span class="s2">&quot;destinations&quot;</span><span class="p">])</span>
+<span class="linenos">379</span>    <span class="n">people</span><span class="p">[</span><span class="s2">&quot;Vd&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Vd</span>
+<span class="linenos">380</span>    <span class="k">for</span> <span class="n">ip</span><span class="p">,</span> <span class="n">pid</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">people</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]):</span>
+<span class="linenos">381</span>        <span class="n">people</span><span class="p">[</span><span class="s2">&quot;paths&quot;</span><span class="p">][</span><span class="n">pid</span><span class="p">]</span> <span class="o">=</span> <span class="n">people</span><span class="p">[</span><span class="s2">&quot;xyrv&quot;</span><span class="p">][</span><span class="n">ip</span><span class="p">,</span> <span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="linenos">382</span>    <span class="n">contacts</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="linenos">383</span>    <span class="k">if</span> <span class="p">(</span><span class="n">with_graphes</span><span class="p">):</span>
+<span class="linenos">384</span>        <span class="n">colors</span> <span class="o">=</span> <span class="n">people</span><span class="p">[</span><span class="s2">&quot;xyrv&quot;</span><span class="p">][:,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="linenos">385</span>        <span class="n">plot_people</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">20</span><span class="p">,</span> <span class="n">dom</span><span class="p">,</span> <span class="n">people</span><span class="p">,</span> <span class="n">contacts</span><span class="p">,</span> <span class="n">colors</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="n">t</span><span class="p">,</span>
+<span class="linenos">386</span>                    <span class="n">plot_people</span><span class="o">=</span><span class="n">plot_p</span><span class="p">,</span> <span class="n">plot_contacts</span><span class="o">=</span><span class="n">plot_c</span><span class="p">,</span>
+<span class="linenos">387</span>                    <span class="n">plot_velocities</span><span class="o">=</span><span class="n">plot_v</span><span class="p">,</span> <span class="n">plot_desired_velocities</span><span class="o">=</span><span class="n">plot_vd</span><span class="p">,</span>
+<span class="linenos">388</span>                    <span class="n">plot_sensors</span><span class="o">=</span><span class="n">plot_s</span><span class="p">,</span> <span class="n">sensors</span><span class="o">=</span><span class="n">all_sensors</span><span class="p">[</span><span class="n">dom</span><span class="o">.</span><span class="n">name</span><span class="p">],</span>
+<span class="linenos">389</span>                    <span class="n">savefig</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">prefix</span><span class="o">+</span><span class="n">dom</span><span class="o">.</span><span class="n">name</span><span class="o">+</span><span class="s1">&#39;_fig_&#39;</span> <span class="o">+</span>
+<span class="linenos">390</span>                    <span class="nb">str</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;.png&#39;</span><span class="p">)</span>
+<span class="linenos">391</span>    <span class="n">all_people</span><span class="p">[</span><span class="n">peopledom</span><span class="p">[</span><span class="s2">&quot;domain&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">people</span>
+<span class="linenos">392</span><span class="c1"># print(&quot;===&gt; All people = &quot;,all_people)</span>
+<span class="linenos">393</span>
+<span class="linenos">394</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">395</span><span class="sd">    Main loop</span>
+<span class="linenos">396</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">397</span>
+<span class="linenos">398</span><span class="n">cc</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="linenos">399</span><span class="n">draw</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="linenos">400</span>
+<span class="linenos">401</span><span class="k">while</span> <span class="p">(</span><span class="n">t</span> <span class="o">&lt;</span> <span class="n">Tf</span><span class="p">):</span>
+<span class="linenos">402</span>
+<span class="linenos">403</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">===&gt; Time = &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+<span class="linenos">404</span>
+<span class="linenos">405</span>    <span class="c1"># Compute people desired velocity</span>
+<span class="linenos">406</span>    <span class="k">for</span> <span class="n">idom</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">domains</span><span class="p">):</span>
+<span class="linenos">407</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Compute desired velocity for domain &quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+<span class="linenos">408</span>        <span class="n">dom</span> <span class="o">=</span> <span class="n">domains</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+<span class="linenos">409</span>        <span class="n">people</span> <span class="o">=</span> <span class="n">all_people</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+<span class="linenos">410</span>        <span class="n">I</span><span class="p">,</span> <span class="n">J</span><span class="p">,</span> <span class="n">Vd</span> <span class="o">=</span> <span class="n">dom</span><span class="o">.</span><span class="n">people_desired_velocity</span><span class="p">(</span>
+<span class="linenos">411</span>            <span class="n">people</span><span class="p">[</span><span class="s2">&quot;xyrv&quot;</span><span class="p">],</span>
+<span class="linenos">412</span>            <span class="n">people</span><span class="p">[</span><span class="s2">&quot;destinations&quot;</span><span class="p">])</span>
+<span class="linenos">413</span>        <span class="n">people</span><span class="p">[</span><span class="s2">&quot;Vd&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Vd</span>
+<span class="linenos">414</span>        <span class="n">people</span><span class="p">[</span><span class="s2">&quot;I&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">I</span>
+<span class="linenos">415</span>        <span class="n">people</span><span class="p">[</span><span class="s2">&quot;J&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">J</span>
+<span class="linenos">416</span>
+<span class="linenos">417</span>    <span class="c1"># Look at if there are people in the transit boxes</span>
+<span class="linenos">418</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Find people who have to be duplicated&quot;</span><span class="p">)</span>
+<span class="linenos">419</span>    <span class="n">virtual_people</span> <span class="o">=</span> <span class="n">find_duplicate_people</span><span class="p">(</span><span class="n">all_people</span><span class="p">,</span> <span class="n">domains</span><span class="p">)</span>
+<span class="linenos">420</span>    <span class="c1"># print(&quot;     virtual_people : &quot;,virtual_people)</span>
+<span class="linenos">421</span>
+<span class="linenos">422</span>    <span class="c1"># Social forces</span>
+<span class="linenos">423</span>    <span class="k">for</span> <span class="n">idom</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">domains</span><span class="p">):</span>
+<span class="linenos">424</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Compute social forces for domain &quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+<span class="linenos">425</span>        <span class="n">dom</span> <span class="o">=</span> <span class="n">domains</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+<span class="linenos">426</span>        <span class="n">people</span> <span class="o">=</span> <span class="n">all_people</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+<span class="linenos">427</span>
+<span class="linenos">428</span>        <span class="k">try</span><span class="p">:</span>
+<span class="linenos">429</span>            <span class="n">xyrv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span>
+<span class="linenos">430</span>                <span class="p">(</span><span class="n">people</span><span class="p">[</span><span class="s2">&quot;xyrv&quot;</span><span class="p">],</span> <span class="n">virtual_people</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="s2">&quot;xyrv&quot;</span><span class="p">]))</span>
+<span class="linenos">431</span>            <span class="n">Vd</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span>
+<span class="linenos">432</span>                <span class="p">(</span><span class="n">people</span><span class="p">[</span><span class="s2">&quot;Vd&quot;</span><span class="p">],</span> <span class="n">virtual_people</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="s2">&quot;Vd&quot;</span><span class="p">]))</span>
+<span class="linenos">433</span>            <span class="n">Uold</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span>
+<span class="linenos">434</span>                <span class="p">(</span><span class="n">people</span><span class="p">[</span><span class="s2">&quot;Uold&quot;</span><span class="p">],</span> <span class="n">virtual_people</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="s2">&quot;Uold&quot;</span><span class="p">]))</span>
+<span class="linenos">435</span>        <span class="k">except</span><span class="p">:</span>
+<span class="linenos">436</span>            <span class="n">xyrv</span> <span class="o">=</span> <span class="n">people</span><span class="p">[</span><span class="s2">&quot;xyrv&quot;</span><span class="p">]</span>
+<span class="linenos">437</span>            <span class="n">Vd</span> <span class="o">=</span> <span class="n">people</span><span class="p">[</span><span class="s2">&quot;Vd&quot;</span><span class="p">]</span>
+<span class="linenos">438</span>            <span class="n">Uold</span> <span class="o">=</span> <span class="n">people</span><span class="p">[</span><span class="s2">&quot;Uold&quot;</span><span class="p">]</span>
+<span class="linenos">439</span>
+<span class="linenos">440</span>        <span class="k">if</span> <span class="p">(</span><span class="n">xyrv</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+<span class="linenos">441</span>
+<span class="linenos">442</span>            <span class="k">if</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">xyrv</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">xyrv</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+<span class="linenos">443</span>                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; ERROR : There are two identical lines in the&quot;</span><span class="p">)</span>
+<span class="linenos">444</span>                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;             array xyrv used to determine the </span><span class="se">\</span>
+<span class="linenos">445</span><span class="s2">                    contacts between&quot;</span><span class="p">)</span>
+<span class="linenos">446</span>                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;             individuals and this is not normal.&quot;</span><span class="p">)</span>
+<span class="linenos">447</span>                <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+<span class="linenos">448</span>
+<span class="linenos">449</span>            <span class="n">contacts</span> <span class="o">=</span> <span class="n">compute_contacts</span><span class="p">(</span><span class="n">dom</span><span class="p">,</span> <span class="n">xyrv</span><span class="p">,</span> <span class="n">dmax</span><span class="p">)</span>
+<span class="linenos">450</span>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;     Number of contacts: &quot;</span><span class="p">,</span> <span class="n">contacts</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="linenos">451</span>            <span class="n">Forces</span> <span class="o">=</span> <span class="n">compute_forces</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">Fwall</span><span class="p">,</span> <span class="n">xyrv</span><span class="p">,</span> <span class="n">contacts</span><span class="p">,</span> <span class="n">Uold</span><span class="p">,</span> <span class="n">Vd</span><span class="p">,</span>
+<span class="linenos">452</span>                                    <span class="n">lambda_</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">kappa</span><span class="p">,</span> <span class="n">eta</span><span class="p">)</span>
+<span class="linenos">453</span>            <span class="n">nn</span> <span class="o">=</span> <span class="n">people</span><span class="p">[</span><span class="s2">&quot;xyrv&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="linenos">454</span>            <span class="n">all_people</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="s2">&quot;U&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dt</span><span class="o">*</span><span class="p">(</span><span class="n">Vd</span><span class="p">[:</span><span class="n">nn</span><span class="p">,</span> <span class="p">:]</span><span class="o">-</span><span class="n">Uold</span><span class="p">[:</span><span class="n">nn</span><span class="p">,</span> <span class="p">:])</span><span class="o">/</span><span class="n">tau</span> <span class="o">+</span>\
+<span class="linenos">455</span>                <span class="n">Uold</span><span class="p">[:</span><span class="n">nn</span><span class="p">,</span> <span class="p">:]</span> <span class="o">+</span> <span class="n">dt</span><span class="o">*</span><span class="n">Forces</span><span class="p">[:</span><span class="n">nn</span><span class="p">,</span> <span class="p">:]</span><span class="o">/</span><span class="n">mass</span>
+<span class="linenos">456</span>            <span class="c1"># only for the plot of virtual people :</span>
+<span class="linenos">457</span>            <span class="n">virtual_people</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="s2">&quot;U&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dt</span><span class="o">*</span><span class="p">(</span><span class="n">Vd</span><span class="p">[</span><span class="n">nn</span><span class="p">:,</span> <span class="p">:]</span><span class="o">-</span><span class="n">Uold</span><span class="p">[</span><span class="n">nn</span><span class="p">:,</span> <span class="p">:])</span><span class="o">/</span><span class="n">tau</span> <span class="o">+</span>\
+<span class="linenos">458</span>                <span class="n">Uold</span><span class="p">[</span><span class="n">nn</span><span class="p">:,</span> <span class="p">:]</span> <span class="o">+</span> <span class="n">dt</span><span class="o">*</span><span class="n">Forces</span><span class="p">[</span><span class="n">nn</span><span class="p">:,</span> <span class="p">:]</span><span class="o">/</span><span class="n">mass</span>
+<span class="linenos">459</span>
+<span class="linenos">460</span>            <span class="n">all_people</span><span class="p">[</span><span class="n">name</span><span class="p">],</span> <span class="n">all_sensors</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">move_people</span><span class="p">(</span>
+<span class="linenos">461</span>                <span class="n">t</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span>
+<span class="linenos">462</span>                <span class="n">all_people</span><span class="p">[</span><span class="n">name</span><span class="p">],</span>
+<span class="linenos">463</span>                <span class="n">all_sensors</span><span class="p">[</span><span class="n">name</span><span class="p">])</span>
+<span class="linenos">464</span>
+<span class="linenos">465</span>        <span class="k">if</span> <span class="p">(</span><span class="n">draw</span> <span class="ow">and</span> <span class="n">with_graphes</span><span class="p">):</span>
+<span class="linenos">466</span>            <span class="c1"># coloring people according to their radius</span>
+<span class="linenos">467</span>            <span class="n">colors</span> <span class="o">=</span> <span class="n">all_people</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="s2">&quot;xyrv&quot;</span><span class="p">][:,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="linenos">468</span>            <span class="c1"># coloring people according to their destinations</span>
+<span class="linenos">469</span>            <span class="c1"># colors = np.zeros(all_people[name][&quot;xyrv&quot;].shape[0])</span>
+<span class="linenos">470</span>            <span class="c1"># for i,dest_name in enumerate(all_people[name][&quot;destinations&quot;]):</span>
+<span class="linenos">471</span>            <span class="c1">#     ind = np.where(all_people[name][&quot;destinations&quot;]==dest_name)[0]</span>
+<span class="linenos">472</span>            <span class="c1">#     colors[ind]=i</span>
+<span class="linenos">473</span>            <span class="n">plot_people</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">idom</span><span class="o">+</span><span class="mi">20</span><span class="p">,</span> <span class="n">dom</span><span class="p">,</span> <span class="n">all_people</span><span class="p">[</span><span class="n">name</span><span class="p">],</span> <span class="n">contacts</span><span class="p">,</span>
+<span class="linenos">474</span>                        <span class="n">colors</span><span class="p">,</span> <span class="n">virtual_people</span><span class="o">=</span><span class="n">virtual_people</span><span class="p">[</span><span class="n">name</span><span class="p">],</span> <span class="n">time</span><span class="o">=</span><span class="n">t</span><span class="p">,</span>
+<span class="linenos">475</span>                        <span class="n">plot_people</span><span class="o">=</span><span class="n">plot_p</span><span class="p">,</span> <span class="n">plot_contacts</span><span class="o">=</span><span class="n">plot_c</span><span class="p">,</span>
+<span class="linenos">476</span>                        <span class="n">plot_paths</span><span class="o">=</span><span class="n">plot_pa</span><span class="p">,</span> <span class="n">plot_velocities</span><span class="o">=</span><span class="n">plot_v</span><span class="p">,</span>
+<span class="linenos">477</span>                        <span class="n">plot_desired_velocities</span><span class="o">=</span><span class="n">plot_vd</span><span class="p">,</span> <span class="n">plot_sensors</span><span class="o">=</span><span class="n">plot_s</span><span class="p">,</span>
+<span class="linenos">478</span>                        <span class="n">sensors</span><span class="o">=</span><span class="n">all_sensors</span><span class="p">[</span><span class="n">dom</span><span class="o">.</span><span class="n">name</span><span class="p">],</span> <span class="n">savefig</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="linenos">479</span>                        <span class="n">filename</span><span class="o">=</span><span class="n">prefix</span><span class="o">+</span><span class="n">dom</span><span class="o">.</span><span class="n">name</span><span class="o">+</span><span class="s1">&#39;_fig_&#39;</span>
+<span class="linenos">480</span>                        <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;.png&#39;</span><span class="p">)</span>
+<span class="linenos">481</span>            <span class="n">plt</span><span class="o">.</span><span class="n">pause</span><span class="p">(</span><span class="mf">0.05</span><span class="p">)</span>
+<span class="linenos">482</span>
+<span class="linenos">483</span>    <span class="c1"># Update people destinations</span>
+<span class="linenos">484</span>    <span class="n">all_people</span> <span class="o">=</span> <span class="n">people_update_destination</span><span class="p">(</span><span class="n">all_people</span><span class="p">,</span> <span class="n">domains</span><span class="p">,</span> <span class="n">dom</span><span class="o">.</span><span class="n">pixel_size</span><span class="p">)</span>
+<span class="linenos">485</span>
+<span class="linenos">486</span>    <span class="c1"># Update previous velocities</span>
+<span class="linenos">487</span>    <span class="k">for</span> <span class="n">idom</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">domains</span><span class="p">):</span>
+<span class="linenos">488</span>        <span class="n">all_people</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="s2">&quot;Uold&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">all_people</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="s2">&quot;U&quot;</span><span class="p">]</span>
+<span class="linenos">489</span>
+<span class="linenos">490</span>    <span class="c1"># Print the number of persons for each domain</span>
+<span class="linenos">491</span>    <span class="k">for</span> <span class="n">idom</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">domains</span><span class="p">):</span>
+<span class="linenos">492</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Domain &quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot; nb of persons = &quot;</span><span class="p">,</span>
+<span class="linenos">493</span>              <span class="n">all_people</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="s2">&quot;xyrv&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="linenos">494</span>
+<span class="linenos">495</span>    <span class="n">t</span> <span class="o">+=</span> <span class="n">dt</span>
+<span class="linenos">496</span>    <span class="n">cc</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="linenos">497</span>    <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="linenos">498</span>    <span class="k">if</span> <span class="p">(</span><span class="n">cc</span> <span class="o">&gt;=</span> <span class="n">drawper</span><span class="p">):</span>
+<span class="linenos">499</span>        <span class="n">draw</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="linenos">500</span>        <span class="n">cc</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="linenos">501</span>    <span class="k">else</span><span class="p">:</span>
+<span class="linenos">502</span>        <span class="n">draw</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="linenos">503</span>
+<span class="linenos">504</span>
+<span class="linenos">505</span><span class="k">for</span> <span class="n">idom</span><span class="p">,</span> <span class="n">domain_name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">all_sensors</span><span class="p">):</span>
+<span class="linenos">506</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Plot sensors of domain &quot;</span><span class="p">,</span> <span class="n">domain_name</span><span class="p">)</span>
+<span class="linenos">507</span>    <span class="n">plot_sensors</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">idom</span><span class="o">+</span><span class="mi">40</span><span class="p">,</span> <span class="n">all_sensors</span><span class="p">[</span><span class="n">domain_name</span><span class="p">],</span> <span class="n">t</span><span class="p">,</span> <span class="n">savefig</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="linenos">508</span>                 <span class="n">filename</span><span class="o">=</span><span class="n">prefix</span><span class="o">+</span><span class="s1">&#39;sensor_&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;_&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;.png&#39;</span><span class="p">)</span>
+<span class="linenos">509</span>    <span class="n">plt</span><span class="o">.</span><span class="n">pause</span><span class="p">(</span><span class="mf">0.05</span><span class="p">)</span>
+<span class="linenos">510</span>
+<span class="linenos">511</span><span class="n">plt</span><span class="o">.</span><span class="n">ioff</span><span class="p">()</span>
+<span class="linenos">512</span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="linenos">513</span><span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="granular-model">
+<h2>Granular model<a class="headerlink" href="#granular-model" title="Link to this heading">¶</a></h2>
+<p>The <cite>Granular model</cite> comes from crowd motion models of the granular type : each
+individual is identified to a hard disk of a prescribed size, subject to a
+non-overlapping constraint with their neighbors. The approach relies on a
+desired velocity for each individual (the velocity they would take if they were
+alone), and the global velocity field shall be defined as the closest to the
+desired one among all those feasible fields (fields which do not lead to
+overlapping of disks).</p>
+<p>Reference : <a class="reference internal" href="index.html#mf2018" id="id2"><span>[MF2018]</span></a> Chapter 4.</p>
+<p>An example can be find in the directory</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cromosim</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">micro</span><span class="o">/</span><span class="n">granular</span>
+</pre></div>
+</div>
+<p>and can be launched with</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">micro_granular</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">json</span> <span class="n">input_room</span><span class="o">.</span><span class="n">json</span>
+<span class="n">python</span> <span class="n">micro_granular</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">json</span> <span class="n">input_event</span><span class="o">.</span><span class="n">json</span>
+<span class="n">python</span> <span class="n">micro_granular</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">json</span> <span class="n">input_stadium</span><span class="o">.</span><span class="n">json</span>
+<span class="n">python</span> <span class="n">micro_granular</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">json</span> <span class="n">input_shibuya_crossing</span><span class="o">.</span><span class="n">json</span>
+<span class="n">python</span> <span class="n">micro_granular</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">json</span> <span class="n">input_stairs</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<table style="width:100%">
+  <tr>
+    <th>
+      <center>
+        <em><small>Evacuation of a room, visualization of trajectories</small></em>
+      </center>
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <center>
+        <video style="display:block; margin: 0 auto;" controls poster="_static/micro_granular_room_paths.png" width="40%" height="auto">
+          <source src="_static/micro_granular_room_paths.mp4" />
+        </video>
+      </center>
+    </td>
+  </tr>
+</table>
+<br>
+<table style="width:100%">
+  <tr>
+    <th>
+      <center>
+        <em><small>Circular track around a stadium</small></em>
+      </center>
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <center>
+        <video style="display:block; margin: 0 auto;" controls poster="_static/micro_granular_stadium.png" width="40%" height="auto">
+          <source src="_static/micro_granular_stadium.mp4" />
+        </video>
+      </center>
+    </td>
+  </tr>
+</table>
+<br>
+<table style="width:100%">
+  <tr>
+    <th>
+      <center>
+        <em><small>Evacuation of an exhibition hall: two groups of people with the same destination</small></em>
+      </center>
+    </th>
+    <th>
+      <center>
+        <em><small>Evacuation of an exhibition hall: sensors (green lines) results</small></em>
+      </center>
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <center>
+        <video style="display:block; margin: 0 auto;" controls poster="_static/micro_granular_event.png" width="40%" height="auto">
+          <source src="_static/micro_granular_event.mp4" />
+        </video>
+      </center>
+    </td>
+    <td>
+      <center>
+        <img src="_static/micro_granular_event_sensor.png" alt="Evacuation of an exhibition hall : Sensors (green lines) results" style="margin:0px auto;display:block" width="100%" height="auto"/>
+      </center>
+    </td>
+  </tr>
+</table>
+<br>
+<table style="width:100%">
+  <tr>
+    <th>
+      <center>
+        <em><small>Shibuya crossing (Japan) : five groups of people and five different destinations</small></em>
+      </center>
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <center>
+        <video style="display:block; margin: 0 auto;" controls poster="_static/micro_granular_shibuya_crossing.png" width="40%" height="auto">
+          <source src="_static/micro_granular_shibuya_crossing.mp4" />
+        </video>
+      </center>
+    </td>
+  </tr>
+</table>
+<br>
+<table style="width:100%">
+  <tr>
+    <th>
+      <center>
+        <em><small>Two floors of a building: a group of people goes up and another goes down
+        <br>Floor 1 on the left and 0 on the right</small></em>
+      </center>
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <center>
+        <video style="display:block; margin: 0 auto;" controls poster="_static/micro_granular_stairs_0_1.png" width="100%" height="auto">
+          <source src="_static/micro_granular_stairs_0_1.mp4" />
+        </video>
+      </center>
+    </td>
+  </tr>
+</table><div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">micro_granular.py</span><a class="headerlink" href="#id4" title="Link to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="c1"># Authors:</span>
+<span class="linenos">  2</span><span class="c1">#     Sylvain Faure &lt;sylvain.faure@universite-paris-saclay.fr&gt;</span>
+<span class="linenos">  3</span><span class="c1">#     Bertrand Maury &lt;bertrand.maury@universite-paris-saclay.fr&gt;</span>
+<span class="linenos">  4</span><span class="c1">#</span>
+<span class="linenos">  5</span><span class="c1">#     cromosim/examples/micro/granular/micro_granular.py</span>
+<span class="linenos">  6</span><span class="c1">#     python micro_granular.py --json input.json</span>
+<span class="linenos">  7</span><span class="c1">#</span>
+<span class="linenos">  8</span><span class="c1"># License: GPL</span>
+<span class="linenos">  9</span>
+<span class="linenos"> 10</span>
+<span class="linenos"> 11</span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="linenos"> 12</span><span class="kn">import</span> <span class="nn">os</span>
+<span class="linenos"> 13</span><span class="kn">import</span> <span class="nn">json</span>
+<span class="linenos"> 14</span><span class="kn">from</span> <span class="nn">optparse</span> <span class="kn">import</span> <span class="n">OptionParser</span>
+<span class="linenos"> 15</span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="linenos"> 16</span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="linenos"> 17</span><span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Circle</span><span class="p">,</span> <span class="n">Ellipse</span><span class="p">,</span> <span class="n">Rectangle</span><span class="p">,</span> <span class="n">Polygon</span>
+<span class="linenos"> 18</span><span class="kn">from</span> <span class="nn">matplotlib.lines</span> <span class="kn">import</span> <span class="n">Line2D</span>
+<span class="linenos"> 19</span>
+<span class="linenos"> 20</span><span class="kn">from</span> <span class="nn">cromosim.domain</span> <span class="kn">import</span> <span class="n">Domain</span>
+<span class="linenos"> 21</span><span class="kn">from</span> <span class="nn">cromosim.domain</span> <span class="kn">import</span> <span class="n">Destination</span>
+<span class="linenos"> 22</span><span class="kn">from</span> <span class="nn">cromosim.micro</span> <span class="kn">import</span> <span class="n">people_initialization</span><span class="p">,</span> <span class="n">plot_people</span><span class="p">,</span> <span class="n">plot_sensors</span>
+<span class="linenos"> 23</span><span class="kn">from</span> <span class="nn">cromosim.micro</span> <span class="kn">import</span> <span class="n">find_duplicate_people</span><span class="p">,</span> <span class="n">compute_contacts</span>
+<span class="linenos"> 24</span><span class="kn">from</span> <span class="nn">cromosim.micro</span> <span class="kn">import</span> <span class="n">projection</span><span class="p">,</span> <span class="n">move_people</span><span class="p">,</span> <span class="n">people_update_destination</span>
+<span class="linenos"> 25</span>
+<span class="linenos"> 26</span><span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
+<span class="linenos"> 27</span>
+<span class="linenos"> 28</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 29</span><span class="sd">    python3 micro_granular.py --json input.json</span>
+<span class="linenos"> 30</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 31</span><span class="n">parser</span> <span class="o">=</span> <span class="n">OptionParser</span><span class="p">(</span><span class="n">usage</span><span class="o">=</span><span class="s2">&quot;usage: %prog [options] filename&quot;</span><span class="p">,</span>
+<span class="linenos"> 32</span>                      <span class="n">version</span><span class="o">=</span><span class="s2">&quot;%prog 1.0&quot;</span><span class="p">)</span>
+<span class="linenos"> 33</span><span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span><span class="s1">&#39;--json&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s2">&quot;jsonfilename&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;input.json&quot;</span><span class="p">,</span>
+<span class="linenos"> 34</span>                  <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Input json filename&quot;</span><span class="p">)</span>
+<span class="linenos"> 35</span><span class="n">opt</span><span class="p">,</span> <span class="n">remainder</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+<span class="linenos"> 36</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; JSON filename = &quot;</span><span class="p">,</span> <span class="n">opt</span><span class="o">.</span><span class="n">jsonfilename</span><span class="p">)</span>
+<span class="linenos"> 37</span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">opt</span><span class="o">.</span><span class="n">jsonfilename</span><span class="p">)</span> <span class="k">as</span> <span class="n">json_file</span><span class="p">:</span>
+<span class="linenos"> 38</span>    <span class="k">try</span><span class="p">:</span>
+<span class="linenos"> 39</span>        <span class="nb">input</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">json_file</span><span class="p">)</span>
+<span class="linenos"> 40</span>    <span class="k">except</span> <span class="n">json</span><span class="o">.</span><span class="n">JSONDecodeError</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span>
+<span class="linenos"> 41</span>        <span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="linenos"> 42</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Failed to load json file &quot;</span><span class="p">,</span> <span class="n">opt</span><span class="o">.</span><span class="n">jsonfilename</span><span class="p">)</span>
+<span class="linenos"> 43</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Check its content </span><span class="se">\</span>
+<span class="linenos"> 44</span><span class="s2">            (https://fr.wikipedia.org/wiki/JavaScript_Object_Notation)&quot;</span><span class="p">)</span>
+<span class="linenos"> 45</span>        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+<span class="linenos"> 46</span>
+<span class="linenos"> 47</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 48</span><span class="sd">    Get parameters from json file :</span>
+<span class="linenos"> 49</span><span class="sd">    prefix: string</span>
+<span class="linenos"> 50</span><span class="sd">        Folder name to store the results</span>
+<span class="linenos"> 51</span><span class="sd">    with_graphes: bool</span>
+<span class="linenos"> 52</span><span class="sd">        true if all the graphes are shown and saved in png files,</span>
+<span class="linenos"> 53</span><span class="sd">        false otherwise</span>
+<span class="linenos"> 54</span><span class="sd">    seed: integer</span>
+<span class="linenos"> 55</span><span class="sd">        Random seed which can be used to reproduce a random selection</span>
+<span class="linenos"> 56</span><span class="sd">        if &gt;0</span>
+<span class="linenos"> 57</span><span class="sd">    For each domain :</span>
+<span class="linenos"> 58</span><span class="sd">    |    name: string</span>
+<span class="linenos"> 59</span><span class="sd">    |        Domain name</span>
+<span class="linenos"> 60</span><span class="sd">    |    background: string</span>
+<span class="linenos"> 61</span><span class="sd">    |        Image file used as background</span>
+<span class="linenos"> 62</span><span class="sd">    |    px: float</span>
+<span class="linenos"> 63</span><span class="sd">    |        Pixel size in meters (also called space step)</span>
+<span class="linenos"> 64</span><span class="sd">    |    width: integer</span>
+<span class="linenos"> 65</span><span class="sd">    |        Domain width (equal to the width of the background image)</span>
+<span class="linenos"> 66</span><span class="sd">    |    height: integer</span>
+<span class="linenos"> 67</span><span class="sd">    |        Domain height (equal to the height of the background image)</span>
+<span class="linenos"> 68</span><span class="sd">    |    wall_colors: list</span>
+<span class="linenos"> 69</span><span class="sd">    |        rgb colors for walls</span>
+<span class="linenos"> 70</span><span class="sd">    |        [ [r,g,b],[r,g,b],... ]</span>
+<span class="linenos"> 71</span><span class="sd">    |    shape_lines: list</span>
+<span class="linenos"> 72</span><span class="sd">    |        Used to define the Matplotlib Polyline shapes,</span>
+<span class="linenos"> 73</span><span class="sd">    |        [</span>
+<span class="linenos"> 74</span><span class="sd">    |          {</span>
+<span class="linenos"> 75</span><span class="sd">    |             &quot;xx&quot;: [x0,x1,x2,...],</span>
+<span class="linenos"> 76</span><span class="sd">    |             &quot;yy&quot;: [y0,y1,y2,...],</span>
+<span class="linenos"> 77</span><span class="sd">    |             &quot;linewidth&quot;: float,</span>
+<span class="linenos"> 78</span><span class="sd">    |             &quot;outline_color&quot;: [r,g,b],</span>
+<span class="linenos"> 79</span><span class="sd">    |             &quot;fill_color&quot;: [r,g,b]</span>
+<span class="linenos"> 80</span><span class="sd">    |          },...</span>
+<span class="linenos"> 81</span><span class="sd">    |        ]</span>
+<span class="linenos"> 82</span><span class="sd">    |    shape_circles: list</span>
+<span class="linenos"> 83</span><span class="sd">    |        Used to define the Matplotlib Circle shapes,</span>
+<span class="linenos"> 84</span><span class="sd">    |        [</span>
+<span class="linenos"> 85</span><span class="sd">    |           {</span>
+<span class="linenos"> 86</span><span class="sd">    |             &quot;center_x&quot;: float,</span>
+<span class="linenos"> 87</span><span class="sd">    |             &quot;center_y&quot;: float,</span>
+<span class="linenos"> 88</span><span class="sd">    |             &quot;radius&quot;: float,</span>
+<span class="linenos"> 89</span><span class="sd">    |             &quot;outline_color&quot;: [r,g,b],</span>
+<span class="linenos"> 90</span><span class="sd">    |             &quot;fill_color&quot;: [r,g,b]</span>
+<span class="linenos"> 91</span><span class="sd">    |            },...</span>
+<span class="linenos"> 92</span><span class="sd">    |        ]</span>
+<span class="linenos"> 93</span><span class="sd">    |    shape_ellipses: list</span>
+<span class="linenos"> 94</span><span class="sd">    |        Used to define the Matplotlib Ellipse shapes,</span>
+<span class="linenos"> 95</span><span class="sd">    |        [</span>
+<span class="linenos"> 96</span><span class="sd">    |           {</span>
+<span class="linenos"> 97</span><span class="sd">    |             &quot;center_x&quot;: float,</span>
+<span class="linenos"> 98</span><span class="sd">    |             &quot;center_y&quot;: float,</span>
+<span class="linenos"> 99</span><span class="sd">    |             &quot;width&quot;: float,</span>
+<span class="linenos">100</span><span class="sd">    |             &quot;height&quot;: float,</span>
+<span class="linenos">101</span><span class="sd">    |             &quot;angle_in_degrees_anti-clockwise&quot;: float (degre),</span>
+<span class="linenos">102</span><span class="sd">    |             &quot;outline_color&quot;: [r,g,b],</span>
+<span class="linenos">103</span><span class="sd">    |             &quot;fill_color&quot;: [r,g,b]</span>
+<span class="linenos">104</span><span class="sd">    |            },...</span>
+<span class="linenos">105</span><span class="sd">    |        ]</span>
+<span class="linenos">106</span><span class="sd">    |    shape_rectangles: list</span>
+<span class="linenos">107</span><span class="sd">    |        Used to define the Matplotlib Rectangle shapes,</span>
+<span class="linenos">108</span><span class="sd">    |        [</span>
+<span class="linenos">109</span><span class="sd">    |           {</span>
+<span class="linenos">110</span><span class="sd">    |             &quot;bottom_left_x&quot;: float,</span>
+<span class="linenos">111</span><span class="sd">    |             &quot;bottom_left_y&quot;: float,</span>
+<span class="linenos">112</span><span class="sd">    |             &quot;width&quot;: float,</span>
+<span class="linenos">113</span><span class="sd">    |             &quot;height&quot;: float,</span>
+<span class="linenos">114</span><span class="sd">    |             &quot;angle_in_degrees_anti-clockwise&quot;: float (degre),</span>
+<span class="linenos">115</span><span class="sd">    |             &quot;outline_color&quot;: [r,g,b],</span>
+<span class="linenos">116</span><span class="sd">    |             &quot;fill_color&quot;: [r,g,b]</span>
+<span class="linenos">117</span><span class="sd">    |            },...</span>
+<span class="linenos">118</span><span class="sd">    |        ]</span>
+<span class="linenos">119</span><span class="sd">    |    shape_polygons: list</span>
+<span class="linenos">120</span><span class="sd">    |        Used to define the Matplotlib Polygon shapes,</span>
+<span class="linenos">121</span><span class="sd">    |        [</span>
+<span class="linenos">122</span><span class="sd">    |           {</span>
+<span class="linenos">123</span><span class="sd">    |             &quot;xy&quot;: float,</span>
+<span class="linenos">124</span><span class="sd">    |             &quot;outline_color&quot;: [r,g,b],</span>
+<span class="linenos">125</span><span class="sd">    |             &quot;fill_color&quot;: [r,g,b]</span>
+<span class="linenos">126</span><span class="sd">    |            },...</span>
+<span class="linenos">127</span><span class="sd">    |        ]</span>
+<span class="linenos">128</span><span class="sd">    |    destinations: list</span>
+<span class="linenos">129</span><span class="sd">    |        Used to define the Destination objects,</span>
+<span class="linenos">130</span><span class="sd">    |        [</span>
+<span class="linenos">131</span><span class="sd">    |           {</span>
+<span class="linenos">132</span><span class="sd">    |             &quot;name&quot;: string,</span>
+<span class="linenos">133</span><span class="sd">    |             &quot;colors&quot;: [[r,g,b],...],</span>
+<span class="linenos">134</span><span class="sd">    |             &quot;excluded_colors&quot;: [[r,g,b],...],</span>
+<span class="linenos">135</span><span class="sd">    |             &quot;desired_velocity_from_color&quot;: [] or</span>
+<span class="linenos">136</span><span class="sd">    |             [</span>
+<span class="linenos">137</span><span class="sd">    |                {</span>
+<span class="linenos">138</span><span class="sd">    |                   &quot;color&quot;: [r,g,b],</span>
+<span class="linenos">139</span><span class="sd">    |                   &quot;desired_velocity&quot;: [ex,ey]</span>
+<span class="linenos">140</span><span class="sd">    |                },...</span>
+<span class="linenos">141</span><span class="sd">    |             ],</span>
+<span class="linenos">142</span><span class="sd">    |             &quot;velocity_scale&quot;: float,</span>
+<span class="linenos">143</span><span class="sd">    |             &quot;next_destination&quot;: null or string,</span>
+<span class="linenos">144</span><span class="sd">    |             &quot;next_domain&quot;: null or string,</span>
+<span class="linenos">145</span><span class="sd">    |             &quot;next_transit_box&quot;: null or [[x0,y0],...,[x3,y3]]</span>
+<span class="linenos">146</span><span class="sd">    |            },...</span>
+<span class="linenos">147</span><span class="sd">    |        ]</span>
+<span class="linenos">148</span><span class="sd">    |--------------------</span>
+<span class="linenos">149</span><span class="sd">    For each group of persons, required for the initialization process:</span>
+<span class="linenos">150</span><span class="sd">    |    nb:</span>
+<span class="linenos">151</span><span class="sd">    |        Number of people in the group</span>
+<span class="linenos">152</span><span class="sd">    |    domain:</span>
+<span class="linenos">153</span><span class="sd">    |        Name of the domain where people are located</span>
+<span class="linenos">154</span><span class="sd">    |    radius_distribution:</span>
+<span class="linenos">155</span><span class="sd">    |        Radius distribution used to create people</span>
+<span class="linenos">156</span><span class="sd">    |        [&quot;uniform&quot;,min,max] or [&quot;normal&quot;,mean,sigma]</span>
+<span class="linenos">157</span><span class="sd">    |    velocity_distribution:</span>
+<span class="linenos">158</span><span class="sd">    |        Velocity distribution used to create people</span>
+<span class="linenos">159</span><span class="sd">    |        [&quot;uniform&quot;,min,max] or [&quot;normal&quot;,mean,sigma]</span>
+<span class="linenos">160</span><span class="sd">    |    box:</span>
+<span class="linenos">161</span><span class="sd">    |        Boxe to randomly position people at initialization</span>
+<span class="linenos">162</span><span class="sd">    |        [ [x0,y0],[x1,y1],...]</span>
+<span class="linenos">163</span><span class="sd">    |    destination:</span>
+<span class="linenos">164</span><span class="sd">    |        Initial destination for the group</span>
+<span class="linenos">165</span><span class="sd">    |--------------------</span>
+<span class="linenos">166</span><span class="sd">    For each sensor:</span>
+<span class="linenos">167</span><span class="sd">    |    domain:</span>
+<span class="linenos">168</span><span class="sd">    |        Name of the domain where the sensor is located</span>
+<span class="linenos">169</span><span class="sd">    |    line:</span>
+<span class="linenos">170</span><span class="sd">    |        Segment through which incoming and outgoing flows are measured</span>
+<span class="linenos">171</span><span class="sd">    |        [x0,y0,x1,y1]</span>
+<span class="linenos">172</span><span class="sd">    |--------------------</span>
+<span class="linenos">173</span><span class="sd">    Tf: float</span>
+<span class="linenos">174</span><span class="sd">        Final time</span>
+<span class="linenos">175</span><span class="sd">    dt: float</span>
+<span class="linenos">176</span><span class="sd">        Time step</span>
+<span class="linenos">177</span><span class="sd">    drawper: integer</span>
+<span class="linenos">178</span><span class="sd">        The results will be displayed every &quot;drawper&quot; iterations</span>
+<span class="linenos">179</span><span class="sd">    projection_method: string</span>
+<span class="linenos">180</span><span class="sd">        Name of the projection method : cvxopt(default),</span>
+<span class="linenos">181</span><span class="sd">        mosek(a licence is needed) or uzawa</span>
+<span class="linenos">182</span><span class="sd">    dmax: float</span>
+<span class="linenos">183</span><span class="sd">        Maximum distance used to detect neighbors</span>
+<span class="linenos">184</span><span class="sd">    dmin_people: float</span>
+<span class="linenos">185</span><span class="sd">        Minimum distance allowed between individuals</span>
+<span class="linenos">186</span><span class="sd">    dmin_walls: float</span>
+<span class="linenos">187</span><span class="sd">        Minimum distance allowed between an individual and a wall</span>
+<span class="linenos">188</span><span class="sd">    plot_people: boolean</span>
+<span class="linenos">189</span><span class="sd">        If true, people are drawn</span>
+<span class="linenos">190</span><span class="sd">    plot_contacts: boolean</span>
+<span class="linenos">191</span><span class="sd">        If true, active contacts between people are drawn</span>
+<span class="linenos">192</span><span class="sd">    plot_desired_velocities: boolean</span>
+<span class="linenos">193</span><span class="sd">        If true, people desired velocities are drawn</span>
+<span class="linenos">194</span><span class="sd">    plot_velocities: boolean</span>
+<span class="linenos">195</span><span class="sd">        If true, people velocities are drawn</span>
+<span class="linenos">196</span><span class="sd">    plot_sensors: boolean</span>
+<span class="linenos">197</span><span class="sd">        If true, plot sensor lines on people graph and sensor data graph</span>
+<span class="linenos">198</span><span class="sd">    plot_paths: boolean</span>
+<span class="linenos">199</span><span class="sd">        If true, plot people paths</span>
+<span class="linenos">200</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">201</span>
+<span class="linenos">202</span><span class="n">prefix</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;prefix&quot;</span><span class="p">]</span>
+<span class="linenos">203</span><span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">prefix</span><span class="p">):</span>
+<span class="linenos">204</span>    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span>
+<span class="linenos">205</span><span class="n">seed</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;seed&quot;</span><span class="p">]</span>
+<span class="linenos">206</span><span class="n">with_graphes</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;with_graphes&quot;</span><span class="p">]</span>
+<span class="linenos">207</span><span class="n">json_domains</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;domains&quot;</span><span class="p">]</span>
+<span class="linenos">208</span><span class="c1"># print(&quot;===&gt; JSON data used to build the domains : &quot;,json_domains)</span>
+<span class="linenos">209</span><span class="n">json_people_init</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;people_init&quot;</span><span class="p">]</span>
+<span class="linenos">210</span><span class="c1"># print(&quot;===&gt; JSON data used to create groups : &quot;,json_people_init)</span>
+<span class="linenos">211</span><span class="n">json_sensors</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;sensors&quot;</span><span class="p">]</span>
+<span class="linenos">212</span><span class="c1"># print(&quot;===&gt; JSON data used to create sensors : &quot;,json_sensors)</span>
+<span class="linenos">213</span><span class="n">Tf</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;Tf&quot;</span><span class="p">]</span>
+<span class="linenos">214</span><span class="n">dt</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;dt&quot;</span><span class="p">]</span>
+<span class="linenos">215</span><span class="n">drawper</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;drawper&quot;</span><span class="p">]</span>
+<span class="linenos">216</span><span class="n">projection_method</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;projection_method&quot;</span><span class="p">]</span>
+<span class="linenos">217</span><span class="n">dmax</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;dmax&quot;</span><span class="p">]</span>
+<span class="linenos">218</span><span class="n">dmin_people</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;dmin_people&quot;</span><span class="p">]</span>
+<span class="linenos">219</span><span class="n">dmin_walls</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;dmin_walls&quot;</span><span class="p">]</span>
+<span class="linenos">220</span><span class="n">plot_p</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;plot_people&quot;</span><span class="p">]</span>
+<span class="linenos">221</span><span class="n">plot_c</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;plot_contacts&quot;</span><span class="p">]</span>
+<span class="linenos">222</span><span class="n">plot_v</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;plot_velocities&quot;</span><span class="p">]</span>
+<span class="linenos">223</span><span class="n">plot_vd</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;plot_desired_velocities&quot;</span><span class="p">]</span>
+<span class="linenos">224</span><span class="n">plot_s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;plot_sensors&quot;</span><span class="p">]</span>
+<span class="linenos">225</span><span class="n">plot_pa</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;plot_paths&quot;</span><span class="p">]</span>
+<span class="linenos">226</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Final time, Tf = &quot;</span><span class="p">,</span> <span class="n">Tf</span><span class="p">)</span>
+<span class="linenos">227</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Time step, dt = &quot;</span><span class="p">,</span> <span class="n">dt</span><span class="p">)</span>
+<span class="linenos">228</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; To draw the results each drawper iterations, drawper = &quot;</span><span class="p">,</span> <span class="n">drawper</span><span class="p">)</span>
+<span class="linenos">229</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Maximal distance to find neighbors, dmax = &quot;</span><span class="p">,</span> <span class="n">dmax</span><span class="p">,</span> <span class="s2">&quot;, example : 2*dt&quot;</span><span class="p">)</span>
+<span class="linenos">230</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Minimal distance between persons, dmin_people = &quot;</span><span class="p">,</span> <span class="n">dmin_people</span><span class="p">)</span>
+<span class="linenos">231</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Minimal distance between a person and a wall, dmin_walls = &quot;</span><span class="p">,</span> <span class="n">dmin_walls</span><span class="p">)</span>
+<span class="linenos">232</span>
+<span class="linenos">233</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">234</span><span class="sd">    Build the Domain objects</span>
+<span class="linenos">235</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">236</span><span class="n">domains</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="linenos">237</span>
+<span class="linenos">238</span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">jdom</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">json_domains</span><span class="p">):</span>
+<span class="linenos">239</span>    <span class="n">jname</span> <span class="o">=</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+<span class="linenos">240</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Build domain number &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot; : &quot;</span><span class="p">,</span> <span class="n">jname</span><span class="p">)</span>
+<span class="linenos">241</span>    <span class="n">jbg</span> <span class="o">=</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;background&quot;</span><span class="p">]</span>
+<span class="linenos">242</span>    <span class="n">jpx</span> <span class="o">=</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;px&quot;</span><span class="p">]</span>
+<span class="linenos">243</span>    <span class="n">jwidth</span> <span class="o">=</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;width&quot;</span><span class="p">]</span>
+<span class="linenos">244</span>    <span class="n">jheight</span> <span class="o">=</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;height&quot;</span><span class="p">]</span>
+<span class="linenos">245</span>    <span class="n">jwall_colors</span> <span class="o">=</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;wall_colors&quot;</span><span class="p">]</span>
+<span class="linenos">246</span>    <span class="k">if</span> <span class="p">(</span><span class="n">jbg</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">):</span>
+<span class="linenos">247</span>        <span class="n">dom</span> <span class="o">=</span> <span class="n">Domain</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">jname</span><span class="p">,</span> <span class="n">pixel_size</span><span class="o">=</span><span class="n">jpx</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">jwidth</span><span class="p">,</span>
+<span class="linenos">248</span>                     <span class="n">height</span><span class="o">=</span><span class="n">jheight</span><span class="p">,</span> <span class="n">wall_colors</span><span class="o">=</span><span class="n">jwall_colors</span><span class="p">)</span>
+<span class="linenos">249</span>    <span class="k">else</span><span class="p">:</span>
+<span class="linenos">250</span>        <span class="n">dom</span> <span class="o">=</span> <span class="n">Domain</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">jname</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="n">jbg</span><span class="p">,</span> <span class="n">pixel_size</span><span class="o">=</span><span class="n">jpx</span><span class="p">,</span>
+<span class="linenos">251</span>                     <span class="n">wall_colors</span><span class="o">=</span><span class="n">jwall_colors</span><span class="p">)</span>
+<span class="linenos">252</span>    <span class="c1"># To add lines : Line2D(xdata, ydata, linewidth)</span>
+<span class="linenos">253</span>    <span class="k">for</span> <span class="n">sl</span> <span class="ow">in</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;shape_lines&quot;</span><span class="p">]:</span>
+<span class="linenos">254</span>        <span class="n">line</span> <span class="o">=</span> <span class="n">Line2D</span><span class="p">(</span><span class="n">sl</span><span class="p">[</span><span class="s2">&quot;xx&quot;</span><span class="p">],</span> <span class="n">sl</span><span class="p">[</span><span class="s2">&quot;yy&quot;</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="n">sl</span><span class="p">[</span><span class="s2">&quot;linewidth&quot;</span><span class="p">])</span>
+<span class="linenos">255</span>        <span class="n">dom</span><span class="o">.</span><span class="n">add_shape</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">outline_color</span><span class="o">=</span><span class="n">sl</span><span class="p">[</span><span class="s2">&quot;outline_color&quot;</span><span class="p">],</span>
+<span class="linenos">256</span>                      <span class="n">fill_color</span><span class="o">=</span><span class="n">sl</span><span class="p">[</span><span class="s2">&quot;fill_color&quot;</span><span class="p">])</span>
+<span class="linenos">257</span>    <span class="c1"># To add circles : Circle( (center_x,center_y), radius )</span>
+<span class="linenos">258</span>    <span class="k">for</span> <span class="n">sc</span> <span class="ow">in</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;shape_circles&quot;</span><span class="p">]:</span>
+<span class="linenos">259</span>        <span class="n">circle</span> <span class="o">=</span> <span class="n">Circle</span><span class="p">((</span><span class="n">sc</span><span class="p">[</span><span class="s2">&quot;center_x&quot;</span><span class="p">],</span> <span class="n">sc</span><span class="p">[</span><span class="s2">&quot;center_y&quot;</span><span class="p">]),</span> <span class="n">sc</span><span class="p">[</span><span class="s2">&quot;radius&quot;</span><span class="p">])</span>
+<span class="linenos">260</span>        <span class="n">dom</span><span class="o">.</span><span class="n">add_shape</span><span class="p">(</span><span class="n">circle</span><span class="p">,</span> <span class="n">outline_color</span><span class="o">=</span><span class="n">sc</span><span class="p">[</span><span class="s2">&quot;outline_color&quot;</span><span class="p">],</span>
+<span class="linenos">261</span>                      <span class="n">fill_color</span><span class="o">=</span><span class="n">sc</span><span class="p">[</span><span class="s2">&quot;fill_color&quot;</span><span class="p">])</span>
+<span class="linenos">262</span>    <span class="c1"># To add ellipses : Ellipse( (center_x,center_y), width, height,</span>
+<span class="linenos">263</span>    <span class="c1">#                            angle_in_degrees_anti-clockwise )</span>
+<span class="linenos">264</span>    <span class="k">for</span> <span class="n">se</span> <span class="ow">in</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;shape_ellipses&quot;</span><span class="p">]:</span>
+<span class="linenos">265</span>        <span class="n">ellipse</span> <span class="o">=</span> <span class="n">Ellipse</span><span class="p">((</span><span class="n">se</span><span class="p">[</span><span class="s2">&quot;center_x&quot;</span><span class="p">],</span> <span class="n">se</span><span class="p">[</span><span class="s2">&quot;center_y&quot;</span><span class="p">]),</span>
+<span class="linenos">266</span>                          <span class="n">se</span><span class="p">[</span><span class="s2">&quot;width&quot;</span><span class="p">],</span> <span class="n">se</span><span class="p">[</span><span class="s2">&quot;height&quot;</span><span class="p">],</span>
+<span class="linenos">267</span>                          <span class="n">se</span><span class="p">[</span><span class="s2">&quot;angle_in_degrees_anti-clockwise&quot;</span><span class="p">])</span>
+<span class="linenos">268</span>        <span class="n">dom</span><span class="o">.</span><span class="n">add_shape</span><span class="p">(</span><span class="n">ellipse</span><span class="p">,</span> <span class="n">outline_color</span><span class="o">=</span><span class="n">se</span><span class="p">[</span><span class="s2">&quot;outline_color&quot;</span><span class="p">],</span>
+<span class="linenos">269</span>                      <span class="n">fill_color</span><span class="o">=</span><span class="n">se</span><span class="p">[</span><span class="s2">&quot;fill_color&quot;</span><span class="p">])</span>
+<span class="linenos">270</span>    <span class="c1"># To add rectangles : Rectangle( (bottom_left_x,bottom_left_y),</span>
+<span class="linenos">271</span>    <span class="c1">#                   width, height, angle_in_degrees_anti-clockwise )</span>
+<span class="linenos">272</span>    <span class="k">for</span> <span class="n">sr</span> <span class="ow">in</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;shape_rectangles&quot;</span><span class="p">]:</span>
+<span class="linenos">273</span>        <span class="n">rectangle</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">((</span><span class="n">sr</span><span class="p">[</span><span class="s2">&quot;bottom_left_x&quot;</span><span class="p">],</span> <span class="n">sr</span><span class="p">[</span><span class="s2">&quot;bottom_left_y&quot;</span><span class="p">]),</span>
+<span class="linenos">274</span>                              <span class="n">sr</span><span class="p">[</span><span class="s2">&quot;width&quot;</span><span class="p">],</span> <span class="n">sr</span><span class="p">[</span><span class="s2">&quot;height&quot;</span><span class="p">],</span>
+<span class="linenos">275</span>                              <span class="n">sr</span><span class="p">[</span><span class="s2">&quot;angle_in_degrees_anti-clockwise&quot;</span><span class="p">])</span>
+<span class="linenos">276</span>        <span class="n">dom</span><span class="o">.</span><span class="n">add_shape</span><span class="p">(</span><span class="n">rectangle</span><span class="p">,</span> <span class="n">outline_color</span><span class="o">=</span><span class="n">sr</span><span class="p">[</span><span class="s2">&quot;outline_color&quot;</span><span class="p">],</span>
+<span class="linenos">277</span>                      <span class="n">fill_color</span><span class="o">=</span><span class="n">sr</span><span class="p">[</span><span class="s2">&quot;fill_color&quot;</span><span class="p">])</span>
+<span class="linenos">278</span>    <span class="c1"># To add polygons : Polygon( [[x0,y0],[x1,y1],...] )</span>
+<span class="linenos">279</span>    <span class="k">for</span> <span class="n">spo</span> <span class="ow">in</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;shape_polygons&quot;</span><span class="p">]:</span>
+<span class="linenos">280</span>        <span class="n">polygon</span> <span class="o">=</span> <span class="n">Polygon</span><span class="p">(</span><span class="n">spo</span><span class="p">[</span><span class="s2">&quot;xy&quot;</span><span class="p">])</span>
+<span class="linenos">281</span>        <span class="n">dom</span><span class="o">.</span><span class="n">add_shape</span><span class="p">(</span><span class="n">polygon</span><span class="p">,</span> <span class="n">outline_color</span><span class="o">=</span><span class="n">spo</span><span class="p">[</span><span class="s2">&quot;outline_color&quot;</span><span class="p">],</span>
+<span class="linenos">282</span>                      <span class="n">fill_color</span><span class="o">=</span><span class="n">spo</span><span class="p">[</span><span class="s2">&quot;fill_color&quot;</span><span class="p">])</span>
+<span class="linenos">283</span>    <span class="c1"># To build the domain : background + shapes</span>
+<span class="linenos">284</span>    <span class="n">dom</span><span class="o">.</span><span class="n">build_domain</span><span class="p">()</span>
+<span class="linenos">285</span>    <span class="c1"># To add all the available destinations</span>
+<span class="linenos">286</span>    <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">dd</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;destinations&quot;</span><span class="p">]):</span>
+<span class="linenos">287</span>        <span class="n">desired_velocity_from_color</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos">288</span>        <span class="k">for</span> <span class="n">gg</span> <span class="ow">in</span> <span class="n">dd</span><span class="p">[</span><span class="s2">&quot;desired_velocity_from_color&quot;</span><span class="p">]:</span>
+<span class="linenos">289</span>            <span class="n">desired_velocity_from_color</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+<span class="linenos">290</span>                <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">gg</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">],</span> <span class="n">gg</span><span class="p">[</span><span class="s2">&quot;desired_velocity&quot;</span><span class="p">])))</span>
+<span class="linenos">291</span>        <span class="n">dest</span> <span class="o">=</span> <span class="n">Destination</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span> <span class="n">colors</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;colors&quot;</span><span class="p">],</span>
+<span class="linenos">292</span>                           <span class="n">excluded_colors</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;excluded_colors&quot;</span><span class="p">],</span>
+<span class="linenos">293</span>                           <span class="n">desired_velocity_from_color</span><span class="o">=</span><span class="n">desired_velocity_from_color</span><span class="p">,</span>
+<span class="linenos">294</span>                           <span class="n">velocity_scale</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;velocity_scale&quot;</span><span class="p">],</span>
+<span class="linenos">295</span>                           <span class="n">next_destination</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;next_destination&quot;</span><span class="p">],</span>
+<span class="linenos">296</span>                           <span class="n">next_domain</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;next_domain&quot;</span><span class="p">],</span>
+<span class="linenos">297</span>                           <span class="n">next_transit_box</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;next_transit_box&quot;</span><span class="p">])</span>
+<span class="linenos">298</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Destination : &quot;</span><span class="p">,</span> <span class="n">dest</span><span class="p">)</span>
+<span class="linenos">299</span>        <span class="n">dom</span><span class="o">.</span><span class="n">add_destination</span><span class="p">(</span><span class="n">dest</span><span class="p">)</span>
+<span class="linenos">300</span>        <span class="k">if</span> <span class="p">(</span><span class="n">with_graphes</span><span class="p">):</span>
+<span class="linenos">301</span>            <span class="n">dom</span><span class="o">.</span><span class="n">plot_desired_velocity</span><span class="p">(</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span> <span class="nb">id</span><span class="o">=</span><span class="mi">100</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="n">j</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="linenos">302</span>
+<span class="linenos">303</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Domain : &quot;</span><span class="p">,</span> <span class="n">dom</span><span class="p">)</span>
+<span class="linenos">304</span>    <span class="k">if</span> <span class="p">(</span><span class="n">with_graphes</span><span class="p">):</span>
+<span class="linenos">305</span>        <span class="n">dom</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">100</span><span class="o">*</span><span class="n">i</span><span class="p">)</span>
+<span class="linenos">306</span>        <span class="n">dom</span><span class="o">.</span><span class="n">plot_wall_dist</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">100</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="linenos">307</span>
+<span class="linenos">308</span>    <span class="n">domains</span><span class="p">[</span><span class="n">dom</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">dom</span>
+<span class="linenos">309</span>
+<span class="linenos">310</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; All domains = &quot;</span><span class="p">,</span> <span class="n">domains</span><span class="p">)</span>
+<span class="linenos">311</span>
+<span class="linenos">312</span>
+<span class="linenos">313</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">314</span><span class="sd">    To create the sensors to measure the pedestrian flows</span>
+<span class="linenos">315</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">316</span>
+<span class="linenos">317</span><span class="n">all_sensors</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="linenos">318</span><span class="k">for</span> <span class="n">domain_name</span> <span class="ow">in</span> <span class="n">domains</span><span class="p">:</span>
+<span class="linenos">319</span>    <span class="n">all_sensors</span><span class="p">[</span><span class="n">domain_name</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos">320</span><span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">json_sensors</span><span class="p">:</span>
+<span class="linenos">321</span>    <span class="n">s</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos">322</span>    <span class="n">s</span><span class="p">[</span><span class="s2">&quot;times&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos">323</span>    <span class="n">s</span><span class="p">[</span><span class="s2">&quot;xy&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos">324</span>    <span class="n">s</span><span class="p">[</span><span class="s2">&quot;dir&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos">325</span>    <span class="n">all_sensors</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="s2">&quot;domain&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="linenos">326</span>    <span class="c1"># print(&quot;===&gt; All sensors = &quot;,all_sensors)</span>
+<span class="linenos">327</span>
+<span class="linenos">328</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">329</span><span class="sd">    Initialization</span>
+<span class="linenos">330</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">331</span>
+<span class="linenos">332</span><span class="c1"># Current time</span>
+<span class="linenos">333</span><span class="n">t</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="linenos">334</span><span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="linenos">335</span>
+<span class="linenos">336</span><span class="c1"># Initialize people</span>
+<span class="linenos">337</span><span class="n">all_people</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="linenos">338</span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">peopledom</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">json_people_init</span><span class="p">):</span>
+<span class="linenos">339</span>    <span class="n">dom</span> <span class="o">=</span> <span class="n">domains</span><span class="p">[</span><span class="n">peopledom</span><span class="p">[</span><span class="s2">&quot;domain&quot;</span><span class="p">]]</span>
+<span class="linenos">340</span>    <span class="n">groups</span> <span class="o">=</span> <span class="n">peopledom</span><span class="p">[</span><span class="s2">&quot;groups&quot;</span><span class="p">]</span>
+<span class="linenos">341</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Group number &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;, domain = &quot;</span><span class="p">,</span> <span class="n">peopledom</span><span class="p">[</span><span class="s2">&quot;domain&quot;</span><span class="p">])</span>
+<span class="linenos">342</span>    <span class="n">people</span> <span class="o">=</span> <span class="n">people_initialization</span><span class="p">(</span><span class="n">dom</span><span class="p">,</span> <span class="n">groups</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span>
+<span class="linenos">343</span>                                   <span class="n">dmin_people</span><span class="o">=</span><span class="n">dmin_people</span><span class="p">,</span> <span class="n">dmin_walls</span><span class="o">=</span><span class="n">dmin_walls</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="n">seed</span><span class="p">,</span>
+<span class="linenos">344</span>                                   <span class="n">itermax</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">projection_method</span><span class="o">=</span><span class="n">projection_method</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos">345</span>    <span class="n">II</span><span class="p">,</span> <span class="n">JJ</span><span class="p">,</span> <span class="n">Vd</span> <span class="o">=</span> <span class="n">dom</span><span class="o">.</span><span class="n">people_desired_velocity</span><span class="p">(</span><span class="n">people</span><span class="p">[</span><span class="s2">&quot;xyrv&quot;</span><span class="p">],</span> <span class="n">people</span><span class="p">[</span><span class="s2">&quot;destinations&quot;</span><span class="p">])</span>
+<span class="linenos">346</span>    <span class="n">people</span><span class="p">[</span><span class="s2">&quot;Vd&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Vd</span>
+<span class="linenos">347</span>    <span class="k">for</span> <span class="n">ip</span><span class="p">,</span> <span class="n">pid</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">people</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]):</span>
+<span class="linenos">348</span>        <span class="n">people</span><span class="p">[</span><span class="s2">&quot;paths&quot;</span><span class="p">][</span><span class="n">pid</span><span class="p">]</span> <span class="o">=</span> <span class="n">people</span><span class="p">[</span><span class="s2">&quot;xyrv&quot;</span><span class="p">][</span><span class="n">ip</span><span class="p">,</span> <span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="linenos">349</span>    <span class="n">contacts</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="linenos">350</span>    <span class="k">if</span> <span class="p">(</span><span class="n">with_graphes</span><span class="p">):</span>
+<span class="linenos">351</span>        <span class="n">colors</span> <span class="o">=</span> <span class="n">people</span><span class="p">[</span><span class="s2">&quot;xyrv&quot;</span><span class="p">][:,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="linenos">352</span>        <span class="n">plot_people</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">20</span><span class="p">,</span> <span class="n">dom</span><span class="p">,</span> <span class="n">people</span><span class="p">,</span> <span class="n">contacts</span><span class="p">,</span> <span class="n">colors</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="n">t</span><span class="p">,</span>
+<span class="linenos">353</span>                    <span class="n">plot_people</span><span class="o">=</span><span class="n">plot_p</span><span class="p">,</span> <span class="n">plot_contacts</span><span class="o">=</span><span class="n">plot_c</span><span class="p">,</span>
+<span class="linenos">354</span>                    <span class="n">plot_velocities</span><span class="o">=</span><span class="n">plot_v</span><span class="p">,</span> <span class="n">plot_desired_velocities</span><span class="o">=</span><span class="n">plot_vd</span><span class="p">,</span>
+<span class="linenos">355</span>                    <span class="n">plot_sensors</span><span class="o">=</span><span class="n">plot_s</span><span class="p">,</span> <span class="n">sensors</span><span class="o">=</span><span class="n">all_sensors</span><span class="p">[</span><span class="n">dom</span><span class="o">.</span><span class="n">name</span><span class="p">],</span>
+<span class="linenos">356</span>                    <span class="n">savefig</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">prefix</span><span class="o">+</span><span class="n">dom</span><span class="o">.</span><span class="n">name</span><span class="o">+</span><span class="s1">&#39;_fig_&#39;</span> <span class="o">+</span>
+<span class="linenos">357</span>                    <span class="nb">str</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;.png&#39;</span><span class="p">)</span>
+<span class="linenos">358</span>    <span class="n">all_people</span><span class="p">[</span><span class="n">peopledom</span><span class="p">[</span><span class="s2">&quot;domain&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">people</span>
+<span class="linenos">359</span><span class="c1"># print(&quot;===&gt; All people = &quot;,all_people)</span>
+<span class="linenos">360</span>
+<span class="linenos">361</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">362</span><span class="sd">    Main loop</span>
+<span class="linenos">363</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">364</span>
+<span class="linenos">365</span><span class="n">cc</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="linenos">366</span><span class="n">draw</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="linenos">367</span>
+<span class="linenos">368</span><span class="k">while</span> <span class="p">(</span><span class="n">t</span> <span class="o">&lt;</span> <span class="n">Tf</span><span class="p">):</span>
+<span class="linenos">369</span>
+<span class="linenos">370</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">===&gt; Time = &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+<span class="linenos">371</span>
+<span class="linenos">372</span>    <span class="c1"># Compute people desired velocity</span>
+<span class="linenos">373</span>    <span class="k">for</span> <span class="n">idom</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">domains</span><span class="p">):</span>
+<span class="linenos">374</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Compute desired velocity for domain &quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+<span class="linenos">375</span>        <span class="n">dom</span> <span class="o">=</span> <span class="n">domains</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+<span class="linenos">376</span>        <span class="n">people</span> <span class="o">=</span> <span class="n">all_people</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+<span class="linenos">377</span>        <span class="n">II</span><span class="p">,</span> <span class="n">JJ</span><span class="p">,</span> <span class="n">Vd</span> <span class="o">=</span> <span class="n">dom</span><span class="o">.</span><span class="n">people_desired_velocity</span><span class="p">(</span>
+<span class="linenos">378</span>            <span class="n">people</span><span class="p">[</span><span class="s2">&quot;xyrv&quot;</span><span class="p">],</span>
+<span class="linenos">379</span>            <span class="n">people</span><span class="p">[</span><span class="s2">&quot;destinations&quot;</span><span class="p">])</span>
+<span class="linenos">380</span>        <span class="n">people</span><span class="p">[</span><span class="s2">&quot;Vd&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Vd</span>
+<span class="linenos">381</span>        <span class="n">people</span><span class="p">[</span><span class="s2">&quot;I&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">II</span>
+<span class="linenos">382</span>        <span class="n">people</span><span class="p">[</span><span class="s2">&quot;J&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">JJ</span>
+<span class="linenos">383</span>
+<span class="linenos">384</span>    <span class="c1"># Look at if there are people in the transit boxes</span>
+<span class="linenos">385</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Find people who have to be duplicated&quot;</span><span class="p">)</span>
+<span class="linenos">386</span>    <span class="n">virtual_people</span> <span class="o">=</span> <span class="n">find_duplicate_people</span><span class="p">(</span><span class="n">all_people</span><span class="p">,</span> <span class="n">domains</span><span class="p">)</span>
+<span class="linenos">387</span>    <span class="c1"># print(&quot;     virtual_people : &quot;,virtual_people)</span>
+<span class="linenos">388</span>
+<span class="linenos">389</span>    <span class="c1"># Projection</span>
+<span class="linenos">390</span>    <span class="k">for</span> <span class="n">idom</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">domains</span><span class="p">):</span>
+<span class="linenos">391</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Projection step for domain &quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+<span class="linenos">392</span>        <span class="n">dom</span> <span class="o">=</span> <span class="n">domains</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+<span class="linenos">393</span>        <span class="n">people</span> <span class="o">=</span> <span class="n">all_people</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+<span class="linenos">394</span>
+<span class="linenos">395</span>        <span class="k">try</span><span class="p">:</span>
+<span class="linenos">396</span>            <span class="n">xyrv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span>
+<span class="linenos">397</span>                <span class="p">(</span><span class="n">people</span><span class="p">[</span><span class="s2">&quot;xyrv&quot;</span><span class="p">],</span> <span class="n">virtual_people</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="s2">&quot;xyrv&quot;</span><span class="p">]))</span>
+<span class="linenos">398</span>            <span class="n">Vd</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span>
+<span class="linenos">399</span>                <span class="p">(</span><span class="n">people</span><span class="p">[</span><span class="s2">&quot;Vd&quot;</span><span class="p">],</span> <span class="n">virtual_people</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="s2">&quot;Vd&quot;</span><span class="p">]))</span>
+<span class="linenos">400</span>        <span class="k">except</span><span class="p">:</span>
+<span class="linenos">401</span>            <span class="n">xyrv</span> <span class="o">=</span> <span class="n">people</span><span class="p">[</span><span class="s2">&quot;xyrv&quot;</span><span class="p">]</span>
+<span class="linenos">402</span>            <span class="n">Vd</span> <span class="o">=</span> <span class="n">people</span><span class="p">[</span><span class="s2">&quot;Vd&quot;</span><span class="p">]</span>
+<span class="linenos">403</span>
+<span class="linenos">404</span>        <span class="k">if</span> <span class="p">(</span><span class="n">xyrv</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+<span class="linenos">405</span>
+<span class="linenos">406</span>            <span class="k">if</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">xyrv</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">xyrv</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+<span class="linenos">407</span>                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; ERROR : There are two identical lines </span><span class="se">\</span>
+<span class="linenos">408</span><span class="s2">                    in the&quot;</span><span class="p">)</span>
+<span class="linenos">409</span>                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;             array xyrv used to determine the </span><span class="se">\</span>
+<span class="linenos">410</span><span class="s2">                    contacts between&quot;</span><span class="p">)</span>
+<span class="linenos">411</span>                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;             individuals and this is not normal.&quot;</span><span class="p">)</span>
+<span class="linenos">412</span>                <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+<span class="linenos">413</span>
+<span class="linenos">414</span>            <span class="n">contacts</span> <span class="o">=</span> <span class="n">compute_contacts</span><span class="p">(</span><span class="n">dom</span><span class="p">,</span> <span class="n">xyrv</span><span class="p">,</span> <span class="n">dmax</span><span class="p">)</span>
+<span class="linenos">415</span>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;     Number of contacts: &quot;</span><span class="p">,</span> <span class="n">contacts</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="linenos">416</span>            <span class="n">info</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">P</span> <span class="o">=</span> <span class="n">projection</span><span class="p">(</span>
+<span class="linenos">417</span>                <span class="n">dt</span><span class="p">,</span> <span class="n">xyrv</span><span class="p">,</span>
+<span class="linenos">418</span>                <span class="n">contacts</span><span class="p">,</span> <span class="n">Vd</span><span class="p">,</span>
+<span class="linenos">419</span>                <span class="n">dmin_people</span><span class="o">=</span><span class="n">dmin_people</span><span class="p">,</span>
+<span class="linenos">420</span>                <span class="n">dmin_walls</span><span class="o">=</span><span class="n">dmin_walls</span><span class="p">,</span>
+<span class="linenos">421</span>                <span class="n">method</span><span class="o">=</span><span class="n">projection_method</span><span class="p">,</span>
+<span class="linenos">422</span>                <span class="n">log</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos">423</span>            <span class="n">nn</span> <span class="o">=</span> <span class="n">people</span><span class="p">[</span><span class="s2">&quot;xyrv&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="linenos">424</span>            <span class="n">all_people</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="s2">&quot;U&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">U</span><span class="p">[:</span><span class="n">nn</span><span class="p">,</span> <span class="p">:]</span>
+<span class="linenos">425</span>            <span class="n">virtual_people</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="s2">&quot;U&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">U</span><span class="p">[</span><span class="n">nn</span><span class="p">:,</span> <span class="p">:]</span>
+<span class="linenos">426</span>            <span class="n">all_people</span><span class="p">[</span><span class="n">name</span><span class="p">],</span> <span class="n">all_sensors</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">move_people</span><span class="p">(</span>
+<span class="linenos">427</span>                <span class="n">t</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span>
+<span class="linenos">428</span>                <span class="n">all_people</span><span class="p">[</span><span class="n">name</span><span class="p">],</span>
+<span class="linenos">429</span>                <span class="n">all_sensors</span><span class="p">[</span><span class="n">name</span><span class="p">])</span>
+<span class="linenos">430</span>
+<span class="linenos">431</span>        <span class="k">if</span> <span class="p">(</span><span class="n">draw</span> <span class="ow">and</span> <span class="n">with_graphes</span><span class="p">):</span>
+<span class="linenos">432</span>            <span class="c1"># coloring people according to their radius</span>
+<span class="linenos">433</span>            <span class="n">colors</span> <span class="o">=</span> <span class="n">all_people</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="s2">&quot;xyrv&quot;</span><span class="p">][:,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="linenos">434</span>            <span class="c1"># coloring people according to their destinations</span>
+<span class="linenos">435</span>            <span class="c1"># colors = np.zeros(all_people[name][&quot;xyrv&quot;].shape[0])</span>
+<span class="linenos">436</span>            <span class="c1"># for i,dest_name in enumerate(list(dom.destinations.keys())):</span>
+<span class="linenos">437</span>            <span class="c1">#    ind = np.where(all_people[name][&quot;destinations&quot;]==dest_name)[0]</span>
+<span class="linenos">438</span>            <span class="c1">#    if (ind.shape[0]&gt;0):</span>
+<span class="linenos">439</span>            <span class="c1">#        colors[ind]=i</span>
+<span class="linenos">440</span>            <span class="n">plot_people</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">idom</span><span class="o">+</span><span class="mi">20</span><span class="p">,</span> <span class="n">dom</span><span class="p">,</span> <span class="n">all_people</span><span class="p">[</span><span class="n">name</span><span class="p">],</span> <span class="n">contacts</span><span class="p">,</span>
+<span class="linenos">441</span>                        <span class="n">colors</span><span class="p">,</span> <span class="n">virtual_people</span><span class="o">=</span><span class="n">virtual_people</span><span class="p">[</span><span class="n">name</span><span class="p">],</span> <span class="n">time</span><span class="o">=</span><span class="n">t</span><span class="p">,</span>
+<span class="linenos">442</span>                        <span class="n">plot_people</span><span class="o">=</span><span class="n">plot_p</span><span class="p">,</span> <span class="n">plot_contacts</span><span class="o">=</span><span class="n">plot_c</span><span class="p">,</span>
+<span class="linenos">443</span>                        <span class="n">plot_paths</span><span class="o">=</span><span class="n">plot_pa</span><span class="p">,</span> <span class="n">plot_velocities</span><span class="o">=</span><span class="n">plot_v</span><span class="p">,</span>
+<span class="linenos">444</span>                        <span class="n">plot_desired_velocities</span><span class="o">=</span><span class="n">plot_vd</span><span class="p">,</span> <span class="n">plot_sensors</span><span class="o">=</span><span class="n">plot_s</span><span class="p">,</span>
+<span class="linenos">445</span>                        <span class="n">sensors</span><span class="o">=</span><span class="n">all_sensors</span><span class="p">[</span><span class="n">dom</span><span class="o">.</span><span class="n">name</span><span class="p">],</span> <span class="n">savefig</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="linenos">446</span>                        <span class="n">filename</span><span class="o">=</span><span class="n">prefix</span><span class="o">+</span><span class="n">dom</span><span class="o">.</span><span class="n">name</span><span class="o">+</span><span class="s1">&#39;_fig_&#39;</span>
+<span class="linenos">447</span>                        <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;.png&#39;</span><span class="p">)</span>
+<span class="linenos">448</span>            <span class="n">plt</span><span class="o">.</span><span class="n">pause</span><span class="p">(</span><span class="mf">0.05</span><span class="p">)</span>
+<span class="linenos">449</span>
+<span class="linenos">450</span>    <span class="c1"># Update people destinations</span>
+<span class="linenos">451</span>    <span class="n">all_people</span> <span class="o">=</span> <span class="n">people_update_destination</span><span class="p">(</span><span class="n">all_people</span><span class="p">,</span> <span class="n">domains</span><span class="p">,</span> <span class="n">dom</span><span class="o">.</span><span class="n">pixel_size</span><span class="p">)</span>
+<span class="linenos">452</span>
+<span class="linenos">453</span>    <span class="c1"># Print the number of persons for each domain</span>
+<span class="linenos">454</span>    <span class="k">for</span> <span class="n">idom</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">domains</span><span class="p">):</span>
+<span class="linenos">455</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Domain &quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot; nb of persons = &quot;</span><span class="p">,</span>
+<span class="linenos">456</span>              <span class="n">all_people</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="s2">&quot;xyrv&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="linenos">457</span>
+<span class="linenos">458</span>    <span class="n">t</span> <span class="o">+=</span> <span class="n">dt</span>
+<span class="linenos">459</span>    <span class="n">cc</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="linenos">460</span>    <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="linenos">461</span>    <span class="k">if</span> <span class="p">(</span><span class="n">cc</span> <span class="o">&gt;=</span> <span class="n">drawper</span><span class="p">):</span>
+<span class="linenos">462</span>        <span class="n">draw</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="linenos">463</span>        <span class="n">cc</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="linenos">464</span>    <span class="k">else</span><span class="p">:</span>
+<span class="linenos">465</span>        <span class="n">draw</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="linenos">466</span>
+<span class="linenos">467</span><span class="k">for</span> <span class="n">idom</span><span class="p">,</span> <span class="n">domain_name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">all_sensors</span><span class="p">):</span>
+<span class="linenos">468</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Plot sensors of domain &quot;</span><span class="p">,</span> <span class="n">domain_name</span><span class="p">)</span>
+<span class="linenos">469</span>    <span class="n">plot_sensors</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">idom</span><span class="o">+</span><span class="mi">40</span><span class="p">,</span> <span class="n">all_sensors</span><span class="p">[</span><span class="n">domain_name</span><span class="p">],</span> <span class="n">t</span><span class="p">,</span> <span class="n">savefig</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="linenos">470</span>                 <span class="n">filename</span><span class="o">=</span><span class="n">prefix</span><span class="o">+</span><span class="s1">&#39;sensor_&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;_&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;.png&#39;</span><span class="p">)</span>
+<span class="linenos">471</span>    <span class="n">plt</span><span class="o">.</span><span class="n">pause</span><span class="p">(</span><span class="mf">0.05</span><span class="p">)</span>
+<span class="linenos">472</span>
+<span class="linenos">473</span><span class="n">plt</span><span class="o">.</span><span class="n">ioff</span><span class="p">()</span>
+<span class="linenos">474</span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="linenos">475</span><span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2018, Sylvain Faure, Bertrand Maury.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    </div>
+  </body>
+</html>

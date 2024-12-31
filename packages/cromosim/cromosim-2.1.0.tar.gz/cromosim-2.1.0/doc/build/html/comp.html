@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Compartments &#8212; cromosim  documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/scrolls.css?v=4cde0d18" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Microscopic models : granular and social force model" href="micro.html" /> 
+  </head><body>
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="index.html"
+          title="back to the documentation overview"><span>Compartments</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="Related">
+        <a href="micro.html">&laquo; Microscopic models : granular and social force model</a> |
+        <a href="#">Compartments</a>
+      </div>
+      <div id="contentwrapper">
+        <div id="toc" role="navigation" aria-label="Table of contents">
+          <h3>Table of Contents</h3>
+          <ul>
+<li><a class="reference internal" href="#">Compartments</a><ul>
+<li><a class="reference internal" href="#cromosim.comp.iteration"><code class="docutils literal notranslate"><span class="pre">iteration()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.comp.plot_compt"><code class="docutils literal notranslate"><span class="pre">plot_compt()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <div role="main">
+        
+  <section id="module-cromosim.comp">
+<span id="compartments"></span><h1>Compartments<a class="headerlink" href="#module-cromosim.comp" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.comp.iteration">
+<span class="sig-prename descclassname"><span class="pre">cromosim.comp.</span></span><span class="sig-name descname"><span class="pre">iteration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">it</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Nrooms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">DoorRoomCapacity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">NPir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">NPrir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">NPwir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Nior</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">List_iOr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T_iOr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Flux</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/comp.html#iteration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.comp.iteration" title="Link to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>To run one iteration (which corresponds to 1 second) of the compartment         model. The compartments shall be identified to nodes of a network, those         nodes are connected by edges, which correspond to paths between nodesself.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>it: integer</strong></dt><dd><p>iteration number</p>
+</dd>
+<dt><strong>Nrooms: int</strong></dt><dd><p>number of rooms</p>
+</dd>
+<dt><strong>DoorRoomCapacity: numpy array</strong></dt><dd><p>capacities of each door (number of persons per second)</p>
+</dd>
+<dt><strong>NPir: numpy array</strong></dt><dd><p>numbers of persons for each room</p>
+</dd>
+<dt><strong>NPrir: numpy array</strong></dt><dd><p>inlets for each room</p>
+</dd>
+<dt><strong>NPwir: numpy array</strong></dt><dd><p>numbers of persons who are waiting to leave each room</p>
+</dd>
+<dt><strong>Nior: numpy array</strong></dt><dd><p>numbers of inlets for each room</p>
+</dd>
+<dt><strong>List_iOr: numpy array</strong></dt><dd><p>room numbers associated to the inlets for each room</p>
+</dd>
+<dt><strong>T_iOr: numpy array</strong></dt><dd><p>travel times to cross each room</p>
+</dd>
+<dt><strong>Flux: numpy array</strong></dt><dd><p>numbers of persons upstream the exits</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>Flux: numpy array</dt><dd><p>new numbers of persons upstream the exits</p>
+</dd>
+<dt>NPir: numpy array</dt><dd><p>new numbers of persons for each room</p>
+</dd>
+<dt>NPwir: numpy array</dt><dd><p>new numbers of persons who are waiting to leave each room</p>
+</dd>
+<dt>NPrir: numpy array</dt><dd><p>new inlets for each room</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.comp.plot_compt">
+<span class="sig-prename descclassname"><span class="pre">cromosim.comp.</span></span><span class="sig-name descname"><span class="pre">plot_compt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ifig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RoomNames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RoomCenters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">DoorCenters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CircAngles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">NPir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">NPrir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">NPwir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Nior</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">List_iOr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">area</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fig.png'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/comp.html#plot_compt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.comp.plot_compt" title="Link to this definition">¶</a></dt>
+<dd><p>To draw</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ifig: int</strong></dt><dd><p>figure number</p>
+</dd>
+<dt><strong>RoomNames: list</strong></dt><dd><p>number of rooms</p>
+</dd>
+<dt><strong>RoomCenters: numpy array</strong></dt><dd><p>coordinates of the room centers</p>
+</dd>
+<dt><strong>DoorCenters: numpy array</strong></dt><dd><p>coordinates of the door centers</p>
+</dd>
+<dt><strong>CircAngles: numpy array</strong></dt><dd><p>rotational angles of the half-disks localized at each door</p>
+</dd>
+<dt><strong>NPir: numpy array</strong></dt><dd><p>numbers of persons for each room</p>
+</dd>
+<dt><strong>NPrir: numpy array</strong></dt><dd><p>inlets for each room</p>
+</dd>
+<dt><strong>NPwir: numpy array</strong></dt><dd><p>numbers of persons who are waiting to leave each room</p>
+</dd>
+<dt><strong>Nior: numpy array</strong></dt><dd><p>numbers of inlets for each room</p>
+</dd>
+<dt><strong>List_iOr: numpy array</strong></dt><dd><p>room numbers associated to the inlets for each room</p>
+</dd>
+<dt><strong>dom: Domain</strong></dt><dd><p>contains everything for managing the domain</p>
+</dd>
+<dt><strong>area: float</strong></dt><dd><p>typical area size in m^2 of one individual</p>
+</dd>
+<dt><strong>savefig: boolean</strong></dt><dd><p>writes the figure as a png file if true</p>
+</dd>
+<dt><strong>filename: string</strong></dt><dd><p>png filename used to write the figure</p>
+</dd>
+<dt><strong>title: string</strong></dt><dd><p>title of the figure</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2018, Sylvain Faure, Bertrand Maury.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    </div>
+  </body>
+</html>

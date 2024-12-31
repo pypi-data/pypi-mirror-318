@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Classes used to build the computational domain &#8212; cromosim  documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/scrolls.css?v=4cde0d18" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Module for the Follow-the-Leader model" href="ftl.html" />
+    <link rel="prev" title="Discover the compartment model" href="example_comp.html" /> 
+  </head><body>
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="index.html"
+          title="back to the documentation overview"><span>Classes used to build the computational domain</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="Related">
+        <a href="example_comp.html">&laquo; Discover the compartment model</a> |
+        <a href="#">Classes used to build the computational domain</a>
+        | <a href="ftl.html">Module for the Follow-the-Leader model &raquo;</a>
+      </div>
+      <div id="contentwrapper">
+        <div id="toc" role="navigation" aria-label="Table of contents">
+          <h3>Table of Contents</h3>
+          <ul>
+<li><a class="reference internal" href="#">Classes used to build the computational domain</a><ul>
+<li><a class="reference internal" href="#destination-class-used-to-build-a-destination">Destination class used to build a destination</a><ul>
+<li><a class="reference internal" href="#cromosim.domain.Destination"><code class="docutils literal notranslate"><span class="pre">Destination</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#domain-class-used-to-build-the-computational-domain">Domain class used to build the computational domain</a><ul>
+<li><a class="reference internal" href="#cromosim.domain.Domain"><code class="docutils literal notranslate"><span class="pre">Domain</span></code></a><ul>
+<li><a class="reference internal" href="#cromosim.domain.Domain.add_destination"><code class="docutils literal notranslate"><span class="pre">Domain.add_destination()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.domain.Domain.add_shape"><code class="docutils literal notranslate"><span class="pre">Domain.add_shape()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.domain.Domain.build_domain"><code class="docutils literal notranslate"><span class="pre">Domain.build_domain()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.domain.Domain.compute_wall_distance"><code class="docutils literal notranslate"><span class="pre">Domain.compute_wall_distance()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.domain.Domain.people_desired_velocity"><code class="docutils literal notranslate"><span class="pre">Domain.people_desired_velocity()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.domain.Domain.people_target_distance"><code class="docutils literal notranslate"><span class="pre">Domain.people_target_distance()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.domain.Domain.people_wall_distance"><code class="docutils literal notranslate"><span class="pre">Domain.people_wall_distance()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.domain.Domain.plot"><code class="docutils literal notranslate"><span class="pre">Domain.plot()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.domain.Domain.plot_desired_velocity"><code class="docutils literal notranslate"><span class="pre">Domain.plot_desired_velocity()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.domain.Domain.plot_wall_dist"><code class="docutils literal notranslate"><span class="pre">Domain.plot_wall_dist()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.domain.Domain.save"><code class="docutils literal notranslate"><span class="pre">Domain.save()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <div role="main">
+        
+  <section id="classes-used-to-build-the-computational-domain">
+<h1>Classes used to build the computational domain<a class="headerlink" href="#classes-used-to-build-the-computational-domain" title="Link to this heading">¶</a></h1>
+<section id="destination-class-used-to-build-a-destination">
+<h2>Destination class used to build a destination<a class="headerlink" href="#destination-class-used-to-build-a-destination" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="cromosim.domain.Destination">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cromosim.domain.</span></span><span class="sig-name descname"><span class="pre">Destination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">excluded_colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desired_velocity_from_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmm_speed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">velocity_scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next_destination</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next_domain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">next_transit_box</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/domain.html#Destination"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.domain.Destination" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A Destination object contains all the information necessary to direct
+people to a goal, for example a door, a staircase or another floor.</p>
+<dl class="field-list">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>name: string</strong></dt><dd><p>name of the destination</p>
+</dd>
+<dt><strong>colors: list</strong></dt><dd><p>List of colors <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">[r,g,b],...</span> <span class="pre">]</span></code> drawing the destination.
+For example, a door can be represented by a red line.</p>
+</dd>
+<dt><strong>excluded_colors: list</strong></dt><dd><p>List of colors <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">[r,g,b],...</span> <span class="pre">]</span></code> representing obstacles that cannot be crossed for
+someone wishing to go to this destination: the walls of course, but
+possibly another objects only visible to the people concerned by
+this destination.</p>
+</dd>
+<dt><strong>desired_velocity_from_color: list</strong></dt><dd><p>Allows you to associate a desired velocity (vx, vy) with a
+color (r, g, b):</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">[r,g,b,</span> <span class="pre">vx,vy],...</span> <span class="pre">]</span></code>.</p>
+</div></blockquote>
+</dd>
+<dt><strong>fmm_speed: numpy array</strong></dt><dd><p>To automatically calculate the desired velocity leading to this
+destination, a Fast-Marching method is used to calculate the travel
+time to this destination. The opposite of the gradient of this time
+gives the desired velocity. This method solves the Eikonal equation
+<code class="docutils literal notranslate"><span class="pre">|grad</span> <span class="pre">D|</span> <span class="pre">=</span> <span class="pre">1/fmm_speed</span></code>. By changing the <code class="docutils literal notranslate"><span class="pre">fmm_speed</span></code> (1 everywhere by
+default) you can make certain areas slower and thus modify the
+desired velocity to divert people</p>
+</dd>
+<dt><strong>velocity_scale: float</strong></dt><dd><p>Multiplying coefficient used in front of the desired velocity vector
+(which is renormalized). For example on a staircase one may wish to
+reduce the speed of people.</p>
+</dd>
+<dt><strong>next_destination: string</strong></dt><dd><p>Name of the next destination. Useful for linking destinations one
+after the other</p>
+</dd>
+<dt><strong>next_domain: string</strong></dt><dd><p>Name of the next domain where is the next_destination</p>
+</dd>
+<dt><strong>next_transit_box: list</strong></dt><dd><p>The people in the current domain present in this box will be duplicated
+in the next_domain. A box is defined by four points:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">[x0,</span> <span class="pre">y0,</span> <span class="pre">x1,</span> <span class="pre">y1,</span> <span class="pre">x2,</span> <span class="pre">y2,</span> <span class="pre">x3,</span> <span class="pre">y3]</span></code></p>
+</div></blockquote>
+</dd>
+<dt><strong>distance: numpy array</strong></dt><dd><p>Distance (if <code class="docutils literal notranslate"><span class="pre">fmm_speed</span></code> == 1) or travel time (if <code class="docutils literal notranslate"><span class="pre">fmm_speed</span></code> != 1)
+to the destination</p>
+</dd>
+<dt><strong>desired_velocity_X: numpy array</strong></dt><dd><p>First component of the desired velocity</p>
+</dd>
+<dt><strong>desired_velocity_Y: numpy array</strong></dt><dd><p>Second component of the desired velocity</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Examples with one destination:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">cromosim/examples/domain/domain_room.py</span></code>
+<code class="docutils literal notranslate"><span class="pre">cromosim/examples/domain/domain_stadium.py</span></code></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Example with several destinations:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">cromosim/examples/domain/domain_shibuya_crossing.py</span></code></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Example with a destination described in a json file</dt><dd><p><code class="docutils literal notranslate"><span class="pre">cromosim/examples/domain/domain_from_json.py</span></code></p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+</section>
+<section id="domain-class-used-to-build-the-computational-domain">
+<h2>Domain class used to build the computational domain<a class="headerlink" href="#domain-class-used-to-build-the-computational-domain" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="cromosim.domain.Domain">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cromosim.domain.</span></span><span class="sig-name descname"><span class="pre">Domain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Domain'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'White'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pixel_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ymin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wall_colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[[0,</span> <span class="pre">0,</span> <span class="pre">0]]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">npzfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/domain.html#Domain"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.domain.Domain" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="simple">
+<dt>To define the computational domain:</dt><dd><ul class="simple">
+<li><p>a background: empty (white) or a PNG image which only
+contains the colors white, red (for the doors) and black
+(for the walls)</p></li>
+<li><dl class="simple">
+<dt>supplementary doors represented by matplotlib shapes:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">line2D</span></code></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>supplementary walls represented by matplotlib shapes:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">line2D</span></code>, <code class="docutils literal notranslate"><span class="pre">circle</span></code>, <code class="docutils literal notranslate"><span class="pre">ellipse</span></code>, <code class="docutils literal notranslate"><span class="pre">rectangle</span></code> or <code class="docutils literal notranslate"><span class="pre">polygon</span></code></p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<p>To compute the obstacle distances and the desired velocities</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>pixel_size: float</strong></dt><dd><p>size of a pixel in meters</p>
+</dd>
+<dt><strong>width: int</strong></dt><dd><p>width of the background image (number of pixels)</p>
+</dd>
+<dt><strong>height: int</strong></dt><dd><p>height of the background image (number of pixels)</p>
+</dd>
+<dt><strong>xmin: float</strong></dt><dd><p>x coordinate of the origin (bottom left corner)</p>
+</dd>
+<dt><strong>xmax: float</strong></dt><dd><p><code class="docutils literal notranslate"><span class="pre">xmax</span> <span class="pre">=</span> <span class="pre">xmin</span> <span class="pre">+</span> <span class="pre">width*pixel_size</span></code></p>
+</dd>
+<dt><strong>ymin: float</strong></dt><dd><p>y coordinate of the origin (bottom left corner)</p>
+</dd>
+<dt><strong>ymax: float</strong></dt><dd><p><code class="docutils literal notranslate"><span class="pre">ymax</span> <span class="pre">=</span> <span class="pre">ymin</span> <span class="pre">+</span> <span class="pre">height*pixel_size</span></code></p>
+</dd>
+<dt><strong>X: numpy array</strong></dt><dd><p>x coordinates (meshgrid)</p>
+</dd>
+<dt><strong>Y: numpy array</strong></dt><dd><p>y coordinates (meshgrid)</p>
+</dd>
+<dt><strong>image: numpy array</strong></dt><dd><p>pixel array (r,g,b,a)
+The Pillow image is converted to a numpy arrays, then
+using <code class="docutils literal notranslate"><span class="pre">flipud</span></code>
+the origin of the image is put it down left instead the
+top left</p>
+</dd>
+<dt><strong>image_red: numpy array</strong></dt><dd><p>red values of the image (r,g,b,a)</p>
+</dd>
+<dt><strong>image_green: numpy array</strong></dt><dd><p>green values of the image (r,g,b,a)</p>
+</dd>
+<dt><strong>image_blue: numpy array</strong></dt><dd><p>blue values of the image (r,g,b,a)</p>
+</dd>
+<dt><strong>wall_mask: numpy array</strong></dt><dd><p>boolean array: true for wall pixels</p>
+</dd>
+<dt><strong>wall_mask_id: numpy array</strong></dt><dd><p>wall pixel indices</p>
+</dd>
+<dt><strong>wall_distance: numpy array</strong></dt><dd><p>distance (m) to the wall</p>
+</dd>
+<dt><strong>wall_grad_X: numpy array</strong></dt><dd><p>gradient of the distance to the wall (first component)</p>
+</dd>
+<dt><strong>wall_grad_Y: numpy array</strong></dt><dd><p>gradient of the distance to the wall (second component)</p>
+</dd>
+<dt><strong>door_distance: numpy array</strong></dt><dd><p>distance (m) to the door</p>
+</dd>
+<dt><strong>desired_velocity_X: numpy array</strong></dt><dd><dl class="simple">
+<dt>opposite of the gradient of the distance to the door: desired velocity</dt><dd><p>(first component)</p>
+</dd>
+</dl>
+</dd>
+<dt><strong>desired_velocity_Y: numpy array</strong></dt><dd><p>opposite of the gradient of the distance to the door: desired velocity
+(second component)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cromosim.domain.Domain.add_destination" title="cromosim.domain.Domain.add_destination"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_destination</span></code></a>(dest)</p></td>
+<td><p>To compute the desired velocities to this destination and then to add this Destination object to this domain.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cromosim.domain.Domain.add_shape" title="cromosim.domain.Domain.add_shape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_shape</span></code></a>(shape[, outline_color, fill_color])</p></td>
+<td><p>To add a matplotlib shape: <code class="docutils literal notranslate"><span class="pre">line2D</span></code>, <code class="docutils literal notranslate"><span class="pre">circle</span></code>, <code class="docutils literal notranslate"><span class="pre">ellipse</span></code>, <code class="docutils literal notranslate"><span class="pre">rectangle</span></code> or <code class="docutils literal notranslate"><span class="pre">polygon</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cromosim.domain.Domain.build_domain" title="cromosim.domain.Domain.build_domain"><code class="xref py py-obj docutils literal notranslate"><span class="pre">build_domain</span></code></a>()</p></td>
+<td><p>To build the domain: reads the background image (if supplied)         and initializes all the color arrrays</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cromosim.domain.Domain.compute_wall_distance" title="cromosim.domain.Domain.compute_wall_distance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_wall_distance</span></code></a>()</p></td>
+<td><p>To compute the geodesic distance to the walls in using a fast-marching method</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cromosim.domain.Domain.people_desired_velocity" title="cromosim.domain.Domain.people_desired_velocity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">people_desired_velocity</span></code></a>(xyr, people_dest[, ...])</p></td>
+<td><p>This function determines people desired velocities from the desired         velocity array computed by Domain thanks to a fast-marching method.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cromosim.domain.Domain.people_target_distance" title="cromosim.domain.Domain.people_target_distance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">people_target_distance</span></code></a>(xyr, people_dest[, ...])</p></td>
+<td><p>This function determines distances to the current target for all people</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cromosim.domain.Domain.people_wall_distance" title="cromosim.domain.Domain.people_wall_distance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">people_wall_distance</span></code></a>(xyr[, II, JJ])</p></td>
+<td><p>This function determines distances to the nearest wall for all people</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cromosim.domain.Domain.plot" title="cromosim.domain.Domain.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>([id, title, savefig, filename, dpi])</p></td>
+<td><p>To plot the computational domain</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cromosim.domain.Domain.plot_desired_velocity" title="cromosim.domain.Domain.plot_desired_velocity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_desired_velocity</span></code></a>(destination_name[, ...])</p></td>
+<td><p>To plot the desired velocity</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cromosim.domain.Domain.plot_wall_dist" title="cromosim.domain.Domain.plot_wall_dist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_wall_dist</span></code></a>([step, scale, scale_units, ...])</p></td>
+<td><p>To plot the wall distances</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cromosim.domain.Domain.save" title="cromosim.domain.Domain.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(outfile)</p></td>
+<td><p>To save the content of the domain in a file</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>A simple room</dt><dd><p><code class="docutils literal notranslate"><span class="pre">cromosim/examples/domain/domain_room.py</span></code></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>A circular domain</dt><dd><p><code class="docutils literal notranslate"><span class="pre">cromosim/examples/domain/domain_stadium.py</span></code></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>A domain with several destinations</dt><dd><p><code class="docutils literal notranslate"><span class="pre">cromosim/examples/domain/domain_shibuya_crossing.py</span></code></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>A domain built from json file (where is its description)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">cromosim/examples/domain/domain_from_json.py</span></code></p>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="py method">
+<dt class="sig sig-object py" id="cromosim.domain.Domain.add_destination">
+<span class="sig-name descname"><span class="pre">add_destination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dest</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/domain.html#Domain.add_destination"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.domain.Domain.add_destination" title="Link to this definition">¶</a></dt>
+<dd><p>To compute the desired velocities to this destination
+and then to add this Destination object to this domain.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dest: Destination</strong></dt><dd><p>contains the Destination object which must be added to this domain</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cromosim.domain.Domain.add_shape">
+<span class="sig-name descname"><span class="pre">add_shape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outline_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">0]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[255,</span> <span class="pre">255,</span> <span class="pre">255]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/domain.html#Domain.add_shape"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.domain.Domain.add_shape" title="Link to this definition">¶</a></dt>
+<dd><p>To add a matplotlib shape:
+<code class="docutils literal notranslate"><span class="pre">line2D</span></code>, <code class="docutils literal notranslate"><span class="pre">circle</span></code>, <code class="docutils literal notranslate"><span class="pre">ellipse</span></code>, <code class="docutils literal notranslate"><span class="pre">rectangle</span></code> or <code class="docutils literal notranslate"><span class="pre">polygon</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>shape: matplotlib shape</strong></dt><dd><p>line2D, circle, ellipse, rectangle or polygon</p>
+</dd>
+<dt><strong>outline_color: list</strong></dt><dd><p>rgb color</p>
+</dd>
+<dt><strong>fill_color: list</strong></dt><dd><p>rgb color</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cromosim.domain.Domain.build_domain">
+<span class="sig-name descname"><span class="pre">build_domain</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/domain.html#Domain.build_domain"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.domain.Domain.build_domain" title="Link to this definition">¶</a></dt>
+<dd><p>To build the domain: reads the background image (if supplied)         and initializes all the color arrrays</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cromosim.domain.Domain.compute_wall_distance">
+<span class="sig-name descname"><span class="pre">compute_wall_distance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/domain.html#Domain.compute_wall_distance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.domain.Domain.compute_wall_distance" title="Link to this definition">¶</a></dt>
+<dd><p>To compute the geodesic distance to the walls in using
+a fast-marching method</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cromosim.domain.Domain.people_desired_velocity">
+<span class="sig-name descname"><span class="pre">people_desired_velocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xyr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">people_dest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">II</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">JJ</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/domain.html#Domain.people_desired_velocity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.domain.Domain.people_desired_velocity" title="Link to this definition">¶</a></dt>
+<dd><p>This function determines people desired velocities from the desired         velocity array computed by Domain thanks to a fast-marching method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>xyr: numpy array</strong></dt><dd><p>people coordinates and radius: x,y,r</p>
+</dd>
+<dt><strong>people_dest: list of string</strong></dt><dd><p>destination for each individual</p>
+</dd>
+<dt><strong>II: numpy array (None by default)</strong></dt><dd><p>people index i</p>
+</dd>
+<dt><strong>JJ: numpy array (None by default)</strong></dt><dd><p>people index j</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>II: numpy array</dt><dd><p>people index i</p>
+</dd>
+<dt>JJ: numpy array</dt><dd><p>people index j</p>
+</dd>
+<dt>Vd: numpy array</dt><dd><p>people desired velocity</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cromosim.domain.Domain.people_target_distance">
+<span class="sig-name descname"><span class="pre">people_target_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xyr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">people_dest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">II</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">JJ</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/domain.html#Domain.people_target_distance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.domain.Domain.people_target_distance" title="Link to this definition">¶</a></dt>
+<dd><p>This function determines distances to the current target for all people</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>xyr: numpy array</strong></dt><dd><p>people coordinates and radius: <code class="docutils literal notranslate"><span class="pre">x,y,r</span></code></p>
+</dd>
+<dt><strong>people_dest: list of string</strong></dt><dd><p>destination for each individual</p>
+</dd>
+<dt><strong>II: numpy array (None by default)</strong></dt><dd><p>people index <code class="docutils literal notranslate"><span class="pre">i</span></code></p>
+</dd>
+<dt><strong>JJ: numpy array (None by default)</strong></dt><dd><p>people index <code class="docutils literal notranslate"><span class="pre">j</span></code></p>
+</dd>
+<dt><strong>Returns</strong></dt><dd></dd>
+<dt><strong>——-</strong></dt><dd></dd>
+<dt><strong>II: numpy array</strong></dt><dd><p>people index i</p>
+</dd>
+<dt><strong>JJ: numpy array</strong></dt><dd><p>people index j</p>
+</dd>
+<dt><strong>D: numpy array</strong></dt><dd><p>distances to the current target</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cromosim.domain.Domain.people_wall_distance">
+<span class="sig-name descname"><span class="pre">people_wall_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xyr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">II</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">JJ</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/domain.html#Domain.people_wall_distance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.domain.Domain.people_wall_distance" title="Link to this definition">¶</a></dt>
+<dd><p>This function determines distances to the nearest wall for all people</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>xyr: numpy array</strong></dt><dd><p>people coordinates and radius: <code class="docutils literal notranslate"><span class="pre">x,y,r</span></code></p>
+</dd>
+<dt><strong>II: numpy array (None by default)</strong></dt><dd><p>people index <code class="docutils literal notranslate"><span class="pre">i</span></code></p>
+</dd>
+<dt><strong>JJ: numpy array (None by default)</strong></dt><dd><p>people index <code class="docutils literal notranslate"><span class="pre">j</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>II: numpy array</dt><dd><p>people index <code class="docutils literal notranslate"><span class="pre">i</span></code></p>
+</dd>
+<dt>JJ: numpy array</dt><dd><p>people index <code class="docutils literal notranslate"><span class="pre">j</span></code></p>
+</dd>
+<dt>D: numpy array</dt><dd><p>distances to the nearest wall</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cromosim.domain.Domain.plot">
+<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fig.png'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">150</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/domain.html#Domain.plot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.domain.Domain.plot" title="Link to this definition">¶</a></dt>
+<dd><p>To plot the computational domain</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>id: integer</strong></dt><dd><p>Figure id (number)</p>
+</dd>
+<dt><strong>title: string</strong></dt><dd><p>Figure title</p>
+</dd>
+<dt><strong>savefig: boolean</strong></dt><dd><p>writes the figure as a png file if true</p>
+</dd>
+<dt><strong>filename: string</strong></dt><dd><p>png filename used to write the figure</p>
+</dd>
+<dt><strong>dpi: integer</strong></dt><dd><p>number of pixel per inch for the saved figure</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cromosim.domain.Domain.plot_desired_velocity">
+<span class="sig-name descname"><span class="pre">plot_desired_velocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">destination_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inches'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fig.png'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">150</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/domain.html#Domain.plot_desired_velocity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.domain.Domain.plot_desired_velocity" title="Link to this definition">¶</a></dt>
+<dd><p>To plot the desired velocity</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>destination_name: string</strong></dt><dd><p>name of the considered destination</p>
+</dd>
+<dt><strong>step: integer</strong></dt><dd><p>draw an arrow every step pixels</p>
+</dd>
+<dt><strong>scale: integer</strong></dt><dd><p>scaling for the quiver arrows</p>
+</dd>
+<dt><strong>scale_units: string</strong></dt><dd><p>unit name for quiver arrow scaling</p>
+</dd>
+<dt><strong>id: integer</strong></dt><dd><p>Figure id (number)</p>
+</dd>
+<dt><strong>title: string</strong></dt><dd><p>Figure title</p>
+</dd>
+<dt><strong>savefig: boolean</strong></dt><dd><p>writes the figure as a png file if true</p>
+</dd>
+<dt><strong>filename: string</strong></dt><dd><p>png filename used to write the figure</p>
+</dd>
+<dt><strong>dpi: integer</strong></dt><dd><p>number of pixel per inch for the saved figure</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cromosim.domain.Domain.plot_wall_dist">
+<span class="sig-name descname"><span class="pre">plot_wall_dist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'inches'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fig.png'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">150</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/domain.html#Domain.plot_wall_dist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.domain.Domain.plot_wall_dist" title="Link to this definition">¶</a></dt>
+<dd><p>To plot the wall distances</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>id: integer</strong></dt><dd><p>Figure id (number)</p>
+</dd>
+<dt><strong>title: string</strong></dt><dd><p>Figure title</p>
+</dd>
+<dt><strong>savefig: boolean</strong></dt><dd><p>writes the figure as a png file if true</p>
+</dd>
+<dt><strong>filename: string</strong></dt><dd><p>png filename used to write the figure</p>
+</dd>
+<dt><strong>dpi: integer</strong></dt><dd><p>number of pixel per inch for the saved figure</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cromosim.domain.Domain.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outfile</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/domain.html#Domain.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.domain.Domain.save" title="Link to this definition">¶</a></dt>
+<dd><p>To save the content of the domain in a file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>outfile: string</strong></dt><dd><p>output filename</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2018, Sylvain Faure, Bertrand Maury.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    </div>
+  </body>
+</html>

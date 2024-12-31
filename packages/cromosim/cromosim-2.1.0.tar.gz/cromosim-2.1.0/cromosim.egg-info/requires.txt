@@ -1,0 +1,10 @@
+numpy
+scipy
+Pillow
+matplotlib
+numpydoc
+sphinx
+scikit-fmm
+cvxopt
+imageio
+pytest

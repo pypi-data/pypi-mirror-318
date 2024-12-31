@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Module for the Follow-the-Leader model &#8212; cromosim  documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/scrolls.css?v=4cde0d18" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Cellular automata" href="ca.html" />
+    <link rel="prev" title="Classes used to build the computational domain" href="domain.html" /> 
+  </head><body>
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="index.html"
+          title="back to the documentation overview"><span>Module for the Follow-the-Leader model</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="Related">
+        <a href="domain.html">&laquo; Classes used to build the computational domain</a> |
+        <a href="#">Module for the Follow-the-Leader model</a>
+        | <a href="ca.html">Cellular automata &raquo;</a>
+      </div>
+      <div id="contentwrapper">
+        <div id="toc" role="navigation" aria-label="Table of contents">
+          <h3>Table of Contents</h3>
+          <ul>
+<li><a class="reference internal" href="#">Module for the Follow-the-Leader model</a><ul>
+<li><a class="reference internal" href="#cromosim.ftl.plot_people"><code class="docutils literal notranslate"><span class="pre">plot_people()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.ftl.update_positions_ftl_order_1"><code class="docutils literal notranslate"><span class="pre">update_positions_ftl_order_1()</span></code></a></li>
+<li><a class="reference internal" href="#cromosim.ftl.update_positions_ftl_order_2"><code class="docutils literal notranslate"><span class="pre">update_positions_ftl_order_2()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        <div role="main">
+        
+  <section id="module-cromosim.ftl">
+<span id="module-for-the-follow-the-leader-model"></span><h1>Module for the Follow-the-Leader model<a class="headerlink" href="#module-cromosim.ftl" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.ftl.plot_people">
+<span class="sig-prename descclassname"><span class="pre">cromosim.ftl.</span></span><span class="sig-name descname"><span class="pre">plot_people</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">L</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tgrid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periodicity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V_leader</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed_fct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fig.png'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ifig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spheresize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">300</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/ftl.html#plot_people"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.ftl.plot_people" title="Link to this definition">¶</a></dt>
+<dd><p>To plot people and their individual paths</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>L: float</strong></dt><dd><p>width of the domain</p>
+</dd>
+<dt><strong>X: numpy array</strong></dt><dd><p>positions of the individuals</p>
+</dd>
+<dt><strong>data: numpy array</strong></dt><dd><p>coordinates of indviduals at each time</p>
+</dd>
+<dt><strong>tgrid: numpy array</strong></dt><dd><p>temporal discretization</p>
+</dd>
+<dt><strong>periodicity: boolean</strong></dt><dd><p>if true the domain is periodic</p>
+</dd>
+<dt><strong>V_leader: function</strong></dt><dd><p>leader velocity as a function of the time</p>
+</dd>
+<dt><strong>speed_fct: function</strong></dt><dd><p>speed as a function of the distance</p>
+</dd>
+<dt><strong>savefig: boolean</strong></dt><dd><p>writes the figure as a png file if true</p>
+</dd>
+<dt><strong>filename: string</strong></dt><dd><p>png filename used to write the figure</p>
+</dd>
+<dt><strong>ifig: int</strong></dt><dd><p>figure number</p>
+</dd>
+<dt><strong>spheresize: int</strong></dt><dd><p>size of the spheres used to represent the individuals</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.ftl.update_positions_ftl_order_1">
+<span class="sig-prename descclassname"><span class="pre">cromosim.ftl.</span></span><span class="sig-name descname"><span class="pre">update_positions_ftl_order_1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">L</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Phi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periodicity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V_leader</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/ftl.html#update_positions_ftl_order_1"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.ftl.update_positions_ftl_order_1" title="Link to this definition">¶</a></dt>
+<dd><p>To update the positions according to the follow the leader model (order 1)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>L: float</strong></dt><dd><p>width of the domain</p>
+</dd>
+<dt><strong>X: numpy array</strong></dt><dd><p>coordinates of the individuals</p>
+</dd>
+<dt><strong>t: float</strong></dt><dd><p>time</p>
+</dd>
+<dt><strong>dt: float</strong></dt><dd><p>time step</p>
+</dd>
+<dt><strong>Phi: function</strong></dt><dd><p>speed as a function of the distance</p>
+</dd>
+<dt><strong>periodicity: boolean</strong></dt><dd><p>if true the domain is periodic</p>
+</dd>
+<dt><strong>V_leader: function</strong></dt><dd><p>leader velocity as a function of the time</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>Xnew: numpy array</dt><dd><p>new coordinates of the individuals</p>
+</dd>
+<dt>V: numpy array</dt><dd><p>new velocities of the individuals</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cromosim.ftl.update_positions_ftl_order_2">
+<span class="sig-prename descclassname"><span class="pre">cromosim.ftl.</span></span><span class="sig-name descname"><span class="pre">update_positions_ftl_order_2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">L</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Phi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">periodicity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V_leader</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cromosim/ftl.html#update_positions_ftl_order_2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#cromosim.ftl.update_positions_ftl_order_2" title="Link to this definition">¶</a></dt>
+<dd><p>To update the positions according to the follow the leader model (order 2)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>L: float</strong></dt><dd><p>width of the domain</p>
+</dd>
+<dt><strong>X: numpy array</strong></dt><dd><p>coordinates of the individuals</p>
+</dd>
+<dt><strong>U: numpy array</strong></dt><dd><p>velocities of the individuals</p>
+</dd>
+<dt><strong>t: float</strong></dt><dd><p>time</p>
+</dd>
+<dt><strong>dt: float</strong></dt><dd><p>time step</p>
+</dd>
+<dt><strong>tau: float</strong></dt><dd><p>the actual velocity of an individual relaxes toward the velocity that         is associated to the current distance from the person in front of them         with a characteristic time tau</p>
+</dd>
+<dt><strong>Phi: function</strong></dt><dd><p>speed as a function of the distance</p>
+</dd>
+<dt><strong>periodicity: boolean</strong></dt><dd><p>if true the domain is periodic</p>
+</dd>
+<dt><strong>V_leader: function</strong></dt><dd><p>leader velocity as a function of the time</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>Xnew: numpy array</dt><dd><p>new coordinates of the individuals</p>
+</dd>
+<dt>Unew: numpy array</dt><dd><p>new velocities of the individuals</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2018, Sylvain Faure, Bertrand Maury.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    </div>
+  </body>
+</html>

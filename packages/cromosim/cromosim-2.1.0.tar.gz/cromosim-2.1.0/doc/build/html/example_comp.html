@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Discover the compartment model &#8212; cromosim  documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/scrolls.css?v=4cde0d18" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Classes used to build the computational domain" href="domain.html" />
+    <link rel="prev" title="Make a microscopic simulation" href="example_micro.html" /> 
+  </head><body>
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="index.html"
+          title="back to the documentation overview"><span>Discover the compartment model</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="Related">
+        <a href="example_micro.html">&laquo; Make a microscopic simulation</a> |
+        <a href="#">Discover the compartment model</a>
+        | <a href="domain.html">Classes used to build the computational domain &raquo;</a>
+      </div>
+      <div id="contentwrapper">
+        <div role="main">
+        
+  <section id="discover-the-compartment-model">
+<h1>Discover the compartment model<a class="headerlink" href="#discover-the-compartment-model" title="Link to this heading">¶</a></h1>
+<p>The models presented in this chapter are fundamentally different from all the other
+models in this book.
+This class of model does not aim at computing positions and velocities,
+but rather at describing the evolution of total amounts of people in specified
+compartments. The compartments shall be identified to nodes of a network, those
+nodes are connected by edges, which corresponds to paths between nodes.</p>
+<p>Reference : <a class="reference internal" href="index.html#mf2018" id="id1"><span>[MF2018]</span></a> Chapter 6.</p>
+<p>A compartment model example can be found in the directory</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">cromosim</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">compartments</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>and can be run with:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">compartments</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">json</span> <span class="nb">input</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<p>Results:</p>
+<br>
+<br>
+<video style="display:block; margin: 0 auto;" controls poster="_static/compartments.png" width="50%" height="auto">
+   <source src="_static/compartments.mp4" />
+</video>
+<br>
+<div align=center>
+  <i>Compartment model : evacuation</i>
+</div>
+<br>
+<br><p>Code:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">cromosim</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">compartments</span><span class="o">/</span><span class="n">compartments</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Authors:</span>
+<span class="c1">#     Sylvain Faure &lt;sylvain.faure@universite-paris-saclay.fr&gt;</span>
+<span class="c1">#     Bertrand Maury &lt;bertrand.maury@universite-paris-saclay.fr&gt;</span>
+<span class="c1">#</span>
+<span class="c1">#      cromosim/examples/compartments/compartments.py</span>
+<span class="c1">#      python compartments.py --json input.json</span>
+<span class="c1">#</span>
+<span class="c1"># License: GPL</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">optparse</span> <span class="kn">import</span> <span class="n">OptionParser</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Circle</span><span class="p">,</span> <span class="n">Ellipse</span><span class="p">,</span> <span class="n">Rectangle</span><span class="p">,</span> <span class="n">Polygon</span>
+<span class="kn">from</span> <span class="nn">matplotlib.lines</span> <span class="kn">import</span> <span class="n">Line2D</span>
+
+<span class="kn">from</span> <span class="nn">cromosim.domain</span> <span class="kn">import</span> <span class="n">Domain</span>
+<span class="kn">from</span> <span class="nn">cromosim.domain</span> <span class="kn">import</span> <span class="n">Destination</span>
+<span class="kn">from</span> <span class="nn">cromosim.comp</span> <span class="kn">import</span> <span class="n">plot_compt</span><span class="p">,</span> <span class="n">iteration</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    python compartments.py --json input.json</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="n">parser</span> <span class="o">=</span> <span class="n">OptionParser</span><span class="p">(</span><span class="n">usage</span><span class="o">=</span><span class="s2">&quot;usage: %prog [options] filename&quot;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s2">&quot;%prog 1.0&quot;</span><span class="p">)</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_option</span><span class="p">(</span><span class="s1">&#39;--json&#39;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s2">&quot;jsonfilename&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;input.json&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+                  <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Input json filename&quot;</span><span class="p">)</span>
+<span class="n">opt</span><span class="p">,</span> <span class="n">remainder</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; JSON filename = &quot;</span><span class="p">,</span> <span class="n">opt</span><span class="o">.</span><span class="n">jsonfilename</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">opt</span><span class="o">.</span><span class="n">jsonfilename</span><span class="p">)</span> <span class="k">as</span> <span class="n">json_file</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">input</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">json_file</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">json</span><span class="o">.</span><span class="n">JSONDecodeError</span> <span class="k">as</span> <span class="n">msg</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Failed to load json file &quot;</span><span class="p">,</span> <span class="n">opt</span><span class="o">.</span><span class="n">jsonfilename</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Check its content (https://fr.wikipedia.org/wiki/JavaScript_Object_Notation)&quot;</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get parameters from json file :</span>
+<span class="sd">    For the domain :</span>
+<span class="sd">    |    name: string</span>
+<span class="sd">    |        Domain name</span>
+<span class="sd">    |    background: string</span>
+<span class="sd">    |        Image file used as background</span>
+<span class="sd">    |    px: float</span>
+<span class="sd">    |        Pixel size in meters (also called space step)</span>
+<span class="sd">    |    width: integer</span>
+<span class="sd">    |        Domain width (equal to the width of the background image)</span>
+<span class="sd">    |    height: integer</span>
+<span class="sd">    |        Domain height (equal to the height of the background image)</span>
+<span class="sd">    |    wall_colors: list</span>
+<span class="sd">    |        rgb colors for walls</span>
+<span class="sd">    |        [ [r,g,b],[r,g,b],... ]</span>
+<span class="sd">    |    shape_lines: list</span>
+<span class="sd">    |        Used to define the Matplotlib Polyline shapes,</span>
+<span class="sd">    |        [</span>
+<span class="sd">    |          {</span>
+<span class="sd">    |             &quot;xx&quot;: [x0,x1,x2,...],</span>
+<span class="sd">    |             &quot;yy&quot;: [y0,y1,y2,...],</span>
+<span class="sd">    |             &quot;linewidth&quot;: float,</span>
+<span class="sd">    |             &quot;outline_color&quot;: [r,g,b],</span>
+<span class="sd">    |             &quot;fill_color&quot;: [r,g,b]</span>
+<span class="sd">    |          },...</span>
+<span class="sd">    |        ]</span>
+<span class="sd">    |    shape_circles: list</span>
+<span class="sd">    |        Used to define the Matplotlib Circle shapes,</span>
+<span class="sd">    |        [</span>
+<span class="sd">    |           {</span>
+<span class="sd">    |             &quot;center_x&quot;: float,</span>
+<span class="sd">    |             &quot;center_y&quot;: float,</span>
+<span class="sd">    |             &quot;radius&quot;: float,</span>
+<span class="sd">    |             &quot;outline_color&quot;: [r,g,b],</span>
+<span class="sd">    |             &quot;fill_color&quot;: [r,g,b]</span>
+<span class="sd">    |            },...</span>
+<span class="sd">    |        ]</span>
+<span class="sd">    |    shape_ellipses: list</span>
+<span class="sd">    |        Used to define the Matplotlib Ellipse shapes,</span>
+<span class="sd">    |        [</span>
+<span class="sd">    |           {</span>
+<span class="sd">    |             &quot;center_x&quot;: float,</span>
+<span class="sd">    |             &quot;center_y&quot;: float,</span>
+<span class="sd">    |             &quot;width&quot;: float,</span>
+<span class="sd">    |             &quot;height&quot;: float,</span>
+<span class="sd">    |             &quot;angle_in_degrees_anti-clockwise&quot;: float (degre),</span>
+<span class="sd">    |             &quot;outline_color&quot;: [r,g,b],</span>
+<span class="sd">    |             &quot;fill_color&quot;: [r,g,b]</span>
+<span class="sd">    |            },...</span>
+<span class="sd">    |        ]</span>
+<span class="sd">    |    shape_rectangles: list</span>
+<span class="sd">    |        Used to define the Matplotlib Rectangle shapes,</span>
+<span class="sd">    |        [</span>
+<span class="sd">    |           {</span>
+<span class="sd">    |             &quot;bottom_left_x&quot;: float,</span>
+<span class="sd">    |             &quot;bottom_left_y&quot;: float,</span>
+<span class="sd">    |             &quot;width&quot;: float,</span>
+<span class="sd">    |             &quot;height&quot;: float,</span>
+<span class="sd">    |             &quot;angle_in_degrees_anti-clockwise&quot;: float (degre),</span>
+<span class="sd">    |             &quot;outline_color&quot;: [r,g,b],</span>
+<span class="sd">    |             &quot;fill_color&quot;: [r,g,b]</span>
+<span class="sd">    |            },...</span>
+<span class="sd">    |        ]</span>
+<span class="sd">    |    shape_polygons: list</span>
+<span class="sd">    |        Used to define the Matplotlib Polygon shapes,</span>
+<span class="sd">    |        [</span>
+<span class="sd">    |           {</span>
+<span class="sd">    |             &quot;xy&quot;: float,</span>
+<span class="sd">    |             &quot;outline_color&quot;: [r,g,b],</span>
+<span class="sd">    |             &quot;fill_color&quot;: [r,g,b]</span>
+<span class="sd">    |            },...</span>
+<span class="sd">    |        ]</span>
+<span class="sd">    |    destinations: list</span>
+<span class="sd">    |        Used to define the Destination objects,</span>
+<span class="sd">    |        [</span>
+<span class="sd">    |           {</span>
+<span class="sd">    |             &quot;name&quot;: string,</span>
+<span class="sd">    |             &quot;colors&quot;: [[r,g,b],...],</span>
+<span class="sd">    |             &quot;excluded_colors&quot;: [[r,g,b],...],</span>
+<span class="sd">    |             &quot;desired_velocity_from_color&quot;: [] or</span>
+<span class="sd">    |             [</span>
+<span class="sd">    |                {</span>
+<span class="sd">    |                   &quot;color&quot;: [r,g,b],</span>
+<span class="sd">    |                   &quot;desired_velocity&quot;: [ex,ey]</span>
+<span class="sd">    |                },...</span>
+<span class="sd">    |             ],</span>
+<span class="sd">    |             &quot;velocity_scale&quot;: float,</span>
+<span class="sd">    |             &quot;next_destination&quot;: null or string,</span>
+<span class="sd">    |             &quot;next_domain&quot;: null or string,</span>
+<span class="sd">    |             &quot;next_transit_box&quot;: null or [[x0,y0],...,[x3,y3]]</span>
+<span class="sd">    |            },...</span>
+<span class="sd">    |        ]</span>
+<span class="sd">    |--------------------</span>
+<span class="sd">    prefix: string</span>
+<span class="sd">        Folder name to store the results</span>
+<span class="sd">    seed: integer</span>
+<span class="sd">        Random seed which can be used to reproduce a random selection if &gt;0</span>
+<span class="sd">    Np_rooms: integer</span>
+<span class="sd">        Number of persons per rooms</span>
+<span class="sd">    area : float</span>
+<span class="sd">    Nrooms</span>
+<span class="sd">    RoomNames</span>
+<span class="sd">    RoomInlets</span>
+<span class="sd">    DoorCenters</span>
+<span class="sd">    RoomCenters</span>
+<span class="sd">    DoorRoomCapacity</span>
+<span class="sd">    Nsecondes</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="n">jdom</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;domain&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; JSON data used to build the domain : &quot;</span><span class="p">,</span> <span class="n">jdom</span><span class="p">)</span>
+<span class="n">prefix</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;prefix&quot;</span><span class="p">]</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">prefix</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span>
+<span class="n">seed</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;seed&quot;</span><span class="p">]</span>
+<span class="n">Np_rooms</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;Np_rooms&quot;</span><span class="p">]</span>
+<span class="n">area</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;area&quot;</span><span class="p">]</span>
+<span class="n">RoomNames</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;RoomNames&quot;</span><span class="p">]</span>
+<span class="n">Np_rooms</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">input</span><span class="p">[</span><span class="s2">&quot;Np_rooms&quot;</span><span class="p">])</span>
+<span class="n">RoomInlets</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;RoomInlets&quot;</span><span class="p">]</span>
+<span class="n">TravelTimeWeights</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;TravelTimeWeights&quot;</span><span class="p">]</span>
+<span class="n">DoorCenters</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">input</span><span class="p">[</span><span class="s2">&quot;DoorCenters&quot;</span><span class="p">])</span>
+<span class="n">RoomCenters</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">input</span><span class="p">[</span><span class="s2">&quot;RoomCenters&quot;</span><span class="p">])</span>
+<span class="n">CircAngles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">input</span><span class="p">[</span><span class="s2">&quot;CircAngles&quot;</span><span class="p">])</span>
+<span class="n">DoorRoomCapacity</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;DoorRoomCapacity&quot;</span><span class="p">]</span>
+<span class="n">Nsecondes</span> <span class="o">=</span> <span class="nb">input</span><span class="p">[</span><span class="s2">&quot;Nsecondes&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Number of persons per rooms : &quot;</span><span class="p">,</span> <span class="n">Np_rooms</span><span class="p">)</span>
+<span class="n">Np</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">Np_rooms</span><span class="p">:</span>
+    <span class="n">Np</span> <span class="o">+=</span> <span class="n">n</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Number of persons : &quot;</span><span class="p">,</span> <span class="n">Np</span><span class="p">)</span>
+<span class="n">Nrooms</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">RoomNames</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Number of rooms : &quot;</span><span class="p">,</span> <span class="n">Nrooms</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Capacity of each exit door : &quot;</span><span class="p">,</span> <span class="n">DoorRoomCapacity</span><span class="p">)</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Build the Domain objects</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="n">jname</span> <span class="o">=</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Build domain &quot;</span><span class="p">,</span> <span class="n">jname</span><span class="p">)</span>
+<span class="n">jbg</span> <span class="o">=</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;background&quot;</span><span class="p">]</span>
+<span class="n">jpx</span> <span class="o">=</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;px&quot;</span><span class="p">]</span>
+<span class="n">jwidth</span> <span class="o">=</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;width&quot;</span><span class="p">]</span>
+<span class="n">jheight</span> <span class="o">=</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;height&quot;</span><span class="p">]</span>
+<span class="n">jwall_colors</span> <span class="o">=</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;wall_colors&quot;</span><span class="p">]</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">jbg</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">):</span>
+    <span class="n">dom</span> <span class="o">=</span> <span class="n">Domain</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">jname</span><span class="p">,</span> <span class="n">pixel_size</span><span class="o">=</span><span class="n">jpx</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">jwidth</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">jheight</span><span class="p">,</span>
+                 <span class="n">wall_colors</span><span class="o">=</span><span class="n">jwall_colors</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">dom</span> <span class="o">=</span> <span class="n">Domain</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">jname</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="n">jbg</span><span class="p">,</span> <span class="n">pixel_size</span><span class="o">=</span><span class="n">jpx</span><span class="p">,</span>
+                 <span class="n">wall_colors</span><span class="o">=</span><span class="n">jwall_colors</span><span class="p">)</span>
+<span class="c1"># To add lines : Line2D(xdata, ydata, linewidth)</span>
+<span class="k">for</span> <span class="n">sl</span> <span class="ow">in</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;shape_lines&quot;</span><span class="p">]:</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">Line2D</span><span class="p">(</span><span class="n">sl</span><span class="p">[</span><span class="s2">&quot;xx&quot;</span><span class="p">],</span> <span class="n">sl</span><span class="p">[</span><span class="s2">&quot;yy&quot;</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="n">sl</span><span class="p">[</span><span class="s2">&quot;linewidth&quot;</span><span class="p">])</span>
+    <span class="n">dom</span><span class="o">.</span><span class="n">add_shape</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">outline_color</span><span class="o">=</span><span class="n">sl</span><span class="p">[</span><span class="s2">&quot;outline_color&quot;</span><span class="p">],</span>
+                  <span class="n">fill_color</span><span class="o">=</span><span class="n">sl</span><span class="p">[</span><span class="s2">&quot;fill_color&quot;</span><span class="p">])</span>
+<span class="c1"># To add circles : Circle( (center_x,center_y), radius )</span>
+<span class="k">for</span> <span class="n">sc</span> <span class="ow">in</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;shape_circles&quot;</span><span class="p">]:</span>
+    <span class="n">circle</span> <span class="o">=</span> <span class="n">Circle</span><span class="p">((</span><span class="n">sc</span><span class="p">[</span><span class="s2">&quot;center_x&quot;</span><span class="p">],</span> <span class="n">sc</span><span class="p">[</span><span class="s2">&quot;center_y&quot;</span><span class="p">]),</span> <span class="n">sc</span><span class="p">[</span><span class="s2">&quot;radius&quot;</span><span class="p">])</span>
+    <span class="n">dom</span><span class="o">.</span><span class="n">add_shape</span><span class="p">(</span><span class="n">circle</span><span class="p">,</span> <span class="n">outline_color</span><span class="o">=</span><span class="n">sc</span><span class="p">[</span><span class="s2">&quot;outline_color&quot;</span><span class="p">],</span>
+                  <span class="n">fill_color</span><span class="o">=</span><span class="n">sc</span><span class="p">[</span><span class="s2">&quot;fill_color&quot;</span><span class="p">])</span>
+<span class="c1"># To add ellipses : Ellipse( (center_x,center_y), width, height,</span>
+<span class="c1">#                            angle_in_degrees_anti-clockwise )</span>
+<span class="k">for</span> <span class="n">se</span> <span class="ow">in</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;shape_ellipses&quot;</span><span class="p">]:</span>
+    <span class="n">ellipse</span> <span class="o">=</span> <span class="n">Ellipse</span><span class="p">((</span><span class="n">se</span><span class="p">[</span><span class="s2">&quot;center_x&quot;</span><span class="p">],</span> <span class="n">se</span><span class="p">[</span><span class="s2">&quot;center_y&quot;</span><span class="p">]),</span>
+                      <span class="n">se</span><span class="p">[</span><span class="s2">&quot;width&quot;</span><span class="p">],</span> <span class="n">se</span><span class="p">[</span><span class="s2">&quot;height&quot;</span><span class="p">],</span>
+                      <span class="n">se</span><span class="p">[</span><span class="s2">&quot;angle_in_degrees_anti-clockwise&quot;</span><span class="p">])</span>
+    <span class="n">dom</span><span class="o">.</span><span class="n">add_shape</span><span class="p">(</span><span class="n">ellipse</span><span class="p">,</span> <span class="n">outline_color</span><span class="o">=</span><span class="n">se</span><span class="p">[</span><span class="s2">&quot;outline_color&quot;</span><span class="p">],</span>
+                  <span class="n">fill_color</span><span class="o">=</span><span class="n">se</span><span class="p">[</span><span class="s2">&quot;fill_color&quot;</span><span class="p">])</span>
+<span class="c1"># To add rectangles : Rectangle( (bottom_left_x,bottom_left_y), width, height,</span>
+<span class="c1">#                                 angle_in_degrees_anti-clockwise )</span>
+<span class="k">for</span> <span class="n">sr</span> <span class="ow">in</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;shape_rectangles&quot;</span><span class="p">]:</span>
+    <span class="n">rectangle</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">((</span><span class="n">sr</span><span class="p">[</span><span class="s2">&quot;bottom_left_x&quot;</span><span class="p">],</span> <span class="n">sr</span><span class="p">[</span><span class="s2">&quot;bottom_left_y&quot;</span><span class="p">]),</span>
+                          <span class="n">sr</span><span class="p">[</span><span class="s2">&quot;width&quot;</span><span class="p">],</span> <span class="n">sr</span><span class="p">[</span><span class="s2">&quot;height&quot;</span><span class="p">],</span>
+                          <span class="n">sr</span><span class="p">[</span><span class="s2">&quot;angle_in_degrees_anti-clockwise&quot;</span><span class="p">])</span>
+    <span class="n">dom</span><span class="o">.</span><span class="n">add_shape</span><span class="p">(</span><span class="n">rectangle</span><span class="p">,</span> <span class="n">outline_color</span><span class="o">=</span><span class="n">sr</span><span class="p">[</span><span class="s2">&quot;outline_color&quot;</span><span class="p">],</span>
+                  <span class="n">fill_color</span><span class="o">=</span><span class="n">sr</span><span class="p">[</span><span class="s2">&quot;fill_color&quot;</span><span class="p">])</span>
+<span class="c1"># To add polygons : Polygon( [[x0,y0],[x1,y1],...] )</span>
+<span class="k">for</span> <span class="n">spo</span> <span class="ow">in</span> <span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;shape_polygons&quot;</span><span class="p">]:</span>
+    <span class="n">polygon</span> <span class="o">=</span> <span class="n">Polygon</span><span class="p">(</span><span class="n">spo</span><span class="p">[</span><span class="s2">&quot;xy&quot;</span><span class="p">])</span>
+    <span class="n">dom</span><span class="o">.</span><span class="n">add_shape</span><span class="p">(</span><span class="n">polygon</span><span class="p">,</span> <span class="n">outline_color</span><span class="o">=</span><span class="n">spo</span><span class="p">[</span><span class="s2">&quot;outline_color&quot;</span><span class="p">],</span>
+                  <span class="n">fill_color</span><span class="o">=</span><span class="n">spo</span><span class="p">[</span><span class="s2">&quot;fill_color&quot;</span><span class="p">])</span>
+<span class="c1"># To build the domain : background + shapes</span>
+<span class="n">dom</span><span class="o">.</span><span class="n">build_domain</span><span class="p">()</span>
+<span class="c1"># To add all the available destinations</span>
+<span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">dd</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">jdom</span><span class="p">[</span><span class="s2">&quot;destinations&quot;</span><span class="p">]):</span>
+    <span class="n">desired_velocity_from_color</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">gg</span> <span class="ow">in</span> <span class="n">dd</span><span class="p">[</span><span class="s2">&quot;desired_velocity_from_color&quot;</span><span class="p">]:</span>
+        <span class="n">desired_velocity_from_color</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">gg</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">],</span> <span class="n">gg</span><span class="p">[</span><span class="s2">&quot;desired_velocity&quot;</span><span class="p">])))</span>
+    <span class="n">dest</span> <span class="o">=</span> <span class="n">Destination</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span> <span class="n">colors</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;colors&quot;</span><span class="p">],</span>
+                       <span class="n">excluded_colors</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;excluded_colors&quot;</span><span class="p">],</span>
+                       <span class="n">desired_velocity_from_color</span><span class="o">=</span><span class="n">desired_velocity_from_color</span><span class="p">,</span>
+                       <span class="n">velocity_scale</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;velocity_scale&quot;</span><span class="p">],</span>
+                       <span class="n">next_destination</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;next_destination&quot;</span><span class="p">],</span>
+                       <span class="n">next_domain</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;next_domain&quot;</span><span class="p">],</span>
+                       <span class="n">next_transit_box</span><span class="o">=</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;next_transit_box&quot;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Destination : &quot;</span><span class="p">,</span> <span class="n">dest</span><span class="p">)</span>
+    <span class="n">dom</span><span class="o">.</span><span class="n">add_destination</span><span class="p">(</span><span class="n">dest</span><span class="p">)</span>
+
+    <span class="n">dom</span><span class="o">.</span><span class="n">plot_desired_velocity</span><span class="p">(</span><span class="n">dd</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span> <span class="nb">id</span><span class="o">=</span><span class="mi">10</span><span class="o">+</span><span class="n">j</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Domain : &quot;</span><span class="p">,</span> <span class="n">dom</span><span class="p">)</span>
+
+<span class="n">dom</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">dom</span><span class="o">.</span><span class="n">plot_wall_dist</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+
+
+<span class="c1"># Maximal number of inlets for a room</span>
+<span class="n">NiorMax</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># Number of inlets for each room</span>
+<span class="n">Nior</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">ri</span> <span class="ow">in</span> <span class="n">RoomInlets</span><span class="p">:</span>
+    <span class="n">NiorMax</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">NiorMax</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ri</span><span class="p">))</span>
+    <span class="n">Nior</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ri</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Maximal number of inlets for a room : &quot;</span><span class="p">,</span> <span class="n">NiorMax</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;===&gt; Number of inlets for each room : &quot;</span><span class="p">,</span> <span class="n">Nior</span><span class="p">)</span>
+
+<span class="c1"># Room numbers associate to the inlets for each room</span>
+<span class="n">List_iOr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">Nrooms</span><span class="p">,</span> <span class="n">NiorMax</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ri</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">RoomInlets</span><span class="p">):</span>
+    <span class="n">List_iOr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">ri</span><span class="p">)]</span> <span class="o">=</span> <span class="n">ri</span>
+<span class="c1"># print(&quot;===&gt; Room numbers associate to the inlets for each room&quot;,List_iOr)</span>
+
+<span class="c1"># Compute travel times :</span>
+<span class="n">T_iOr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">Nrooms</span><span class="p">,</span> <span class="n">NiorMax</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">ir</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">Nrooms</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">Nior</span><span class="p">[</span><span class="n">ir</span><span class="p">]):</span>
+        <span class="n">jr</span> <span class="o">=</span> <span class="n">List_iOr</span><span class="p">[</span><span class="n">ir</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span>
+        <span class="n">ij_exit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">rint</span><span class="p">(</span><span class="n">DoorCenters</span><span class="p">[</span><span class="n">ir</span><span class="p">,</span> <span class="p">:</span><span class="mi">2</span><span class="p">]</span><span class="o">/</span><span class="n">dom</span><span class="o">.</span><span class="n">pixel_size</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+        <span class="n">ij_entrance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">rint</span><span class="p">(</span><span class="n">DoorCenters</span><span class="p">[</span><span class="n">jr</span><span class="p">,</span> <span class="p">:</span><span class="mi">2</span><span class="p">]</span><span class="o">/</span><span class="n">dom</span><span class="o">.</span><span class="n">pixel_size</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+        <span class="n">T_iOr</span><span class="p">[</span><span class="n">ir</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span>
+            <span class="n">dom</span><span class="o">.</span><span class="n">destinations</span><span class="p">[</span><span class="s2">&quot;door&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">ij_entrance</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">ij_entrance</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">-</span>
+            <span class="n">dom</span><span class="o">.</span><span class="n">destinations</span><span class="p">[</span><span class="s2">&quot;door&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">ij_exit</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">ij_exit</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+        <span class="n">T_iOr</span><span class="p">[</span><span class="n">ir</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">TravelTimeWeights</span><span class="p">[</span><span class="n">ir</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">T_iOr</span><span class="p">[</span><span class="n">ir</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Travel times : &quot;</span><span class="p">,</span> <span class="n">T_iOr</span><span class="p">)</span>
+
+<span class="n">NPrir</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">Nrooms</span><span class="p">,</span> <span class="n">NiorMax</span><span class="p">])</span>
+
+<span class="c1"># Number of persons for each room</span>
+<span class="n">NPir</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">Nsecondes</span><span class="p">,</span> <span class="n">Nrooms</span><span class="p">])</span>
+<span class="n">NPir</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">Np_rooms</span>
+
+<span class="c1"># Number of persons who&#39;s waiting to leave each room</span>
+<span class="n">NPwir</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">Nsecondes</span><span class="p">,</span> <span class="n">Nrooms</span><span class="p">])</span>
+<span class="n">NPwir</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">NPir</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span>
+
+<span class="c1"># Nrooms of persons upstream the exit</span>
+<span class="n">Flux</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">Nsecondes</span><span class="p">,</span> <span class="n">Nrooms</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--&gt; NPir at t=0 : &quot;</span><span class="p">,</span> <span class="n">NPir</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+
+<span class="n">it</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">plot_compt</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">RoomNames</span><span class="p">,</span> <span class="n">RoomCenters</span><span class="p">,</span> <span class="n">DoorCenters</span><span class="p">,</span> <span class="n">CircAngles</span><span class="p">,</span> <span class="n">NPir</span><span class="p">[</span><span class="n">it</span><span class="p">,</span> <span class="p">:],</span>
+           <span class="n">NPrir</span><span class="p">,</span> <span class="n">NPwir</span><span class="p">[</span><span class="n">it</span><span class="p">,</span> <span class="p">:],</span> <span class="n">Nior</span><span class="p">,</span> <span class="n">List_iOr</span><span class="p">,</span> <span class="n">dom</span><span class="p">,</span> <span class="n">area</span><span class="p">,</span> <span class="n">savefig</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+           <span class="n">filename</span><span class="o">=</span><span class="n">prefix</span><span class="o">+</span><span class="s2">&quot;fig_&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">it</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;.png&quot;</span><span class="p">,</span>
+           <span class="n">title</span><span class="o">=</span><span class="s1">&#39;time = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">it</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; s&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">Nsecondes</span><span class="p">):</span>
+
+    <span class="n">Flux</span><span class="p">,</span> <span class="n">NPir</span><span class="p">,</span> <span class="n">NPwir</span><span class="p">,</span> <span class="n">NPrir</span> <span class="o">=</span> <span class="n">iteration</span><span class="p">(</span><span class="n">it</span><span class="p">,</span> <span class="n">Nrooms</span><span class="p">,</span> <span class="n">DoorRoomCapacity</span><span class="p">,</span> <span class="n">NPir</span><span class="p">,</span> <span class="n">NPrir</span><span class="p">,</span>
+                                         <span class="n">NPwir</span><span class="p">,</span> <span class="n">Nior</span><span class="p">,</span> <span class="n">List_iOr</span><span class="p">,</span> <span class="n">T_iOr</span><span class="p">,</span> <span class="n">Flux</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;---------&gt; it = &quot;</span><span class="p">,</span> <span class="n">it</span><span class="p">)</span>
+    <span class="c1"># print(&quot;--&gt; Flux : &quot;, Flux)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--&gt; NPir : &quot;</span><span class="p">,</span> <span class="n">NPir</span><span class="p">[</span><span class="n">it</span><span class="p">,</span> <span class="p">:])</span>
+    <span class="c1"># print(&quot;--&gt; NPwir : &quot;,NPwir[it, :])</span>
+    <span class="c1"># print(&quot;--&gt; NPrir : &quot;,NPrir)</span>
+    <span class="n">plot_compt</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">RoomNames</span><span class="p">,</span> <span class="n">RoomCenters</span><span class="p">,</span> <span class="n">DoorCenters</span><span class="p">,</span> <span class="n">CircAngles</span><span class="p">,</span> <span class="n">NPir</span><span class="p">[</span><span class="n">it</span><span class="p">,</span> <span class="p">:],</span>
+               <span class="n">NPrir</span><span class="p">,</span> <span class="n">NPwir</span><span class="p">[</span><span class="n">it</span><span class="p">,</span> <span class="p">:],</span> <span class="n">Nior</span><span class="p">,</span> <span class="n">List_iOr</span><span class="p">,</span> <span class="n">dom</span><span class="p">,</span> <span class="n">area</span><span class="p">,</span> <span class="n">savefig</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+               <span class="n">filename</span><span class="o">=</span><span class="n">prefix</span><span class="o">+</span><span class="s2">&quot;fig_&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">it</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;.png&quot;</span><span class="p">,</span>
+               <span class="n">title</span><span class="o">=</span><span class="s1">&#39;time = &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">it</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39; s&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">pause</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2018, Sylvain Faure, Bertrand Maury.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    </div>
+  </body>
+</html>
