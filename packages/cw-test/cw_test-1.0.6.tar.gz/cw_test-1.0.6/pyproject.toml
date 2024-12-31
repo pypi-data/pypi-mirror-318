@@ -1,0 +1,18 @@
+
+[project]
+name = "cw_test"
+version = "1.0.6"
+
+authors = [
+  {name = "CWalk", email = "CWalk@example.com"}
+]
+maintainers = [
+  {name = "CWalk", email = "CWalk@example.com"}
+]
+description = "Animation"
+readme = "README.md"
+
+[project.urls]
+Homepage = "https://example.com"
+Documentation = "https://readthedocs.org"
+Repository = "https://github.com/me/spam.git"
