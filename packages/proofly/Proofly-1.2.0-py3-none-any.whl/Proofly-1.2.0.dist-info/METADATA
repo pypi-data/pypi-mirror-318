@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: Proofly
+Version: 1.2.0
+Summary: Enterprise-grade health metrics analysis and prediction engine
+Author: Mohammed Ufraan
+Author-email: kurosen930@gmail.com
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: dataclasses
+Requires-Dist: typing
+Requires-Dist: datetime
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
