@@ -1,0 +1,85 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - httpbingo.org
+      user-agent:
+      - python-httpx/0.27.2
+    method: GET
+    uri: https://httpbingo.org/redirect-to?status_code=307&url=https%3A%2F%2Fhttpbingo.org%2Fjson
+  response:
+    body:
+      string: ''
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      content-length:
+      - '0'
+      date:
+      - Tue, 31 Dec 2024 01:18:01 GMT
+      fly-request-id:
+      - 01JGD4N3P4V8WTBDN9H9ZQFWVZ-arn
+      location:
+      - https://httpbingo.org/json
+      server:
+      - Fly/d5165e6e2 (2024-12-18)
+      via:
+      - 1.1 fly.io
+    status:
+      code: 307
+      message: Temporary Redirect
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - httpbingo.org
+      user-agent:
+      - python-httpx/0.27.2
+    method: GET
+    uri: https://httpbingo.org/json
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAE/6rmUlBQKs7JTEktzsgvV7JSAAkoKCgllpZk5BcpWSkoReaXFhUrhBSV5lQq6XAp
+        KCgoKKUklqSCpEC0Qn6aQkFpUk5mcmJJZn4eTAnESCUrhWiwFgWouWDtJZklOWD94YnZqQqlBQol
+        +Qrh+XkpqUXhmSnpqSXFilBTIKoBqywAK07MyVGCmlULcQeKoZklqbnFSPaB9YZnVCrYpObaoZhu
+        o5+aa6eQWJSqkF6UmliCZJeCglJ4Rj5YR1JpZTFEIYpemAsUFGJhblBQUIJ7yL8stagsM7UcyUyl
+        EizuB/sDagJCd3BibkFOqkIwKDYUgkHRwaWgUMtVywUAosyM+aUBAAA=
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 31 Dec 2024 01:18:01 GMT
+      fly-request-id:
+      - 01JGD4N3ZJ31VN2RTH6QM9WMMV-arn
+      server:
+      - Fly/d5165e6e2 (2024-12-18)
+      transfer-encoding:
+      - chunked
+      via:
+      - 1.1 fly.io
+    status:
+      code: 200
+      message: OK
+version: 1
