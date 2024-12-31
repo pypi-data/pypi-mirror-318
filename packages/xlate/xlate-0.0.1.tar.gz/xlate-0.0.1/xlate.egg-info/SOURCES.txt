@@ -1,0 +1,7 @@
+README.md
+setup.py
+xlate.egg-info/PKG-INFO
+xlate.egg-info/SOURCES.txt
+xlate.egg-info/dependency_links.txt
+xlate.egg-info/entry_points.txt
+xlate.egg-info/top_level.txt
