@@ -1,0 +1,34 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Ayg\u0131t zaten yap\u0131land\u0131r\u0131lm\u0131\u015f",
+            "reauth_successful": "Yeniden kimlik do\u011frulama ba\u015far\u0131l\u0131 oldu"
+        },
+        "error": {
+            "invalid_auth": "Ge\u00e7ersiz kimlik do\u011frulama",
+            "unknown": "Beklenmeyen hata"
+        },
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "password": "\u015eifre"
+                },
+                "data_description": {
+                    "password": "Ohme hesab\u0131n\u0131z\u0131n \u015fifresini girin"
+                },
+                "title": "{name} i\u00e7in kimlik do\u011frulaman\u0131n s\u00fcresi doldu"
+            },
+            "user": {
+                "data": {
+                    "email": "E-Posta",
+                    "password": "\u015eifre"
+                },
+                "data_description": {
+                    "email": "Ohme hesab\u0131n\u0131zla ili\u015fkili e-posta adresini girin.",
+                    "password": "Ohme hesab\u0131n\u0131z\u0131n \u015fifresini girin"
+                },
+                "description": "Ohme hesab\u0131n\u0131z\u0131 yap\u0131land\u0131r\u0131n. Ohme'ye Google gibi \u00fc\u00e7\u00fcnc\u00fc taraf bir hesapla kaydolduysan\u0131z, bu entegrasyonu yap\u0131land\u0131rmadan \u00f6nce l\u00fctfen Ohme \u00fczerinden \u015fifrenizi s\u0131f\u0131rlay\u0131n."
+            }
+        }
+    }
+}
