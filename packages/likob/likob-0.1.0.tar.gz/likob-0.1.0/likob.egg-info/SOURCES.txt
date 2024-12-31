@@ -1,0 +1,8 @@
+README.md
+setup.py
+likob.egg-info/PKG-INFO
+likob.egg-info/SOURCES.txt
+likob.egg-info/dependency_links.txt
+likob.egg-info/entry_points.txt
+likob.egg-info/requires.txt
+likob.egg-info/top_level.txt
