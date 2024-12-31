@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: fundrive-quark
+Version: 1.0.1
+Summary: fundrive-quark
+Author-email: niuliangtao <farfarfun@qq.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: funutil>=1.0.46
+
+# fardrive-quark
