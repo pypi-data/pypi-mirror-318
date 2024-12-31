@@ -1,0 +1,124 @@
+Metadata-Version: 2.1
+Name: lgwwhu
+Version: 3.0.0
+Summary: Lensing gravitational waves
+Home-page: 
+Author: zrj
+Author-email: 
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+调用方法1
+
+
+
+
+import lgwwhu
+
+import warnings
+warnings.filterwarnings("ignore", "Wswiglal-redir-stdio")
+import lal
+
+from bilby.gw.conversion import redshift_to_luminosity_distance
+
+from lgwwhu.main import gravitational_lens_with_amplification 
+from lgwwhu.main import generate_waveform
+from lgwwhu.main import compute_lensed_waveform
+import matplotlib.pyplot as plt
+
+
+# 计算距离
+def lumDis(z):
+    """
+    in Mpc
+    """
+    return redshift_to_luminosity_distance(redshift=z)
+
+
+# 生成 lens_params 参数
+lens_params = {
+    'ml': 1e9,              # 镜质量 (太阳质量)
+    'beta': 2.5e-5,         # 入射角 (弧度)
+    'zs': 2.0,              # 背景源红移
+    'zl': 1.0,              # 镜红移
+    'lens_model': 'point-mass'  # 透镜模型
+}
+
+# 生成 waveform_params 参数
+waveform_params = {
+    'approximant': 'IMRPhenomD',  # 波形近似模型
+    'mass1': 50000,                  # 第一个天体的质量 (太阳质量)
+    'mass2': 40000,                  # 第二个天体的质量 (太阳质量)
+    'distance': lumDis(lens_params['zs']),  # 距离 (Mpc)，使用 lens_params 的 zs
+    'inclination': 0              # 入射角 (弧度)
+}
+
+
+# 计算放大后的波形
+result = compute_lensed_waveform(waveform_params, lens_params)
+
+# 绘制结果
+frequencies = result["frequencies"]
+original_waveformhp = result["original_waveformhp"]
+lensed_waveformhp = result["lensed_waveformhp"]
+amplification = result["amplification"]
+
+
+plt.figure(figsize=(10, 6))
+plt.plot(frequencies, amplification.real, label="Original |hp(f)|", alpha=0.7)
+plt.xlabel("Frequency (Hz)")
+plt.ylabel("Amplitude")
+plt.title("Lensed vs Original Frequency Domain Waveform")
+plt.legend()
+plt.show()
+
+
+
+plt.figure(figsize=(10, 6))
+plt.plot(frequencies, original_waveformhp.real, label="Original |hp(f)|", alpha=0.7)
+plt.xlabel("Frequency (Hz)")
+plt.ylabel("Amplitude")
+plt.title("Lensed vs Original Frequency Domain Waveform")
+plt.legend()
+plt.show()
+
+plt.figure(figsize=(10, 6))
+plt.plot(frequencies, original_waveformhp.real, label="Original |hp(f)|", alpha=0.7)
+plt.plot(frequencies, lensed_waveformhp.real, label="Lensed |hp(f)|", alpha=0.7)
+plt.xlabel("Frequency (Hz)")
+plt.ylabel("Amplitude")
+plt.title("Lensed vs Original Frequency Domain Waveform")
+plt.legend()
+plt.show()
+
+
+
+
+LIGO参数：
+
+# 生成 lens_params 参数
+lens_params = {
+    'ml': 1e6,              # 镜质量 (太阳质量)
+    'beta': 2.5e-5,         # 入射角 (弧度)
+    'zs': 2.0,              # 背景源红移
+    'zl': 1.0,              # 镜红移
+    'lens_model': 'point-mass'  # 透镜模型
+}
+
+# 生成 waveform_params 参数
+waveform_params = {
+    'approximant': 'IMRPhenomD',  # 波形近似模型
+    'mass1': 30,                  # 第一个天体的质量 (太阳质量)
+    'mass2': 20,                  # 第二个天体的质量 (太阳质量)
+    'distance': lumDis(lens_params['zs']),  # 距离 (Mpc)，使用 lens_params 的 zs
+    'inclination': 0              # 入射角 (弧度)
+}
+
+
+
+zrj
+2024-12-12

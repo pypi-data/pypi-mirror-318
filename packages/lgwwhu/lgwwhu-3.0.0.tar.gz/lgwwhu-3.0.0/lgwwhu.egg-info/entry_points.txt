@@ -1,0 +1,4 @@
+[pycbc.waveform.fd]
+compute_lensed_waveform = lgwwhu.main:compute_lensed_waveform
+enerate_waveform = lgwwhu.main:generate_waveform
+gravitational_lens_with_amplification = lgwwhu.main:gravitational_lens_with_amplification
