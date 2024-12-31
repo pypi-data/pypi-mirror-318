@@ -1,0 +1,8 @@
+setup.py
+qy_app/__init__.py
+qy_app/client.py
+xqywx.egg-info/PKG-INFO
+xqywx.egg-info/SOURCES.txt
+xqywx.egg-info/dependency_links.txt
+xqywx.egg-info/requires.txt
+xqywx.egg-info/top_level.txt
