@@ -1,0 +1,10 @@
+pyproject.toml
+setup.py
+USBMonitorUtilsLib/__init__.py
+USBMonitorUtilsLib/attiributes.py
+USBMonitorUtilsLib/usb_monitor.c
+usb_monitor_utils_lib.egg-info/PKG-INFO
+usb_monitor_utils_lib.egg-info/SOURCES.txt
+usb_monitor_utils_lib.egg-info/dependency_links.txt
+usb_monitor_utils_lib.egg-info/requires.txt
+usb_monitor_utils_lib.egg-info/top_level.txt
