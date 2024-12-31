@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+flora_translator/__init__.py
+flora_translator/google_support_language.py
+flora_translator/translate_controls_content.py
+flora_translator/translate_page.py
+flora_translator/translate_using_google.py
+flora_translator.egg-info/PKG-INFO
+flora_translator.egg-info/SOURCES.txt
+flora_translator.egg-info/dependency_links.txt
+flora_translator.egg-info/requires.txt
+flora_translator.egg-info/top_level.txt
