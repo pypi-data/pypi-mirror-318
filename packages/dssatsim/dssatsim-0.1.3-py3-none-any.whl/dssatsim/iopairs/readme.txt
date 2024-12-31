@@ -1,0 +1,1 @@
+This folder contains temporary *.WTH and *.SOL files for a specific location.
