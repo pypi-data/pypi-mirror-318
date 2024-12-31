@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: metacatalog_client
+Version: 0.1.0
+Summary: Python client for MetaCatalog server instances
+Author: Mirko Mälicke
+Author-email: mirko.malicke@kit.edu
+License: GPLv3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx
+Requires-Dist: pydantic
+
+# metacatalog_client
+Python client for MetaCatalog server instances
