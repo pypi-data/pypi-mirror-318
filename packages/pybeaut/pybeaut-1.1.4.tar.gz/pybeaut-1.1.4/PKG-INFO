@@ -1,0 +1,64 @@
+Metadata-Version: 2.4
+Name: pybeaut
+Version: 1.1.4
+Summary: A python library for styling terminal outputs.
+Project-URL: Author repository, https://github.com/Backist/
+Project-URL: repository, https://github.com/Backist/pybeaut
+Project-URL: Bug issues, https://github.com/Backist/pybeaut/issues
+Author-email: Backest <alvarodrumer54@gmail.com>
+Maintainer-email: Backest <alvarodrumer54@gmail.com>, TheWisker <thewisker@protonmail.com>
+License-File: LICENSE
+Keywords: Miscellaneous tools,Pystyle,Python,Python pretty-prints,Python-stylize,Python-tools,Python3,Python3 tools,Python3-stylize
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Typing :: Typed
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+
+# <p align="center">☄️ &nbsp;Pybeaut  ☄️</p>
+
+### <p align="center">_A python module to stylize terminal outputs._</p>
+
+## 🔰 Features
+
+- ✅ - Fade effects
+- ✅ - Static & Dynamic colors
+- ✅ - Colorate texts
+- ✅ - Pigeonhole texts | Texts boxes
+- ✅ - Center Texts & Text Alignments
+- ✅ - Banners
+- **_Other new features will be developing soon . . ._**  
+
+## Don't need this module if
+
+- 🟥 - Need complex string operations or make terminal pages.
+- 🟥 - Make the terminal more beautiful.
+- 🟥 - If your system not supports RBG 256bits color representation.
+
+## ❗️ PLEASE NOTE
+
+> [!IMPORTANT]
+> Recently the Pystyle library has suffered an update that contains non-legitimate code and that can put at risk your computer and your data, that's why I have been noticed, as a good action towards the community, to upload my own module renamed as "Pybeaut" to continue giving the service that Pystyle used to give with no malicious contexts.
+> [!IMPORTANT]
+> This module uses colour representations in RGB format to perform colour operations such as Diagonal or other functions.
+> Some terminals may not support this functionality, especially in non-Windows 10 or 11 environments.
+> Please make sure that your terminal supports RGB colours to avoid display problems.
+___
+
+### Recommanations
+
+``If you have any recommendations or new possible implementations of the module features, let us know through an issue in the official repository of the module or by posting a request in the official Pypi portal.``
+
+### Owner
+
+- **[@Backist](https://github.com/Backist/)**
+  
+> This project follows **[Semantic Versioning](https://semver.org/)**
