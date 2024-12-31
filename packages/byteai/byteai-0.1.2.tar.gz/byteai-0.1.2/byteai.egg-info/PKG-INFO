@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: byteai
+Version: 0.1.2
+Summary: AI development tools
+Author: Aaron Jerez
+Author-email: aaronjerez1@gmail.com
+Description-Content-Type: text/markdown
+Requires-Dist: tiktoken
+Requires-Dist: stripe
+Requires-Dist: aiohttp
+Requires-Dist: numpy
