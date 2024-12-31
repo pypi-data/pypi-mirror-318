@@ -1,0 +1,7 @@
+crm_module_vtp/__init__.py,sha256=v3ZF3a6jexkCDYcJiAJIkiEQEGM98M1wi5gwjkaP31w,54
+crm_module_vtp/client.py,sha256=9ecv-H1n63M2SCC0jt2rrUG60pb3MDt2uw7KmqURuQc,4196
+crm_module_vtp-0.1.1.dist-info/METADATA,sha256=7BcW8HWEy_EWO2YnX8ZYil_AV18QKZEqQJxeVxFQij8,1448
+crm_module_vtp-0.1.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+crm_module_vtp-0.1.1.dist-info/entry_points.txt,sha256=2vrZtK7t37HtLnXnwe9U6jQlrgj7qASITV97XfaZow0,58
+crm_module_vtp-0.1.1.dist-info/top_level.txt,sha256=6OITfwzAFXNuvi-dXIXBzFO3aCHd1A85nRM7_VW3Zis,15
+crm_module_vtp-0.1.1.dist-info/RECORD,,
