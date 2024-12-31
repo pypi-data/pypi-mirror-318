@@ -1,0 +1,60 @@
+Metadata-Version: 2.4
+Name: scrapybara-cli
+Version: 0.1.1
+Summary: CLI tool for controlling virtual machines with Claude
+Author-email: Your Name <your.email@example.com>
+Requires-Python: >=3.8
+Requires-Dist: anthropic>=0.18.1
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: rich>=13.7.0
+Requires-Dist: scrapybara>=0.1.0
+Requires-Dist: typer>=0.9.0
+Description-Content-Type: text/markdown
+
+# Scrapybara CLI
+
+> Wake up, Bara... Follow the Capybara hole...
+
+## Installation
+
+Simply install with pip:
+
+```bash
+pip install scrapybara-cli
+```
+
+Then run from anywhere:
+
+```bash
+scrapybara-cli --instance-type small
+```
+
+## Development Setup
+
+For contributing/development:
+
+```bash
+git clone https://github.com/yourusername/scrapybara-cli.git
+cd scrapybara-cli
+pip install -e .
+```
+
+## Usage
+
+1. Set up your environment variables
+2. Run the CLI:
+
+```bash
+export ANTHROPIC_API_KEY=your_anthropic_api_key
+export SCRAPYBARA_API_KEY=your_scrapybara_api_key
+```
+
+```bash
+scrapybara-cli --instance-type small
+```
+
+Available instance types:
+
+- small
+- medium
+- large
