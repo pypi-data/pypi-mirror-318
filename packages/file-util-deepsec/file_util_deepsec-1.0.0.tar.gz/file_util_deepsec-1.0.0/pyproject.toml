@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "file_util_deepsec"
+version = "1.0.0"
+authors = [
+  { name="Yuchen Li", email="lyuchengz@163.com" },
+]
+description = "Provide utility method for file related operations."
+readme = "README.md"
+requires-python = ">=3.12.3"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+	"joblib==1.4.2"
+]
