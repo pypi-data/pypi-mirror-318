@@ -1,0 +1,4 @@
+[console_scripts]
+LIVECHESSCLOUD = LiveChessCloud.__init__:main
+LiveChessCloud = LiveChessCloud.__init__:main
+livechesscloud = LiveChessCloud.__init__:main
