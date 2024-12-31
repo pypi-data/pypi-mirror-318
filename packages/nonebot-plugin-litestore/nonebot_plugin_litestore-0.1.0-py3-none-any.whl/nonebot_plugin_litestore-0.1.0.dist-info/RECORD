@@ -1,0 +1,10 @@
+nonebot_plugin_litestore-0.1.0.dist-info/METADATA,sha256=_yHVq-eJXCGvX3do9ChIDPN_fmjJo3PjVCAF6B0UY5I,4045
+nonebot_plugin_litestore-0.1.0.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+nonebot_plugin_litestore-0.1.0.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+nonebot_plugin_litestore-0.1.0.dist-info/licenses/LICENSE,sha256=j7QDci5m9zsdkJrdMDrAfg8RbjFo7ATQOCKhnfdBQzo,1067
+nonebot_plugin_litestore/__init__.py,sha256=vucR6iogw9zJdc7Ezbp907oed0JYNTrZCET0wffKF8I,895
+nonebot_plugin_litestore/__main__.py,sha256=3vWacIJJwu82wQIakK5jh3CR0NS8Es445nMGFc2k-xI,1527
+nonebot_plugin_litestore/decorator.py,sha256=KPjtesMxB-CqYbXcqVzeydzom0r3_OPDOWbnbaan9zU,656
+nonebot_plugin_litestore/model.py,sha256=s2jWGqcTpW-8QwzzvopIJIMqD9d6JVXZDNIpM1Qpbzk,333
+nonebot_plugin_litestore/utils.py,sha256=UtWDkOTz9sE3HNEpp5U3lzdOCZWoi-Sjs07UT0elk84,1399
+nonebot_plugin_litestore-0.1.0.dist-info/RECORD,,
