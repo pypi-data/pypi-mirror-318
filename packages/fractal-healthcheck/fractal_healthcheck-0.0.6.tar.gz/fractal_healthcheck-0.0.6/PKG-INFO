@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: fractal-healthcheck
+Version: 0.0.6
+Summary: A simple tool to monitor Fractal instances
+Author-email: Alberto Pastorutti <alberto.pastorutti@exact-lab.it>, Tommaso Comparin <tommaso.comparin@exact-lab.it>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2024, eXact lab
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: psutil
+Requires-Dist: pyyaml
+Requires-Dist: pydantic[email]<2.11.0,>=2.10.0
+Provides-Extra: dev
+Requires-Dist: bumpver; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: requests; extra == "dev"
+
+# fractal-healthcheck
+Work-in-progress tool to monitor a Fractal instance
+
+
+## Get started
+```console
+$ python -m venv venv
+
+$ source venv/bin/activate
+
+$ python -m pip install -e .
+[...]
+Successfully installed annotated-types-0.7.0 bumpver-2024.1130 click-8.1.8 colorama-0.4.6 dnspython-2.7.0 email-validator-2.2.0 fractal-healthcheck-0.0.1 idna-3.10 lexid-2021.1006 psutil-6.1.1 pydantic-2.10.4 pydantic-core-2.27.2 pyyaml-6.0.2 toml-0.10.2 typing-extensions-4.12.2
+
+$ fractal-health
+Usage: fractal-health [OPTIONS] CONFIG_FILE
+Try 'fractal-health --help' for help.
+
+Error: Missing argument 'CONFIG_FILE'.
+```
+
+## How to make a release
+
+```console
+$ python -m venv venv
+
+$ source venv/bin/activate
+
+$ python -m pip install -e .
+[...]
+Successfully installed annotated-types-0.7.0 bumpver-2024.1130 click-8.1.8 colorama-0.4.6 dnspython-2.7.0 email-validator-2.2.0 fractal-healthcheck-0.0.1 idna-3.10 lexid-2021.1006 psutil-6.1.1 pydantic-2.10.4 pydantic-core-2.27.2 pyyaml-6.0.2 toml-0.10.2 typing-extensions-4.12.2
+
+$ bumpver update --patch --tag-commit --dry
+```
