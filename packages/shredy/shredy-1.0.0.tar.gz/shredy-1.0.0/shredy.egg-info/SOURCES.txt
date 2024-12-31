@@ -1,0 +1,10 @@
+README.md
+setup.py
+shredy.egg-info/PKG-INFO
+shredy.egg-info/SOURCES.txt
+shredy.egg-info/dependency_links.txt
+shredy.egg-info/entry_points.txt
+shredy.egg-info/requires.txt
+shredy.egg-info/top_level.txt
+shredy_git/__init__.py
+shredy_git/shredy_git.py
