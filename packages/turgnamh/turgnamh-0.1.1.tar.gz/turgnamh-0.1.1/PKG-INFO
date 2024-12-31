@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: turgnamh
+Version: 0.1.1
+Summary: A library for experiments.
+Author-email: Todd McCready <175446079+toddmccready@users.noreply.github.com>
+Requires-Python: >=3.10
+Requires-Dist: numpy>=2.2.1
+Requires-Dist: polars>=1.18.0
+Requires-Dist: scipy>=1.14.1
+Description-Content-Type: text/markdown
+
+# WIP
