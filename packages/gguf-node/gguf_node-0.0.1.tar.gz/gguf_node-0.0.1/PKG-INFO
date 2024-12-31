@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: gguf-node
+Version: 0.0.1
+Summary: gguf node for comfyui
+Author-email: calcuis <info@calcu.io>
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: tqdm
+Project-URL: Download, https://github.com/calcuis/gguf/releases
+Project-URL: GitHub, https://github.com/calcuis/gguf
+Project-URL: Homepage, https://gguf.org
+Project-URL: Issues, https://github.com/calcuis/gguf/issues
+Project-URL: reddit, https://www.reddit.com/r/gguf
+
+### GGUF node
+
+custom node for comfyUI
+
+#### download the portal via
+```
+py -m gguf_node
+```
+
