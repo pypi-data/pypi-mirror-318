@@ -1,0 +1,12 @@
+pytest<9,>=7.0.0
+
+[dev]
+pre-commit<5,>=3.0.0
+ruff==0.8.4
+tox<5,>=4.0.0
+tox-uv<2,>=1.0.0
+pytest-smoke[test]
+
+[test]
+pytest-mock<4,>=3.0.0
+pytest-xdist[psutil]<4,>=2.3.0
