@@ -1,0 +1,13 @@
+seaborn_extensions/__init__.py,sha256=76mE2wuCgbN6S2ANcjQkIy4QX60zJ43Yv_d27ldBBF8,1650
+seaborn_extensions/_types.py,sha256=A5f7ausg7FE2z26NAAQvqUZU88gT0zr3t3gGV5wcE9g,519
+seaborn_extensions/_utils.py,sha256=XVARZXuWy1lUpQJT0Rt0BFYpWUYlXu8ulXIzAYN9ktA,8848
+seaborn_extensions/_version.py,sha256=nI2d2h8hvZWrLZudqaP53oPmU99Kmj_K14NC1_ft-1I,31
+seaborn_extensions/annotated_clustermap.py,sha256=1H1KoEMK4YJRM7E9xSjkfppA5Z05DJOxHAZ19UQtsVE,15065
+seaborn_extensions/py.typed,sha256=W_1Ms4LRtcbhey0Pf45eQgbQ-4PznGJJN8Dy783xr24,60
+seaborn_extensions/rankplot.py,sha256=1YPxKZ7najMGZnSEdubhX9D_1cPdtUAkqsjPat8c4WU,1657
+seaborn_extensions/swarmboxenplot.py,sha256=4cORoL6y7YPbUaSmjEb_sCQ-TBLNn2DUA04jjvsmNRU,19104
+seaborn_extensions/volcano.py,sha256=JnNpbkjSjRJ8Y0icv6v9fMc8fnORr7jW4JlGLp5r5aQ,4728
+seaborn_extensions-0.2.1.dist-info/METADATA,sha256=S5Tw4YcVF6q7sLAXmQYNMRoe1eHiMk1_grjSybJdXXE,2694
+seaborn_extensions-0.2.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+seaborn_extensions-0.2.1.dist-info/top_level.txt,sha256=ghMvNiv0r-Q6g15KznMsHTdWJ51ugWsrWMbJrQaX2SU,19
+seaborn_extensions-0.2.1.dist-info/RECORD,,
