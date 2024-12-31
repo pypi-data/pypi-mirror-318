@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+th2analytics.egg-info/PKG-INFO
+th2analytics.egg-info/SOURCES.txt
+th2analytics.egg-info/dependency_links.txt
+th2analytics.egg-info/requires.txt
+th2analytics.egg-info/top_level.txt
