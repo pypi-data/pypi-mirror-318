@@ -1,0 +1,9 @@
+README.md
+setup.py
+AIparse/__init__.py
+AIparse/parse.py
+ai_html_parse.egg-info/PKG-INFO
+ai_html_parse.egg-info/SOURCES.txt
+ai_html_parse.egg-info/dependency_links.txt
+ai_html_parse.egg-info/requires.txt
+ai_html_parse.egg-info/top_level.txt
