@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/crawler_update_dect/__init__.py
+src/crawler_update_dect/dlt.py
+src/crawler_update_detect.egg-info/PKG-INFO
+src/crawler_update_detect.egg-info/SOURCES.txt
+src/crawler_update_detect.egg-info/dependency_links.txt
+src/crawler_update_detect.egg-info/top_level.txt
