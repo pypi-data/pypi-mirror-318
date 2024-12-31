@@ -1,0 +1,2 @@
+[pycbc.waveform]
+main = main:lensed_fd_waveform
