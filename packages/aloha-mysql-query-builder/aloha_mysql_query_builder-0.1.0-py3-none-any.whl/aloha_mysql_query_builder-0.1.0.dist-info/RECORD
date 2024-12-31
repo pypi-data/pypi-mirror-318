@@ -1,0 +1,11 @@
+aloha_mysql/__init__.py,sha256=VmfB4nrkTi8OOyBw2MLdKEzC0-nlAydAAERj0ZUKKdI,106
+aloha_mysql/mysql.py,sha256=Y1VzeJfFkRP71gFkWeSnmdyZyldg_tF12oCwcVYWaeQ,2016
+aloha_mysql/query_builder.py,sha256=fVkf6Qqj8XlmOTuHdy81QhI3BEG1KwvPVo0KVn0RDgg,6269
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_aloha_mysql.py,sha256=8m-XPcdFTRa2NuEvf852XqUPXNcH-_EtSbkCM5ZgsNk,3244
+aloha_mysql_query_builder-0.1.0.dist-info/LICENSE,sha256=Bz-dk-hmQm6vv2ZPWskWmPUnBjUikh65zHuLcNXiX6k,1090
+aloha_mysql_query_builder-0.1.0.dist-info/METADATA,sha256=Pi046Tw9g_q2t8gg7SIbtMFXG29_nzF3A28Ny50trS0,4501
+aloha_mysql_query_builder-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+aloha_mysql_query_builder-0.1.0.dist-info/entry_points.txt,sha256=GDbqOvbBQQ90G20REDTjpUgcUEBUda4yLOnvKq4Yt7M,77
+aloha_mysql_query_builder-0.1.0.dist-info/top_level.txt,sha256=E4Pntf_16nanO90C3DdO2lZHhOUoH9zGBNUvvP4538k,18
+aloha_mysql_query_builder-0.1.0.dist-info/RECORD,,
