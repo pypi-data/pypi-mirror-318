@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: legacy-font-converter
+Version: 0.1.2
+Summary: A tool to convert between legacy font and unicode
+Home-page: https://github.com/Abdur-Rahim-sheikh/legacy-font-converter
+License: MIT
+Author: Abdur-Rahim-sheikh
+Author-email: abi.rahim.sheikh@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+# Abdur-Rahim Sheikh Legacy Font Converter
+
+A Python package for converting legacy fonts.
+
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install legacy-font-converter
+```
+
+Or you can install the package from source:
+
+```bash
+pip install git+https://github.com/Abdur-Rahim-sheikh/legacy-font-converter.git
+```
+
+## Example usage
+
+```python
+from legacy_font_converter import LegacyFontConverter
+```
+
+
+## Reference
+- A big applaus to [True finder studio](https://github.com/truefinderstudio)
+
+
