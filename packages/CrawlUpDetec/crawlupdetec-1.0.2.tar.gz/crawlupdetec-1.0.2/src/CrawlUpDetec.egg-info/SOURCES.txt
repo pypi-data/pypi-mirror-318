@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/CrawlUpDetec/__init__.py
+src/CrawlUpDetec/detector.py
+src/CrawlUpDetec/diff_detect.py
+src/CrawlUpDetec/new_crawler.py
+src/CrawlUpDetec.egg-info/PKG-INFO
+src/CrawlUpDetec.egg-info/SOURCES.txt
+src/CrawlUpDetec.egg-info/dependency_links.txt
+src/CrawlUpDetec.egg-info/top_level.txt
