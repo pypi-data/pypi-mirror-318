@@ -1,0 +1,2 @@
+[console_scripts]
+mockpipe = mockpipe.__main__:mockpipe_cli
