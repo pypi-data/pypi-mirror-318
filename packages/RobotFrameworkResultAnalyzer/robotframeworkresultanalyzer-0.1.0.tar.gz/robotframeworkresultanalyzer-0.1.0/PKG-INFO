@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: RobotFrameworkResultAnalyzer
+Version: 0.1.0
+Summary: Robot Framework listener to generate understandable output of test results
+Author-Email: Joonas Jauhiainen <joonas.jauhiainen@gmail.com>
+License: The GNU General Public License v3.0
+Requires-Python: >=3.9
+Requires-Dist: robotframework==7.1.1
+Description-Content-Type: text/markdown
+
+# rf-result-analyzer
+rf-result-analyzer is a tool designed to analyze Robot Framework test results with AI-powered insights using AnythingLLM. The repository includes demo tests, a custom listener to capture test execution data, and prompts for automated failure analysis and improvement suggestions.
