@@ -1,0 +1,871 @@
+# Аль-Натор_Даниил_ПМ22-1_ДЗ1.html
+In [1]:
+    
+    
+    from typing import Tuple
+    import numpy as np
+    
+
+In [2]:
+    
+    
+    def rotation(A: np.ndarray, eps: float = 1e-15) -> Tuple[np.ndarray, np.ndarray]:
+        """
+        Реализация метода вращений для поиска собственных значений и собственных векторов.
+        A: Квадратная матрица
+        eps: Точность
+        Возвращает:
+            eigenvalues: Собственные значения (вектор)
+            eigenvectors: Собственные векторы (матрица)
+        """
+        # 1. Инициализации переменных
+        n: int = A.shape[0]  # Размер матрицы
+        A = np.copy(A)  # Создаём копию матрицы для работы
+        
+        # Инициализация матрицы собственных векторов
+        eigenvectors: np.ndarray = np.eye(n)
+        
+        # Основной цикл метода
+        k: int = 0
+        while True:
+            # 2. Выделение максимального элемента над диагональю
+            max_val: float = 0.0
+            p, q = 0, 1
+            for i in range(n):
+                for j in range(i + 1, n):
+                    if abs(A[i, j]) > abs(max_val):
+                        max_val = A[i, j]
+                        p, q = i, j
+            
+            # Проверка критерия завершения
+            if abs(max_val) < eps:
+                break
+            
+            # 3. Найти угол поворота
+            if A[p, p] == A[q, q]:
+                phi: float = np.pi / 4
+            else:
+                phi = 0.5 * np.arctan(2 * A[p, q] / (A[p, p] - A[q, q]))
+            
+            # 4. Создать матрицу вращения H
+            H: np.ndarray = np.eye(n)
+            H[p, p] = H[q, q] = np.cos(phi)
+            H[p, q] = -np.sin(phi)
+            H[q, p] = np.sin(phi)
+            
+            # 5. Обновить матрицу A и матрицу собственных векторов
+            A = H.T @ A @ H
+            eigenvectors = eigenvectors @ H
+            
+            k += 1  # Увеличение счётчика итераций
+    
+        # Возвращаем собственные значения и собственные векторы
+        eigenvalues: np.ndarray = np.diag(A)
+        return eigenvalues, eigenvectors
+    
+
+In [3]:
+    
+    
+    rotation(np.array([[4, 1],
+                             [1, 3]]))
+    
+
+Out[3]:
+    
+    
+    (array([4.61803399, 2.38196601]),
+     array([[ 0.85065081, -0.52573111],
+            [ 0.52573111,  0.85065081]]))
+
+In [4]:
+    
+    
+    np.linalg.eig(np.array([[4, 1],
+                             [1, 3]]))[0:]
+    
+
+Out[4]:
+    
+    
+    (array([4.61803399, 2.38196601]),
+     array([[ 0.85065081, -0.52573111],
+            [ 0.52573111,  0.85065081]]))
+
+In [ ]:
+    
+    
+     
+    
+
+
+# Аль-Натор_Даниил_ПМ22-1_ДЗ2.html
+In [19]:
+    
+    
+    import random
+    
+
+In [20]:
+    
+    
+    # Умножение двух матриц a и b (матрицы должны быть совместимы по размерности)
+    def matmult(a, b):
+        n = len(a)         
+        k = len(a[0])     
+        m = len(b[0])      
+        c = [[0 for _ in range(m)] for _ in range(n)] 
+        for i in range(n):
+            for j in range(m):
+                for s in range(k):
+                    c[i][j] += a[i][s] * b[s][j]
+        return c
+    
+
+In [21]:
+    
+    
+    # Транспонирование матрицы
+    def transpose(matrix):
+        n = len(matrix)     
+        k = len(matrix[0])   
+        transposed = [[0 for _ in range(n)] for _ in range(k)]  
+        for i in range(n):
+            for j in range(k):
+                transposed[j][i] = matrix[i][j] 
+        return transposed
+    
+    def dot_product(a, b):
+        return sum(a_i * b_i for a_i, b_i in zip(a, b))
+    
+
+In [22]:
+    
+    
+    # QR-разложение матрицы A методом Грама-Шмидта
+    def qr_decomposition(A, rounding=10):
+        n = len(A)
+        columns = transpose(A)  # Получаем столбцы исходной матрицы A
+        U = []  # Промежуточные ортогональные векторы
+        
+        for i in range(n):
+            u = columns[i].copy()  # Копируем текущий столбец
+            for j in range(i):  # Ортогонализация по предыдущим вектором
+                proj_scale = dot_product(U[j], columns[i]) / dot_product(U[j], U[j])
+                u = [u_k - proj_scale * U[j][k] for k, u_k in enumerate(u)]  # Вычитаем проекцию
+            U.append(u)  # Добавляем вектор в список ортогональных
+        
+        # Нормализуем векторы, чтобы получить ортонормированные вектора (матрица Q)
+        Q_columns = []
+        for u in U:
+            norm = sum(u_i ** 2 for u_i in u) ** 0.5
+            if norm != 0:
+                Q_columns.append([u_i / norm for u_i in u])
+            else:
+                Q_columns.append(u)
+        
+        Q = transpose(Q_columns)  # Преобразуем список векторов в матрицу Q
+        Q_transpose = transpose(Q)
+        R = matmult(Q_transpose, A)  # Вычисляем R как произведение Q^T и A
+        
+        # Округляем элементы для лучшей точности
+        Q = [[round(elem, rounding) for elem in row] for row in Q]
+        R = [[round(elem, rounding) for elem in row] for row in R]
+        
+        return Q, R
+    
+
+In [23]:
+    
+    
+    # Стандартный QR-алгоритм для нахождения собственных значений
+    def qr_algorithm(A, steps, rounding=10):
+        Ak = [row.copy() for row in A]  # Копируем исходную матрицу
+        
+        for step in range(steps):
+            Qk, Rk = qr_decomposition(Ak, rounding)  # Выполняем QR-разложение
+            Ak = matmult(Rk, Qk)  # Обновляем матрицу Ak как произведение R и Q
+        
+        # Округляем финальные значения
+        Ak = [[round(elem, rounding) for elem in row] for row in Ak]
+        
+        # Выводим результат
+        print(f"Результат стандартного QR-алгоритма после {steps} шагов:")
+        for row in Ak:
+            print(row)
+        return Ak
+    
+
+In [24]:
+    
+    
+    # Неявный QR-алгоритм с использованием сдвигов
+    def qr_algorithm_implicit(A, steps, rounding=10, seed=42):
+        random.seed(seed)  # Фиксируем сид для воспроизводимости
+        n = len(A)
+        Ak = [row.copy() for row in A]  # Копируем исходную матрицу
+        
+        for step in range(steps):
+            shift = random.random()  # Генерируем случайный сдвиг
+            for j in range(n):
+                Ak[j][j] -= shift  # Вычитаем сдвиг из диагональных элементов
+            
+            Qk, Rk = qr_decomposition(Ak, rounding)  # Выполняем QR-разложение
+            Ak = matmult(Rk, Qk)  # Обновляем матрицу Ak
+            
+            for j in range(n):
+                Ak[j][j] += shift  # Добавляем сдвиг обратно к диагонали
+        
+        # Округляем финальные значения
+        Ak = [[round(elem, rounding) for elem in row] for row in Ak]
+        
+        # Выводим результат
+        print(f"Результат неявного QR-алгоритма после {steps} шагов:")
+        for row in Ak:
+            print(row)
+        return Ak
+    
+
+In [25]:
+    
+    
+    # Исходная матрица и выполнение алгоритмов
+    A = [
+        [1, 2, 4],
+        [3, 3, 2],
+        [4, 1, 3]
+    ]
+    
+    print("Исходная матрица A:")
+    for row in A:
+        print(row)
+    
+    print("\n")
+    
+    # Стандартный QR-алгоритм
+    qr_result = qr_algorithm(A, steps=20)
+    
+    print("\n")
+    
+    # Неявный QR-алгоритм
+    qr_implicit_result = qr_algorithm_implicit(A, steps=10)
+    
+    
+    
+    Исходная матрица A:
+    [1, 2, 4]
+    [3, 3, 2]
+    [4, 1, 3]
+    
+    
+    Результат стандартного QR-алгоритма после 20 шагов:
+    [7.6468085519, -0.4247044551, 1.3478272378]
+    [7e-10, -2.3625384623, -0.0626562122]
+    [0.0, -0.0079948838, 1.7157299102]
+    
+    
+    Результат неявного QR-алгоритма после 10 шагов:
+    [7.6468433034, -0.4219926328, 1.348425101]
+    [0.000825457, -2.3626641366, -0.0568383486]
+    [4.095e-07, -0.0022882369, 1.7158208338]
+    
+
+In [ ]:
+    
+    
+     
+    
+
+
+# Аль-Натор_Даниил_ПМ22-1_ДЗ4.html
+
+    import numpy as np
+    import matplotlib.pyplot as plt
+    from matplotlib.animation import FuncAnimation
+    from scipy.ndimage import gaussian_filter
+    from matplotlib.colors import ListedColormap
+    
+    
+    # Размер сетки
+    grid_size = 75
+    domain_size = 100.0  
+    step_size = domain_size / (grid_size - 1) 
+    
+    # Координаты пространства
+    x_coords = np.linspace(0, domain_size, grid_size)
+    y_coords = np.linspace(0, domain_size, grid_size)
+    mesh_X, mesh_Y = np.meshgrid(x_coords, y_coords)
+    
+    # Параметры времени
+    time_step = 1 
+    total_time = 250  
+    num_steps = int(total_time / time_step)  
+    
+    # Параметры популяции B
+    birth_B = 0.6    
+    death_B = 0.1     
+    competition_A = 0.09   
+    diffusion_B = 1.0   
+    
+    # Параметры популяции A
+    birth_A = 0.5    
+    death_A = 0.05 
+    competition_B = 0.095  
+    diffusion_A = 0.8    
+    
+    # Параметры начальных условий
+    initial_A = 50.0 
+    initial_B = 50.0 
+    radius = 10.0  
+    
+    # Координаты максимального роста для K_A и K_B
+    growth_center_B_x, growth_center_B_y = domain_size * 0.25, domain_size * 0.25  
+    growth_center_A_x, growth_center_A_y = domain_size * 0.75, domain_size * 0.75 
+    
+    
+    # Функции K_B и K_A
+    def growth_kernel_B(x, y):
+        return np.exp(-((x - growth_center_B_x)**2 + (y - growth_center_B_y)**2) / (2 * (domain_size / 10)**2))
+    
+    def growth_kernel_A(x, y):
+        return np.exp(-((x - growth_center_A_x)**2 + (y - growth_center_A_y)**2) / (2 * (domain_size / 10)**2))
+    
+    # Инициализация популяций
+    population_A = np.zeros((grid_size, grid_size))
+    population_B = np.zeros((grid_size, grid_size))
+    
+    # Задаем начальные условия для A (в левом верхнем углу)
+    initial_region_A = (mesh_X - radius <= 0) & (mesh_Y - radius <= 0)
+    population_A[initial_region_A] = initial_A
+    
+    # Задаем начальные условия для B (в правом нижнем углу)
+    initial_region_B = (mesh_X + radius >= domain_size) & (mesh_Y + radius >= domain_size)
+    population_B[initial_region_B] = initial_B
+    
+    
+    # Метод Рунге-Кутта 4-го порядка для системы уравнений
+    def rk4_step(A, B, time_step):
+        def compute_dA(A, B):
+            # Локальный рост и конкуренция
+            growth = birth_A * A - death_A * A**2 - competition_B * A * B
+            # Пространственное распространение
+            diffusion = diffusion_A * gaussian_filter(A, sigma=1, mode='constant', truncate=2.0)
+            # Интегральный член с учетом K_A
+            external_A = growth_kernel_A(mesh_X, mesh_Y) * A
+            return growth + diffusion + external_A
+    
+        def compute_dB(A, B):
+            # Локальный рост и конкуренция
+            growth = birth_B * B - death_B * B**2 - competition_A * A * B
+            # Пространственное распространение
+            diffusion = diffusion_B * gaussian_filter(B, sigma=1, mode='constant', truncate=2.0)
+            # Интегральный член с учетом K_B
+            external_B = growth_kernel_B(mesh_X, mesh_Y) * B
+            return growth + diffusion + external_B
+    
+        k1_A = compute_dA(A, B)
+        k1_B = compute_dB(A, B)
+    
+        k2_A = compute_dA(A + time_step * k1_A / 2, B + time_step * k1_B / 2)
+        k2_B = compute_dB(A + time_step * k1_A / 2, B + time_step * k1_B / 2)
+    
+        k3_A = compute_dA(A + time_step * k2_A / 2, B + time_step * k2_B / 2)
+        k3_B = compute_dB(A + time_step * k2_A / 2, B + time_step * k2_B / 2)
+    
+        k4_A = compute_dA(A + time_step * k3_A, B + time_step * k3_B)
+        k4_B = compute_dB(A + time_step * k3_A, B + time_step * k3_B)
+    
+        A_new = A + (time_step / 6) * (k1_A + 2 * k2_A + 2 * k3_A + k4_A)
+        B_new = B + (time_step / 6) * (k1_B + 2 * k2_B + 2 * k3_B + k4_B)
+    
+        A_new = np.maximum(A_new, 0)
+        B_new = np.maximum(B_new, 0)
+    
+        return A_new, B_new
+    
+    
+    # Создание анимации
+    fig, ax = plt.subplots()
+    plt.close()
+    
+    color_map_A = plt.cm.Blues
+    color_map_B = plt.cm.Reds
+    
+    img_A = None
+    img_B = None
+    
+    def initialize_plot():
+        global img_A, img_B
+        img_A = ax.imshow(population_A, cmap=color_map_A, interpolation='nearest', origin='lower', extent=[0, domain_size, 0, domain_size])
+        img_B = ax.imshow(population_B, cmap=color_map_B, interpolation='nearest', origin='lower', extent=[0, domain_size, 0, domain_size], alpha=0.6)
+        ax.set_title('Time: 0.0')
+        return [img_A, img_B]
+    
+    def update_plot(frame):
+        global population_A, population_B
+        population_A, population_B = rk4_step(population_A, population_B, time_step)
+        img_A.set_data(population_A)
+        img_B.set_data(population_B)
+        ax.set_title(f'Time: {frame * time_step:.1f}')
+        return [img_A, img_B]
+    
+    animation = FuncAnimation(fig, update_plot, frames=num_steps, init_func=initialize_plot, blit=True)
+    
+    # Сохранение анимации в файл GIF
+    animation.save('population_simulation.gif', writer='imagemagick', fps=30)
+    
+    
+    MovieWriter imagemagick unavailable; using Pillow instead.
+    
+
+
+
+# Аль-Натор_Даниил_ПМ22-1_ДЗ5.html
+In [1]:
+    
+    
+    import scipy.io.wavfile as siowav
+    import numpy as np
+    import IPython.display as ipd
+    import matplotlib.pyplot as plt
+    
+
+In [2]:
+    
+    
+    sr, sound = siowav.read("data/test_sound.wav")
+    print(sr, sound.shape, type(sound[0]))
+    
+    
+    
+    44100 (7636608,) <class 'numpy.int16'>
+    
+
+In [3]:
+    
+    
+    sr, sound = siowav.read("data/test_sound.wav")
+    print(sr, sound.shape, type(sound[0]))
+    start = 500000
+    fin = 985100
+    sound = sound.astype("float32")
+    
+    # Вырезаем аудиофрагмент и нормализуем его
+    sound = sound[start:fin] / np.max(sound[start:fin])
+    n = sound.shape[0]
+    print("Дискретизация = {}".format(n))
+    
+    duration = len(sound) / sr
+    print("Продолжительность аудиофрагмента = {} секунд".format(duration))
+    
+    plt.plot(sound)
+    plt.show()
+    
+    
+    
+    44100 (7636608,) <class 'numpy.int16'>
+    Дискретизация = 485100
+    Продолжительность аудиофрагмента = 11.0 секунд
+    
+
+In [4]:
+    
+    
+    ipd.Audio(sound, rate=sr)
+    
+
+Out[4]:
+
+Your browser does not support the audio element. 
+
+In [5]:
+    
+    
+    # Добавляем шум
+    corrupt_sound1 = sound + 0.1 * np.random.randn(sound.shape[0])
+    corrupt_sound1 = corrupt_sound1 / np.max(np.abs(corrupt_sound1))
+    plt.plot(corrupt_sound1)
+    plt.show()
+    
+
+In [6]:
+    
+    
+    ipd.Audio(corrupt_sound1, rate=sr)
+    
+
+Out[6]:
+
+Your browser does not support the audio element. 
+
+In [7]:
+    
+    
+    def generate_sine_wave(freq, n, duration):
+        x = np.linspace(0, duration, n, endpoint=False)
+        frequencies = x * freq
+        y = np.sin((2 * np.pi) * frequencies)
+        return x, y
+    
+
+In [8]:
+    
+    
+    _, noise_tone = generate_sine_wave(int(400*np.random.randn()), n, int(duration))
+    corrupt_sound2 = sound + 0.1 * noise_tone
+    
+    _, noise_tone = generate_sine_wave(int(3000*np.random.randn()), n, int(duration))
+    corrupt_sound2 = corrupt_sound2 + 0.15 * noise_tone
+    corrupt_sound2 = corrupt_sound2 / np.max(np.abs(corrupt_sound2))
+    plt.plot(corrupt_sound2)
+    plt.show()
+    
+
+In [9]:
+    
+    
+    ipd.Audio(corrupt_sound2, rate=sr)
+    
+
+Out[9]:
+
+Your browser does not support the audio element. 
+
+In [10]:
+    
+    
+    # При помощи разложения Фурье, разбивая исходный corrupt_sound на небольшие части,
+    # удалите шум для каждого из сигналов corrupt_sound1 и corrupt_sound2.
+    
+
+In [11]:
+    
+    
+    def clean_noise(input_signal, sample_rate, window_size=4096, overlap_size=2048, frequency_limit=1000):
+        step_size = window_size - overlap_size
+        frequency_bins = np.fft.rfftfreq(window_size, d=1/sample_rate)
+    
+        # Находим индекс, соответствующий границе частот
+        cutoff_index = np.argmax(frequency_bins > frequency_limit) if np.any(frequency_bins > frequency_limit) else len(frequency_bins)
+        
+        # Определяем количество сегментов
+        total_segments = (len(input_signal) - window_size) // step_size + 1
+    
+        hann_window = np.hanning(window_size)
+        cleaned_signal = np.zeros(len(input_signal))
+        weight_sum = np.zeros(len(input_signal))
+    
+        # Обрабатываем каждый сегмент
+        for segment in range(total_segments):
+            start = segment * step_size
+            stop = start + window_size
+            segment_data = input_signal[start:stop]
+    
+            # Применяем оконную функцию
+            windowed_data = segment_data * hann_window
+    
+            # Выполняем преобразование Фурье
+            spectrum_data = np.fft.rfft(windowed_data)
+    
+            # Убираем высокочастотные компоненты
+            spectrum_data[cutoff_index:] = 0
+    
+            # Обратное преобразование Фурье
+            reconstructed_data = np.fft.irfft(spectrum_data)
+    
+            # Обновляем результирующий сигнал с наложением окон
+            cleaned_signal[start:stop] += reconstructed_data * hann_window
+            weight_sum[start:stop] += hann_window**2
+    
+        # Обрабатываем остаток сигнала, если он не кратен длине окна
+        remaining_samples = len(input_signal) % step_size
+        if remaining_samples > 0:
+            start = total_segments * step_size
+            stop = len(input_signal)
+            segment_data = input_signal[start:stop]
+            actual_window_size = stop - start
+            reduced_window = np.hanning(actual_window_size)
+            windowed_data = segment_data * reduced_window
+    
+            spectrum_data = np.fft.rfft(windowed_data)
+            cutoff_index_remaining = np.argmax(frequency_bins[:len(spectrum_data)] > frequency_limit)
+            spectrum_data[cutoff_index_remaining:] = 0
+    
+            reconstructed_data = np.fft.irfft(spectrum_data, n=actual_window_size)
+            cleaned_signal[start:stop] += reconstructed_data * reduced_window
+            weight_sum[start:stop] += reduced_window**2
+    
+        # Нормализация результирующего сигнала
+        valid_indices = weight_sum > 1e-8
+        cleaned_signal[valid_indices] /= weight_sum[valid_indices]
+    
+        # Приводим к нормализованной амплитуде
+        max_amplitude = np.max(np.abs(cleaned_signal))
+        if max_amplitude > 0:
+            cleaned_signal /= max_amplitude
+    
+        return cleaned_signal
+    
+
+In [12]:
+    
+    
+    # Очищаем corrupt_sound1
+    cleaned_sound1 = clean_noise(corrupt_sound1, sr)
+    scaled_signal = (cleaned_sound1 * 32767).astype(np.int16)
+    siowav.write('results/cleaned_sound1.wav', sr, scaled_signal)
+    
+    plt.figure(figsize=(10, 3))
+    plt.title("Очищенный сигнал 1 (corrupt_sound1)")
+    plt.plot(cleaned_sound1)
+    plt.xlabel("Сэмплы")
+    plt.ylabel("Амплитуда")
+    plt.show()
+    
+    ipd.display(ipd.Audio(cleaned_sound1, rate=sr))
+    
+    
+    # Очищаем corrupt_sound2
+    cleaned_sound2 = clean_noise(corrupt_sound2, sr, frequency_limit=1250)
+    scaled_signal = (cleaned_sound1 * 32767).astype(np.int16)
+    siowav.write('results/cleaned_sound2.wav', sr, scaled_signal)
+    
+    plt.figure(figsize=(10, 3))
+    plt.title("Очищенный сигнал 2 (corrupt_sound2)")
+    plt.plot(cleaned_sound2)
+    plt.xlabel("Сэмплы")
+    plt.ylabel("Амплитуда")
+    plt.show()
+    
+    ipd.display(ipd.Audio(cleaned_sound2, rate=sr))
+    
+
+Your browser does not support the audio element. 
+
+Your browser does not support the audio element. 
+
+In [ ]:
+    
+    
+     
+    
+
+
+# Аль-Натор_Даниил_ПМ22-1_ДЗ6 (2).html
+In [130]:
+    
+    
+    import numpy as np
+    import pandas as pd
+    import matplotlib.pyplot as plt
+    from sklearn.linear_model import LinearRegression
+    from sklearn.preprocessing import StandardScaler
+    from sklearn.metrics import r2_score
+    
+
+In [131]:
+    
+    
+    df = pd.read_csv('Electricity_consumption.csv', delimiter=';', decimal=',')
+    df = df.iloc[:, 1:]  
+    df.head()
+    
+
+Out[131]:
+
+| timestamp | demand_kW | apparent_temperature | air_temperature | dew_point_temperature | relative_humidity | wind_speed  
+---|---|---|---|---|---|---|---  
+0 | 2018-01-01 | 375.996857 | 16.6 | 16.2 | 13.5 | 84.0 | 3.6  
+1 | 2018-01-01 01:00:00 | 373.581714 | 16.7 | 15.6 | 13.4 | 87.0 | 0.0  
+2 | 2018-01-01 02:00:00 | 372.714429 | 16.2 | 15.1 | 13.6 | 91.0 | 0.0  
+3 | 2018-01-01 03:00:00 | 374.887429 | 15.9 | 14.8 | 14.6 | 99.0 | 1.8  
+4 | 2018-01-01 04:00:00 | 370.359857 | 16.2 | 14.8 | 14.5 | 98.0 | 0.0  
+  
+In [132]:
+    
+    
+    df['hour_of_day'] = df.index % 24
+    df.dtypes
+    
+
+Out[132]:
+    
+    
+    timestamp                 object
+    demand_kW                float64
+    apparent_temperature     float64
+    air_temperature          float64
+    dew_point_temperature    float64
+    relative_humidity        float64
+    wind_speed               float64
+    hour_of_day                int64
+    dtype: object
+
+In [133]:
+    
+    
+    df.isnull().sum()
+    
+
+Out[133]:
+    
+    
+    timestamp                0
+    demand_kW                0
+    apparent_temperature     0
+    air_temperature          0
+    dew_point_temperature    0
+    relative_humidity        0
+    wind_speed               0
+    hour_of_day              0
+    dtype: int64
+
+In [134]:
+    
+    
+    df = pd.get_dummies(df, columns=['hour_of_day'], prefix='hour')
+    features = df.iloc[:, 2:]
+    target = df['demand_kW']
+    
+    # Масштабирование признаков
+    scaler = StandardScaler()
+    features_scaled = scaler.fit_transform(features)
+    
+    plt.figure(figsize=(10, 5))
+    target.plot(title='Распределение потребляемой мощности (кВт)', legend=False)
+    plt.grid()
+    plt.show()
+    
+
+In [135]:
+    
+    
+    # Спектр частот
+    fft_values = np.fft.fft(target.values)
+    fft_freq = np.fft.fftfreq(len(fft_values))
+    
+    plt.figure(figsize=(10, 5))
+    plt.plot(np.abs(fft_freq), np.abs(fft_values))
+    plt.title('Спектрограмма потребляемой мощности (demand_kW)')
+    plt.xlabel('Частота')
+    plt.ylabel('Амплитуда')
+    plt.grid()
+    plt.show()
+    
+
+In [ ]:
+    
+    
+    threshold_amplitude = np.quantile(np.abs(fft_values), 0.95)
+    
+    # Удаление конкретных частот
+    n = len(fft_values)
+    seasonal_frequencies = [1/24, 1/(24*7), 1/(24*365)]  # частоты
+    mask = np.ones(n, dtype=bool)
+    
+    for freq in seasonal_frequencies:
+        indices = np.where((np.abs(fft_freq - freq) < 0.001) | (np.abs(fft_freq + freq) < 0.001))
+        mask[indices] = False
+    
+    # Применение маски и порога
+    fft_values_cleaned = fft_values.copy()
+    fft_values_cleaned[~mask] = 0
+    fft_values_cleaned[np.abs(fft_values_cleaned) < threshold_amplitude] = 0
+    
+    # Обратное преобразование
+    deseasonalized_demand = np.real(np.fft.ifft(fft_values_cleaned)) + np.mean(target.values)
+    deseasonalized_demand = np.maximum(deseasonalized_demand, 0)
+    
+    plt.figure(figsize=(10, 5))
+    plt.plot(target.values, label='Исходный ряд')
+    plt.plot(deseasonalized_demand, label='Десезонированный ряд', alpha=0.8)
+    plt.title('Исходный и десезонированный ряды')
+    plt.legend()
+    plt.grid()
+    plt.show()
+    
+
+In [137]:
+    
+    
+    # Построение линейной регрессии
+    model = LinearRegression()
+    model.fit(features_scaled, deseasonalized_demand)
+    
+    # Предсказание модели
+    predicted_demand = model.predict(features_scaled)
+    
+    # Оценка качества модели
+    r2 = r2_score(deseasonalized_demand, predicted_demand)
+    r2
+    
+
+Out[137]:
+    
+    
+    0.035924435223888995
+
+In [138]:
+    
+    
+    plt.figure(figsize=(10, 5))
+    plt.plot(deseasonalized_demand, label='Десезонированный ряд')
+    plt.plot(predicted_demand, label='Предсказания модели', alpha=0.8)
+    plt.title('Сравнение десезонированного ряда и предсказаний')
+    plt.legend()
+    plt.grid()
+    plt.show()
+    
+
+In [143]:
+    
+    
+    residuals = deseasonalized_demand - predicted_demand
+    smoothed_residuals = pd.Series(residuals).rolling(window=5, center=True).mean()
+    
+    # Масштабирование остатков и исходного ряда
+    normalized_demand = target.values / max(target.values)
+    normalized_residuals = (smoothed_residuals - smoothed_residuals.min()) / (smoothed_residuals.max() - smoothed_residuals.min())
+    
+    plt.figure(figsize=(10, 5))
+    plt.plot(residuals, label='Остатки')
+    plt.plot(smoothed_residuals, label='Сглаженные остатки', alpha=0.8)
+    plt.title('Остатки модели и сглаженные значения')
+    plt.legend()
+    plt.grid()
+    plt.show()
+    
+
+In [144]:
+    
+    
+    plt.figure(figsize=(10, 5))
+    plt.plot(normalized_demand, label='Исходный ряд (нормализованный)')
+    plt.plot(normalized_residuals, label='Сглаженные остатки (нормализованные)')
+    plt.title('Исходный ряд и сглаженные остатки в едином масштабе')
+    plt.legend()
+    plt.grid()
+    plt.show()
+    
+
+  1. **Качество модели** :
+
+     * Линейная регрессия плохо справилась с задачей. Коэффициент качества модели (( R^2 )) получился очень низким — всего 0.033.
+     * Остатки модели показывают, что модель плохо объясняет поведение данных.
+  2. **Изменения трендов** :
+
+     * Основной тренд сложно определить из-за большого количества шумов в данных.
+     * Потребление снижается ночью и увеличивается днём, особенно в рабочие часы.
+  3. **Прогнозы на будущее** :
+
+     * Краткосрочные прогнозы можно строить на основе суточных и недельных циклов.
+     * Долгосрочные прогнозы требуют дополнительных данных (например, об экономике, праздниках, погоде).
+
+
+
+In [ ]:
+    
+    
+     
+    
+
