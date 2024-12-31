@@ -1,0 +1,7 @@
+README.md
+setup.py
+foldertrack.egg-info/PKG-INFO
+foldertrack.egg-info/SOURCES.txt
+foldertrack.egg-info/dependency_links.txt
+foldertrack.egg-info/requires.txt
+foldertrack.egg-info/top_level.txt

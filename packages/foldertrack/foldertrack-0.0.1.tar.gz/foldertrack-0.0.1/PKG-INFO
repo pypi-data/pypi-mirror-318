@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: foldertrack
+Version: 0.0.1
+Summary: Package to maneger pacient records from a ESF, strategy of brasilian health.
+Author: Gabriela A. Torres
+Author-email: gabi.torres@gmail.com
+Requires-Dist: pandas
+
+foldertrack_project/README.md
