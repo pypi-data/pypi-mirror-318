@@ -1,0 +1,8 @@
+speech_core/SpeechCore.cpython-312-darwin.so,sha256=5yrq9Gx06P0r_YXL5LHIKCWq8A4g3P-08VueRC2BLTs,695560
+speech_core/__init__.py,sha256=9VNnLw50hMq9qH5wfumbQvpbHR0H7ZJBc2psoQq-ukk,25
+speech_core/common.py,sha256=6dnFgQZDz0DKcY4LY6RbFCwHXaFn4ZYBfeZIEFnNDzE,90
+SpeechCore-1.0.0.dist-info/LICENSE,sha256=MGvuDRwRF-rd_npXKKOUn9a8-y005zWaS-hoUQusZ2c,1070
+SpeechCore-1.0.0.dist-info/METADATA,sha256=KREXHgs16v1L6ajzRyupPTJMTYCQ41kaS7PibRWjX98,1539
+SpeechCore-1.0.0.dist-info/WHEEL,sha256=-GNvJuOpny3XWokWHVa9KJEhC5LQk8DkyRVUh_YySww,116
+SpeechCore-1.0.0.dist-info/top_level.txt,sha256=TdP6k1aSCdUBU-4sjhk739mhKcw91416hb-5F9uCkCs,12
+SpeechCore-1.0.0.dist-info/RECORD,,
