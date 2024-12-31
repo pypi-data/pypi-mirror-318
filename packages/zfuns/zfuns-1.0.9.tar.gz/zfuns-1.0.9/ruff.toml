@@ -1,0 +1,10 @@
+line-length = 80
+
+[format]
+quote-style = "double"
+
+[lint.isort]
+force-single-line = true
+
+[lint.pydocstyle]
+convention = "google"

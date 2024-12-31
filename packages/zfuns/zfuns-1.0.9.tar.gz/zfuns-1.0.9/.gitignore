@@ -1,0 +1,6 @@
+zfuns.egg-info
+__pycache__
+dist/
+build/
+.idea/
+.vscode/
