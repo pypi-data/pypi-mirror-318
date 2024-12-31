@@ -1,0 +1,7 @@
+gmpy2
+tgcrypto
+rsa
+pysocks
+hachoir
+pillow
+aiohttp
