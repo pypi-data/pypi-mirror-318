@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/araxai/__init__.py
+src/araxai/ara.py
+src/araxai.egg-info/PKG-INFO
+src/araxai.egg-info/SOURCES.txt
+src/araxai.egg-info/dependency_links.txt
+src/araxai.egg-info/requires.txt
+src/araxai.egg-info/top_level.txt
