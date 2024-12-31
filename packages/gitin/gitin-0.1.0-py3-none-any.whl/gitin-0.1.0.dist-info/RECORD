@@ -1,0 +1,9 @@
+gitin/__init__.py,sha256=nDJEZVYMO-FD59Gbm59imTLBtMOzgjJ3kzJJFbH4QuM,63
+gitin/__version__.py,sha256=Pru0BlFBASFCFo7McHdohtKkUtgMPDwbGfyUZlE2_Vw,21
+gitin/gitin.py,sha256=ycVkLJMbd8W-HpIwZPZms8p6Ve57u2XLNrzkY1-sBS0,6625
+gitin-0.1.0.dist-info/LICENSE,sha256=LfoyULAlluyvnfenpBg1tHzAuNrJhvK0yxYMxte3Bvo,1066
+gitin-0.1.0.dist-info/METADATA,sha256=kCvxNlgwbMPcjFSzRGMbP0IRM0Mi0n6X19hVu4-RXqI,5108
+gitin-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+gitin-0.1.0.dist-info/entry_points.txt,sha256=Qd_5jQM_Ck0FrP8MKW8zy6WNh1QbI8Ua5KGB6I6s2I4,43
+gitin-0.1.0.dist-info/top_level.txt,sha256=UXVfnCZ6pInDevwOY0-9C0d6WPsmQ38dhejLeJkIeqg,6
+gitin-0.1.0.dist-info/RECORD,,
