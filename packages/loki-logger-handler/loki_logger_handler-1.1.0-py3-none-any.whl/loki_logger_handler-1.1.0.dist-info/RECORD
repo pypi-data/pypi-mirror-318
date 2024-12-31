@@ -1,0 +1,16 @@
+loki_logger_handler/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+loki_logger_handler/loki_logger_handler.py,sha256=SXgfRBU4wJmaYKr0kvFqDNNaqYbfhCL_BF-DGaWQlNQ,9370
+loki_logger_handler/loki_request.py,sha256=qEMILqhrGEPuiiG9FaHdpYzi3neH4xjFNwoceqpWKDA,2327
+loki_logger_handler/stream.py,sha256=CyDoI0hlNIKwrwyt7AEDMrShA55gM8hyCTpL-zfuW10,3610
+loki_logger_handler/streams.py,sha256=63d0kaS9ewdhFYefYDU08VUX-wPPdkuv240dsTk4nns,1887
+loki_logger_handler/formatters/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+loki_logger_handler/formatters/logger_formatter.py,sha256=aMMALO-7-mRBlaZM2aHFwb3yKxDGiPY-O2yep3rTsHY,2638
+loki_logger_handler/formatters/loguru_formatter.py,sha256=qyxK6qc0b3z-tmo_r-S4BqCMF2YrAKh42L3q_7g5UZU,3629
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/helper.py,sha256=vDlFG5plU1bizusNZstTo7Nw_DZJF1TZ1syhd3mOLFI,717
+tests/test_loki_logger_handler.py,sha256=mOYF4w5EQZ31j9QnLpYMO0KIvPV-nYOBKV1nMl-Kboc,15521
+loki_logger_handler-1.1.0.dist-info/LICENSE,sha256=6sCtUoXjiNKcZ-BQNtDkv5lONidB_jZLOQOAFFcOhaI,1062
+loki_logger_handler-1.1.0.dist-info/METADATA,sha256=sl9gqEWl3-kC87r7_kf-Zux2qEAC4ra1yalrQADlM4w,10603
+loki_logger_handler-1.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+loki_logger_handler-1.1.0.dist-info/top_level.txt,sha256=wswQikKHZAEmmk7tyEx_qNtCuFrspwdnEjoRrcggJwg,26
+loki_logger_handler-1.1.0.dist-info/RECORD,,
