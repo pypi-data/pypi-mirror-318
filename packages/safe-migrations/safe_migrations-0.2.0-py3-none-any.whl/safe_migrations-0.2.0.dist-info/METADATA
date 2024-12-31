@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: safe_migrations
+Version: 0.2.0
+Summary: A Django package to safely generate and apply migrations from historical commits.
+Home-page: https://github.com/yourusername/safe_migrations
+Author: Mohammad Mohsen Ahmadi
+Author-email: mohsenaahmadi@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Django>=3.2
+Requires-Dist: gitpython>=3.1.30
+
+# Safe Migrations
+
+A Django package to safely generate and apply migrations from historical commits.
+
+## Installation
+
+Install the package via pip:
+
+```bash
+pip install safe-migrations
+```
+
+add `safe_migrations` to `INSTALLED_APPS` in settings.py of your django project.
+
+## Usage
+
+```bash
+python manage.py safe_migrations --hash GIT_COMMIT_HASH --git GIT_DIRECTORY
+```
+
+## Features
+
+Automatically identifies model changes across commits.
+Generates and applies all missing migrations safely.

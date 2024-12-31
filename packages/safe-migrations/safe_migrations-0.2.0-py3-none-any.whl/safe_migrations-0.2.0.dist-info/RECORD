@@ -1,0 +1,10 @@
+safe_migrations/__init__.py,sha256=Zn1KFblwuFHiDRdRAiRnDBRkbPttWh44jKa5zG2ov0E,22
+safe_migrations/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+safe_migrations/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+safe_migrations/management/commands/safe_migrations.py,sha256=-GkcD3FrzTvTxKLwKluOVaZLih-1TPwIYz2KTHeKj80,3986
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+safe_migrations-0.2.0.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+safe_migrations-0.2.0.dist-info/METADATA,sha256=9ZUkUXOCg2qOq_vz0-q0zP5fLveSMP_FRVjjSo6u-lY,1094
+safe_migrations-0.2.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+safe_migrations-0.2.0.dist-info/top_level.txt,sha256=dE8-J8502qRLUOp-OjGWWW1QkPSBcuzoOY7YenPVn-k,22
+safe_migrations-0.2.0.dist-info/RECORD,,
