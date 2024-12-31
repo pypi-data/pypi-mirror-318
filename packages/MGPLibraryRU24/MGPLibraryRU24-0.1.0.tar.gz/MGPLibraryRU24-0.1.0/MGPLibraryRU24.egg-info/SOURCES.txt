@@ -1,0 +1,11 @@
+README.md
+setup.py
+LibraryTest1/__init__.py
+LibraryTest1/module1.py
+LibraryTest1/module2.py
+MGPLibraryRU24.egg-info/PKG-INFO
+MGPLibraryRU24.egg-info/SOURCES.txt
+MGPLibraryRU24.egg-info/dependency_links.txt
+MGPLibraryRU24.egg-info/top_level.txt
+tests/__init__.py
+tests/test_module1.py
