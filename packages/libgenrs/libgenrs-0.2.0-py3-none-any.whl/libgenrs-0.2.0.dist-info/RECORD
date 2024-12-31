@@ -1,0 +1,11 @@
+libgenrs/__init__.py,sha256=32MGtzVfUwRxgeNGh_aOMpN66CgS4Bl8tjL4wkZxocs,206
+libgenrs/download.py,sha256=TPymaoS1OsZuGgfowLSYm1AUlUyvJT1h-oYxuMMUUlM,5723
+libgenrs/search.py,sha256=ffNigkm5fK6t-ewMZX_xGYb-mWdvMHTr40D8g7OZM7c,14427
+libgenrs/utils.py,sha256=QhEv3WcVgmhnoKoL22D1QXDiDlxD6xowBjZw4ezCJkI,1017
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/libgen_test.py,sha256=EJRLDtYswwX9OQ6sdRO8IsRDALUQq91cI33H0se5Saw,1768
+libgenrs-0.2.0.dist-info/LICENSE,sha256=UIp30ue1HZit7tMmSK0SS3swJBqOcLLnLJn5LY5YdNE,1036
+libgenrs-0.2.0.dist-info/METADATA,sha256=4JerLCae9q0WlUAbKepVJ0L9LVIzdbJhxngKM3AV0Kw,6522
+libgenrs-0.2.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+libgenrs-0.2.0.dist-info/top_level.txt,sha256=WlBEi8Undo0N-ENgsciftuifc8qdpXG6HHYOSNmUDho,15
+libgenrs-0.2.0.dist-info/RECORD,,
