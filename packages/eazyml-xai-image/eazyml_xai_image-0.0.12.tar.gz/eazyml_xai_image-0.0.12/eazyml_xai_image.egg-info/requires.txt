@@ -1,0 +1,7 @@
+tensorflow
+segmentation-models==1.0.1
+lime
+opencv-python
+flask
+getmac
+cryptography
