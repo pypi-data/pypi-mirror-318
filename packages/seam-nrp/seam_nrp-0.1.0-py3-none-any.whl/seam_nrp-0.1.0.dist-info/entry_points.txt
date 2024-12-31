@@ -1,0 +1,3 @@
+[console_scripts]
+seam-create-demo = seam_nrp.demo:create_demo
+
