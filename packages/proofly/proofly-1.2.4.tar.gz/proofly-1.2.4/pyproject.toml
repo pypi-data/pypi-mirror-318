@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "proofly"
+version = "1.2.4"
+description = "Enterprise-grade health metrics analysis and prediction engine"
+readme = "README.md"
+authors = [{ name = "Mohammed Ufraan", email = "kurosen930@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+keywords = ["health", "analytics", "medical", "prediction"]
+dependencies = [
+    "dataclasses",
+    "typing",
+    "datetime",
+]
+requires-python = ">=3.8"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/moroii69/proofly"
