@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: cad-diffusion
+Version: 1.0
+Summary: Package for the CAD diffusion model
+Author: Nicolas Dufour
+License-File: LICENSE
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: einops
+Requires-Dist: transformers
+Requires-Dist: diffusers
+Requires-Dist: huggingface_hub
+Provides-Extra: train
+Requires-Dist: hydra-core; extra == "train"
+Requires-Dist: lightning; extra == "train"
+Requires-Dist: torch-fidelity; extra == "train"
+Requires-Dist: pandas; extra == "train"
+Requires-Dist: wandb; extra == "train"
+Requires-Dist: timm; extra == "train"
+Requires-Dist: scikit-learn; extra == "train"
+Requires-Dist: webdataset==0.2.57; extra == "train"
+Requires-Dist: lovely_tensors; extra == "train"
+Provides-Extra: demo
+Requires-Dist: gradio; extra == "demo"
