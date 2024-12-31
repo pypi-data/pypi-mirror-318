@@ -1,0 +1,10 @@
+sci_cache/__init__.py,sha256=nMpAunwjtcLC50Ns_jwmaP7bOcj7Ml5WDlSn-c9Kcqk,29
+sci_cache/method_cache/__init__.py,sha256=XSXQocyu90yy1Qk5hnTdmlZZwbXEBApWqKtRUqfs8Ys,118
+sci_cache/method_cache/handlers.py,sha256=Jf3NGD24MX_xb3AYlulwGfBxVvIa422lXj_QDR7Rvxk,3018
+sci_cache/method_cache/init.py,sha256=g8tBdN-fT13wwFy3WYoDkdP1A7DPObOVISpuKT3kN3A,510
+sci_cache/method_cache/inner_cache.py,sha256=8BzkwDfqYfizjE_y1-_gjZLnTwyHYUI3VqBXNIm7X0Y,6897
+sci_cache/method_cache/method_cache.py,sha256=EQWDg7-bk8t5dr13KlZNmf9oGSJQd2kQstYqCOGfrOI,2730
+sci_cache-0.1.2.dist-info/LICENSE,sha256=NMqZtAtvptrMNMc-nCNzh4bLATMp30kN9uYdlKlyrZA,1085
+sci_cache-0.1.2.dist-info/METADATA,sha256=Z4OCj8BELmGCjY8A7q6sZnJ8AoHEi2T7h4W4qBMsxH8,3930
+sci_cache-0.1.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+sci_cache-0.1.2.dist-info/RECORD,,
