@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+cardcanvas/__init__.py
+cardcanvas/card_manager.py
+cardcanvas/main.py
+cardcanvas/utils.py
+cardcanvas.egg-info/PKG-INFO
+cardcanvas.egg-info/SOURCES.txt
+cardcanvas.egg-info/dependency_links.txt
+cardcanvas.egg-info/requires.txt
+cardcanvas.egg-info/top_level.txt
+tests/test_main.py
