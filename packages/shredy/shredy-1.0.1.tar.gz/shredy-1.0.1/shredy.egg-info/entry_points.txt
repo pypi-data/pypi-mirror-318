@@ -1,0 +1,2 @@
+[console_scripts]
+shredy = shredy_git.shredy_git:main
