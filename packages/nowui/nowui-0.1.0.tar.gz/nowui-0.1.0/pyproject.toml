@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "nowui"
+version = "0.1.0"
+description = ""
+authors = ["Espoir-Loem <hopcy.forcy@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+kivy = "^2.3.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
