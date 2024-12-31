@@ -1,0 +1,9 @@
+django>=3.2
+geopy>=2.4.1
+usaddress-scourgify>=0.6.0
+
+[dev]
+pytest
+pytest-django
+black
+flake8
