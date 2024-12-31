@@ -1,0 +1,2 @@
+[console_scripts]
+sprayhound = sprayhound.core:run
