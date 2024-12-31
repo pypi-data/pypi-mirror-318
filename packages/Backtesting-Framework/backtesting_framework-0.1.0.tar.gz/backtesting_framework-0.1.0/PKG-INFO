@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: Backtesting-Framework
+Version: 0.1.0
+Summary: A comprehensive backtesting framework designed to evaluate and compare various investment strategies using historical data. This framework enables users to implement, test, and analyze trading strategies by providing detailed performance metrics and customizable visualizations. It supports data input in CSV or Parquet formats and offers multiple visualization backends, including matplotlib, seaborn, and plotly.
+License: MIT
+Author: BOUSSAID Nassim
+Requires-Python: >=3.11.1,<4.0.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: ipykernel (>=6.29.5,<7.0.0)
+Requires-Dist: matplotlib (>=3.9.4,<4.0.0)
+Requires-Dist: numpy (>=2.0.2,<3.0.0)
+Requires-Dist: pandas (>=2.2.3,<3.0.0)
+Requires-Dist: plotly (>=5.24.1,<6.0.0)
+Requires-Dist: scipy (>=1.13.1,<2.0.0)
+Requires-Dist: seaborn (>=0.13.2,<0.14.0)
+Requires-Dist: statsmodels (>=0.14.4,<0.15.0)
+Requires-Dist: streamlit (>=1.41.1,<2.0.0)
+Requires-Dist: workalendar (>=17.0.0,<18.0.0)
+Description-Content-Type: text/markdown
+
+# Backtesting-Framework
+
+## Overview
+
+The Backtester is a Python module designed to backtest financial trading strategies on historical data. It computes portfolio positions, transaction costs, slippage costs, and returns while allowing for customizable parameters, such as multi-asset support and rebalancing frequency.
+
