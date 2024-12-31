@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: orby
+Version: 0.1.0a0
+Summary: Python library for systems programming using cooperative concurrency
+Project-URL: Homepage, https://github.com/SocialExploits/orby
+Project-URL: Repository, https://github.com/SocialExploits/orby.git
+License-Expression: Apache-2.0
+License-File: LICENSE
+Keywords: async,concurrency,orby
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: BSD
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development
+Classifier: Typing :: Typed
+Requires-Python: >=3.13
+Provides-Extra: dev
+Requires-Dist: mkdocs-material; extra == 'dev'
+Requires-Dist: mypy; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: ruff; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# Orby
+
+Orby is a Python library for systems programming under a cooperative
+concurrency model.

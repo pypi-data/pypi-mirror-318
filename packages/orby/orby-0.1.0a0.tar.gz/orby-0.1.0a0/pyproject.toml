@@ -1,0 +1,94 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "orby"
+dynamic = ["version"]
+description = "Python library for systems programming using cooperative concurrency"
+readme = "README.md"
+license = "Apache-2.0"
+keywords = ["async", "concurrency", "orby"]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: BSD",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development",
+    "Typing :: Typed",
+
+]
+dependencies = []
+requires-python = ">=3.13"
+
+[project.optional-dependencies]
+dev = [
+    "mypy",
+    "pytest",
+    "ruff",
+    "mkdocs-material",
+]
+
+[project.urls]
+Homepage = "https://github.com/SocialExploits/orby"
+Repository = "https://github.com/SocialExploits/orby.git"
+
+
+[tool.hatch.version]
+path = "src/orby/__about__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/orby"]
+
+
+[tool.mypy]
+python_version = "3.13"
+pretty = true
+strict = true
+check_untyped_defs = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+show_error_codes = true
+warn_return_any = true
+warn_unused_configs = true
+warn_unused_ignores = true
+
+
+[tool.pyright]
+pythonVersion = "3.13"
+typeCheckingMode = "basic"
+
+
+[tool.ruff]
+line-length = 79
+target-version = "py313"
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.ruff.lint]
+select = [
+    "C4",    # flake8-comprehensions
+    "B",     # flake8-bugbear
+    "E",     # pycodestyle
+    "F",     # pyflakes
+    "FA",    # flake8-future-annotations
+    "FLY",   # flynt
+    "FURB",  # refurb
+    "G",     # flake8-logging-format
+    "I",     # isort
+    "LOG",   # flake8-logging
+    "N",     # pep8-naming
+    "PERF",  # perflint
+    "PGH",   # pygrep-hooks
+    "PT",    # flake8-pytest-style
+    "TCH",   # flake8-type-checking
+    "UP",    # pyupgrade
+    "W",     # pycodestyle
+]
