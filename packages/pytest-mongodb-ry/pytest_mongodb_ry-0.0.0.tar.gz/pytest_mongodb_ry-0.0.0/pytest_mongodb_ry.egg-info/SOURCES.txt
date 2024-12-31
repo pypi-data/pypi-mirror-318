@@ -1,0 +1,10 @@
+pyproject.toml
+pytest_mongodb_ry/__init__.py
+pytest_mongodb_ry/plugin.py
+pytest_mongodb_ry.egg-info/PKG-INFO
+pytest_mongodb_ry.egg-info/SOURCES.txt
+pytest_mongodb_ry.egg-info/dependency_links.txt
+pytest_mongodb_ry.egg-info/entry_points.txt
+pytest_mongodb_ry.egg-info/requires.txt
+pytest_mongodb_ry.egg-info/top_level.txt
+test/test_demo.py
