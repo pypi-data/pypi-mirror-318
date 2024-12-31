@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+calculator/__init__.py
+calculator/operations.py
+irisool_calculator.egg-info/PKG-INFO
+irisool_calculator.egg-info/SOURCES.txt
+irisool_calculator.egg-info/dependency_links.txt
+irisool_calculator.egg-info/top_level.txt
