@@ -1,0 +1,15 @@
+pyparrm/__init__.py,sha256=MrPJWjNd3nRenGe6Hynd-1BNuUNrY0mqvpmYIhOgBK0,139
+pyparrm/parrm.py,sha256=i5KYTbnA5q_L7rMdhzO0dSSzIcUfMg6UzWKDvCvcff0,32920
+pyparrm/_utils/_docs.py,sha256=kkpHDsNEmLWbqI5MOP9ZeTvsoOMh8bzD5Z3OHj_r1tw,1812
+pyparrm/_utils/_plotting.py,sha256=INm_NM4n1rf0di4Yxf9hP1E_FSG-NB2lr6DMQsjhOsI,28369
+pyparrm/_utils/_power.py,sha256=K-EjJiQ4U4XWw_StHBALNwYksBRgFmeIcQ8mvMnKGyQ,2074
+pyparrm/data/__init__.py,sha256=CBaI7nTnxqXxQz3yrZcRaCUE4-K7FBGXHX8jcM9YtbY,135
+pyparrm/data/example_data.py,sha256=tzgyQxByS3jIJT1oGt0R-Q-J-Ns6HIzxFusgWSt7gAA,819
+pyparrm/data/example_data/ecog_lfp_data.npy,sha256=9zPLhgeGZMc7_qdI-m-UuH7EUsMyuLKGNsg2SxczDXI,960144
+pyparrm/data/example_data/example_data.npy,sha256=uIV8G1BbECqLOfWQvYpeTjJ_h4WQuSK1xeBBq2T17pw,153168
+pyparrm/data/example_data/example_data_artefact_free.npy,sha256=Hl2wDbVwYDP94buT8sCd-diXPqt3ReRv07-43rrJR4E,153168
+pyparrm/data/example_data/matlab_filtered.npy,sha256=jPixM3-V-9pmPK9O2laq24UzdBX_H5e8qBa6QcU3w7c,153168
+pyparrm-1.1.1.dist-info/METADATA,sha256=7MsulMp2S9EYeMwvnFuyCnI_s76aZswWDZCP9au9zpo,2581
+pyparrm-1.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pyparrm-1.1.1.dist-info/licenses/LICENSE.txt,sha256=Seh0FtSJM1m9r_8mLPzvR3DEtiiCzyqwJsOwoQGJUWQ,1075
+pyparrm-1.1.1.dist-info/RECORD,,
