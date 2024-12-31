@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+src/multipage/__init__.py
+src/multipage/__main__.py
+src/multipage.egg-info/PKG-INFO
+src/multipage.egg-info/SOURCES.txt
+src/multipage.egg-info/dependency_links.txt
+src/multipage.egg-info/top_level.txt
+src/multipage/tests/__init__.py
+src/multipage/tests/test_1984.py
