@@ -1,0 +1,8 @@
+MANIFEST.in
+setup.py
+almacen_app.egg-info/PKG-INFO
+almacen_app.egg-info/SOURCES.txt
+almacen_app.egg-info/dependency_links.txt
+almacen_app.egg-info/entry_points.txt
+almacen_app.egg-info/requires.txt
+almacen_app.egg-info/top_level.txt
