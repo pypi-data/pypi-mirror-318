@@ -1,0 +1,2 @@
+[console_scripts]
+new_year_2025_visual = new_year_2025_visual.main:NewYearApp
