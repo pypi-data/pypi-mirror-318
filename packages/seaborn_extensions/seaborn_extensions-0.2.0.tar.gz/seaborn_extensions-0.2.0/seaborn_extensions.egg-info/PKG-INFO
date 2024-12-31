@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: seaborn_extensions
+Version: 0.2.0
+Summary: Extensions of seaborn plots for biology
+Author-email: Andre Rendeiro <afrendeiro@gmail.com>
+License: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Project-URL: homepage, https://github.com/afrendeiro/seaborn_extensions
+Project-URL: documentation, https://github.com/afrendeiro/seaborn_extensions/blob/main/README.md
+Project-URL: repository, https://github.com/afrendeiro/seaborn_extensions
+Keywords: seaborn_extensions
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Requires-Dist: numpy<2.0,>=1.18.0
+Requires-Dist: pandas
+Requires-Dist: matplotlib<4.0,>=3.3.0
+Requires-Dist: seaborn<1.0,>=0.11.1
+Requires-Dist: pingouin<1.0,>=0.5.2
+Requires-Dist: tqdm
+Requires-Dist: outdated
+Provides-Extra: dev
+Requires-Dist: wheel; extra == "dev"
+Requires-Dist: sphinx_rtd_theme; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: tox; extra == "dev"
+Requires-Dist: coverage; extra == "dev"
+Requires-Dist: Sphinx; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: pytest<7.0,>=6.2.0; extra == "dev"
+Requires-Dist: watchdog; extra == "dev"
