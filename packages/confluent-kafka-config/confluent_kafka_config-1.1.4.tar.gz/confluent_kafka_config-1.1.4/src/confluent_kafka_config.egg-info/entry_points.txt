@@ -1,0 +1,2 @@
+[console_scripts]
+ckc = confluent_kafka_config.ckc:entry
