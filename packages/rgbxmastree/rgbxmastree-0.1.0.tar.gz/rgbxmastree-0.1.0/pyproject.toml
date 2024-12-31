@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rgbxmastree"
+version = "0.1.0"
+description = "API and commands for interacting with the Pi Hut RGB Xmas Tree."
+readme = "README.md"
+requires-python = ">=3.9,<3.13"
+dependencies = [
+    "gpiozero>=2.0.1",
+    "lgpio>=0.2.2.0",
+    "typer>=0.15.1",
+]
+
+[project.scripts]
+rgbxmastree = "rgbxmastree.cli:app"
+
+[dependency-groups]
+dev = [
+    "pip>=24.3.1",
+    "pre-commit>=4.0.1",
+    "pytest>=8.3.4",
+]
+
+[tool.uv]
+package = true
