@@ -1,0 +1,9 @@
+click
+Flask
+pyyaml
+tabulate
+openapi-spec-validator
+
+[test]
+pytest
+syrupy
