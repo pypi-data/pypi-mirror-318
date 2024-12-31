@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: legacy-font-converter
+Version: 0.1.3
+Summary: A tool to convert between legacy font and unicode
+Home-page: https://github.com/Abdur-Rahim-sheikh/legacy-font-converter
+License: MIT
+Author: Abdur-Rahim-sheikh
+Author-email: abi.rahim.sheikh@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+# Abdur-Rahim Sheikh Legacy Font Converter
+
+A Python package for converting legacy fonts.
+
+## Introduction
+In today's context we use or will use LLM (Large Language Models) in our daily life. But the problem is that the LLMs are trained on the Unicode text. But in many cases, we have to deal with the legacy fonts. So, this package will help you to convert the legacy fonts to Unicode text.
+
+Specially for Bangla language, there are many legacy fonts like SutonnyMJ, SolaimanLipi, etc. Which are used in docx files, pdf files, etc.But we have no help to work with them programatically. So, this package will help you to convert those legacy fonts to Unicode text. To easily encorporate with issues like feeding the LLMs and revert back the llm response to the legacy fonts.
+
+## Available fonts
+- [x] SutonnyMJ
+- [ ] Salma
+- [ ] SolaimanLipi
+- [ ] Nikosh
+
+
+## Features
+```python
+convert(text:str, font_name:str, to_legacy:bool)->str
+available_fonts()->list[str]
+```
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install legacy-font-converter
+```
+
+Or you can install the package from source:
+
+```bash
+pip install git+https://github.com/Abdur-Rahim-sheikh/legacy-font-converter.git
+```
+
+## Example usage
+
+```python
+from legacy_font_converter import LegacyFontConverter
+```
+
+
+## Reference
+- A big applaus to [True finder studio](https://github.com/truefinderstudio)
+
+
