@@ -1,0 +1,5 @@
+turboml_installer/__init__.py,sha256=Z8OKc1NA4dYfEtKlZ3J6lsYflYp_jokwesL3L_SckcI,4886
+turboml_installer/conda_constructor.py,sha256=rfr0hjSOrsLW_hJYLbGZ8kMmqWown2DXtloQsvFJFCE,4416
+turboml_installer-0.0.3.dist-info/METADATA,sha256=ca0KOOyhHf2l03e3xSUmhSHsq2D5WhHF-WkmYyqU95k,627
+turboml_installer-0.0.3.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+turboml_installer-0.0.3.dist-info/RECORD,,
