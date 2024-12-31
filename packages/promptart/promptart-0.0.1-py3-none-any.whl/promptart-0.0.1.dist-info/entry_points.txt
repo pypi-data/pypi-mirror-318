@@ -1,0 +1,2 @@
+[console_scripts]
+promptart = promptart.__main__:entrypoint
