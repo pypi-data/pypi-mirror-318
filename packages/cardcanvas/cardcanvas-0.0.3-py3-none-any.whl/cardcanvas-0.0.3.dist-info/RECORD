@@ -1,0 +1,8 @@
+cardcanvas/__init__.py,sha256=73neuboJYY8iSEcTHbHuDGCixIzBy7t0b6XpCb-VzLo,73
+cardcanvas/card_manager.py,sha256=oiro2eJVFB2mVOYopXQXH8ssmPjUfIwdct6AlcaH-94,6348
+cardcanvas/main.py,sha256=SxL3ZoXYUCGjWOF4rok-svc_c1iX2HN5ADJSnUN5ZGY,17251
+cardcanvas/utils.py,sha256=p4xVkKTTxj5HDi18yzfg4U8YqC-3MKD64L-D3vHZPTY,8923
+cardcanvas-0.0.3.dist-info/METADATA,sha256=jqMIeRlvYbUBeJF12XG38brYWBEhmLW_RP8CPAvzH5w,300
+cardcanvas-0.0.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+cardcanvas-0.0.3.dist-info/top_level.txt,sha256=n0HZMqameWj37wnXypqExXA_StpKqNGoR-L66WK_vxQ,11
+cardcanvas-0.0.3.dist-info/RECORD,,
