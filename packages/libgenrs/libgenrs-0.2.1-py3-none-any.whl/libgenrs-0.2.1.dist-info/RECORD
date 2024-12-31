@@ -1,0 +1,11 @@
+libgenrs/__init__.py,sha256=S1VkG0xv2iSNijmlLm0Tqz5qyLF8Gmbv0c-wH0ATpWk,206
+libgenrs/download.py,sha256=4IU084xUJikmGW6NvhROQUuFQtB4wsUetwbgQRehfl0,5725
+libgenrs/search.py,sha256=-XWRQlHuVR3VlS68eEx0xCC18rGbsQ95dmmT3r38w3c,14429
+libgenrs/utils.py,sha256=QhEv3WcVgmhnoKoL22D1QXDiDlxD6xowBjZw4ezCJkI,1017
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/libgen_test.py,sha256=EJRLDtYswwX9OQ6sdRO8IsRDALUQq91cI33H0se5Saw,1768
+libgenrs-0.2.1.dist-info/LICENSE,sha256=UIp30ue1HZit7tMmSK0SS3swJBqOcLLnLJn5LY5YdNE,1036
+libgenrs-0.2.1.dist-info/METADATA,sha256=9X4w0oKg2CjUT-NU9YT9tAwIgw8YnukeEK-V3eEA3-Y,6523
+libgenrs-0.2.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+libgenrs-0.2.1.dist-info/top_level.txt,sha256=WlBEi8Undo0N-ENgsciftuifc8qdpXG6HHYOSNmUDho,15
+libgenrs-0.2.1.dist-info/RECORD,,
