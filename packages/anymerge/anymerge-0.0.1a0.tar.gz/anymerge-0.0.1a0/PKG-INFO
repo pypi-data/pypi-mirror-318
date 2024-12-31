@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: anymerge
+Version: 0.0.1a0
+Summary: A Python library for merging dataclasses, TypedDicts, and Pydantic models seamlessly.
+Project-URL: Documentation, https://github.com/jianyuan/anymerge#readme
+Project-URL: Issues, https://github.com/jianyuan/anymerge/issues
+Project-URL: Source, https://github.com/jianyuan/anymerge
+Author-email: Jian Yuan Lee <jianyuan@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Typing :: Typed
+Requires-Python: >=3.10
+Requires-Dist: pydantic>=2
+Requires-Dist: typing-extensions>=4.10.0
+Description-Content-Type: text/markdown
+
+# anymerge
+
+[![PyPI - Version](https://img.shields.io/pypi/v/anymerge.svg)](https://pypi.org/project/anymerge)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/anymerge.svg)](https://pypi.org/project/anymerge)
+
+---
+
+A Python library for merging dataclasses, TypedDicts, and Pydantic models seamlessly.
+
+## Installation
+
+```console
+pip install anymerge
+```
+
+## License
+
+`anymerge` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.

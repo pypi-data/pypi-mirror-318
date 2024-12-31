@@ -1,0 +1,85 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "anymerge"
+dynamic = ["version"]
+description = "A Python library for merging dataclasses, TypedDicts, and Pydantic models seamlessly."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+keywords = []
+authors = [{ name = "Jian Yuan Lee", email = "jianyuan@gmail.com" }]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "Typing :: Typed",
+]
+dependencies = ["pydantic>=2", "typing-extensions>=4.10.0"]
+
+[project.urls]
+Documentation = "https://github.com/jianyuan/anymerge#readme"
+Issues = "https://github.com/jianyuan/anymerge/issues"
+Source = "https://github.com/jianyuan/anymerge"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.envs.types]
+extra-dependencies = ["mypy>=1.0.0", "pydantic>=2", "pytest"]
+
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/anymerge tests}"
+
+[tool.hatch.envs.docs]
+dependencies = [
+  "mkdocs-autorefs",
+  "mkdocs-gen-files",
+  "mkdocs-link-marker",
+  "mkdocs-literate-nav",
+  "mkdocs-material",
+  "mkdocs-section-index",
+  "mkdocstrings-python",
+  "ruff",
+]
+
+[tool.hatch.envs.docs.scripts]
+build = "mkdocs build --clean --strict"
+serve = "mkdocs serve --dev-addr localhost:8000"
+deploy = "mkdocs gh-deploy --clean --strict --force"
+
+[tool.hatch.envs.hatch-test]
+extra-args = ["-vv"]
+
+[[tool.hatch.envs.hatch-test.matrix]]
+python = ["3.13", "3.12", "3.11", "3.10"]
+
+[tool.coverage.run]
+source_pkgs = ["anymerge", "tests"]
+branch = true
+parallel = true
+
+[tool.coverage.paths]
+anymerge = ["src/anymerge"]
+tests = ["tests"]
+
+[tool.coverage.report]
+exclude_lines = ["no cov", "if __name__ == .__main__.:", "if TYPE_CHECKING:"]
+
+[tool.ruff]
+line-length = 100
+extend-exclude = ["docs", "docs_src"]
+
+[tool.ruff.lint]
+ignore = ["FBT001", "SIM108"]
+
+[tool.mypy]
+plugins = ["pydantic.mypy", "pydantic.v1.mypy"]
