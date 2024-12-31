@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: database_util_deepsec
+Version: 1.0.2
+Summary: Provide utility method for database related operations.
+Author-email: Yuchen Li <lyuchengz@163.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12.3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mysql-connector-python==9.1.0
+
+# MySQL Utility Class
+
+A Python utility class for interacting with databases using corresponding library. This class simplifies connecting to different databases, executing queries, committing changes, and closing the connection.
+
+Currently, it support the following databases:
+- Mysql
