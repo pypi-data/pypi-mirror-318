@@ -1,0 +1,22 @@
+[build-system]
+requires = [ "setuptools", "wheel", "cython",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "usb-monitor-utils-lib"
+version = "0.1.13"
+description = "A fast Cython-based package"
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = [ "cython", "example",]
+classifiers = [ "Development Status :: 3 - Alpha", "Intended Audience :: Developers", "License :: OSI Approved :: MIT License", "Programming Language :: Python :: 3", "Programming Language :: C", "Operating System :: OS Independent",]
+dependencies = [ "cython", "usb-monitor",]
+[[project.authors]]
+name = "Your Name"
+email = "your.email@example.com"
+
+[project.license]
+file = "LICENSE"
+
+[project.urls]
+Homepage = "https://github.com/yourusername/my_cython_package"
