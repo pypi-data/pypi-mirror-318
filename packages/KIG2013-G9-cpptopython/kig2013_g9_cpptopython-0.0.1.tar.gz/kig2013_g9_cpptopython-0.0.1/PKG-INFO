@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: KIG2013_G9_cpptopython
+Version: 0.0.1
+Summary: C++ code packaged for use in Python for KIG2013 Assignment
+Author: Kwong Ye Kun
+Author-email: 23006148@siswa.um.edu.my
+Requires-Python: >=3.7
+License-File: LICENSE
