@@ -1,0 +1,63 @@
+[tool.poetry]
+name = "security.md"
+version = "1.0.0"
+description = "Common utilities for Camptocamp CI"
+readme = "README.md"
+authors = ["Camptocamp <info@camptocamp.com>"]
+keywords = ["ci"]
+repository = "https://github.com/camptocamp/c2cciutils"
+license = "FreeBSD"
+packages = [{ include = "security_md" }]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Typing :: Typed",
+]
+include = [
+    "security_md/py.typed",
+]
+
+[tool.poetry.scripts]
+security-md = "security_md.cli:main"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+markdown-table = "2020.12.3"
+defusedxml = "0.7.1"
+markdown = "3.7"
+
+[tool.poetry.group.dev.dependencies]
+prospector = { version = "1.13.3", extras = ["with-bandit", "with-mypy", "with-pyroma", "with-ruff"] }
+types-markdown = "3.7.0.20240822"
+prospector-profile-utils = "1.13.0"
+prospector-profile-duplicated = "1.8.0"
+
+[build-system]
+requires = [
+    "poetry-core>=1.0.0",
+    "poetry-dynamic-versioning[plugin]>=0.19.0",
+    "poetry-plugin-tweak-dependencies-version",
+    "poetry-dynamic-versioning",
+    "poetry-plugin-drop-python-upper-constraint",
+]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry-dynamic-versioning]
+enable = false
+vcs = "git"
+pattern = "^(?P<base>\\d+(\\.\\d+)*)"
+format-jinja = """
+{%- if env.get("VERSION_TYPE") == "version_branch" -%}
+{{serialize_pep440(bump_version(base, 1 if env.get("IS_MASTER") == "TRUE" else 2), dev=distance)}}
+{%- elif distance == 0 -%}
+{{serialize_pep440(base)}}
+{%- else -%}
+{{serialize_pep440(bump_version(base), dev=distance)}}
+{%- endif -%}
+"""
+
+[tool.poetry-plugin-tweak-dependencies-version]
+default = "major"
