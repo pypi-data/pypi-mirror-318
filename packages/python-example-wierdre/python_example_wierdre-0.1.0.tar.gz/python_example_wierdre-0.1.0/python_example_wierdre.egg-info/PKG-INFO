@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: python_example_wierdre
+Version: 0.1.0
+Summary: A test project integrating C++ and Python by Wierdre
+Author: Wierdre
+Requires-Python: >=3.7
