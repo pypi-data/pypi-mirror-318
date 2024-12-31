@@ -1,0 +1,10 @@
+fastapi_dynamic_router/__init__.py,sha256=sw2vsW5gjkS8YqMdusYHO-ichM7cA4Lgd9mwjlx3igo,263
+fastapi_dynamic_router/directory_processor.py,sha256=ySDgCpsYuDGu4kQGpqFfuxYqMhJ5VoZaX-8xzO1NG5M,1280
+fastapi_dynamic_router/dynamic_router.py,sha256=gXr1fAThBwKYFpWaeRJQxxsvHz2OtYnLxdPHUhmA2Kg,1728
+fastapi_dynamic_router/route_helper.py,sha256=0RTBv8Ybm4q-AC4Qi-Hu2V3cM2QzF0WewiaEumyNnPg,669
+fastapi_dynamic_router/route_registrar.py,sha256=0KvzQOefjiYhV1aq3D8u80-Qyxh4o2hcwzX49fhpTak,1305
+fastapi_dynamic_router/utils/param_parser.py,sha256=dgfgqhWe3RvD8AqAUwHWzXq18yppS5EQyR84JshdANQ,712
+fastapi_dynamic_router-0.1.1.dist-info/METADATA,sha256=sPlRDTxtKBcrNE2qELJGM7r2kbpyZxSxRFk2Wwxn5Rc,3939
+fastapi_dynamic_router-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+fastapi_dynamic_router-0.1.1.dist-info/licenses/LICENSE,sha256=csXz3KU0R9HIBDzM4ckYAJbuD9-UF125tMLUuyh1Qrs,1067
+fastapi_dynamic_router-0.1.1.dist-info/RECORD,,
