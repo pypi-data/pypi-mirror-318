@@ -1,0 +1,13 @@
+cromosim/__init__.py,sha256=mgjY1H-rbsWic17BtwONa5xoC0rftOiziU4AAjLNq88,1586
+cromosim/ca.py,sha256=Hwf2Irtl_HcaZ_zWOrhwNlL4J1Zafn0tLqaK_kMlksA,18679
+cromosim/comp.py,sha256=XKqM59yON6zMx15q0tjr1MDUd8_18k9TarmPf19ImP8,5499
+cromosim/domain.py,sha256=lJficIf68TWfk3rAYPY2C-cJOZvp_Td6GCQH2LssYiQ,30431
+cromosim/domain_test.py,sha256=5CeblScoDzzoF-y5MW8OC1P5yzclks2GoNBx2eVWGsw,1181
+cromosim/ftl.py,sha256=MbR5EhPb8Bq8xcOkyhosqmNL-Nai65yYlcsUwCD6jnA,6374
+cromosim/micro.py,sha256=Ttr6RWmCyoQ7l85mzH_nzZALpUgF2BCeZRyutXevOfk,58318
+cromosim/version.py,sha256=FZ3Ed8mN9_dxpDX9vJoUMRYDpRE7oIsRN7ME62F87us,17
+cromosim-2.1.0.dist-info/LICENSE,sha256=TRgf23SrAQIijQZ3-UZuK-sB9d_GelyfuuHjOW2FhxI,1160
+cromosim-2.1.0.dist-info/METADATA,sha256=yNnVSEo2aZnePEJz5lF2Ok_sk0U3xdaGhLaZLoJ04J0,2997
+cromosim-2.1.0.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+cromosim-2.1.0.dist-info/top_level.txt,sha256=mA968bBGOK9jekJN_89hJVW5qrrTWHy77ZhYmI_V5iY,9
+cromosim-2.1.0.dist-info/RECORD,,
