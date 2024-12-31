@@ -1,0 +1,13 @@
+typ2anki/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+typ2anki/api.py,sha256=bVtxXx8DwqEbDxJmqknuLFEiwBKE3YZuR17tel70zUs,2226
+typ2anki/generator.py,sha256=sefmenK5alI8wGbOLMss-L887bpqVqsR50yXn-UhClM,1157
+typ2anki/get_data.py,sha256=DHxKnzLTb1BXugE9Xw0RwFlzVfX93SI8SQ_mJx7QIUI,489
+typ2anki/main.py,sha256=iV_2Nb3qf0N1b0lCZ4NbfVDn-wdszlJDy-VrKbFpWR8,1241
+typ2anki/parse.py,sha256=kd6TgsPqfeBJazYQyCPevuQm2N4onXMOCDPv49TGn9c,1047
+typ2anki/process.py,sha256=LS8vs0zg_64580PAc0mmn-4arBqhN-uYB11ju9XLSRI,892
+typ2anki-0.1.1.dist-info/LICENSE,sha256=mvA8E3pMYQkRT90nQU00DL9tcEyqUSruTZsO9a_wK6E,1065
+typ2anki-0.1.1.dist-info/METADATA,sha256=-IKLFvsuWC08Zz9JGy9mE0sE6dZX-TiloUehxGuAkpI,4914
+typ2anki-0.1.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+typ2anki-0.1.1.dist-info/entry_points.txt,sha256=MLLFdDGngNVd_ydcXoDuXAaptOT-bAhYC9h6urSYsK4,48
+typ2anki-0.1.1.dist-info/top_level.txt,sha256=ugtvCSjFcjuzUDmPovMRuG94xBAvgqsW6jtVBNmTr-Q,9
+typ2anki-0.1.1.dist-info/RECORD,,
