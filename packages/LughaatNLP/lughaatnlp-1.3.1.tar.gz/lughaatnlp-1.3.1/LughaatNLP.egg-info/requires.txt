@@ -1,0 +1,12 @@
+python-Levenshtein
+numpy
+scikit-learn
+scipy
+gtts
+SpeechRecognition
+pydub
+torch==2.5.1
+torch>=1.9.0
+transformers>=4.11.0
+pandas>=1.3.0
+tqdm>=4.62.0
