@@ -1,0 +1,9 @@
+dataxi/__init__.py,sha256=nWzo1fmZ2xh4bj_PwJlkiMFefho0hdO1hChL9Dua7Pg,105
+dataxi/save_secret.py,sha256=d1IPMw-RkzubUhAgN2tHLlUsnkKMiUOi_PVoZ_CWHpU,5211
+dataxi/connectors/__init__.py,sha256=XN7kQHejIa3811HXjwUbTyj2YAu9GDMLoypw2TVD7Kw,58
+dataxi/connectors/mysql_connector.py,sha256=JTjcGD-RwbCiqiGUg1FY6lmWWhutbsDR7if0AjMW7SU,6267
+dataxi/operators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dataxi-0.0.0.dist-info/METADATA,sha256=82RJFYCNUluwlNAzD9rk8L9ZPlGoygp8-_753q3wv9o,762
+dataxi-0.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+dataxi-0.0.0.dist-info/top_level.txt,sha256=DddDeSJFFa7BqPzDfK5_AQKl9xn1QP75h9dUO90qVvE,7
+dataxi-0.0.0.dist-info/RECORD,,
