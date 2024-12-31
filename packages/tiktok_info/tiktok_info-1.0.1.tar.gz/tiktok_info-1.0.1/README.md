@@ -1,0 +1,25 @@
+# TikTok Info
+
+A Python library to fetch information from TikTok videos, including:
+- Author
+- Title
+- Thumbnail
+- Avatar
+- Video endpoint
+
+## 📦 Installation
+
+To install the `tiktok_info` package, you can run:
+
+```bash
+
+from tiktok_info import TikTokInfo
+
+url = "https://www.tiktok.com/@username/video/123456789"
+tiktok = TikTokInfo(url)
+
+print("Author:", tiktok.get_author())
+print("Title:", tiktok.get_title())
+print("Thumbnail:", tiktok.get_thumbnail())
+print("Avatar:", tiktok.get_avatar())
+print("Endpoint URL:", tiktok.get_endpoint())
