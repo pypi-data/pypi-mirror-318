@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: likob
+Version: 1.0.0
+Summary: A lightweight and powerful SQL database implementation
+Home-page: https://github.com/lik639259/LikOb
+Author: lik639259
+Author-email: 3605898158@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# LikOb
+
+一个轻量级但功能强大的 SQL 数据库实现。
+
+## 安装
+
+```
+bash
+```
+
+pip install likob
+
+```
+
+```
