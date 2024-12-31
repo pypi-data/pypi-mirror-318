@@ -1,0 +1,11 @@
+pyzod/__init__.py,sha256=CZaLr9ATmagjvYVsCJtpJkFwtxZ6f1_J26LBiq8xxDk,148
+pyzod/dataclass.py,sha256=DKjAJS5dIaCowrtEzC1X5qiPVIAFxERyBUyjcbHCl-g,1617
+pyzod/getters.py,sha256=8PFzaryB3pdtyl7-9m-iGm_8WkLggn6xW8iopKZ5qX0,271
+pyzod/helpers.py,sha256=NY9dhbHMsL7RigL2kfzep-JpDdtTk5oMZhqcSMKp1Jk,860
+pyzod/types.py,sha256=_ogNT-80Z_vLfeEHOZDQEgoWdUFknnsEwlL96cUABJ0,7093
+pyzod/validators.py,sha256=TGkLYvcP1DQie9LxCo-GYeSnvYgH1qekY1P1LNO5II4,2450
+pyzod-1.0.0.dist-info/METADATA,sha256=rUnVHlsZZfN1n9TjvJEQezhB7Ae8QozRWDC-Eko_lzU,137
+pyzod-1.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pyzod-1.0.0.dist-info/entry_points.txt,sha256=e4krSR7X8XZxD5OyWiKkoQNh1SFaebcqPmINhsO5ZII,45
+pyzod-1.0.0.dist-info/top_level.txt,sha256=k3rX6sB7FjAvPduLz4Ivsx1zApQBS_cHBPoKV_8Cf1I,6
+pyzod-1.0.0.dist-info/RECORD,,
