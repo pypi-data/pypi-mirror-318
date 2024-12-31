@@ -1,0 +1,8 @@
+setup.py
+src/__init__.py
+src/main.py
+ss_pylib.egg-info/PKG-INFO
+ss_pylib.egg-info/SOURCES.txt
+ss_pylib.egg-info/dependency_links.txt
+ss_pylib.egg-info/entry_points.txt
+ss_pylib.egg-info/top_level.txt
