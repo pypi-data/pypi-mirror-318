@@ -1,0 +1,10 @@
+passagemath_rankwidth.dylibs/librw.0.dylib,sha256=hlRCbAN-EJ4s2rVE9t4TE-VwvkqQG6jBWf0Sb_ppzeA,53552
+passagemath_rankwidth-10.5.16.dist-info/RECORD,,
+passagemath_rankwidth-10.5.16.dist-info/WHEEL,sha256=IckoTiEyZ7jOzifXmxHZ8WzPuH9GI7kmmJS0Q083CA4,109
+passagemath_rankwidth-10.5.16.dist-info/top_level.txt,sha256=Kmzulf9WsphADFQuqgvdy5mvTLDj_V2zkFHU2s3UXos,6
+passagemath_rankwidth-10.5.16.dist-info/METADATA,sha256=tZRe1TIxxUqOI8hMw4Uli8Zb-D_WQwjjOmDp_9dteOw,3129
+sage/all__sagemath_rankwidth.py,sha256=x1Nv5uCeEV1xtY1FaEN6qPEQo9wKKUeLGzhoFWjM3J8,89
+sage/graphs/all__sagemath_rankwidth.py,sha256=8AgBFcKFGDJyb66yQXgMGdZE8BK4Q0Mj3r0uHtIvCJg,48
+sage/graphs/graph_decompositions/all__sagemath_rankwidth.py,sha256=8AgBFcKFGDJyb66yQXgMGdZE8BK4Q0Mj3r0uHtIvCJg,48
+sage/graphs/graph_decompositions/rankwidth.pyx,sha256=XLgr3jaejMtypTubVJBHVrLLTmr0XYyBZeLSNTssV5c,10031
+sage/graphs/graph_decompositions/rankwidth.cpython-310-darwin.so,sha256=FbxxdHzqTap15nK5nZU98kvF9Z65K-yHyd11P4UiZn0,142720
