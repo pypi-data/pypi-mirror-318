@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+pyproject.toml
+requirements.txt
+equipment/__init__.py
+equipment.egg-info/PKG-INFO
+equipment.egg-info/SOURCES.txt
+equipment.egg-info/dependency_links.txt
+equipment.egg-info/entry_points.txt
+equipment.egg-info/requires.txt
+equipment.egg-info/top_level.txt
+tests/test_Equipment.py
