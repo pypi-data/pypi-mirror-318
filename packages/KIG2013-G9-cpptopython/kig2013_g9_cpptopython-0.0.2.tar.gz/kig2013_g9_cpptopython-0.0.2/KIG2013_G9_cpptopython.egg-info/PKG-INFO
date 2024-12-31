@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: KIG2013_G9_cpptopython
+Version: 0.0.2
+Summary: C++ code packaged for use in Python for KIG2013 Assignment
+Author: Kwong Ye Kun
+Author-email: 23006148@siswa.um.edu.my
+License: MIT
+Requires-Python: >=3.7
+
+# Example Package
+
+This is a simple example package. You can use
+[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
