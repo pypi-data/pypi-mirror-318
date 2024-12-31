@@ -1,0 +1,8 @@
+[project]
+name = "cmb_catalog_gen"
+authors = [
+  {name = "Juan Pablo Ugarte", email = "juanpablougarte@gmail.com"},
+]
+version = "0.0.0"
+description = "This is a placeholder project for https://gitlab.gnome.org/jpu/cambalache cmb_catalog_gen tool"
+
