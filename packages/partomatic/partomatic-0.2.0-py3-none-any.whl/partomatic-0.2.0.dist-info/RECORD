@@ -1,0 +1,8 @@
+partomatic/__init__.py,sha256=2jev4JK6smOvIPdLmQTuW8lVLa0Tbrqi46pw6daIOCc,132
+partomatic/automatable_part.py,sha256=qSFolxgdFm2FA3aV87s8xzxn5VAN2DeBHFSBCUu1xhw,1344
+partomatic/partomatic.py,sha256=aEjchkrNP-CEVI-sXw9fT5AVrEnvfcLRvelhTnn2QiQ,4515
+partomatic/partomatic_config.py,sha256=_4nj2g6b_eSFwooqtqShGx22YP5WcqFCO8Qyr8hmVcc,5579
+partomatic-0.2.0.dist-info/METADATA,sha256=0hHwC7HGDRzeN3EtgSRHclvAT7NqUVxolFdNcFIl8a8,2970
+partomatic-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+partomatic-0.2.0.dist-info/licenses/LICENSE,sha256=9PaWMWFAAGGaGsLa_BpN-Vd89Xca8eNlg3dbOExalCk,1074
+partomatic-0.2.0.dist-info/RECORD,,
