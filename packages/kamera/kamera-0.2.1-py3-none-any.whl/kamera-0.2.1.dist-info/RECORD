@@ -1,0 +1,13 @@
+kamera/__init__.py,sha256=70gZL8FDqGrz8OvpTyi8ZcVo_Ip3sUIlXSZVng2DomI,81
+kamera/app.py,sha256=ACEf751N87FDUKwQbXC8Qhgq9LS1Ru7Q7nwvvno113M,1600
+kamera/camera.py,sha256=a94oXw6q_ViLzJsrsufI_zqC8HoWV7mQiYuTc3hkJ0A,1038
+kamera/cli.py,sha256=9XZmqKBnXSfLsD_tTkUxuK46oBXbr73It6xp1XmNik8,1260
+kamera/settings.py,sha256=fAjKii0RN69QDEwGXJlluTcLRcaFONFfUmwRi7gVR1s,1702
+kamera/stream.py,sha256=VvOTYcE1DjaWL3ZimhWjlozi7Y3a913o3eYtQ93795Q,841
+kamera/web.py,sha256=b4tTrVJXXfcYppze3-L2Sfw0kD1adOGrZMzlAdBp-1k,1321
+kamera-0.2.1.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kamera-0.2.1.dist-info/METADATA,sha256=E4i7-EvEXtnCiB80IhIiqJ3vu2RQ_FNHDSGKyxjfJek,567
+kamera-0.2.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+kamera-0.2.1.dist-info/entry_points.txt,sha256=0ZiLvNXALt6k0GtB1q_JMYT_JHUIwiUxEzNMzU7R6P0,43
+kamera-0.2.1.dist-info/top_level.txt,sha256=38AsmZ5U08sns3LOJGhbYIuuYe0CV_mwK-7_T4sf0pA,7
+kamera-0.2.1.dist-info/RECORD,,
