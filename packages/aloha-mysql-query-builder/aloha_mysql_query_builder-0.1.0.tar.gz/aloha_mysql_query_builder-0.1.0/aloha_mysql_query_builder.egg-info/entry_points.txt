@@ -1,0 +1,2 @@
+[console_scripts]
+aloha-mysql-query-builder = aloha_mysql.query_builder:main

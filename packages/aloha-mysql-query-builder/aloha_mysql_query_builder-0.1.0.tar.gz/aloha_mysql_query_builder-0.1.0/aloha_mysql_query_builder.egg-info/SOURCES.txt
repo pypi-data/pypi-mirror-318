@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+aloha_mysql/__init__.py
+aloha_mysql/mysql.py
+aloha_mysql/query_builder.py
+aloha_mysql_query_builder.egg-info/PKG-INFO
+aloha_mysql_query_builder.egg-info/SOURCES.txt
+aloha_mysql_query_builder.egg-info/dependency_links.txt
+aloha_mysql_query_builder.egg-info/entry_points.txt
+aloha_mysql_query_builder.egg-info/requires.txt
+aloha_mysql_query_builder.egg-info/top_level.txt
+tests/__init__.py
+tests/test_aloha_mysql.py
