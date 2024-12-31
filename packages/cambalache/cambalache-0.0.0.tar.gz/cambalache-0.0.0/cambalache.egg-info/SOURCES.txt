@@ -1,0 +1,6 @@
+pyproject.toml
+cambalache/__init__.py
+cambalache.egg-info/PKG-INFO
+cambalache.egg-info/SOURCES.txt
+cambalache.egg-info/dependency_links.txt
+cambalache.egg-info/top_level.txt
