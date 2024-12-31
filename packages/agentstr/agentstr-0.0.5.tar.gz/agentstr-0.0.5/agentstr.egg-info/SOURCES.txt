@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+agentstr/__init__.py
+agentstr/core.py
+agentstr.egg-info/PKG-INFO
+agentstr.egg-info/SOURCES.txt
+agentstr.egg-info/dependency_links.txt
+agentstr.egg-info/top_level.txt
+tests/test_core.py
