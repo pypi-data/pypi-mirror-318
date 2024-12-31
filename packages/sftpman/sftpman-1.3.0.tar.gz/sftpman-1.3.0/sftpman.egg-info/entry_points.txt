@@ -1,0 +1,2 @@
+[console_scripts]
+sftpman = sftpman.launcher:main
