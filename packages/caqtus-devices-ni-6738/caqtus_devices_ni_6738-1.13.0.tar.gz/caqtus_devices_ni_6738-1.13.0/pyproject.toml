@@ -1,0 +1,29 @@
+[project]
+name = "caqtus-devices-ni-6738"
+version = "1.13.0"
+description = "Contains the caqtus device extension for the NI6738 analog output card."
+authors = [
+    { name = "light-scattering-io", email = "lecaqtus66@gmail.com" },
+]
+license = { file = "license.md" }
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "caqtus-suite>=6.18.1",
+    "nidaqmx>=1.0.2",
+    "pyside6>=6.8.1,!=6.8.1.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/caqtus_devices"]
+
+[tool.uv]
+dev-dependencies = [
+    "pyright>=1.1.391",
+    "pytest>=8.3.4",
+    "ruff>=0.8.4",
+]
