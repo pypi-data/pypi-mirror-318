@@ -1,0 +1,9 @@
+README.md
+setup.py
+cvmplot/__init__.py
+cvmplot/cvmplot.py
+cvmplot.egg-info/PKG-INFO
+cvmplot.egg-info/SOURCES.txt
+cvmplot.egg-info/dependency_links.txt
+cvmplot.egg-info/requires.txt
+cvmplot.egg-info/top_level.txt
