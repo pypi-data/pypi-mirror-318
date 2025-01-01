@@ -1,0 +1,8 @@
+agraph_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+agraph_utils/buffer_triples.py,sha256=CtFw2x1oZ8DHa_rmKDKMIaht5cZ6LblTRwwsy6rY-z4,1845
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_buffer_triples.py,sha256=KDGPoJD2ooOoiCF1LqtKEsaX3Anol6QIRfPB4jp8JsM,1045
+agraph_utils-0.1.dist-info/METADATA,sha256=xhxIT_EH-7VLYyKPcYv-xqpxk1lkC-9BtBVvARFN7Qo,841
+agraph_utils-0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+agraph_utils-0.1.dist-info/top_level.txt,sha256=4behETnCLH7iu7YJ0hUrALooYfFg418OLKkcTK6Wb7Y,19
+agraph_utils-0.1.dist-info/RECORD,,
