@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: aspose-total-java
+Version: 24.12.0
+Summary: Aspose.Total for Python via Java is a file format Processing python class library that allows developers to work with Microsoft Excel®, Microsoft Visio®, and barcode file formats without needing Office Automation.
+Home-page: https://products.aspose.com/total/python-java
+Author: Aspose
+Author-email: total@aspose.com
+Keywords: XLS,XLSX,XLSB,XLTX,XLTM,XLSM,XML,ODS,CSV,TSV,TXT,HTML,MHTML,PDF,PDF/A,XPS,JPEG,PNG,BMP,SVG,EMF,GIF,VSDX,VDX,VSX,VTX,VSSX,VSTX,VSDM,VSSM,VSTM,XAML,On Premise API,High Code API,API,Spreadsheets,Excel,Barcode,1D Barcode,2D Barcode,Python Java,Diagram,Visio,Barcode Generation,Barcode Recognition,Read,Write,Export,Worksheet,Render,Text,Image,Scan,High Fidelity,Shapes,File Format,Symbologies,Codabar,Code Text,QR Code,Pivot Table,Pivot Charts,DataMatrix,Aztec,Pdf417,MacroPdf417
+Platform: Operating System :: MacOS :: MacOS X
+Platform: Operating System :: Microsoft :: Windows :: Windows 7
+Platform: Operating System :: Microsoft :: Windows :: Windows Vista
+Platform: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.5
+Classifier: License :: Other/Proprietary License
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+License-File: license.txt
+Requires-Dist: aspose-cells==24.12.1
+Requires-Dist: aspose-diagram==24.12.0
+Requires-Dist: aspose-ocr-python-java==24.7.0
+Requires-Dist: aspose-pdf-for-python-via-java==24.9
+
+[Home](https://www.aspose.com/) | [Product Page](https://products.aspose.com/total/python-java) | [Docs](https://docs.aspose.com/total/pythonjava/) | [Demos](https://products.aspose.app/total/family) | [Examples](https://aspose.github.io/) | [Download](https://downloads.aspose.com/total/pythonjava) | [Blog](https://blog.aspose.com/category/total/) | [Releases](https://releases.aspose.com/) | [Free Support](https://forum.aspose.com/c/total/7) | [Temporary License](https://purchase.aspose.com/temporary-license)
+
+# Aspose.Total for Python via Java Features
+
+- Read Microsoft Excel&reg; & OpenOffice&reg; Spreadsheets via Python
+- Convert Excel&reg; & ODS formats to PDF, XPS, images, & EMF
+- Work with tables, rows, columns, cells, charts, conditional formatting
+- Create Microsoft Visio&reg; diagrams & flowcharts
+- Export Visio&reg; diagrams to PDF, XPS, Images, & XAML formats
+- Generate & recognize various types of 1D, 2D, & postal barcodes
+- Set code text for barcode labels
+- Support for popular barcode symbologies
+- many many more.
+
+[Home](https://www.aspose.com/) | [Product Page](https://products.aspose.com/total/python-java) | [Docs](https://docs.aspose.com/total/pythonjava/) | [Demos](https://products.aspose.app/total/family) | [Examples](https://aspose.github.io/) | [Download](https://downloads.aspose.com/total/pythonjava) | [Blog](https://blog.aspose.com/category/total/) | [Releases](https://releases.aspose.com/) | [Free Support](https://forum.aspose.com/c/total/7) | [Temporary License](https://purchase.aspose.com/temporary-license)
