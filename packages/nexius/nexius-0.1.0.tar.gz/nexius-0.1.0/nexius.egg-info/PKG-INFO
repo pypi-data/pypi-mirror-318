@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: nexius
+Version: 0.1.0
+Summary: A Python library with multiple utilities
+Home-page: https://github.com/roc4et/nexius
+Author: roc4et
+Author-email: x@roc4et.de
+Keywords: logging utility colorful-output
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: colorama>=0.4.4
+
+# Nexius
+
+A powerful Python logging and utility library with colorful output.
+
+## Features
+
+- Colorful logging with multiple log levels
+- Customizable output formatting
+- Easy-to-use printf-like printing
+- Symbol replacements with custom coloring
+
+## Installation
+
+```bash
+pip install nexius
+```
+
+## Usage
+
+### Logging
+
+```python
+from nexius import log
+
+log.info("This is an info message")
+log.debug("Debug information")
+log.error("An error occurred")
+log.warning("Warning message")
+log.success("Operation completed successfully")
+log.fatal("Fatal error")
+```
+
+### Printf
+
+```python
+from nexius import printf as print
+
+print("Colorful output with symbols")
+print("[test] with (!) and (|) symbols")
+```
+
+## Symbols Replacement
+
+Nexius supports automatic symbol replacements:
+
+- `|`: Secondary color
+- `->`: Secondary color
+- `(+)`: Green symbol
+- `($)`: Green symbol
+- `(-)`: Red symbol
+- `(!)`: Red symbol
+- `(~)`: Yellow symbol
+- `(#)`: Blue symbol
+- `(*)`: Cyan symbol
+
+## License
+
+MIT License
+
+## Author
+
+- **roc4et**
+- Email: x@roc4et.de

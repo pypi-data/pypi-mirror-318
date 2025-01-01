@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+nexius/__init__.py
+nexius/core.py
+nexius/log.py
+nexius.egg-info/PKG-INFO
+nexius.egg-info/SOURCES.txt
+nexius.egg-info/dependency_links.txt
+nexius.egg-info/requires.txt
+nexius.egg-info/top_level.txt
