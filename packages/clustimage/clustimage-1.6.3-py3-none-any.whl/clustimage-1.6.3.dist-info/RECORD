@@ -1,0 +1,11 @@
+clustimage/__init__.py,sha256=H56dLLmPSrV5x3H9QCapMuDB3U3961mZIK6k7oex7As,2113
+clustimage/clustimage.py,sha256=JuUP6S85jWYbJQ3SosF1KFfO4xt8SoTte_LwBxz0lWU,131668
+clustimage/examples.py,sha256=cKV3YbyKA7v8IUCVFnadA04IXasca75g70xgwmXonc8,30897
+clustimage/exif.py,sha256=6jyIvprfCU2vUOg4X5m-6JRgEhMdWx9Z-8otpYy9mbg,29449
+clustimage/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clustimage/tests/test_clustimage.py,sha256=784-q21CqJ8hoLoY3jMzEjalitXLwGRhfBua0zKh6f0,6887
+clustimage-1.6.3.dist-info/LICENSE,sha256=UfNzncnLDUYxL0P1mmcxBQhxHAq-OD6h8WzQTYbXLfA,1123
+clustimage-1.6.3.dist-info/METADATA,sha256=qI0G1s5qCqKuQfy1BYuPvSnooGERFTxw_M42kNveUhg,12831
+clustimage-1.6.3.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+clustimage-1.6.3.dist-info/top_level.txt,sha256=tSLxvvsuKDG9eWPP92rm-MHFS7FHXOByLeekYQ_3DzU,11
+clustimage-1.6.3.dist-info/RECORD,,
