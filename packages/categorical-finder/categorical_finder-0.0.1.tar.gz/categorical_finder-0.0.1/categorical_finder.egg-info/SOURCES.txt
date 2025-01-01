@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.md
+setup.py
+categorical_finder/__init__.py
+categorical_finder.egg-info/PKG-INFO
+categorical_finder.egg-info/SOURCES.txt
+categorical_finder.egg-info/dependency_links.txt
+categorical_finder.egg-info/top_level.txt

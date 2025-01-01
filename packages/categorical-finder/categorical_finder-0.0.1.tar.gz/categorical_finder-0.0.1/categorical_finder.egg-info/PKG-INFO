@@ -1,0 +1,124 @@
+Metadata-Version: 2.1
+Name: categorical_finder
+Version: 0.0.1
+Summary: A Python utility for analyzing and suggesting appropriate encoding methods for categorical columns in CSV datasets.
+Home-page: 
+Author: Sri Jaya Karti
+Author-email: srijayakarti@gmail.com
+License: MIT
+Keywords: categorical
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENCE.txt
+
+# Categorical Data Analysis Tool
+
+A Python utility for analyzing and suggesting appropriate encoding methods for categorical columns in CSV datasets. This tool helps data scientists and analysts make informed decisions about how to handle categorical variables in their machine learning pipelines.
+
+## Features
+
+- Automatic detection of categorical columns
+- Analysis of cardinality and unique value distributions
+- Intelligent encoding suggestions based on data characteristics
+- Detection of ordinal categorical variables
+- Identification of potential data quality issues
+- Comprehensive reporting of analysis results
+
+## Prerequisites
+
+```python
+pandas>=1.0.0
+numpy>=1.18.0
+```
+
+## Installation
+
+1. Clone this repository or copy the script to your local machine
+2. Install the required dependencies:
+   ```bash
+   pip install pandas numpy
+   ```
+
+## Usage
+
+Run the script directly from the command line:
+
+```bash
+python categorical_analysis.py
+```
+
+When prompted, provide the path to your CSV file.
+
+### Function Parameters
+
+The main analysis function `analyze_categorical_columns()` accepts the following parameters:
+
+- `csv_file_path` (str): Path to the input CSV file
+- `max_unique_values` (int, default=50): Maximum number of unique values for a column to be considered categorical
+- `unique_ratio_threshold` (float, default=0.1): Maximum ratio of unique values to total rows
+- `cardinality_threshold` (int, default=10): Threshold for suggesting one-hot encoding vs other encoding methods
+
+### Encoding Suggestions
+
+The tool suggests one of three encoding methods based on the column characteristics:
+
+1. **Ordinal Encoding**: Suggested for categorical variables with natural ordering (detected through keywords like 'low', 'medium', 'high', etc.)
+2. **One-Hot Encoding**: Recommended for categorical variables with low cardinality (fewer unique values than the cardinality threshold)
+3. **Frequency/Target/Hashing Encoding**: Suggested for high-cardinality categorical variables
+
+## Output Format
+
+The tool provides two types of output:
+
+1. **Column Classification**: Lists all columns in the dataset and whether they are identified as categorical
+2. **Detailed Analysis**: For each categorical column, provides:
+   - Number of unique values
+   - List of unique values (up to 10 shown)
+   - Suggested encoding method
+   - Additional notes (missing values, unique value counts, etc.)
+
+## Example Output
+
+```
+--------------------------------------------------
+Column 'product_category' is categorical: True
+Column 'price' is categorical: False
+Column 'status' is categorical: True
+
+Categorical Columns Analysis:
+
+Column: product_category
+Unique Values: 8
+Encoding Suggestion: One-Hot Encoding
+
+Unique Values:
+  - Electronics
+  - Clothing
+  - Books
+  ...
+
+Additional Notes:
+  - Contains missing values
+```
+
+## Notes
+
+- The tool automatically detects categorical columns based on data type ('object' or 'category') and uniqueness criteria
+- Columns with numeric data types are excluded from the analysis
+- The tool provides warnings about potential data quality issues like missing values
+- Analysis results can be used to inform feature engineering decisions in machine learning pipelines
+
+## Limitations
+
+- Only processes CSV files
+- Assumes categorical data is stored as string or category dtype
+- May not detect numeric categorical variables
+- Limited to basic encoding suggestions without considering specific use cases
+
+## Contributing
+
+Feel free to submit issues, fork the repository, and create pull requests for any improvements.
