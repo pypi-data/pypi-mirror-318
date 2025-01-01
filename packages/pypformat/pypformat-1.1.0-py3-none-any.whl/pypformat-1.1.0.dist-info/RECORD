@@ -1,0 +1,14 @@
+pformat/__init__.py,sha256=z9aQRSZiEQ3FXjuBn9k8NsfNUe0NRPUDqN62eW9KUOc,770
+pformat/format_options.py,sha256=WGFUIDtBFp2BvKJnRFQ_6gdC4BBONyt0LxXQqNXPtMM,1579
+pformat/indentation_utility.py,sha256=0DDka6ygX7Qvp_ZoJBEwR92aAmbYKFehdeE4MwlYPhA,3085
+pformat/pretty_formatter.py,sha256=JYKbWUZPzTDs2DPuAsM4vKok1IlMGv87AAiulzPY08Y,9042
+pformat/text_style.py,sha256=o36IJP1Mwmjn99IK3kgzYUs-oX3bdKTy-tIWL_s9K8M,2247
+pformat/type_formatters.py,sha256=_sfZ7GeLz3DsMaJyCSgxk9N1RgOViMYDH3bDLSdZ3-o,1354
+pformat/type_projection.py,sha256=FaAtUmHLmdmpg_giLYpLb3iNnjttvsX405_QvJh5_QA,623
+pformat/type_specific_callable.py,sha256=gkLu4cSPflAF6q8YOTgbnzocSUkAlWbQqE_AuDeJ9Xo,1604
+pformat/typing_utility.py,sha256=TQYVx0JjOawkshHEDJo6jM-dGhddB3DeyyEzTDopO1A,1700
+pypformat-1.1.0.dist-info/LICENSE,sha256=xcn3bQMM6Bt6CT-wzm4wPPyhh02GScx343T7hi9uPfw,1070
+pypformat-1.1.0.dist-info/METADATA,sha256=LZS1GWAihT2tAAqjHHMfvLuTYuRxB10pCLO3HMQH_ps,2319
+pypformat-1.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pypformat-1.1.0.dist-info/top_level.txt,sha256=dXVKcZ3VZxtWWwG0i2FzxzTrtizjG1Dd9sUo55B4gjo,8
+pypformat-1.1.0.dist-info/RECORD,,
