@@ -1,0 +1,17 @@
+LICENCE
+README.md
+pyproject.toml
+setup.py
+romantic.egg-info/PKG-INFO
+romantic.egg-info/SOURCES.txt
+romantic.egg-info/dependency_links.txt
+romantic.egg-info/entry_points.txt
+romantic.egg-info/requires.txt
+romantic.egg-info/top_level.txt
+romanticCLI/__init__.py
+romanticCLI/auth.py
+romanticCLI/backend_service.py
+romanticCLI/cmd.py
+romanticCLI/const.py
+romanticCLI/main.py
+romanticCLI/services.py
