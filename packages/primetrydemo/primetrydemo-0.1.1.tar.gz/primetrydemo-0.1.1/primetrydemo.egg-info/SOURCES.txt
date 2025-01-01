@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+primetrydemo/__init__.py
+primetrydemo/module1.py
+primetrydemo/module2.py
+primetrydemo.egg-info/PKG-INFO
+primetrydemo.egg-info/SOURCES.txt
+primetrydemo.egg-info/dependency_links.txt
+primetrydemo.egg-info/requires.txt
+primetrydemo.egg-info/top_level.txt
