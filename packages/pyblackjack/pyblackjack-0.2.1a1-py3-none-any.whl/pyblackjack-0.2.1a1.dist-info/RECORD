@@ -1,0 +1,13 @@
+pyblackjack/__init__.py,sha256=-g2wD9pFpWJ79iSst795OOlJgI0YYUHwY_IZ0uiWaX8,79
+pyblackjack/__main__.py,sha256=qTPLcvyDSmURHCEOZpWQhAfvcAqy03KRTvmq480bCsw,53
+pyblackjack/__version__.py,sha256=Hh8jxA0Z8Gd3AqkgqwtySq_B5l73iIwQzKQ1Y-52wbw,413
+pyblackjack/console.py,sha256=tHaQPyI5vWBkMuH_Y_RHWrZZc_Ohig-zSdFGlVDbsh8,1800
+pyblackjack/game.py,sha256=OYf51euctV7MjHpi2fR-qtkmxHw6FAO_48h0dphqDR0,9061
+pyblackjack/objects.py,sha256=8hUMZZznczUss2AulLqRwftvnHNoRwpXzP_6JYrZSKw,5268
+pyblackjack/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyblackjack-0.2.1a1.dist-info/LICENSE,sha256=yVkxBQQyXNwS2lWDWO1WUxQw1dzNgOyxGYa5t-bGTDw,1086
+pyblackjack-0.2.1a1.dist-info/METADATA,sha256=seN8KhQvxyZy5y98CVb6Ro0xguy-PLswXT3ayEJbqho,5099
+pyblackjack-0.2.1a1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pyblackjack-0.2.1a1.dist-info/entry_points.txt,sha256=VOGkY63PwehAhitj3J-aq3uIGq1q7TSATCo4MdA4OOg,52
+pyblackjack-0.2.1a1.dist-info/top_level.txt,sha256=R4NqHCXLiT__4SnaGdY9LeerWU2Nl5Zg0BBVzA-EbjI,12
+pyblackjack-0.2.1a1.dist-info/RECORD,,
