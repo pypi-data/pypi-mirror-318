@@ -1,0 +1,211 @@
+
+
+## 目录
+
+- [系统架构](#系统架构)
+- [工作流程](#工作流程)
+- [本地执行](#本地执行)
+- [本地开发](#本地开发)
+- [Docker执行](#docker-执行)
+- [Jenkins执行](#jenkins-执行)
+- 加入用例数据库，并且增加数据库读取用例方法[计划中]
+
+## 系统架构
+![structure.png](xiaoli-autotest-pytest/assets/structure.png)
+
+## 工作流程
+![workflows.png](xiaoli-autotest-pytest/assets/workflows.png)
+
+## 本地执行
+
+#### 1. 命令行执行
+```
+# 输入
+pytest --csv=script/test_hello.csv --slowtime=1000 --headless
+
+# 输出
+cases/test_main.py::test_http_api[Print hello]
+Test Case => {'case_id': '0001', 'case_name': 'Test hello', 'step_name': 'Print hello', 'protocols': 'http_api', 'route': 'mods.hello.hello.print_hello', 'parameter': '', 'scope': 'dev'}
+ => Load route mods.hello.hello success
+ => Load class Hello success
+ => Load cases print_hello success
+hello
+PASSED
+```
+
+#### 2. 参数说明
+| 参数名        |   类型    | 必/可选 | 说明                                      |
+|:-----------|:-------:|:----:|:----------------------------------------|
+| --csv      |   str   |  必须  | 用例文件名                                   |
+| --slowtime |   int   |  可选  | BS UI测试时每一步操作的间隔时间, 单位毫秒, 默认1000ms也就是1秒 |
+| --headless | boolean |  可选  | BS UI测试时是否要开启headless模式（无浏览器模式）         |
+
+#### 3. 用例脚本<a id="script" />
+在script目录下新建 csv 脚本文件, 示例 <test_hello.csv>
+```Excel
+case_id,case_name,step_id,step_name,method,route,parameter,hard_assert,scope
+0001,Test hello,1,Print hello,test_http_api,hello.hello.print_hello,,false,dev
+```
+
+> 注意: 可以用Excel创建或打开, 保存时一定以"CSV UTF-8(Comma delimited)"格式保存, 避免汉字乱码. 用其他文本工具保存时, 也要以"UTF-8"保存
+
+#### 4. 参数说明
+| 参数名 | 类型   | 必/可选 | 说明                                                                                |
+|:------------------------------------------|:-----|:----:|:----------------------------------------------------------------------------------|
+| case_id                                   | str  |  必须  | 用例编号                                                                              |
+| case_name                                 | str  |  必须  | 用例名称                                                                              |
+| step_name                                 | str  |  必须  | 步骤说明                                                                              |
+| protocols                                 | str  |  必须  | 测试协议<br/>http_api: http协议接口测试<br/>playwright: BS UI测试驱动<br />pywinauto: CS UI测试驱动 |
+| route                                     | str  |  必须  | module路径.类名.方法, 全部小写                                                              |
+| parameter                                 | str  |  可选  | 测试参数                                                                              |
+| scope                                     | str  |  必须  | 测试范围, 默认全范围: smoke, dev, test, stage                                              |
+
+## 本地开发
+
+#### 1. 拉取脚手架仓库
+```commandline
+git clone https://tfsemea1.ta.philips.com/tfs/TPC_Region27/CDI_PT/_git/swpic-autotest-pytest
+git pull
+```
+
+#### 2. 拉取业务代码仓库
+这里以 ibhm-auto-testing 为例:
+```commandline
+git clone https://tfsemea1.ta.philips.com/tfs/TPC_Region27/CDI_PT/_git/ibhm-auto-testing
+git pull
+```
+
+#### 3. 复制必要文件到业务仓库
+将必要的文件或文件夹复制到业务仓库目录下: cases, utils, conftest.py, pytest.ini, requirements.txt
+
+![copy_files.png](xiaoli-autotest-pytest/assets/copy_files.png)
+
+#### 4. 安装依赖
+```commandline
+pip install -r requirements.txt
+```
+
+#### 5. 设置 Debug 参数
+打开 cases/test_main.py 文件, 移动到底部 `if __name__ == "__main__":` 代码行, 右键右侧播放按钮, 选择 Modify Run Configuration..., 打开调试设置对话框. 设置如下:
+
+![debug_config.png](xiaoli-autotest-pytest/assets/debug_config.png)
+
+点击[OK]保存, 此时就可以在本地环境中运行或调试了
+
+> 注意: UI测试时默认会打开浏览器测试, 可以加上参数 --headless 开启无头模式, 浏览器就不会打开. 
+
+#### 6. 查看报告
+allure-results 默认在项目根目录下生成. 开发环境不会自动生成 Allure Report HTML, 需要手动生成和打开html报告:
+
+点击链接, 参考Allure的[安装](https://allurereport.org/docs/install-for-windows/)和[使用](https://allurereport.org/docs/pytest/#_3-generate-a-report)
+
+```commandline
+allure serve allure-results
+```
+
+## Docker 执行
+
+#### 1. 拉取镜像
+```commandline
+docker pull pww.artifactory.cdi.philips.com/wenhuan/swpic-autotest-pytest:1.0.1
+```
+
+#### 2. 镜像更名
+> 注意: 此步为可选, 如果不做更名操作, 那么下一步中的镜像名需要替换为全名
+```commandline
+docker tag pww.artifactory.cdi.philips.com/wenhuan/swpic-autotest-pytest:latest swpic-autotest-pytest
+```
+
+#### 3. 验证镜像 
+- 启动容器, 执行演示用例
+```commandline
+docker run -d --name pytest -p 8080:8080 swpic-autotest-pytest
+```
+- 打开容器, 日志显示: Report successfully generated to allure-report, 表示测试完成
+- 打开浏览器访问allure报告: http://localhost:8080
+- 看到如下页面表示镜像拉取, 执行成功
+
+![allure_demo.png](xiaoli-autotest-pytest/assets/allure_demo.png)
+
+#### 4. 业务测试
+```text
+cd your-project-directory
+docker run -d --name pytest -p 8080:8080 -v %cd%\assets:/work/assets -v %cd%\confs:/work/confs -v %cd%\mods:/work/mods -v %cd%\script:/work/script -e csv=custom.csv swpic-autotest-pytest
+```
+- 进入到你的工程目录
+- 挂载业务工程中的assets, confs, mods, script四个目录
+- 加入环境参数 
+  - -e csv=custom.csv(必须), 将custom.csv改为你自己的脚本文件名
+  - -e scope=dev(可选), 确定你的测试范围, 默认全环境测试
+- 测试完成, 打开浏览器访问allure报告: http://localhost:8080
+
+## Jenkins 执行
+
+#### 1. 登录 Jenkins
+http://130.147.249.207:8080/blue/pipelines
+> 登录 Jenkins, 没有账号可以注册
+
+![jenkins_home.png](xiaoli-autotest-pytest/assets/jenkins_home.png)
+![jenkins_login.png](xiaoli-autotest-pytest/assets/jenkins_login.png)
+![jenkins_register.png](xiaoli-autotest-pytest/assets/jenkins_register.png)
+> 按实际情况注册您的用户
+
+#### 2. 创建工作区
+![jenkins_create_entry.png](xiaoli-autotest-pytest/assets/jenkins_create_entry.png)
+![jenkins_create_classics.png](xiaoli-autotest-pytest/assets/jenkins_create_classics.png)
+![jenkins_create_pipeline.png](xiaoli-autotest-pytest/assets/jenkins_create_pipeline.png)
+![jenkins_create_source.png](xiaoli-autotest-pytest/assets/jenkins_create_source.png)
+
+#### 3. 调整参数值
+![jenkins_config_entry.png](xiaoli-autotest-pytest/assets/jenkins_config_entry.png)
+![jenkins_config_pipeline.png](xiaoli-autotest-pytest/assets/jenkins_config_pipeline.png)
+
+> 注释掉本项目不必要的参数
+```groovy
+parameters {
+        string(
+            name: 'SCRIPT',
+            defaultValue: 'ibhm_api_test.csv',
+            description: '测试脚本CSV文件, 描述测试业务逻辑(必须)')
+        string(
+            name: 'TEST_SCOPE',
+            defaultValue: 'dev,test,stage,smoke,regress',
+            description: '测试范围, 默认全范围测试. 选择需要测试的用例范围(可选)')
+        // string(
+        //     name: 'SLOW_TIME',
+        //     defaultValue: '1000',
+        //     description: '测试间隔, UI测试中每一步操作间隔时间, 单位毫秒(可选)')
+        // string(
+        //     name: 'SCAFFOLD_BRANCH',
+        //     defaultValue: 'dev',
+        //     description: '框架代码仓库分支(可选)')
+        string(
+            name: 'BUSINESS_BRANCH',
+            defaultValue: 'dev',
+            description: '测试代码仓库分支(可选)')
+        booleanParam(
+            name: 'PARALLEL_TEST',
+            defaultValue: false,
+            description: '是否多线程, 默认关闭. 适用于没有依赖关系的用例集(可选)')
+    }
+```
+
+| 参数名             | 说明         | 是否必须 | 建议                                |
+|:----------------|:-----------|:-----|:----------------------------------|
+| SCRIPT          | 测试脚本CSV文件名 | 必须   |                                   |
+| TEST_SCOPE      | 测试的范围      | 必须   |                                   |
+| SLOW_TIME       | 测试的间隔      | 可选   | 如果不是UI测试项目, 可以不需要                 |
+| SCAFFOLD_BRANCH | 框架仓库的分支    | 可选   | 如果要验证框架分支的修改, 保留此项; 反之不需要         |
+| BUSINESS_BRANCH | 业务仓库的分支    | 必须   | 如果要验证业务分支的修改, 这里填写分支名即可验证; 反之不需要  |
+| PARALLEL_TEST   | 是否开启多线程    | 可选   | 如果测试用例之间没有依赖, 可以开启多线程加速; 反之不需要    |
+
+#### 4. 带参数运行
+![jenkins_run_entry.png](xiaoli-autotest-pytest/assets/jenkins_run_entry.png)
+![jenkins_run_config.png](xiaoli-autotest-pytest/assets/jenkins_run_config.png)
+
+#### 5. 查看日志 & 报告
+![jenkins_run_logs.png](xiaoli-autotest-pytest/assets/jenkins_run_logs.png)
+![jenkins_report_entry.png](xiaoli-autotest-pytest/assets/jenkins_report_entry.png)
+![jenkins_allure_report.png](xiaoli-autotest-pytest/assets/jenkins_allure_report.png)
+
+## End

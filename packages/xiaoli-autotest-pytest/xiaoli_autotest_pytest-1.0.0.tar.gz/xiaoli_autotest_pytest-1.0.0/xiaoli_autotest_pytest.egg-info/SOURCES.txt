@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+xiaoli_autotest_pytest.egg-info/PKG-INFO
+xiaoli_autotest_pytest.egg-info/SOURCES.txt
+xiaoli_autotest_pytest.egg-info/dependency_links.txt
+xiaoli_autotest_pytest.egg-info/not-zip-safe
+xiaoli_autotest_pytest.egg-info/requires.txt
+xiaoli_autotest_pytest.egg-info/top_level.txt
