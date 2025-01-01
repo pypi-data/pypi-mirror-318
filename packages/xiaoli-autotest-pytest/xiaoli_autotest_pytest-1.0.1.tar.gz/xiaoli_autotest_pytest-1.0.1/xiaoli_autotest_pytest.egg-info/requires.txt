@@ -1,0 +1,12 @@
+allure-pytest
+openpyxl
+pandas
+playwright
+psycopg2
+pyodbc
+pytest-assume
+pytest-xdist
+requests
+xlwings
+
+[dev]
