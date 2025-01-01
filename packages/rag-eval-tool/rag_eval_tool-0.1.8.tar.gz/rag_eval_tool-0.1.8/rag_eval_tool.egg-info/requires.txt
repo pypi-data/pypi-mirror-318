@@ -1,0 +1,11 @@
+torch
+sacrebleu
+rouge-score
+bert-score
+transformers
+nltk
+textstat
+scikit-learn
+numpy
+protobuf
+tqdm
