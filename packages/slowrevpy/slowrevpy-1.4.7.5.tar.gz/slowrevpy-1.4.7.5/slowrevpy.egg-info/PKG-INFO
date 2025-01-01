@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: slowrevpy
+Version: 1.4.7.5
+Summary: A basic python script to make slowed + reverbs.
+Home-page: https://github.com/Jrol123/slowedreverb_main
+Author: Jrol123
+Author-email: <angap4@gmail.com>
+License: MIT
+Keywords: python,music,slowed reverb,Jrol123
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pedalboard
+Requires-Dist: soundfile
+Requires-Dist: argparse
+Requires-Dist: python-ffmpeg
+
+# (Slowed + Reverb)
+Create slowed and reverb songs with python.
+
+Fork of a now [unsupported project](https://github.com/JustCoww/slowedreverb)
+
+**Installation**
+```
+pip install slowrevpy
+```
+**Dependencies**
+
+Pedalboard (https://github.com/spotify/pedalboard)
+
+ffmpeg (for the conversion to formats, other that .mp3)
