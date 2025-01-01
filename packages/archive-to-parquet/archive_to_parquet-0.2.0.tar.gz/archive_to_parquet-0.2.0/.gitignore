@@ -1,0 +1,9 @@
+/target
+data/
+.idea/
+.venv/
+test_data/*
+!test_data/.gitkeep
+flamegraph.svg
+cargo-flamegraph*
+*.log

@@ -1,0 +1,4 @@
+[tools]
+zig = "latest"
+uv = "latest"
+"pipx:maturin" = "latest"
