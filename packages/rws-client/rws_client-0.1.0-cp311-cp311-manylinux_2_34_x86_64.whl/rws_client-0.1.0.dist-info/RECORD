@@ -1,0 +1,11 @@
+rws_client-0.1.0.dist-info/METADATA,sha256=YQXp-ErWOn_ga18OHNCB6gVwHXNmsWRF7t3JBgZpuX0,2346
+rws_client-0.1.0.dist-info/WHEEL,sha256=JcZWOEbstAi8H7rOA8ltgvtSzlFAA5qtsK_HKn73ZZ0,108
+rws/__init__.py,sha256=3YiDMjDiTvDFq2LfSV2tdS2FojR36T1Uf0LJnqULHtc,675
+rws/client.py,sha256=BTlwRgWuq6gCQdF9K9PgWT-vFOzt7Dswb1u-SVWabVI,2351
+rws/__pycache__/__init__.cpython-311.pyc,sha256=MpwS4VkucGPIg8yDJDA5kFAg14ylFRqmAa4w2Xqh92w,843
+rws/__pycache__/client.cpython-311.pyc,sha256=vYZgidihE4crLh6yOvk8N-3MNDU-cqc5okjJue7aY40,4236
+rws/__pycache__/typing.cpython-311.pyc,sha256=4m3J-pJTGDnrvI5-EYEGFLRj6-PPbFeXV_PfilzIvBc,3092
+rws/typing.py,sha256=bFaMCwpeYVhC4biQiib817kd6-ANRQi581-dm08eC4Y,1551
+rws/__init__.pyi,sha256=Ox_6Bhjb1Qrgba-2HZhhdF5uX4p8MS6_GHtJOPdDpg4,1070
+rws/_rws.cpython-311-x86_64-linux-gnu.so,sha256=-UFGHyTBv7Op86nVcM4KVH-YZGqY76ryxMpwvUZqg1k,8037768
+rws_client-0.1.0.dist-info/RECORD,,
