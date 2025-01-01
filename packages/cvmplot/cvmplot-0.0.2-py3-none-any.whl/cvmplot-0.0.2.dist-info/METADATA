@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: cvmplot
+Version: 0.0.2
+Summary: SZQ lab data plot function
+Home-page: https://github.com/hbucqp/cvmplot
+Author: Qingpo Cui
+Author-email: cqp@cau.edu.cn
+License: MIT Licence
+Keywords: tnseq,dendrogram,phylogram,cgMLST,wgMLST,plot
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+Requires-Dist: Bio
+Requires-Dist: pandas (>=2.2.3)
+Requires-Dist: setuptools
+Requires-Dist: matplotlib (>=3.9.2)
+Requires-Dist: numpy (>=1.26.4)
+Requires-Dist: scipy (>=1.14.1)
+Requires-Dist: tabulate (>=0.9.0)
+Requires-Dist: dask (>=2024.9.1)
+Requires-Dist: pygenomeviz (>=1.4.1)
+
+# cvmplot
+
+
+## Table of content
+
+- [Overview](#overview)
+- [Installation](#installation)
+- [API Examples](#api-examples)
+- [Inspiration](#inspiration)
+- [Circular Genome Visualization](#circular-genome-visualization)
+
+
+
+## Overview
+cvmplot is a data visualization python package for SZQ lab used in TransposonSequencing/cgMLST/wgMLST data analysis based on matplotlib.
+
+## Installation
+`Python 3.9 or later` is required for installation.
+
+**Install PyPI package:**
+
+    pip3 install cvmplot
+
+## API Examples
+
+Jupyter notebooks containing code examples below is available [here]().
+
+### Features
