@@ -1,0 +1,10 @@
+mouse_keyboard_tracker/__init__.py,sha256=IWXR16_kjwp-c2s-8DJUjuCRXLZIhpLn1CYSX-om1Hk,1520
+mouse_keyboard_tracker/config.py,sha256=QNn-xVKIThs4yDwHv-8Pfyn6Z2GvA6fdHBVtNvvE9-g,1450
+mouse_keyboard_tracker/eventos.py,sha256=8BS9aj1uK00-oAE1-rgqJuP31EQoka9O67661DGVHWE,2938
+mouse_keyboard_tracker/log_manager.py,sha256=a2EqKl_ZyjYotNfkFSvWdOO-6EiN9ZDPyV05myK-Km8,2873
+mouse_keyboard_tracker/logger.py,sha256=5R6ia6v5KoJA3pR6k5KWmqRdFF-GpZpVBjIH-42fFbk,2311
+mouse_keyboard_tracker/ociosidade.py,sha256=yGwTVDYJkZ5GnGr483OU7iAqDzkdG_EjC8uQvE3s4mU,4324
+mouse_keyboard_tracker-0.1.0.dist-info/METADATA,sha256=p5j6CggUE7M7-bj_T8qxZS5c-lrPq7gqeA6vQyCVYn8,4939
+mouse_keyboard_tracker-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+mouse_keyboard_tracker-0.1.0.dist-info/top_level.txt,sha256=T-APEhCVZkKYRvaECELJXXMzT_SFFJ5tuKN3o0LOJp8,23
+mouse_keyboard_tracker-0.1.0.dist-info/RECORD,,
