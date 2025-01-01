@@ -1,0 +1,129 @@
+Metadata-Version: 2.1
+Name: env-get
+Version: 1.0.3
+Summary: Manage and get process.env
+Author-email: Kael Zhang <i+pypi@kael.me>
+License: Copyright (c) 2013 kaelzhang <>, contributors
+        
+        Permission is hereby granted, free of charge, to any person obtaining
+        a copy of this software and associated documentation files (the
+        "Software"), to deal in the Software without restriction, including
+        without limitation the rights to use, copy, modify, merge, publish,
+        distribute, sublicense, and/or sell copies of the Software, and to
+        permit persons to whom the Software is furnished to do so, subject to
+        the following conditions:
+        
+        The above copyright notice and this permission notice shall be
+        included in all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+        EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+        MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+        NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+        LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+        OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+        WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/kaelzhang/python-env-get
+Keywords: env-get,env,process.env,environment variable
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: coverage; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: build; extra == "dev"
+
+[![](https://github.com/kaelzhang/python-env-get/actions/workflows/python.yml/badge.svg)](https://github.com/kaelzhang/python-env-get/actions/workflows/python.yml)
+[![](https://codecov.io/gh/kaelzhang/python-env-get/branch/master/graph/badge.svg)](https://codecov.io/gh/kaelzhang/python-env-get)
+[![](https://img.shields.io/pypi/v/env-get.svg)](https://pypi.org/project/env-get/)
+[![](https://img.shields.io/pypi/l/env-get.svg)](https://github.com/kaelzhang/python-env-get)
+
+<!-- [![Conda version](https://img.shields.io/conda/vn/conda-forge/env-get)](https://anaconda.org/conda-forge/env-get) -->
+
+# env-get
+
+Manage and retrieve env variables in Python.
+
+## Install
+
+```sh
+$ pip install env-get
+```
+
+## Usage
+
+```py
+from env_get import env, EnvRequiredError
+
+port = env('SERVER_PORT', env.integer, 80)
+```
+
+## env(key, converter, defaults) -> Any
+
+```py
+def Converter(v: Any, key: str, is_default: bool) -> Any:
+```
+
+- **key** `str`: The environment variable key.
+- **converter** `Optional[Converter | List[Converter]]` A converter function or a list of converter functions.
+- **defaults** `Opitonal[Any]` The optional default value if the environment variable is not found.
+
+Returns `Any` the retrieved env variable.
+
+### Built-in Converter Functions
+
+- **`env.boolean`**: Converts the value to a boolean. Treats `'true'`, `'1'`, `'Y'`, `'y'`, `'yes'`, and `True` as `True`.
+- **`env.integer`**: Converts the value to an integer. Returns `0` if conversion fails.
+- **`env.required`**: Ensures that the environment variable is set. Raises a `EnvRequiredError` if not.
+
+## Examples
+
+### Boolean Conversion
+
+```py
+debug_mode = env('DEBUG_MODE', env.boolean, False)
+```
+
+### Integer Conversion
+
+```py
+port = env('PORT', env.integer, 8080)
+```
+
+### Required Variable
+
+```py
+from env_get import env, EnvRequiredError
+
+try:
+    api_key = env('API_KEY', env.required)
+except RangeError as e:
+    print(e)  # Output: env "API_KEY" is required
+```
+
+### Handling Multiple Converters
+
+You can apply multiple converters by passing a list of converter functions.
+
+```py
+value = env('SOME_VAR', [env.required, env.integer], 10)
+```
+
+## License
+
+[MIT](LICENSE)
