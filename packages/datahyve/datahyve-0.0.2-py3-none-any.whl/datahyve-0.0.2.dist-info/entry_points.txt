@@ -1,0 +1,3 @@
+[console_scripts]
+datahyve=datahyve.main:app
+
