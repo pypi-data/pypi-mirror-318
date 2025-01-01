@@ -1,0 +1,10 @@
+LICENSE
+README.rst
+kenobi.py
+setup.py
+kenobi.egg-info/PKG-INFO
+kenobi.egg-info/SOURCES.txt
+kenobi.egg-info/dependency_links.txt
+kenobi.egg-info/requires.txt
+kenobi.egg-info/top_level.txt
+tests/test_kenobi.py
