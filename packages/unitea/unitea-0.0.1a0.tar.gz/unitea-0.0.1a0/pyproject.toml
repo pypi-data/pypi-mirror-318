@@ -1,0 +1,12 @@
+[build-system]
+
+[project]
+name = "unitea"
+authors = [{name = "Giorgos Margaritis", email = "gmargari@protonmail.com"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+dynamic = ["version", "description"]
+
+[project.urls]
+Home = "https://github.com/gmargari/unitea"
