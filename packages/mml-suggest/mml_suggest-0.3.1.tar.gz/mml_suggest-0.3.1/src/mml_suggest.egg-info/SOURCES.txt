@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/mml_suggest/__init__.py
+src/mml_suggest/activate.py
+src/mml_suggest.egg-info/PKG-INFO
+src/mml_suggest.egg-info/SOURCES.txt
+src/mml_suggest.egg-info/dependency_links.txt
+src/mml_suggest.egg-info/entry_points.txt
+src/mml_suggest.egg-info/not-zip-safe
+src/mml_suggest.egg-info/requires.txt
+src/mml_suggest.egg-info/top_level.txt
+src/mml_suggest/configs/__init__.py
+src/mml_suggest/scripts/__init__.py
+src/mml_suggest/scripts/suggest_scheduler.py

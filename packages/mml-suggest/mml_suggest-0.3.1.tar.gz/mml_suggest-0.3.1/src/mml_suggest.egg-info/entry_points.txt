@@ -1,0 +1,2 @@
+[mml.plugins]
+mml-suggest = mml_suggest.activate
