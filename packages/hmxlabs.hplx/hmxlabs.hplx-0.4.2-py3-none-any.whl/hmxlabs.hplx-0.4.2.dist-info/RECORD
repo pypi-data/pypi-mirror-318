@@ -1,0 +1,11 @@
+hmxlabs/hplx/__init__.py,sha256=aJsQRGAJk-QMwzMWlIwGyop3ixBJ4g2mzBvj-fXe2Lc,42
+hmxlabs/hplx/__main__.py,sha256=mwBRud7d26FKUGRbDqU9Ysuncpsg-Dtl5PLnRlZTNpM,42
+hmxlabs/hplx/hpl_input.py,sha256=1b-BRAhqnMlJLUDbGR3sRISlqW20DjbU4azy8bRdWtA,11819
+hmxlabs/hplx/hpl_results.py,sha256=_o5LJvJ3Pcf1Ft1j42bBuWpN3k1-MsgSMolfPNybBa4,6189
+hmxlabs/hplx/hplx.py,sha256=milCwmPmswz9mphhcEEEpnZrEAYJas96BlBjAO4BaT0,20383
+hmxlabs.hplx-0.4.2.dist-info/LICENSE,sha256=JQapJ-L7dubNvDHutSu0k-amc1y36fNihj3rhUSV2RM,1065
+hmxlabs.hplx-0.4.2.dist-info/METADATA,sha256=zV2CXa9fMQ7fc_xwMI9Oda5RnR3w4B1kHV6Dyu9okVY,14002
+hmxlabs.hplx-0.4.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+hmxlabs.hplx-0.4.2.dist-info/entry_points.txt,sha256=-Cta5NvGByJZOZ54mgHGZ6yEeM2WCdAkgxdS-jbT79s,87
+hmxlabs.hplx-0.4.2.dist-info/top_level.txt,sha256=lqBIw91RD1tuMXcWiBB5zSf6Y2doLku5A0mlFoaTis8,8
+hmxlabs.hplx-0.4.2.dist-info/RECORD,,
