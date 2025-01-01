@@ -1,0 +1,12 @@
+hunter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hunter/__main__.py,sha256=B8Yht0k8OFWf82sVEuWLDWTvDRMJZgkBxoM2UZm7G44,118
+hunter/constants.py,sha256=xeFjgvXU6Oo3eGsbKKI8Z7MSF1TFQRpAdYNigTeXzic,7681
+hunter/formatters.py,sha256=DONlMBwEe0MWwizmIpaqVUkPopN95uaSYDXdA8utzRc,10293
+hunter/main.py,sha256=MQG68jnTK413SHfsFVZULkvF12fDPXZUcVIevlhncAo,11101
+hunter/parsers.py,sha256=NDAVKgrr96k7OYnMurWAygJ_h-3714W5e8b_BxG4UdM,18650
+codename_hunter-0.1.0.dist-info/LICENSE,sha256=4OuYg7TO1KzxRVNQllXrN_7bh0JlwB6J01ctI3282KM,1060
+codename_hunter-0.1.0.dist-info/METADATA,sha256=McMMrTiu37USW7dIcQneT-tY4GmgrjEBY2ZCV1v_eds,7201
+codename_hunter-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+codename_hunter-0.1.0.dist-info/entry_points.txt,sha256=8_iTNEvu0_Mttb5uI-qgl3Wldjohvhjs7SuMTMwjBnI,44
+codename_hunter-0.1.0.dist-info/top_level.txt,sha256=Th81uFvyf-4BsvNpAo0QkDtzuiazjZEucMGkYzu1_Io,7
+codename_hunter-0.1.0.dist-info/RECORD,,
