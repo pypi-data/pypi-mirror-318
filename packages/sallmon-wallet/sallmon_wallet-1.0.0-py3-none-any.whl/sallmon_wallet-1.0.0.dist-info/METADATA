@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: sallmon-wallet
+Version: 1.0.0
+Summary: Sallmon Wallet CLI for managing cryptocurrency wallets.
+Home-page: UNKNOWN
+Author: Your Name
+Author-email: your.email@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: base58
+Requires-Dist: click
+Requires-Dist: cryptography
+Requires-Dist: ecdsa
+
+UNKNOWN
+
+

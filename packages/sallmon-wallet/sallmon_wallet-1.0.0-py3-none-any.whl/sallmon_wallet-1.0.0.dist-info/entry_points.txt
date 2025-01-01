@@ -1,0 +1,3 @@
+[console_scripts]
+sallmon = sallmon_wallet.cli:cli
+
