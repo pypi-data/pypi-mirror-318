@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools", "seversion"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["seJsonDB"]  # Packages to include
+exclude = []  # Exclude specific files or dirs
+
+[project]
+name = "seJsonDB"
+dynamic = ["version"]
+description = "A Simple , Lightweight , Efficient JSON based database for Python. "
+readme = "ReadMe.md"
+requires-python = ">=3.10"
+license = {file = "License.md"}
+authors = [
+    { name = "Cybernetic Innovations", email = "github@cyberneticinnovations.com" }
+]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+    "ujson==5.10.0"
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "seJsonDB.__version__"}
