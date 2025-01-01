@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: mml-dimensionality
+Version: 0.3.1
+Summary: This is the MML dimensionality plugin, providing task dimensionality estimation methods.
+Home-page: https://git.dkfz.de/imsy/ise/mml
+Author: Patrick Godau
+Author-email: patrick.godau@dkfz-heidelberg.de
+License: MIT
+Classifier: Natural Language :: English
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Version Control :: Git
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Environment :: GPU
+Classifier: Intended Audience :: Science/Research
+Classifier: Typing :: Typed
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: mml-core>=1.0.0
+
+# MML dimensionality plugin
+
+This plugin provides the possibility to estimate task dimensionality.
+
+# Install
+
+TODO
+
+# Usage
+
+TODO
