@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: translatium
+Version: 0.0.1
+Summary: A pure Python i18n library for your Python projects.
+Home-page: https://github.com/CEOXeon/Translatium
+Author: Louis Zimmermann (@CEOXeon)
+Author-email: louis-github@tutanota.com
+License: Apache-2.0
+Project-URL: Source Code, https://github.com/CEOXeon/Translatium
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyyaml
+
+# Translatium
+A pure python i18n library.

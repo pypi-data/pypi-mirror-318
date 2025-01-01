@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/translatium/__init__.py
+src/translatium/translatium.py
+src/translatium.egg-info/PKG-INFO
+src/translatium.egg-info/SOURCES.txt
+src/translatium.egg-info/dependency_links.txt
+src/translatium.egg-info/requires.txt
+src/translatium.egg-info/top_level.txt
+tests/test.py
