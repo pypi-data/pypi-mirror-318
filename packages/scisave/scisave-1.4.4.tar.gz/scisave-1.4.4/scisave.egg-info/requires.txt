@@ -1,0 +1,9 @@
+PyYAML>=6.0
+numpy>=1.24
+
+[dev]
+pip>=24.3
+build>=1.2
+
+[test]
+ruff>=0.8
