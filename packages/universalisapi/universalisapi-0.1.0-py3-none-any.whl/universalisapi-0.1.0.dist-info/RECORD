@@ -1,0 +1,10 @@
+universalisapi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+universalisapi/client.py,sha256=6aZr8-8uvRYdcvC3UfWZmXwFwFtCy-Gg9exa8ehnjAg,7945
+universalisapi/decos.py,sha256=NuwdqI1Vv_UhYL1aNLQTfx0C8OHAw8if_cutf1AxdkY,378
+universalisapi/exceptions.py,sha256=4jGs73Vxhi4Ym5EUEGVkwaLMR6GBzxbM1-Vwmu_9T6o,89
+universalisapi/wrapper.py,sha256=6dRnrK9CAGfFTKeNSnYRncHEhnXEwGdZQ0igoXHy0fw,4442
+universalisapi/api_objects/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+universalisapi/api_objects/listing.py,sha256=VLpyHk-tCGCwXV4yY2u84HELIA_UbYZwU6doFD0iqCw,179
+universalisapi-0.1.0.dist-info/METADATA,sha256=iDGCgYcZe_PgwgAvYQhow_BceL2lHBdRikiZAQk50lY,227
+universalisapi-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+universalisapi-0.1.0.dist-info/RECORD,,
