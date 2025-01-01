@@ -1,0 +1,262 @@
+Metadata-Version: 2.1
+Name: quantum-dot-sim
+Version: 1.1.1
+Summary: A package for simulating quantum dot behavior and analyzing energy levels, absorption spectra, and wavefunctions
+Home-page: https://github.com/ArjunSkanda/quantum_dot_sim
+Author: Arjun Skanda Ananda
+Author-email: arjunskanda@yahoo.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+#### By: Arjun Skanda Ananda
+
+# Quantum Dot Simulation Package
+
+## Overview
+
+The Quantum Dot Simulation Package is a Python library designed to simulate quantum dots, including their energy levels, wavefunctions, and absorption spectra, and provide 3D visualizations. This package allows users to model quantum dots in different materials and sizes and gain insights into their quantum mechanical properties, which are essential for applications in quantum computing, solar energy, and nanotechnology.
+
+### Features
+* **Energy Levels Calculation:** Simulate energy levels in quantum dots based on material properties.
+* **Wavefunctions Calculation:** Calculate wavefunctions for quantum dots to analyze the behavior of electrons.
+* **Absorption Spectra:** Compute absorption spectra to understand light absorption properties.
+* **Visualization:** Generate 2D and 3D plots of quantum dots, energy levels, absorption spectra, an dinteraction wiht plasma.
+* **Sketching:** Create 3D visual representations of quantum dots.
+* **Utility Functions:** Convert energy levels and other outputs into data structures like Pandas DataFrames.
+* **Plasma Interaction Simulation:** Simulate the interaction of quantum dots with plasmas, using PlasmaPy library.
+* **Multi-Material Heterostructures:** Model quantum dots made from multiple materials, each with its own energy level calculation.
+
+### Contributing
+I welcome contributions! If you would like to improve the package, please do this:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Open a pull request and add a description of your changes.
+
+### License
+[Quantum Dot Simulation Package](https:/https://github.com/ArjunSkanda/quantum_dot_sim) © 2024 by Arjun Skanda Ananda is licensed under [MIT License](https://opensource.org/license/mit)
+
+### Installation
+
+To install the Quantum Dot Simulation package, clone the repository and install it using `pip`:
+```bash
+git clone https://github.com/ArjunSkanda/quantum_dot_sim.git
+cd quantum_dot_sim
+pip install -e .
+```
+Alternatively, you can use the `setup.py` file for installation 
+```bash
+python setup.py install
+```
+### Usage
+
+Here is an example of how to use the `quantum_dot_sim` package:
+
+```python
+from quantum_dot_sim import calculate_energy_levels, plot_custom_graph
+
+radius = 5e-9
+material_props = {"effective_mass": 9.1e-31}
+energy_levels = calculate_energy_levels(material_props, radius)
+plot_custom_graph(range(len(energy_levels)), energy_levels, xlabel="Quantum Number", ylabel="Energy (eV)", title="Energy Levels of Quantum Dot")
+```
+ 
+You can use the functions described below to calculate quantum dot properties and visualize results.
+
+## Modules
+
+### energy_levels
+
+This module allows you to calculate the energy levels of a quantum dot.
+
+**Function:** `calculate_energy_levels(radius, material_properties)`
+
+* `radius`: Radius of the quantum dot ( in meters).
+* `material_properties`: A dictionary containing material properties such as the effective mass of the electron.
+* `temperature`(optional): Temp in Kelvin for energy level shifts
+**Example:**
+
+```bash
+energy_levels = calculate_energy_levels({"effective_mass": 9.1e-31, "bandgap": 1.1 * e}, 5e-9, temperature=300)
+```
+### plasma_interaction
+
+**Function:** `plasma_interaction_simulation(density, temperature)`
+* `density`: Plasma density in particles per meters cubed.
+* `temperature`: Plasma temp in Kelvin
+
+**Example:**
+
+```python
+plasma_conditions = plasma_interaction_simulation(1e19, 10000)  #plasma density of 1e19 particles/m³ at 10,000 K
+```
+### multi_material_energy_levels
+
+This module calculates energy levels for heterostructure quantum dots made of multiple materials.
+
+**Function:** `multi_material_energy_levels(layers)`
+
+* `layers`: A list of dictionaries containing material properties and radius for each layer.
+
+**Example:**
+
+```python
+layers = [{"material": {"effective_mass": 9.1e-31, "bandgap": 1.1 * e}, "radius": 5e-9}]
+energy_levels = multi_material_energy_levels(layers)
+```
+
+### wavefunctions
+
+This module provides a function to calculate the wavefunctions of a quantum dot.
+
+**Function:** `calculate_wavefunctions(radius, material_properties)`
+
+* `radius`: Radius of the quantum dot (in meters )
+
+* `material_properties`:  A dictionary containing material properties like effective mass.
+
+**Example:**
+
+```python
+wavefunctions = calculate_wavefunctions(5e-9, {"effective_mass": 9.1e-31})
+```
+
+### spectra
+
+This module allows you to compute the absorption spectra of a quantum dot.
+
+**Function:** `calculate_absorption_spectrum(radius, material_properties)`
+
+* `radius`: Radius of the quantum dot
+
+* `material_properties`: A dictionary containing material properties like band gap
+
+**Example:**
+```python
+absorption_spectrum = calculate_absorption_spectrum(5e-9, {"band_gap": 1.5})
+```
+
+### visualization
+
+This module provides functions for visualizing data and plotting graphs
+
+**Function:** `plot_custom_graph(x, y, xlabel, ylabel, title)`
+
+* `x`: X axis data
+* `y`: Y axis data
+* `xlabel`: Label for X axis
+* `ylabel`: Label for Y axis
+* `title`: Title of graph
+
+**Example:**
+```python
+plot_custom_graph(range(10), [i**2 for i in range(10)], xlabel="X", ylabel="Y", title="name-of-ur-graph")
+```
+### sketch
+
+This module contains the function to draw a 3d sketch of a quantum dot.
+
+**Function:** `draw_quantum_dot(radius)`
+
+* `energy_levels`: A list of energy levels (in eV)
+
+**Example:**
+```python
+draw_quantum_dot(5e-9)  #5 nm quantum dot
+```
+
+![quantum-dot-sketch.jpg](https://ibb.co/n1kMjBF)
+### utils
+
+This module includes utility functions, such as converting energy levels into a Pandas data frame.
+
+**Function:** `energy_levels_to_dataframe(energy_levels)`
+
+* `energy_levels`: A list of energy levels (in eV)
+
+**Example:**
+```python
+import pandas as pd
+from quantum_dot_sim.utils import energy_levels_to_dataframe
+
+energy_levels = [1.2, 2.3, 3.4]
+df = energy_levels_to_dataframe(energy_levels)
+print(df)
+```
+### interactive_mode
+This new module provides an interactive mode for continuous predictions and training on quantum dot datasets.
+
+**Function:** start_interactive_mode()
+
+* Starts an interactive session to load a dataset, train a model, and predict on new data with options to continue or stop after one prediction.
+
+## File Descriptions
+
+This section provides an overview of each file in the `quantum_dot_sim` package and its purpose.
+
+1. `__init__.py`
+
+This file marks the directory as a Python package. It allows you to import the modules from the `quantum_dot_sim` folder in a streamlined way. The file may also contain initialization code that is executed when the package is first imported.
+
+2. `config.py`
+
+This file contains configuration settings for the package. It may define constants, material properties, default parameters (e.g., effective mass, bandgap), or other global settings that are used throughout the simulation. It's a central place to adjust default values for different materials or simulation conditions without changing individual functions.
+
+3. `custom_exceptions.py`
+
+This module defines custom exceptions for the package. Custom exceptions allow you to handle specific errors in a more meaningful way. For example, if a user tries to input invalid data (e.g., a negative radius), this module can define an error to signal it clearly. You may also use this file to define exceptions for specific simulation errors, such as invalid material properties.
+
+4. `data_loader.py`
+
+The data_loader module is responsible for loading datasets used for training or prediction. It defines functions to load datasets (e.g., from `.npy` files or other formats) and preprocess them into a format suitable for training neural networks or conducting simulations. It may also include functions for splitting the data into training and testing sets.
+
+5. `energy_levels.py`
+
+This module contains functions that calculate the energy levels of quantum dots based on their material properties and size. It is a core part of the simulation, helping to model the quantized energy levels of electrons in a quantum dot based on the radius, material properties (e.g., effective mass), and temperature. Functions in this module may also include temperature corrections for energy shifts.
+
+6. `interactive_mode.py`
+
+This file implements the interactive mode for the quantum dot simulation. The interactive mode allows users to load data, train a model, and make predictions on new datasets while staying in an interactive loop. Users can input choices to continue or stop after each prediction, facilitating a continuous workflow for testing and experimentation.
+**Key function:** `start_interactive_mode():` This function initializes the interactive environment, loading the dataset and model, then running predictions based on user input.
+
+7. `quantum_array.py`
+
+This module deals with the creation and manipulation of arrays that represent quantum dot properties, such as energy levels or wavefunctions. It may include functions to handle multidimensional arrays for quantum dot simulations, as well as methods to perform array operations on these values (e.g., normalization, transformations).
+
+8. `sketch.py`
+
+The sketch.py file provides functions to visualize quantum dots in 3D. It includes tools to generate sketches or plots representing the spatial arrangement of quantum dots or the electronic states within them. It may use libraries like matplotlib, plotly, or mayavi for generating 3D visualizations of the quantum dot structure.
+
+9. `spectra.py`
+
+This module is responsible for simulating the absorption spectra of quantum dots. It models how quantum dots absorb light across different wavelengths based on their energy levels and material properties. It may include functions to generate absorption spectra and plot them. The absorption spectrum is essential for understanding the interaction of quantum dots with light, which is relevant for applications like solar cells.
+
+10. `utils.py`
+
+This file includes utility functions that support other modules in the package. These functions might handle tasks like converting energy levels into a Pandas DataFrame, performing mathematical operations, or applying corrections to input data. The utility functions help simplify and streamline code in other modules.
+
+11. `visualization.py`
+
+The visualization.py module provides functions for visualizing data, including plotting 2D and 3D graphs. This can include energy levels, wavefunctions, and other simulation results. It can also generate visual representations of how quantum dots behave in different conditions, which is helpful for both scientific understanding and presentation.
+
+12. `wavefunctions.py`
+
+This file contains functions to calculate and visualize the wavefunctions of quantum dots. It models how the quantum states are distributed within a quantum dot, helping to understand the probability of finding an electron in a given location. Wavefunctions are important in quantum mechanics for understanding the behavior of particles at the nanoscale.
+
+## Compatibility
+
+
+This package is designed to work seamlessly with other scientific computing libraries, such as Numpy, SciPy, matplotlib, Pandas, and SymPy.
+
+You can easily integrate this package with other scientific tools. This package can be a good addition to your project and work if you work with molecular dynamics simulations or other simulations that rely on physics principles.
+
+#### Thank you for taking the time to read this!
+
+
