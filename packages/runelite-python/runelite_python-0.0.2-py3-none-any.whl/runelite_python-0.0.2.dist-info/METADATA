@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: runelite-python
+Version: 0.0.2
+Summary: Python bindings for RuneLite
+Requires-Python: >=3.12
+Requires-Dist: numpy>=2.1.2
+Requires-Dist: pillow>=11.0.0
+Requires-Dist: py4j>=0.10.9.7
+Requires-Dist: pyautogui>=0.9.54
