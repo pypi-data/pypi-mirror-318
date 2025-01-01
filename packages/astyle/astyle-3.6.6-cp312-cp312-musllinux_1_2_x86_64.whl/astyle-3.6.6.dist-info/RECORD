@@ -1,0 +1,11 @@
+astyle.scripts/astyle,sha256=yatGnsl_JII_mUR_tAZ_W0TSh16B_3Dz5IZA6t6uhvE,529857
+astyle/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+astyle/__init__.py,sha256=8Mv4RYvZ6L3SQ74qv0ZjsH8FARLjS1YMV4AuI5gjDHw,646
+astyle/__main__.py,sha256=zBFKncTynP-BbFChmk61qYbdSJYxmVeb_qef4pEWvio,856
+astyle/__init__.cpython-312-x86_64-linux-musl.so,sha256=9wZ0sco5c8dlc3KkuAmR72DeX_u805y8X6eD4rf430E,486705
+astyle-3.6.6.dist-info/METADATA,sha256=acc9WBd4tQO_m2SZQ6fDAMX-VEZdD4RTtq5CHyamvek,7256
+astyle-3.6.6.dist-info/RECORD,,
+astyle-3.6.6.dist-info/WHEEL,sha256=3zA1ZuXZm16YEeXghxfkMxAdI01btIGLecr0IEG4IxU,117
+astyle.libs/libgcc_s-a0b57c20.so.1,sha256=XPAr2giQZFaQKDEig3i_sQM7zfbaGkuhwmZ9ryvu-Vk,148041
+astyle.libs/libstdc++-0d31ccbe.so.6.0.32,sha256=QyUTnI2umnGgPmNJ-6F_BVIAJnq6-70cNoEWpma6EFQ,3494521
+astyle-3.6.6.data/scripts/astyle,sha256=JioWskr9CzzeGUBmTJuuhAkTcpuHZroJyRGy2WfVsPM,192
