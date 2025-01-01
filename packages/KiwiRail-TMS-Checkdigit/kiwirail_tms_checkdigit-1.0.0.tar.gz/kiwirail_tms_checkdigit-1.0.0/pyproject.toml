@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "KiwiRail-TMS-Checkdigit"
+version = "1.0.0"
+authors = [
+  { name="Chris Dirks", email="cdirksfer@email.com" },
+]
+description = "A package for calculating the check digit of a TMS number"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+
+[project.urls]
+Documentation = "https://github.com/cdfer/KiwiRail_TMS_Checkdigit_Python"
+Source = "https://github.com/cdfer/KiwiRail_TMS_Checkdigit_Python"
+
+[tool.hatch.version]
+path = "VERSION"
