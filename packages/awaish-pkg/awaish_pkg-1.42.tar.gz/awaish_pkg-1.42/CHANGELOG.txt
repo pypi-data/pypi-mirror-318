@@ -1,0 +1,29 @@
+CHANGELOG for awaish_pkg
+========================
+
+Version 1.42 - Fourth Release
+-------------------------------
+- Created the `Stack` class with methods for basic stack operations (push, pop, peek, etc.).
+
+- Added utility functions in `UtilityFunctions` class including:
+
+  - `add_list_index_element`: Sums the digits of each integer in a list.
+
+  - `find_positive_and_negative`: Separates positive and negative numbers in a list.
+
+  - `factor_finder`: Finds factors of a given number and calculates their sum.
+
+  - `count_vowel_and_spaces`: Counts vowels and spaces in a text input.
+
+  - `prime_finder`: Determines if a given number is prime.
+
+  - `even_and_odd`: Separates even and odd numbers from a list.
+
+  - `fibonacci_series`: Generates a Fibonacci series.
+
+  - `selection_sort`: Sorts a list using the selection sort algorithm.
+
+  - `palindrome_number_pattern`: Prints a palindrome-style number pyramid.
+
+- Developed a user-friendly interactive system for stack operations.
+
