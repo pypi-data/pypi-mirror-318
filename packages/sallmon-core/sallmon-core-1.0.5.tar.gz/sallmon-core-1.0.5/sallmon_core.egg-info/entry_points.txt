@@ -1,0 +1,3 @@
+[console_scripts]
+sallmon-server = server:start_server
+
