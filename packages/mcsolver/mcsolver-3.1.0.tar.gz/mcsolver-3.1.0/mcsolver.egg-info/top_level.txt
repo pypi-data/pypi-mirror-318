@@ -1,0 +1,4 @@
+heisenberglib
+isinglib
+mcsolver
+xylib
