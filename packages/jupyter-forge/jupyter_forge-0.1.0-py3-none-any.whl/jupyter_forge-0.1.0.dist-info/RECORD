@@ -1,0 +1,14 @@
+__init__.py,sha256=9urW2XCiMQ84NavwrHXefjB0951MQsKt4DOQaoYSERs,38
+jupyter_forge.py,sha256=MlOfzzYE0OoRjTW9c3jZ9gjkJ0-FolIGPH8DdQr8etU,5286
+jupyter_forge-0.1.0.data/data/src/SearchPanel.js,sha256=-kk6tbnC2wkTzHCRxk1eKzpHslygz3geq-jZ2G1RO4E,8171
+jupyter_forge-0.1.0.data/data/src/ToolbarExtension.js,sha256=keSVlXgCYxYLx0UJE2g_2zE8VzUi6eUeNHThV58w3GY,1894
+jupyter_forge-0.1.0.data/data/src/index.html,sha256=t9CQzhfyLx741KgDyLwJi7H_Z1x0m-1ZET2Q5cbm2rA,7232
+jupyter_forge-0.1.0.data/data/src/package.json,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+template/index.html,sha256=t9CQzhfyLx741KgDyLwJi7H_Z1x0m-1ZET2Q5cbm2rA,7232
+template/package.json,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+template/Extensions/SearchPanel.js,sha256=-kk6tbnC2wkTzHCRxk1eKzpHslygz3geq-jZ2G1RO4E,8171
+template/Extensions/ToolbarExtension.js,sha256=keSVlXgCYxYLx0UJE2g_2zE8VzUi6eUeNHThV58w3GY,1894
+jupyter_forge-0.1.0.dist-info/METADATA,sha256=hpKF-SUnjhDek15swKrh92oEppNq5lEZw-O-SviVaBU,1943
+jupyter_forge-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+jupyter_forge-0.1.0.dist-info/top_level.txt,sha256=nV9Cm7_8GivPblaBW-bRv0v9AW_aYX2g7fcOnY_xW44,32
+jupyter_forge-0.1.0.dist-info/RECORD,,
