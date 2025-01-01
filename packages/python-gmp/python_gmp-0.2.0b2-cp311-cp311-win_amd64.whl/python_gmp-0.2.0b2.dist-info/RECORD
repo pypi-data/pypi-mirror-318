@@ -1,0 +1,10 @@
+gmp.cp311-win_amd64.pyd,sha256=hJy6s2z9rvKsJhJXAfk4r6raaPvVnESvOLEIjMe69f0,53760
+_gmp_fractions.py,sha256=1CXUMcrMug_y87oDjemdACVJ4P7L9mR8yGdgwtHf_7I,42048
+_gmp_utils.py,sha256=oRg868vPXywZW7NAQGpZn1uYrqph_YEfu4rI_161EzA,1663
+python_gmp-0.2.0b2.data/platlib/libgmp-10.dll,sha256=LkGP12jsuKbvSIW6JmI4EPaNzPZ8J68tTZW-ZNOjCNk,1066415
+python_gmp-0.2.0b2.dist-info/DELVEWHEEL,sha256=jQftTRFzfSIyHjSZAr-5fkdQ17JHuqg1hPZNABp17AQ,472
+python_gmp-0.2.0b2.dist-info/LICENSE,sha256=aIwhksEM8YqBmtcBsPenGfdWq_mAcyYkrphX2TQozho,1096
+python_gmp-0.2.0b2.dist-info/METADATA,sha256=MLlNhDH5ryRbs5E3LY3b0wuS9sh0pDLp9qJw3yXws_I,4086
+python_gmp-0.2.0b2.dist-info/RECORD,,
+python_gmp-0.2.0b2.dist-info/top_level.txt,sha256=cjY4HEHXLZxT7hA_SoJgBKiaRGRQxDXB_j8JNoOiCHk,30
+python_gmp-0.2.0b2.dist-info/WHEEL,sha256=nkBcd8Ko0v5sEcSagm2-x_RVrb8gBSkTa8VFFZ0Mr1o,101
