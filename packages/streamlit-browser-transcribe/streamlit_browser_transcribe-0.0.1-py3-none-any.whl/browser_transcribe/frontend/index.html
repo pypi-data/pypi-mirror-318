@@ -1,0 +1,66 @@
+<html>
+  <body>
+    <button id="startButton">Start Recognition</button>
+    <script>
+      // ----------------STREAMLIT FUNCTIONS------------------------
+      function sendMessageToStreamlitClient(type, data) {
+        var outData = Object.assign({
+          isStreamlitMessage: true,
+          type: type,
+        }, data);
+        window.parent.postMessage(outData, "*");
+      }
+
+      function init() {
+        sendMessageToStreamlitClient("streamlit:componentReady", {apiVersion: 1});
+      }
+
+      function setFrameHeight(height) {
+        sendMessageToStreamlitClient("streamlit:setFrameHeight", {height: height});
+      }
+
+      // The `data` argument can be any JSON-serializable value.
+      function sendDataToPython(data) {
+        sendMessageToStreamlitClient("streamlit:setComponentValue", data);
+      }
+      // ----------------------------------------------------
+
+      // for processing the speech
+      let recognition = new webkitSpeechRecognition();
+      recognition.continuous = true;
+      recognition.interimResults = true;
+      
+      recognition.onresult = function (e) {
+        var speech = "";
+        for (var i = e.resultIndex; i < e.results.length; ++i) {
+          if (e.results[i].isFinal) {
+            speech += e.results[i][0].transcript;
+          }
+        }
+        if ( speech != "") {
+          console.log(speech)
+          sendDataToPython({
+            value: speech,
+            dataType: "json",
+          });
+        }
+      }
+      document.getElementById('startButton').addEventListener('click', function() {
+        recognition.start();
+      });
+
+      function onDataFromPython(event) {
+        if (event.data.type !== "streamlit:render") return;
+      }
+
+      window.addEventListener("message", onDataFromPython);
+      init();
+
+      window.addEventListener("load", function() {
+        window.setTimeout(function() {
+          setFrameHeight(document.documentElement.clientHeight)
+        }, 0);
+      });
+    </script>
+  </body>
+</html>
