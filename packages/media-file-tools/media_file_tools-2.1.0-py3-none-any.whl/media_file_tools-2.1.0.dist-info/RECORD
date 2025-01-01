@@ -1,0 +1,12 @@
+mediafiletools/__init__.py,sha256=Prm9BaJ0vYC_KP04RwBuHE2M3U9WOlI-rfaz-N_lqKQ,1044
+mediafiletools/common.py,sha256=6lojFnycxW0Yr30t2ZMJ5xo7f_XRdt3vbZLYGEgKfXY,3331
+mediafiletools/find_music_dupes.py,sha256=xbAXKH6oCsIVqaB1S1ecY2rrRHmzFj5FUPC38j5T3aU,9534
+mediafiletools/movie_sort_to_df.py,sha256=nQ-PwS9Owkva6Juy01nKUgpIa8j4AZ0rwp1YyvAFs20,8170
+mediafiletools/series_details.py,sha256=pONSYCa345Ez0Em1OIJatDhHOAQQvk1SVfXzddmsjHY,16353
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_main.py,sha256=QliPwF_5jQldZPPz36UsXoYxN0R9jm_OvLZT3-H9nP0,29890
+media_file_tools-2.1.0.dist-info/LICENSE,sha256=a_i-p8ciVYp6Qev8eUJbJfjIKHQwp9PsLa0iCKjTze0,1090
+media_file_tools-2.1.0.dist-info/METADATA,sha256=fARuvNNT63U-JjIcrGarJxcM3W61-N2phrcnbBIzwpE,3895
+media_file_tools-2.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+media_file_tools-2.1.0.dist-info/top_level.txt,sha256=67JmNUx6ijlBnpHCHjFFErdskA0cLCnzi_Ltqg7v42s,77
+media_file_tools-2.1.0.dist-info/RECORD,,
