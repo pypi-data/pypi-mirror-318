@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: syml
+Version: 0.6
+Summary: SYML (Simple YAML-like Markup Language) is a simple markup language with similar structure to YAML, but without all the gewgaws and folderol.
+Home-page: https://github.com/eykd/syml/
+License: MIT
+Author: David Eyk
+Author-email: david@worldsenoughstudios.com
+Requires-Python: >=3.12,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Markup
+Requires-Dist: parsimonious (>=0.10.0,<0.11.0)
+Requires-Dist: regex (>=2024.11.6,<2025.0.0)
+Project-URL: Repository, https://github.com/eykd/syml
+Description-Content-Type: text/markdown
+
+SYML
+----
+
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/eykd/syml/ci.yaml)
+![PyPI - Version](https://img.shields.io/pypi/v/syml)
+
+
+SYML (Simple YAML-like Markup Language) is a simple markup language with
+similar structure to YAML, but without all the gewgaws and folderol.
+
+
+Example
+=======
+
+Here's a simple SYML document:
+
+``` python
+
+>>> document = """
+foo:
+  - bar
+  - baz
+  - blah
+    boo
+    baloon
+
+booleans?:
+  - True
+  - False
+  - true
+  - false
+  - TRUE
+  - FALSE
+"""
+```
+
+And the resulting data structure::
+
+``` python
+>>> import syml
+>>> syml.loads(document)
+{'foo': ['bar', 'baz', 'blah\nboo\nbaloon'],
+ 'booleans?': ['True', 'False', 'true', 'false', 'TRUE', 'FALSE']}
+```
+
+
+All leaf values in SYML are just plain ol' strings. No ints, floats, bools, or
+nasty remote code execution bugs!
+
