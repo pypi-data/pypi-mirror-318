@@ -1,0 +1,16 @@
+brave_search_python_client/__init__.py,sha256=IBgtwnwYT2roUlGCH6xwTN5X9M4MD_IIoAwa-lkEkgc,750
+brave_search_python_client/cli.py,sha256=FK4UFsvire_FoyAoHX8BNDkNP6oH7hjiQDZOfgaq9Q4,10843
+brave_search_python_client/client.py,sha256=vkmybW1rsuf50TVPG-vF0iP9bjgx8NVKpYV0h6km4rM,20513
+brave_search_python_client/constants.py,sha256=f5jfE9RBrsDo82-EL6PtctEJ3X3CbucMsMA8aZ8CEow,80
+brave_search_python_client/requests.py,sha256=QV0KZGvKhLZ_1IRSmEWF6qU3l8s0HUXgvuQMcP58vJw,3184
+brave_search_python_client/types/__init__.py,sha256=CiqkraTKgU2B-V6TB70iv3x3rCuiCF4c4ZptL3HEV5k,489
+brave_search_python_client/types/exceptions.py,sha256=JvRfJpQzXzk4cOt3UoATK1oTe0GvBMel3sih5enpldo,325
+brave_search_python_client/types/image_search.py,sha256=UYjGiVNuqzJk3s-BY3R8Y-vpFskzbufVFHWmgjNFHvA,3654
+brave_search_python_client/types/news_search.py,sha256=VY5sZsW7xRt4KlCXE9eY3vBcZF12BvZe5qDuK3TgY1Q,4726
+brave_search_python_client/types/video_search.py,sha256=ZNJ0LixOtkeEqT9yUYeArswTqlU9EI2egLrJWlxkscQ,5679
+brave_search_python_client/types/web_search.py,sha256=tcR5s6yfw858yiXLVzMk7fbAE_EpDViLDcM_X0ye49g,42224
+brave_search_python_client-0.0.3.dist-info/METADATA,sha256=KtqdHVk11uWDC0XlP782gz-CZgRh9q4AuYQCC4TxHHE,3929
+brave_search_python_client-0.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+brave_search_python_client-0.0.3.dist-info/entry_points.txt,sha256=5oW5aMLuzyrv813p_62UsCU1_m8tK1DMGkYPJHzg0h8,68
+brave_search_python_client-0.0.3.dist-info/licenses/LICENSE,sha256=SD-BllS-NZss_nJP_aiq6yzsi28-S0ZdIk-NrKcuWgw,1118
+brave_search_python_client-0.0.3.dist-info/RECORD,,
