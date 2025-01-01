@@ -1,0 +1,13 @@
+libclamav_py/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+libclamav_py/clamav.py,sha256=K1UfN4sgslJJHv5CViwAI1GAgdkgs0NFjcHXIDt1DLo,8182
+libclamav_py/config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+libclamav_py/config/base.py,sha256=djFjwv9_98N0s9z5mRvnkQfQN81Emtc396p4sMFg2Wk,149
+libclamav_py/config/database.py,sha256=bEdon3iFqKK5s0K8cW0qFG47PbKcoCXr_kyf2HJP_Qs,931
+libclamav_py/config/engine.py,sha256=p0OGQJr4pbSwDmsCsPAKG2dZMwoIPRp7mNPNbj2Chhc,5848
+libclamav_py/config/scan.py,sha256=09UrNFLzjRcxujb0LzXZ7ML4cdHcvv6pFWw-O5Sc3fU,6530
+libclamav_py/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+libclamav_py/utils/constant.py,sha256=xu3OMar4tuCKFtVj_oNr53WAenfvOUWL3nex51JF5mo,58
+libclamav_py-0.2.0.dist-info/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+libclamav_py-0.2.0.dist-info/METADATA,sha256=_Z-8M48zOSVuSQ69Hp-21a_aHeC3jC6NCwa3NomJtGo,2195
+libclamav_py-0.2.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+libclamav_py-0.2.0.dist-info/RECORD,,
