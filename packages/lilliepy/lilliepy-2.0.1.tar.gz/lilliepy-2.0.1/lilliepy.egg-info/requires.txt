@@ -1,0 +1,7 @@
+reactpy
+reactpy-router
+reactpy-forms
+reactpy-table
+reactpy-select
+reactpy-flake8
+reactpy-apexcharts
