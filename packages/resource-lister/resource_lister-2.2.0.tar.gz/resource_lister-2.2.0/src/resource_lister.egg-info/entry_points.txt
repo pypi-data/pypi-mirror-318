@@ -1,0 +1,2 @@
+[console_scripts]
+resource_lister = resource_lister.main:main

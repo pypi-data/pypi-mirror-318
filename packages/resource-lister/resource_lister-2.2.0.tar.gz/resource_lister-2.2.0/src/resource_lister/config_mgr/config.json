@@ -1,0 +1,8 @@
+{
+    "format_type": "csv",
+    "output_to": "file",
+    "required": "no",
+    "account_split": "no",
+    "s3_bucket": "",
+    "file_append_date": "no"
+}
