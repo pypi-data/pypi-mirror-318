@@ -1,0 +1,7 @@
+inflect
+optuna
+PyYAML
+Requests
+torch
+tqdm
+wn
