@@ -1,0 +1,2 @@
+[console_scripts]
+hsa = hsa_reimburse_package_radian21.hsa_reimburse:main
