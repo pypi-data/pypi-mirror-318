@@ -1,0 +1,15 @@
+static_npm/__init__.py,sha256=Y0c-7odMr1wQhrfGdE8eb54Ji2cMpojbQ6TdkD1wDVc,99
+static_npm/cli.py,sha256=0_XN3Au_adilvGsAkfLNQTI9UhgHlZDie-j5VMEskco,590
+static_npm/ensure_npm_exists.py,sha256=87IFa6wcvFVWEQQtn0Mv5xmqfERDNQmWMwU09qM33P8,4319
+static_npm/node.py,sha256=CogRy0vlwvEI6cuzECWKeDiDxX1zEwXzy4O8CR4VE3E,755
+static_npm/npm.py,sha256=raXDe1k52E1FRuDEYCJhK_pEaYppnTP6Rf7QcfAeTu8,750
+static_npm/npx.py,sha256=V47D48K2mIrF0podzzY21b72sCpCaN0BDAAHBtKTong,750
+static_npm/prog_exec.py,sha256=3fPspJsZvw2yQyMtOcvmHEQ2GJW9FAMY0u0kFi1dznQ,548
+static_npm/running_process.py,sha256=1joCLAIr_T0h32-Uah8fW3Yz8ImPCJJciYEzrsKr6Ug,4093
+static_npm/assets/example.txt,sha256=lTBovRjiz0_TgtAtbA1C5hNi2ffbqnNPqkKg6UiKCT8,54
+static_npm-1.0.0.dist-info/LICENSE,sha256=b6pOoifSXiUaz_lDS84vWlG3fr4yUKwB8fzkrH9R8bQ,1064
+static_npm-1.0.0.dist-info/METADATA,sha256=rRirrUHx-3XC64YewH7ryuDoZiYTDReJq68J9Shl6eA,2302
+static_npm-1.0.0.dist-info/WHEEL,sha256=pxeNX5JdtCe58PUSYP9upmc7jdRPgvT0Gm9kb1SHlVw,109
+static_npm-1.0.0.dist-info/entry_points.txt,sha256=bDKIRga1GzlhEkIsjEA3ZBNI51iNrwonDtnOwa2LSfk,131
+static_npm-1.0.0.dist-info/top_level.txt,sha256=XMqghNTC7emsLfvX6tYYcAHkROOCMYKHLKv6mGH9VHw,11
+static_npm-1.0.0.dist-info/RECORD,,
