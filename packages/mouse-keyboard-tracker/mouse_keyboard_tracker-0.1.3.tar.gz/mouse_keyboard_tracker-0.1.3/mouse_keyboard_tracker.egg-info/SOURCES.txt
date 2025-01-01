@@ -1,0 +1,15 @@
+README.md
+setup.py
+mouse_keyboard_tracker/__init__.py
+mouse_keyboard_tracker/cli.py
+mouse_keyboard_tracker/config.py
+mouse_keyboard_tracker/eventos.py
+mouse_keyboard_tracker/log_manager.py
+mouse_keyboard_tracker/logger.py
+mouse_keyboard_tracker/ociosidade.py
+mouse_keyboard_tracker.egg-info/PKG-INFO
+mouse_keyboard_tracker.egg-info/SOURCES.txt
+mouse_keyboard_tracker.egg-info/dependency_links.txt
+mouse_keyboard_tracker.egg-info/entry_points.txt
+mouse_keyboard_tracker.egg-info/requires.txt
+mouse_keyboard_tracker.egg-info/top_level.txt
