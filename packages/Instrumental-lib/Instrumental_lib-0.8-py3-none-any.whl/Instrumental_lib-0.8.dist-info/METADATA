@@ -1,0 +1,150 @@
+Metadata-Version: 2.1
+Name: Instrumental-lib
+Version: 0.8
+Summary: Library with high-level drivers for lab equipment
+Home-page: https://github.com/mabuchilab/Instrumental
+Author: Nate Bogdanowicz
+Author-email: natezb@gmail.com
+License: GPLv3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pint>=0.7
+Requires-Dist: future
+Provides-Extra: cameras.pco
+Requires-Dist: cffi; extra == "cameras-pco"
+Requires-Dist: nicelib; extra == "cameras-pco"
+Requires-Dist: pycparser; extra == "cameras-pco"
+Provides-Extra: cameras.picam
+Requires-Dist: nicelib; extra == "cameras-picam"
+Provides-Extra: cameras.pixelfly
+Requires-Dist: nicelib; extra == "cameras-pixelfly"
+Requires-Dist: win32event; extra == "cameras-pixelfly"
+Provides-Extra: cameras.tsi
+Requires-Dist: cffi; extra == "cameras-tsi"
+Provides-Extra: cameras.uc480
+Requires-Dist: nicelib>=0.5; extra == "cameras-uc480"
+Requires-Dist: pywin32; extra == "cameras-uc480"
+Provides-Extra: daq.ni
+Requires-Dist: nicelib>=0.5; extra == "daq-ni"
+Provides-Extra: funcgenerators.agilent
+Provides-Extra: funcgenerators.rigol
+Requires-Dist: pyvisa; extra == "funcgenerators-rigol"
+Provides-Extra: funcgenerators.tektronix
+Provides-Extra: laserdiodecontrollers.ilx_lightwave
+Provides-Extra: lasers.femto_ferb
+Provides-Extra: lasers.santec
+Requires-Dist: pyvisa; extra == "lasers-santec"
+Provides-Extra: lockins.sr844
+Requires-Dist: pyvisa; extra == "lockins-sr844"
+Provides-Extra: lockins.sr850
+Requires-Dist: pyvisa; extra == "lockins-sr850"
+Provides-Extra: motion._kinesis.ff
+Requires-Dist: nicelib; extra == "motion-kinesis-ff"
+Provides-Extra: motion._kinesis.isc
+Requires-Dist: cffi; extra == "motion-kinesis-isc"
+Requires-Dist: nicelib; extra == "motion-kinesis-isc"
+Provides-Extra: motion._madcitylabs.nanodrive
+Requires-Dist: instrumental; extra == "motion-madcitylabs-nanodrive"
+Provides-Extra: motion._smaract.scu
+Requires-Dist: instrumental; extra == "motion-smaract-scu"
+Provides-Extra: motion.apt
+Requires-Dist: serial; extra == "motion-apt"
+Provides-Extra: motion.ecc100
+Provides-Extra: motion.filter_flipper
+Requires-Dist: cffi; extra == "motion-filter-flipper"
+Requires-Dist: nicelib; extra == "motion-filter-flipper"
+Provides-Extra: motion.newmark
+Requires-Dist: pyvisa; extra == "motion-newmark"
+Provides-Extra: motion.tdc_001
+Requires-Dist: cffi; extra == "motion-tdc-001"
+Requires-Dist: nicelib; extra == "motion-tdc-001"
+Provides-Extra: multimeters.hp
+Provides-Extra: powermeters.newport
+Provides-Extra: powermeters.thorlabs
+Provides-Extra: powermeters.thorlabs_tlpm
+Requires-Dist: instrumental; extra == "powermeters-thorlabs-tlpm"
+Provides-Extra: powersupplies.gw_instek
+Provides-Extra: scopes.agilent
+Requires-Dist: pyvisa; extra == "scopes-agilent"
+Provides-Extra: scopes.tektronix
+Requires-Dist: pyvisa; extra == "scopes-tektronix"
+Provides-Extra: spectrometers.agilent
+Requires-Dist: pyvisa; extra == "spectrometers-agilent"
+Provides-Extra: spectrometers.ando
+Requires-Dist: pyvisa; extra == "spectrometers-ando"
+Provides-Extra: spectrometers.bristol
+Provides-Extra: spectrometers.hp
+Requires-Dist: pyvisa; extra == "spectrometers-hp"
+Provides-Extra: spectrometers.thorlabs_ccs
+Requires-Dist: cffi; extra == "spectrometers-thorlabs-ccs"
+Requires-Dist: nicelib; extra == "spectrometers-thorlabs-ccs"
+Requires-Dist: pyvisa; extra == "spectrometers-thorlabs-ccs"
+Provides-Extra: spectrumanalyzers.rohde_schwarz
+Provides-Extra: tempcontrollers.covesion
+Requires-Dist: pyvisa; extra == "tempcontrollers-covesion"
+Provides-Extra: tempcontrollers.hcphotonics
+Requires-Dist: pyvisa; extra == "tempcontrollers-hcphotonics"
+Provides-Extra: vacuum.sentorr_mod
+Requires-Dist: serial; extra == "vacuum-sentorr-mod"
+Provides-Extra: wavemeters.burleigh
+
+Instrumental
+============
+
+Instrumental is a Python-based library for controlling lab hardware like cameras, DAQs,
+oscilloscopes, spectrometers, and more. It has high-level drivers for instruments from NI,
+Tektronix, Thorlabs, PCO, Photometrics, Burleigh, and others.
+
+ **Note**
+ As of version 0.7, Instrumental has dropped support for Python 2 and now requires Python 3.7+
+
+Instrumental's goal is to make common tasks simple to perform, while still providing the
+flexibility to perform complex tasks with relative ease. It also makes it easy to mess around with
+instruments in the shell. For example, to list the available instruments and open one of them::
+
+    >>> from instrumental import instrument, list_instruments
+    >>> paramsets = list_instruments()
+    >>> paramsets
+    [<ParamSet[TSI_Camera] serial='05478' number=0>,
+     <ParamSet[K10CR1] serial='55000247'>
+     <ParamSet[NIDAQ] model='USB-6221 (BNC)' name='Dev1'>]
+    >>> daq = instrument(paramsets[2])
+    >>> daq
+    <instrumental.drivers.daq.ni.NIDAQ at 0xb61...>
+
+If you're going to be using an instrument repeatedly, save it for later::
+
+    >>> daq.save_instrument('myDAQ')
+
+Then you can simply open it by name::
+
+    >>> daq = instrument('myDAQ')
+
+Instrumental also bundles in some additional support code, including:
+
+* A server-client implementation for controlling instruments from remote machines
+* Plotting and curve fitting utilities
+* Utilities for acquiring and organizing data
+
+Instrumental makes use of NumPy, SciPy, Matplotlib, and Pint, a Python units
+library. It optionally uses PyVISA/VISA and other drivers for interfacing with
+lab equipment.
+
+For install information, documentation, examples, and more, see our page on
+`ReadTheDocs <http://instrumental-lib.readthedocs.org/>`_.
+
+.. |logo| image:: images/logo-small.png
+          :alt: Instrumental
+
+If you would like to cite Instrumental, to give it more visibility to other researchers, you can cite the repository through Zenodo (DOI: `10.5281/zenodo.2556398 <https://doi.org/10.5281/zenodo.2556398>`_).
