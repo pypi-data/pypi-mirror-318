@@ -1,0 +1,12 @@
+setup.py
+src/__init__.py
+src/jupyter_forge.py
+src/jupyter_forge.egg-info/PKG-INFO
+src/jupyter_forge.egg-info/SOURCES.txt
+src/jupyter_forge.egg-info/dependency_links.txt
+src/jupyter_forge.egg-info/requires.txt
+src/jupyter_forge.egg-info/top_level.txt
+src/template/index.html
+src/template/package.json
+src/template/Extensions/SearchPanel.js
+src/template/Extensions/ToolbarExtension.js
