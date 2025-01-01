@@ -1,0 +1,15 @@
+shell_sage/__init__.py,sha256=R9xOYoYrWKcfO5zvTeGC3m_eDNOvxMd8CocQs2tLufo,22
+shell_sage/_modidx.py,sha256=3O_34lPDGyHfe35MklOw2t3ZifrYTTtBbZnA9DUg-o0,1734
+shell_sage/config.py,sha256=43ESKX6OW7hAyd8e1njuwnG6QcBNZV80iNJX_JPJfN8,1270
+shell_sage/core.py,sha256=Hz1bvgRpWWDXKNqTILP7FK2sNWbGqzxGfLGUHA679w8,10215
+sherlock/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+sherlock/_modidx.py,sha256=pBDBriBKAVBxbzSPBD-gzaA_Jue-irb05S4tArgZkUU,3891
+sherlock/config.py,sha256=JgxEwdJwNgC8XAa7jLF4BhltYgLiyTyAYUCBTppk1O8,1010
+sherlock/core.py,sha256=vm1n5YrEfDMN-Cb2W67UWx2hV-hbk3UldLUtJjbtM8U,8513
+sherlock/crypto.py,sha256=XdsN_-S0jFkoeyOWmlenMsjPwEExMNINLw8I1xu2sCs,738
+sherlock_domains-0.0.1.dist-info/LICENSE,sha256=xV8xoN4VOL0uw9X8RSs2IMuD_Ss_a9yAbtGNeBWZwnw,11337
+sherlock_domains-0.0.1.dist-info/METADATA,sha256=zpliCCEjtfinmlFqdVxAJUCkOfJE8tRz9Gr4uAKDSbs,11979
+sherlock_domains-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+sherlock_domains-0.0.1.dist-info/entry_points.txt,sha256=QcoI58tDVecXxskBDwBUsb7JZ_QAQ2hdRmUPDkNzWHQ,87
+sherlock_domains-0.0.1.dist-info/top_level.txt,sha256=1Mo1S--0ML2035168ysWS8PkHmBqZyg6v81ALMxeSk0,20
+sherlock_domains-0.0.1.dist-info/RECORD,,
