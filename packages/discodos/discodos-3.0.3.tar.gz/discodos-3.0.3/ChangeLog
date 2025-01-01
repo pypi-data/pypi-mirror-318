@@ -1,0 +1,1417 @@
+CHANGES
+=======
+
+* Try adding desription\_file to setup.cfg (we use pbr)
+* Fix missing version in setup.cfgd
+
+v3.0
+----
+
+* Final take on asciiart
+* Remove build\_win CI workflow
+* Final fixes in README and asciiart
+* Finally remove cmd/ package (old argparse CLI)
+* Add fixed retag.sh, enable verbose in pypi.sh
+* Fix setup.py description content type
+* Add pypi.sh release helper
+* Bump version: 2.0 → v3.0
+* Comment out unused in bumpversion config
+* Reset to version 2.0 in sphinx conf
+* Fix bumpversion config
+* Fix bump.sh version prefix
+* Final README edits for release
+* Final dsc ls and dsc links documentation
+* Fix dsc ls fetch videos log message
+* Final auto-marked sold chapter docs fixes
+* dsc ls patch out toggle\_sold but leave dead code
+* Fix regression from sold/Sold change, now really fixed
+* In create\_coll\_i helper ensure types for comparision
+* Remove docs collection sold chapter
+* For now, disable collection-sales JOIN magic
+* import collection mark orphaned, prettify final report
+* import release orphane coll items
+* Support handle\_listing in single listing import
+* Continue writing Technicalities docs chapter
+* Finally fix ls -a being not entirely "explanatory"
+* Prettify ls TUI, links, clutter, loads of things
+* ls add release URL to column\_right panel
+* Centralize rlog in ls TUI
+* Prevent help/notes on non-interactive import listing
+* Rename in\_d\_collection to in\_d prevent confusion
+* ls also update listing details panel after edit
+* Fix ls update sales after edit, use col\_keys, not ID
+* Fix return type in get\_coll\_item\_by\_release
+* Draft fix collection status field..
+* dsc ls change order of sold,listing,status fields
+* Implement collection/sales sold flag separation
+* Support non-coll-item release creation with helper
+* Rename to fetch\_discogs\_rlease (was get\_d\_release)
+* Log level cleanup: Change a lot to debug
+* Fix sales import performance
+* Fix sales import
+* Fix release/collection import
+* Remove in\_d\_coll handling in create\_release
+* Reorder methods in ctrl.collection module
+* Database schema changes for sold/coll-logic rework
+* gitignore wip/ dir
+* Fix ambigous sold field in cols\_key\_value\_search defaults
+* dsc ls 'sales-only-releases-display' configurable
+* Useless add JOIN release key/val SELECT
+* Refactor trim\_table\_fields pythonic
+* Use trim\_table\_fields with dsc ls --no-tui
+* dsc ls support reverse order and finally also
+* \_select\_simple UNION and use with key/val
+* Attempt to improve sold logic by moving to collection
+* Support disabling log in ViewCommonCommandline.p()
+* Revert "dsc ls fix fallback to title in key/val search"
+* Improve dsc clean collection output if orphaned
+* dsc ls fix updating table row after listing edit
+* Fix dsc import listing -d logic
+* Change print/log helper default to always log INFO
+* Fix dsc ls Video panel headline
+* Fixes in AcousticBrainz chapter
+* Rework README
+* Rework manual, reorder, add new features
+* Fix link to import quickstart in install doc
+* Rework search command chapter
+* dsc sell chapter to quickstart and tiny reference/index fixes
+* dsc sell cmd final fixes options/defaults/help
+* Quickly fix quickstart doc
+* Decide to remove TOCs everywhere
+* Fix/shorten installation doc
+* A note on commands abbreviations in manual
+* Fix to Contributing headline
+* Remove everything is in-detail on manual first paragraph
+* Disable section nav except for reference
+* Remove skip chapter in Windows install
+* Quickfix MANUAL
+* Remove commands chart chapter and rename basic tutorial chapter
+* Fix installation guide by moving venv chapters over
+* More docs nav headers, reorder chapters
+* pip freeze to sphinx\_requirements.txt
+* Use sphinx-click and pydata theme for docs
+* Finally split import commands into tracks,brainz
+* Finally support abbreviated commands
+* dsc ls fix fallback to title in key/val search
+* Implement dsc import sales --delete
+* Remove redundant stats\_releases\_total (copy/paste err)
+* dsc import release -d support URL
+* Fix dsc ls crash when only only one in list
+* Fix col key on TUI set sold keystroke
+* Refactor import release -a and support URL
+* Rename comments\_private, Separate listing details
+* Fix renamed arg in update\_sales\_listing TUI on\_save
+* ls TUI fetch videos with keystroke
+* ls TUI remove not yet implemented bindings and methods
+* Finally implement long awaited dsc clean collection
+* Improve edit sales listing CLI flag
+* Display listing ID after sell wizard
+* Improve dsc clean sales
+* Fix sales listing magic in hyperlinks helper
+* Bring back get\_all\_db\_releases model
+* Rename dsc ls (all) cmd to dsc ls links
+* dsc ls shorten Is In Collection column caption
+* Support overriding enable\_tui config via --tui flag
+* dsc ls use TableDefaults magic for sales\_listing\_details
+* dsc ls fix empty comments field
+* dsc import sales (light) include allow\_offers
+* dsc ls add price suggestion (VG+) on Return key
+* dsc ls add currently-for-sale link
+* dsc ls fix crash when trying to add non-listed release
+* Better help for dsc ls
+* Invent a --light option for dsc import sales
+* Add price column to dsc ls tui
+* Support shortcuts for dsc ls --order-by
+* Rename dsc ls key\_val\_search captions,shortcuts
+* Finally implement update cell on TUI listing edit
+* Fix dsc ls orderby, fix coll. table d\_coll\_notes
+* dsc sell prompts for sleeve
+* Support --order-by in dsc ls command (asc)
+* Implement import release accept Discogs URL
+* Fix missing location in key\_value\_search\_release
+* Broken commit create\_collection\_item on import basic
+* Refactor import release to use helper
+* Implement import release collection table support
+* New table collection in Db\_setup
+* Tiny progress fix in import sales command
+* Implement dsc clean sales command
+* Mark sold on import sales when location comments
+* dsc ls EditScreens gets current and saves
+* Finalize condition/status choices handling utils
+* Fix dsc ls (CLI version) by using TableDefaults
+* Implement a basic edit listing command
+* Also suggest actually wanted condition in wizard
+* Implement discogs url/id regex in search\_release\_online
+* Import listing to DB after CLI wizard successful
+* A quick import listing commmand
+* sell cmd, sleeves, less prompts, offers fix attempt
+* Final list\_for\_sale wizard layouts and error handling
+* Use TableDefaults magic with key\_value\_search/TUI
+* Sort/Order view.collection/common helpers
+* Split column initializations in ViewCommon
+* Improve for sale list wizard with videos and panels
+* An edit sales listing via dsc ls TUI draft
+* Many import release cmd improvements
+* Finally implement a remove/delete release command
+* Remove redundant rich progress from ctrl.collection
+* Overengineer fetch stats/listing error handling
+* dsc ls sales stats error handling when offline
+* Improve sell command and move two\_column\_view
+* Also catch other exceptions while sales importing
+* dsc sell query discogs/db with arbitrary args
+* Implement --resume for details -u update
+* One custom\_progress definition for sales/details imports
+* One rich Progress for sales/basic/details imports
+* Logging improvements in Brainz\* magic
+* Implement dsc ls "mark sold in db" toggle,
+* Rename db method to get\_release\_by\_id
+* Remove workaroun: terminal issue after Textual quit
+* dsc ls toggle sold key binding, no refresh
+* Prettify key\_value\_search\_releases result via ViewCommon
+* Further improve and fix database logging
+* Sales import save sold state, catch JSONDecodError
+* Fix terminal behaviour after Textual exit
+* Use rich print throughout discodos
+* Render release/listing URLs as rich markdown links
+* Fix missing near mint in fetch\_price\_suggestion
+* Further improve logic when to fetch\_listing/market
+* Fix dsc ls crashes on initial load when unlisted
+* Fix dsc ls crashes on fetch\_marked/listing (enter)
+* Useless efforts on \_select error handling improvements
+* Refactor d\_artists\_parse, some linting in DiscogsMixin
+* Implement dsc sell
+* Reorder DiscodosListApp methods and rename
+* Sizing of upper/lower/log panels
+* Marketplace listing details from DB or Discogs
+* Refactor database.\_select()
+* Fetch cell values via row select
+* Fix and sort test package imports
+* Huge restructure, model package, imports sorting,
+* Rebuild dsc ls Textual layout using contexts
+* Textual table to instance var and fix layout
+* Fix dups issue and add sales status to dsc ls
+* Prettify Is in Coll. column in dsc ls table
+* Fix exception in discogs\_connect when self.me
+* Sales import fetches and saves all avilable data
+* Finally fetch all listing data to left most column
+* Big fat sales price display
+* Finally really get a decent 3 column layout
+* ListApp info panel 3 equal columns layout
+* Cleanup DiscodosListApp
+* Quickfix import\_collection progress warnings mess
+* Refactor import\_collection and add Rich Progress
+* dsc import release Rich Progress dspl
+* Refactor import\_release, is\_in\_d\_coll, get\_d\_release
+* Finally use collection\_item for is\_in\_d\_coll
+* Huge Collection reorder and DiscogsMixin movals
+* Textual table fetch sales details on cell enter key
+* Improve me and d properties in Collection Controller
+* Move DiscoDOSListApp to controller and fix .me
+* Move discogs\_connect to mixin class
+* Quickfix missing db records issue on brainz match
+* Fix or disable all pylint issues in Collection
+* Format entire Database class with black
+* Remove unused method in Database, add docstr
+* Clean up messy Collection init and discogs\_connect
+* Draft a get\_sales\_listing method in Collection
+* First draft of ls cmd table display with Textual
+* New config option enable\_tui
+* Linting fixes in main command and reword help
+* Add rich based progess display to sales import
+* Fix all linting in view/mix
+* Restructure view to separate package
+* Finish renaming view classes to PascalCase
+* Rename HeadersList and mark in docstring unused
+* Rename view classes to PascalCase
+* Sort imports in view modules
+* Rename ctrl classes to PascalCase
+* Restructure ctrl
+* Show sales inv ID in ls command
+* Refactor database \_select\_simple and support join
+* Format a comment in model\_collection
+* Implement sales inventory import
+* Add sales table to schema upgrade tasks
+* Update and fix import details help
+* Add typical workflow to import cmd group help
+* Split out initial/basic import to separate subcmd
+* Split out single release import to separate command
+* Migrate import to cmd group and subcmd name detail
+* Implement dsc ls command (list releases)
+* Add optional orderby for model get\_all\_db\_releases
+* Add sold field to release table and fix code format
+* Update CI workflow Python version
+* Update setup.cfg Python version, description
+* Fix bumpversion to bump2version in bump.sh
+* Fix typo in bump.sh Usage output
+* Note AcousticBrainz shutdown in README
+* Add .readthedocs.yaml and fix year in sphinx conf.py
+* Replace disco with dsc (wholeword) in docs
+* Improve .gitignore wildcard for builds
+* Fix missing Click deps in requirements.txt
+* Disable TestBrainz in CI
+* Flake8 lint cmd23/suggest
+* Flake8 lint cmd23/stats
+* Flake8 lint cmd23/setup
+* Flake8 lint cmd23/search
+* Flake8 lint cmd23/mix
+* Flake8 lint cmd23/import\_
+* Flake8 lint cmd23/helper
+* Flake8 lint cmd23/\_\_init\_\_
+* Add flake8 config stanza to setup.cfg
+* Fixes in import subcommand
+* Fix online handling in helper search.py and a bug
+* Fix and simplify search cmd input sanity checks
+* Finish suggest subcommand
+* Finish setup subcommand
+* Finish stats subcommand
+* Finish import subcommand
+* Finish mix subcommand
+* More basic frameworks for remaining subcommands
+* Add args and opts to cmd23/suggest.py
+* Add args and opts to cmd23/setup.py
+* Add args and opts to cmd23/stats.py
+* Add args and opts to cmd23/import\_.py
+* Add args and opts to cmd23/mix.py
+* Finish search subcommand
+* Pass flags to helper.User and handle console log level
+* Add args and opts to cmd23/search.py
+* Add click.option decorators to main\_cmd
+* Create helper.User class as a replacement for
+* Add a basic framework for a CLI based on Click
+* Remove Python 3.6 from CI
+* Fix a copy/paste error on DiscoDOS website
+* Add link to dev-version install howto on website
+* Fix Beets links on website
+* Update README
+* Update roadmap chapter on website
+* Add sql file to help fix issue #16
+* Fix column name in releases table schema upgrade
+* Typo fix in CONTRIBUTION.md user-install chapter
+* Tiny wording fix in CONTRIBUTION.md install-chapters
+* Change chapter system-wide install to user-install
+* Add .python-version to .gitignore
+* Add note to CONTRIBUTION.md
+* Fix deprecation warning in setup.cfg
+* Fix copyright year in Sphinx conf
+* Comment out short version in Sphinx conf
+* docs: Enable strikethrough extension
+* Deprecate note about Debian package in README
+* Add windows\_pack.sh
+* Change p3dc in pynsist.cfg to use PyPI wheel
+
+v1.1
+----
+
+* Bump version: 1.0.1 → 1.1
+* Improve output of -z
+* Fix var name in update\_tracks\_from\_brainz
+* Add --skip-unmatched option to import command
+* Improve logging in get\_(all)\_tracks\_for\_brainz\_update
+* Add --force-brainz option to import command
+* stats command: change order of brain/manual key/bpm
+* Add new stats key\_brainz, key\_manual
+* Fix test\_collection bpm\_brainz/manual assert counts
+* Add cli glue for bpm\_brainz, bpm\_manual stats
+* Add stats tests bpm\_brainz, bpm\_manual to test\_collection
+* Fix test\_collection: classmethods cls arg
+* Fix test\_collection: Fix d\_get\_first\_catno test
+* Fix test\_collection: Remove online tests entirely
+* gh-actions ci.yaml: Fix step names, add Python 3.10
+* Fix test\_config: Now really fix discogs\_token check
+* Fix test\_config: Temporarily re-enable token check
+* Fix unittest imports, fix test\_config
+* Mix\_ctrl\_cli.\_add\_track: Move comment into docstring
+* New mix option --format
+* View\_common\_cli.tab\_mix\_tables: Improve readability
+* view\_common: add info box helpers
+* view\_common: fix edit flags in cols\_search\_results
+* view\_cli/common: migrate headers\_dicts
+* view\_common/cli: short version header fetching
+* view\_cli/common: use cols\_mixtracks, remove clutter
+* view\_common.py: shorten View\_common docstring
+* view\_common,view\_cli.py: add headers\_dict method
+* ctrls.py: linting - start with Coll\_ctrl\_cli
+* cli: add help note about 'search -t all' possibility
+* restructure models.py
+* restructure views.py
+* views: add TableDefaults class
+* view: remove some unsed headers dicts/lists
+* views: move comment block about headers dicts/lists
+* views: improve default cols hidden state of Results
+* view: add edit key to mixtracks defaults dict
+* models.py: liniting - line cont and some if conditions
+* views: fix/refactor trim table fields
+* models: comment out useless debug msg in \_select
+* models: shorten logging prefix to DB
+* views: fix headers\_dict/list docstrings location
+* views: improve Headers\_list descriptor
+* views.View\_common: fix missing super init
+* views: use a descriptor instead of properties
+* models: fix track\_report\_occurences
+* views: fix location of headers\_dict\_mixtracks\_all
+* models: linting - line cont, indentation, etc. part 1
+* models.py: linting - whitespace and comment fixes
+* ctrls,models,view: rename release d\_coll stats
+* models: stats rel online: on errors catch and
+* models,views,ctrls: add Rel in Coll (Discogs) to stats
+* views: add mixtracks counts to disco stats command
+* models,test: add mixtracks stats methods and test
+* View\_common\_cli.p: add lead\_nl, trail\_nl flags
+* views,ctrls: refactor stats viewing
+* test\_collection: stats\_match\_method\_release no debug
+* test\_collection: fix stats tests: models now returns int, not row
+* models,test: stats\_releases\_discogs\_collection\_flag
+* models,tests: add track\_ext\_orphaned method and test
+* cli,ctrls,models,views: implement 'stats' command
+* models,tests: add stats\_releases/tracks\_matched
+* test\_collection: add test\_stats\_tracks\_total\_sanity
+* models: add Collection.stats\_tracks\_total\_sanity
+* models: add Collection.stats\_tracks\_total
+* test\_collection: add test\_stats\_tracks\_total\_ext
+* test\_collection: add test\_stats\_tracks\_total
+* models: add Collection.stats\_releases\_total method
+* test\_collection: add test\_stats\_releases\_total
+* test\_collection: fix online search test
+* test\_collection: comment out broken test
+* test\_collection: fix changed release id column name
+* test\_mix: lint: fix block/inline comments should begin with space
+* test\_collection: lint: fix block comments should begin with space
+* views.py: reformat docstring in Mix\_view\_common
+* views.py: extend docstring in Collection\_view\_common
+* views.py: move/rename column\_defaults\_mixes
+* views.py: fix a gui column default
+* views.py: add column defaults dict for gui tableviews
+* views.py: change some search results header names
+* models,views: fix sql name conflicts
+* models,views: add MB Rec. ID fields
+* views: change some headers for gui
+* models.search\_release\_track\_offline: add a\_chords\_key
+* models.search\_release\_track\_offline: add a\_key/bpm
+* views.py: add gui search results headers dict/list
+* models.search\_release\_track\_offline: reorder fields
+* models.search\_release\_track\_offl: add release fields
+* models: lint: fix line continuation in
+* models: lint: fix spaces before block and inline comments
+* models: lint: fix blank line contains whitespace before..
+* models: lint: fix rest of unexpected spaces around
+* models: lint: get\_full\_mix: line length
+* models: lint: reorder\_tracks\_squeeze\_in, shift\_track
+* models.py: linting: fix line length of sql select
+* cli.py,views.py: improve no-command-hints
+* views.py,cli.py: improve View\_common\_cli.p() method
+* cli.py: linting - fix cont lines, spaces around keyword
+* cli.py: fix section separator comments
+* cli.py: linting - fix spacing in comments,
+* Mix\_view\_common: add shorten\_mixes\_timestamps()
+* Mix\_view\_common.headers..: Add newlines to long forms
+* Mix\_view\_common: copy dicts, not refer to
+* Tidy up views module
+* views.Mix\_view\_comman/cli: reformat docstring
+* views.Mix\_view\_comman/cli: add mixtracks basic headers
+* views.Mix\_view\_comman/cli: add mixtracks headers
+* views.Mix\_view\_comman/cli: add another dict/list
+* views.Mix\_view\_comman/cli: fix headers\_list prop
+* views.Mix\_view\_comman/cli: provide headers\_dict/headers\_list
+* models.Mix.reorder\_track: fix line cont
+* models.Mix.get\_tracks\_from\_pos: fix line cont
+* models.Mix.\_updated\_timestamp: fix line cont
+* models.Mix.update\_mix\_track\_and\_track\_ext: linting
+* models.Mix: linting - fix line cont in methods
+* models.Mix.\_\_init\_\_: linting: short lines, Exceptions
+* models.Mix.delete: linting - shorten lines, line continuation
+* models.Mix.\_get\_mix\_id: linting
+* utils.py: some tiny linting fixes
+* views.py: fix flake8 and pylint errors and warnings
+* gh-actions: only build on publish, shorten name
+
+v1.0.1
+------
+
+* Bump version: 1.0.0 → 1.0.1
+* requirements: bump certifi version to 2020.12
+* models: linting, format fixes
+* models.search\_release\_online: fix list index error
+* ctrls: fix search\_release() AttributeError
+* ctrls: fix unused imports, fix spacing betw classes
+* README: add link to DiscoDOS website
+
+v1.0.0
+------
+
+* Bump version: 1.0.0-rc4 → 1.0.0
+* .bumpversion.cfg: better keep whole version number
+* Create DiscoDOS website
+* .bumpversion.cfg: add docs/index.md (ghpages download link)
+* improve bump.sh
+* ghpages: try to fix meta info for e.g social media
+* ghpages: add Changelog and Up2date chapter
+* ghpages: try to remove ugly scrollbars in code block
+* ghpages meta.html: fix og:image and twitter:image
+* ghpages: replace 480px avatar with 128px version
+* ghpages: remove all unused md files in \_posts and root
+* change favicon.ico to altrosa big fat D
+* ghpages: rename icon/logo to have color in name
+* ghpages highlights: try discoGreen as general code color
+* ghpages: fix a typo in Roadmap chapter
+* ghpages: remove sound/mixcloud footer icons
+* ghpages: youtube vid descr below, add Roadmap chapter
+* ghpages: hightlights general code color to mediumGray
+* highlights: discoGreen to discoOrange (just to move it away)
+* ghpages: highlights: discoOrange to rosa
+* ghpages: try to fix site name to fit with logo size
+* highlights, styles: pic border, discoColors, hl-font-weight
+* ghpages: remove Config from Installation headline
+* ghpages: logo: fix background in png image
+* ghpages: styles: headline font-weight 800 to 600
+* try to fix highlight color, should be mediumGray
+* ghpages: text line breaks (won't show in output)
+* ghpages: styles: footer mediumGray, header spacing smaller
+* ghpages: highlights: generic color mediumGray
+* ghpages: try to use DiscoDOS altrosa icon png
+* ghpages: add DiscoDOS icon altrosa
+* ghpages: fix typos in FOSS chapter and refine
+* ghpages: remove unused images (mostly JT logos)
+* ghpages: highlights: disable border
+* ghpages: highlights: enable border, reduce padding from 7 to 3px
+* ghpages index.md: fix/extend FOSS chapter
+* nav/header: bottom line from ligthGray to mediumGray
+* nav: remove More Projects link
+* ghpages site-description: from 16 to 14px, less spacing
+* ghpages nav: mediumGray, from 18 to 16px
+* ghpages styles: add mediumGray, use for headlines
+* ghpages nav: desktop font 22 to 18px
+* ghpages nav: longer nav names
+* nav: links DiscoDOS Blog, Projects
+* ghpages: try JT logo NoBack
+* ghpages: add JT logo bigger05\_altrosa\_NoBack
+* ghpages: style: h-font ptMono, body font 15px/1.4
+* ghpages: default.html: fix link to blog
+* ghpages: styles: body: backgrounGray, ptMono/lightGray
+* ghpages: move index.html index.md
+* ghpages: add discodos main content to index.html
+* ghpages: simple index.html based on default layout
+* docs dir aka gh-pages content: remove \_collections
+* blog content: remove images/ at least
+* add all blog jekyll content to /docs
+* rename gh-pages dir to docs
+* Create CNAME
+* Delete CNAME
+* Create CNAME
+* add index.html and CNAME - github pages test
+* utils.py: read\_yaml: log warning on file not found
+* Config.install\_cli: macOS zsh/bash
+* Config.install\_cli: fix bashrc grep: check returncode, not stdout
+* INSTALLATION.md: Win CLI chapter: format improvements
+* INSTALLATION.md: add Windows CLI improve chapter
+
+v1.0.0.rc4
+----------
+
+* build\_win: disable draft release, add short body
+* fix requests version number in pynsist.cfg - second try
+* pynsist, open\_browser: fix startmenu links
+* fix requests version number in pynsist.cfg
+* requirements: remove version from requests
+* .bumpversion.cfg: add sphinx conf.py to managed files
+* sphinx: remove single disco\_ rst files, set version to 1.0.0.-rc4
+* sphinx: remove sep subcommands from index\_commands\_reference
+* sphinx: add discosync.rst
+* Config.create\_conf: fix help links
+* Config.py: linting and format fixes only
+* posix\_pack.sh, open\_shell\_mac: fix macOS first-run
+* Bump version: 1.0.0\_rc4 → 1.0.0-rc4
+* .bumpversion.cfg: try to fix version regex
+* .bumpversion.cfg, pbr: new version format
+* setup.cfg: fix urls homepage, docs
+* setup.cfg: skip authors file, should be handled manually
+* try to fix verionsing: remove from \_\_init\_\_.py
+* sync.py: ArgParse class, fix Dropbox error handling
+* sphinx conf.py: enable myst\_heading\_anchors 7
+* sphinx: reduce main toc to 2 levels
+* sphinx: try rtd build with discodos reqs in sphinx\_requirements.txt
+* sphinx: conf.py: change to autoprogram
+* sphinx: disco\* same config in all of them
+* sphinx: get disco\* with autoprogram directives
+* sphinx index commands: remove discosync
+* sphinx: add VIDEO\_TUTORIALS to index
+* add youtube links and doc links to README.md
+* add VIDEO\_TUTORIALS.md
+* sphinx: add longer project name to conf.py
+* MANUAL.md: fix code type in subcommand help example
+* all md files: fix interdocument links
+* sphinx\_requirements: change to myst-parser
+* add sphinx/source/docutils.conf: should theoretically
+* sphinx INSTALLATION.md: fix links to other documents
+* add sphinx\_requirements.txt
+* sphinx conf.py: add some configuration as in recommonmark github docs
+* disco.rst: unsuccessful try to fix links to subcommand section
+* disco.rst: remove manpage directive - not sure what it is
+* sphinx: contribution: fix headlines
+* sphinx: remove extra index for user related docs
+* sphinx: fix links to commands chart image
+* sphinx: split readme into quickstart and readme
+* sphinx: mv \*md to sphinx/source and add to index.rst and sub-index index\_users\_manuals
+* sphinx conf: add recommonmark settings
+* cli.py: a few experiments with textwrap.dedent and sphinx
+* disco.rst: remove nodescription option
+* get sphinx/source/\*rst from older commit
+* add Python 3.8 and 3.9 to setup.cfg
+* fix posix\_pack: mac dmg name, Linux path to venv
+* build\_win: try to fix assets upload url part 2
+* retag.sh: push options via $2
+* build\_win: try to fix assets upload url
+* build\_win: decide upload\_url for asset
+* retag.sh: non-force push on --tags
+* build\_win: add marketplace action: get-latest-release and some test-code
+* build\_win: fix tag version in create\_release step
+* build-win.yaml: setup.py version wrong
+* build\_win.yaml: get tag version into environment
+* build\_win.yaml: create release and upload to release assets
+* Config.install\_cli: massive refactoring
+* fix posix\_pack.sh - add missing install requirements
+* add build\_requirements.txt
+* Config: overwrite existing wrappers on posix
+* add retag.sh
+* add bump.sh - draft only!
+* improve posix\_pack.sh
+* bump version to 1.0.0\_rc4 in posix\_pack.sh
+* move back posix\_back.sh from attic and add to .bumpversion.cfg
+* add include applescript to setup\_macapp.py
+* build\_win.yaml: install dependencies
+* bump discogs\_client version to 2.3.10
+* fix yaml syntax error in build\_win.yaml
+* Bump version: 1.0\_rc3 → 1.0\_rc4
+* add gh-actions workflow build\_win
+* add bump2version config file
+* fix author name in setup.cfg and setup\_macapp.py
+* set version to 1.0\_rc3 in discodos package\_\_init\_\_
+* mv outdated build scripts to attic\_build/
+* try to get autoprogram to skip subcommands..
+* get rid of headers in rst files
+* cli: give sphinxcontrib-autoprogram a try
+* first not satisfying results with sphinx-argparse
+* cli.py: get subparser help into manpage
+* cli.py: refactor argparser handling
+* utils: remove unused import time
+* test\_config: comment out debug logging
+* ci.yml: fix yaml, fix steps comments
+* ci.yml: test against python versions 3.6 to 3.9
+* test\_brainz,test\_mix: comment out INFO logging
+* test\_collection: fix flake8 errors
+* test\_mix: fix flake8 errors
+* ci.yml: two subsequent runs of TestConfig
+* test\_config: just one test method
+* test\_config: first run in init, second as a test method
+* ci.yml: add TestConfig run (after TestMix)
+* .gitignore: add macOS build dmg file
+* add test\_config.py - just instantiate Config class for now
+* test\_collection: fix info print messages
+* ci.yml: name disco clashes with another cli tool
+* ci.yml: add 'Run disco' step
+* test\_mix: log level INFO
+* test\_mix: fix rest of tests
+* ci.yml: fix syntax error
+* ci.yml: separate unittest tasks instead of pytest
+* ci.yaml: run py3.7, rename pipeline and job
+* test\_mix: start fixing: setUpClass, test\_add\_track
+* implement running unittests via github actions
+* fix test\_brainz (on- and offline), disable logging
+* models: Brainz class: fix missing return None
+* test\_collection: remove last assert, fix imports
+* models: fixes in http fetchers
+* fix tests/test\_collection.py (when online)
+* add sql script that fixed testsuite database
+* fix testsuite database to match current scheme
+* fix Collection.search\_release\_track\_offline
+* User\_int: fix --resume silently ignored when..
+* requirements: rm six,pluggy, change discogs\_client
+* brainz match: fixes, improvements, usability
+* View\_common.trim\_table\_fields: break long lines more than once
+* man: start fixing disco.1 with fixed cli2man version
+* cli,models,ctrls: draft of --sort
+* search -u, -z: fix if-statement
+* search -z: all or \* matches all tracks on release
+* search -u: all or \* updates all tracks on release
+* INSTALLATION.md: fix paths in "edit config file manually"
+* INSTALLATION,CONTRIBUTION.md: fix macOS/Linux docs
+* setup\_mac\_app: remove packagin requires - was just a test
+* mac app: improve, refine, finalize packaging
+* mac app: hackish approach on installing cli tools.
+* discodos\_logo.py: save changes to big fat D
+* config.py: add hint to first-run output: type disco
+* pynsist.cfg: version to 1.0\_rc3, final icons for disco and discosync startmenu entries
+* assets: add final icon 'big fat D, remove draft'
+* views: fix tutorial: no discoshell.bat anymore
+* assets: add new icon draft: 'big fat D'
+* INSTALLATION: fix windows and api-access chapters for installer
+* cli.py: no command provided: dont show error when discogs not reachable
+* Revert "ctrls: don't show Discogs error when no command"
+* config.py: discogs\_token is requested interactively
+* config.py: windows edit docs popup show OK button only
+* \*.md: fix configure api access chapter heading and links
+* windows pynsist: popup when 'Edit Conf..' clicked before inital run
+* assets/discodos\_logo.py: slight spacing/position change
+* implement pynsist windows installer
+* add assets/shell.ico for testing (original win icon)
+* try to fix icon format
+* try to fix icon format
+* remove discodos.ico, add discodos\_big\_inner.ico
+* play around with logo/icon in discodos\_logo.py
+* finally commit db\_repair scripts, we might need them again
+* add assets/discodos\_logo.py
+* assets: add cmds charts white bg and a test icon
+* add env\_win.sh (creates pyenv and pip installs deps)
+* win\_pack.bat: try to fix import errors...
+* add gitbash\_pack.sh (currently tabulate issue though)
+* posix\_pack,win\_pack: fix rc suffix (\_ not ~)
+* posix\_pack,win\_pack: also remove discosetup (config.py) from tar
+* posix\_pack,win\_pack: remove pyinstaller config.py
+* manpage: lintian
+* manpage: lintian again and again
+* manpage: lintian
+* manpage: lintian
+* manpages: lintian again
+* manpage: try to fix lintian again
+* manpage: try to fix more lintian warnings
+* manpage disco-import: try to fix lintian warnings
+* manpages rename finished .mdoc files to name.1
+* manpage: add files section to disco.mdoc
+* manpage: fix examples section in \*mdoc
+* manpage: disco.mdoc: fix subcommands list
+* requirements.txt: change to joalla python-3-discogs-client v2.3.1
+* manpages: add EXAMPLES section
+* manpage: finish disco-search.mdoc
+* manpage: fix Gold Fisch
+* manpage: finish disco-import.mdoc
+* add disco-search.mdoc, disco\_search\_add.mdoc (draft)
+* add disco-import.mdoc disco\_import\_add.mdoc (draft)
+* create\_man.sh: fix all subcommand with their own include file and fix ordering of options
+* disco-suggest.mdoc: fix description
+* disco\_mix\_add.mdoc: fix description
+* manpage: forgot to add disco\_suggest\_add.mdoc before
+* create\_man.sh: fix mix with stuff we learned
+* manpage: add finished disco-suggest.mdoc
+* create\_man.sh: extend suggest cmd creation command
+* manpage: add finished disco-mix.mdoc
+* manpage: add disco\_sub\_add.mdoc (AUTHORS section)
+* manpage: finish discosync
+* sync.py: add ArgumentParser description
+* manpage: move subcommands from disco\_add to disco
+* create\_man.sh: final for now
+* create\_man.sh: fix functions and shebang
+* manpage: create\_man.sh, man/disco\* files
+* Dropbox\_sync: show\_backups: debug log skipping msg
+* cli.py: add description to ArgumentParser
+* Webdav\_sync: show\_backups: sort by name
+* Dropbox\_sync: only overwrite latest discobase when newer
+* Dropbox\_sync: delete,copy try/except; client mod time
+* Dropbox\_sync: make a copy of uploaded file
+* sync.py: fix exc import, requ.txt: depend on 3.14.5
+* fix sync.py 'file not found' error on backup()
+* add \_\_init\_\_.py in cmd subdir
+* requirements.txt: remove pathlib2
+* CONTRIBUTION: fix tutorials for setuptools/pbr
+* setup.cfg: remove discosetup wrapper, fix description
+* config.py: Config: fix help message after config create
+* CONTRIBUTION: move some from INSTALL, tiny wording fixes
+* INSTALLATION: remove setup troubleshooting chapter
+* ctrls: don't show Discogs error when no command
+* move Config class to config.py
+* finish db-setup in disco subcommand 'setup'
+* move db-setup to new disco subcommand 'setup'
+* .gitignore: add build,dist,eggs,targz
+* win\_pack.bat: pack to disco\*, add version handling,
+* posix\_pack.sh: pack to disco\* names, version to v1.0~rc2
+* fix typo in \_\_init\_\_.py
+* ctrls,models,views: logger init using logger.getlooger
+* \_\_init\_\_: version to 1.0.0
+* finally get rid of db.py - has been refactored since ages...
+* fix typo in .gitignore
+* cli,sync,config,utils,log: refactor for setupt/pbr
+* .gitignore: add egg-info, ChangeLog, AUTHORS
+* setup.cfg: descr change, tiny fixes
+* move cli scripts to discodos package, adjust setup.cfg
+* implement setuptools,pbr: add setup.cfg and setup.py
+* rename setup.py to config.py
+* add LICENSE.txt (GPLv3)
+* INSTALLATION.md: fix link to dev-version in setup troubleshooting chapter
+* readme: add 'document a mix chapter', some fixes elsewhere
+* readme: replace intro gifs with bottom-cropped versions
+* readme,manual,assets: cmds chart v0.3
+* README.md: adapt link to new cmds picture v0.2
+* MANUAL.md: change cmds picture link
+* adding cmds\_overview\_v2
+* models,views,ctrls: mix edit: forbid duplicate mix name
+* ctrls: mix create: forbid duplicate mix name
+* MANUAL: minor wording fixes in import chapter
+* MANUAL: add commands chart, minor fixes
+* README: fix links to user's manual chapters
+* README.md: move parts to MANUAL.md, add commands chart
+* Adding discodos cmds v0.1
+* readme,install: discosync: split readme/installation
+* \*.md: rename discogs-api-config chapter
+* INSTALLATION: finish discosync documentation
+* installation: rework/shorten/rephrase macOS/Linux chapter
+* installation: rework/shorten/rephrase windows chapter
+* installation,readme: shorten use-on-multiples chapter..
+* readme: add chapter use-on-multiple-computers
+* readme: add toc, change title
+* readme: new chapter: get as much information..
+* INSTALLATION: fixes in setup troubleshooting chapter
+* installation: minor corrections/additions
+
+v1.0.rc1
+--------
+
+* win\_pack.bat: add config.yaml to package
+* views: duration\_stats: fix took\_seconds value
+* INSTALLATION: win/posix: remove config create step,
+* CONTRIBUTION: rephrase intro text
+* posix\_pack.sh: include config.yaml into package
+* posix\_pack.sh: version to 1.0-rc1
+* readme: fix missing # in headline
+* installation: move dev-version to new file CONTRIBUTION.md
+* views: fix duration\_stats when longer than 1 hour
+* readme: call headline "DiscoDOS README" and add DiscoDOS as first word in first paragraph
+
+v1.0.rc0
+--------
+
+* win\_pack.bat: comment out venv activate, convert to dos file
+* win\_pack.bat: zip to discodos.zip - no version magic yet
+* installation: add release install windows chapter
+* installation: add release install mac chapter
+* posix\_pack.sh: OSX is now officially called macOS
+* installation: add install release version chapter
+* utils.Config: fix missing space in reload bashrc question
+* posix\_pack.sh: finally fix SED\_OPT for mac
+* models: Database: clarify launch setup error
+* posix\_pack.sh: fix --clean, wrong place
+* posix\_pack.sh: handle different sed option in mac/gnu tar
+* posix\_pack: rename dist to discodos using tar -s
+* posix\_pack.sh: add --clean option, remove distpath
+* rename packer scripts to os first naming (easy completion)
+* add pack\_posix.sh: quic & dirty package Linux/OSX
+* add pack\_win.bat - quick & dirty package
+* sync: catch empty token in config.yaml error
+* utils.Config: further clarify hints after config.yaml create
+* log.py: handle debug.log path in packaged version
+* package.txt: win: rename setup to winconfig.exe
+* utils.Config: rephrase config.yaml discogs doken hints
+* utils: Config: fix win wrappers when packaged
+* utils: Config: win wrapper inst: fix var declarations
+* package.txt: add windows packaging commands
+* utils: Config: start with windows adaptions
+* readme,installation: additions to setup process
+* package.txt: add venv create and activate
+* add package.txt
+* utils,setup: frozen (packaged) installs on Posix
+* utils: Config: Determine if bundled exe or not
+* cli,ctrls: implement offline edit-track
+* sync: cancel user friendly
+* loggger: filehandler use utf-8: fixes charmap errors in windows cmd.exe
+* .gitignore: add setup.bat,sync.bat
+* utils: Config.install\_cli: add win wrapper method..
+* cli: fix usage msg when search without options (-m,e,z,u)
+* cli: fix help for mix -u, -z and --resume
+* ctrls: update..brain/discogs: fix processed so far
+* ctrls: update...brainz/discogs: fix processed off by one errors
+* setup: remove import commands, remove clutter
+* readme: tiny fix in import cmd section
+* cli: bulk-edit help: fix missing m\_rec\_id\_override
+* ctrls: \_add\_track. fix throwing error when user says no
+* views: User\_int: fix search all -zz
+* models: get\_tracks\_by\_key|bpm: fix indentations in sql
+* ctrls,models: fix key+bpm report
+* models: bpm rep, key rep: remove trim for chords\_key
+* models: bpm report: remove trim, round to 1 comma
+* ctrls,models,views: fix key\_report
+* views: edit\_ask\_details: force chars in trans\_rating field
+* readme: common tasks: add 2 sections
+* readme: basic usage: rename to my\_mix
+* setup: fix a\_bpm and bpm field datatypes (REAL)
+* ctrls: bpm\_report: remove commented out clutter
+* models,views: bpm\_report: round and trim .0
+* ctrls,models: fix bpm\_report
+* readme: add suggest command section
+* cli: shorten canceled ctrl-c message
+* readme: reorder sections: mix suggest import search
+* readme: improve cli notes and add mix cmd section
+* readme: import sect: fix typo and split
+* readme: improve basic usage and search sections
+* readme: wording changes in disco section
+* readme: shorten things in disco command and general notes on cli sections
+* readme: refine/shorten basic tut
+* readme: mov bulk-edit from basic tut, italic for Notes
+* readme: move some from search to import section
+* readme: add import command chapter
+* readme: start writing chapter 'command reference'
+* move initial setup.py run and api config to INSTALLATION.md
+* ctrls,views: improve brainz match final report
+* ctrls,models: brainz match error handling
+* cli,ctrls,models,views: implement --resume
+* readme: clarify/add some in intro text
+* readme: add second gif, rename first one, text fixes
+* readme: add first demo gif, refine intro test
+* ctrls: update\_tracks...brainz: fix get chords\_key
+* views: User\_int: fix search all
+* cli,ctrls,models,views: implement suggest key and bpm
+* cli: dont state error on user cancel (ctrl+c)
+* views: View\_common.shorten\_timestamp: handle None
+* readme: add/move to INSTALLATION.md, intro text
+* readme: add log and extend intro text
+* ctrls,models,views: finally mix track\_pos handling
+* cli,ctrls,modesl,views: implement search+edit track
+* cli: few tweaks and additions in help texts
+* cli: update\_all..brainz call was still missing for search all -z
+* ctrls: update\_...discogs: fix error on final summary
+* cli,views: move tutorial to view method, refine items
+* ctrls: update\_single...brainz: refine cant fetch error msg
+* ctrls,models,view. online release search: catch errors
+* cli: massive overhaul on help texts - refine/add/clarify
+* views: fix join\_links\_to\_str method call (was renamed)
+* ctrls,models,views: add links to single and all release view
+* views: round brainz bpm in online\_search\_results\_tracklist
+* ctrls: narrow search terms error wording to 'altering'
+* views: User\_int: prevent search -z and -u in offline mode
+* cli: fix usage message (-m, -u or -zz hint)
+* ctrls: catch error whenn online-searching
+* ctrl: search-brainz-update: catch errors
+* ctrls,models,views: search online: key/bpm view
+* ctrls: fix track\_report
+* ctrls,setup: fix vscode mentioned problems
+* models: upsert\_track\_brainz: dont use ON CONFLICT
+* models: refactor upsert\_track: dont use ON CONFLICT
+* models: create\_release: remove logging clutter,
+* sync: fix Dropbox download command
+* sync: \_times\_tuple: fix error msg when filename format not valid
+* ctrls: print\_and\_return\_first\_d\_release: add hint..
+* utils.Config: fix install\_systemwide.sh outputs
+* sync: refactor dropbox show\_backups and restore.
+* sync: refactor dropbox backup, remove async, catch errors
+* ctrls: fix edit\_ask\_details track\_pos handling
+* ctrls,models,views,cli: update\_single\_track\_from\_brainz
+* cli: import -z: also pass detail option
+* cli,ctrls,models: implement all tracks brainz match
+* ctrls: Mix.update\_...\_brainz: remove old \_functions
+* ctrls: update\_tracks\_from\_discogs: fix var names
+* cli,ctrls,views: User\_int: import args handling
+* cli: argparser: add import subcommand, wording fixes
+* cli: argparser: clarify help of search -t,-m-,-p
+* ctrls: import collection: tiny logging fix
+* ctrls: Mix.update\_brainz: fix initial log message
+* ctrls: fix Brainz\_match init: wrong order of args
+* cli,ctrls,models: implement extended import (tracks included)
+* cli,ctrls,models,views: add update\_all\_tracks\_from\_discogs method
+* cli,ctrls: add update\_single\_track\_from\_discogs method
+* ctrls: continue with mix -u refactor
+* cli,views,ctrl: first approach on mix -u refactor
+* views: fix syntax warning 'is not' with a literal
+* cli: add argparser options search -u and -z
+* cli,views: logo version: disco next to dos
+* cli,views: if empty disco command, show logo and tutorial
+* utils: Config: refactor nt and posix wrappers install
+* utils: tiny wording change in create\_conf msg
+* views: track-edit: pos-move: inform user
+* models: update....track: proper reorder on move
+* ctrls,views: add method really\_delete\_track
+* ctrls,views: move \_delete\_confim to views
+* cli,ctrls,models,views: move print\_found\_discogs\_release
+* views,models: prepare\_release\_info: some sanity checks
+* ctrls,views: prepare\_release\_info: dict instead of list
+* ctrls,views: refactor print\_found\_discogs\_release
+* models,views: handle all track numbers uppercase
+* cli,ctrls,views: implement track number suggestions
+* models: Brainz\_match: lower case compare track numbers
+* setup: fix a typo in db schema upgrade final msg print
+* models: fix reorder\_tracks: sorting by pos was missing
+* models: add \_updated\_timestamp method
+* views: ask\_for\_track: add arg suggest
+* views: shorten updated-timestamp in mix overview
+* ctrls,models: update mix.updated field on track edit
+* ctrls,views: rename and move edit\_ask\_details
+* models,ctrls,views,cli: implement mix info edit
+* setup: Db\_setup: fix schema upgrade
+* models,utils,readme: implement config.yaml create
+* models,ctrls: update\_brainz: rec mbid user override
+* ctrls: key,bpm fetch using Brainz\_match methods directly
+* models: d\_artists\_parse: lower case ..
+* models: get\_\*\_for\_brainz\_update methods: info log
+* ctrls,models,views: move d\_tracklist\_parse\* methods
+* views: d\_track\_list\_parse\*: lower case ..
+* models,views: edit track: add rec mbid override
+* ctrls,views: update\_brainz: show 'processed so far' count
+* setup.py: tiny wording change in --update-db-schema help
+* ctrls: fix rec\_match\_method save to db
+* setup,models,ctrls: brainz db-schema change
+* views: remove release\_id from \_edit\_track\_questions
+* models,tests: Brainz\_match: refactor catno-mid-cut
+* models: Brainz\_match: track\_no\_match refactor fixes
+* ctrls,models: Brainz\_match: creds as single values
+* ctrls,models: Brainz\_match: tiny logging improvements
+* ctrls,models: Brainz\_match: remove # from CatNos globally
+* ctrls,models: Brainz\_match: catno: improve logging
+* ctrls,models: Brainz\_match: continue/fix refactor
+* cli,ctrls,models: refactor brainz matching..
+* views: really\_add\_track: clarify expected user input
+* ctrls: edit\_track: clarify expected user input
+* models: fix update\_mix\_track\_and\_track\_ext
+* setup: Db\_setup: force an upgrade via --upgrade-db-schema
+* ctrls,views: move final brainz match report to views
+* ctrls: fix tiny thing in coll\_ctrl init
+* fix loads of vscode warnings and errors
+* ctrls: update info methods: fix start\_time position
+* ctrls: fix vscode suggested errors
+* ctrls: fix missing d\_catno args, add time stats
+* ctrls,views: move time duration stats to View\_common\_cli class
+* ctrls,views,models,tests: add Discgos CatNo field..
+* setup: implement upgrade schema
+* setup: refactor initial db and tables create
+* setup,models: only setup creates db, else fail
+* cli,ctrls,models,utils,views: brainz mix view (-vv)
+* views: tab\_mix\_table: rename/shorten some headings
+* sync: finish webdav restore
+* sync: continue with webdav restore
+* sync: dropbbox restore minor wording fix
+* sync: webdav restore wip commit
+* sync: argparser add type and mode shortcuts
+* sync.py: webdav backup almost finished
+* utils: Config: make database filename configurable
+* sync: continue webdav backup, wip commit
+* models fix shift\_track succesful message
+* tests: TestCollection.\*: comment out all debug\_db calls
+* models: add debug\_db method to Database class
+* models,tests: search\_release\_track\_offline extended
+* views: add View\_common.link\_to()
+* utils.py: remove rate\_limit\_slow\_downer()
+* sync: webdav backup - work in progress commit
+* sync.py: start writing Webdav\_sync class
+* utils: add new config entry webdav\_url
+* requirements.txt: add webdavclient3
+* utils: refactor config.yaml entries fetching
+* sync.py: try some things to catch error when offline
+* tests: finish stats\_match\_method\_release test
+* sync: deactivate restore on dropbox
+* models,tests: add method stats\_match\_method\_release
+* ctrls: brainz matching: clarify releases added
+* ctrls: brainz matching: fix match\_method declarations
+* ctrls: only try to initialize brainz if discogs is online already
+* utils/Config: initialize musicbrainz creds vars
+* ctrls: brainz matching: refactor match-methods-dbsave
+* ctrls: brainz matching: improve track number match
+* ctrls: brainz matching: track number match
+* cli,ctrls,views: brainz matching: search detail
+* ctrls: brainz: release matching: lower-case searchterms
+* ctrls: brainz matching: be strict on releases
+* ctrls: brainz matching: move release match comments
+* ctrls.py: brainz matching: remove unused func and comment
+* ctrls: brainz matching: digital release variation
+* setup.py: cleanup imports - only what we really need
+* sync.py: implement restore
+* sync.py: add argparser
+* views: move methods between classes, rename classes
+* tests,models: extend track suggest with AccBr fields
+* tests: db: change a track\_no in mix 124 del mix
+* tests: update template db schema to version 2
+* views,models: replace key,bpm with AccousticBrainz values
+* finally cleanup imports - this shouldn't break anything,
+* tests: fix get\_accbr\_low\_level: is a number
+* tests: Brainz: fix Brainz class init
+* tests: Coll: fix test\_search\_release\_online\_text\_multiple
+* tests: Coll: save conf as attribute
+* tests: Mix: fix reorder\_tracks\_squeeze\_in
+* tests: Coll: fix get\_all\_db.., add debug loop method
+* tests: fix mix id in shift\_track\_down
+* models,tests: add Mix.shift\_track and test
+* tests: prepare database for shift up/down tests
+* requirements.txt: add pillow
+* Revert "ctrls: track\_report: fix id and name handling when online"
+* ctrls: fix missing : after else in search\_release db part
+* ctrls,models: cleanup & refine search & add
+* models,tests: fix search returns all when no searchterms
+* views: fix Cli\_view\_common.trim\_table\_fields
+* views,ctrls,models: prettier mix overview
+* views: view\_common: add method none\_replace
+* views: cleanup, reorder, comment, move methods
+* views: fix missing newline
+* views: mix overview: shorten created-timestamp
+* models,tests: new method search\_release\_track\_offline
+* ctrls: MB/AB: fix final stats info log message
+* ctrls: MB/AB update: fix errors\_not\_found counter
+* ctrls: add stats when MB/AB update finished
+* Refactor pull track info from discogs part 5
+* Refactor pull track info from discogs part 4
+* Revert "ctrls,views: start redesign online search"
+* Revert "ctrls,views: online search result selectable"
+* Refactor pull track info from discogs part 3
+* Refactor pull track info from discogs part 2
+* Refactor pull track info from discogs part 1
+* cli,views: finally give brainz update its own option (-z)
+* models: get\_all\_...brainz: use SELECT DISTINCT
+* models: \_select\_simple: add optional SELECT DISTINCT
+* models: \_select\_simple: add optional SELECT DISTINCT
+* utils.Config: config entries default values (empty)
+* requirements.txt: all == now >=
+* models: \_select\_simple: add optional SELECT DISTINCT
+* ctrls,models: update brainz for all tracks in all mixes
+* models,ctrls: update release table, improve CatNo match
+* ctrls: update\_brainz: default values None,
+* models: quick and dirty catch accousticbrainz 404
+* ctrls: also move track name matching to function
+* ctrls,models,views: further improve MB/AB magic
+* requirements.txt: add dropbox
+* requirements.txt: add dropbox
+* setup.py: DB schema upgrade for Brainz features
+* cli,models,ctrls: AccousticBrainz key and bpm magic
+* models,tests: add basic acousticbrainz methods and tests
+* models,tests: basic musicbrainz request methods and tests
+* ctrls: track\_report: fix id and name handling when online
+* model,tests: add Brainz.get\_artist\_by\_id and test
+* models,tests: first draft of musicbrainz class
+* ctrls,views: online search result selectable
+* models: get\_tracks\_by\_key: enclose key in wildcards
+* views,ctrls: pretty print key,bpm suggest outputs
+* views: for now only allow certain suggest modes:
+* views: fix User: add WANTS\_SUGGEST\_KEY\_REPORT
+* ctrls: bpm\_report: add Track # to output
+* ctrls,views,cli: new feature draft: suggest by key
+* tests,models: add get\_tracks\_by\_key method and test
+* tests: smarter way of showing class and method names
+* views,ctrls,cli: new feature draft: suggest by bpm
+* fix Mix.get\_full\_mix: remove error handling - it's done by \_select
+* tests,model: new Collection method get\_tracks\_by\_bpm
+* views: tab\_mixes\_list: apply trim\_table\_fields
+* ctrls,views: move table\_trim call from mix\_ctrl\_cli
+* ctrls,views: start redesign online search
+* tests: add Collection search on- and offline tests
+* tests: add release offline search tests
+* ctrls,models: remove import db.py
+* models: search\_release\_offline use model method
+* tests,models: fix search\_release\_id method, add test
+* models: fix Mix.reorder\_tracks method
+* tests: fix get\_all\_db\_releases
+* models,views: reduce fields to id, artist, title
+* requirements.txt: update tabulate to 0.8.6
+* ctrls: trim output in view\_all\_releases method
+* views,ctrls: move field newline magic to global method
+* views: remove Mix\_view\_common.\_edit\_questions attr
+* views,models: fix show all releases list
+* model: remove old get\_all\_releases method
+* add test\_collection.py and first test method
+* tests: name mix entries in discobase\_empty.db
+* models.Database: document \_select\_simple, \_select
+* fix test\_delete\_track: No length, just None
+* tests fixes: mix\_id\_non\_existent, get\_mix\_id\_number
+* tests,model.Mix: add \_get\_mix\_id, refactor \_select, ..
+* ctrls.py: edit\_track: use Mix.update\_mix\_track\_and\_track\_ext ..
+* utils.py Config: also fix quotes in posix disco wrapper
+* utils.py Config: fix missing quotes in disco.bat generation
+* tests: fix get\_full\_mix and get\_full\_mix\_verbose
+* tests: add test for Mix.get\_full\_mix(verbose = True)
+* tests: add test for Mix.get\_full\_mix
+* tests,model: update\_mix\_track\_and\_track\_ext refactor and test
+* setup.py: state create table success status in log
+* models.Database: clarify log output of sql methods
+* model,tests: refactor Mix.get\_tracks\_from\_position
+* model,tests: refactor Mix.reorder\_tracks\_squeeze\_in
+* model,tests: refactor Mix.reorder\_tracks, add test
+* model,tests: refactor Mix.delete\_track and add test
+* model: Mix.update\_mix\_track\_and\_track\_ext log messages
+* model: Mix.methods: streamlining log info msgs
+* model,tests: refactor Mix.add\_track and add test
+* model,test: refactor Mix.get\_last\_track and add test
+* model: remove Mix.get\_all\_releases - it's in Collection
+* model,tests: refactor Mix.get\_all\_tracks\_in\_mixes
+* tests: try another form of sorting code - doesnt work
+* tests: experimental - build TestSuite, use TestRunner
+* tests: rename all methods - remove \_mix\_
+* tests: add test\_get\_mix\_info - new naming scheme
+* Mix.get\_one\_mix\_track: refactor and add test
+* Mix\_ctrl.copy\_mix: use Mix.get\_tracks\_of\_one\_mix
+* tests.test\_mix\_delete: remove mix name assert
+* Mix.delete: keep name after delete - we need it in Mix\_ctrl.delete
+* Database.\_select: add col count log msg on fetchall
+* mix\_ctrl: fix copy\_track, refactor rowfactory usage
+* models,tests: fix rows log message, add 2 new tests
+* tests: improve mix\_create, add mix\_delete
+* Mix: new attr lastrowid, changes in create, delete
+* tests: mv to discobase\_empty.db and copy on test start
+* mv tests/model/\* to /tests/
+* utils/Config: fix sysinst.chmod goes after file creation
+* add folders/files for basic model testing
+* sync.py: pass database file on instantiate
+* utils/Config: all dropbox\_token messages to info
+* add sync.py: uploads/backups db-file to dropbox
+* utils/Config: add dropbox\_token entry handling
+* cli.py: remove superflous imports
+* README: fix a comma in discoshell description
+* README: move init db headings, new chapter inport
+* README: windows: wording, linux: fix redundant sentence
+* models,ctrls.py: fix missing artist col in track\_occurences select
+* utils.py Config: fix quotes in Linux wrapper
+* .gitignore additions
+* README: move initial setup heading before linux/win chapters
+* README: refinements and wording fixes
+* README: cli.py -> disco wrapper, Win/Linux usage
+* setup.py,cli.py: change shebang to env python
+* README: also fix pip output format on linux
+* README: finally fix pip --version output on windows
+* README: begin to adjust for discoshell, disco wrapper and py launcher
+* README: refine windows requirements (py launcher)
+* utils.py: Config: fixes in disco.bat
+* fix discoshell\_contents, refine win wrapper inst help
+* utils.py: Config: fix venv activate path
+* utils.py: Config: wrapper inst: double to single quotes
+* utils.py: Config: fix hardcoded venv on posix
+* utils.py: Config: fix os nt condition, refine a help msg
+* utils.py: Config: more wrapper install refinements
+* utils.py Config: fix discoshell\_contents assignment
+* utils.py: refine and fix disco wrapper installation for posix and nt
+* utils.py: fix windows os check
+* utils.py: remove debug print
+* Revert "setup.py: add --cli-install to argparser"
+* setup.py,utils.py: add Config.install\_cli and \_write\_textfile methods
+* setup.py: remove os and pathlib module imports
+* setup.py: add --cli-install to argparser
+* setup.py: fix a comment
+
+v0.0.2
+------
+
+* cli.py: rename track mode to suggest mode
+* README.md: some clarification on Windows env variables and paths
+* README.md: minor wording corrections
+* README.md: improve Prerequisites, add links and more
+* README.md: move on with clarifying and keeping it as simple as possible
+* cli.py,views.py: rename release mode to search mode
+* cli,setup: some more logger\_refactor fixes
+* cli.py,setup.py: fix log\_level override message
+* add debug.log to .gitignore
+* setup.py,cli.py,log.py,\_\_init\_\_.py: refactor logger
+* setup.py: finally remove import db module
+* README.md: some notes on Windows command calls difference
+* setup.py: print its actual main functions when
+* README.md: trying to clarify stuff in setup description againg
+* README.md: add log\_level setting to config.yaml
+* setup.py: improve help messages
+* setup.py: refactor create table function
+* models/Collection: refactor create\_release()
+* setup.py: Coll\_ctrl use db\_obj
+* setup.py: experimental func update\_db use Database class
+* setup.py: create\_db\_tables use Database instance
+* cli.py: all Controller inits now use db\_file
+* ctrls/Collection: was missing db\_file parameter
+* finally remove db commit and close at end of script
+* models/Database: use context manager in execute method
+* cli.py: dont try to add release to mix if mix not there
+* views.py: catch an error when collection and db not in sync
+* cli.py, setup.py: config.yaml log\_level can be overriden via cli
+* models.py Database \_select: fix bool not iterable errors
+* setup.py: fix database init call
+* models.py: quickfix logging type error with empty database
+* utils.py read\_yaml: quickfix open Pathlib py <3.6
+* setup.py: use Config class
+* cli.py: set level from config file
+* .gitignore: readd curls and swp, add more stuff
+* delete src/ directory recursively
+* utils.py: add Config class, cli.py: adapt accordingly
+* README.md: config.yaml create \_before\_ first setup.py call
+* README.md: add homepath to initial setup cd command
+* README.md: add quotes to win commands with %HOMEPATH%
+* add \_\_pycache\_\_ to .gitignore
+* README: add check clone stept to windows description
+* README: fix some typos and wording
+* README: fix backticks, move Usage chapter heading
+* README.md: more details on installing, updating db
+* setup.py: fix missing comma in db create release\_table
+* README.md: fix missing backtick
+* move api config to file, add to README, fix read\_yaml
+* .gitignore: add src/ dir
+* .gitignore: add discobase.db
+* models.py Database: filename must always be a string
+* README.md: extend initial setup howto and main intro text
+* README.md: add initial installation steps
+* requirements.txt: remove pkg-resources=0.0.0
+* add .gitignore file
+* requirements.txt: add pyyaml, pathlib and pkg-resources
+* requirements.txt: use git+https for discogs\_client
+* cli.py: fix database path handling
+* setup.py: fix shebang, change db conn handling
+* setup.py: remove utils import again, was there already
+* setup.py: initial setup fixes
+* utils.py: add read\_yaml function
+* add requirements.txt
+* fix update\_in\_d\_coll: indentation and pass for now
+* experimental untested commit - ctrls.py: update\_\_in\_d\_coll, models.py: get\_releases\_of\_one\_mix
+* increase remaing and sleep in slow\_downer
+* discogs import: in\_d\_collection flag; ignore dubs
+* add d\_artist and in\_d\_collection fields to create\_db\_tables()
+* catch error when online\_search doesn't find..
+* mix <id> -u now understands start\_pos with -p <pos>
+* search\_release\_id also uses \_select\_simple now
+* models.py: search\_release\_title..
+* Mix\_ctrl: show more track-info when bulk editing tracks
+* track\_pull now also updates when existing already in database
+* fix a whitespace in models.py
+* mix list ordering, fix pull\_track\_info
+* fix some whitespace in models.py
+* track-artist-name handling
+* fix Database.\_\_init\_\_: row factory before cursor
+* fix accidently changed db.update\_track\_in\_mix()
+* new feature: mix --bulk-edit (-b)
+* fix some whitespace in ctrl.py
+* error handling in collection model and ctrl
+* import artist to release table
+* execute PRAGMA foreign\_keys ON no matter how a model/database object is initiated
+* extend \_select\_simple, add release from mix mode
+* ctrls.py: track\_report only when release is found
+* first draft of track\_report feature - offline search only
+* ctrls.py: move 'which track (A1)? question to views.py
+* ctrl.py: search\_release and \_add\_track: default vals
+* Mix\_ctrl\_cli: fix self.mix.get\_full\_mix call (verbose bool)
+* fix mix X -u command
+* Mix\_ctrl\_cli: add release chooser for offline-search
+* Mix.get\_full\_mix() refactored - directly uses \_select()
+* seperate sql select in two methods
+* models.py Database class: \_select method
+* introduce Database parent/mix-in class for models
+* finish setup.py MVC
+* setup.py MVC refactoring
+* conn var doesn't have to be global anymore
+* fix 'track -u' command - just init mix\_ctrl without name or id
+* move to MVC complete (well almost)
+* copy\_mix to MVC
+* pull\_track\_info\_from\_discogs to MVC
+* remove some useless methods and comments
+* show all releases to MVC
+* add track offline and online finished
+* fix add-track-calls
+* move discogs-release-print method to Collection\_view class
+* add empty Collection\_view\_cli and Collection\_view\_common classes
+* add\_offline\_track to MVC
+* Introduce Collection model
+* add collection controller class with method discogs\_connect
+* mix\_track\_delete to MVC done
+* remove empty method \_add\_track\_to\_db\_wrapper in Mix\_ctrl\_common
+* cli.py: remove commented out lines in reorder\_tracks branch
+* remove copy/paste leftovers under \_edit\_track\_ask\_details in Mix\_ctrl\_cli
+* reorder\_tracks to MVC
+* remove function pretty\_print\_mix-tracklist, it's now Mic\_ctrl\_cli.view()
+* edit\_mix\_track feature to MVC done
+* Mix\_ctrl\_cli,common:view: cut\_pos to log.debug
+* Mix, Mix\_ctrl\_cli: move methods around, del methods
+* Mix\_view\_cli, Mix\_view\_common: fix \_\_init\_\_
+* move \_edit\_track\_questions attr to Mix\_view\_common class
+* some error handling in Mix\_ctrl\_cli
+* mix delete to MVC, forgot to add ctrls.py before
+* Mix model: gets data from db, Mix\_ctrl\_cli: gets data from model
+* first part of mix view to MVC, move to model part is missing
+* forgot to add views.py to commit before
+* view mixes list feature now fully seperated to MVC components
+* start to implement clumsy form of MVC principle
+* Mix and Mix\_cli: functional code moved to Mix and Mix\_cli
+* fix: create mix object only in one place
+* Mix class: edit\_track
+* remove old functional mix init code (get ID, name, etc.)
+* new feature --delete-mix, -D
+* Mix class: \_\_init\_\_
+* fix cli.py mix (no id) - now also using new class method
+* add mix.py: Mix\_cli, Mix classes, implement create()
+* move discogs connect to function
+* remove check\_args() function definition
+* User\_int: glob var ONLINE is now attr WANTS\_ONLINE
+* add user\_int class
+
+v0.0.1
+------
+
+* some clarification and general improvement in --help output
+* improve add\_release to collection
+* wording fix in setup.py -i
+* fix 2 bugs
+* pull track details from Discogs for specific mix
+* pretty\_print\_mix\_tracklist: finish 'insert newline'
+* pretty\_print\_mix\_tracklist: 'insert newline' feature
+* finish copy\_mix feature
+* first part of copy\_mix feature
+* verbose or not tracklist always handled by pretty\_print\_mix\_tracklist
+* use reorder\_tracks after delete
+* add release ID to collection folder id 1
+* output mix tracklist after online\_search\_and\_add
+* finally also move online\_search\_and\_add to function
+* trackedit: initial info view better handling with str.format()
+* trackedit: display essential info before editing starts
+* move coarse or fine tracklist decision one level higher..
+* rearrange column order in trackedit and in mix\_table\_fine
+* change order of interactive trackedit: often used first
+* implement mix\_mode\_add\_at\_pos
+* implement "search and add to mix"  when in mix mode
+* implement delete track from mix
+* improve add\_track\_at\_pos
+* implement reorder\_tracks\_in\_mix()
+* finish edit release\_id, fix track pull
+* halfway through with edit release\_id in mix\_track\_edit
+* fix import statements in setup.py
+* forgot to add utils.py to git
+* move add\_track\_at\_post to function
+* fix: not found tr added anyway, add: add at pos
+* fix NoneType error in track\_edit when track # not in mix
+* new feature: add track at pos (and auto reorder following tracks)
+* setup.py: first attempt of import specific release only
+* fix and refine add\_track\_to\_mix user interaction
+* remove wants\_to\_add\_to\_mix()
+* check\_args() prechecks what user wants and sets global constants
+* rewrite ask\_details\_to\_edit() properly
+* db.create\_track: use with conn:
+* fix something in edit track db code
+* fix release\_id issue, was wrong LEFT JOIN
+* update\_or\_insert\_track\_ext()
+* small fix in check\_args()
+* change some of release\_id fields from LONG to INT (like the rest) UNTESTED
+* fix online release search + add track to mix
+* add check\_args(): sanity check cli args
+* only --create-mix OR --edit (mix\_track) possible
+* setup.py: quite some things..
+* first update-mix-track part finished
+* fix some stuff in mix mode
+* add mix-tracklist verbose mode
+* reorder subparsers, improve track pull UI and Error output
+* fix JOIN error in DB get\_full\_mix
+* finish first version of mix\_track dicogs pull
+* several things
+* DB schema changes in tables mix\_track, track, track\_ext
+* mostly working on used\_tracks\_update\_from\_discogs
+* fix offline release table and move layouting to func
+* all tables as functions in one place
+* improve setup.py --import
+* rename import.py to setup.py
+* fix release id search, fix get id via mix\_name
+* add\_to\_mix: handle number or text db search
+* add shortcuts (aliases) to main positional commands
+* update readme
+* quickly update readme
+* a lot of stuff again
+* loads of stuff
+* FOREIGN KEY in mix\_track create table
+* very basic add to mix func
+* cli: dummy functionality if --mix and --track are given (in release mode)
+* import.py: create mix and mix\_track tables
+* one release searchterm/id is enough, add -m,-t,-p
+* create mixes table via import.py
+* logging init moved to discodos/log.py, forgot to add this way before
+* basic online release search functionality
+* add argparser to import, only import when -i
+* implement search for release title
+* add offline db search function and some other fixes
+* init logging before db, move release search to func
+* search online only when online=True, somer error handling experiments (urllib3)
+* some logging and error handling basics/tryouts
+* error handlin and logging basic beautifying
+* logger to extra file, simplest idea of cli functionality
+* cli.py: add basic logging and argparsing with verbosity level support
+* import.py: replace existing primary keys using ON CONFLICT
+* forgot to add discods/ subdir before
+* add cli.py
+* organize stuff in module packages dir; conn.commit()
+* import.py: gets collection from discogs and imports to sqlite db
+* Initial commit
