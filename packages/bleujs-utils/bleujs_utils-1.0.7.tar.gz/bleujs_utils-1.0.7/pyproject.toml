@@ -1,0 +1,5 @@
+[tool.poetry]
+name = "bleujs-utils"
+version = "1.0.7"
+description = "Utility package for Bleu.js, providing tools to enhance development and integration."
+authors = ["Pejman Haghighatnia <pejmanhnia@gmail.com>"]
