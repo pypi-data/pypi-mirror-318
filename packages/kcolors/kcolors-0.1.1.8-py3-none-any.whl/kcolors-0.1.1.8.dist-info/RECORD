@@ -1,0 +1,12 @@
+kcolors/__init__.py,sha256=T9FmL63wCeh_D5awSGmoLQu2jDB-ZmcOxRHLqoH57lQ,2846
+kcolors/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kcolors/irefs.py,sha256=IlVNm5k2XCDndX8l0FItVaXemhcQqDYjpcBbFE3GgE4,5581
+kcolors/refs.py,sha256=PwV4DbqC7R9bzxnLZNR8Ft_js4bB6yVDTXY7JNRiy-8,5584
+kcolors/utils.py,sha256=mUT_cQ0nkxGNQkUSoW3G-tUEWbX1kwrJXpejA0mll40,1288
+kcolors/src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kcolors/src/colors.py,sha256=4CYWZQJAURb9Nwb4YJlj-2lMfu2g74934dspzD3YwII,6579
+kcolors-0.1.1.8.dist-info/LICENSE,sha256=VAwxSqsVv9SdUJSYJpuLyU3ArEBwRn468WPZoTPMawQ,1068
+kcolors-0.1.1.8.dist-info/METADATA,sha256=K937t6Z2VxQ95KiKx6qArn3o-AxZNqbUkJ5qD-hslaE,510
+kcolors-0.1.1.8.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+kcolors-0.1.1.8.dist-info/top_level.txt,sha256=hBKj6xIsszWJSwJ6nFj9FkkReqh3TbnT50UCUm1QjW0,8
+kcolors-0.1.1.8.dist-info/RECORD,,
