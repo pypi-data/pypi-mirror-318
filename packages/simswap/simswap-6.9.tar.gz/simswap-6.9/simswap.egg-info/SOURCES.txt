@@ -1,0 +1,8 @@
+README.md
+setup.py
+simswap/__init__.py
+simswap/main.py
+simswap.egg-info/PKG-INFO
+simswap.egg-info/SOURCES.txt
+simswap.egg-info/dependency_links.txt
+simswap.egg-info/top_level.txt
