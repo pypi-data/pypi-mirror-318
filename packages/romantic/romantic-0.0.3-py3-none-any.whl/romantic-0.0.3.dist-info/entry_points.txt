@@ -1,0 +1,2 @@
+[console_scripts]
+baby = romanticCli.main:baby
