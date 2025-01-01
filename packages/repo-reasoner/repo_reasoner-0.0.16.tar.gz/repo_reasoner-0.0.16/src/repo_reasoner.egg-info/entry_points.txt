@@ -1,0 +1,2 @@
+[console_scripts]
+repo-reasoner = src.repo_reasoner.__app__:main
