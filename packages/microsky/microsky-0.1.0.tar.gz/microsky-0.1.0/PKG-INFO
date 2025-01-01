@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: microsky
+Version: 0.1.0
+Summary: Simple bsky.app client
+Home-page: https://github.com/nakagami/microsky
+Author: Hajime Nakagami
+Author-email: nakagami@gmail.com
+License: MIT
+License-File: LICENSE
