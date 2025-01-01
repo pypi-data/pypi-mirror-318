@@ -1,0 +1,126 @@
+Metadata-Version: 2.1
+Name: pyjob-cli
+Version: 0.1.0
+Summary: A CLI tool for monitoring Python scripts
+Home-page: https://github.com/jtheol/pyjob-cli
+Author: jtheol
+Author-email: 
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+# pyjob-cli
+
+A command-line tool for monitoring progress of Python scripts with real-time progress tracking.
+
+## Features
+
+- Run multiple Python scripts concurrently with progress monitoring
+- Background execution support
+- Real-time progress tracking with UI
+- Persistent job state tracking
+- SQLite database for storing job history
+
+## Quick Start
+
+1. Initialize the database:
+```bash
+pyjob init
+```
+
+2. Create a simple script:
+```python
+# example_script.py
+
+import time
+
+def main(monitor):
+    pages = 10
+    
+    monitor.add("example_job_name", pages)
+    try:
+        for i in range(pages):
+            time.sleep(0.5) 
+            monitor.update("example_job", i + 1)
+        monitor.done("example_job")
+    except Exception as e:
+        monitor.error("example_job", str(e))
+```
+
+3. Run your script:
+```bash
+pyjob run example_script.py
+```
+
+## Usage
+
+### Basic Commands
+
+```bash
+# Initialize database
+pyjob init
+
+# Run a single script
+pyjob run script.py
+
+# Run multiple scripts concurrently
+pyjob run script1.py script2.py script3.py
+
+# Run in background mode
+pyjob run --background script.py
+
+# Show progress of running jobs in the background
+pyjob show
+```
+
+## Writing Compatible Scripts
+
+Your scripts should follow these guidelines:
+
+1. Include a `main` function with the correct signature:
+```python
+def main(monitor):
+    # Your code here
+    pass
+```
+
+2. Use the monitor methods:
+```python
+# Register your job
+monitor.add("job_name", total_items)
+
+# Update progress
+monitor.update("job_name", current_progress)
+
+# Mark as complete
+monitor.done("job_name")
+
+# Report errors
+monitor.error("job_name", "error message")
+```
+
+## Database
+
+A database is created at `~/.pyjob/pyjob.db` with the following table:
+
+- `jobs`: Individual jobs for each run
+
+## Database Commands
+
+```bash
+# Show all jobs
+pyjob show_db  
+
+# Show specific job by name
+pyjob show_db -n name_of_job
+```
+
+## Requirements
+
+- Python 3.12+
+
+## License
+
+MIT License
