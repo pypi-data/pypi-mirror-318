@@ -1,0 +1,2 @@
+[console_scripts]
+gen-alt-text = gen_alt_text:main
