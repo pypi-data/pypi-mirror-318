@@ -1,0 +1,6 @@
+agin
+assets
+dist
+docs
+site
+venv
