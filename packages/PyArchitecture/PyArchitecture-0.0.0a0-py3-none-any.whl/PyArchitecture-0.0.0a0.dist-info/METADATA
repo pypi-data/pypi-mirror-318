@@ -1,0 +1,151 @@
+Metadata-Version: 2.1
+Name: PyArchitecture
+Version: 0.0.0a0
+Summary: Python module to get physical drives connected to a host machine
+Author-email: Vignesh Rao <svignesh1793@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2024 TheVickypedia
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/thevickypedia/PhyDisk
+Project-URL: Source, https://github.com/thevickypedia/PhyDisk
+Keywords: physical-drives,PhyDisk
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: System :: Hardware
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pre-commit; extra == "dev"
+Provides-Extra: standard
+Requires-Dist: Jinja2==3.1.*; extra == "standard"
+Requires-Dist: requests==2.*; extra == "standard"
+Requires-Dist: gmail-connector; extra == "standard"
+
+# PhyDisk (Physical Disk)
+PhyDisk is an ultra lightweight python module to get all physical disks connected to a host machine.
+
+![Python][label-pyversion]
+
+![Platform][label-platform]
+
+[![pypi][label-actions-pypi]][gha_pypi]
+
+[![Pypi][label-pypi]][pypi]
+[![Pypi-format][label-pypi-format]][pypi-files]
+[![Pypi-status][label-pypi-status]][pypi]
+
+## Installation
+
+```shell
+pip install PhyDisk
+```
+
+## Usage
+
+**Initiate - IDE**
+```python
+import phydisk
+
+if __name__ == '__main__':
+    all_disks = phydisk.get_all_disks()
+    print(all_disks)
+```
+
+**Initiate - CLI**
+```shell
+phydisk print
+```
+
+> Use `phydisk --help` for usage instructions.
+
+### Source Commands
+
+**Linux**
+
+```shell
+/usr/bin/lsblk -o NAME,SIZE,TYPE,MODEL,MOUNTPOINT -J
+```
+
+**macOS**
+
+```shell
+/usr/sbin/diskutil info -all
+```
+
+**Windows**
+
+```shell
+C:\\Program Files\\PowerShell\\7\\pwsh.exe -Command
+Get-PhysicalDisk | ForEach-Object {
+    $disk = $_
+    $partitions = Get-Partition -DiskNumber $disk.DeviceID
+    $partitions | ForEach-Object {
+        [PSCustomObject]@{
+            DiskNumber = $disk.DeviceID
+            Partition = $_.PartitionNumber
+            DriveLetter = (Get-Volume -Partition $_).DriveLetter
+            MountPoint = (Get-Volume -Partition $_).DriveLetter
+        }
+    }
+}
+```
+
+
+## Linting
+`pre-commit` will ensure linting
+
+**Requirement**
+```shell
+python -m pip install pre-commit
+```
+
+**Usage**
+```shell
+pre-commit run --all-files
+```
+
+## Pypi Package
+[![pypi-module][label-pypi-package]][pypi-repo]
+
+[https://pypi.org/project/PhyDisk/][pypi]
+
+## License & copyright
+
+&copy; Vignesh Rao
+
+Licensed under the [MIT License][license]
+
+[license]: https://github.com/thevickypedia/PhyDisk/blob/master/LICENSE
+[label-pypi-package]: https://img.shields.io/badge/Pypi%20Package-PhyDisk-blue?style=for-the-badge&logo=Python
+[label-pyversion]: https://img.shields.io/badge/python-3.10%20%7C%203.11-blue
+[label-platform]: https://img.shields.io/badge/Platform-Linux|macOS|Windows-1f425f.svg
+[label-actions-pypi]: https://github.com/thevickypedia/PhyDisk/actions/workflows/python-publish.yaml/badge.svg
+[label-pypi]: https://img.shields.io/pypi/v/PhyDisk
+[label-pypi-format]: https://img.shields.io/pypi/format/PhyDisk
+[label-pypi-status]: https://img.shields.io/pypi/status/PhyDisk
+[gha_pypi]: https://github.com/thevickypedia/PhyDisk/actions/workflows/python-publish.yaml
+[pypi]: https://pypi.org/project/PhyDisk
+[pypi-files]: https://pypi.org/project/PhyDisk/#files
+[pypi-repo]: https://packaging.python.org/tutorials/packaging-projects/
