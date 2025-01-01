@@ -1,0 +1,11 @@
+vision_parse/__init__.py,sha256=t5PzDx7GqykqzGK1Sh1GCzfUCo0pqwGLfN6O1ZVBZ1E,674
+vision_parse/constants.py,sha256=DzVEm21gpAgKXvtNZ9YOZknte68QFcOcs8_-s1gVDIA,349
+vision_parse/llm.py,sha256=tffE2oFbsyUScsKpdSkFgUYBOz_k75-vrVwAe2peEk0,17686
+vision_parse/parser.py,sha256=89IDZ2iriTnQ9M51DjiMbp2uvjC2F0QQM6PnkxpmyKE,6390
+vision_parse/utils.py,sha256=TDJSdqjS90cqx-A2370tsvk_QEt0YOwVJBxsuSZbU9o,6236
+vision_parse/img_analysis.prompt,sha256=JWE7LqhpiwtxDjlnwRvsmIP0GSpoMPlHyKkqyENQUsU,790
+vision_parse/md_prompt.j2,sha256=zRh0KUrgDK1scfuEcJwPnlPtoEFmovhroIgGhFetxyE,2203
+vision_parse-0.1.7.dist-info/METADATA,sha256=xUooITLKo8H6hd_3ollawbiKHt8Uk9ztvnnX8cyFEyM,6250
+vision_parse-0.1.7.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+vision_parse-0.1.7.dist-info/licenses/LICENSE,sha256=1JTJhQjUYDqJzFJhNtitm7mHyE71PRHgetIqRRWg6Pk,1068
+vision_parse-0.1.7.dist-info/RECORD,,
