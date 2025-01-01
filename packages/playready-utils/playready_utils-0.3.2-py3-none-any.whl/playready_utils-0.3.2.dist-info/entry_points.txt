@@ -1,0 +1,2 @@
+[console_scripts]
+playready-utils = playready_utils.main:cli
