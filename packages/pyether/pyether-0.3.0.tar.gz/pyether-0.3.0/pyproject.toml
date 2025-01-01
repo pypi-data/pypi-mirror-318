@@ -1,0 +1,57 @@
+[tool.poetry]
+name = 'pyether'
+version = '0.3.0'
+description = 'The python package for interacting with Ethereum.'
+authors = ['Alexey <axbelenkov@gmail.com>']
+license = 'MIT'
+readme = 'README.md'
+keywords = ['web3', 'ethereum', 'ether.py', 'pyether', 'ether py', 'blockchain', 'web3.py', 'ethereum-python', 'eth', 'crypto', 'defi', 'dex']
+classifiers = [
+    'Development Status :: 4 - Beta',
+    'Intended Audience :: Developers',
+    'Topic :: Software Development :: Libraries :: Python Modules',
+    'Programming Language :: Python :: 3 :: Only',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: OS Independent',
+    'Typing :: Typed'
+]
+packages = [{ include = 'ether' }]
+
+[project.urls]
+homepage = "https://ether.crocofactory.dev"
+documentation = "https://ether.crocofactory.dev"
+source = "https://github.com/CrocoFactory/ether"
+download = "https://pypi.org/project/pyether/#files"
+tracker = "https://github.com/CrocoFactory/ether/issues"
+
+[tool.poetry.dependencies]
+python = '^3.9'
+web3 = "^6.12.0"
+pydantic = "^2.9.2"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.6.1"
+mkdocs-material = "^9.5.39"
+markdown-include-variants = "^0.0.2"
+mkdocstrings-python = "^1.12.2"
+mdx-include = "^1.4.2"
+pillow = "10.2"
+cairosvg = "2.6"
+
+[tool.poetry.group.dev.dependencies]
+pytest-asyncio = "^0.23.2"
+build = "^1.0.3"
+twine = "^4.0.2"
+python-dotenv = "^1.0.1"
+pytest = "^8.1.1"
+
+[build-system]
+requires = ['poetry-core']
+build-backend = 'poetry.core.masonry.api'
