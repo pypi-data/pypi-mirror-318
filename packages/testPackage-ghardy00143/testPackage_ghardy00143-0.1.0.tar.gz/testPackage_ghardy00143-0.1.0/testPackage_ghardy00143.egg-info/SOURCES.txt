@@ -1,0 +1,5 @@
+setup.py
+testPackage_ghardy00143.egg-info/PKG-INFO
+testPackage_ghardy00143.egg-info/SOURCES.txt
+testPackage_ghardy00143.egg-info/dependency_links.txt
+testPackage_ghardy00143.egg-info/top_level.txt
