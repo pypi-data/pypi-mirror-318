@@ -1,0 +1,37 @@
+[build-system]
+requires = [
+    "setuptools>=61.0",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jupyter-native-kernel"
+version = "0.0.9"
+description = "A minimalistic Jupyter kernel for native code execution."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+authors = [
+    { name = "UNCC HPCAS Lab", email = "yyan7@uncc.edu" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "jupyterlab>=4.3",
+    "openai>=1.58",
+]
+
+[project.urls]
+Homepage = "https://passlab.github.io"
+Repository = "https://github.com/passlab/jupyter-native-kernel.git"
+Issues = "https://github.com/passlab/jupyter-native-kernel/issues"
+
+[project.scripts]
+install-native-kernel = "jupyter_native_kernel.install_native_kernel:install_kernel"
+
+[tool.setuptools]
+include-package-data = true

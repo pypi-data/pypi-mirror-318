@@ -1,0 +1,2 @@
+[console_scripts]
+install-native-kernel = jupyter_native_kernel.install_native_kernel:install_kernel

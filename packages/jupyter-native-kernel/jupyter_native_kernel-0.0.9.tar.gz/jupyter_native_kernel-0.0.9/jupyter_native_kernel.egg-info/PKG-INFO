@@ -1,0 +1,141 @@
+Metadata-Version: 2.1
+Name: jupyter-native-kernel
+Version: 0.0.9
+Summary: A minimalistic Jupyter kernel for native code execution.
+Author-email: UNCC HPCAS Lab <yyan7@uncc.edu>
+License: The MIT License (MIT)
+        
+        Copyright (c) 2016 Brendan Rius
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Project-URL: Homepage, https://passlab.github.io
+Project-URL: Repository, https://github.com/passlab/jupyter-native-kernel.git
+Project-URL: Issues, https://github.com/passlab/jupyter-native-kernel/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: jupyterlab>=4.3
+Requires-Dist: openai>=1.58
+
+# Minimal Native kernel for Jupyter
+
+The goal of this kernel is to provide a unified frontend for working with native languages from jupyter.
+
+It was started from the [jupyter C kernel][jupyter-c-kernel].
+
+   [jupyter-c-kernel]: https://github.com/brendan-rius/jupyter-c-kernel
+
+## Usage:
+
+#### C/C++
+
+* load <local file or URL> to load a file to the cell
+   
+```
+//%load https://passlab.github.io/CSCE569/resources/axpy.c
+//%compiler: gcc
+//%cflags: -fopenmp
+//%ldflags: -lm
+//%args: 1024
+```
+
+* Set a different compiler, such as clang, using magic keyword `//%compiler`
+
+```
+//%compiler: clang
+//%cflags: -fopenmp
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <omp.h>
+
+int main (int argc, char** argv) {
+    int i;
+    #pragma omp parallel for num_threads(6)
+    for (i = 0; i < 12; i++)
+        printf("Thread: %d, i = %d\n", omp_get_thread_num(), i);
+    
+    return 0;
+    
+    
+}
+```
+   
+#### Fortran
+
+The Jupyter kernel adds the magic keyword as a comment in the source code. Since the keywords for comment in C/C++ and Fortran are different, we need to specify the magic keywords for Jupyter kernel accordingly.
+In the following example of Fortran program, we must use the leading magic keyword `!!%` instead of `//%`.
+
+```fortran
+!!%compiler: gfortran
+!!%cflags: -fopenmp
+
+PROGRAM Parallel_Hello_World
+USE OMP_LIB
+
+!$OMP PARALLEL
+
+  PRINT *, "Hello from process: ", OMP_GET_THREAD_NUM()
+
+!$OMP END PARALLEL
+
+END
+```
+   
+
+## Setup
+
+Works only on Linux and OS X.
+Windows is not supported yet.
+If you want to use this project on Windows, please use Docker.
+
+Make sure you have the following requirements installed:
+
+  * gcc 
+  * jupyter
+  * python 3
+  * pip
+
+### Install (virtualenv, pip)
+
+This kernel has been uploaded to the official Python package repository. Instead of building from source code, it can be installed directly by pip as follows. 
+
+ 1. `virtualenv -p python3 venv`
+ 1. `source venv/bin/activate`
+ 1. `pip3 install jupyter-native-kernel`
+ 1. `install_native_kernel --user`
+
+                       
+### Install (system)
+
+This installs the kernel at the system level. (Not tested yet.)
+
+ 1. `git clone <this repo>`
+ 1. `sudo pip3 install -e jupyter-native-kernel`
+ 1. `sudo install_native_kernel`
+ 
+ To install on system folder, do `sudo install_native_kernel --sys-prefix`
+
+
+
+### Install (virtualenv)
+
+This installs the kernel within the current virtualenv.
+
+ 1. `git clone <this repo>`
+ 1. `virtualenv -p python3 venv`
+ 1. `source venv/bin/activate`
+ 1. `pip3 install -e jupyter-native-kernel`
+ 1. `install_native_kernel --user`
+
+
+## License
+
+This project is released under the [MIT License](LICENSE.txt).
