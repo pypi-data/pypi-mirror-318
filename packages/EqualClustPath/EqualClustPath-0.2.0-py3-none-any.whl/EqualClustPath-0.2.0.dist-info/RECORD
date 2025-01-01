@@ -1,0 +1,9 @@
+EqualClustPath/__init__.py,sha256=oraSnGkZiWejq7jT39mejg18dPCGIvFDqKfnLXhZZbg,143
+EqualClustPath/equalclustpath.py,sha256=llB7aNmWpPjDzgwcIB-StbTpbqJnoYqT1XCpCk0kI2s,6930
+tests/__init__.py,sha256=c3aje-XkwrJBNF2NZnBV2SMj28J5F2Ha5Y86JwbPlcc,15
+tests/test_clustering.py,sha256=y8xASYWX2GqoaZ9OeU6Ec9xD7g_P1t148EfU02bXgp4,2414
+EqualClustPath-0.2.0.dist-info/LICENSE.txt,sha256=YbS-cVWMsD6iIt29-M8HA2Grv5uXe33Pt2hhet5ZNzA,1066
+EqualClustPath-0.2.0.dist-info/METADATA,sha256=uq6efWP0hFXmDGnbqPix4xfdGgURAWBuOpUavShEktQ,561
+EqualClustPath-0.2.0.dist-info/WHEEL,sha256=D1Wh14kWDxPnrM-5t_6UCB-UuQNrEODtRa3vF4OsvQY,97
+EqualClustPath-0.2.0.dist-info/top_level.txt,sha256=Tpsoh9fOvKBoRy6MCp-ZVhNk1sqeinNMTZck-5ZaqZA,21
+EqualClustPath-0.2.0.dist-info/RECORD,,
