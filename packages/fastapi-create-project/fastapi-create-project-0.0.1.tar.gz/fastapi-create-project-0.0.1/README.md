@@ -1,0 +1,5 @@
+# To upload
+twine upload dist/* -u __token__ -p pypi-AgEIcHlwaS5vcmcCJGZhZjU0MTdlLWNhOWUtNGZlZC05MDY1LWMyYjExNDZiOGMwZgACKlszLCJkYTkyMThjNy0xMTNkLTRiMjgtOTQxNC00OGU2M2EwNTdlMDgiXQAABiCiCenhCIF7L6KMwpKbwg41_MvS1GOPhxhBdYGpmQFyjA
+
+# To create build
+python setup.py sdist bdist_wheel
