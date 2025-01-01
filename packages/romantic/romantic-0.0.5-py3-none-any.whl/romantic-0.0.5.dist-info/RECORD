@@ -1,0 +1,13 @@
+romanticCli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+romanticCli/auth.py,sha256=sjbgXyT60mmkdEHCKwn28ITPeLZxgKvccyMHJg3VnnI,2126
+romanticCli/backend_service.py,sha256=pY8e2lGpM_ypJ2u2zXrssEbyOufKUgL5mriTv5zKxno,1761
+romanticCli/cmd.py,sha256=ICngR9jwRn5RURo62B-JnY2F0vnO0KBdvTRK9h4TKXw,3041
+romanticCli/const.py,sha256=WGNK76Zol0MZwYk9w-ZRfxz40VCMw9-3654zYnUPKFc,527
+romanticCli/main.py,sha256=E6FOKkpLPPvA55yuxba0HQyrVYZ9_vuHaIl4fCbb9fE,1649
+romanticCli/services.py,sha256=SUH96Y_jXXacY8eFX-fEqjwC4UnfHBqXVNiUJ1TUxiI,2795
+romantic-0.0.5.dist-info/LICENCE,sha256=2wqE5jslhezbtx3pWaNxukMXsQQvJQQVRpSprn4_JTc,1091
+romantic-0.0.5.dist-info/METADATA,sha256=lp3BzZRIwT3SgWHDrbIbGukODsTT2OGikaq0pYTrxcY,601
+romantic-0.0.5.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+romantic-0.0.5.dist-info/entry_points.txt,sha256=nhmKSkUqM4buxJFIlfqcgvIKgoJFSEk12ExbOQO2UZs,47
+romantic-0.0.5.dist-info/top_level.txt,sha256=y8LsJ_PNvetwuZi5MpDhdAwXyum2vejur4kBW6XDbUQ,12
+romantic-0.0.5.dist-info/RECORD,,
