@@ -1,0 +1,46 @@
+# czyrym
+
+A Python library to detect if two Polish words rhyme. The library has been tested on a corpus of Polish rhymes from [czterycztery.pl](https://czterycztery.pl/programy/slownik_rymow/).
+
+## Performance
+
+The corpus contains 8100 rhymes - czyrym successfully detects 7387 of them. The rate of false positives is quite low: from 37177 non-rhymes in the corpus, czyrym incorrectly detects only 239 of them as rhymes (and for some of them it can be argued that they really are rhymes, just quite imperfect).
+
+When czyrym detects a pair of words as rhymes, it gives a distance between the two words as a number between 0 (a perfect rhyme) and a very big number (hardly a rhyme at all) - so if you want czyrym to be more conservative, you can compare this distance with your threshold.
+
+## Usage Example
+
+```python
+import czyrym
+from typing import Optional
+
+first: str = czyrym.normalize_word('Róż, ty???')
+second: str = czyrym.normalize_word('ruszty')
+
+# if you just want to know if two words rhyme or not, do:
+if czyrym.is_rhyme(first, second):
+    print(f'"{first}" and "{second}" rhyme')
+else:
+    print(f'"{first}" and "{second}" do not rhyme')
+
+# if you want to know if two words rhyme or not and what is the distance between them, do:
+match: Optional[czyrym.RhymeMatch] = czyrym.find_rhyme_match(first, second)
+if match is None:
+    print(f'"{first}" and "{second}" don\'t rhyme')
+else:
+    print(f'A match for "{first}" and "{second}" was found - they rhyme. Total cost of the rhyme (a distance between words) is {match.total_cost}.')
+
+# if you want to understand how it was decided that two words rhyme, do:
+if match is None:
+    print(f'a match for "{first}" and "{second}" was not found - they don\'t rhyme')
+else:
+    print(f'A match for "{first}" and "{second}" was found - they rhyme. Their common suffix is {match.common_form}.')
+    for word, path in (first, match.first_path), (second, match.second_path):
+        if len(path.steps) <= 1:
+            print(f'For "{word}" the suffix was not mutated.')
+        else:
+            print(f'For "{word}" the suffix was produced with these steps:')
+            for step in path.steps:
+                print(f'  "{step.before}" -> "{step.after}" (mutator: {step.mutator_name}, cost: {step.cost})')
+            print(f'Total cost of these steps was {path.cost}.')
+```

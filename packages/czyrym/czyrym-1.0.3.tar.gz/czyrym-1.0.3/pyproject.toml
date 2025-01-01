@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "czyrym"
+version = "1.0.3"
+authors = [
+    { name="Cztery Cztery", email="sdplbeqq@jadamspam.pl" },
+]
+description = "Python library to decide if two polish words rhyme"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "pyphen>=0.14.0"
+]
+
+[project.urls]
+Homepage = "https://czterycztery.pl/programy/czyrym/"
