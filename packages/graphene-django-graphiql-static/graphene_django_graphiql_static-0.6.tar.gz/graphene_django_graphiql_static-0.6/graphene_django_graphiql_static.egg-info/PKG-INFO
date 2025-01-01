@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: graphene-django-graphiql-static
+Version: 0.6
+Summary: Offline-compatible GraphiQL for Graphene-Django
+Author-email: Prashant Patel <prashantz7242@gmail.com>
+Project-URL: Homepage, https://github.com/prashantz7242/graphene-django-graphiql-static/
+Project-URL: Documentation, https://github.com/prashantz7242/graphene-django-graphiql-static#readme
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 4.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+License-File: AUTHORS.rst
+
+===============================
+graphene-django-graphiql-static
+===============================
+
+Graphene-Django-GraphiQL-Static provides an offline-compatible GraphiQL web UI for Graphene-Django projects. It ensures uninterrupted GraphQL query exploration by serving all necessary assets locally, making it reliable even during internet outages.
+
+Documentation
+-------------
+
+The full documentation is at https://graphene-django-graphiql-static.readthedocs.io.
+
+Quickstart
+----------
+
+Install graphene-django-graphiql-static::
+
+    pip install graphene-django-graphiql-static
+
+Add it to your `INSTALLED_APPS`:
+
+.. code-block:: python
+
+    INSTALLED_APPS = (
+        # Other installed apps
+        'graphene_django_graphiql_static.apps.GrapheneDjangoGraphiqlStaticConfig',
+    )
+
+Add graphene-django-graphiql-static's URL patterns:
+
+.. code-block:: python
+
+    from graphene_django_graphiql_static import urls as graphene_django_graphiql_static_urls
+
+
+    urlpatterns = [
+        # Other installed apps
+        url(r'^', include(graphene_django_graphiql_static_urls)),
+    ]
+
+Features
+--------
+
+* TODO
+
+Running Tests
+-------------
+
+Does the code actually work?
+
+::
+
+    source <YOURVIRTUALENV>/bin/activate
+    (myenv) $ pip install tox
+    (myenv) $ tox
+
+
+Development commands
+---------------------
+
+::
+
+    pip install -r requirements_dev.txt
+    invoke -l
+

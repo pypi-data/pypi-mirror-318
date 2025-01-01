@@ -1,0 +1,4 @@
+include README.rst
+include LICENSE
+recursive-include graphene_django_graphiql_static/static *
+recursive-include graphene_django_graphiql_static/templates *
