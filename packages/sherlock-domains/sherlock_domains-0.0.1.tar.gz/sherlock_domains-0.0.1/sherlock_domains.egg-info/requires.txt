@@ -1,0 +1,8 @@
+fastcore
+httpx
+cryptography
+
+[dev]
+nbdev
+claudette
+fewsats
