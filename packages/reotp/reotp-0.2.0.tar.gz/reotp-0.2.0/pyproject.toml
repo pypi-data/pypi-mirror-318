@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "reotp"
+version = "0.2.0"
+authors = [
+  { name="Chris Binckly", email="cbinckly@gmail.com" },
+]
+description = "Regenerate OTP URIs and QR Codes"
+readme = "README.md"
+requires-python = ">=3.10"
+packages=["reotp"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    'pyotp',
+    'qrcode[pil]'
+]
+
+[project.scripts]
+reotp = "reotp:__main__.main"
+
+[project.urls]
+"Homepage" = "https://github.com/cbinckly/reotp"
+"Bug Tracker" = "https://github.com/cbinckly/reotp/issues"
