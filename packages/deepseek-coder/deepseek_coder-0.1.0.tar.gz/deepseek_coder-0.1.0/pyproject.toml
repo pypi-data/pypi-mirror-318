@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "deepseek-coder"
+version = "0.1.0"
+description = "Deepseek Coder running locally in the terminal."
+authors = ["Marcos Cannabrava <mpcannabrava@gmail.com>"]
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Environment :: MacOS X",
+    "Environment :: GPU :: NVIDIA CUDA :: 12 :: 12.5",
+    "Topic :: Terminals"
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+vllm = "0.6.6.post1"
+aider-install = "0.1.2"
+
+[tool.poetry.urls]
+Homepage = "https://github.com/marcoscannabrava/deepseek-coder"
+Issues = "https://github.com/marcoscannabrava/deepseek-coder/issues"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
