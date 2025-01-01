@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+package_pysimplesocket.egg-info/PKG-INFO
+package_pysimplesocket.egg-info/SOURCES.txt
+package_pysimplesocket.egg-info/dependency_links.txt
+package_pysimplesocket.egg-info/top_level.txt
