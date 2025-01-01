@@ -1,0 +1,5 @@
+[console_scripts]
+detk-cli = diffeq_solver_tk.cli:main
+
+[gui_scripts]
+detk = diffeq_solver_tk.__main__:main
