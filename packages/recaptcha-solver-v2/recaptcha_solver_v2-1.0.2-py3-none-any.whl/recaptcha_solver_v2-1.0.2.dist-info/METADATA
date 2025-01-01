@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: recaptcha_solver_v2
+Version: 1.0.2
+Summary: A Python module to solve reCAPTCHA using audio challenges.
+Home-page: 
+Author: Mohsin
+Author-email: mohsingemoh789@yomail.edu.pl
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pydub
+Requires-Dist: speechrecognition
+Requires-Dist: drissionpage
+
+# Recaptcha Solver
+
+This package provides a solution for solving Google reCAPTCHA challenges using audio recognition.
+
+## Installation
+
+Install the package via pip:
+
+```bash
+pip install recaptcha_solver_v2
+```
+
+
+## Example Usage
+
+`recaptcha_solver_v2` module:
+
+```python
+from DrissionPage import ChromiumPage
+from recaptcha_solver_v2 import RecaptchaSolver
+import time
+
+driver = ChromiumPage()
+recaptchaSolver = RecaptchaSolver(driver)
+
+driver.get("https://www.google.com/recaptcha/api2/demo")
+
+t0 = time.time()
+recaptchaSolver.solveCaptcha()
+print(f"Time to solve the captcha: {time.time()-t0:.2f} seconds")
+
+driver.ele("#recaptcha-demo-submit").click()
+
+driver.close()
+```
