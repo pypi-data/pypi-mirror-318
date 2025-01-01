@@ -1,0 +1,11 @@
+pybit7z/7zip.dll,sha256=GvCdbVoFhXkBcwVNnj8oltc5nKJ1u3QvE1h8Apdbi24,1642496
+pybit7z/__init__.py,sha256=hrBdvRJqynbuqfN51HAX17I3vkhO7OMnNcW5k1wkcbI,3917
+pybit7z/_core.cp38-win_amd64.pyd,sha256=t8gFnGaRAhIH7H0CnbMIVbhe_AyjdWjEItYzG4IbUcc,758784
+pybit7z/_core.pyi,sha256=qyCH7BVgY3oMOSmtFZ9wpiPY95dqr2Hw7AVU1oX4P2k,91449
+pybit7z/_version.py,sha256=u3DWdijdGjhK1oBK71BhswOm5p1clYNPFK58aUpkcw0,427
+pybit7z/_version.pyi,sha256=j5kbzfm6lOn8BzASXWjGIA1yT0OlHTWqlbyZ8Si_o0E,118
+pybit7z/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pybit7z-0.2.4.dist-info/METADATA,sha256=XULOu6Juv6FhqzWy0xx-Y4LDTYmXyQF100YAUW74r3Y,8110
+pybit7z-0.2.4.dist-info/WHEEL,sha256=kwS-TzWMc793MQ545g1AsDhyMUJrOZEAGChkok6pUJs,104
+pybit7z-0.2.4.dist-info/licenses/LICENSE,sha256=2I3yMS1n1hD9PilLLFd0YmcgWxqocb3yJltxpMcoCiE,11326
+pybit7z-0.2.4.dist-info/RECORD,,
