@@ -1,0 +1,10 @@
+fmpxx/__init__.py,sha256=E67a93tWU9eF4M5VPR2KFXIibFUSKhuJEw0o26nGK8E,172
+fmpxx/client.py,sha256=WvZD5zas1D_QjJqjGEUfr-uCekeeDFE-fRLcjYF4gII,13049
+fmpxx/financials.py,sha256=2Wbt4FoHf778MpSzheTYbwytAH-TCvif8lz6PJcP7T0,1866
+fmpxx/info.py,sha256=rcRXVQUwIPhPCBK7x_vnbrPoWT5VxTfOp81pNgk191M,4911
+fmpxx/quote.py,sha256=zXWzuXDpe2WGfkUXzaymsm3hMQRIVUKlG7pniKdJZLs,2521
+fmpxx/util.py,sha256=_I_ZQ7ViIrKh-W1u8VWD3JbbIvxUs9dt71flSsq8XTM,4330
+fmpxx-0.2.4.dist-info/METADATA,sha256=yrgBWtIrTkzQDkr9wUYIbvqEQAFFHt7ChwsbvQynkVg,1455
+fmpxx-0.2.4.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+fmpxx-0.2.4.dist-info/top_level.txt,sha256=9pf6qhm3QHA52C_gDuSv0PedS10kCxUyKuw_ljl-ux8,6
+fmpxx-0.2.4.dist-info/RECORD,,
