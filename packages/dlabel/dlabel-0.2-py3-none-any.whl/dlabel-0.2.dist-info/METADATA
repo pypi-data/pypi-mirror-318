@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: dlabel
+Version: 0.2
+Summary: docker label utilities
+Home-page: https://github.com/wtnb75/dlabel
+Author: Watanabe Takashi
+Author-email: wtnb75@gmail.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: System :: Networking
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: docker
+Requires-Dist: click
+Requires-Dist: pyyaml
+Requires-Dist: crossplane
+Requires-Dist: dictknife
+Requires-Dist: toml
+Requires-Dist: pydantic
+Provides-Extra: ssh
+Requires-Dist: paramiko; extra == "ssh"
+
+# dlabel: docker label utilities
+
+(TBD)
+
+# Links
+
+- PyPI https://pypi.org/project/dlabel/
+- github https://github.com/wtnb75/dlabel/
+- coverage report https://wtnb75.github.io/dlabel/cover/
+- API docs https://wtnb75.github.io/dlabel/docs/
