@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graphene-django-graphiql-static"
+version = "0.8"
+dependencies = [
+    # "graphene-django>=2.3.0, <4.0"
+]
+description = "Offline-compatible GraphiQL for Graphene-Django"
+readme = "README.rst"
+requires-python = ">= 3.10"
+authors = [
+    {name = "Prashant Patel", email = "prashantz7242@gmail.com"},
+]
+classifiers = [
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Framework :: Django :: 4.2",  
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+]
+
+[project.urls]
+Homepage = "https://github.com/prashantz7242/graphene-django-graphiql-static/"
+Documentation = "https://github.com/prashantz7242/graphene-django-graphiql-static#readme"
