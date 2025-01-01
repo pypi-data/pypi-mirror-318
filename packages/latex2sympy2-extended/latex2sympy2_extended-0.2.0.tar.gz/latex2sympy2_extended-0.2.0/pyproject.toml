@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "latex2sympy2-extended"
+version = "0.2.0"
+description = "Convert LaTeX math to SymPy expressions"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Hynek Kydlíček", email = "hynek.kydlicek@huggingface.co" }
+]
+dependencies = [
+    "antlr4-python3-runtime==4.13.2",
+    "sympy",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[project.urls]
+Homepage = "https://github.com/OrangeX4/latex2sympy2"
+Repository = "https://github.com/OrangeX4/latex2sympy2.git"
+
+[tool.hatch.build]
+packages = ["src/latex2sympy2_extended"]
+include = [
+    "src/latex2sympy2_extended/gen/*"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["*_test.py"] 
