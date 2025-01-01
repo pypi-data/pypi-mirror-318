@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "easy_api_test"
+version = "0.1.4"
+authors = [
+    { name = "liulangjuanzhou", email = "liulangjuanzhou@gmail.com" },
+]
+description = "API测试工具"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "requests>=2.25.0",
+    "pytest>=6.0.0",
+    "pyyaml>=5.4.0",
+    "jsonpath_ng>=1.7.0",
+    "lljz-tools>=0.3.7",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["easy_api_test"]
+
+[tool.hatch.build]
+include = [
+    "easy_api_test/**/*",
+]
