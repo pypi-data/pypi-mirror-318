@@ -1,0 +1,2 @@
+[console_scripts]
+debrify = debrify.main:main
