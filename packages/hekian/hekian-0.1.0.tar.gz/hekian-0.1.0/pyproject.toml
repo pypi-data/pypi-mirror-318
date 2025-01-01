@@ -1,0 +1,6 @@
+[project]
+name = "hekian"
+version = "0.1.0"
+description = "Small library to facilitate test-time-compute!"
+readme = "README.md"
+requires-python = ">=3.11"
