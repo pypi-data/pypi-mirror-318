@@ -1,0 +1,10 @@
+# This is a generated file by dfetch. Don't edit this, but edit the manifest.
+# For more info see https://dfetch.rtfd.io/en/latest/getting_started.html
+dfetch:
+  branch: master
+  hash: 5a19e726e260b5f696463af4eff0623b
+  last_fetch: 28/12/2024, 22:24:51
+  patch: ''
+  remote_url: https://github.com/plantuml-stdlib/C4-PlantUML.git
+  revision: 9e7177f65e5425efd50c10e848ec89e49f6f45be
+  tag: ''
