@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: playbooks
+Version: 0.1.0
+Summary: A framework for creating AI agents using human-readable playbooks
+License: LICENSE-CODE
+Author: Amol Kelkar
+Author-email: kelkar.amol@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: anthropic (>=0.42.0,<0.43.0)
+Requires-Dist: autogen-core (==0.4.0.dev11)
+Requires-Dist: google-cloud-aiplatform (>=1.38.1,<2.0.0)
+Requires-Dist: litellm (>=1.56.3,<2.0.0)
+Requires-Dist: md2py (>=0.0.1,<0.0.2)
+Requires-Dist: openai (>=1.52.0,<2.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: rich (>=13.7.0,<14.0.0)
+Requires-Dist: typer (>=0.9.0,<1.0.0)
+Description-Content-Type: text/markdown
+
+# Playbooks python package
