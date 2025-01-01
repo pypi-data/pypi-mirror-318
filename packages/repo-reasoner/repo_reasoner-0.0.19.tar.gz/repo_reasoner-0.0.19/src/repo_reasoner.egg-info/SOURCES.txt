@@ -1,0 +1,15 @@
+LICENSE.txt
+README.md
+setup.py
+src/__init__.py
+src/repo-reasoner/__app__.py
+src/repo-reasoner/__init__.py
+src/repo-reasoner/cli.py
+src/repo-reasoner/github_repository.py
+src/repo_reasoner.egg-info/PKG-INFO
+src/repo_reasoner.egg-info/SOURCES.txt
+src/repo_reasoner.egg-info/dependency_links.txt
+src/repo_reasoner.egg-info/entry_points.txt
+src/repo_reasoner.egg-info/requires.txt
+src/repo_reasoner.egg-info/top_level.txt
+tests/test_github_repository.py
