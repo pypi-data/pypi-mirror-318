@@ -1,0 +1,2 @@
+[console_scripts]
+make_me_laugh = jokes:make_me_laugh
