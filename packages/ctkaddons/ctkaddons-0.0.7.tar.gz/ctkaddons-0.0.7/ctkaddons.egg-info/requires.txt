@@ -1,0 +1,3 @@
+customtkinter
+tkscenes>=0.1.2
+multipledispatch
