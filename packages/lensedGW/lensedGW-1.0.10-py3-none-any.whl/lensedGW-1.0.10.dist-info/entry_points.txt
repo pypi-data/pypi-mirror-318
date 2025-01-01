@@ -1,0 +1,5 @@
+[pycbc.waveform.fd]
+amp_factor = lensedGW.main:amp_factor
+gravitational_lens = lensedGW.main:gravitational_lens
+lensed_fd_waveform = lensedGW.main:lensed_fd_waveform
+lumDis = lensedGW.main:lumDis
