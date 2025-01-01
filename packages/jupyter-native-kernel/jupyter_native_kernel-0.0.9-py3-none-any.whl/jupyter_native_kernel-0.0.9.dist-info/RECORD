@@ -1,0 +1,11 @@
+jupyter_native_kernel/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jupyter_native_kernel/__main__.py,sha256=m_5Qr-_Z_UPvL8TJE1uexog_dbLRW3Wr_X92nj3oj8E,132
+jupyter_native_kernel/install_native_kernel.py,sha256=SOeywhbfRpSgRU1uPtxpZdM-O9YI98gfcxDu-NYiUiw,730
+jupyter_native_kernel/kernel.py,sha256=_9_0jue_KiFqX2ik35RRCw56eny1LKSheVfMf1L17b0,12921
+jupyter_native_kernel/resources/master.c,sha256=sQDHqqK0VwuXHpyiyU1r5LrVj2oP4pgd26t0amOVLGQ,884
+jupyter_native_kernel-0.0.9.dist-info/LICENSE,sha256=ko_1LStdYa6UDE4tzNyIJrA-mHzYRRURgwxa5I4CYDA,1078
+jupyter_native_kernel-0.0.9.dist-info/METADATA,sha256=DRGo1sL9do5vLUdHQaCnPxOSzHT9lHPCSLPmHc0ezJE,4457
+jupyter_native_kernel-0.0.9.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+jupyter_native_kernel-0.0.9.dist-info/entry_points.txt,sha256=RqC4DRIsvAj4Sw6KqiTBiMm00t7YsqAh7cTZrfDhHpM,101
+jupyter_native_kernel-0.0.9.dist-info/top_level.txt,sha256=QUc-7wZGpzei4ou8-ooTar2LcmwICnB_4fH8EjNhWVQ,22
+jupyter_native_kernel-0.0.9.dist-info/RECORD,,
