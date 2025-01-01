@@ -1,0 +1,13 @@
+apollo_torch/__init__.py,sha256=woiJyLzVpy1ggsRGEbelKSWdunkNh9pN9kD6nCrHuOg,288
+apollo_torch/adafactor.py,sha256=TQ3KARq4Ev_stS91Tg_HdgjIOw8eIyRLMx3X5UqF2rw,10685
+apollo_torch/adamw.py,sha256=ORG5U0NqIkUxZrvJLSwKA7kjqqLEUyv_bHHnQKxKR_Q,6257
+apollo_torch/adamw8bit.py,sha256=cOO5BM_O0zIHK15R-_8w6H4UQcB2xoGLXuhkfwsWHwg,3439
+apollo_torch/apollo.py,sha256=byOlCmhiboCCWr0gdvroUhFxLRdb7R2VA78sjgQPHAM,9485
+apollo_torch/q_apollo.py,sha256=HSQK7IBCpTeGXeIyvA7AQXaw1-XP2ZQT5rL2YtXc8Qg,17689
+apollo_torch/random_projector.py,sha256=RWijjEdX5wb8RpCsJf5Wfvmtda6ItayspzLU4SZivQ4,7219
+apollo_torch/svd_projector.py,sha256=upO2sY_a2XkCyQH1ODST7C_uYEuOo5HeQjcxvhsXzn0,7170
+apollo_torch-1.0.dist-info/LICENSE,sha256=w0LrI7SEY6QshG18BB7JyCQCskzl-v-lYYmmqL61F0E,19341
+apollo_torch-1.0.dist-info/METADATA,sha256=WNOcOqfm6mp3_Tzoq1JtNJQfUbVd2UzZL02Br7jrF-o,12581
+apollo_torch-1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+apollo_torch-1.0.dist-info/top_level.txt,sha256=9jxVX0DKi5aZhFB75gAyoML3fvAgqTaRdFdtst-PtEE,13
+apollo_torch-1.0.dist-info/RECORD,,
