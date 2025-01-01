@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+mongodb_tools.egg-info/PKG-INFO
+mongodb_tools.egg-info/SOURCES.txt
+mongodb_tools.egg-info/dependency_links.txt
+mongodb_tools.egg-info/requires.txt
+mongodb_tools.egg-info/top_level.txt
+tests/test_database.py
+tests/test_dataobject.py
+tests/test_schema.py
