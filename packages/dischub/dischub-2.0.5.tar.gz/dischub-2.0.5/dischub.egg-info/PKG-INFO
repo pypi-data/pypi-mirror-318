@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: dischub
+Version: 2.0.5
+Summary: A Python SDK to initiate online payment to the Dischub API
+Home-page: https://github.com/stanleychihz/dischub
+Author: Stanford Chihoyi
+Author-email: chihoyistanford@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# Dischub Python SDK
+
+## Overview
+
+The Dischub Python SDK allows developers to easily integrate with the Dischub API for online payment processing. This SDK provides a simple interface for creating payments via the Dischub API.
+
+## Installation
+
+You can install the Dischub SDK using pip:
+
+```bash
+pip install dischub
+```
+
+## Usage
+
+Copy and paste code below as a function called "payment" in your functions' file
+
+```bash
+from dischub import Dischub
+
+def payment():
+    data = {
+        "sender": "sender-dischub-account-email-@gmail.com",
+        "recipient": "your-dischub-business-account-email-@gmail.com",
+        "amount": 100,
+        "currency": "USD",
+    }
+    payment_instance = Dischub()
+    response = payment_instance.create_payment(data)
+    print(response)
+payment()
+```
+
+## Response
+
+If your integration is done so well, you will get the below response
+
+```bash
+{'Status': 'Success', 'Message': 'Payment initiated', 'Response_code': 201}
+```
+
