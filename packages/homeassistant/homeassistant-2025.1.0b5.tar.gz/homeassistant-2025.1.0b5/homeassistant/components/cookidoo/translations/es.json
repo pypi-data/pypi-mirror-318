@@ -1,0 +1,24 @@
+{
+    "config": {
+        "step": {
+            "language": {
+                "data_description": {
+                    "language": "Elige tu idioma para el contenido de {cookidoo}."
+                },
+                "title": "Configurar {cookidoo}"
+            },
+            "reauth_confirm": {
+                "description": "Por favor, inicia sesi\u00f3n en {cookidoo} de nuevo para continuar usando esta integraci\u00f3n.",
+                "title": "Inicia sesi\u00f3n de nuevo en {cookidoo}"
+            },
+            "user": {
+                "data_description": {
+                    "country": "Selecciona tu pa\u00eds para ver el contenido de {cookidoo}.",
+                    "email": "Correo electr\u00f3nico utilizado para acceder a tu cuenta {cookidoo}.",
+                    "password": "Contrase\u00f1a utilizada para acceder a tu cuenta {cookidoo}."
+                },
+                "title": "Configurar {cookidoo}"
+            }
+        }
+    }
+}

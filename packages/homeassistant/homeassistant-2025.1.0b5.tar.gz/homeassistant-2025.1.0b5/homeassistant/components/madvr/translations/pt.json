@@ -1,0 +1,30 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Dispositivo j\u00e1 configurado",
+            "reconfigure_successful": "A reconfigura\u00e7\u00e3o foi bem sucedida"
+        },
+        "error": {
+            "cannot_connect": "A liga\u00e7\u00e3o falhou"
+        },
+        "step": {
+            "reconfigure": {
+                "data": {
+                    "host": "Anfitri\u00e3o",
+                    "port": "Porta"
+                },
+                "data_description": {
+                    "host": "O nome do host ou endere\u00e7o IP do seu dispositivo madVR Envy.",
+                    "port": "A porta em que o seu madVR Envy est\u00e1 escutando. Em 99% dos casos, deixe como padr\u00e3o."
+                },
+                "description": "O seu dispositivo precisa estar ligado para reconfigurar a integra\u00e7\u00e3o.",
+                "title": "Reconfigurar madVR Envy"
+            },
+            "user": {
+                "data": {
+                    "port": "Porta"
+                }
+            }
+        }
+    }
+}

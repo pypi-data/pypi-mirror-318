@@ -1,0 +1,27 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Ya configurado. Solo es posible una \u00fanica configuraci\u00f3n para la combinaci\u00f3n pa\u00eds/provincia/categor\u00edas.",
+            "reconfigure_successful": "Se volvi\u00f3 a configurar correctamente"
+        },
+        "step": {
+            "options": {
+                "data": {
+                    "categories": "Categor\u00edas",
+                    "province": "Provincia"
+                }
+            },
+            "reconfigure": {
+                "data": {
+                    "province": "Provincia"
+                }
+            },
+            "user": {
+                "data": {
+                    "country": "Pa\u00eds"
+                }
+            }
+        }
+    },
+    "title": "Vacaciones"
+}
