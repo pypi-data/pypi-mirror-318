@@ -1,0 +1,12 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+[project]
+name = "tiktok_get_info"
+authors = [{name = "bilalsbxp", email = "bilalsaputra641@gmail.com"}]
+dynamic = ["version", "description"]
+readme = "README.md"
+[project.scripts]
+tiktok_get = "tiktok_get_info.info:cli"
+[project.urls]
+Home = "https://pypi.org/project/tiktok_get_info"
