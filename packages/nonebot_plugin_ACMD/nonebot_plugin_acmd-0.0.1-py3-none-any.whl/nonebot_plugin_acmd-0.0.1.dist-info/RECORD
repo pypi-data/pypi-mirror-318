@@ -1,0 +1,12 @@
+nonebot_plugin_ACMD/__init__.py,sha256=LlbgBR_dP33sXvYjUFaIJymq5yWvc0tQ8-vMSCouzMQ,2288
+nonebot_plugin_ACMD/ACMD_driver.py,sha256=RxGAtKUDzzfDzKlZEuZO-IlBFZTBgVGwycUgevQBZ1o,4850
+nonebot_plugin_ACMD/already_handler.py,sha256=1s6NIX8n1nd8atmvtfOnjKqYjYneqbjU6ZwGKh2vdnY,8093
+nonebot_plugin_ACMD/auto_reload.py,sha256=oesfxAkj5qJDBuR1Io5uWnb5pWSZ4ov9qZ65XcdRvI0,13159
+nonebot_plugin_ACMD/command.py,sha256=ouMWwTI9SHBQJsZg2jQ2MbpPE5GxFvNUcbqWBiRqjuA,21835
+nonebot_plugin_ACMD/command_signer.py,sha256=lAqFJ5AfdwfmCPYWAqv8Ft-h4o64oZTnKuB7KMjUP50,6958
+nonebot_plugin_ACMD/connection_pool.py,sha256=MJrPozqHwSr7aWJbm62qJMcX57uuzpMFmGFtdSa9dq0,3673
+nonebot_plugin_ACMD/similarity.py,sha256=64cTwH5MIEy3koRQKbeqwkwYZbkFIGSsthPWIH9WMYo,16005
+nonebot_plugin_acmd-0.0.1.dist-info/LICENSE,sha256=bx5iLIKjgAdYQ7sISn7DsfHRKkoCUm1154sJJKhgqnU,35184
+nonebot_plugin_acmd-0.0.1.dist-info/METADATA,sha256=HFtRYUOlGBhJ_F5ysLoid12f-7dzFThqs54HLrq7B1c,7621
+nonebot_plugin_acmd-0.0.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+nonebot_plugin_acmd-0.0.1.dist-info/RECORD,,
