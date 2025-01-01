@@ -1,0 +1,28 @@
+{% extends "powerwiki/base.html" %}
+{% load powerwiki %}
+
+{% block wiki_menu %}
+    <ul class="powerwiki__menu_options">
+        <li>
+            {% include "powerwiki/includes/search.html" %}
+        </li>
+        {% if edit_url %}
+        <li><a href="{{ edit_url }}" id="powerwiki__page__edit">{{ edit_label|default:"Edit page" }}</a></li>
+        {% endif %}
+    </ul>
+{% endblock %}
+
+{% block wiki_content %}
+<div class="powerwiki__page">
+    {% if page %}
+        {% render_wiki page %}
+    {% else %}
+        <p>This page does not exist yet.</p>
+        {% if edit_url %}
+        <ul>
+        <li><a href="{{ edit_url }}">Create this page</a></li>
+        </ul>
+        {% endif %}
+    {% endif %}
+</div>
+{% endblock %}

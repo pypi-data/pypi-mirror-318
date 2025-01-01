@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static "powerwiki/index.css" %}" type="text/css" />
+{% endblock %}
+
+{% block js %}
+    {{ block.super }}
+    <script src="{% static "powerwiki/index.js" %}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="powerwiki__container">
+    <div class="powerwiki__menu">
+        {% include "powerwiki/includes/breadcrumbs.html" %}
+        {% block wiki_menu %}{% endblock %}
+    </div>
+
+    <div class="powerwiki__body">
+      <div class="powerwiki__content">
+      {% block wiki_content %}{% endblock %}
+      </div>
+      {% block wiki_sidebar %}
+        <div class="powerwiki__sidebar"></div>
+      {% endblock %}
+    </div>
+</div>
+{% endblock %}
