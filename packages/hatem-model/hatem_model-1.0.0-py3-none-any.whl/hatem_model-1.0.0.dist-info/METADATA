@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: hatem_model
+Version: 1.0.0
+Summary: Hatem's Model 
+Author: Hatem
+Requires-Dist: torch
+Requires-Dist: whisper
+Requires-Dist: numpy
+Requires-Dist: soundfile
