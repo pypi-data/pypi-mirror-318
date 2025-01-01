@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+eightmllab/__init__.py
+eightmllab/nn.py
+eightmllab.egg-info/PKG-INFO
+eightmllab.egg-info/SOURCES.txt
+eightmllab.egg-info/dependency_links.txt
+eightmllab.egg-info/requires.txt
+eightmllab.egg-info/top_level.txt
