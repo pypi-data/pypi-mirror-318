@@ -1,0 +1,17 @@
+__init__.py,sha256=Ys5X_jLIcuBbXKfVIzNizF5sbZdeu8aU10TDUmQ2S7M,1138
+repo-reasoner/__app__.py,sha256=Gsib4M8dXmiRrYz3u1pNkTZzFO8FqHbAoP9R0zLH4fU,1437
+repo-reasoner/__init__.py,sha256=Eac33NjQhSO1Nhezzv6gVWjJZVYzaSSx66c7eHKcPu0,1149
+repo-reasoner/cli.py,sha256=5EQ7fE-4PgQyVwxGqaFX_MSvFkO8Ab3nr_2_16tVB98,5954
+repo-reasoner/github_repository.py,sha256=WRL0jRYAvBqaIsRich-2DCx4fC_NX8nckQ6oYqnkuZk,3610
+src/__app__.py,sha256=Gsib4M8dXmiRrYz3u1pNkTZzFO8FqHbAoP9R0zLH4fU,1437
+src/__init__.py,sha256=Eac33NjQhSO1Nhezzv6gVWjJZVYzaSSx66c7eHKcPu0,1149
+src/__main__.py,sha256=4LC7ORDRhTRuSG3QnnbTyqYD7lL7eETgsgsAmHuHrGM,1432
+src/cli.py,sha256=sOxrhetcwt-v4dd4iv3DLlDSxqtrH_ZBYikeWKYmmFk,5940
+src/github_repository.py,sha256=WRL0jRYAvBqaIsRich-2DCx4fC_NX8nckQ6oYqnkuZk,3610
+src/main.py,sha256=RtddBqUgpYZLRuM5pWywkifr75b5vh3cSEGpl319PVQ,1464
+repo_reasoner-0.0.19.dist-info/LICENSE.txt,sha256=f-hl5gCbzwFX9vus4rTGpJ4xw5m3RKXlGjeE9j3Sd_s,1085
+repo_reasoner-0.0.19.dist-info/METADATA,sha256=Rrxh8xYz7TojXePmba9V8cEUpTqamUewYF7XpPPkrFw,2736
+repo_reasoner-0.0.19.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+repo_reasoner-0.0.19.dist-info/entry_points.txt,sha256=LEMd9uYJ8kTZ6omfvdfvmRBGyxjrachhjSKGUHthWgU,61
+repo_reasoner-0.0.19.dist-info/top_level.txt,sha256=Yb0t1eP_dMrjtxHQU-RDrO82nSHw-AvsUPJCNK-cXIA,23
+repo_reasoner-0.0.19.dist-info/RECORD,,
