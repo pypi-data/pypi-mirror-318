@@ -1,0 +1,26 @@
+[project]
+name = "romantic"
+version = "0.0.5"
+authors = [
+    { name = "Rahul Prajapati", email = "rahul.coder.25@gmail.com" },
+]
+description = "My personalized love-filled CLI tool ❤️"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "click",
+    "requests",
+    "rich"
+]
+
+[project.scripts]
+baby = "romanticCli.main:baby"
+
+[project.urls]
+Homepage = "https://github.com/pypa/sampleproject"
+Issues = "https://github.com/pypa/sampleproject/issues"
