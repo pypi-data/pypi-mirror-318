@@ -1,0 +1,189 @@
+Metadata-Version: 2.1
+Name: primetrydemo
+Version: 0.1.1
+Summary: A simple example package
+Home-page: https://github.com/yourusername/mypackage
+Author: Your Name
+Author-email: your.email@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+
+1. Web Scraper with BeautifulSoup and Requests
+import requests
+from bs4 import BeautifulSoup
+
+def fetch_article_titles(url):
+    response = requests.get(url)
+
+    if response.status_code != 200:
+        print(f"Failed to retrieve the page. Status code: {response.status_code}")
+        return
+
+    soup = BeautifulSoup(response.text, 'html.parser')
+
+    titles = []
+    for article in soup.find_all('h2', class_='article-title'):
+        titles.append(article.get_text(strip=True))
+
+    return titles
+
+if __name__ == "__main__":
+    url = 'https://example.com/articles'
+    titles = fetch_article_titles(url)
+
+    if titles:
+        print("Article Titles:")
+        for idx, title in enumerate(titles, 1):
+            print(f"{idx}. {title}")
+
+
+
+2.Machine Learning Model with Scikit-learn
+import numpy as np
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score
+
+# Load dataset
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Create a decision tree classifier
+clf = DecisionTreeClassifier()
+
+# Train the model
+clf.fit(X_train, y_train)
+
+# Predict on test data
+y_pred = clf.predict(X_test)
+
+# Evaluate the model
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Model Accuracy: {accuracy:.2f}")
+
+
+
+
+3.A Complex Linked List Implementation
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.prev = None
+        self.next = None
+
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None
+
+    def insert_at_end(self, data):
+        new_node = Node(data)
+        if not self.head:
+            self.head = new_node
+            return
+        last_node = self.head
+        while last_node.next:
+            last_node = last_node.next
+        last_node.next = new_node
+        new_node.prev = last_node
+
+    def delete(self, key):
+        temp = self.head
+        if temp and temp.data == key:
+            self.head = temp.next
+            if self.head:
+                self.head.prev = None
+            temp = None
+            return
+        while temp and temp.data != key:
+            temp = temp.next
+        if temp is None:
+            print("Node not found")
+            return
+        if temp.next:
+            temp.next.prev = temp.prev
+        if temp.prev:
+            temp.prev.next = temp.next
+        temp = None
+
+    def display(self):
+        temp = self.head
+        while temp:
+            print(temp.data, end=" <-> ")
+            temp = temp.next
+        print("None")
+
+if __name__ == "__main__":
+    dll = DoublyLinkedList()
+    dll.insert_at_end(10)
+    dll.insert_at_end(20)
+    dll.insert_at_end(30)
+
+    print("Initial List:")
+    dll.display()
+
+    dll.delete(20)
+    print("List after deletion:")
+    dll.display()
+
+
+
+4. Recursive Sudoku Solver
+def is_valid(board, row, col, num):
+    for i in range(9):
+        if board[row][i] == num or board[i][col] == num:
+            return False
+    start_row, start_col = 3 * (row // 3), 3 * (col // 3)
+    for i in range(start_row, start_row + 3):
+        for j in range(start_col, start_col + 3):
+            if board[i][j] == num:
+                return False
+    return True
+
+def solve_sudoku(board):
+    for row in range(9):
+        for col in range(9):
+            if board[row][col] == 0:
+                for num in range(1, 10):
+                    if is_valid(board, row, col, num):
+                        board[row][col] = num
+                        if solve_sudoku(board):
+                            return True
+                        board[row][col] = 0
+                return False
+    return True
+
+def print_board(board):
+    for row in board:
+        print(" ".join(str(num) for num in row))
+
+if __name__ == "__main__":
+    puzzle = [
+        [5, 3, 0, 0, 7, 0, 0, 0, 0],
+        [6, 0, 0, 1, 9, 5, 0, 0, 0],
+        [0, 9, 8, 0, 0, 0, 0, 6, 0],
+        [8, 0, 0, 0, 6, 0, 0, 0, 3],
+        [4, 0, 0, 8, 0, 3, 0, 0, 1],
+        [7, 0, 0, 0, 2, 0, 0, 0, 6],
+        [0, 6, 0, 0, 0, 0, 2, 8, 0],
+        [0, 0, 0, 4, 1, 9, 0, 0, 5],
+        [0, 0, 0, 0, 8, 0, 0, 7, 9]
+    ]
+
+    if solve_sudoku(puzzle):
+        print("Solved Sudoku:")
+        print_board(puzzle)
+    else:
+        print("No solution found.")
+
+
