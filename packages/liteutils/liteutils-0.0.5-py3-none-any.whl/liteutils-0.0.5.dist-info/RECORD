@@ -1,0 +1,7 @@
+liteutils/__init__.py,sha256=NVS2CgW7bZZXZu8HulpEpyxSd3zRKEdSaH3ZmagdQ50,86
+liteutils/_arxiv/__init__.py,sha256=YvUW5rdT9uD1128HUP0OttMQUXUDCo3dSFYutBuh9VQ,39
+liteutils/_arxiv/_arxiv_read.py,sha256=CXSpepaUD7BrXyEVpgYeE2w4LobntnFJSOeMj1NGAdw,409
+liteutils/_pymupdf/__init__.py,sha256=ZHZk9jN3htLCYMMmeI1cfEy2WLvbIjv9sZD3CWUfs0Q,1903
+liteutils-0.0.5.dist-info/METADATA,sha256=OOCdWioawAha8aEh8IDkiLUhsxwRBi7x6zFWZxV78BI,703
+liteutils-0.0.5.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+liteutils-0.0.5.dist-info/RECORD,,
