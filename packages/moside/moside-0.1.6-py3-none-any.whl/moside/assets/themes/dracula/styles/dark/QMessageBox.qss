@@ -1,0 +1,15 @@
+/* QMessageBox ///////////////////////////////////////////////////////////////////// */
+QMessageBox {
+    background-color: rgb(33, 37, 43);
+}
+QMessageBox QDialogButtonBox#qt_msgbox_buttonbox {
+}
+QMessageBox QLabel#qt_msgbox_label { /* textLabel */
+}
+
+QMessageBox QLabel#qt_msgboxex_icon_label { /* iconLabel */
+}
+
+QMessageBox QPushButton {
+    min-width: 80px;
+}
