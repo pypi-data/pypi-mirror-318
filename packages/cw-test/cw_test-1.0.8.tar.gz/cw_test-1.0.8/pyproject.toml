@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cw_test"
+version = "1.0.8"
+
+authors = [
+  {name = "CuriousWalk", email = "CWalk@example.com"},
+]
+
+description = "A library for programming animations with Manim in Google Colab."
+readme = "README.md"
+license = {text = "MIT License"}
+keywords = ["Science Animation"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python",
+  "Topic :: Education",
+  "Topic :: Multimedia",
+  "Topic :: Scientific/Engineering",
+  "Intended Audience :: Science/Research",
+  "Intended Audience :: Education",
+  "Operating System :: OS Independent",
+  "Natural Language :: English",
+]
+
+[project.urls]
+Homepage = "https://example.com"
+Repository = "https://github.com/me/spam.git"
