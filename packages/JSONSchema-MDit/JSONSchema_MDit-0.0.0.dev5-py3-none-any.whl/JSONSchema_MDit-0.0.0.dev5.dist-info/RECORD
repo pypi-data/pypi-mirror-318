@@ -1,0 +1,11 @@
+jsonschema_mdit/__init__.py,sha256=Agio9gTm9FFoj4bNmdChBzW5ovuYI5nn2imT6KfqIPs,71
+jsonschema_mdit/main.py,sha256=BkS5NG7lWuThhO9y-HYVL8IYM_d5bwWUYlpGH7c9LG8,12235
+jsonschema_mdit/meta.py,sha256=lLeQmBvCwBonpj1ee5x0Xju8cbUx43qwep3NgIZ-SNs,4522
+jsonschema_mdit/protocol.py,sha256=DgSO2EBY4fts4pVsojq6Wqztn5eV0XlyI2BwdCeHPVY,779
+jsonschema_mdit/schema.py,sha256=aMR-Or8HIYLt1HpTc4i1IHS_95Eo19foKh_QFq7FKas,10703
+jsonschema_mdit/generator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jsonschema_mdit/generator/default.py,sha256=Gz8QjuEYd_QCFYjOUblr7jicLLh1YWBUs-lCT9ZVwCA,22459
+JSONSchema_MDit-0.0.0.dev5.dist-info/METADATA,sha256=YmdPSSX55LG5Psg01SgnG-der77PEdX2RKCG2yo4NAE,195
+JSONSchema_MDit-0.0.0.dev5.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+JSONSchema_MDit-0.0.0.dev5.dist-info/top_level.txt,sha256=Rj2KIxfluWF0oX-JZ8yxeclsBsxorRRGayZgkzNUTIo,16
+JSONSchema_MDit-0.0.0.dev5.dist-info/RECORD,,
