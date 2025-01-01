@@ -1,0 +1,26 @@
+[project]
+name = "gen-alt-text"
+version = "0.3"
+authors = [
+        { name="Jeffrey Serio", email="hyperreal@fedoraproject.org" },
+]
+description = "Generate alt-text for images from a local or remote Ollama server running LLM vision models."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+            "Programming Language :: Python :: 3",
+            "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+            "Operating System :: OS Independent",
+]
+dependencies = ["docopt>=0.6.2", "ollama>=0.4.4", "rich>=13.9.4"]
+
+[project.scripts]
+gen-alt-text = "gen_alt_text:main"
+
+[project.urls]
+Homepage = "https://codeberg.org/hyperreal/gen-alt-text"
+Issues = "https://codeberg.org/hyperreal/gen-alt-text/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
