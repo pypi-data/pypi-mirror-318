@@ -1,0 +1,10 @@
+pyseqr/__init__.py,sha256=_9IaBGaPbX0LavECax9XF2kUxMD6PiuyXrtOI6qVi-c,81
+pyseqr/core copy.py,sha256=-nunwfT8NPOyfOD3sjVe2NQPp90BF7BQj2PK-Tk18UA,7565
+pyseqr/core.py,sha256=nlfvSgyoT-ZZ-FcuWx9CICdRB4cLLjnTyHJwdCG3_2c,12199
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_core.py,sha256=24l5Y9IeA76l_uSC9ZY1AskvU0yXlbbsmIY7j_3dzPg,8200
+pyseqr-1.0.0.dev3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pyseqr-1.0.0.dev3.dist-info/METADATA,sha256=XTwj41lmGKNXz5p36dl8dIFOF_oLo6DdmmNQmHkpQoY,4661
+pyseqr-1.0.0.dev3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pyseqr-1.0.0.dev3.dist-info/top_level.txt,sha256=OmRbkC9Og-mBZ5Z1_P3-ktyjqGO7Fv2em-UuN5azEBA,13
+pyseqr-1.0.0.dev3.dist-info/RECORD,,
