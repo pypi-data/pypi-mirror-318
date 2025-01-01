@@ -1,0 +1,5 @@
+[console_scripts]
+mml-tasks = mml_tasks.cli:cli
+
+[mml.plugins]
+mml-tasks = mml_tasks.activate
