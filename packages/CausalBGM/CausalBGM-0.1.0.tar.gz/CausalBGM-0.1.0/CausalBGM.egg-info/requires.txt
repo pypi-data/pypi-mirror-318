@@ -1,0 +1,5 @@
+tensorflo==2.10.0
+pyyaml
+scikit-learn
+pandas
+python-dateutil
