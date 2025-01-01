@@ -1,0 +1,5 @@
+[console_scripts]
+mml-tags = mml_tags.cli:list_available_tags
+
+[mml.plugins]
+mml-tags = mml_tags.activate
