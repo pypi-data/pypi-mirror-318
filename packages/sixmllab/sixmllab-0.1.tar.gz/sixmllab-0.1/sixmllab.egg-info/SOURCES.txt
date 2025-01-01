@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+sixmllab/__init__.py
+sixmllab/nn.py
+sixmllab.egg-info/PKG-INFO
+sixmllab.egg-info/SOURCES.txt
+sixmllab.egg-info/dependency_links.txt
+sixmllab.egg-info/requires.txt
+sixmllab.egg-info/top_level.txt
