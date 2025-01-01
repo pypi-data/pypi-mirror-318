@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+mdjson/__init__.py
+mdjson/cli.py
+mdjson/convert.py
+mdjson.egg-info/PKG-INFO
+mdjson.egg-info/SOURCES.txt
+mdjson.egg-info/dependency_links.txt
+mdjson.egg-info/entry_points.txt
+mdjson.egg-info/requires.txt
+mdjson.egg-info/top_level.txt
+tests/test_conversion.py

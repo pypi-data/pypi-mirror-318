@@ -1,0 +1,3 @@
+[console_scripts]
+mdjson = mdjson.cli:main
+
