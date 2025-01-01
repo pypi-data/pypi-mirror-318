@@ -1,0 +1,16 @@
+bookworm_genai/__init__.py,sha256=F78PTV6dGYZIIQ11ZQrhI5oJXl7gO3V78UAZz1XQ0zM,569
+bookworm_genai/__main__.py,sha256=wE51DNoI_zPCnNYdEKsCV2TDjsuHSMVzCjihZtWsZuE,3991
+bookworm_genai/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bookworm_genai/commands/ask.py,sha256=R7QDmWMzx5kUohP8KF_z-rb05Vn7meHwcS_kU0Ff7kQ,3160
+bookworm_genai/commands/export.py,sha256=Izm9sQ_C_G10VYEkCPh-iHsvCf_4bj8segHpHvp6Oio,1108
+bookworm_genai/commands/sync.py,sha256=eBqsHPn3c632fAUer8OfuTKlG5IUTa8cse722yHJukA,4654
+bookworm_genai/integrations.py,sha256=pjVYhZsP5dfXEwhar0Tp-1mav6RN3r7k625Vmf33APY,3671
+bookworm_genai/metadata.py,sha256=06h-Ik8D9TDWWFLlYcHaMiWXEIslTUxo0xUNLFv31iI,448
+bookworm_genai/models.py,sha256=Iy3DvdyyK_wOOx0OpFr0SG3NFAt8Av5dAAKDHsHrhhE,1071
+bookworm_genai/storage.py,sha256=lYnxRupbqszepbMIDKsj58RRaOzzlxXrlv_PYCxZqrc,1786
+bookworm_genai/utils.py,sha256=sOy9zgOJxXQl1hPA5kyVUtuQZLpKABDQ6xGXDw631oQ,2166
+bookworm_genai-0.13.1b94.dist-info/LICENSE,sha256=snYWGk5rNIW2jFmeSxQkcilq2-EodAF4E757vXU4ZbU,1078
+bookworm_genai-0.13.1b94.dist-info/METADATA,sha256=ZKG5OJllOu3LYSKF21ehc0pltwdJkP8L50YnqmDeodE,7030
+bookworm_genai-0.13.1b94.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+bookworm_genai-0.13.1b94.dist-info/entry_points.txt,sha256=DJscbDIK6WXV3KkTOnt2mHkejVECdpvW0Aqb6OnxTE4,57
+bookworm_genai-0.13.1b94.dist-info/RECORD,,
