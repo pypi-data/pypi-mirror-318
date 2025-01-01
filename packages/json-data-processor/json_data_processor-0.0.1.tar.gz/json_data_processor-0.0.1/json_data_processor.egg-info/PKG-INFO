@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: json_data_processor
+Version: 0.0.1
+Summary: Data Processor
+Author-email: Ramin-RX7 <rawmin.rx@gmail.com>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Data Processor

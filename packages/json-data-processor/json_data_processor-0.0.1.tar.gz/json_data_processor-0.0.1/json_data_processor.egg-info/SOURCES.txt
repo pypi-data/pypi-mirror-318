@@ -1,0 +1,9 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+data_processor/__init__.py
+json_data_processor.egg-info/PKG-INFO
+json_data_processor.egg-info/SOURCES.txt
+json_data_processor.egg-info/dependency_links.txt
+json_data_processor.egg-info/top_level.txt

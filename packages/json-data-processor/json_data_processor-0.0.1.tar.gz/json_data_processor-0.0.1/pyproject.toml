@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "json_data_processor"
+version = "0.0.1"
+description = "Data Processor"
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+authors = [
+    {name = "Ramin-RX7", email = "rawmin.rx@gmail.com"},
+]
+keywords = []
+
+[tool.setuptools]
+packages = ["data_processor"]
+
+[project.urls]
+# "Homepage" = "https://github.com/Ramin-RX7/RX7-Lib"
+# "Bug Tracker" = "https://github.com/Ramin-RX7/RX7-Lib/issues"
+# documentation = "https://github.com/Ramin-RX7/RX7-Lib/wiki"
+# repository = "https://github.com/Ramin-RX7/RX7-Lib"
+# changelog = "https://github.com/Ramin-RX7/RX7-Lib/blob/master/CHANGELOG.md"
