@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+figmaflet/figma/endpoints.py
+figmaflet/figma/frame.py
+figmaflet/figma/node.py
+figmaflet/figma/vector_elements.py
+figmaflet/figmaflet.egg-info/PKG-INFO
+figmaflet/figmaflet.egg-info/SOURCES.txt
+figmaflet/figmaflet.egg-info/dependency_links.txt
+figmaflet/figmaflet.egg-info/entry_points.txt
+figmaflet/figmaflet.egg-info/requires.txt
+figmaflet/figmaflet.egg-info/top_level.txt
+figmaflet/gui/__main__.py
