@@ -1,0 +1,2 @@
+[console_scripts]
+hanuman = hanuman.main:main

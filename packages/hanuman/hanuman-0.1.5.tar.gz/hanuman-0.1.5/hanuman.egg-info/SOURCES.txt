@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+hanuman/__init__.py
+hanuman/main.py
+hanuman.egg-info/PKG-INFO
+hanuman.egg-info/SOURCES.txt
+hanuman.egg-info/dependency_links.txt
+hanuman.egg-info/entry_points.txt
+hanuman.egg-info/requires.txt
+hanuman.egg-info/top_level.txt
+tests/test_main.py
