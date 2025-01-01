@@ -1,0 +1,13 @@
+django>=3.2
+geopy>=2.4.1
+usaddress-scourgify>=0.6.0
+uszipcode>=1.0.1
+sqlalchemy-mate==1.4.28.4
+python-Levenshtein>=0.26.1
+
+[dev]
+pytest
+pytest-django
+black
+flake8
+pre-commit
