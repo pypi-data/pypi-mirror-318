@@ -1,0 +1,11 @@
+mml_suggest/__init__.py,sha256=gxFBJDQdVQPqCgrJi94amifLVPAUHGntNZNIMJDf_OI,267
+mml_suggest/activate.py,sha256=3soxbk4tvru1EX4XgI4xX5kSkzV4X_2gf8zhUuVmrPo,703
+mml_suggest/configs/__init__.py,sha256=jKHjSOybIbsnke00By5_W_jMR9ytMjo2T7NKR83dMa4,179
+mml_suggest/scripts/__init__.py,sha256=jKHjSOybIbsnke00By5_W_jMR9ytMjo2T7NKR83dMa4,179
+mml_suggest/scripts/suggest_scheduler.py,sha256=lC-uuGwXnaNCIZeaqHe169GiSH16WrEb3ZMZRUJ1r9Y,15768
+mml_suggest-0.3.1.dist-info/LICENSE.txt,sha256=azJ0gu6-njNyMOOmBWHnesNGzoBzMv0tCm8JcIHJ_p4,1092
+mml_suggest-0.3.1.dist-info/METADATA,sha256=zaOaeIGZPSqKSB5y8BXsDOdXJ32NX5V-ihyGK3sPzzI,2279
+mml_suggest-0.3.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+mml_suggest-0.3.1.dist-info/entry_points.txt,sha256=7H_eX4OxvFjo4Im7ZHgEnCnPBSXTx1iF_UrXoBow7NQ,49
+mml_suggest-0.3.1.dist-info/top_level.txt,sha256=WLWiUXiXQSRPLGdJioBRYEwZgZCU7bIrMSR3qM797PU,12
+mml_suggest-0.3.1.dist-info/RECORD,,
