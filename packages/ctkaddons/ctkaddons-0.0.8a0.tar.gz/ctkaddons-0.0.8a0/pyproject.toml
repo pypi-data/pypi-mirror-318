@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ctkaddons"
+version = "0.0.8a0"
+dependencies = [
+    "customtkinter",
+    "tkscenes>=0.1.2",
+    "multipledispatch",
+    "pillow>=11.0.0"
+]
+requires-python = ">=3.12"
+authors = [
+    { name = "TonyLovesMusic", email = "tony.tonylovescoding@example.com" },
+]
+description = "A package that add uneccessary widgets to customtkinter"
+readme = "Readme.md"
+keywords = ["customtkinter", "widgets", "addon", "calender"]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Programming Language :: Python",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent"
+]
+
+[project.urls]
+Homepage = "https://github.com/TonyLovesCoding/CTkAddons"
+Issue = "https://github.com/TonyLovesCoding/CTkAddons/issues"

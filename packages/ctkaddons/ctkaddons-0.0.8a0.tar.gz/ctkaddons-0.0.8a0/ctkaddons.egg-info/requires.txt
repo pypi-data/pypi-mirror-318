@@ -1,0 +1,4 @@
+customtkinter
+tkscenes>=0.1.2
+multipledispatch
+pillow>=11.0.0
