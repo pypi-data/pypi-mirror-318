@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: upnlp
+Version: 0.0.7
+Summary: A package designed to support NLP teaching at graduate level
+Author-email: Benoit Crabbé <benoit.crabbe@u-paris.fr>
+Project-URL: Homepage, https://github.com/bencrabbe/upc-nlp
+Project-URL: Issues, https://github.com/bencrabbe/upc-nlp/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: Topic :: Scientific/Engineering :: Human Machine Interfaces
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: inflect
+Requires-Dist: optuna
+Requires-Dist: PyYAML
+Requires-Dist: Requests
+Requires-Dist: torch
+Requires-Dist: tqdm
+Requires-Dist: wn
+
+# UP-NLP
+
+The Université Paris NLP package (upnlp) is meant to provide support for teaching Natural Language Processing
+(NLP) at graduate level. It targets computational linguists, cognitive scientists
+and computer scientists.  It aims to help students to get a smooth introduction to modern 
+libraries and tools used nowadays in NLP without getting lost into the gory details
+and without requiring insanely heavy computational resources.
+
+Thus the library provides:
+
+* Convenient access to small scale data sets relevant for in-class exercises
+* Convenient access to small scale language models relevant for in-class exercises.
+* A programming interface designed to be easily comparable to real-world full-scale libraries like Huggingface or OpenAI:
+  key notions learned with the interface are easy to transfer to real world use cases.
+
+
+The best way to discover the library is through its documentation.

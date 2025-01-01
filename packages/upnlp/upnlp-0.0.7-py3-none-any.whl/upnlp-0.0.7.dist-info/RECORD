@@ -1,0 +1,10 @@
+upnlp/__init__.py,sha256=cXGwlaPhj0sgm75x8Cw-vGoPA49e-ooF7PZVraJcoxo,192
+upnlp/lm_models.py,sha256=OrHweYh6atHd8YDVmlaaPK6mOVrCqIXIFKNAMblFKws,19312
+upnlp/nlp_datasets.py,sha256=6hQthV_qDSR3SzDeqPeVGSvJua5dsXHYYkATN7L6YMo,6580
+upnlp/tokenizers.py,sha256=1s7SycchqTtqiOPEcQ01SR_V4LNdqKEcOCC1AAbfXxg,12487
+upnlp/trainer.py,sha256=_uImRgDclOhQ0mruUWozDv0YLd8hUOvbKoNfu3ZqvD4,10717
+upnlp-0.0.7.dist-info/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+upnlp-0.0.7.dist-info/METADATA,sha256=Rc8dTpIZaYIyfnAyQbaT1Q9pl-WM_HzMnokjAPST1DY,1740
+upnlp-0.0.7.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+upnlp-0.0.7.dist-info/top_level.txt,sha256=ITgxOLx54IVV3EeYc_UXjOS2O7xMj-Y4T97SX4VcdeE,6
+upnlp-0.0.7.dist-info/RECORD,,
