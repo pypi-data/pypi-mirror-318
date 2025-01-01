@@ -1,0 +1,4 @@
+[console_scripts]
+static-node = static_npm.cli:main_node
+static-npm = static_npm.cli:main_npm
+static-npx = static_npm.cli:main_npx
