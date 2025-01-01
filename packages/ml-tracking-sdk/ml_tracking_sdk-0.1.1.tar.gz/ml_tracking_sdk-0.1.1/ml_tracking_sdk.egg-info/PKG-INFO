@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ml_tracking_sdk
+Version: 0.1.1
+Summary: A simplified MLflow SDK
+Home-page: http://gitlab-paas.internal.sais.com.cn/data_intelligence_platform/mlflow_sdk
+Author: Shepard
+Author-email: shepard <zhaoxun@sais.com.cn>
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mlflow>=2.0.0
+Requires-Dist: PyYAML>=6.0
+Requires-Dist: scikit-learn>=1.2.0
+
+# My MLflow SDK
+
+A simplified MLflow SDK for easy integration of MLflow experiment tracking, parameter logging, metric recording, and model management.
+
+## Installation
+
+```bash
+pip install my_mlflow_sdk

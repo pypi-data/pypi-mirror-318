@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+ml_tracking_sdk.egg-info/PKG-INFO
+ml_tracking_sdk.egg-info/SOURCES.txt
+ml_tracking_sdk.egg-info/dependency_links.txt
+ml_tracking_sdk.egg-info/requires.txt
+ml_tracking_sdk.egg-info/top_level.txt
+sdk/__init__.py
+sdk/config_manager.py
+sdk/sdk.py
+sdk/utils.py
+tests/__init__.py
+tests/test_sdk.py
