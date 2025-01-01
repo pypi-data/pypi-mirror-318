@@ -1,0 +1,3 @@
+[console_scripts]
+tiktok_get=tiktok_get_info.info:cli
+
