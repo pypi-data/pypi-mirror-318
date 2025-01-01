@@ -1,0 +1,39 @@
+[project]
+name = "sdcp_printer"
+version = "0.1.0"
+authors = [
+    { name = "Kevin Petersen", email = "kevinvkpetersen@gmail.com" },
+]
+description = "API to communicate with 3D printers using the SDCP protocol."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "asyncio-dgram",
+    "websockets",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/kevinvkpetersen/sdcp-printer-api"
+Issues = "https://github.com/kevinvkpetersen/sdcp-printer-api/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pylint."MESSAGES CONTROL"]
+# Reasons disabled:
+# logging-fstring-interpolation - better readability with fstrings
+# unused-argument - generic callbacks and setup methods create a lot of warnings
+# arguments-differ - overloads with different arguments
+# expression-not-assigned - null-guard falsely triggers this
+disable = """
+    logging-fstring-interpolation,
+    unused-argument,
+    arguments-differ,
+    expression-not-assigned,
+"""
