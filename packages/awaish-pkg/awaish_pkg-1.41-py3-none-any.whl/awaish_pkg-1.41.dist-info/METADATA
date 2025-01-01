@@ -1,0 +1,113 @@
+Metadata-Version: 2.1
+Name: awaish_pkg
+Version: 1.41
+Summary: A simple package offering a collection of useful functions for enhanced productivity.
+Home-page: https://github.com/abuawaish/awaish_pkg
+Author: abuawaish
+Author-email: abuawaish7@gmail.com
+License: MIT
+Keywords: funny
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Education
+Classifier: Development Status :: 5 - Production/Stable
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+
+Project title
+=============
+
+`awaish_pkg` is a Python package that contains a collection of utility functions and a stack data structure. It is designed to assist with various operations, including mathematical calculations, sorting algorithms, and text processing.
+
+Features
+--------
+
+1. **Utility Functions:**
+
+   - List manipulation (sum of digits, separating positive and negative numbers, etc.)
+   - Fibonacci series generator
+   - Prime number checker
+   - Number patterns (palindrome pyramid)
+   - Sorting algorithms
+
+2. **Stack Data Structure:**
+
+   - Implement stack operations: push, pop, peek, check if empty/full, and display.
+
+Installation
+------------
+
+To install the package, simply run:
+
+.. code-block:: sh
+
+   pip install awaish_pkg
+
+Documentation
+-------------
+
+For detailed documentation, see:
+`GitHub <https://github.com/abuawaish/awaish_pkg>`__
+
+Author
+------
+
+Created by:
+`abuawaish7 <https://www.github.com/abuawaish>`__
+
+Badges
+------
+
+.. image:: https://badge.fury.io/py/awaish_pkg.svg
+   :target: https://pypi.org/project/awaish_pkg/
+
+.. image:: https://img.shields.io/badge/License-MIT-yellow.svg
+   :target: https://opensource.org/licenses/MIT
+
+Usage
+-----
+
+To use the package in your Python script:
+
+.. code-block:: python
+
+   from awaish_pkg import Stack, UtilityFunctions
+
+   # Example usage of stack
+   stack = Stack()
+   stack.run_stack()
+
+   # Example usage of utility functions
+   UtilityFunctions.add_list_index_element()
+
+
+CHANGELOG for awaish_pkg
+========================
+
+Version 1.41 - Fourth Release
+-------------------------------
+- Created the `Stack` class with methods for basic stack operations (push, pop, peek, etc.).
+
+- Added utility functions in `UtilityFunctions` class including:
+
+  - `add_list_index_element`: Sums the digits of each integer in a list.
+
+  - `find_positive_and_negative`: Separates positive and negative numbers in a list.
+
+  - `factor_finder`: Finds factors of a given number and calculates their sum.
+
+  - `count_vowel_and_spaces`: Counts vowels and spaces in a text input.
+
+  - `prime_finder`: Determines if a given number is prime.
+
+  - `even_and_odd`: Separates even and odd numbers from a list.
+
+  - `fibonacci_series`: Generates a Fibonacci series.
+
+  - `selection_sort`: Sorts a list using the selection sort algorithm.
+
+  - `palindrome_number_pattern`: Prints a palindrome-style number pyramid.
+
+- Developed a user-friendly interactive system for stack operations.
+
