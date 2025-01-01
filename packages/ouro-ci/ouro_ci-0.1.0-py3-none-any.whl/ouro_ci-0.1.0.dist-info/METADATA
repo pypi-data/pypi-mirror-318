@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: ouro-ci
+Version: 0.1.0
+Summary: ouro is a Python-based DSL for generating GitHub Actions workflows.
+Author-email: Savannah Ostrowski <savannah@python.org>
+License: MIT License
+        
+        Copyright (c) 2024 Savannah Ostrowski
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: homepage, https://github.com/ouroboros-tools/ouro
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic>=2.10.4
+Requires-Dist: pyyaml>=6.0.2
+
+# ouro
+
+ouro is a Python-based DSL (domain specific language) for generating GitHub Actions workflows, without needing to write YAML. 
+
+This package is currently under development.
+
+## Why ouro?
+
+- No more YAML
+- Fully programmable
+- Less duplication
+- Sync with GitHub Actions
+
+## Quickstart
+
+1. Install `ouro`
+
+```python
+pip install ouro
+```
+
+2. Create a Python script
+```python
+from ouro.core import Workflow, Job, Step
+from ouro.primitives import RunnerImage, GHAEvent
+
+
+def create_workflow():
+    steps = [
+        Step(name="Checkout", uses="actions/checkout@v2"),
+        Step(name="Install dependencies", run="pip install -r requirements.txt"),
+        Step(name="Run tests", run="pytest"),
+    ]
+
+    jobs = {"test": Job(runs_on=RunnerImage.UBUNTU_LATEST, steps=steps)}
+
+    return Workflow(
+        name="CI",
+        on={
+            GHAEvent.PUSH: {"branches": ["main"], "tags": ["v*"]},
+            GHAEvent.PULL_REQUEST: {"branches": ["main"]},
+        },
+        jobs=jobs,
+    )
+```
+
+3. Run `ouro synth` to generate your workflow(s)
+
+
+Built with ❤️ and 🐍

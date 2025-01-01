@@ -1,0 +1,10 @@
+ouro/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ouro/cli.py,sha256=uuAxFhJoWt8AzBr2ttLobMVtRjozvNbrv7M46GFWDk4,1872
+ouro/core.py,sha256=2tO-mB2jz0CqeMkKBYxo8NPoNy7skFvXwMNjzFjvVbo,3194
+ouro/helpers.py,sha256=bWolJ31ZozC_3Va5vt-Mu6Wq4i9CIyAo_rw6214cU_M,695
+ouro/primitives.py,sha256=6QewqOxESsKZ81PXTpXtRTjY1L8gWojCHW_-Mh4yHxs,1589
+ouro_ci-0.1.0.dist-info/LICENSE,sha256=XurkhKmwzPsZxVDDjhHpMGzHxtWCHbSxsbcw6BagzDI,1074
+ouro_ci-0.1.0.dist-info/METADATA,sha256=wWSjM5oC9Vqa0axzR38KTTeQcC9ig4vWw0lndjEXKAc,2862
+ouro_ci-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+ouro_ci-0.1.0.dist-info/top_level.txt,sha256=Lr7TLhhQnTg2P1yvgYDHasl-LdzPrFgnRB-1JVITd6g,5
+ouro_ci-0.1.0.dist-info/RECORD,,
