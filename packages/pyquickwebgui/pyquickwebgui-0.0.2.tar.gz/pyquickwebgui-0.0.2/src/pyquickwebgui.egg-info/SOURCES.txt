@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+src/pyquickwebgui.py
+src/pyquickwebgui.egg-info/PKG-INFO
+src/pyquickwebgui.egg-info/SOURCES.txt
+src/pyquickwebgui.egg-info/dependency_links.txt
+src/pyquickwebgui.egg-info/requires.txt
+src/pyquickwebgui.egg-info/top_level.txt
