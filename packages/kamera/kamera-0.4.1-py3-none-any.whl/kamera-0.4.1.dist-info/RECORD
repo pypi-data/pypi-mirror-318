@@ -1,0 +1,12 @@
+kamera/__init__.py,sha256=QVN_pIMfy0LFTMgzf4znLvFvbHh354Mv8dGVtmhE7Mc,53
+kamera/app.py,sha256=MRQcScyURdY8XiWfzdLd0a817OdJMofoK_O9_1LwnEk,2111
+kamera/camera.py,sha256=F0HWCcipDGHztTCel-NAOmREMB8J3ttR0U9H2I_dHUk,962
+kamera/settings.py,sha256=fAjKii0RN69QDEwGXJlluTcLRcaFONFfUmwRi7gVR1s,1702
+kamera/static/styles.css,sha256=PBelCha76s1HxT87PhVCgJ04PP40908OqkPcCaUNj8o,1846
+kamera/templates/index.html,sha256=vfF0vTqDFD0juMkOgrRU90MFQVP4PERb7OtvOYV3eEM,2752
+kamera-0.4.1.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kamera-0.4.1.dist-info/METADATA,sha256=aLtZ4-fLY8N6T-huETypn-ceCg9QoPi2R1Fhel5gTIA,2072
+kamera-0.4.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+kamera-0.4.1.dist-info/entry_points.txt,sha256=0ZiLvNXALt6k0GtB1q_JMYT_JHUIwiUxEzNMzU7R6P0,43
+kamera-0.4.1.dist-info/top_level.txt,sha256=38AsmZ5U08sns3LOJGhbYIuuYe0CV_mwK-7_T4sf0pA,7
+kamera-0.4.1.dist-info/RECORD,,
