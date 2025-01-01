@@ -1,0 +1,12 @@
+bfio/VERSION,sha256=n5hPdx9QBFk8GrZKtAtQGF41-fkGdzchgufCI-0lpS4,6
+bfio/__init__.py,sha256=qNRoFxedEpSzLmtOiu1KvGsRCjcr59baZ3fgHnlakAI,780
+bfio/backends.py,sha256=I3frz4w04ngxdERbermdvkkYTVtPAMhgTD1ieo7lZHI,58987
+bfio/base_classes.py,sha256=qZunBh7RX1OtnGc7g1UEqimWCw7ScloR9tngpiPT4zU,30806
+bfio/bfio.py,sha256=U2BlEsqtQMhCffg9wEV_5W8zEC0RUtmkpjRBgjIJp20,67661
+bfio/ts_backends.py,sha256=WjsOfLGJ1UvQIzOfJRYrLN7GKNVF4PGNLU8NAB5NPWU,14309
+bfio/utils.py,sha256=xh1jv717V0Lu40Cr-LY9MX5UvOnisS_5ZNjfiVi-5_E,18177
+bfio-2.4.6.dist-info/LICENSE,sha256=Fg4kOwqZrHdNpYuaPay-zI5aNJNXmBfi8ev4u0eytdo,1064
+bfio-2.4.6.dist-info/METADATA,sha256=TtUA7C89nxRDLA9vvu-xujsWaOj15n0gpY8t1DM_TSw,5444
+bfio-2.4.6.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+bfio-2.4.6.dist-info/top_level.txt,sha256=Gk5d47AUNcTVyMrhLvkvWRQxvIdN8c7fhIx235nJZ2Y,5
+bfio-2.4.6.dist-info/RECORD,,
