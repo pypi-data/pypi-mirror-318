@@ -1,0 +1,32 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hanuman"  # 使用小写，确保与模块名称一致
+version = "0.1.4"
+description = "A tool to generate typhoon season animation videos."
+authors = [
+    { name = "CZHanoi", email = "21301010003@m.fudan.edu.cn" }
+]
+readme = "README.md"
+requires-python = ">=3.6"
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "opencv-python",
+    "numpy",
+    "tqdm",
+]
+
+[project.urls]
+Homepage = "https://github.com/CZHanoi/Hanuman"
+
+[project.scripts]
+hanuman = "hanuman.main:main"
