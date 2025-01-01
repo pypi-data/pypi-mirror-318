@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: hanuman
+Version: 0.1.5
+Summary: Typhoon Animation Generator
+Home-page: https://github.com/CZHanoi/hanuman
+Author: CZHanoi
+Author-email: 21301010003@m.fudan.edu.cn
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: tqdm
