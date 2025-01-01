@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/ouro/__init__.py
+src/ouro/cli.py
+src/ouro/core.py
+src/ouro/helpers.py
+src/ouro/primitives.py
+src/ouro_ci.egg-info/PKG-INFO
+src/ouro_ci.egg-info/SOURCES.txt
+src/ouro_ci.egg-info/dependency_links.txt
+src/ouro_ci.egg-info/requires.txt
+src/ouro_ci.egg-info/top_level.txt
