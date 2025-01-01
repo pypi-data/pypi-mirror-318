@@ -1,0 +1,2 @@
+[console_scripts]
+pysend = core.main:main
