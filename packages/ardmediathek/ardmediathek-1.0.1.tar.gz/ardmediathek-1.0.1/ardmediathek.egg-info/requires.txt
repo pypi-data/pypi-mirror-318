@@ -1,0 +1,10 @@
+plum-dispatch
+tqdm
+requests
+requests-cache
+appdirs
+bs4
+Pillow
+python-dateutil
+natsort
+lxml
