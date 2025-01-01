@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/mml_lsf/__init__.py
+src/mml_lsf/activate.py
+src/mml_lsf/requirements.py
+src/mml_lsf/runner.py
+src/mml_lsf/workers.py
+src/mml_lsf.egg-info/PKG-INFO
+src/mml_lsf.egg-info/SOURCES.txt
+src/mml_lsf.egg-info/dependency_links.txt
+src/mml_lsf.egg-info/entry_points.txt
+src/mml_lsf.egg-info/not-zip-safe
+src/mml_lsf.egg-info/requires.txt
+src/mml_lsf.egg-info/top_level.txt

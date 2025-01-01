@@ -1,0 +1,2 @@
+[mml.plugins]
+mml-lsf = mml_lsf.activate
