@@ -1,0 +1,11 @@
+pybit7z/_version.pyi,sha256=j5kbzfm6lOn8BzASXWjGIA1yT0OlHTWqlbyZ8Si_o0E,118
+pybit7z/_core.pyi,sha256=qyCH7BVgY3oMOSmtFZ9wpiPY95dqr2Hw7AVU1oX4P2k,91449
+pybit7z/_version.py,sha256=4gL0W4-u58XR5lRLpeoIPrGhcewTk0-527de6uTNmkg,411
+pybit7z/__init__.py,sha256=hrBdvRJqynbuqfN51HAX17I3vkhO7OMnNcW5k1wkcbI,3917
+pybit7z/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pybit7z/_core.cpython-311-darwin.so,sha256=gwDp4twc7uKO2MZOr49wh6-2fIDEmLjgamV3CCQWSfE,998960
+pybit7z/lib7zip.dylib,sha256=tMdDvsD6mvRoHpgTvlOzN9nXK3xZJf-pwhGWKNy1Lxs,2542240
+pybit7z-0.2.4.dist-info/RECORD,,
+pybit7z-0.2.4.dist-info/WHEEL,sha256=vqMBchNIsmW0K9HInUQuY_xePW9YD3coNJy6G1Yfto8,114
+pybit7z-0.2.4.dist-info/METADATA,sha256=XULOu6Juv6FhqzWy0xx-Y4LDTYmXyQF100YAUW74r3Y,8110
+pybit7z-0.2.4.dist-info/licenses/LICENSE,sha256=2I3yMS1n1hD9PilLLFd0YmcgWxqocb3yJltxpMcoCiE,11326
