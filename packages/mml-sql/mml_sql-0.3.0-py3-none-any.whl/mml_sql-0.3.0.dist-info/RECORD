@@ -1,0 +1,10 @@
+mml_sql/__init__.py,sha256=YCsUAJWD66Q2VnTqe-C3SMSelmyJd2VM_yqrYTJoTa8,267
+mml_sql/activate.py,sha256=OfFWTRj9DCdg09SN81rR5A0m06x2uL_YOj0BUXA4mzc,687
+mml_sql/configs/__init__.py,sha256=jKHjSOybIbsnke00By5_W_jMR9ytMjo2T7NKR83dMa4,179
+mml_sql/configs/hpo/sql.yaml,sha256=HoaMKy_qa1WvZ_uJEETbupg8-pbPGDbozNrJA5mdKEg,1819
+mml_sql-0.3.0.dist-info/LICENSE.txt,sha256=azJ0gu6-njNyMOOmBWHnesNGzoBzMv0tCm8JcIHJ_p4,1092
+mml_sql-0.3.0.dist-info/METADATA,sha256=JX8D2pG91h6PcToV3LYzPninqS-n0E1GB6iCMXtU_78,3125
+mml_sql-0.3.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+mml_sql-0.3.0.dist-info/entry_points.txt,sha256=2yUjRAM1LXny8wlj4sjK9MQqXrOz8SNmH1XOSlHy4TU,41
+mml_sql-0.3.0.dist-info/top_level.txt,sha256=H_z0DGRsww6v17z7COljbcmrH2GT16NLxbcFIazBASM,8
+mml_sql-0.3.0.dist-info/RECORD,,
