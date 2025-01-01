@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mdjson
+Version: 0.1.0
+Summary: Convert between Markdown and simplified JSON format
+Home-page: https://github.com/ywatanabe1989/mdjson
+Author: Yusuke Watanabe
+Author-email: ywatanabe@alumni.u-tokyo.ac.jp
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: pandoc
+
+UNKNOWN
+
