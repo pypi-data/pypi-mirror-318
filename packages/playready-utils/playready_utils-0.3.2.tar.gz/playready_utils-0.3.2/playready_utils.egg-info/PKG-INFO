@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: playready_utils
+Version: 0.3.2
+Summary: Tools built to work with playready and pyplayready
+Author: 8c
+License-File: LICENSE
+Requires-Dist: cloup
+Requires-Dist: construct==2.8.8
+Requires-Dist: coloredlogs
