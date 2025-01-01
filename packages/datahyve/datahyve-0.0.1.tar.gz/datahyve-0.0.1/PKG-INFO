@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: datahyve
+Version: 0.0.1
+Summary: Server metrics in real-time with RAG-powered insights 🚀
+Home-page: https://pypi.org/project/datahyve
+License: MIT
+Author: Aryan Khurana
+Author-email: aryankhurana1511@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: psutil (>=6.1.1,<7.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: snowflake-connector-python (>=3.12.4,<4.0.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
+Requires-Dist: typer (>=0.15.1,<0.16.0)
+Project-URL: Documentation, https://github.com/AryanK1511/DataHyve/blob/main/README.md
+Project-URL: Repository, https://github.com/AryanK1511/DataHyve
+Description-Content-Type: text/markdown
+
+# DataHyve CLI Client
+
+[![YouTube](https://img.shields.io/badge/YouTube-Video-red?logo=youtube)](https://www.youtube.com/link-to-video)
+[![Devpost](https://img.shields.io/badge/Devpost-Project-blue?logo=devpost)](https://devpost.com/link-to-project)
+[![License](https://img.shields.io/badge/License-MIT-green)](./LICENSE)
+
+<!-- markdownlint-disable-next-line -->
+<div style="text-align: center; width: 100%;">
+<!-- markdownlint-disable-next-line -->
+    <img src="../assets/main-banner.png" alt="Logo Banner" style="width: 100%;"/>
+</div>
+
+Install the client, send data to a SQL DB, and visualize insights on a Streamlit dashboard. Query your servers for real-time analysis
+
+## Author
+
+[Aryan Khurana](https://github.com/AryanK1511)
+
