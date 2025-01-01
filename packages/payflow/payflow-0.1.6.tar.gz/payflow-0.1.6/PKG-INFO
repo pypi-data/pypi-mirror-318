@@ -1,0 +1,201 @@
+Metadata-Version: 2.1
+Name: payflow
+Version: 0.1.6
+Summary: Client for Flow Payment Acquirer
+Home-page: https://gitlab.com/dansanti/payflow
+Author: Daniel Santibáñez Polanco
+Author-email: dansanti@gmail.com
+License: GPLV3+
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Environment :: Console
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: urllib3
+
+Payflow
+=======
+
+**Payflow** es una biblioteca de Python diseñada para facilitar la integración con la API de pagos de Flow. Permite realizar transacciones de manera sencilla, gestionando pagos, confirmaciones y respuestas de manera segura y eficiente.
+
+Características
+----------------
+
+- Realizar pagos a través de la API de Flow.
+- Gestionar confirmaciones de pago y respuestas de retorno.
+- Soporte para ambientes de pruebas y producción.
+
+Requisitos Previos
+-------------------
+
+Antes de instalar Payflow, asegúrate de tener los siguientes requisitos:
+
+- Python 3.7 o superior
+- pip (Administrador de paquetes de Python)
+- Clave API y Secreto API de Flow
+
+Instalación
+------------
+
+Puedes instalar Payflow directamente desde PyPI usando pip:
+
+.. code-block:: bash
+
+    pip install payflow
+
+O puedes instalarlo desde el código fuente:
+
+.. code-block:: bash
+
+    git clone https://gitlab.com/dansanti/payflow.git
+    cd payflow
+    pip install .
+
+Configuración
+-------------
+
+Para usar Payflow, necesitarás configurar tu clave API y secreto API. Puedes establecer estas credenciales como variables de entorno:
+
+.. code-block:: bash
+
+    export FLOW_API_KEY='tu_api_key_aquí'
+    export FLOW_API_SECRET='tu_api_secret_aquí'
+
+Alternativamente, puedes utilizar un archivo .env en la raíz de tu proyecto y agregar las credenciales allí:
+
+.. code-block:: env
+
+    FLOW_API_KEY=tu_api_key_aquí
+    FLOW_API_SECRET=tu_api_secret_aquí
+
+Uso
+---
+
+1. Configurar el Cliente
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Para comenzar, necesitas crear una instancia del cliente de Payflow con tus credenciales:
+
+.. code-block:: python
+
+    from payflow.client import Client
+    import os
+    from dotenv import load_dotenv
+
+    # Cargar variables de entorno desde .env si existe
+    load_dotenv()
+
+    # Configura tu cliente de Payflow
+    client = Client(
+        api_key=os.getenv("FLOW_API_KEY"),
+        api_secret=os.getenv("FLOW_API_SECRET"),
+        base_url='https://sandbox.flow.cl/api',  # URL de pruebas
+        verify_ssl=True
+    )
+
+2. Realizar un Pago
+~~~~~~~~~~~~~~~~~~~
+
+Para realizar un pago, necesitas configurar los detalles de la transacción y enviarla usando el cliente:
+
+.. code-block:: python
+
+    # Configura el pago
+    payment = {
+        'commerceOrder': 'SO1',
+        'subject': 'Orden SO1',
+        'email': 'dansanti@gmail.com', # Email Pagador
+        'paymentMethod': "1",  # Código del método de pago
+        'urlConfirmation': 'https://tu-sitio.com/payment/flow/notify',
+        'urlReturn': 'https://tu-sitio.com/payment/flow/return',
+        'currency': "CLP",
+        'amount': "1000",  # Monto en la moneda especificada
+    }
+
+    # Realiza el pago
+    response = client.payments.post(payment)
+
+    # Procesa la respuesta
+    if response.get('success'):
+        print("Pago realizado con éxito:", response)
+    else:
+        print("Error al realizar el pago:", response.get('error'))
+
+3. Confirmar un Pago
+~~~~~~~~~~~~~~~~~~~~
+
+Puedes verificar el estado de un pago utilizando la función get:
+
+.. code-block:: python
+
+    transaction_id = "ID_de_transacción"
+
+    response = client.payments.get(transaction_id)
+
+    if response.get('success'):
+        print("Estado del pago:", response['status'])
+    else:
+        print("Error al obtener el estado del pago:", response.get('error'))
+
+4. Manejar Notificaciones de Confirmación
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Tu aplicación puede recibir notificaciones de pago a través de la URL de confirmación que configuraste (urlConfirmation). Aquí tienes un ejemplo de cómo manejarlo:
+
+.. code-block:: python
+
+    from flask import Flask, request
+
+    app = Flask(__name__)
+
+    @app.route('/payment/flow/notify', methods=['POST'])
+    def notify():
+        data = request.json
+        client.verify_signature(data)  # Verificar que la notificación es legítima
+        transaction_id = data.get('transaction_id')
+
+        # Procesar la transacción
+        if transaction_id:
+            response = client.payments.get(transaction_id)
+            print("Notificación recibida:", response)
+            return "OK", 200
+        else:
+            return "Error: No se encontró ID de transacción", 400
+
+    if __name__ == "__main__":
+        app.run(port=5000)
+
+Notas
+-----
+
+- Asegúrate de reemplazar *tu_api_key_aquí* y *tu_api_secret_aquí* con las credenciales reales de tu cuenta de Flow.
+- Cambia *base_url* a 'https://www.flow.cl/api' para usar el ambiente de producción.
+
+Pruebas
+-------
+
+Para ejecutar las pruebas unitarias, asegúrate de tener configuradas las variables de entorno *FLOW_API_KEY* y *FLOW_API_SECRET* y luego ejecuta:
+
+.. code-block:: bash
+
+    python3 -m unittest discover tests
+
+Contribuir
+----------
+
+¡Las contribuciones son bienvenidas! Si deseas contribuir a Payflow, sigue los pasos a continuación:
+
+1. Haz un fork del repositorio.
+2. Crea una nueva rama (*git checkout -b feature/nueva-funcionalidad*).
+3. Realiza tus cambios y haz commit (*git commit -m 'Añadir nueva funcionalidad'*).
+4. Haz push a la rama (*git push origin feature/nueva-funcionalidad*).
+5. Crea un Pull Request en GitLab.
+
+Licencia
+--------
+
+Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para obtener más detalles.
