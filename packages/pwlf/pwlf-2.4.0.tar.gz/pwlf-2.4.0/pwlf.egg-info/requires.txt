@@ -1,0 +1,6 @@
+numpy>=1.14.0
+scipy>=1.2.0
+pyDOE>=0.3.8
+
+[PiecewiseLinFitTF]
+tensorflow<2.0.0
