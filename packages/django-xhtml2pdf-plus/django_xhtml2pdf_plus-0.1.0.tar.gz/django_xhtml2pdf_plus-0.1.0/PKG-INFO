@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: django-xhtml2pdf-plus
+Version: 0.1.0
+Summary: A Django app to generate PDFs from templates using xhtml2pdf. 
+Author-email: Dmytro Litvinov <me@dmytrolitvinov.com>
+Maintainer-email: Dmytro Litvinov <me@dmytrolitvinov.com>
+License: MIT license
+Project-URL: Homepage, https://github.com/DmytroLitvinov/django-xhtml2pdf-plus
+Project-URL: Issues, https://github.com/DmytroLitvinov/django-xhtml2pdf-plus/issues
+Project-URL: Changelog, https://github.com/DmytroLitvinov/django-xhtml2pdf-plus/CHANGELOG.md
+Keywords: django,pdf,xhtml2pdf
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: Django :: 3.2
+Classifier: Framework :: Django :: 4.0
+Classifier: Framework :: Django :: 4.1
+Classifier: Framework :: Django :: 4.2
+Classifier: Framework :: Django :: 5.0
+Classifier: Framework :: Django :: 5.1
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: django
+Requires-Dist: django-xhtml2pdf
+Provides-Extra: dev
+Requires-Dist: coverage; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+
+Django xhtml2pdf plus ⏩
+=====================================
+
+**🚀 This is updated version of [django-xhtml2pdf](https://github.com/xhtml2pdf/django-xhtml2pdf).**
+
+`django-xhtml2pdf-plus` is a Django app to render Django templates as PDF files.
+
+To keep Django ecosystem fresh and updated, please share your love and support, click `Star` 🫶
+
+
+# Install:
+
+Install the package via pip:
+
+```bash
+pip install django-xhtml2pdf-plus
+```

@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+django_xhtml2pdf_plus/__init__.py
+django_xhtml2pdf_plus/views.py
+django_xhtml2pdf_plus.egg-info/PKG-INFO
+django_xhtml2pdf_plus.egg-info/SOURCES.txt
+django_xhtml2pdf_plus.egg-info/dependency_links.txt
+django_xhtml2pdf_plus.egg-info/requires.txt
+django_xhtml2pdf_plus.egg-info/top_level.txt
+tests/__init__.py

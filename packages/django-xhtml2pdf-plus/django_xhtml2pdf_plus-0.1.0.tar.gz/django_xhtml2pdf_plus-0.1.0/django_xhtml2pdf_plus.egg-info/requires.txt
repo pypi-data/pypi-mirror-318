@@ -1,0 +1,8 @@
+django
+django-xhtml2pdf
+
+[dev]
+coverage
+mypy
+pytest
+ruff
