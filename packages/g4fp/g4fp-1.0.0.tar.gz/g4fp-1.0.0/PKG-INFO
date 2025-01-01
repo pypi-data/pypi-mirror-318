@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: g4fp
+Version: 1.0.0
+Summary: Proxy wrapper for g4f clients
+Home-page: https://github.com/Leolox228/g4fp
+Author: Ваше имя
+Author-email: leo.gladkikh2@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: fp
+Requires-Dist: g4f
+
+Р­С‚Рѕ Р±РёР±Р»РёРѕС‚РµРєР° РґР»СЏ Р±РµР·Р»РёРјРёС‚РЅРѕРіРѕ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ LLM С‡РµСЂРµР· g4f, СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј РїСЂРѕРєСЃРё!
+Р”Р»СЏ СѓСЃС‚Р°РЅРѕРІРєРё СѓСЃС‚Р°РЅРѕРІРёС‚Рµ g4fp С‡РµСЂРµР· pip Рё РёСЃРїРѕР»СЊР·СѓР№С‚Рµ РІРјРµСЃС‚Рѕ g4f (Client СЃ СЃСѓС„С„РёРєСЃРѕРј Proxy)!
+
+РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ (async):
+```py
+import asyncio
+from g4fp import AsyncClientProxy
+
+async def main():
+    client = await AsyncClientProxy()
+    messages = [
+        {"role": "user", "content": "РџСЂРёРІРµС‚!"}
+    ]
+    response = await client.chat.completions.create(
+        model="o1-mini",
+        messages=messages,
+    )
+    print(response.choices[0].message.content)
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ (sync):
+```py
+from g4fp import ClientProxy
+
+client = ClientProxy()
+messages = [
+    {"role": "user", "content": "РџСЂРёРІРµС‚!"}
+]
+response = client.chat.completions.create(
+    model="o1-mini",
+    messages=messages,
+)
+print(response.choices[0].message.content)
+```
