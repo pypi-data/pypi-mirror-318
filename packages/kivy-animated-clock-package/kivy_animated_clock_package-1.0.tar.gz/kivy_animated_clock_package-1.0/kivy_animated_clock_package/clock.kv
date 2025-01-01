@@ -1,0 +1,206 @@
+<MainGrid>
+    time: None
+    id: mainGrid
+    type: "Clock"
+    clockEvent: None
+    radius: 0
+    centerX: 0
+    centerY: 0
+    design: [True, True, True]
+    mainColor: (1,1,1,1)
+    mainBackgroundColor: (0,0,0,1)
+    numbersColor: (1,1,1,1)
+    handColors: [(1,0,0,1), (0,1,0,1), (0,0,1,1)]
+    secondAngle: 0
+    minuteAngle: 0
+    hourAngle: 0
+    on_kv_post: root.resize()
+    on_size: root.resize()
+    Label:
+        id: mainLabel
+        text: "Clock"
+        font_size: 30
+        size_hint_y: None
+        size_hint: (1, 0.1)
+        pos_hint: {"center_x": 0.5, "center_y": 0.95}
+    BoxLayout:
+        size_hint_y: None
+        size_hint: (0.5, 0.8)
+        id: canvast
+        on_kv_post: root.setup()
+    GridLayout:
+        cols: 2
+        size_hint_y: None
+        size_hint: (1, 0.1)
+        pos_hint: {"center_x": 0.5, "center_y": 0.05}
+        Button:
+            text: "Change type of clock/settings"
+            on_press: root.change_type()
+        Button:
+            id: startStopButton
+            text: "Start"
+            background_color: (0,1,0,1)
+            on_press: root.startStop()
+
+<SettingsPopup>
+    title: 'Settings'
+    size_hint: (0.6, 0.8)
+    mainColor: []
+    mainBackgroundColor: []
+    numbersColor: []
+    handColors: []
+    destinationTime: None
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Settings'
+            font_size: 30
+            size_hint_y: None
+            size_hint: (1, 0.2)
+        GridLayout:
+            cols: 2
+            size_hint_y: None
+            size_hint: (1, 0.5)
+            spacing: 5
+            Label:
+                text: 'Type of clock'
+            Spinner:
+                id: typeSpinner
+                values: ["Clock", "Timer", "Stopwatch"]
+                on_text: root.timeSetting()
+            Label:
+                text: 'Time:'
+            GridLayout:
+                cols: 1
+                id: timeGrid
+            Label:
+                text: 'Main color'
+            Button:
+                text: 'Pick color'
+                on_press: root.pick_color('main')
+            Label:
+                text: 'Clock Background color'
+            Button:
+                text: 'Pick color'
+                on_press: root.pick_color('background')
+            Label:
+                text: 'Numbers color'
+            Button:
+                text: 'Pick color'
+                on_press: root.pick_color('number')
+            Label:
+                text: 'Hand colors'
+            GridLayout:
+                cols: 3
+                Button:
+                    text: 'Hour'
+                    on_press: root.pick_color('hour')
+                Button:
+                    text: 'Minute'
+                    on_press: root.pick_color('minute')
+                Button:
+                    text: 'Second'
+                    on_press: root.pick_color('second')
+        GridLayout:
+            caller: None
+            cols: 2
+            size_hint_y: None
+            size_hint: (1, 0.3)
+            Label:
+                text: 'Outer Circle'
+            CheckBox:
+                id: firstUICheckBox
+            Label:
+                text: 'Hour lines'
+            CheckBox:
+                id: secondUICheckBox
+            Label:
+                text: 'Numbers'
+            CheckBox:
+                id: thirdUICheckBox
+        GridLayout:
+            cols: 2
+            size_hint_y: None
+            size_hint: (1, 0.2)
+            Button:
+                text: 'Cancel'
+                on_press: root.close() # there was a bug with one of the variables, so I had to close it manually to check what is wrong
+            Button:
+                text: 'Save'
+                background_color: (0,1,0,1)
+                on_press: root.save_settings()
+
+<ColorPopup>
+    title: 'Color picker'
+    size_hint: (0.5, 0.8)
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Color picker'
+            font_size: 30
+            size_hint_y: None
+            size_hint: (1, 0.2)
+        Label:
+            id: forW
+            size_hint_y: None
+            size_hint: (1, 0.1)
+        ColorPicker:
+            id: colorPicker
+            size_hint: (1, 0.6)
+        GridLayout:
+            cols: 2
+            size_hint_y: None
+            size_hint: (1, 0.1)
+            Button:
+                text: 'Cancel'
+                on_press: root.dismiss()
+            Button:
+                text: 'Save'
+                background_color: (0,1,0,1)
+                on_press: root.save_color()
+
+<TimerPopup>
+    title: 'Set time'
+    size_hint: (0.5, 0.5)
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 10
+        spacing: 10
+        Label:
+            text: 'Set time'
+            font_size: 30
+            size_hint_y: None
+            size_hint: (1, 0.2)
+        GridLayout:
+            cols: 2
+            size_hint_y: None
+            size_hint: (1, 0.5)
+            Label:
+                text: 'Hours'
+            TextInput:
+                id: hours
+                input_filter: 'int'
+                hint_text: "Enter hours"
+            Label:
+                text: 'Minutes'
+            TextInput:
+                id: minutes
+                input_filter: 'int'
+                hint_text: "Enter minutes"
+            Label:
+                text: 'Seconds'
+            TextInput:
+                id: seconds
+                input_filter: 'int'
+                hint_text: "Enter seconds"
+        GridLayout:
+            cols: 2
+            size_hint_y: None
+            size_hint: (1, 0.2)
+            Button:
+                text: 'Cancel'
+                on_press: root.dismiss()
+            Button:
+                text: 'Save'
+                background_color: (0,1,0,1)
+                on_press: root.apply()

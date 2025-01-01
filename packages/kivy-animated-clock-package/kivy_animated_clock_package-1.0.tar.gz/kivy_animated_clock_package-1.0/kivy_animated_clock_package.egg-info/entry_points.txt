@@ -1,0 +1,3 @@
+[console_scripts]
+kivy_animated_clock_package = kivy_animated_clock_package.main:main
+
