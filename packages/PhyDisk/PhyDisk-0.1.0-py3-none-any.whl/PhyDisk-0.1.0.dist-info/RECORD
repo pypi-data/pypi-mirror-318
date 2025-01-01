@@ -1,0 +1,12 @@
+phydisk/__init__.py,sha256=pI1HTdrEkwALFl5qDoYFqSJedwOwtwgBnKQXqSjIbvY,3778
+phydisk/linux.py,sha256=8A3zyZ_Fs4Nabu3axmb8zS4L9ep6mpJM2-cpeeaEUBY,1668
+phydisk/macOS.py,sha256=Ju-GAJ_LBdH7DzUBVqf7bmniIDl6K6G-CUmBaidrJ1Y,3569
+phydisk/models.py,sha256=tbBy4bRd-xUXPRQ7_ciAX1mzfkp4eCsRJ4Ja6IOmK2Q,955
+phydisk/squire.py,sha256=fOW0La3d9cwLA80oA4OVO1QXrP9CEzUWKuz8uTNdg00,912
+phydisk/windows.py,sha256=8aIf0I6esGo14QJUTO6E7XV2_ODOv0eAstsKjhqi0Xg,5245
+PhyDisk-0.1.0.dist-info/LICENSE,sha256=2dNg7BhaQ6p6wgVXE7T_WfzU7iTtZGVbN8DcsUOKOnU,1070
+PhyDisk-0.1.0.dist-info/METADATA,sha256=VzvZKeohB_qOkn6sjJqv0iwXhqbEr3AHEKafmdq2Z7k,4677
+PhyDisk-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+PhyDisk-0.1.0.dist-info/entry_points.txt,sha256=1S6QBbGnudU9GSXa4sHoc4w2nuYj7zrwiH5C6iXNfdU,48
+PhyDisk-0.1.0.dist-info/top_level.txt,sha256=mJVagp5LMiCD1eV7zrm32-rLfvwIBY4IKzEzaFZkSuA,8
+PhyDisk-0.1.0.dist-info/RECORD,,
