@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: ctkaddons
+Version: 0.0.8a0
+Summary: A package that add uneccessary widgets to customtkinter
+Author-email: TonyLovesMusic <tony.tonylovescoding@example.com>
+Project-URL: Homepage, https://github.com/TonyLovesCoding/CTkAddons
+Project-URL: Issue, https://github.com/TonyLovesCoding/CTkAddons/issues
+Keywords: customtkinter,widgets,addon,calender
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: customtkinter
+Requires-Dist: tkscenes>=0.1.2
+Requires-Dist: multipledispatch
+Requires-Dist: pillow>=11.0.0
+
+A package which adds extra widgets to CustomTKinter\
+See the code on [github](https://github.com/TonyLovesCoding/CTkAddons).
+
+> [!WARNING]\
+> This project is **EXTREMELY** early in development\
+> Proceed with caution!
+
+# CTkCalendar
+It's a calender... **duh...**\
+Use `ctkaddons.CTkCalendar()`
+
+# Date Picker
+`ctkaddons.CTkDateSelect()`
+
+# Multi Pane
+Creates a side panel
