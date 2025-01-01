@@ -1,0 +1,10 @@
+liteutils/__init__.py,sha256=PZRO_idiiX5m-v57IoLV6ZacIqkRLe-5vRkl9Nrj5Ks,109
+liteutils/_arxiv/__init__.py,sha256=3EprZhkdDLiwUnusjbOdIxa4MO2DajUePMBwe9I1hE4,35
+liteutils/_arxiv/_arxiv_read.py,sha256=pEo3edUza3jauRoW0Ftnz_txVnfABO-mjtc8eWOETYA,520
+liteutils/_pymupdf/__init__.py,sha256=ZHZk9jN3htLCYMMmeI1cfEy2WLvbIjv9sZD3CWUfs0Q,1903
+liteutils/_wordllama/__init__.py,sha256=c6HreMv1ovm9BpNcXKmHE5TlPv93tnUBolhE0nnoOAQ,62
+liteutils/_wordllama/_main.py,sha256=5JmhjRaZ4V3z_YPpy2jztLK7iJeh5mIIML03Jf5lJqk,2139
+liteutils/_wordllama/_web_wordllama.py,sha256=Zo3XXvgoOS-szk8Vl0XjTzFuihtkKGc-huLNsWtNo1Y,315
+liteutils-0.0.18.dist-info/METADATA,sha256=ik3YswtPXPrdX_d_WWHXsRNdhDUwLx5PkzG7av-iI_c,704
+liteutils-0.0.18.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+liteutils-0.0.18.dist-info/RECORD,,
