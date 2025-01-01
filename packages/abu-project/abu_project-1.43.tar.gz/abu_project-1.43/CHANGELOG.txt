@@ -1,0 +1,9 @@
+Change Log
+==========
+
+1.43(31/12/2024)
+--------------------
+- Sixth Release
+- Encapsulating the implementation of the ``main()`` function
+- Added Docstring for every function.
+- Added an interactive ``fibonacci_series_generator`` function to generate Fibonacci numbers in groups of 10 with user-controlled continuation.
