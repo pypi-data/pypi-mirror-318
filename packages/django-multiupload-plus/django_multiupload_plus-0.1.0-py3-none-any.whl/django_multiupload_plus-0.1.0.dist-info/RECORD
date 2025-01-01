@@ -1,0 +1,12 @@
+multiupload_plus/__init__.py,sha256=_GAFoOA6mU1CFrNXlXgvKa6MDhAysAI-rm810ex4ATk,209
+multiupload_plus/fields.py,sha256=LEBFiIY7JlWU4UPlYw-ny4s2c3zNzOf3UZqRkL-ThQQ,4780
+multiupload_plus/tests/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+multiupload_plus/tests/test_field.py,sha256=GKK4oJUZ0yBJRRoTH6V4MDYdqYz3f_eQHIkpOR90U4A,2227
+multiupload_plus/tests/test_input.py,sha256=w9CIlwkzSQNH-dmjwaFglag_g-d_Je1XagzsutV7kgU,1087
+multiupload_plus/tests/utils.py,sha256=ZW6ujjmFWoq0zISqkvwMjijnGAYk62sitNMUyR1g_G8,319
+django_multiupload_plus-0.1.0.dist-info/AUTHORS,sha256=A0INW8GDbSidLMG8cIN-NyBAJdljHLb3sh45A6ZP47I,269
+django_multiupload_plus-0.1.0.dist-info/LICENSE,sha256=qtnGTfo_1KAlGHUCQgTY9ZUTTQd88HwM8bxWpHuXhNE,1071
+django_multiupload_plus-0.1.0.dist-info/METADATA,sha256=ScQ7wugL9OmkbMe4BOS3VTDEddjb2spliMFC_Exm5_8,3792
+django_multiupload_plus-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+django_multiupload_plus-0.1.0.dist-info/top_level.txt,sha256=3PESVzTFGPzGzbIFwja6-o7H2bRm6Y6Qv4bYyTaQugE,17
+django_multiupload_plus-0.1.0.dist-info/RECORD,,
