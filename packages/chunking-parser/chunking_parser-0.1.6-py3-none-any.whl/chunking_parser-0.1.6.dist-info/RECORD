@@ -1,0 +1,14 @@
+chunking_parser/__init__.py,sha256=Izi0uK-_CgKP8VaZWS035OwPEKs_4zdvfZgSTzSAVZM,163
+chunking_parser/file_service.py,sha256=maB4DjH9-TwseFXSdUJFLGqccQUejx47NyB-rccbhxo,1134
+chunking_parser/parser_service.py,sha256=lTd5HwbOHZKh1zCUYlJJFx8p0v0jcLMURArQnuEj81g,6169
+chunking_parser/request_model.py,sha256=cHM2r7jCotjP9TeGEU2UjyaPjcT0ZOp122K6PIkWvR0,480
+chunking_parser/dto/__init__.py,sha256=c2aQIOPIEIroChQSc7mBK5MTmfXheU_kkQ6tXSYf0GY,46
+chunking_parser/dto/file.py,sha256=03NCNqTwgPUkKCBvZNPZ1NSQJ0_IEyJ6mUx0olHkd9U,483
+chunking_parser/strategy/__init__.py,sha256=5FTsRmHJozxcO5UYI2-EvBEIU2952qeZh5VsWZjUQHU,264
+chunking_parser/strategy/strategy_abs.py,sha256=E0moI_q2LFFD2lZStExpE1Rbby554dHN9XVY1ABD78o,6330
+chunking_parser/strategy/strategy_factory.py,sha256=Dmy5mNpyi5IjpHgL0jga07O43-t8lYTeQ4J2SsVhHSM,335
+chunking_parser/strategy/strategy_implementation.py,sha256=8FXnytPMvxjGv7GgLdLQISveP7mj0DEVObXFzJl2tZg,2295
+chunking_parser-0.1.6.dist-info/METADATA,sha256=F68gZbIXyWItRGfvpmCjRkwYLICtKjtEPAEzlKAJnqQ,324
+chunking_parser-0.1.6.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+chunking_parser-0.1.6.dist-info/top_level.txt,sha256=4uhpHKaN8gs4dwRmyWZWy_ccCK4I4_8FPAUwY1TYG_g,16
+chunking_parser-0.1.6.dist-info/RECORD,,
