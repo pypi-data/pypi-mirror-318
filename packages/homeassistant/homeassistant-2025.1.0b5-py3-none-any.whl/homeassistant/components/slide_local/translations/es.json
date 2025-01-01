@@ -1,0 +1,30 @@
+{
+    "config": {
+        "abort": {
+            "reconfigure_successful": "Se volvi\u00f3 a configurar correctamente",
+            "unique_id_mismatch": "La direcci\u00f3n MAC del dispositivo ({mac}) no coincide con la direcci\u00f3n MAC anterior."
+        }
+    },
+    "exceptions": {
+        "calibration_error": {
+            "message": "Error al enviar la solicitud de calibraci\u00f3n al dispositivo."
+        },
+        "touchgo_error": {
+            "message": "Error al enviar la solicitud de configuraci\u00f3n Touch&Go a {state} al dispositivo."
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "data": {
+                    "invert_position": "Invertir posici\u00f3n"
+                },
+                "data_description": {
+                    "invert_position": "Invierte la posici\u00f3n de la cubierta Slide."
+                },
+                "description": "Volver a configurar el dispositivo Slide",
+                "title": "Configurar Slide"
+            }
+        }
+    }
+}

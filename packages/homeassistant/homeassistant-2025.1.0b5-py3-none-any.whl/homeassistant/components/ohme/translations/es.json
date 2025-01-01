@@ -1,0 +1,16 @@
+{
+    "entity": {
+        "button": {
+            "approve": {
+                "name": "Aprobar el cargo"
+            }
+        },
+        "sensor": {
+            "status": {
+                "state": {
+                    "unplugged": "Desenchufado"
+                }
+            }
+        }
+    }
+}
