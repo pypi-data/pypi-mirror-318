@@ -1,0 +1,24 @@
+
+[tool.poetry]
+name = "impressify"
+version = "1.3"
+description = "👨‍🎨🎨 impressify"
+authors = ["Andrew A Levin <your.email@example.com>"]
+readme = "README.md"
+packages = [
+    { include = "impressify", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+pillow = "^11.0.0"
+
+[tool.poetry.scripts]
+impressify = "impressify.impressify:main"
+
+
+[build-system]
+requires = ["poetry>=1.1.0"]
+build-backend = "poetry.core.masonry.api"
+
+
