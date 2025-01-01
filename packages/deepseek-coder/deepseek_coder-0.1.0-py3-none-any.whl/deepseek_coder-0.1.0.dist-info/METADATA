@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: deepseek-coder
+Version: 0.1.0
+Summary: Deepseek Coder running locally in the terminal.
+Author: Marcos Cannabrava
+Author-email: mpcannabrava@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Environment :: GPU :: NVIDIA CUDA :: 12 :: 12.5
+Classifier: Environment :: MacOS X
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Terminals
+Requires-Dist: aider-install (==0.1.2)
+Requires-Dist: vllm (==0.6.6.post1)
+Project-URL: Homepage, https://github.com/marcoscannabrava/deepseek-coder
+Project-URL: Issues, https://github.com/marcoscannabrava/deepseek-coder/issues
+Description-Content-Type: text/markdown
+
+# Deepseek Coder
+
+This package uses Deepseek Coder 1.3B Instruct-tuned Language Model for code generation in the terminal.
+
+A GPU is not required but makes the responses faster.
+
+It's based on:
+- [Aider](https://aider.chat/)
+- [vLLM](https://docs.vllm.ai/en/latest/)
