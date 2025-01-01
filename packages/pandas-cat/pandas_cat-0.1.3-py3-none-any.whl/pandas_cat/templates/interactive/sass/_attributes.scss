@@ -1,0 +1,70 @@
+.attributes {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .print {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 22.55rem 1fr;
+    column-gap: 1rem;
+    margin-right: 1.4rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .scrollbar {
+    grid-column: 1/-1;
+
+    & .btn {
+      margin: 0.2rem 0;
+      user-select: none;
+    }
+  }
+
+  .graph {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .settings {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    user-select: none;
+
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      gap: 0.5rem;
+    }
+  }
+
+  .options {
+    margin-left: auto;
+
+    @media only screen and (max-width: $bp-small) {
+      display: none;
+    }
+  }
+
+  .canvas {
+    &--hidden {
+      display: none !important;
+    }
+  }
+}
