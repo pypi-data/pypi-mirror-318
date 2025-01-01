@@ -1,0 +1,2 @@
+[mml.plugins]
+mml-sql = mml_sql.activate
