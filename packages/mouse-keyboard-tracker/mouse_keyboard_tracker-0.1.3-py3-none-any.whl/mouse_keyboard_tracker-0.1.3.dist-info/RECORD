@@ -1,0 +1,12 @@
+mouse_keyboard_tracker/__init__.py,sha256=89vuL7-BKjCNbYhAm56WxUf2mlsrwzz-aPMpZz1TnAY,1702
+mouse_keyboard_tracker/cli.py,sha256=LUQ5Wkrm0tmd699KWP73y27ZFKUI3EGFLiBzPz4nL5w,4055
+mouse_keyboard_tracker/config.py,sha256=BdQXyTTddoE-HduRtaFNhBEKF9Zh6pgOJux8hByeF2U,1623
+mouse_keyboard_tracker/eventos.py,sha256=5p1xCn1KrMPQ1qLpgrx0Z2sR_jtC84JWB6A_8UBQ_rM,3227
+mouse_keyboard_tracker/log_manager.py,sha256=Db5f3lhdfLa8lA8icBXJ1Doe4AaRJ929ZeK_m0ggXCk,3230
+mouse_keyboard_tracker/logger.py,sha256=5R6ia6v5KoJA3pR6k5KWmqRdFF-GpZpVBjIH-42fFbk,2311
+mouse_keyboard_tracker/ociosidade.py,sha256=3nzftDk5W6KSLWOMBOdEqPJ9hs4OIej2YoVUSEvMK3o,4790
+mouse_keyboard_tracker-0.1.3.dist-info/METADATA,sha256=ei59i7Vq4C8NwHi_7uAGjIYE18Ed0Mbqr10V-m58g58,9169
+mouse_keyboard_tracker-0.1.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+mouse_keyboard_tracker-0.1.3.dist-info/entry_points.txt,sha256=X8JPX3OOXgoBNTD9pebcEaCbn-fot_4dU4LUYO3Alvw,75
+mouse_keyboard_tracker-0.1.3.dist-info/top_level.txt,sha256=T-APEhCVZkKYRvaECELJXXMzT_SFFJ5tuKN3o0LOJp8,23
+mouse_keyboard_tracker-0.1.3.dist-info/RECORD,,
