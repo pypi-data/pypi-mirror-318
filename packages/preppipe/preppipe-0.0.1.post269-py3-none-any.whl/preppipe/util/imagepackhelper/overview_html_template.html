@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+$$pp_imgpack_title
+</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="{pp_imgpack_author}">
+  <meta name="description" content="{pp_imgpack_description}">
+</head>
+<body>
+<noscript>
+You are seeing this because scripting is disabled. To access the embedded IR inspection tools, please enable Javascript in your browser settings.<br>
+如果你能看到这条消息，那么Javascript并未被启用。如需使用内置的浏览工具，请在浏览器设置中启用Javascript。<br>
+<br></noscript>
+
+<div id="image_anon" style="position: relative; left: 0; top: 0;" hidden>
+$$pp_imgpack_imgdata
+</div>
+<script>
+$$pp_imgpack_script_datadecl
+$$pp_imgpack_ui_translations
+
+let zoomFactor = 0.25;
+let show_codenames = false;
+
+// for each set of equivalent groups, we only create div for the leader group
+// this only use keys from leader groups
+let selected_layers = {};
+
+let selected_groups = {};
+
+let current_composite_codename = "";
+</script>
+<div id="main_panel" style="position:relative">
+  <div id="control_panel" style="position:absolute; top:0px; left:0px; z-index:1">
+    <div id="settings_row">
+      <label id="zoom_label" for="zoom">Zoom:</label>
+      <input type="range" id="zoom" name="zoom" min="1" max="100" value="25" onchange="setZoomFactor(this.value)" />
+      <label id="zoom_value">25%</label>
+      <input type="checkbox" id="show_codenames" name="show_codenames" checked onchange="setShowCodenames(this.checked)" />
+      <label id="show_codenames_label" for="show_codenames">Show Codenames</label>
+    </div>
+    <div id="presets">
+      <label id="preset_label" for="preset_select">Presets:</label>
+      <select id="preset_select"></select>
+      <button id="preset_apply" onclick="handlePresetApply()">Apply</button>
+    </div>
+    <div id="layer_groups"></div>
+    <div id="view_info_row">
+      <label id="composition_label" for="view_info">Current Composition:</label>
+      <input type="text" id="view_info" value="" readonly />
+      <button id="save_view" onclick="saveComposition()" disabled>Save</button>
+    </div>
+  </div>
+  <div id="image_preview_panel" style="position:absolute; top:0px; left:400px; z-index:2">
+    <canvas id="image_preview" style="position:absolute; top:0px; left:0px;"></canvas>
+  </div>
+</div>
+<script>
+  // load translated label names from ui_translations
+  document.getElementById('zoom_label').innerHTML = ui_translations['zoom_label'];
+  document.getElementById('show_codenames_label').innerHTML = ui_translations['show_codenames_label'];
+  document.getElementById('composition_label').innerHTML = ui_translations['composition_label'];
+  document.getElementById('save_view').innerHTML = ui_translations['save_view'];
+  document.getElementById('preset_label').innerHTML = ui_translations['preset_label'];
+  document.getElementById('preset_apply').innerHTML = ui_translations['preset_apply'];
+
+  function getLayerGroup(codename) {
+    return codename.match(/[A-Z]+/)[0];
+  }
+  function isGroupEnabled(group) {
+    let group_leader = getLeaderGroup(group);
+    if (mandatory_layer_groups.includes(group_leader))
+      return true;
+    if (group_leader in selected_groups && selected_groups[group_leader] === true)
+      return true;
+    return false;
+  }
+  function updateImagePreview() {
+    const canvas = document.getElementById('image_preview');
+    let selected_layer_indices = [];
+    let composite_codename = "";
+    for (const layer_group of layer_group_orders) {
+      if (!isGroupEnabled(layer_group) || !(layer_group in selected_layers)) {
+        continue;
+      }
+      const codename_list = selected_layers[layer_group];
+      for (const codename of codename_list) {
+        const index = layer_codenames.indexOf(codename);
+        if (index !== -1) {
+          selected_layer_indices.push(index);
+          composite_codename += codename;
+        }
+      }
+    }
+    selected_layer_indices.sort((a, b) => a - b);
+    if (selected_layer_indices.length === 0) {
+      return;
+    }
+    canvas.width = total_width;
+    canvas.height = total_height;
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    current_composite_codename = composite_codename;
+    for (const index of selected_layer_indices) {
+      const img = document.getElementById(`img_l${index}`).cloneNode(true);
+      const [x, y, width, height] = layer_pos_size_info[index];
+      ctx.drawImage(img, x, y);
+    }
+    const view_info = document.getElementById('view_info');
+    view_info.value = current_composite_codename;
+    if (composites_codenames.includes(current_composite_codename)) {
+      view_info.style.color = 'black';
+    } else {
+      view_info.style.color = 'red';
+    }
+    const save_view = document.getElementById('save_view');
+    save_view.disabled = false;
+  }
+  function saveComposition() {
+    const canvas = document.getElementById('image_preview');
+    const dataURL = canvas.toDataURL();
+    let element = document.createElement('a');
+    element.setAttribute('href', dataURL);
+    element.setAttribute('download', `${current_composite_codename}.png`);
+    element.style.display = 'none';
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+  function setZoomFactor(value) {
+    zoomFactor = value * 0.01;
+    const previewArea = document.getElementById('image_preview_panel');
+    previewArea.style.transform = `scale(${zoomFactor})`;
+    const zoomValue = document.getElementById('zoom_value');
+    zoomValue.innerHTML = `${value}%`;
+  }
+  function getAllEquivalentGroups(group) {
+    let all_groups = [group];
+    if (group in equivalent_layer_groups) {
+      all_groups = equivalent_layer_groups[group];
+    }
+    return all_groups;
+  }
+  let layer_group_leader_dict = {};
+  let all_leader_groups = [];
+  let layers_by_group = {}; // group code -> list of layer codenames
+  for (layer of layer_codenames) {
+    let group = getLayerGroup(layer);
+    if (!(group in layers_by_group)) {
+      layers_by_group[group] = [];
+    }
+    layers_by_group[group].push(layer);
+  }
+  function getLeaderGroup(group) {
+    if (group in layer_group_leader_dict) {
+      return layer_group_leader_dict[group];
+    }
+    return group;
+  }
+  function getLayerGroupSelections(groupSelect) {
+    return Array.from(groupSelect.selectedOptions).map(({ value }) => value);
+  }
+  function setLayerGroupSelections(groupSelect, selections) {
+    for (const option of groupSelect.options) {
+      if (selections.includes(option.value)) {
+        option.selected = true;
+      } else {
+        option.selected = false;
+      }
+    }
+  }
+  function createLayerGroupControl() {
+    const layer_groups = document.getElementById('layer_groups');
+    let visited_groups = {};
+    const layer_group_table = document.createElement('table');
+    for (const group of layer_group_orders) {
+      if (group in visited_groups) {
+        continue;
+      }
+      visited_groups[group] = true;
+      all_leader_groups.push(group);
+      let equivalent_groups = getAllEquivalentGroups(group);
+      for (member_group of equivalent_groups) {
+        if (member_group == group) {
+          continue;
+        }
+        layer_group_leader_dict[member_group] = group;
+        visited_groups[member_group] = true;
+      }
+      let group_name = equivalent_groups.join(',');
+      if (group in layer_group_descriptive_names) {
+        group_name = layer_group_descriptive_names[group] + ' (' + equivalent_groups.join(',') + ')';
+      }
+      const groupRow = document.createElement('tr');
+      layer_group_table.appendChild(groupRow);
+
+      const groupCheckbox = document.createElement('input');
+      groupCheckbox.type = 'checkbox';
+      groupCheckbox.id = `layer_group_checkbox_${group}`;
+      groupCheckbox.onchange = function() {
+        const checked = groupCheckbox.checked;
+        selected_groups[group] = checked;
+        updateImagePreview();
+      };
+      selected_groups[group] = false;
+      if (mandatory_layer_groups.includes(group)) {
+        groupCheckbox.checked = true;
+        groupCheckbox.disabled = true;
+        selected_groups[group] = true;
+      }
+      const groupCheckboxCell = document.createElement('td');
+      groupCheckboxCell.appendChild(groupCheckbox);
+      groupRow.appendChild(groupCheckboxCell);
+
+      const groupLabel = document.createElement('label');
+      groupLabel.innerHTML = group_name;
+      groupLabel.htmlFor = groupCheckbox.id;
+      const groupLabelCell = document.createElement('td');
+      groupLabelCell.appendChild(groupLabel);
+      groupRow.appendChild(groupLabelCell);
+
+      const groupSelect = document.createElement('select');
+      groupSelect.id = `layer_group_select_${group}`;
+      groupSelect.onchange = function() {
+        let selections = getLayerGroupSelections(groupSelect);
+        selected_layers[group] = selections;
+        if (selections.length > 0) {
+          const groupCheckbox = document.getElementById(`layer_group_checkbox_${group}`);
+          if (!groupCheckbox.disabled) {
+            selected_groups[group] = true;
+            groupCheckbox.checked = true;
+          }
+        }
+        updateImagePreview();
+      };
+      if (variadic_layer_groups.includes(group)) {
+        groupSelect.multiple = true;
+      }
+      groupSelect.style.width = "100%";
+      const groupSelectCell = document.createElement('td');
+      groupSelectCell.appendChild(groupSelect);
+      groupRow.appendChild(groupSelectCell);
+      layer_groups.appendChild(groupRow);
+    }
+  }
+  function updateLayerGroupSelects() {
+    for (const group of all_leader_groups) {
+      const groupSelect = document.getElementById(`layer_group_select_${group}`);
+      const prevValue = getLayerGroupSelections(groupSelect);
+      groupSelect.innerHTML = '';
+      for (const member_group of getAllEquivalentGroups(group)) {
+        const groupLayers = layers_by_group[member_group];
+        for (const layer of groupLayers) {
+          const option = document.createElement('option');
+          option.value = layer;
+          option.innerHTML = (show_codenames? layer : layer_rawnames[layer_codenames.indexOf(layer)]);
+          groupSelect.appendChild(option);
+        }
+      }
+      setLayerGroupSelections(groupSelect, prevValue);
+    }
+  }
+  function setShowCodenames(show) {
+    show_codenames = show;
+    updateLayerGroupSelects();
+  }
+  function applyComposition(composition) {
+    // disable all groups first
+    for (const group of all_leader_groups) {
+      const groupCheckbox = document.getElementById(`layer_group_checkbox_${group}`);
+      if (groupCheckbox &&!(groupCheckbox.disabled)) {
+        selected_groups[group] = false;
+        groupCheckbox.checked = false;
+      }
+      selected_layers[group] = [];
+    }
+    // decompose composition into list of codenames
+    const layers = composition.match(/[A-Z]+\d+/g);
+    let new_selection_by_groups = {}
+    for (const layer of layers) {
+      const layer_group = getLayerGroup(layer);
+      const group_leader = getLeaderGroup(layer_group);
+      if (!(group_leader in new_selection_by_groups)) {
+        new_selection_by_groups[group_leader] = [];
+      }
+      new_selection_by_groups[group_leader].push(layer);
+    }
+    for (const group_leader in new_selection_by_groups) {
+      const selections = new_selection_by_groups[group_leader];
+      selected_layers[group_leader] = selections;
+      selected_groups[group_leader] = true;
+      const groupCheckbox = document.getElementById(`layer_group_checkbox_${group_leader}`);
+      if (groupCheckbox && !(groupCheckbox.disabled)) {
+        groupCheckbox.checked = true;
+      }
+      const groupSelect = document.getElementById(`layer_group_select_${group_leader}`);
+      if (groupSelect) {
+        setLayerGroupSelections(groupSelect, selections);
+      }
+    }
+    updateImagePreview();
+  }
+  function handlePresetApply() {
+    const preset_select = document.getElementById('preset_select');
+    applyComposition(preset_select.value);
+  }
+  // Initialize GUI on page load
+  createLayerGroupControl();
+  document.getElementById("show_codenames").checked = show_codenames;
+  setShowCodenames(show_codenames);
+  setZoomFactor(zoomFactor*100);
+  applyComposition(composites_codenames[0]);
+</script>
+</body>
+</html>
