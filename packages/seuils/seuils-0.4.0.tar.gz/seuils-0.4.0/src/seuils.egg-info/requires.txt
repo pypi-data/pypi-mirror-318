@@ -1,0 +1,11 @@
+fr-date
+
+[dev]
+ruff
+black
+pip-tools
+requests
+pytest
+pandas
+plotly
+jinja2
