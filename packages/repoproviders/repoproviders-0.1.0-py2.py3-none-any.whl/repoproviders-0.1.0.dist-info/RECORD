@@ -1,0 +1,14 @@
+repoproviders/__init__.py,sha256=BxpUQpvl-dzB_qFJw8AkmZNdVlWXitluzThOEyyE1ts,1462
+repoproviders/__main__.py,sha256=rGG83qCFgSaTe0o2uvY6xlJ8rPnc6A4mxH8A9vPA6aE,813
+repoproviders/_version.py,sha256=IMl2Pr_Sy4LVRKy_Sm4CdwUl1Gryous6ncL96EMYsnM,411
+repoproviders/base.py,sha256=BdvdE3RgvEAfAJx-pcIDarVbXCaxPqZf3wJ2QgvpQrU,309
+repoproviders/dataverse.json,sha256=W52whFKMz-cVBah55INnMPIWaZrlQyQ2I4O8D8l6nh4,34794
+repoproviders/doi.py,sha256=Uv3mzBEH8UH_KtzUG0agthM1V7L0NSXOvf8qHCT0QJs,12545
+repoproviders/git.py,sha256=Yw2Y3QXRpPSxGXNobS_1hHlQlE5aodY_oDsayvlMJ48,3202
+repoproviders/py.typed,sha256=zwRNjZOV3leFzGdwfkbvGOfGbBoplIeeZu4g7d6P928,170
+repoproviders/resolvers.py,sha256=4TsboEZZvkQM1P3nCpYbkGTQPGTiDeuCtDKqMShpI4w,2283
+repoproviders-0.1.0.dist-info/METADATA,sha256=6f6C6cD-_QKI_3HmvKvW2Zx3d167RE4xyTMPu45VZtM,3366
+repoproviders-0.1.0.dist-info/WHEEL,sha256=tkmg4JIqwd9H8mL30xA7crRmoStyCtGp0VWshokd1Jc,105
+repoproviders-0.1.0.dist-info/entry_points.txt,sha256=mgqq81hub13LoRNj7s79VbF-EceIQCKDidBJ5BLJZD0,72
+repoproviders-0.1.0.dist-info/licenses/LICENSE,sha256=2W1PawL2SDLobLAO5dXFfBRzTk5Pcqi_a8Hf3qoWOc4,1489
+repoproviders-0.1.0.dist-info/RECORD,,
