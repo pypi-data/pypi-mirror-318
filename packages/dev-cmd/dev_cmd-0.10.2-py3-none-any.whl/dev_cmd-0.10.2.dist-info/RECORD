@@ -1,0 +1,16 @@
+dev_cmd/__init__.py,sha256=NzE3Y7Pk5yzwpNm3jeVdVFSQiy25nDBDZe6qZOy9QC4,118
+dev_cmd/__main__.py,sha256=WDOpYSIdc6KTz5c3UcUOKLCf0yv-3KmywJEiZViajis,185
+dev_cmd/color.py,sha256=wOZpxi0szlizOOFB1quI1lJxMd14dZNSyo0xchLNkkU,2052
+dev_cmd/console.py,sha256=UuCgtiElwB950UAoqaJVOkVUUmbDb6MD2flVKO3Gtrw,971
+dev_cmd/errors.py,sha256=wZaHIP5w6IG78UJmVVHv2aXssSCN-mN-K3LVJtlPblU,2087
+dev_cmd/invoke.py,sha256=t7X3MU6Oq-O7NWKK7aW2Ucw8m2TZjBjWXqEZFGn8Lew,12481
+dev_cmd/model.py,sha256=ReA72zFamKDViG90agjshK9ZrFc_hvJKb1MBZueO-Rc,1577
+dev_cmd/parse.py,sha256=gUfknpKaBmpYLZClVtCU4Cb2on7TXbL4N3zIkCapVjo,10821
+dev_cmd/project.py,sha256=pc4I1yLubZJA-uBadPCTM8WCbvJn8zDQJYowYaw9qbI,2016
+dev_cmd/run.py,sha256=WAq_Lb8hPI_lAmXz0WttCAnv07v7lux90ClhfLH2uLQ,10114
+dev_cmd-0.10.2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+dev_cmd-0.10.2.dist-info/METADATA,sha256=xn20xvcCEMhDSqQ3axjr_BS5aLY_mXDlxhmOtSCYfY0,22943
+dev_cmd-0.10.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+dev_cmd-0.10.2.dist-info/entry_points.txt,sha256=5YUQyx6gg5r-eazlTK8_5sAvV8IoJ5J8QLX8IWs08yE,45
+dev_cmd-0.10.2.dist-info/top_level.txt,sha256=lIBEVDny7VkIs-Iqovomp_0t2twN0PjT5HkC-_DqbIU,8
+dev_cmd-0.10.2.dist-info/RECORD,,
