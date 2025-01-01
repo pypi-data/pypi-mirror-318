@@ -1,0 +1,11 @@
+jserpy/__init__.py,sha256=58_i7TSZ-RL3hJjXAeZEDjBsTRl72YHdRYm4_9CsMZM,89
+jserpy/json_handler.py,sha256=_sF9E96uFyuRlcr8IpeYewbmK8_-jTHx5DxYNIW23No,11191
+jserpy/json_handler_utils.py,sha256=nQi8a4OtIOjl60EmwVabXPhgmrLTp6owDYfiY6AfH68,384
+jserpy/json_typing.py,sha256=va_w6yDfVEullc6XrE_pbfo2co2391pFSr4nnx1KU58,373
+jserpy/jsonable.py,sha256=3rr2wOeoofklF8GVVWjsqFLe0PuE22wHBGaS_ayUJhY,247
+tests/test_jserpy.py,sha256=Us_qOeYIxBR9ZRhDl-H7CV7xtjXydzZX8bXs9IZByT8,2945
+jserpy-0.1.0.dist-info/LICENSE,sha256=UtWDM6w7nMyyFqRyOZnsYCr408jfBPWGJGVXAx8pIKM,1065
+jserpy-0.1.0.dist-info/METADATA,sha256=e5Mmj7zs8H6OBJGViqLgwZZjxw52F8UeKNLOtgqJBgA,1793
+jserpy-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+jserpy-0.1.0.dist-info/top_level.txt,sha256=lW5XYd3145HjKZcPyE5EnTgj5rkAGMfJyBSv57Of9TI,13
+jserpy-0.1.0.dist-info/RECORD,,
