@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ttkplus
+Version: 0.0.2
+Summary: TkinterHelper布局助手桌面版 官方拓展和工具库
+Home-page: https://www.pytk.net
+Author: iamxcd
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+TkinterHelper布局助手 桌面版 官方拓展和工具库
+
+本项目基于ttkbootstrap修改，在此基础上修复了一些bug，并增加了新组件新特性。
+
+## 安装方式
+
+> pip install ttkplus
+
