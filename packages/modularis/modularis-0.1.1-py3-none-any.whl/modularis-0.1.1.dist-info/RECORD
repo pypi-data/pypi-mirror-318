@@ -1,0 +1,17 @@
+modularis/__init__.py,sha256=hzXY5Kc8pGffuwMz8xm4K5wNTd0MuFNPvL8rCJPvXSA,404
+modularis/cache.py,sha256=7q_C-vvf8rXQ6OqYmym-Egs_CZzmauPAeI0LTZzqaDU,1598
+modularis/client.py,sha256=i7LOFgXIYQ57kbcexEZown8M9RIuFxY3x05d0anZqpQ,5135
+modularis/client_new.py,sha256=4t0vP5blzdoT4XscWh2gMWR1n_XZoM1oBPUuerHETpU,9141
+modularis/compression.py,sha256=OBdTNuzbftdvdrqZK6oQ5iVUTlJjL4u8HyB_6HAN_Hk,1402
+modularis/encryption.py,sha256=pdyGgjxrELHMpm6NIGUOzp_nDrH8N1LyeYfdqutm3zY,1597
+modularis/interceptor.py,sha256=MPx1_FpJs4hKoPrL2gWDUa1jGj2uDPwvPh1aIcsWDUE,7963
+modularis/metrics.py,sha256=O9pRnU-ZuTcpXVpNUKNRwOZFeGeNYbwtQ_dGDsez6rs,1940
+modularis/middleware.py,sha256=fgdplh4kAn_XqPF7TMic8T6Ik3uXF-ymkC8bzq3lGwQ,6133
+modularis/response.py,sha256=sy0YB1mp5EdBCOuodho4KXL71weetwzsBrslc0AyxX4,5765
+modularis/serializer.py,sha256=FAuETgclAhU8VsTr90tRMt143o7z0TQ0d5AUSKZ8I9o,1372
+modularis/validator.py,sha256=oUNEgc3jxUw0PHrjJiiaXYBLu6nBKuDUtj3cCPrKd2E,1376
+modularis-0.1.1.dist-info/LICENSE,sha256=SuLwd-xiGPaITk9aHHfaKAMAdjUsOekjXSnLS3zWosw,1078
+modularis-0.1.1.dist-info/METADATA,sha256=8YsrvGNuDuyUQRWjb1Sa3GrqNdBxrYWja8AhbhIs7fM,6751
+modularis-0.1.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+modularis-0.1.1.dist-info/top_level.txt,sha256=vEp3VcuzE-zliYO_kncf0-v3kN5YVi35pKQR0tclQzI,10
+modularis-0.1.1.dist-info/RECORD,,
