@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: streamlit-browser-transcribe
+Version: 0.0.1
+Summary: Converts users speech to text and returns the transcribed text
+Home-page: 
+Author: Kk
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: devel
+License-File: LICENSE
+
+# streamlit-custom-component
+
+Streamlit component that allows you to do X
+
+## Installation instructions
+
+```sh
+pip install streamlit-browser-transcribe
+```
+
+## Usage instructions
+```python
+import streamlit as st
+
+from browser_transcribe import browser_transcribe
+
+value = browser_transcribe()
+
+st.write(value) # this value is the transcribed string
+```

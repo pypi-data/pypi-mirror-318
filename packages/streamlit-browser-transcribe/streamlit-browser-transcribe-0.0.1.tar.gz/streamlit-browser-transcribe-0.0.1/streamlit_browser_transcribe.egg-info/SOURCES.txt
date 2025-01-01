@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+browser_transcribe/__init__.py
+browser_transcribe/example.py
+browser_transcribe/frontend/index.html
+streamlit_browser_transcribe.egg-info/PKG-INFO
+streamlit_browser_transcribe.egg-info/SOURCES.txt
+streamlit_browser_transcribe.egg-info/dependency_links.txt
+streamlit_browser_transcribe.egg-info/requires.txt
+streamlit_browser_transcribe.egg-info/top_level.txt
