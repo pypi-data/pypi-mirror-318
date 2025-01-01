@@ -1,0 +1,17 @@
+llm_nexus/__init__.py,sha256=6oTNn0SgGk4FY3FufxI535U2GLD7_R3n_WjuB9a-hFI,972
+llm_nexus/model_provider.py,sha256=1POEl36jtcc3GjlkCoA2EtCgL9XrSiQM6LxIIJrMWjA,7102
+llm_nexus/_logging/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llm_nexus/_logging/log.py,sha256=C27MEiyHnAudQfwwOPUOu4Vv7gVitPomo0AN5Nj4q1s,1506
+llm_nexus/_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llm_nexus/_utils/completions.py,sha256=nk6QTMPQkVsoARl58w9IOrzdVg5X4mafDf1guWJ-n7M,563
+llm_nexus/_utils/function_calls.py,sha256=h2hxQWR_E0xdBZLislHCyF2kPKQlWVKKYzqRoYKULos,2121
+llm_nexus/providers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llm_nexus/providers/_anthropic_provider.py,sha256=okPOoyOarL12Mc6_yxLhA7sDWo4LanNTEVXuS89-ttI,8014
+llm_nexus/providers/_googleai_provider.py,sha256=yMf8g9vgOfjbq9SpnjP_udsgqepAHh89Xy6_W5fz38E,9306
+llm_nexus/providers/_model_interface.py,sha256=qQulA24sRj9tb5EE6cb2pM6teuuwa-8WmVtidOVALB8,2974
+llm_nexus/providers/_openai_provider.py,sha256=B9sXb2OmCtsRgbLMLF4PedUNivGp3PCvBu7m9nIgYcQ,8273
+llm_nexus-0.2.0.dist-info/LICENSE,sha256=c7mWAZRmiYqmD6FrljieTX8Z4Z80YjLPni2JrdBOgY0,1063
+llm_nexus-0.2.0.dist-info/METADATA,sha256=RyQ7t33DVyKIvHzUFmdA8wqChxZhCmIBgR4leBAe08c,4101
+llm_nexus-0.2.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+llm_nexus-0.2.0.dist-info/top_level.txt,sha256=OX73aVkOGbfvEJDDUYScfYP77Ps_cQG_EDolfzX_oFQ,10
+llm_nexus-0.2.0.dist-info/RECORD,,
