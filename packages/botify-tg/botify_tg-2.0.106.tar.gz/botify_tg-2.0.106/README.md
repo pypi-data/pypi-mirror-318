@@ -1,0 +1,70 @@
+<p align="center">
+    <a href="https://github.com/Botify/Botify">
+        <img src="https://raw.githubusercontent.com/Botify/artwork/master/artwork/Botify-logo.png" alt="Pyrogram" width="128">
+    </a>
+    <br>
+    <b>Telegram MTProto API Framework for Python</b>
+    <br>
+    <a href="https://Botify.org">
+        Homepage
+    </a>
+    •
+    <a href="https://docs.Botify.org">
+        Documentation
+    </a>
+    •
+    <a href="https://docs.Botify.org/releases">
+        Releases
+    </a>
+    •
+    <a href="https://t.me/Botify">
+        News
+    </a>
+</p>
+
+## Botify
+
+> [!NOTE]
+> The project is no longer maintained or supported. Thanks for appreciating it.
+
+> A Gen Z themed, elegant and asynchronous Telegram MTProto API framework in Python for users and bots
+
+``` python
+from Botify import Client, filters
+
+app = Client("my_account")
+
+
+@app.on_message(filters.private)
+async def hello(client, message):
+    await message.reply("Yo! Botify in the house! 🔥")
+
+
+app.run()
+```
+
+**Botify** is a modern, Gen Z-styled [MTProto API](https://docs.Botify.org/topics/mtproto-vs-botapi)
+framework. It lets you vibe with the Telegram API through your own account (custom client) or a bot
+identity (bot API alternative) using Python.
+
+### Key Features
+
+- **Ready**: Get Botify with pip and start creating your cool stuff right away ⚡
+- **Easy**: Makes the Telegram API super chill and intuitive, while keeping the power moves possible
+- **Aesthetic**: Clean vibes with abstracted low-level details for a smoother experience ✨
+- **Fast**: Powered up by [TgCrypto](https://github.com/Botify/tgcrypto), a high-performance cryptography library written in C 🚀
+- **Type-hinted**: Everything's type-hinted for that perfect editor support, no cap
+- **Async**: Fully asynchronous (but can keep it old school with sync if that's your thing)
+- **Powerful**: Full access to Telegram's API to do literally anything the official client can do, and then some
+
+### Installing
+
+``` bash
+pip3 install Botify
+```
+
+### Resources
+
+- Hit up the docs at https://docs.Botify.org to learn the ways of Botify and level up your 
+development game with some serious knowledge
+- Join our vibe tribe at https://t.me/Botify for all the latest updates and announcements 💯
