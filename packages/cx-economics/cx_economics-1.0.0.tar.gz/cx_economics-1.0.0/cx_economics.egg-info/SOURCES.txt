@@ -1,0 +1,13 @@
+CHANGELOG.md
+LICENSE.txt
+MANIFEST.in
+README.md
+__init__.py
+cx_economics.py
+cx_economics_updated.py
+requirements.txt
+setup.py
+cx_economics.egg-info/PKG-INFO
+cx_economics.egg-info/SOURCES.txt
+cx_economics.egg-info/dependency_links.txt
+cx_economics.egg-info/top_level.txt
