@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: wiki2md
+Version: 0.1.1
+Summary: python library for converting wikipedia articles to markdown
+Home-page: https://gitlab.wikimedia.org/repos/future-audiences/wiki2md
+License: MIT
+Keywords: wikimedia,api,python
+Author: Daniel Erenrich
+Author-email: derenrich@wikimedia.org
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: httpx (>=0.27.0,<0.28.0)
+Requires-Dist: markdownify (>=0.14.1,<0.15.0)
+Requires-Dist: pydantic (>=2.7.1,<3.0.0)
+Project-URL: Repository, https://gitlab.wikimedia.org/repos/future-audiences/wiki2md
+Description-Content-Type: text/markdown
+
+# Wiki2Md
+
+An opinionated tool for converting wikipedia HTML into markdown suitable for ingestion by LLMs.
+
+- removes citations (.reference)
+- removes ref list (.reflist)
+- removes js table headers and footers (.pcs-collapse-table-icon)
+- removes metadata like portal lists (.metadata)
+- removes flag icons
+- optionally removes links
+
+Install the pre-commit hooks with `poetry run pre-commit install` or just run them manually e.g. `poetry run ruff check`
+
