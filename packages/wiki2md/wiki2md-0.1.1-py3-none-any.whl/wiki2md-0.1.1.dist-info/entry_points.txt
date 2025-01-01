@@ -1,0 +1,3 @@
+[console_scripts]
+your-command=wiki2md.__main__
+
