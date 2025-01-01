@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+dffs/__init__.py
+dffs/cli.py
+dffs/utils.py
+dffs.egg-info/PKG-INFO
+dffs.egg-info/SOURCES.txt
+dffs.egg-info/dependency_links.txt
+dffs.egg-info/entry_points.txt
+dffs.egg-info/requires.txt
+dffs.egg-info/top_level.txt
+dffs/comm_x/__init__.py
+dffs/diff_x/__init__.py
+dffs/git_diff_x/__init__.py
