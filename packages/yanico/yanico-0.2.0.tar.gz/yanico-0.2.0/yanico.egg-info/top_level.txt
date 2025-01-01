@@ -1,0 +1,6 @@
+dist
+htmlcov
+testmanga
+testvenv
+venv
+yanico
