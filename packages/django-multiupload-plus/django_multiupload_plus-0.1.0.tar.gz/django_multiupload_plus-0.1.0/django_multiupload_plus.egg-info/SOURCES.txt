@@ -1,0 +1,17 @@
+AUTHORS
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+django_multiupload_plus.egg-info/PKG-INFO
+django_multiupload_plus.egg-info/SOURCES.txt
+django_multiupload_plus.egg-info/dependency_links.txt
+django_multiupload_plus.egg-info/not-zip-safe
+django_multiupload_plus.egg-info/requires.txt
+django_multiupload_plus.egg-info/top_level.txt
+multiupload_plus/__init__.py
+multiupload_plus/fields.py
+multiupload_plus/tests/__init__.py
+multiupload_plus/tests/test_field.py
+multiupload_plus/tests/test_input.py
+multiupload_plus/tests/utils.py
