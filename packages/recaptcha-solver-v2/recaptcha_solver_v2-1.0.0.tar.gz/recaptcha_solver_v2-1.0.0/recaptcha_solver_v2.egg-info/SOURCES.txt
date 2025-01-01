@@ -1,0 +1,7 @@
+README.md
+setup.py
+recaptcha_solver_v2.egg-info/PKG-INFO
+recaptcha_solver_v2.egg-info/SOURCES.txt
+recaptcha_solver_v2.egg-info/dependency_links.txt
+recaptcha_solver_v2.egg-info/requires.txt
+recaptcha_solver_v2.egg-info/top_level.txt
