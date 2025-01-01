@@ -1,0 +1,2 @@
+[console_scripts]
+backpack = backpack_checker.app:run
