@@ -1,0 +1,5 @@
+requests>=2.25.0
+pytest>=6.0.0
+pyyaml>=5.4.0
+jsonpath_ng>=1.7.0
+lljz-tools>=0.3.7

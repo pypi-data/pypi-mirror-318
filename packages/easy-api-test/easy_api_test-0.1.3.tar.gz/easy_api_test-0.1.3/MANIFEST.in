@@ -1,0 +1,3 @@
+include reports/bootstrap.min.css
+include reports/jquery.min.js
+include reports/echarts.min.js
