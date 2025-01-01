@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/apex_code/__init__.py
+src/apex_code.egg-info/PKG-INFO
+src/apex_code.egg-info/SOURCES.txt
+src/apex_code.egg-info/dependency_links.txt
+src/apex_code.egg-info/top_level.txt
+src/apex_code/math/__init__.py
+src/apex_code/math/linear_algebra/__init__.py
+src/apex_code/math/linear_algebra/matrix.py
