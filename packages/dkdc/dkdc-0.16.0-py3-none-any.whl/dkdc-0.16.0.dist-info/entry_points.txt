@@ -1,0 +1,5 @@
+[console_scripts]
+dc = dkdc.ui.cli:app
+dk = dkdc.ui.cli:app
+dkcd = dkdc.ui.cli:app
+dkdc = dkdc.ui.cli:app
