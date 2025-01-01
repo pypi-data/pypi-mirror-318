@@ -1,0 +1,11 @@
+figma/endpoints.py,sha256=GLN9dpDZXPrCijJ5_2eNQmQx3WPng4GZs52dlVx6lDY,1245
+figma/frame.py,sha256=INAG0eDI3j7HoAYqjxNTTW1smn61ftjBaVe9UqqUzUQ,5476
+figma/node.py,sha256=B-mF0zp8H3dgBIIQzjuDLh5yToU9_Jr8yQXw6gzJWl4,90327
+figma/vector_elements.py,sha256=qEABp0siJkz88Uc8QkyCRxrBN9wvaqckvQJywPHaJag,4125
+gui/__main__.py,sha256=L2DwINSoGwcZ1iweS-smtB5iVbSVhToQ5Khjd7jYNHs,2724
+figmaflet-0.0.1.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+figmaflet-0.0.1.dist-info/METADATA,sha256=V4Cncv--HYeowX1zkunY1yN2LH2LRuwRvmUpj0G-fiA,3613
+figmaflet-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+figmaflet-0.0.1.dist-info/entry_points.txt,sha256=GheCJ0aPdO1_2moOT9PlP-b5ImCSIrQ8cJS7jVKj8m0,54
+figmaflet-0.0.1.dist-info/top_level.txt,sha256=z6NYjYUjuMcN5kGoUG6tcYzVA_MzMq6Eft2mnFjA8hk,10
+figmaflet-0.0.1.dist-info/RECORD,,

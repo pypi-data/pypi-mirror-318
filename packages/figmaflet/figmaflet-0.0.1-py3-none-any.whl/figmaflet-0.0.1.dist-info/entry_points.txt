@@ -1,0 +1,2 @@
+[console_scripts]
+figmaflet = figmaflet.__main__:main
