@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+kamera/__init__.py
+kamera/app.py
+kamera/camera.py
+kamera/settings.py
+kamera.egg-info/PKG-INFO
+kamera.egg-info/SOURCES.txt
+kamera.egg-info/dependency_links.txt
+kamera.egg-info/entry_points.txt
+kamera.egg-info/requires.txt
+kamera.egg-info/top_level.txt
+kamera/static/styles.css
+kamera/templates/index.html
