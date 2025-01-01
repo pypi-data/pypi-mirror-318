@@ -1,0 +1,12 @@
+omicron_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+omicron_utils/_version.py,sha256=IBUgg21Ew0JtWj9Z6eN1r4zXlrNseQQNV4zo-nYzlEY,413
+omicron_utils/check_certs.py,sha256=dSyg5pK_CqnKChuPJl0m9WlTXpuFWsgJ6LtuQT9JeQk,1940
+omicron_utils/conda_fns.py,sha256=zVyK-boPbtSDo9kjqzKvf9kRH9LAeTlFr_tpvqqfC_Y,3718
+omicron_utils/histogram_plot.py,sha256=Be3eBtXzK58hFgBh3FpfLcie_RAIZ1k6AqYok-3rWXY,2330
+omicron_utils/ligoomicron.ini,sha256=o5oSlto1nXhZ2UgP11uMoJOT8lkRoj8jx7uEGQtrKb0,1475
+omicron_utils/omicron_config.py,sha256=a4eDCTxpLH92c3KXxz_ekkmc4saICjAqBDtL3kTi9f0,4455
+omicron_utils-0.0.10.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+omicron_utils-0.0.10.dist-info/METADATA,sha256=jxjMcSQ7afkpEoFtKN3WgAFQJfS9O3jm85jo3qaBph8,7295
+omicron_utils-0.0.10.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+omicron_utils-0.0.10.dist-info/top_level.txt,sha256=muRbsa3cn7NgHy4z46DxgUJkhC7eQrOvJgeqeYQDvTc,14
+omicron_utils-0.0.10.dist-info/RECORD,,
