@@ -1,0 +1,8 @@
+{
+    "report_id": "agent_metrics",
+    "report_args": {
+        "st": 1734692078,
+        "et": 1734728037,
+        "cluster": "integrationc2reinstall"
+    }
+}

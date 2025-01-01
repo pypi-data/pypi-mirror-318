@@ -1,0 +1,101 @@
+{% if error %}
+### An error was encountered while generating the report
+{{ error.message }}
+
+{% else %}
+# Cluster RBAC and IAM Analysis
+---
+
+**Cluster:** *{{ cluster_name }}*
+
+**Reporting time:** *{{ time }}*
+
+This report identifies all Deployments, StatefulSets and DaemonsSets present at time of
+reporting, that are running under a service account. The findings are summarized in two sections:
+
+### 1. [IAM Flag findings](#flags)
+Any IAM related flags raised during this reporting period, related to drift or unsafe practices
+
+### 2. [Service Account Access Review](#service-account-access-review)
+A configuration summary of
+- which kubernetes roles or clusterroles are associated with these service accounts,
+- what Kubernetes permissions these roles grant
+- if the service accounts is associated with an AWS IAM role through an annotation, the
+  associated AWS IAM role and its permissions
+
+---
+
+# IAM flags {{ '{' }}#flags{{ '}' }}
+
+Spyderbat monitors your cluster configuration on an ongoing basis for specific IAM related issues.
+
+## 1. Drift
+We look for changes in the IAM configuration of your cluster. If we detect a change we will create a flags
+for awareness.
+We look for the following changes:
+- Service accounts that were
+  - created during this reporting period
+  - deleted during this reporting period
+  - or changed during this reporting period
+- Kubernetes roles or cluster roles that were
+  - created during the reporting period
+  - deleted during the reporting period
+  - or changed during the reporting period
+- If your environment is monitored with a spyderbat AWS agent: AWS IAM roles
+  - created during the reporting period
+  - deleted during the reporting period
+  - or changed during the reporting period
+
+## 2. Unsafe Practices
+Spyderbat will monitor for unsafe configurations of your Kubernetes Role permissions and create flags for awareness.
+
+## Flags identified during this reporting period
+{% if flags %}
+The following are the IAM related flags raised during this reporting period:
+{% if role_flag_grid %}
+```grid
+{{ role_flag_grid}}
+```
+{% endif %}
+
+{% if svc_acc_flag_grid %}
+```grid
+{{ svc_acc_flag_grid }}
+```
+{% endif %}
+
+{% else %}
+No IAM related flags were raised during this reporting period.
+{% endif %}
+
+---
+
+# Service Account Access Review {{ '{' }}#service-account-access-review{{ '}' }}
+{% for namespace in resources %}
+
+## **Namespace {{ namespace.namespace }}**
+
+{% for resource in namespace.data %}
+### {{ resource.kind }} {{ resource.name }}
+#### **Runs Using Service Account: {{ resource.service_account }}**
+{% if resource.has_k8s_role %}
+- Kubernetes roles associated with this service account, and the permissions they grant:
+```grid
+{{ resource.k8s_rbac_grid }}
+```
+{% else %}
+- No Kubernetes roles are associated with this service account.
+{% endif %}
+
+{% if resource.has_aws_role %}
+- AWS IAM roles associated with this service account, and the permissions they grant:
+```grid
+{{ resource.aws_rbac_grid }}
+```
+{% else %}
+- No AWS IAM roles are associated with this service account.
+{% endif %}
+{% endfor %}
+---
+{% endfor %}
+{% endif %}
