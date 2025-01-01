@@ -1,0 +1,50 @@
+Metadata-Version: 2.3
+Name: unitea
+Version: 0.0.1
+Summary: Minimal game engine to play games on your text editor.
+Author-email: Giorgos Margaritis <gmargari@protonmail.com>
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Project-URL: Home, https://github.com/gmargari/
+
+# UniTEA
+
+Minimal game engine to play games[^1] on your text editor.
+[^1]: we call these games "text-edit adventures", or TEAs.
+
+## Install
+
+```sh
+python3 -m venv venv
+source venv/bin/activate
+```
+Note that you may have to install per-game dependencies, but related information will be shown when needed.
+
+## Run
+
+```sh
+source venv/bin/activate
+python3 unitea/unitea.py game.txt
+```
+
+Then open `game.txt` with your text editor, or open it with our sample minimal editor:
+```sh
+python3 unitea/unitea-editor.py game.txt
+```
+
+## Play
+
+Enter one of the following in the editor and save file:
+```
+tictactoe
+hangman abomination
+ink unitea/games/ink/example/intercept.ink.json
+```
+
+## Adding Game
+
+To add a new game 'MyGame':
+```bash
+python3 unitea/unitea.py --create mygame
+```
+
