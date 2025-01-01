@@ -1,0 +1,9 @@
+reotp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+reotp/__main__.py,sha256=9CFkBKRoClHVqUIA2LIfuJeriOrqBIZwyExWrjwv0O8,9643
+reotp/otp_schema.proto,sha256=V9hngakC8e8NlHduJnrefLgRcXzQANvMbYR8-ZadC4E,935
+reotp/pbotp.py,sha256=KJZRZeZKL1ZCBcOrlISBmQX8Z4fTf6ZdrhRx-k4Phjc,2899
+reotp-0.2.0.dist-info/METADATA,sha256=X0ifKe3o0nsBuN2I7B4Bi1Pb5Hgf6ntxKeW-7BUodaA,6147
+reotp-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+reotp-0.2.0.dist-info/entry_points.txt,sha256=zcvUq3pxr2mCeiTf8R6Raly1S1Scx_am2z9GYqLdqlo,46
+reotp-0.2.0.dist-info/licenses/LICENSE.md,sha256=_4DGwilfosUtgwJ8ON-uc8TOSMLV-rrDtwu1HVUCpIw,1056
+reotp-0.2.0.dist-info/RECORD,,

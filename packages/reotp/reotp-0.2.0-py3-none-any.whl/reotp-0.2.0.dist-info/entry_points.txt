@@ -1,0 +1,2 @@
+[console_scripts]
+reotp = reotp:__main__.main
