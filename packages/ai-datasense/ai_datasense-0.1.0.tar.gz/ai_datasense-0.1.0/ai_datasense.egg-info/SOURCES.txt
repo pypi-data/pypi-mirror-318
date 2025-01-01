@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+ai_datasense/__init__.py
+ai_datasense/core.py
+ai_datasense/utils.py
+ai_datasense.egg-info/PKG-INFO
+ai_datasense.egg-info/SOURCES.txt
+ai_datasense.egg-info/dependency_links.txt
+ai_datasense.egg-info/requires.txt
+ai_datasense.egg-info/top_level.txt

@@ -1,0 +1,19 @@
+[project]
+name = "ai_datasense"
+version = "0.1.0"
+description = "AI-powered data insights and anomaly detection"
+readme = "README.md"
+authors = [
+    { name = "Ahmed Bin Khalid", email = "ahmed.khalid2108@gmail.com" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.7"
+dependencies = [
+    "pandas>=1.0",
+    "matplotlib>=3.0",
+    "openai>=1.0"
+]
+
+[project.urls]
+Repository = "https://github.com/abkmy/ai_datasense"
+Documentation = "https://github.com/abkmy/ai_datasense/wiki"
