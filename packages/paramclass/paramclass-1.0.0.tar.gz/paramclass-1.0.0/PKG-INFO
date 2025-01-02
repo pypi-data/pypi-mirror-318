@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: paramclass
+Version: 1.0.0
+Summary: Automatically parameterized classes.
+Home-page: https://github.com/philip-s-martin/paramclass
+Author: Philip Martin
+Author-email: philipscottmartin01@gmail.com
+Project-URL: Bug Tracker, https://github.com/philip-s-martin/paramclass/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
