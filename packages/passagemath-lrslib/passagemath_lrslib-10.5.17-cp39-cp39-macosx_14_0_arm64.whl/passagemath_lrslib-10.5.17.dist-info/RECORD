@@ -1,0 +1,17 @@
+passagemath_lrslib-10.5.17.dist-info/RECORD,,
+passagemath_lrslib-10.5.17.dist-info/WHEEL,sha256=33SGCmbFP4YHkyNsWyCYGV8gvnkzQJiN4HbqX52K1iQ,107
+passagemath_lrslib-10.5.17.dist-info/top_level.txt,sha256=hibFyzQHiLOMK68qL1OWsNKaXOmSXqZjeLTBem6Yy7I,5
+passagemath_lrslib-10.5.17.dist-info/METADATA,sha256=-q2UyhjtMSSvwJqIJiHNFfjF6kbJdXEhpt6oj3dJNow,3966
+passagemath_lrslib.dylibs/liblrs.0.dylib,sha256=2EubShZ6U5ur30K11w-4jkntXZhQILi-RO8nw2WxhqQ,314064
+passagemath_lrslib.dylibs/libgmp.10.dylib,sha256=VjSzwHwGcHUcSsdxe15d2fACYUyIH6GTVBHjjPJS1pA,606176
+sage_wheels/bin/lrs,sha256=eprX3ZLTt95pLqfnohT7guNRnDk4FS67BSNWtOzWUxg,52416
+sage_wheels/bin/setnash,sha256=XPp_EB1nuth8_0VYFBLx8kSlhoN3UicW1ONVp5fEp88,155208
+sage_wheels/bin/redund,sha256=kIk616wrIC4-oJAFc7QgxGkoC1zxU9qOsxxigvUb-ls,52416
+sage_wheels/bin/2nash,sha256=UKM9euDCNDSlr8neYnbwakigInyJkAjUAvOExvN4E44,34472
+sage_wheels/bin/setnash2,sha256=kcV9YREPEy5ZFFpjmTjnwC2-rRb2vYl5peIKfHaDeYY,155208
+sage_wheels/bin/lrs1,sha256=xDyGK9lOSCAlLNf6H024UNVAJnunaEVq3BHuqYWwX-c,122472
+sage_wheels/bin/redund1,sha256=3JxxmVg4hJcOr5DVQwBIjNds3Dg-UhZqV-bh0se_164,122488
+sage_wheels/bin/lrsnash,sha256=Pg3653t1GdyDAYysl5Slvlyj3SPb_o6iW9d7rKQhHMU,92912
+sage/all__sagemath_lrslib.py,sha256=Z9TXsdDthYrVcegr2qSk0Gegd5akHQrOO8DY7RtGXUg,89
+sage/libs/all__sagemath_lrslib.py,sha256=fKY-tQ-YTmUyE7Y7aQ491M_qa4yAUblJYW6vwVRLUCQ,45
+sage/libs/lrslib.cpython-39-darwin.so,sha256=U5TZyZhflmBFtm7LLptdmBXJSuzkAfP8mX57SnIk0_0,55416
