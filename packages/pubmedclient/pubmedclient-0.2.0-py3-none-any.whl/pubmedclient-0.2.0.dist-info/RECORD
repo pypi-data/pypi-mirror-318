@@ -1,0 +1,7 @@
+pubmedclient/__init__.py,sha256=Zn1KFblwuFHiDRdRAiRnDBRkbPttWh44jKa5zG2ov0E,22
+pubmedclient/models.py,sha256=WjZYiyZDA3fzwR21Bl36KCoVNVwJu4tE5i_5eJM_-QI,19886
+pubmedclient/sdk.py,sha256=iQ01B1JQHx1K_UyHMyOz40ifqTUXJRaFq_ROHdSx3LM,7343
+pubmedclient-0.2.0.dist-info/METADATA,sha256=B2SUzAhcERP6oTAHmeGtqRQV8x1rKu77LEZPb35TK_A,2325
+pubmedclient-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pubmedclient-0.2.0.dist-info/licenses/LICENSE,sha256=5adbLHoJYnsGcl3ganOwDhtee8xmKpbWxwrH24z7aTw,1073
+pubmedclient-0.2.0.dist-info/RECORD,,
