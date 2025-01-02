@@ -1,0 +1,10 @@
+biopython
+igraph
+rich
+click
+leidenalg
+questionary
+bio
+scikit-learn
+plotly
+kaleido

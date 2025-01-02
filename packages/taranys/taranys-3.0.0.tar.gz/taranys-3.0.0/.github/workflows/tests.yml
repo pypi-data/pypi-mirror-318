@@ -1,0 +1,37 @@
+name: tests ci
+# This workflow runs the pipeline with the minimal test dataset to check 
+# is completed without any errors
+on:
+    pull_request:
+    push:
+
+jobs:
+  test_analyze_schema:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Miniconda
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          activate-environment: taranys_env
+          environment-file: environment.yml
+
+      - name: Verify Conda environment
+        run: conda env list
+
+      - name: Activate env and install taranys
+        run: |
+          source $CONDA/etc/profile.d/conda.sh
+          conda activate taranys_env
+          python -m pip install .
+          taranys analyze-schema -i  test/MLST_listeria/analyze_schema -o analyze_schema_test  --cpus 1 --output-allele-annot --remove-no-cds --remove-duplicated --remove-subset
+
+      - name: Testing Reference allele
+        run: |
+          source $CONDA/etc/profile.d/conda.sh
+          conda activate taranys_env
+          taranys reference-alleles -s test/MLST_listeria/reference_allele -o reference_allele_test --cpus 1 
+          
