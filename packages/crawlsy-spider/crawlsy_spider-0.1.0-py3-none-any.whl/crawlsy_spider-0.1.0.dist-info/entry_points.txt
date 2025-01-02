@@ -1,0 +1,3 @@
+[console_scripts]
+crawlsy-spider=crawlsy_spider.cli:cli
+
