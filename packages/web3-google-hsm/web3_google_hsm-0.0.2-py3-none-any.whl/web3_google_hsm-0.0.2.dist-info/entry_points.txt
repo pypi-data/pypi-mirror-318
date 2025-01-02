@@ -1,0 +1,2 @@
+[console_scripts]
+web3-google-hsm = web3_google_hsm._cli:cli
