@@ -1,0 +1,8 @@
+USBMonitorUtilsLib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+USBMonitorUtilsLib/attiributes.py,sha256=q17Blf1yllaHWReR91BJDRp-Hst8uwkT_Jw8_rM4iTg,631
+USBMonitorUtilsLib/usb_monitor.c,sha256=iTVPd7D2f0n9k4JLUnbVi99ZxzZxfX8mnreby2-AdRk,193022
+USBMonitorUtilsLib/usb_monitor.cp312-win_amd64.pyd,sha256=20hvU1M0Gnqq5aN2U2za0OpCGngTzUAy-sVRm-CEIhA,23552
+usb_monitor_utils_lib-0.2.10.dist-info/METADATA,sha256=jwOniUrWPbqGJ0jZ1JVqhSzUyBlPQkhQXlNH0q3iIK8,652
+usb_monitor_utils_lib-0.2.10.dist-info/WHEEL,sha256=pWXrJbnZSH-J-PhYmKs2XNn4DHCPNBYq965vsBJBFvA,101
+usb_monitor_utils_lib-0.2.10.dist-info/top_level.txt,sha256=2cIngxJPUORV3OaoQRPjax_AlRgHA6pS72WhpqDq6Pg,19
+usb_monitor_utils_lib-0.2.10.dist-info/RECORD,,
