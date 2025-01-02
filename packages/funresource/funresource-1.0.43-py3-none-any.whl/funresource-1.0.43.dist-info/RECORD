@@ -1,0 +1,14 @@
+funresource/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+funresource/run.py,sha256=MNNUvJKqYs19Z1V6ajq6DVkzGOcazinfqqZL85dAky0,1012
+funresource/db/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+funresource/db/base.py,sha256=ZK7XBTV2qPtM3pBsDeR-k23gOFs-H5O3HKM3P4EPzCk,6510
+funresource/generator/__init__.py,sha256=L6gdCRvEkNbtXfDYdLgBZno_kXUQgYuRZBoqkbecK_M,203
+funresource/generator/acoooder.py,sha256=9mNAfg5xhHq4GiSHfGhmdF1CdDKpmm_S_0fg96q8FUo,3115
+funresource/generator/base.py,sha256=a5UYOQWgW7EBW83Nl_LlHtdg9XO38O76vh7NY_nVtyw,724
+funresource/generator/rss.py,sha256=CYWhzO_CboMnr_nRmCGXnS5MqdQGtKLOCuNYU2k9krs,1617
+funresource/generator/telegram.py,sha256=CsQY2eI4Jr4cIvMNdEAMHbXKvehMnDLSxOy53ETEcnc,3559
+funresource-1.0.43.dist-info/METADATA,sha256=GEevtgYaEU939DKqsxuNd-FaJs_Ny4IMFQ4_oT9b3wc,418
+funresource-1.0.43.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+funresource-1.0.43.dist-info/entry_points.txt,sha256=WiBzLLktPBXIo4Cs02gFP9Dsjl0AFr6bv1OdWeHUQow,60
+funresource-1.0.43.dist-info/top_level.txt,sha256=98H8P0cp9yMDc52XuGjYFevUdZafCZoGOVYGvyrJAH8,12
+funresource-1.0.43.dist-info/RECORD,,
