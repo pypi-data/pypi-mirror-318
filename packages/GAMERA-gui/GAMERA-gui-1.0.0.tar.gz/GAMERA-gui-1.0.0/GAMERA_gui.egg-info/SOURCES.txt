@@ -1,0 +1,10 @@
+LICENSE
+README.md
+gamera_gui.py
+setup.py
+GAMERA_gui.egg-info/PKG-INFO
+GAMERA_gui.egg-info/SOURCES.txt
+GAMERA_gui.egg-info/dependency_links.txt
+GAMERA_gui.egg-info/entry_points.txt
+GAMERA_gui.egg-info/requires.txt
+GAMERA_gui.egg-info/top_level.txt
