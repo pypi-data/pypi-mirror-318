@@ -1,0 +1,12 @@
+pytest_md_report/__init__.py,sha256=uv3bF4GEVTAju_JdmNPI82RYUbaDE49zR8AROHt1blI,394
+pytest_md_report/__version__.py,sha256=nT_tAbykudSfwbZAyasp900yK_-EdRBUA60fqTuOfsg,268
+pytest_md_report/_const.py,sha256=F6txoT_ETufYw30hLkDjqA03G9IxRYl7QNgqKftOFys,5730
+pytest_md_report/_style_filter.py,sha256=RSAmBASEWYkRCi3CGqDuqs3vkD2JmW12fr-HxRxczQQ,4470
+pytest_md_report/plugin.py,sha256=Kr76b11AMfL_fnLmPEltI6bWzUhG91WZE6rGDUV8Dc8,18646
+pytest_md_report/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_md_report-0.6.3.dist-info/LICENSE,sha256=DPjhq_DmhAXPL-pV6Y3GkMLkRna0gJUhtZO2jmgBDr0,1079
+pytest_md_report-0.6.3.dist-info/METADATA,sha256=bU99RNgS12aBLUpKQmcdxyyAmDG6ikweYbPSRJlopj4,20308
+pytest_md_report-0.6.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pytest_md_report-0.6.3.dist-info/entry_points.txt,sha256=xSWZB5ZB_MzpwjZYuA_7hDxZJcsCbIAK6amPmYdTPwM,54
+pytest_md_report-0.6.3.dist-info/top_level.txt,sha256=R0CGWQdahoC4eFGVdBKLMsdvbUr0YETwLaWeOVqfyIc,17
+pytest_md_report-0.6.3.dist-info/RECORD,,
