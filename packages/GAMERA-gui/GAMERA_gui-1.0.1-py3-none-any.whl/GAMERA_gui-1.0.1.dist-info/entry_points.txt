@@ -1,0 +1,2 @@
+[console_scripts]
+gamera-gui = gameragui:main
