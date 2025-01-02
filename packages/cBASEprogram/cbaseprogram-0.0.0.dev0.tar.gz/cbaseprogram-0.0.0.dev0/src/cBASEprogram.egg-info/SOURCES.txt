@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+src/cBASEprogram/__init__.py
+src/cBASEprogram/__main__.py
+src/cBASEprogram.egg-info/PKG-INFO
+src/cBASEprogram.egg-info/SOURCES.txt
+src/cBASEprogram.egg-info/dependency_links.txt
+src/cBASEprogram.egg-info/top_level.txt
+src/cBASEprogram/tests/__init__.py
+src/cBASEprogram/tests/test_1984.py
