@@ -1,0 +1,12 @@
+my_commandline_tool/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+my_commandline_tool/cli.py,sha256=BKQYhQ5f2nEcyw7ysOIlvbZbBGp3w9xvrLKtV5GiMeg,6553
+my_commandline_tool/core_test_2.py,sha256=rpn3v0WZLXtWrgOk8XJHq6xcbYstdoX8vswgHJuENHw,17693
+my_commandline_tool/core_test_3.py,sha256=jnahuNaMZL2QZl_tKoczrx3USEHz-xdh_Yl8jVss2dA,17272
+my_commandline_tool/orthogroups_identity.py,sha256=518URqHypReGFvPUCZg61XZskYSCnnIyr5pIj6wqHm0,3930
+my_commandline_tool/run_blast_diamond.py,sha256=eab212CcZrVW9VblkhRKDkI2g86zwXo2JRZfjCUGBE0,3941
+my_commandline_tool/run_interproscan_2.py,sha256=ZcbSkAf9ZXyYf42kGz9uZidllIhXBiPvwQNjCNBOzsA,4709
+my_commandline_tool-0.6.4.dist-info/METADATA,sha256=BGgqAXBQAtRhxk0BVpfhsaAwKDsbZNmhvsZQG7pa3Hk,372
+my_commandline_tool-0.6.4.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+my_commandline_tool-0.6.4.dist-info/entry_points.txt,sha256=5JJ2XQildn1MxYdRh8_MIXn20F5xXTpOFqFSwW_NaZE,55
+my_commandline_tool-0.6.4.dist-info/top_level.txt,sha256=H0GrUxnAVkVMezt_C2FylOg5DfiYfc7mp7x-1B8y78k,20
+my_commandline_tool-0.6.4.dist-info/RECORD,,

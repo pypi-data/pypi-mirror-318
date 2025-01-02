@@ -1,0 +1,2 @@
+[console_scripts]
+mycli = my_commandline_tool.cli:main
