@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+audiocat_clark/__init__.py
+audiocat_clark/audiocat.py
+audiocat_clark/mmrx.py
+audiocat_clark.egg-info/PKG-INFO
+audiocat_clark.egg-info/SOURCES.txt
+audiocat_clark.egg-info/dependency_links.txt
+audiocat_clark.egg-info/entry_points.txt
+audiocat_clark.egg-info/top_level.txt
