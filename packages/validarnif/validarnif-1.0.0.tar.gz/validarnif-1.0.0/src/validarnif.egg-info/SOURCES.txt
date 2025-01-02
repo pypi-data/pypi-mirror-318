@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/validarnif/__init__.py
+src/validarnif/validadores.py
+src/validarnif.egg-info/PKG-INFO
+src/validarnif.egg-info/SOURCES.txt
+src/validarnif.egg-info/dependency_links.txt
+src/validarnif.egg-info/requires.txt
+src/validarnif.egg-info/top_level.txt
+tests/test_validar_nif_nie_cif.py
