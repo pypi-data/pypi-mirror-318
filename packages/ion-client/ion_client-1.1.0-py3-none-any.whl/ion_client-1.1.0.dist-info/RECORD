@@ -1,0 +1,8 @@
+ion_client/__init__.py,sha256=xihyTD1kQUR2WxcJESvHtit1Bxo9xsTHoWci2VtonVY,131
+ion_client/client.py,sha256=GA11Xq2Tnqkkq2ENPrDfWxGe8XwMHTmXtiG2m2u-aOw,1878
+ion_client/logger.py,sha256=TZrH6ZhxnWINwoUyv4ZByewpEHAY96423GbuppJhpo8,57
+ion_client/sso.py,sha256=1KPUuHwnUl4tbgHBrZttXtvMGdQF2iSRLsj6SiatxK8,2984
+ion_client-1.1.0.dist-info/LICENSE,sha256=VrS6D0TFjPVh-hg6aerhCfRXjDncPnOS7DVVJRkrnZo,1071
+ion_client-1.1.0.dist-info/METADATA,sha256=70HwniHpYelLcxwbWLJ5NJRbY5CQuOa0bDT85Je5q3w,1410
+ion_client-1.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+ion_client-1.1.0.dist-info/RECORD,,
