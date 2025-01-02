@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+storage_bridge/__init__.py
+storage_bridge/local.py
+storage_bridge/s3.py
+storage_bridge/storage.py
+storage_bridge.egg-info/PKG-INFO
+storage_bridge.egg-info/SOURCES.txt
+storage_bridge.egg-info/dependency_links.txt
+storage_bridge.egg-info/requires.txt
+storage_bridge.egg-info/top_level.txt
