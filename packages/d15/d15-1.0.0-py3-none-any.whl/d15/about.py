@@ -1,0 +1,7 @@
+__title__: str = "d15"
+__version__: str = "1.0.0"
+__summary__: str = "D15 text-to-image model library"
+__uri__: str = "https://github.com/justindujardin/d15"
+__author__: str = "Justin DuJardin"
+__email__: str = "justin@dujardinconsulting.com"
+__license__: str = "Apache 2.0"

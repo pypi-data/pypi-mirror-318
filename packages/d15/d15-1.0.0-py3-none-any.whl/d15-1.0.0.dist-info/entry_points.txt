@@ -1,0 +1,2 @@
+[console_scripts]
+d15 = d15.cli:app
