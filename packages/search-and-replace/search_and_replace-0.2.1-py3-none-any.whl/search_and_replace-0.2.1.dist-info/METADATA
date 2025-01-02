@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: search_and_replace
+Version: 0.2.1
+Summary: Command line utility to search and replace text in files
+Author: Alexander Kovrigin
+Author-email: alexander.kovrigin@jetbrains.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: click>=8.0.0
+Requires-Dist: requests>=2.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"

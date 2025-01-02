@@ -1,0 +1,3 @@
+[console_scripts]
+diff-apply = search_and_replace.diff_apply:main
+search-and-replace = search_and_replace.main:main
