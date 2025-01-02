@@ -1,0 +1,2 @@
+[console_scripts]
+jdv = java_dependency_viewer.cli:main

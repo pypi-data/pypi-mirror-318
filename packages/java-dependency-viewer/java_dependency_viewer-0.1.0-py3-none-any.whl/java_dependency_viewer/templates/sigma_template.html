@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Dependency Viewer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/2.4.0/sigma.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/graphology/0.25.4/graphology.umd.min.js"></script>
+    <style>
+      #container {
+        width: 100%;
+        height: 800px;
+        border: 1px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script>
+      fetch("data.json")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then((graphData) => {
+          // Create a graphology graph
+          const graph = new graphology.Graph({ directed: true });
+
+          // Add nodes
+          graphData.nodes.forEach((node) => {
+            graph.addNode(node.id, {
+              label: node.id,
+              x: Math.random(),
+              y: Math.random(),
+              size: 10,
+              color: "#4169e1",
+            });
+          });
+
+          // Add edges
+          graphData.edges.forEach((edge) => {
+            graph.addDirectedEdge(edge.source, edge.target, {
+              color: "#808080",
+              size: 2,
+            });
+          });
+
+          // Instantiate sigma.js and render the graph
+          const sigmaInstance = new Sigma(
+            graph,
+            document.getElementById("container"),
+            {
+              renderEdgeLabels: true,
+              defaultEdgeType: "arrow",
+            }
+          );
+        })
+        .catch((error) => {
+          console.error("Error fetching or rendering the graph:", error);
+        });
+    </script>
+  </body>
+</html>

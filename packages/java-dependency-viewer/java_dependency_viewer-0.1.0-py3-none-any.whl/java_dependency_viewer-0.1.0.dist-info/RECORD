@@ -1,0 +1,16 @@
+java_dependency_viewer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+java_dependency_viewer/analyzer.py,sha256=nAw6LBehmNNv28qY9Y6vmjcZJhxDjLNrwm4QPd18VLo,5201
+java_dependency_viewer/cli.py,sha256=THLT0259FirPNF5VtiBsnkUmIh2R_5_UdLac46QxkLg,2051
+java_dependency_viewer/graph.py,sha256=Y2bSePIbyBRNvsNX6d2CeILD7V59VBg1jq5AMJC3lAk,2604
+java_dependency_viewer/renderer.py,sha256=6c9kCGCsED-3z-l7qU8rfJLZp0g_zf8cSAfymyH7R0o,2502
+java_dependency_viewer/templates/cytoscape_template.html,sha256=-VQEVhuwOpwdrt8O2YO9Fl0fFvjVKJwRcSHhAFYPI9M,2238
+java_dependency_viewer/templates/sigma_template.html,sha256=KthKCSqMCl3LTUony_KLhQDg23BF8g4CMbxRvlVgFI0,1880
+java_dependency_viewer/templates/vis_template.html,sha256=wjNAvW6sgJ6_5qnhgvy32JrCDaD12y82viIy02ixvhA,1646
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_analyzer.py,sha256=UtBMo9LWS_TRQPLEGXJ14Y4H-LEEh-QS_i1qEHsO6_4,2169
+tests/test_graph.py,sha256=e16AmX6G6nhyKypcdiumElIsR_n9cnABq4hIV_ONW74,882
+java_dependency_viewer-0.1.0.dist-info/METADATA,sha256=ZU4J_U7yL_FeVyWUeWwPYj-1ToKT3mgLLO4I1qsIoHQ,1691
+java_dependency_viewer-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+java_dependency_viewer-0.1.0.dist-info/entry_points.txt,sha256=sL8bdRTw4EMNtJXXNpPVHS-tC1tbn5FE7YanDb51vRk,56
+java_dependency_viewer-0.1.0.dist-info/top_level.txt,sha256=6gjbjtSh5Esa663_hC5ssrDVMLFxIWbBI3zg5YymGuA,29
+java_dependency_viewer-0.1.0.dist-info/RECORD,,
