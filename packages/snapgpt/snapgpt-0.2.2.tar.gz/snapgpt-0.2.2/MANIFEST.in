@@ -1,0 +1,4 @@
+# ======= File: MANIFEST.in =======
+include README.md
+include LICENSE
+recursive-include snapgpt/resources *

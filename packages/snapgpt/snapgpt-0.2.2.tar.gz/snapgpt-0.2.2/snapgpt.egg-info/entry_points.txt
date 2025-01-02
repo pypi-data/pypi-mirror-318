@@ -1,0 +1,2 @@
+[console_scripts]
+snapgpt = snapgpt.cli.main:main
