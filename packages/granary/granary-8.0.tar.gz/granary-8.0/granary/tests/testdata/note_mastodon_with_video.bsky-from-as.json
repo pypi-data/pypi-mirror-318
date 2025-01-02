@@ -1,0 +1,7 @@
+{
+  "$type": "app.bsky.feed.post",
+  "text": "foo",
+  "fooOriginalText": "foo",
+  "fooOriginalUrl": "https://masto.foo/@alice/123",
+  "createdAt": "2023-03-09T14:55:03.000Z"
+}
