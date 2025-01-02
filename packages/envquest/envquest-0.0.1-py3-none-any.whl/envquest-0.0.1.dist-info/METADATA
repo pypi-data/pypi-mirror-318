@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: envquest
+Version: 0.0.1
+Summary: A collection of Reinforcement Learning algorithms to train autonomous agents in different environments.
+Author-email: Medric Sonwa <medric49@gmail.com>
+Project-URL: Homepage, https://github.com/medric49/rlstudio
+Project-URL: Issues, https://github.com/medric49/rlstudio/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fire>=0.7.0
+Requires-Dist: gymnasium[box2d]>=1.0.0
+Requires-Dist: imageio[ffmpeg,pyav]>=2.35.1
+Requires-Dist: opencv-python>=4.10.0.84
+Requires-Dist: pillow>=10.4.0
+Requires-Dist: torch>=2.5.1
+Requires-Dist: tqdm>=4.67.1
+Requires-Dist: wandb[media]>=0.19.1
+
+# RL Studio
+Play with reinforcement learning algorithms.
+
+## Requirements
+You need these requirements to run the project:
+* python >= 3.8
+* [uv](https://docs.astral.sh/uv/getting-started/installation/)
+* ffmpeg
+```shell
+# Linux
+sudo apt install ffmpeg
+# MacOS
+brew install ffmpeg
+```
+
+
+## Installation
+
+Install the python dependencies
+```shell
+uv venv .venv
+source .venv/bin/activate
+uv sync --frozen
+```
+
+Start a local WandB server to track your experiments
+```shell
+wandb server start
+```
+
+## Usage
+
+### Run a random policy agent
+Run a random agent in a Gym environment 
+```shell
+python -m scripts.run_random_agent
+```
+
+Read the python script for more information: [scripts/run_random_agent.py](scripts/run_random_agent.py)
+
+### Train Agents
+
+#### DQN Agent
+Train a DQN policy agent in a Gym environment
+```shell
+python -m scripts.train_dqn
+```
+
+Read the python script for more information: [scripts/train_dqn.py](scripts/train_dqn.py)
+
+
+#### Sarsa Agent
+Train a Sarsa policy agent in a Gym environment
+```shell
+python -m scripts.train_sarsa
+```
+
+Read the python script for more information: [scripts/train_sarsa.py](scripts/train_sarsa.py)
