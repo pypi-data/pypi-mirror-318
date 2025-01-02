@@ -1,0 +1,10 @@
+README.md
+setup.py
+communications_protocol/__init__.py
+communications_protocol/communications_protocol.py
+communications_protocol/utils.py
+communications_protocol.egg-info/PKG-INFO
+communications_protocol.egg-info/SOURCES.txt
+communications_protocol.egg-info/dependency_links.txt
+communications_protocol.egg-info/requires.txt
+communications_protocol.egg-info/top_level.txt
