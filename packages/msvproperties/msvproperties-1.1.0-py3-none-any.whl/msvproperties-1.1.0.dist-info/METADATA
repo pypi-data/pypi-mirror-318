@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: msvproperties
+Version: 1.1.0
+Summary: A Library for using in our CRM
+Home-page: https://github.com/alireza-msvproperties/msvproperties/
+Author: Alireza
+Author-email: alireza@msvproperties.net
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: ==3.9.6
+License-File: LICENSE
+Requires-Dist: asgiref==3.8.1
+Requires-Dist: certifi==2024.12.14
+Requires-Dist: charset-normalizer==3.4.0
+Requires-Dist: idna==3.10
+Requires-Dist: numpy==2.0.0
+Requires-Dist: pandas==2.2.3
+Requires-Dist: probableparsing==0.0.1
+Requires-Dist: python-crfsuite==0.9.11
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: pytz==2024.2
+Requires-Dist: requests==2.32.3
+Requires-Dist: six==1.17.0
+Requires-Dist: sqlparse==0.5.3
+Requires-Dist: typing_extensions==4.12.2
+Requires-Dist: tzdata==2024.2
+Requires-Dist: urllib3==2.2.3
+Requires-Dist: usaddress==0.5.11
