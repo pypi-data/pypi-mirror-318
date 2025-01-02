@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: teju
+Version: 0.0.1
+Summary: Python project bootstrapper using uv
+Home-page: https://github.com/shaneholloman/teju
+Author: Shane Holloman
