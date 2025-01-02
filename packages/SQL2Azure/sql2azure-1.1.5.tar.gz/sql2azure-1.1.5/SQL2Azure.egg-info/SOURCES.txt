@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+SQL2Azure.egg-info/PKG-INFO
+SQL2Azure.egg-info/SOURCES.txt
+SQL2Azure.egg-info/dependency_links.txt
+SQL2Azure.egg-info/requires.txt
+SQL2Azure.egg-info/top_level.txt
+sql2azure/__init__.py
+sql2azure/csv_loader.py
+sql2azure/json_loader.py
