@@ -1,0 +1,12 @@
+ainconv/__init__.py,sha256=FY5y0zBzr0ZT0CpV_fAP0SIZD3ElUpaQNWRaht46Yuo,669
+ainconv/detection.py,sha256=608JLG1FFn_7zOWKGyQDDMMPutNId-mIwuXF55zr438,1634
+ainconv/syllable.py,sha256=DXRmThQYplSQqHYbBW59yA_-G9CA8CjTXUrTnxw4dOM,2111
+ainconv/utils.py,sha256=q8-ogzAf2n6BEauzgRu9lHwD8Ucl4h062la-m19hx0o,1096
+ainconv/conversion/cyrillic.py,sha256=OlTro_stAWd3maa1PXN-yP2brBerHbXVzlKOhc0D5Ig,2629
+ainconv/conversion/katakana.py,sha256=7NrkbcF9N22z3AcaTOZ4eCFqt8635L2pfuiN9pw8UT8,11478
+ainconv/conversion/latin.py,sha256=nhSFBv0s1KEQ742Q75QPHK4-tHWTWA7j8FiJCBKEGV8,521
+ainconv-0.6.2.dist-info/LICENSE,sha256=nm4VS494YSiCP1elY6zMaqn_j1DiSOmEoRxTxVjlHRc,1063
+ainconv-0.6.2.dist-info/METADATA,sha256=DA7AX3Bu89vHJwPD4tMO8KO63KKweHPNFJAxk8Tiu38,8627
+ainconv-0.6.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+ainconv-0.6.2.dist-info/top_level.txt,sha256=kyh3AYBI-auaokzGifUttTSyr0rO5CPuG5ZBtMDGKUY,8
+ainconv-0.6.2.dist-info/RECORD,,
