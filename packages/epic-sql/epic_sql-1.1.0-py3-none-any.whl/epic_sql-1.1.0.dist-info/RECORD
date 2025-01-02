@@ -1,0 +1,10 @@
+epic/sql/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+epic/sql/bigquery/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+epic/sql/bigquery/ipythonmagic.py,sha256=DMLyxKvw14fsZNVk5FYWvMrtVG9swX2hPaLjP899CV8,3073
+epic/sql/bigquery/query.py,sha256=XvwoXloqh_NfFQwjanAnoha8dHMuY_3a4KXrDnetCzc,5013
+epic/sql/bigquery/temptable.py,sha256=Hd6i-9HlNq-Y07NW3v8J0FsJ5Y5wd9acRnUeis8TqCU,2385
+epic/sql/general.py,sha256=VMm-ul7EqmsMOljs6Bvm_4dnI0Q-DWfYwS5ZJIkT-5s,6342
+epic_sql-1.1.0.dist-info/LICENSE.md,sha256=2Gnl6S9Ude_wc-G4uZnd26Whe6BF28PCxK6vdzYl9iA,1524
+epic_sql-1.1.0.dist-info/METADATA,sha256=vVn3z2lpXBoCkSGpy10bKAgWRgS_ZMwRxWOv2A-Yjns,1812
+epic_sql-1.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+epic_sql-1.1.0.dist-info/RECORD,,
