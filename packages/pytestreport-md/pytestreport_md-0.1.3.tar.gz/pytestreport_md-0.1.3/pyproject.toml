@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytestreport-md"
+version = "0.1.3"
+description = "Uma biblioteca para gerar relatórios de teste com emojis"
+authors = [
+    {name = "Hedris Pereira", email = "hedrisgts@gmail.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+keywords = ["pytest", "report", "emojis"]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+urls = { "Repository" = "https://github.com/Hedriss10/pytest-report/tree/main" }
+
+dependencies = []
