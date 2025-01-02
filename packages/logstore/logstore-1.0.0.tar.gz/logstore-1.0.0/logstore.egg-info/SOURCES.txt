@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+logstore/__init__.py
+logstore/logger.py
+logstore.egg-info/PKG-INFO
+logstore.egg-info/SOURCES.txt
+logstore.egg-info/dependency_links.txt
+logstore.egg-info/top_level.txt
