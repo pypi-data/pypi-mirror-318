@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: flask_noai
+Version: 1.0.0
+Summary: A simple Flask extension to block AI crawlers.
+Home-page: https://ari.lt/gh/flask-noai
+Author: Ari Archer
+Author-email: ari@ari.lt
+License: GPLv3+
+Keywords: flask,ai,crawlers,llm
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Typing :: Typed
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: flask
+
+# flask-noAI
+
+> A simple Flask extension to block AI crawlers.
+
+## How it works
+
+Flask-noAI adds certain rules to `robots.txt` expecting it to be respected, and if a violation of those rules is detected, content access is blocked.
+
+## How to use it
+
+```py
+import flask_noai
+
+flask_noai.noai(app)
+```
+
+Yes, it's this easy.
+
+You can even do it like this:
+
+```py
+from flask import Flask
+from flask_noai import noai
+
+app = noai(Flask(__name__))
+```
+
+## Handling
+
+-   If you want to have a custom message when unauthorised scraping was detected, use `noai(..., on_detect="...")`
+-   If you want to return a non-200 code when it was detected, use `noai(..., code=401)` or other codes.
+-   You can still add custom `robots.txt` by simply creating a route.
+-   You should not make `/robots`, `/robots/`, or `/robots.txt/` routes since they are handled by this extension.
