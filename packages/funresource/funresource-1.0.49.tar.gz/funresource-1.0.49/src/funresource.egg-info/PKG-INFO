@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: funresource
+Version: 1.0.49
+Summary: funresource
+Author-email: niuliangtao <farfarfun@qq.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: bs4>=0.0.2
+Requires-Dist: feedparser>=6.0.11
+Requires-Dist: funbuild>=1.5.55
+Requires-Dist: funddb>=1.2.11
+Requires-Dist: funsecret>=1.4.30
+Requires-Dist: funutil>=1.0.43
+Requires-Dist: sqlalchemy>=2.0.36
+Requires-Dist: tqdm>=4.67.1
+
+# funresource
