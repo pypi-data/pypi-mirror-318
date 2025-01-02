@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: blue_codespace
+Version: 4.198.1
+Summary: 🌀 a github codespaces terraform.
+Home-page: https://github.com/kamangir/blue-codespace
+Author: Arash Abadpour (Kamangir)
+Author-email: arash@kamangir.net
+License: Public Domain
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Unix Shell
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: blueness
+Requires-Dist: blue-options
+Requires-Dist: abcli
+Requires-Dist: boto3
+Requires-Dist: geojson
+Requires-Dist: geopandas
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: pymysql
+Requires-Dist: pyyaml
+Requires-Dist: pylint
+Requires-Dist: pytest
+Requires-Dist: python-dotenv[cli]
+Requires-Dist: tqdm
+
+# 🌀 blue Codespace
+
+An [abcli](https://github.com/kamangir/awesome-bash-cli) terraform for [github codespaces](https://github.com/features/codespaces).
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/kamangir/blue-codespace?quickstart=1)
+
+
+```bash
+pip install blue-codespace
+```
+
+---
+
+
+[![pylint](https://github.com/kamangir/blue-codespace/actions/workflows/pylint.yml/badge.svg)](https://github.com/kamangir/blue-codespace/actions/workflows/pylint.yml) [![pytest](https://github.com/kamangir/blue-codespace/actions/workflows/pytest.yml/badge.svg)](https://github.com/kamangir/blue-codespace/actions/workflows/pytest.yml) [![bashtest](https://github.com/kamangir/blue-codespace/actions/workflows/bashtest.yml/badge.svg)](https://github.com/kamangir/blue-codespace/actions/workflows/bashtest.yml) [![PyPI version](https://img.shields.io/pypi/v/blue-codespace.svg)](https://pypi.org/project/blue-codespace/) [![PyPI - Downloads](https://img.shields.io/pypi/dd/blue-codespace)](https://pypistats.org/packages/blue-codespace)
+
+built by 🌀 [`blue_options-4.174.1`](https://github.com/kamangir/awesome-bash-cli), based on 🌀 [`blue_codespace-4.198.1`](https://github.com/kamangir/blue-codespace).
