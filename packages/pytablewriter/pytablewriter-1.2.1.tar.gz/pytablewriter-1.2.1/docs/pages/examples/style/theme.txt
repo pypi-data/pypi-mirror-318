@@ -1,0 +1,37 @@
+`Theme <https://pytablewriter.readthedocs.io/en/latest/pages/reference/theme.html#pytablewriter.style.Theme>`
+consists of a set of style filters.
+The following command will install external predefined themes:
+
+::
+
+    pip install pytablewriter[theme]
+
+Themes can be set via the constructor of the writer classes or the ``set_theme`` method.
+The following is an example of setting the ``altrow`` theme via the constructor.
+``altrow`` theme will be colored rows alternatively:
+
+:Sample Code:
+    .. code-block:: python
+
+        import pytablewriter as ptw
+
+        writer = ptw.TableWriterFactory.create_from_format_name(
+            "markdown",
+            headers=["INT", "STR"],
+            value_matrix=[[1, "hoge"], [2, "foo"], [3, "bar"]],
+            margin=1,
+            theme="altrow",
+        )
+        writer.write_table()
+
+:Output:
+    .. figure:: https://cdn.jsdelivr.net/gh/thombashi/pytablewriter-altrow-theme@master/ss/ptw-altrow-theme_example_default.png
+       :scale: 100%
+       :alt: https://github.com/thombashi/pytablewriter-altrow-theme/blob/master/ss/ptw-altrow-theme_example_default.png
+
+`[theme]` extras includes the following themes:
+
+- `pytablewriter-altrow-theme <https://github.com/thombashi/pytablewriter-altrow-theme>`__
+    - `Generated HTML table example <https://thombashi.github.io/pytablewriter-altrow-theme/example.html>`__
+- `pytablewriter-altcol-theme <https://github.com/thombashi/pytablewriter-altcol-theme>`__
+    - `Generated HTML table example <https://thombashi.github.io/pytablewriter-altcol-theme/example.html>`__

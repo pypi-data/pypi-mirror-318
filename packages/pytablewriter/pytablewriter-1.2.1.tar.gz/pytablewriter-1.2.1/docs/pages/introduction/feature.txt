@@ -1,0 +1,43 @@
+Features
+--------
+- Write a table in various formats:
+    - Text formats:
+        - `AsciiDoc <https://asciidoc.org/>`__
+        - CSV / Tab-separated values (TSV) / Space-separated values (SSV)
+        - HTML / CSS
+        - JSON / `Line-delimited JSON(LDJSON) <https://en.wikipedia.org/wiki/JSON_streaming#Line-delimited_JSON>`__
+        - `Labeled Tab-separated Values (LTSV) <http://ltsv.org/>`__
+        - LaTeX: ``tabular``/``array`` environment
+        - Markdown: CommonMark / `GitHub Flavored Markdown (GFM) <https://github.github.com/gfm/>`__ / `kramdown <https://kramdown.gettalong.org/>`__
+        - `MediaWiki <https://www.mediawiki.org/wiki/MediaWiki>`__
+        - reStructuredText: `Grid Tables <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#grid-tables>`__/`Simple Tables <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#simple-tables>`__/`CSV Table <http://docutils.sourceforge.net/docs/ref/rst/directives.html#id4>`__
+        - Source code (definition of a variable that represents tabular data)
+            - JavaScript / `NumPy <https://www.numpy.org/>`__ (`numpy.array <https://docs.scipy.org/doc/numpy/reference/generated/numpy.array.html>`__) / `Pandas <https://pandas.pydata.org/>`__ (`pandas.DataFrame <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html>`__) / Python
+        - `TOML <https://github.com/toml-lang/toml>`__
+        - `YAML <https://yaml.org/>`__
+        - Unicode
+    - Binary file formats:
+        - Microsoft Excel :superscript:`TM` (``.xlsx``/``.xls`` file format)
+        - `pandas.DataFrame <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html>`__ pickle file
+        - `SQLite <https://www.sqlite.org/index.html>`__ database
+    - Application-specific formats:
+        - `Elasticsearch <https://www.elastic.co/products/elasticsearch>`__
+- Automatic table cell formatting:
+    - Alignment
+    - Padding
+    - Decimal places of numbers
+- Customize table cell styles:
+    - Text/Background color
+    - Text alignment
+    - Font size/weight
+    - Thousand separator for numbers: e.g. ``1,000``/``1 000``
+- Configure output:
+    - Write a table to a stream such as a file/standard-output/string-buffer/Jupyter-Notebook
+    - Get rendered tabular text
+- Data sources:
+    - nested list
+    - CSV
+    - `pandas.DataFrame <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html>`__ / `pandas.Series <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html>`__
+    - etc.
+- Multibyte character support
+- ANSI color support
