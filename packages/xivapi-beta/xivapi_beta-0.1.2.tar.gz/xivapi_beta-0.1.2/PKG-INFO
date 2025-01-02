@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: xivapi-beta
+Version: 0.1.2
+Summary: An asynchronous python wrapper for the XIV API's beta endpoints
+Requires-Python: >=3.13
+Requires-Dist: aiohttp>=3.11.11
+Requires-Dist: async-property>=0.2.2
+Requires-Dist: python-json-logger>=3.2.1
