@@ -1,0 +1,2 @@
+[console_scripts]
+sallmon-server = sallmon_core.server:start
