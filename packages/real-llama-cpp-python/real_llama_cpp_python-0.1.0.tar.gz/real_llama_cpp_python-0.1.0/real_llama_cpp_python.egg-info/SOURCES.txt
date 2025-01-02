@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+llama_cpp/__init__.py
+llama_cpp/_utils.py
+llama_cpp/model.py
+real_llama_cpp_python.egg-info/PKG-INFO
+real_llama_cpp_python.egg-info/SOURCES.txt
+real_llama_cpp_python.egg-info/dependency_links.txt
+real_llama_cpp_python.egg-info/requires.txt
+real_llama_cpp_python.egg-info/top_level.txt
