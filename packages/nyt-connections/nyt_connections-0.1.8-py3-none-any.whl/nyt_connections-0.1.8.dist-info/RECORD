@@ -1,0 +1,8 @@
+go.mod,sha256=mtFfyyuSRWPJwwVZoSMAfRIFWJhGS55OZGiMnmTYMfg,472
+go.sum,sha256=IYoOlOCfEk6xB0J5OZmesM9HDm1VDk5KskN_wVFwmCI,4724
+main.go,sha256=0hzNLmECrGVA-8KOElpb7ocdbCuTmWXEgV9n0MhyUJM,12520
+nyt_connections-0.1.8.data/scripts/connections,sha256=YAD_AJfYda-VNHNkRREoOOKpx44N4oh8IzVTRKhfTyA,7049476
+nyt_connections-0.1.8.dist-info/METADATA,sha256=lO1t_o1Abit5YGYjKUN1WP2yfyMeKH_C9ddpijlGvb0,3173
+nyt_connections-0.1.8.dist-info/WHEEL,sha256=ulz77WjIncqphsbH-m3oD6w5nIwGJ34DrkGIzGffdqM,88
+nyt_connections-0.1.8.dist-info/licenses/LICENSE,sha256=P_te03YIieIzk4EnP3-blVrdJGbhityi_YcHwxaL7gk,1071
+nyt_connections-0.1.8.dist-info/RECORD,,
