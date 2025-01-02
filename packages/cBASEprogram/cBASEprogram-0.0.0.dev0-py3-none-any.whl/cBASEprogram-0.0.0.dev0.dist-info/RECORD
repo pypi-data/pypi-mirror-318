@@ -1,0 +1,9 @@
+cBASEprogram/__init__.py,sha256=dMQ2ZqHw6vaJ0baXrtLVZx-Za6XmRJgRwBDbwAZcSYM,87
+cBASEprogram/__main__.py,sha256=8jsrADFhIhl_LI7BYgK-pV7i1Eb55ptjpyYpSbco_Wk,69
+cBASEprogram/tests/__init__.py,sha256=IGsJbeuhYWR9hkERDDIsh8Go-vUnwuWjajvwjC6Q0Q4,233
+cBASEprogram/tests/test_1984.py,sha256=GPfy8FPaGbj-w9uGHkJYSjmlSReVAXwiHS8JydJaERw,187
+cBASEprogram-0.0.0.dev0.dist-info/LICENSE.txt,sha256=-2AgpUrExX_sG1GESvvxZQNOnzLnQ96fKJnRtJYTiHg,1076
+cBASEprogram-0.0.0.dev0.dist-info/METADATA,sha256=USn2Ou4cByt52Wv3AKSC7tQtfW4t6p6du5TBoWz2cqw,2604
+cBASEprogram-0.0.0.dev0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+cBASEprogram-0.0.0.dev0.dist-info/top_level.txt,sha256=xSZdPbG4XVnLLi8B53vC7U_FgOiUcXvY6vWMqKEqQPs,13
+cBASEprogram-0.0.0.dev0.dist-info/RECORD,,
