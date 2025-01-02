@@ -1,0 +1,49 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/*",
+    "examples/*",
+    # "kornia-py",
+    "kornia-viz",
+]
+exclude = ["kornia-py"]
+
+[workspace.package]
+authors = ["kornia.org <edgar@kornia.org>"]
+categories = ["computer-vision", "science::robotics"]
+description = "Low-level computer vision library in Rust"
+edition = "2021"
+homepage = "http://kornia.org"
+include = ["Cargo.toml"]
+license = "Apache-2.0"
+license-file = "LICENSE"
+readme = "README.md"
+repository = "https://github.com/kornia/kornia-rs"
+rust-version = "1.76"
+version = "0.1.8"
+
+[workspace.dependencies]
+# NOTE: remember to update the kornia-py package version in `kornia-py/Cargo.toml` when updating the Rust package version
+kornia-tensor = { path = "crates/kornia-tensor", version = "0.1.8" }
+kornia-tensor-ops = { path = "crates/kornia-tensor-ops", version = "0.1.8" }
+kornia-icp = { path = "crates/kornia-icp", version = "0.1.8" }
+kornia-image = { path = "crates/kornia-image", version = "0.1.8" }
+kornia-io = { path = "crates/kornia-io", version = "0.1.8" }
+kornia-imgproc = { path = "crates/kornia-imgproc", version = "0.1.8" }
+kornia-3d = { path = "crates/kornia-3d", version = "0.1.8" }
+kornia = { path = "crates/kornia", version = "0.1.8" }
+
+# dev dependencies for workspace
+argh = "0.1"
+approx = "0.5"
+bincode = { version = "2.0.0-rc.3", features = ["serde"] }
+criterion = "0.5"
+env_logger = "0.11"
+faer = "0.20.1"
+log = "0.4"
+num-traits = "0.2"
+rand = "0.8"
+rerun = "^0.20"
+serde = { version = "1", features = ["derive"] }
+tempfile = "3.10"
+thiserror = "2"
