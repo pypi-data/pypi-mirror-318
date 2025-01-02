@@ -1,0 +1,263 @@
+Author: Jonas Malaco
+    readme: prepare for 1.3.0
+
+Author: Jonas Malaco
+    ci: remove no longer supported macos-12 runner
+
+Author: Jonas Malaco
+    Bump minimum supported Python version to 3.8 and test Python 3.13
+
+Author: Tobias Müller
+    doc: fix example
+
+Author: Jonas Malaco
+    libloader: log the located library
+
+Author: Jonas Malaco
+    libloader: search in default homebrew prefix on apple silicon
+
+Author: Jonas Malaco
+    ci: explicitly install libusb on macos
+    
+    Even though it's installed by default as a dependency of gnupg, (try to)
+    install it explicitly.
+
+Author: Jonas Malaco
+    meta: bump minimum supported Python version to 3.8
+    
+    Python 3.7 reached end-of-life on 2023-06-27.
+
+Author: Jonas Malaco
+    tox: update python versions
+
+Author: Jonas Malaco
+    ci: update platforms, python versions, and checkout/setup actions
+
+Author: puddly
+    legacy: Fix `DeviceHandle` finalizer checking for the wrong attribute
+
+Author: Alan Aguiar
+    libusb1: fix trailing comma in LIBUSB_TRANSFER_TYPE_CONTROL (#501)
+
+Author: Alan Aguiar
+    openusb: fix missing commas in __all__ list (#501)
+
+Author: Alan Aguiar
+    core: remove inheritance from object, implicit in python3 (#501)
+
+Author: Antonio Vázquez Blanco
+    legacy: add Bluetooth related constants
+
+Author: Domenico
+    tutorial: fix typo in ctrl_transfer parameter name (#494)
+    
+
+Author: Jacoby Johnson
+    doc: Change all "miliseconds" to "milliseconds" per issue #469
+
+Author: Jacoby Johnson
+    fix: Change typos in README and limit line length to 80 chars
+
+Author: andygoulden
+    Fix bMaxPower conversion for SuperSpeed devices (#479)
+    
+
+Author: Jonas Malaco
+    tutorial: remove left over python 2 compatibility workaround
+
+Author: Jonas Malaco
+    util: remove left over python 2 compatibility workaround
+
+Author: Jonas Malaco
+    faq: fix link to pyocd/libusb-package
+    
+    Fixes: #465
+
+Author: Jonas Malaco
+    version: handle when patch component is missing
+    
+    actions/checkout@v3 (by default) no longer fetches the tags while
+    checking out the repository.  This, combined with our use of
+    setuptools_scm post-release scheme, results in tox trying to run the
+    tests with version strings that look something like
+    
+        pyusb-0.0.post1+g3678fc1.zip
+    
+    and breaking _get_extended_version_info().
+    
+    Make _get_extended_version_info() robust against this case.  This is
+    preferable to configuring actions/checkout@v3 to fetch the tags as,
+    being related shallow clones, it might also happen in other contexts.
+    
+    Fixes: 678fc1867f4 ("github: update to actions/checkout@v3")
+
+Author: Jonas Malaco
+    github: update to actions/checkout@v3
+
+Author: Jonas Malaco
+    tree: guard finalizers against aborted initialization
+    
+    AutoFinalizedObject sets up the finalizer to run using
+    weakref.finalize() within the object allocation – __new__().  This means
+    that the finalizer is set up to run regardless of whether object
+    initialization – __init__() – completed successfully.
+    
+    If __init__() raises an exception, or if it is aborted due to an
+    external reason (e.g. process termination due to an exception on another
+    thread or a KeyboardInterrupt), the finalizer will run with a partially
+    constructed object.
+    
+    Therefore, check the presence (and, when applicable, the validity) of
+    any fields of self used by the finalizer before they are actually used.
+    
+    Related: https://github.com/pyusb/pyusb/issues/380#issuecomment-1084140904
+
+Author: Jonas Malaco
+    docs: readme: move python vs python3 issue to a footnote
+    
+    This is in part motivated by a normal installation on Windows not
+    providing a `python3` alias.
+
+Author: Jonas Malaco
+    docs: readme: invoke pydoc and pip with python3 -m
+
+Author: Jonas Malaco
+    docs: faq: move all hyperlinks to the end of the document
+
+Author: Jonas Malaco
+    docs: faq: add section on using udev to deal with permissions on Linux
+
+Author: Jonas Malaco
+    docs: add section for the footnotes
+
+Author: Jonas Malaco
+    docs: readme: fix section heading levels
+
+Author: Jonas Malaco
+    docs: faq: fix libusb on windows and add kernel driver section
+
+Author: Jonas Malaco
+    setup: make the project description match the documentation
+
+Author: Jonas Malaco
+    docs: readme: replace s/from/for/ in the tagline
+
+Author: Jonas Malaco
+    docs: readme: fix mentions to PyUSB 1.0
+
+Author: Jonas Malaco
+    docs: readme: refresh and extend
+    
+    Adds sections on:
+    
+    - documentation;
+    - requirements and platform support;
+    - getting help.
+    
+    Includes a mention/recommendation to pyocd/libusb-package.
+    
+    Related: https://github.com/pyusb/pyusb/pull/413#discussion_r821447187
+
+Author: Jonas Malaco
+    core: only search for endpoints on the correct alternate settings
+
+Author: Jonas Malaco
+    core: track the alternate setting of each interface
+
+Author: Jonas Malaco
+    core: reset cached endpoints on alternate setting changes
+    
+    Endpoints are not shared between different interfaces within a single
+    configuration *except* the endpoint is used by alternate settings of the
+    same interface.
+    
+    Related: #380
+
+Author: Jonas Malaco
+    setup: add additional URLs for docs/tutorial and docs/faq
+
+Author: Andrii Oriekhov
+    setup: add "Source" URL for PyPi (#412)
+    
+
+Author: Jonas Malaco
+    libusb1: add trace to _Device finalizer
+    
+    A few other AutoFinalizedObject classes did not also receive traces to
+    keep the noise low. Those were:
+    
+    - _ConfigDescriptor
+    - _DevIterator
+    - _IsoTransferHandler
+    
+    Related: #409 ("Review finalization of LibUSB (1.x) devices and context")
+
+Author: Jonas Malaco
+    tree: remove dependency on deprecated distutils package
+    
+    Fixes: #401
+    Related: https://www.python.org/dev/peps/pep-0632
+
+Author: Jonas Malaco
+    git: ignore venv/ folders
+
+Author: Jonas Malaco
+    pytest: enable extra summary info (all except passed)
+
+Author: Jonas Malaco
+    tox: update envlist
+
+Author: Jonas Malaco
+    interop: simplify and document as_array()
+
+Author: Jonas Malaco
+    interop: remove no longer necessary _interop._update_wrapper
+
+Author: Jonas Malaco
+    interop: remove no longer necessary _interop._next
+
+Author: Jonas Malaco
+    interop: remove no longer necessary _interop._set
+
+Author: Jonas Malaco
+    interop: remove no longer necessary _interop._all
+
+Author: Jonas Malaco
+    interop: remove unused _interop._reduce
+
+Author: Jonas Malaco
+    tree: remove Python < 3.4 or < 3 ghosts
+
+Author: Jonas Malaco
+    meta: bump minimum required Python version to 3.7
+    
+    Python 3.6 will reach end-of-life in the next few days.[^1]
+    
+    [^1]: https://www.python.org/dev/peps/pep-0494/#and-beyond-schedule
+
+Author: Jonas Malaco
+    docs: don't merge new APIs during the pre-release freeze
+    
+    It's important to give any new APIs at least a few weeks to mature
+    before we commit to change/break/remove them.
+
+Author: Jonas Malaco
+    ci: fail fast
+
+Author: Jonas Malaco
+    ci: enable tests with Python 3.10
+
+Author: mcuee
+    Update faq.rst
+    
+    Mention that Zadig does not install libusb-1.0.dll.
+Author: Jonas Malaco
+    Merge pull request #377 from mgorny/setup-warn
+    
+    Fix the setuptools underscore warning
+Author: Michał Górny
+    Fix the setuptools underscore warning
+    
+    Fix the following warning:
+    
+        /usr/lib/python3.10/site-packages/setuptools/dist.py:697: UserWarning: Usage of dash-separated 'description-file' will not be supported in future versions. Please use the underscore name 'description_file' instead
