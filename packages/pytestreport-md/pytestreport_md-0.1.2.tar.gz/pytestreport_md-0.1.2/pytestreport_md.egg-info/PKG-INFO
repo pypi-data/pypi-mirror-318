@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pytestreport-md
+Version: 0.1.2
+Summary: Uma biblioteca para gerar relatórios de teste com emojis
+Author-email: Hedris Pereira <hedrisgts@gmail.com>
+License: MIT
+Project-URL: Repository, https://github.com/Hedriss10/pytest-report/tree/main
+Keywords: pytest,report,emojis
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pytest-report
+Tool to document your tests
