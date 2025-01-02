@@ -1,0 +1,66 @@
+# Dischub Python SDK
+
+## Overview
+
+The Dischub Python SDK allows developers to easily integrate with the Dischub API for online payment processing. This SDK provides a simple interface for creating payments via the Dischub API.
+
+## Installation
+
+You can install the Dischub SDK using pip:
+
+```bash
+pip install dischub
+```
+
+## Usage
+
+Copy and paste code below as a function called "payment" in your functions' file
+
+```bash
+from dischub import Dischub
+
+def payment():
+    data = {
+        "api_key" : "your-api-key",
+        "sender": "sender-dischub-account-email-@gmail.com",
+        "recipient": "your-dischub-business-account-email-@gmail.com",
+        "amount": 100,
+        "currency": "USD",
+    }
+    payment_instance = Dischub()
+    response = payment_instance.create_payment(data)
+    print(response)
+payment()
+```
+
+## Success Response
+
+If your integration is done so well, you will get the below response
+
+```bash
+{'status': 'success', 'message': 'payment initiated', 'response_code': 200}
+```
+
+## Missing Keys Response
+
+if you miss one or more keys in the data dictionary, you will get below response
+
+```bash
+{'status': 'error', 'message': 'missing or invalid required keys', 'response_code': 400}
+```
+
+## Currency Response
+
+if you upload currency type other than 'USD' and 'ZWG' on the currency key in the data dictionary, you will get below response
+
+```bash
+{'status': 'error', 'message': 'Invalid or unsupported currency', 'response_code': 400}
+```
+
+## Authorization Response
+
+if use invalid api_key or you Dischub business account email on the api_key or receipient keys respectively, you will get the below response
+
+```bash
+{'status': 'error', 'message': 'authorization failed', 'response_code': 401}
+```
