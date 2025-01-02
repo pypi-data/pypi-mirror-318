@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+pytestreport/__init__.py
+pytestreport/reporter.py
+pytestreport_md.egg-info/PKG-INFO
+pytestreport_md.egg-info/SOURCES.txt
+pytestreport_md.egg-info/dependency_links.txt
+pytestreport_md.egg-info/top_level.txt
+test/test_reporter.py
