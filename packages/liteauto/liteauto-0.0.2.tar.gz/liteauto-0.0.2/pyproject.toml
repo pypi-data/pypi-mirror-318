@@ -1,0 +1,22 @@
+[build-system]
+requires = [ "poetry-core",]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "liteauto"
+version = "0.0.2"
+description = "free google results"
+authors = [ "Kammari Santhosh",]
+readme = "README.md"
+license = "MIT License"
+repository = "https://github.com/santhosh/"
+keywords = [ "",]
+include = []
+[[tool.poetry.packages]]
+include = "liteauto"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pyperclip = "^1.9.0"
+wordllama = "^0.3.7"
+deepeval = "^2.0.9"
