@@ -1,0 +1,10 @@
+setup.py
+com_chery/chery_user_model_service/__init__.py
+com_chery/chery_user_model_service/pom.py
+com_chery/chery_user_model_service/user.py
+com_chery/chery_user_model_service/user_service.py
+com_chery_user_model_service.egg-info/PKG-INFO
+com_chery_user_model_service.egg-info/SOURCES.txt
+com_chery_user_model_service.egg-info/dependency_links.txt
+com_chery_user_model_service.egg-info/requires.txt
+com_chery_user_model_service.egg-info/top_level.txt
