@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: one2
+Version: 1.0.0
+Summary: A module to print sequences from 1 to large ranges
+Home-page: https://github.com/unknownmeovo/one2
+Author: Hadi Raza
+Author-email: hadiraza.9002@gmail.com
+License: Apache License 2.0
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# One2
+
+**One2** is a Python module to print sequences from 1 to large ranges (e.g., 10, 100, 1,000, etc.).
+
+## Usage
+
+- `one2ten()` prints numbers from 1 to 10.
+- `one2hundred()` prints numbers from 1 to 100.
+- ... (and so on)
+
+**Caution**: Printing very large ranges can crash your system.
+
+### Author
+
+Created by Hadi Raza. Completed on 1 Jan 2025.  
+Email: hadiraza.9002@gmail.com
