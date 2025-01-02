@@ -1,0 +1,11 @@
+aigit/__init__.py,sha256=i8AuWd4bwWfru7z2xmrndPYq0PngCnE0xuBKdCQqYQM,127
+aigit/config_manager.py,sha256=FQciwcMK2C84No24MJKUQRcOlvDlaTT8jGQSxn5wxrA,530
+aigit/git_interface.py,sha256=oI1E6c8idAFHi6ooVOANWx4ITuFyeDqgp3WGjllRCsA,1935
+aigit/logger.py,sha256=yCJrP7q1xp_lRXx7qDcGsR3fd_a0hCCv55hUhZoRM7w,163
+aigit/main.py,sha256=Jw3KpDvsBdfNzDG7Us4gwv2tiJtUtvo_P52noFGIMho,2389
+aigit/openai_interface.py,sha256=M3l8_xshjEgO36OXcivP0pvQhZtqRYSXVEDelzTqr40,2627
+aigit-0.1.9.dist-info/METADATA,sha256=HzsN_9qFYxHqBKIeA-wFoPAPSdzPQiSPvqkRkWdJ7n4,3898
+aigit-0.1.9.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+aigit-0.1.9.dist-info/entry_points.txt,sha256=_UfgZFT2R6_554_R__9Dys5qVOvr5rnOXgosPYIgNyY,40
+aigit-0.1.9.dist-info/licenses/LICENSE,sha256=Wc6piJ1l6z1St1dXTwKcrX0bBx97nsHha5bos9S9XZY,1087
+aigit-0.1.9.dist-info/RECORD,,
