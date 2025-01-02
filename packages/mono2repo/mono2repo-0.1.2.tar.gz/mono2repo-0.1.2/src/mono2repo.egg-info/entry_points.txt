@@ -1,0 +1,2 @@
+[console_scripts]
+mono2repo = mono2repo.mono2repo:main
