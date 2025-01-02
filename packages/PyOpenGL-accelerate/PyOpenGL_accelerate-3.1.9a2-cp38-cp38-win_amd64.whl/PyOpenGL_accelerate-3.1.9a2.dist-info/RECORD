@@ -1,0 +1,17 @@
+OpenGL_accelerate/__init__.py,sha256=kmbUrvYVfostlooQrUSDVKIunbIgrGP0zVZB7EWcdGY,395
+OpenGL_accelerate/arraydatatype.cp38-win_amd64.pyd,sha256=0bM69uVIlEqb_p5p8EaZDHY_-5A8EmYth8jFKF4qgLg,220672
+OpenGL_accelerate/buffers_formathandler.cp38-win_amd64.pyd,sha256=ukNUkOHoN9LmyWoFkZKwlh0yJ07ALOuhpDT23re7IQM,69632
+OpenGL_accelerate/errorchecker.cp38-win_amd64.pyd,sha256=RXyGEyTVclwrr6YrZWKZP7G22VYLgRo8baPzoykajBg,65024
+OpenGL_accelerate/formathandler.cp38-win_amd64.pyd,sha256=6VnoK4OLhkvtYgLLJ1wHw1RMuvtKqfgJoME3RpApUUU,74752
+OpenGL_accelerate/formathandler.pxd,sha256=TuD-JHuQXyCqwSItj1-YblA7hhxSwe5BNL2dD1N_L-g,629
+OpenGL_accelerate/latebind.cp38-win_amd64.pyd,sha256=BK5wfR-Jr3Vdit9C472diXhmzt_N8NASIzUa9GAPcE0,66048
+OpenGL_accelerate/nones_formathandler.cp38-win_amd64.pyd,sha256=xRXLhrq_U8Ni9aMrRlEAI3LpdEXgzRoGz17Fcrb702c,52224
+OpenGL_accelerate/numpy_formathandler.cp38-win_amd64.pyd,sha256=2Q4CTYXYeTl3c_o_hpXYw9XU8M6z-pGBg7DyoFqYPzM,91648
+OpenGL_accelerate/vbo.cp38-win_amd64.pyd,sha256=5iepwlcCvbPLh6URxi4lHvAMuXBisBr4Gz7OZuCz9uw,140288
+OpenGL_accelerate/wrapper.cp38-win_amd64.pyd,sha256=N0V6rCRubpfUWTQQ1LG77JLmk412WVciOx0yYHmpCPc,249856
+OpenGL_accelerate/wrapper.pxd,sha256=kZD4XlqkPhxf8Ue1jM4QqZHVG2NsVtOBcGz1Q-4Yn4E,497
+PyOpenGL_accelerate-3.1.9a2.dist-info/METADATA,sha256=0U67D_TtbTxDHvWZn17aDZ8zjLNp5TiGqv2Ye-VotUA,3958
+PyOpenGL_accelerate-3.1.9a2.dist-info/WHEEL,sha256=rTcqimtzpX3smAWAhGmiRSWAxTY4PqYPNE-p4kscHDQ,99
+PyOpenGL_accelerate-3.1.9a2.dist-info/license.txt,sha256=kclzjOE6CeDGZE56HAy1aynrcUuZ3ISPMlHg9SsQfdU,1751
+PyOpenGL_accelerate-3.1.9a2.dist-info/top_level.txt,sha256=9o0RHjJ27rL4yafmZevzZL2UGWVjawgxkrWN9pZsRFQ,18
+PyOpenGL_accelerate-3.1.9a2.dist-info/RECORD,,
