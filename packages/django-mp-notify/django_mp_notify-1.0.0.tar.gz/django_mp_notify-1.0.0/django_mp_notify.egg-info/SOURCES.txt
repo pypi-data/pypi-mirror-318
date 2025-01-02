@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+django_mp_notify.egg-info/PKG-INFO
+django_mp_notify.egg-info/SOURCES.txt
+django_mp_notify.egg-info/dependency_links.txt
+django_mp_notify.egg-info/top_level.txt
+notify/__init__.py
+notify/static/bootstrap-notify.min.js
+notify/templates/notify-js.html
+notify/templatetags/__init__.py
+notify/templatetags/notify.py
