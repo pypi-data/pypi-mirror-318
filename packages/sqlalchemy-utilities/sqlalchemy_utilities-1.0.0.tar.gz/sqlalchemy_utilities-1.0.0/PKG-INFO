@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: sqlalchemy-utilities
+Version: 1.0.0
+Summary: Included sqlalchemy serializers
+Author: Vijay Tiwari
+Author-email: rsvijaytiwari@gmail.com
+Requires-Dist: annotated-types==0.7.0
+Requires-Dist: anyio==4.7.0
+Requires-Dist: asyncpg==0.30.0
+Requires-Dist: click==8.1.8
+Requires-Dist: fastapi==0.115.6
+Requires-Dist: greenlet==3.1.1
+Requires-Dist: h11==0.14.0
+Requires-Dist: idna==3.10
+Requires-Dist: pydantic==2.10.4
+Requires-Dist: pydantic_core==2.27.2
+Requires-Dist: sniffio==1.3.1
+Requires-Dist: SQLAlchemy==2.0.36
+Requires-Dist: starlette==0.41.3
+Requires-Dist: typing_extensions==4.12.2
+Requires-Dist: uvicorn==0.34.0
