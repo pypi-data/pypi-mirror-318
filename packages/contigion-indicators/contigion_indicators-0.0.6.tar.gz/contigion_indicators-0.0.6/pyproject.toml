@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=42", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "contigion-indicators"
+version = "0.0.6"
+description = "A library for using forex indicators in the Contigion projects"
+authors = [
+    { name = "Contigion", email = "contigion@gmail.com" }
+]
+readme = "README.md"
+dependencies = [
+]
+classifiers = [
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools]
+packages = ["contigion-indicators"]

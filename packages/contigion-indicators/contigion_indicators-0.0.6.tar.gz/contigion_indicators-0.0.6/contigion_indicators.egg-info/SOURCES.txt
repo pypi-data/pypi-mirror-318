@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+contigion-indicators/__init__.py
+contigion_indicators.egg-info/PKG-INFO
+contigion_indicators.egg-info/SOURCES.txt
+contigion_indicators.egg-info/dependency_links.txt
+contigion_indicators.egg-info/top_level.txt
