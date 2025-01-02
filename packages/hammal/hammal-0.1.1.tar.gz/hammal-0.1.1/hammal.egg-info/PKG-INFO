@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: hammal
+Version: 0.1.1
+Summary: A lightweight HTTP router library providing bare minimum routing functionality, designed for easy embedding within other applications.
+Author-email: Amirali Esfandiari <amiralinull@gmail.com>
+Project-URL: Homepage, https://github.com/amirali/hammal
+Project-URL: Documentation, https://github.com/amirali/hammal
+Project-URL: Repository, http://github.com/amirali/hammal.git
+Project-URL: Issues, https://github.com/amirali/hammal/issues
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown

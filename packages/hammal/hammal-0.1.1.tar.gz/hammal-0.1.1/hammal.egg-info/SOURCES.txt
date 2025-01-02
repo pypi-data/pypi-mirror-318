@@ -1,0 +1,8 @@
+LICENSE
+README.md
+hammal.py
+pyproject.toml
+hammal.egg-info/PKG-INFO
+hammal.egg-info/SOURCES.txt
+hammal.egg-info/dependency_links.txt
+hammal.egg-info/top_level.txt
