@@ -1,0 +1,10 @@
+lotad/__db_compare_workingish.py,sha256=DAIMamSR6Db6nw88YYnC7svh4fd505EuljjFw3MzOfY,7280
+lotad/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lotad/data_analysis.py,sha256=1CNI-Db4qUjZIPqBPK_m868b8haqEzAPT8f9UUuMDNI,3604
+lotad/db_compare.py,sha256=fekn2pS7MmghtuU_6FhOaA06C_4je8PMzGGjkOMGAmg,9991
+lotad/utils.py,sha256=EeBO8_eJ9H8NBL6ZgsDf7SduNFPSftVBBiLCfpoMBOw,2934
+lotad-0.0.1.dist-info/LICENSE,sha256=rNc0wNPn4d4HHu6ZheJzeUaz_FbJ4rj2Dr2FjAivkNg,1064
+lotad-0.0.1.dist-info/METADATA,sha256=fn6pgpbxrkz5PkhLu83jssVmYvVuSI7C_U6LOIjVQHY,2186
+lotad-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+lotad-0.0.1.dist-info/top_level.txt,sha256=KEzgCRUFm-y6lRQA2_7BEKWQ2GnBLPejrrxrmnODSXY,6
+lotad-0.0.1.dist-info/RECORD,,
