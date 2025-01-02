@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+xnopay/__init__.py
+xnopay.egg-info/PKG-INFO
+xnopay.egg-info/SOURCES.txt
+xnopay.egg-info/dependency_links.txt
+xnopay.egg-info/top_level.txt
