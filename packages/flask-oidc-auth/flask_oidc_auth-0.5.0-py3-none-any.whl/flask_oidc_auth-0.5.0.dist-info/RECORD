@@ -1,0 +1,9 @@
+flask_oidc_auth/__init__.py,sha256=uG8MrFLEVybLuU0DjFNONAqt7IGZKPB6HYk3Qd1ZnHY,290
+flask_oidc_auth/blueprint.py,sha256=U6Ul2Ggrj1lEANzuCDaar162UMIWfaY5HBteDBh94YU,6257
+flask_oidc_auth/extension.py,sha256=pgl5BhTCIXA1ss9PzROd2qkprLBDNsQEnRymngAF3FU,2816
+flask_oidc_auth/spanattrs.py,sha256=O3kqTecFCGbaI2YLGxZoSEAzIlBPhClZzvy-pbp49iY,659
+flask_oidc_auth-0.5.0.dist-info/LICENSE,sha256=skMhh_tUhcfJn3pH6cQ9eCJouiKcj6u5fK473jPBA_U,1067
+flask_oidc_auth-0.5.0.dist-info/METADATA,sha256=wDWabrDSJJxTz31lcTKHBZOcsUOn2ewoTp9VkxZzkdo,1237
+flask_oidc_auth-0.5.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+flask_oidc_auth-0.5.0.dist-info/top_level.txt,sha256=EKtEEkTdUsZ9g3hZGZ-gP1vSZbzD9cSWM4OAqVMVLLs,16
+flask_oidc_auth-0.5.0.dist-info/RECORD,,
