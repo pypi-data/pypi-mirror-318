@@ -1,0 +1,58 @@
+Metadata-Version: 2.4
+Name: bencoded
+Version: 0.1.2
+Summary: Decode benocoded binary files.
+Author-email: Maxwell Muoto <maxmuoto@gmail.com>
+License: MIT License
+        Copyright (c) 2025 Maxwell Muoto
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Requires-Python: <3.14,>=3.9
+Description-Content-Type: text/markdown
+
+# bencoding
+
+`bencoding` is a simple Python library for decoding bencoded data.
+
+## Installation
+
+```bash
+pip install bencoded
+```
+
+## Usage
+
+```python
+import bencoding
+
+data = bencoding.decode(b'li1ei2ei3ee')
+print(data) # [1, 2, 3]
+
+data = bencoding.decode(b'd3:foo3:bare')
+print(data) # {'foo': 'bar'}
+
+data = bencoding.decode(b'i42e')
+print(data) # 42
+
+data = bencoding.decode(b'4:spam')  
+print(data) # 'spam'
+
+my_torrent = pathlib.Path('my_torrent.torrent')
+my_torrent_bytes = my_torrent.read_bytes()
+data = bencoding.decode(my_torrent_bytes)
+print(data) # {'announce': 'http://tracker.example.com:80/announce', ...}
+```
