@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="ye3sld">
+        <title>SLD : S3</title>
+        <style>
+
+            body {
+                background-color: #2c3e50;
+                color: #ecf0f1;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 20px;
+                transition: background-color 0.3s, color 0.3s;
+                word-wrap: break-word;
+            }
+            
+            h1 {
+                margin: 0; 
+            }
+            
+            #caption {
+                display: block; 
+                font-size: 0.7em; 
+                color: gray;
+                margin-top: 0.2em; 
+            }
+            
+            #s3output {
+                display: none;
+            }
+            
+            a {
+                color: #ecf0f1; 
+                text-decoration: none; 
+                border-radius: 5px; 
+                transition: background-color 0.3s, color 0.3s;
+                padding: 2px 5px 2px 5px;
+            }
+            
+            a:hover {
+                background-color: #204e8a;
+                color: #fff;
+            }
+            
+            ul {
+                list-style-type: none;
+                padding-left: 0px;
+            }
+            
+            ul ul {
+                padding-left: 1em;
+            }
+
+            li {
+                border: 1px solid #34495e; 
+                border-radius: 5px; 
+                padding: 2px 5px 2px 5px;
+                margin: 5px 0;
+                transition: box-shadow 0.3s; 
+            }
+            
+            li:hover {
+                box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.7);
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1 id="title" title="">SLD : S3</h1>
+        <span id="caption">Structure de la liste des dossiers S3<span id="filescount"></span></span>
+        
+        <pre id="s3output">
+Project/
+Project/src/
+Project/src/main.py
+Project/src/utils.py
+Project/src/__init__.py
+Project/tests/
+Project/tests/test_main.py
+Project/tests/test_utils.py
+Project/data/
+Project/data/raw/
+Project/data/raw/data1.csv
+Project/data/raw/data2.csv
+Project/data/processed/
+Project/data/processed/data1_processed.csv
+Project/data/processed/data2_processed.csv
+Project/docs/
+Project/docs/README.md
+Project/docs/CHANGELOG.md
+Project/requirements.txt
+        </pre>
+        <div id="folder-structure"></div>
+        <script>
+        
+            // Get the content of the hidden <pre> that contain the s3 output
+            const preContent = document.getElementById('s3output').textContent;
+
+            // Split the content into an array
+            const paths = preContent.trim().split('\n');
+            
+            function buildFolderStructure(paths) {
+            
+                const root = {};
+
+                paths.forEach(path => {
+                    const parts = path.split('/').filter(part => part);
+                    let current = root;
+
+                    parts.forEach(part => {
+                        if (!current[part]) {
+                            current[part] = {};
+                        }
+                        current = current[part];
+                    });
+                });
+
+                return root;
+            }
+
+            function createList(structure, basePath = '') {
+            
+                const ul = document.createElement('ul');
+
+                for (const key in structure) {
+                
+                    const a = document.createElement('a');
+                    const fullPath = `${basePath}/${key}`;
+                    a.textContent = key; 
+                    a.href = encodeURIComponent(fullPath); 
+                    a.target = "_blank";
+                    
+                    const li = document.createElement('li');
+                    li.appendChild(a);
+
+                    // If the current key has children, create a nested list
+                    if (Object.keys(structure[key]).length > 0) {
+                        li.appendChild(createList(structure[key], fullPath));
+                    }
+
+                    ul.appendChild(li);
+                }
+
+                return ul;
+            }
+
+            const folderStructure = buildFolderStructure(paths);
+            const folderList = createList(folderStructure);
+
+            document.getElementById('folder-structure').appendChild(folderList);
+            
+            // The url base to prepend to all href
+            const href_base_url = '';
+
+            // Select all <a> elements inside the <ul>
+            const links = document.querySelectorAll('ul a');
+
+            // Prepend the base to each link's href
+            links.forEach(link => {
+                link.href = href_base_url + link.getAttribute('href');
+            });
+            
+            // Show files count
+            filescount=document.querySelectorAll('li').length-(document.querySelectorAll('ul').length-1)
+            document.getElementById('filescount').innerHTML = ` | Fichiers : ${filescount}`
+            document.getElementById('title').setAttribute('title', `S3 Directory Listing Structure | Files : ${filescount}`)
+        
+        </script>
+    </body>
+</html>
