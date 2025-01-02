@@ -1,0 +1,158 @@
+# <img src="https://gitlab.com/alex-carvalho-dockeration/doimbu/-/raw/master/img/doimbu.png" alt="doimbu" width="30" style="vertical-align: middle;"> | doimbu - Docker Image Builder  
+
+Lightweight tool for docker image creation with multiple variants.  
+
+<a href="https://gitlab.com/alex-carvalho-dockeration/doimbu">
+    <img src="https://gitlab.com/alex-carvalho-dockeration/doimbu/-/raw/master/img/doimbu.png" alt="doimbu" width="720" style="horiz-align: center;">
+</a>
+
+
+## Quick summary  
+
+Docker image creation with multiple variants with a single small command.  
+
+### Scenario
+
+Some docker images need to be delivered in multiple variants.  
+For example, every [mongodb](https://hub.docker.com/r/mongodb/mongodb-community-server/tags) image version have multiple suffixes:
+- 7.0.14-ubi8  
+- 7.0.14-ubi9
+- 7.0.14-ubuntu2204
+
+When you change the version of these images, you'll need to tediously issue slightly changed long 
+docker build commands for every variant.  
+
+Doimbu streamlines this task, with a config file you'll store all your docker configuration that 
+you need for your docker build commands, and with a single command you'll create the docker build 
+commands to all docker image variants that you need.
+
+
+## Table of contents
+
+- [Dependencies](#dependencies)
+- [Installation](#installation)
+- [Image Tag Pattern](#image-tag-pattern)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [How to run tests](#how-to-run-tests)
+- [Contributing](#contributing)
+- [Contact](#contact)
+
+
+## Dependencies
+
+Required installed software:  
+<sup>(not covered in these instructions)</sup>  
+
+- docker 27.3.1+
+- python 3.12.3+
+- poetry 1.8.4+ (optional)
+
+<sup>*(development and testing versions, it may be compatible with previous versions)*</sup>  
+
+
+## Installation
+
+### Global installation
+
+```bash
+pip install doimbu
+```
+(it's recommended to use a virtual environment instead of installing it globally)
+
+### Virtualenv installation
+
+```bash
+python -m venv venv
+source venv/bin/activate
+pip install doimbu
+deactivate
+```
+
+## Image Tag Pattern
+
+`[tag_namespace/][tag_repository]:[version]-[variant]`  
+
+### Tab pattern example  
+- `mongodb/mongodb-community-server:7.0.14-ubi8`
+- `mongodb/mongodb-community-server:7.0.14-ubi9`
+- `mongodb/mongodb-community-server:7.0.14-ubuntu2204`
+
+## Configuration
+
+Doimbu retrieves its configuration from 4 sources:  
+
+- project root path  
+- project directory structure  
+- doimbu.ini configuration file  
+- command line parameters  
+
+### project path
+
+`tag_repository`  
+The tag repository is retrieved from the project root path leaf.  
+
+### project directory structure
+
+`variant`  
+A directory called `variants` should be created at your project root path.  
+Inside this directory, subdirectories containing Dockerfiles should be created for each image variant.  
+
+### doimbu.ini 
+
+All build configurations are placed at this file, including overrides for the `tag_repository` and 
+`variant`.  
+
+#### Samples
+
+- Only mandatory configuration 
+[doimbu.ini](docs/config_file_samples/only_mandatory/doimbu.ini) (`default_variant` and `vesion`).
+- Full sample
+ [doimbu.ini](docs/config_file_samples/all_available_params/doimbu.ini) 
+(with all available parameters).
+
+### command line parameters
+
+All configuration that can be placed in `doimbu.ini` can also be overridden by command line
+parameters.  
+
+A simple way to check all command line options is:  
+
+```bash
+python -m doimbu --help
+```
+
+
+## Usage
+
+### Minimal usage form
+(all config from file system and doimbu.ini)
+
+```bash
+python -m doimbu
+```
+
+### Usage with parameters
+
+```bash
+python -m doimbu --default-variant nobel --tag-namespace mongodb --tag-repository mongodb-community-server --build-arg 'git_username="jhonny joe"' --build-arg 'git_user_email="jhonny@joe.com"' --dry-run
+```
+
+
+## How to run tests
+
+To execute the tests, execute the following command:  
+
+```
+poetry run pytest
+```
+
+## Contributing
+
+Contributing instructions can be found [here](CONTRIBUTING.md).
+
+
+## Contact
+
+alex carvalho - [linkedin.com/in/alex-carvalho-big-data](https://www.linkedin.com/in/alex-carvalho-big-data/)
+

@@ -1,0 +1,15 @@
+CHANGELOG.md,sha256=3M0soDPIYPtAV_LMRCbs5wca5L5natrsqzAf_UHX5_0,969
+README.md,sha256=RtYWb3mVq8r9q0_TGoyehFE6dZ09nzCZ3QNEEhP8UdY,4103
+doimbu/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+doimbu/__main__.py,sha256=7PQoQUA8g1AAMh_yB3OWyih2TPTDtDbPqfIfbC17PQg,2031
+doimbu/builder.py,sha256=nrfUpd88WPnaF13WCVIMdyaOjrGYTl7bIx5SWZLAL4M,3106
+doimbu/paths.py,sha256=-6RjuBOyasQwReVJZqb-3_xz1i36uz_w3-GV0zMRQos,256
+doimbu/sources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+doimbu/sources/dir_structure.py,sha256=zBVOoPzzfPemnxZcMNis3qoDb6Em5hWAWSXDntl3mjw,533
+doimbu/sources/file_config.py,sha256=Iwc2Y9fBSipkbUwVME5C-rR83QZmzcpq7bWlFFluan4,3843
+doimbu/sources/git.py,sha256=EMMyubf6-7Lf06fe00asRCBbyN3fS4cPueDoh7EnNSI,1004
+doimbu/version.py,sha256=mSNx_IC8Nfq8u3yd-yyZHH1qjF0qnFrtcrS-TrI6TMQ,2113
+doimbu-0.4.2.dist-info/LICENSE,sha256=pAZXnNE2dxxwXFIduGyn1gpvPefJtUYOYZOi3yeGG94,1068
+doimbu-0.4.2.dist-info/METADATA,sha256=e2pSESZpuHFzHh7fk3nJNvC2QGP_8n1t4TP3r39ghKo,5393
+doimbu-0.4.2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+doimbu-0.4.2.dist-info/RECORD,,
