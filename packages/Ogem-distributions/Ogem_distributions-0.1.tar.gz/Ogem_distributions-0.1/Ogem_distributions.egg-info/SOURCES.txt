@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+Ogem_distributions/Binomialdistribution.py
+Ogem_distributions/Gaussiandistribution.py
+Ogem_distributions/Generaldistribution.py
+Ogem_distributions/__init__.py
+Ogem_distributions.egg-info/PKG-INFO
+Ogem_distributions.egg-info/SOURCES.txt
+Ogem_distributions.egg-info/dependency_links.txt
+Ogem_distributions.egg-info/not-zip-safe
+Ogem_distributions.egg-info/top_level.txt
