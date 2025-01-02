@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: lxp
+Version: 0.0.1
+Summary: libraries for makeblock electronic platform
+Home-page: https://makeblock.com
+Author: lxp
+Author-email: 1282856796@qq.com
+Requires-Dist: pyserial
