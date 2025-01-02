@@ -1,0 +1,64 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(22, 22, 22);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#main {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(145deg, rgba(255, 0, 174, 0.2), rgba(58, 77, 213, 0.2));
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    width: 90%;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    font-size: 70px;
+    color: #ff00ae;
+    background: linear-gradient(90deg, #ff00ae, #3a4ed5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s infinite alternate;
+}
+
+h2{
+    font-size: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: #3acfd5;
+    font-weight: bold;
+    background: linear-gradient(90deg, #3acfd5, #3a4ed5);
+    padding: 0.5rem 8rem;
+    border-radius: 8px;
+    transition: 0.3s ease, transform 0.2s;
+}
+
+a:hover {
+    background: linear-gradient(90deg, #3a4ed5, #3acfd5);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(58, 77, 213, 0.8);
+}
+
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ff00ae, 0 0 20px #3a4ed5;
+    }
+    to {
+        text-shadow: 0 0 20px #3a4ed5, 0 0 30px #ff00ae;
+    }
+}

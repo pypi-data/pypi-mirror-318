@@ -1,0 +1,33 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="create-lillie",
+    version="1.0.8",
+    packages=find_packages(),
+    author="sarthak ghoshal",
+    author_email="sarthak22.ghoshal@gmail.com",
+    description="A CLI tool for creating lilliepy projects",
+    long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
+    url="https://github.com/websitedeb/create-lillie",
+    py_modules=["cli"],  # Include the cli module
+    include_package_data=True,  # Ensures non-Python files are included
+    package_data={
+        "": ["templates/**/*"],  # Ensure templates folder is included
+    },
+    install_requires=[
+        "typer[all]",
+        "colorama"
+    ],
+    entry_points={
+        "console_scripts": [
+            "create-lillie=cli:app",  # CLI entry point
+        ],
+    },
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires=">=3.7",
+)
