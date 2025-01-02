@@ -1,0 +1,14 @@
+aigit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aigit/config_manager.py,sha256=FQciwcMK2C84No24MJKUQRcOlvDlaTT8jGQSxn5wxrA,530
+aigit/git_interface.py,sha256=oI1E6c8idAFHi6ooVOANWx4ITuFyeDqgp3WGjllRCsA,1935
+aigit/logger.py,sha256=yCJrP7q1xp_lRXx7qDcGsR3fd_a0hCCv55hUhZoRM7w,163
+aigit/main.py,sha256=hyz_SoGWbKnQFzUSLgG4nsfX9PETIBtIhQD4WeLwvxs,2003
+aigit/openai_interface.py,sha256=M3l8_xshjEgO36OXcivP0pvQhZtqRYSXVEDelzTqr40,2627
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_main.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aigit-0.1.7.dist-info/LICENSE,sha256=Wc6piJ1l6z1St1dXTwKcrX0bBx97nsHha5bos9S9XZY,1087
+aigit-0.1.7.dist-info/METADATA,sha256=otrqE5qcMRlD06CHBf1AtsFXIeGW3aAqyddYfodzXzA,2658
+aigit-0.1.7.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+aigit-0.1.7.dist-info/entry_points.txt,sha256=_UfgZFT2R6_554_R__9Dys5qVOvr5rnOXgosPYIgNyY,40
+aigit-0.1.7.dist-info/top_level.txt,sha256=64umRi3WPKV7nYLlOuhV5kefgljf-TpzXZwrIYUPj0w,12
+aigit-0.1.7.dist-info/RECORD,,
