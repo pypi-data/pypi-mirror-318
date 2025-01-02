@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: identiconspy
+Version: 1.0.0
+Summary: Identicons generator for python
+Author: TheNoobiCat
+Project-URL: Homepage, https://github.com/TheNoobiCat/identicons.py
+Project-URL: Issues, https://github.com/TheNoobiCat/identicons.py/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# identicons.py
+Small library for generating identicons in python
+
+## Usage
+```py
+from identicons import Identicon
+
+# Create an Identicon generator
+generator = Identicon(grid_size=5, cell_size=50)
+
+# Get the identicon as bytes
+image_bytes = generator.generate("Example")
+
+print(image_bytes)
+# result:
+# b'\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00\xfa\x00\x00\x00\xfa\x...........
+
+# Generate & save the identicon to a file
+generator.generate_to_file("Example", "example.png")
+```
+
+## Install
+`pip install identiconspy`
