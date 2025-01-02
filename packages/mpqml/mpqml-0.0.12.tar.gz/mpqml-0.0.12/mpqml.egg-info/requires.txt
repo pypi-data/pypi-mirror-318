@@ -1,0 +1,5 @@
+chardet
+scikit-learn
+PyWavelets
+scipy
+mpqlock
