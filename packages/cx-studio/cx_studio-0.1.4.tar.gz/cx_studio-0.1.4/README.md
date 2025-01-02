@@ -1,0 +1,27 @@
+# cx-studio
+
+cx-studio是一个用于专业视频编辑的Python模块。它提供了一系列工具和功能，帮助用户更高效地进行视频编辑工作。
+
+## 功能特点
+ - 时间线管理：支持创建和管理时间线，包括添加、删除、移动和调整轨道和项目。
+ - 轨道操作：允许在时间线上添加多个轨道，并对轨道进行排序和管理。
+ - 项目管理：支持在轨道上添加和管理视频、音频和其他类型的项目。
+ - 时间码支持：提供时间码转换和计算功能，方便用户进行精确的时间线操作。
+ - 导出功能：支持将时间线导出为各种视频格式，方便用户进行后期处理。
+
+## 各个模块简介
+
+### cx_studio.core
+`cx_studio.core`模块提供了核心的时间线管理和轨道操作功能。它包含了`Time`类和`Track`类，用于管理时间线和轨道。
+
+### cx_studio.filesystem
+`cx_studio.filesystem`模块提供了文件系统相关的功能。它包含了`File`类和`Directory`类，用于处理文件和目录操作。
+
+### cx_studio.subtitle
+`cx_studio.subtitle`模块提供了字幕相关的功能。它包含了`Subtitle`类和`SubtitleFile`类，用于处理字幕文件操作。
+
+### cx_studio.timeline
+`cx_studio.timeline`模块提供了时间线相关的功能。它包含了`Timeline`类和`TimelineFile`类，用于处理时间线文件操作。
+
+### cx_studio.utils
+`cx_studio.utils`模块提供了一些通用的工具函数。它包含了一些常用的函数，如时间码转换、文件操作等。
