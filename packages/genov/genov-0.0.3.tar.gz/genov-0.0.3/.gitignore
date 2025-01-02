@@ -1,0 +1,10 @@
+/build/
+/dist/
+/venv/
+/docs/_autosummary
+/docs/_build
+.*
+!.genov.toml
+!/.gitignore
+src/*.egg-info
+PERSO.md

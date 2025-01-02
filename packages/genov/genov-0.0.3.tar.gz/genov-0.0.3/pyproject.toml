@@ -1,0 +1,63 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "genov"
+version = "0.0.3"
+authors = [
+  { name="jean-sebastien guillard", email="jsebastien.guillard@gmail.com" },
+]
+description = "Genovation toolbox"
+readme = "README.md"
+requires-python = ">=3.13"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: Other/Proprietary License",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "com-enovation",
+    "typer",
+    "tomlkit",
+    "pydash",
+    "jsonschema",
+    "jsonata-python"
+]
+
+[project.scripts]
+genov = "genov.genov:obj_genov"
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "src/*",
+  "assets/*"
+]
+exclude = [
+    "tests",
+    "docs"
+]
+
+[project.urls]
+Homepage = "https://bitbucket.org/genovationbit/genov/src/main/"
+"Bug Tracker" = "https://genovation.atlassian.net/jira/software/c/projects/GENO/list"
+Documentation = "http://www.genovation.fr"
+"Source code" = "https://bitbucket.org/genovationbit/genov/src/main/"
+
+[tool.hatch.envs.docs]
+dependencies = [
+    "build",
+    "sphinx",
+    "sphinx-autodoc-typehints",
+    "sphinx_rtd_theme"
+]
+
+[tool.hatch.envs.docs.scripts]
+md = "rm -rf dist;hatch build;pip3 install dist/genov-*.tar.gz;typer genov.genov utils docs --output GENOV.md --name genov"
+sphinx = "cd ./docs;rm -rf _autosummary;rm -rf _build;make html"
+
+[tool.ruff]
+exclude = ["docs"]
+
+[tool.coverage.run]
+omit = ["./tests/*"]
