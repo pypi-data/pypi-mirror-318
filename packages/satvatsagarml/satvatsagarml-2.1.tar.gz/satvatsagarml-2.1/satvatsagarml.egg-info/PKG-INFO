@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: satvatsagarml
+Version: 2.1
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# satvatsagarml
+
+Your module allows users to copy and generate Python programs stored within the package. It provides an easy way to access, copy, and run predefined programs by simply calling a function.
+
+## Features
+
+- Generates Python programs by copying existing ones.
+- Supports predefined programs like `1.py`, `2.py`, ..., `9.py`.
+- Simple function calls for quick program generation.
+
+## Installation
+
+You can install the package using `pip` from PyPI:
+
+```bash
+pip install satvatml
