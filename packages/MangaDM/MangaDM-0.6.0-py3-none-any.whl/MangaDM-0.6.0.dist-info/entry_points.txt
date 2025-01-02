@@ -1,0 +1,2 @@
+[console_scripts]
+mangadm = mangadm.core.cli:cli
