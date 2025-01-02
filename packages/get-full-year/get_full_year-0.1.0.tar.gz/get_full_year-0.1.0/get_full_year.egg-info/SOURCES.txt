@@ -1,0 +1,11 @@
+README.md
+get_full_year.py
+pyproject.toml
+get_full_year.egg-info/PKG-INFO
+get_full_year.egg-info/SOURCES.txt
+get_full_year.egg-info/dependency_links.txt
+get_full_year.egg-info/requires.txt
+get_full_year.egg-info/top_level.txt
+tests/test_console.py
+tests/test_full_year.py
+tests/test_year.py

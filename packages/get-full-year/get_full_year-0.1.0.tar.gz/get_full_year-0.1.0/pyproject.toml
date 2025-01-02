@@ -1,0 +1,10 @@
+[project]
+name = "get-full-year"
+version = "0.1.0"
+description = "getfullyear SDK for Python"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["requests>=2.32.3"]
+
+[dependency-groups]
+dev = ["pytest>=8.3.4"]
