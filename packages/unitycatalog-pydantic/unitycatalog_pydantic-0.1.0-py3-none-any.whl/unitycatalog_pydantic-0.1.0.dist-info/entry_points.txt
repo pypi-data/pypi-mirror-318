@@ -1,0 +1,2 @@
+[console_scripts]
+unitycatalog-pydantic = unitycatalog_pydantic:main
