@@ -1,0 +1,2 @@
+[console_scripts]
+pyarchitecture = pyarchitecture:commandline
