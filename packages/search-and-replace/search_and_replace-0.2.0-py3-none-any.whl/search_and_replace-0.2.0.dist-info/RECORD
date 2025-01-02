@@ -1,0 +1,10 @@
+search_and_replace/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+search_and_replace/diff_apply.py,sha256=TLUmWQYZBOS8LJlhxA0lD0NqPvsOjPwRLoA6euqFkWw,8302
+search_and_replace/main.py,sha256=vWcykz93eV9n5GmQdoek9IyT-0EhdbBE5JGfvBkr3nQ,976
+tests/__init__.py,sha256=rFKe1fLRnYAYODLuBhRWdjqaUjV3HRg1RlyBa23_nH0,44
+tests/test_diff_apply.py,sha256=CphIhGK8vsJkhBjrqcDZMVQYS_R4dNyTstOvaWykGoc,21993
+search_and_replace-0.2.0.dist-info/METADATA,sha256=kmFsDU7pYTmL772VF90T1_yAou3EbdK09SgvyP_na-M,832
+search_and_replace-0.2.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+search_and_replace-0.2.0.dist-info/entry_points.txt,sha256=r0Z9gGr9vfzmKqzNrzLOHKj7lUSwXSVPPDpAHKtUEyI,116
+search_and_replace-0.2.0.dist-info/top_level.txt,sha256=KJmA3JPvU8_Cm43s2f5wLKexn4HQnyqFaLgPvht4lgE,25
+search_and_replace-0.2.0.dist-info/RECORD,,
