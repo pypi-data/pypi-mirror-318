@@ -1,0 +1,3 @@
+pyngrok
+nest_asyncio
+uvicorn
