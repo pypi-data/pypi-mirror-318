@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: litesuite
+Version: 0.1.62
+Summary: free google results
+Home-page: https://github.com/santhosh/
+License: MIT
+Author: Kammari Santhosh
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: langchain_core (>=0.3.28,<0.4.0)
+Requires-Dist: langchain_ollama (>=0.2.2,<0.3.0)
+Requires-Dist: parselite (>=0.3.5,<0.4.0)
+Requires-Dist: pyperclip (>=1.9.0,<2.0.0)
+Requires-Dist: searchlite (>=0.7.5,<0.8.0)
+Requires-Dist: wordllama (>=0.3.7,<0.4.0)
+Project-URL: Repository, https://github.com/santhosh/
+Description-Content-Type: text/markdown
+
+
