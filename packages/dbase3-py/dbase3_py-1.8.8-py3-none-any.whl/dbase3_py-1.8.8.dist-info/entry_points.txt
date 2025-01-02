@@ -1,0 +1,4 @@
+[console_scripts]
+dbftest = dbase3_py.dbftest:testdb
+dbfview = dbase3_py.dbfview:main
+
