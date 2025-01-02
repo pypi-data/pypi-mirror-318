@@ -1,0 +1,10 @@
+setup.py
+chery_pom_tool/__init__.py
+chery_pom_tool/build_tool.py
+com_chery/__init__.py
+com_chery/chery_pom_root.py
+com_chery_pom_root.egg-info/PKG-INFO
+com_chery_pom_root.egg-info/SOURCES.txt
+com_chery_pom_root.egg-info/dependency_links.txt
+com_chery_pom_root.egg-info/requires.txt
+com_chery_pom_root.egg-info/top_level.txt
