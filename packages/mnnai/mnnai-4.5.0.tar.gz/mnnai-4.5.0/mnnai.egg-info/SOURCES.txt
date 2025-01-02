@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+mnnai/AI.py
+mnnai/Generator.py
+mnnai/__init__.py
+mnnai.egg-info/PKG-INFO
+mnnai.egg-info/SOURCES.txt
+mnnai.egg-info/dependency_links.txt
+mnnai.egg-info/requires.txt
+mnnai.egg-info/top_level.txt
