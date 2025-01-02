@@ -1,0 +1,10 @@
+passagemath_libecm.libs/libgmp-bfca7259.so.10.5.0,sha256=Z23HvmkVQ3LV22fqDz_ZtRfhM2oxM0dq43Shq1sW8oE,527593
+sage/all__sagemath_libecm.py,sha256=FtWvYOeqYlrzh21q4O6QunQOaaVTDJGBQvvYjqtqzeo,45
+sage/interfaces/all__sagemath_libecm.py,sha256=FtWvYOeqYlrzh21q4O6QunQOaaVTDJGBQvvYjqtqzeo,45
+sage/interfaces/ecm.py,sha256=ABlVkGEZCgZ9cjgsJezSkJ-mQAJRGiYiwlHFQoCcYAw,30696
+sage/libs/all__sagemath_libecm.py,sha256=FtWvYOeqYlrzh21q4O6QunQOaaVTDJGBQvvYjqtqzeo,45
+sage/libs/libecm.cpython-312-x86_64-linux-gnu.so,sha256=CwWqFodJJfa5n2q5O-I9qvoZWcvs5U3NzX_8lm3EUf8,1974505
+passagemath_libecm-10.5.17.dist-info/METADATA,sha256=dM_EUE8q-zLShijwiw1FFuq3iAydBTmT3q4ENLue-cs,2706
+passagemath_libecm-10.5.17.dist-info/RECORD,,
+passagemath_libecm-10.5.17.dist-info/top_level.txt,sha256=hibFyzQHiLOMK68qL1OWsNKaXOmSXqZjeLTBem6Yy7I,5
+passagemath_libecm-10.5.17.dist-info/WHEEL,sha256=SlsiAQ0ZjrPS-y-UMXaLkr8VHNzVM9NWFRhGw6y2yKY,113
