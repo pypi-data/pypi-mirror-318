@@ -1,0 +1,13 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "simplepidcontroller"
+version = "0.0.1"
+author = [
+    { name="anaphan", email="anaghphanse@gmail.com"}
+]
+description = "A simple PID controller in Python"
+readne = "README.md"
+requires-python = ">=3.6"
