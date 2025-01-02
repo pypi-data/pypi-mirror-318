@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+d15/__init__.py
+d15/about.py
+d15/cli.py
+d15/py.typed
+d15/render.py
+d15.egg-info/PKG-INFO
+d15.egg-info/SOURCES.txt
+d15.egg-info/dependency_links.txt
+d15.egg-info/entry_points.txt
+d15.egg-info/requires.txt
+d15.egg-info/top_level.txt
