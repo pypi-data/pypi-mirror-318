@@ -1,0 +1,11 @@
+_mt2/lester_mt2_bisect_v7.h,sha256=mgFHHo0z75bmt5W7rq0CwNSRU8sUTfsBdUEoa8VfCZs,26720
+_mt2/main.cpp,sha256=kBZPWvkJR6IeDYAqxd7TjZzama50e0nkJ8gxCE6Zz0k,12537
+_mt2/mt2_Lallyver2.h,sha256=fC3LVnxfglu2shTQFYa5nv1UCcOKZXUEGQyBvRqEkMc,46640
+_mt2/mt2_bisect.h,sha256=ScAGRccbfn5OoSDBj454kQSLXeU9be2qurgHlpBbZFw,11096
+mt2/__init__.py,sha256=xhsOd0kqca3i-_50G8WwaJU3UfgZf-etuL3fg0ZWQ2w,4287
+mt2/_mt2.cp311-win32.pyd,sha256=odbePDdLwwuhWzHfnTEsMEneDxIoCE_hE5jMPpXkwGo,41984
+mt2/diagnostics.py,sha256=NViTl_o5nPDn-TWZDE7lNLSi-pgHzx0zSmPRlPnTQeM,5201
+mt2-1.2.3.dist-info/METADATA,sha256=9k4nxq1cI0BCHed38II3WwA5vUbj_wltP8HLv2PXBEM,7811
+mt2-1.2.3.dist-info/WHEEL,sha256=CUEEiZcEHBQHmNAhE1m6c3jIKGBZTzLJKgzKvvbu8OI,97
+mt2-1.2.3.dist-info/top_level.txt,sha256=_3iGpEgPHzEEGIB4nizLpHo4b0rv2IxGMqpRrZTDAXQ,9
+mt2-1.2.3.dist-info/RECORD,,
