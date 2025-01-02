@@ -1,0 +1,2 @@
+[console_scripts]
+caruna-plus-cli = carunaplusservice.cli:main
