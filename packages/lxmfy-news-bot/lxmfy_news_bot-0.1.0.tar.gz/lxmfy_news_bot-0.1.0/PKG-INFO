@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: lxmfy-news-bot
+Version: 0.1.0
+Summary: LXMFy News Bot using RSS and trafilatura to fetch full-text
+Author: Ivan
+Requires-Python: >=3.13,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: feedparser (>=6.0.11,<7.0.0)
+Requires-Dist: lxmfy (>=0.4.2,<0.5.0)
+Requires-Dist: pytz (>=2024.2,<2025.0)
+Requires-Dist: pyyaml (>=6.0.2,<7.0.0)
+Requires-Dist: trafilatura (>=2.0.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# news-bot
+
+Get your daily RSS full-text feeds. 
+
+## Installation
+
+```bash
+pip install lxmfy-news-bot
+```
+
+or
+
+```bash
+pipx install lxmfy-news-bot
+```
+
+## Usage
+
+```bash
+lxmfy-news-bot
+```
+
+## Docker
+
+```bash
+docker run -d \
+  -v /path/to/data:/app/data \
+  -v /path/to/backups:/app/backups \
+  -e BOT_NAME="My News Bot" \
+  -e BOT_ADMINS="admin1hash,admin2hash" \
+  lxmfy-news-bot
+```
+
+
+
+
+
