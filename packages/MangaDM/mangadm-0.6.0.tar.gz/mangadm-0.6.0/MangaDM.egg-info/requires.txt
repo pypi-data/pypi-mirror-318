@@ -1,0 +1,6 @@
+requests
+click
+rich
+InquirerPy
+ebooklib
+auto_click_auto
