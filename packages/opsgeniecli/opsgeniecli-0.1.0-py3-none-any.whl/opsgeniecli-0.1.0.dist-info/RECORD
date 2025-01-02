@@ -1,0 +1,16 @@
+opsgeniecli/__init__.py,sha256=MDt7vknSQ9S_OD1-iVQp_uwjciN-osnB4n5HXw9gE0c,1811
+opsgeniecli/_version.py,sha256=fpyyBf6pkuYNUoc7gqemPuqhQPrR34U9Pl0NPk_sGPQ,2212
+opsgeniecli/opsgeniecli.py,sha256=sfd8zQaDOvN1yaEc8fR3ZwdBki3j40qlzvs6zV0WT6E,102901
+opsgeniecli/opsgeniecliexceptions.py,sha256=ELeWu8qPrs6gDN_Cnrq4d3isQP0tWIsBbhykYa1jFJc,1725
+opsgeniecli/__pycache__/__init__.cpython-312.pyc,sha256=D9tebm3bDcp_tLtO7sq25C6KwxY1jcreBzOzpy6bCFQ,736
+opsgeniecli/__pycache__/_version.cpython-312.pyc,sha256=MXgKGI_d9vTVx-lc5NCMg0IcHuWpmVN41GodwQhoECI,1736
+opsgeniecli/__pycache__/opsgeniecli.cpython-312-pytest-8.3.3.pyc,sha256=vOBaTxXEzOiCK2cGwy35e7nfbWSW0QkcGh6Rax1S19Y,112461
+opsgeniecli/__pycache__/opsgeniecli.cpython-312.pyc,sha256=TmjJDym0lEzcDAkkOAsx-njhGpnZCbctXjfpopE_jhU,111804
+opsgeniecli/conf/logging.json-example,sha256=pImNae60BmCa7B465s6cxogfNrb1C772llK5ejIvJzs,814
+opsgeniecli-0.1.0.dist-info/AUTHORS.rst,sha256=28hVBI97EON_nVpSt8wr5g-qWM3ZZSFYi0p8MIiGeEs,171
+opsgeniecli-0.1.0.dist-info/LICENSE,sha256=V8yEh8C_LlHEgwUB7gcQI_xFl-Icebt4UH-8-fwsuJs,1063
+opsgeniecli-0.1.0.dist-info/METADATA,sha256=RxIr7WhyUVNb4MTPQCjx27bIZFRBzLRtO1hu7ekbUMc,750
+opsgeniecli-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+opsgeniecli-0.1.0.dist-info/entry_points.txt,sha256=cWCEvuty-egGUD7ksXYDPricrPbu2hGjv3D6Sa0dWYQ,60
+opsgeniecli-0.1.0.dist-info/top_level.txt,sha256=iw5Jci3dWAkX-yjg-Ukp7Q_JmHlSwGJOmRP5r9x73do,12
+opsgeniecli-0.1.0.dist-info/RECORD,,
