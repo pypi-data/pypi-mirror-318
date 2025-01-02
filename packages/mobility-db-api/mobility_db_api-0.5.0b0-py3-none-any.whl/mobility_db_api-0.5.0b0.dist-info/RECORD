@@ -1,0 +1,10 @@
+mobility_db_api/__init__.py,sha256=9zvj7ILu9j18kxfjnaH87koLukUrOHYbq9qZ8hfzhS0,178
+mobility_db_api/api.py,sha256=ULi79FQePLTsFRORXMCdCm-xTHano_CuaEGFjMtM8gg,43580
+mobility_db_api/csv_catalog.py,sha256=hbD0BbVQKoikVm66rp_SNN1s5o3ZqSQy-kIwX8yQhA0,8536
+mobility_db_api/external_gtfs.py,sha256=zVFpIIRQqhsc0Zq7a0h61DzWI2yj-uND1XKEuuSh5OY,10775
+mobility_db_api/logger.py,sha256=qBlB-jw1GPBBxL9d9kHXTb441tXaSD-7Ip_kh0qMA2A,1504
+mobility_db_api-0.5.0b0.dist-info/LICENSE,sha256=DTnLveE293RO1NNdpyFwPfamXyXie92z1BGBKSOlTuQ,1070
+mobility_db_api-0.5.0b0.dist-info/METADATA,sha256=NLXzdO7p6BZxJhnGRfBBG92OIQinurN13BDp64Fsm1w,3574
+mobility_db_api-0.5.0b0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+mobility_db_api-0.5.0b0.dist-info/top_level.txt,sha256=NnVUwm9JTAzTbffVFqKmnLV_ksJZHJzQBAOphuU-ZCQ,16
+mobility_db_api-0.5.0b0.dist-info/RECORD,,
