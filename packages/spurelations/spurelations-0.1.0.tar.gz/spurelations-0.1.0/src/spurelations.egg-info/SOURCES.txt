@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/spurelations/__init__.py
+src/spurelations/main.py
+src/spurelations.egg-info/PKG-INFO
+src/spurelations.egg-info/SOURCES.txt
+src/spurelations.egg-info/dependency_links.txt
+src/spurelations.egg-info/entry_points.txt
+src/spurelations.egg-info/requires.txt
+src/spurelations.egg-info/top_level.txt

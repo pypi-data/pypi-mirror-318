@@ -1,0 +1,2 @@
+[console_scripts]
+spurelations = spurelations.main:main
