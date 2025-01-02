@@ -1,0 +1,9 @@
+libBASE/__init__.py,sha256=dMQ2ZqHw6vaJ0baXrtLVZx-Za6XmRJgRwBDbwAZcSYM,87
+libBASE/__main__.py,sha256=3mDqXkF3nucXaZZ8viHsoJjqmHYA6BD3058nQR-ulTE,64
+libBASE/tests/__init__.py,sha256=jdrRTVWFyiVCG-hUMkU5fCloeNv07x3LC5_Chw3v3Qc,228
+libBASE/tests/test_1984.py,sha256=GPfy8FPaGbj-w9uGHkJYSjmlSReVAXwiHS8JydJaERw,187
+libBASE-0.0.2.dev0.dist-info/LICENSE.txt,sha256=xTplwv1WHIfqq_EHLvXcq4ZTBCvBUwhGX1JBNYXrYnE,35146
+libBASE-0.0.2.dev0.dist-info/METADATA,sha256=1VkTSZ71fISdzvSxOXhquj5PIcIOQ6w5E3TMRXmHikk,41823
+libBASE-0.0.2.dev0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+libBASE-0.0.2.dev0.dist-info/top_level.txt,sha256=2R29VtU-lpckzNaHzdwZvYNGqq-e61Ns8XRRF8URbvs,8
+libBASE-0.0.2.dev0.dist-info/RECORD,,
