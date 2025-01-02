@@ -1,0 +1,7 @@
+GitPython
+openai
+keyring
+instructor
+loguru
+tiktoken
+python-dotenv
