@@ -1,0 +1,7 @@
+my_commandline_tool/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+my_commandline_tool/cli.py,sha256=n2MeOlo3ukW94MeTa5pBv2Bzg-sfbEa0T4j_l1FKA6Q,1273
+my_commandline_tool-0.2.dist-info/METADATA,sha256=McdEB0Nlq9JS_XnqvGqbdIZnNAa7ZObcBXgmJuHnhhQ,370
+my_commandline_tool-0.2.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+my_commandline_tool-0.2.dist-info/entry_points.txt,sha256=5JJ2XQildn1MxYdRh8_MIXn20F5xXTpOFqFSwW_NaZE,55
+my_commandline_tool-0.2.dist-info/top_level.txt,sha256=H0GrUxnAVkVMezt_C2FylOg5DfiYfc7mp7x-1B8y78k,20
+my_commandline_tool-0.2.dist-info/RECORD,,
