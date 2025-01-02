@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_basic.py
+webop/__init__.py
+webop.egg-info/PKG-INFO
+webop.egg-info/SOURCES.txt
+webop.egg-info/dependency_links.txt
+webop.egg-info/top_level.txt
