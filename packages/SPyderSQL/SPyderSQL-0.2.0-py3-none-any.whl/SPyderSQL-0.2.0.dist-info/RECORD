@@ -1,0 +1,14 @@
+SPyderSQL/__init__.py,sha256=4xqCAcNjlwbIrv7V-Y7XcT8w1xmxdao-bn83cWs9ZNA,454
+SPyderSQL/__meta__.py,sha256=4BqCPCZtlB4JtT0YEc1PwY9fgKEWFZE9sfGcbHnjHrs,232
+SPyderSQL/logger.py,sha256=lO_dWyiy3rNu7g-I2QVj62kKv8UQPFHKBEiIIp8f-LY,1280
+SPyderSQL/my_exception.py,sha256=XwDEEprCPzTsHRGp8rCMI7Dx9Z0psfuXH7932y4GUbY,231
+SPyderSQL/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+SPyderSQL/client/AsyncSQLite.py,sha256=5-oJsj_cB7TaAOlbbB-2_JbEjtI7Xjk5BmnyPz5KrIY,11935
+SPyderSQL/client/SQLRequests.py,sha256=s2KxWak5micEvxqCOMEfgbx-645ClFPI3D1RkeuugLY,8967
+SPyderSQL/client/SQLite.py,sha256=jZWpLSB6Tb3V88s5ZXwcsji-eM1KQWSKEw5thcO5ubk,10771
+SPyderSQL/client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+SPyderSQL-0.2.0.dist-info/LICENSE,sha256=QbGHPfEDULwcpYTdSoeIMGkhkjWSol7t8tbq_B7nRGw,1098
+SPyderSQL-0.2.0.dist-info/METADATA,sha256=pzIgg0JUl8uoe7dh0kxJOTuWYFTRF8IfqRjwPLJEKT0,1527
+SPyderSQL-0.2.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+SPyderSQL-0.2.0.dist-info/top_level.txt,sha256=m71KU6ebKTbSJkWAEGCD9S9PRZOKPFiJVoK2NmNvPl4,10
+SPyderSQL-0.2.0.dist-info/RECORD,,
