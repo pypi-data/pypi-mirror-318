@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+wireshark_fieldbus_io/__init__.py
+wireshark_fieldbus_io/enums_types.py
+wireshark_fieldbus_io/packet_reader.py
+wireshark_fieldbus_io/utils.py
+wireshark_fieldbus_io.egg-info/PKG-INFO
+wireshark_fieldbus_io.egg-info/SOURCES.txt
+wireshark_fieldbus_io.egg-info/dependency_links.txt
+wireshark_fieldbus_io.egg-info/requires.txt
+wireshark_fieldbus_io.egg-info/top_level.txt
