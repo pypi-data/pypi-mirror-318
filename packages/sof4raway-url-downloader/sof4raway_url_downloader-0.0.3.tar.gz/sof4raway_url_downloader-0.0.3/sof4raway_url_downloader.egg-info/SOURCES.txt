@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.py
+sof4raway_url_downloader/__init__.py
+sof4raway_url_downloader/download.py
+sof4raway_url_downloader.egg-info/PKG-INFO
+sof4raway_url_downloader.egg-info/SOURCES.txt
+sof4raway_url_downloader.egg-info/dependency_links.txt
+sof4raway_url_downloader.egg-info/requires.txt
+sof4raway_url_downloader.egg-info/top_level.txt
+test/test_script.py
