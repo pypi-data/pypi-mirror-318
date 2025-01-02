@@ -1,0 +1,8 @@
+pytruffle/__init__.py,sha256=agTBblwXaY1wTR_8iSIWmwcmvlSfCniD61TwyHgM4po,22865
+pytruffle/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytruffle/test/test_haystack.py,sha256=FsJQVTADhJvqkUslMu2QjkZ0YxF-TewaAXqrj1G4QTU,273
+pytruffle/test/test_main.py,sha256=Hkz12_6v2xcsWDTLXizscEDp9HkJC5Uz-B_6LW3JAJ0,1441
+pytruffle-0.1.0.dist-info/METADATA,sha256=Wb5lwNxLr6bsRu6bZRsgnHk7ANLcaMlYyX0vPj50BJo,1875
+pytruffle-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pytruffle-0.1.0.dist-info/licenses/LICENSE,sha256=OfATwHHrY6If8uDxN1LUfZgC-dyLmN8m8I-TKgQ7mYU,1093
+pytruffle-0.1.0.dist-info/RECORD,,
