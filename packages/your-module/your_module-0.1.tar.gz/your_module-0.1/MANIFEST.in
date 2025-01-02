@@ -1,0 +1,10 @@
+# Include all Python in the directory
+include satvatml/1.py
+include satvatml/2.py
+include satvatml/3.py
+include satvatml/4.py
+include satvatml/5.py
+include satvatml/6.py
+include satvatml/7.py
+include satvatml/8.py
+include satvatml/9.py

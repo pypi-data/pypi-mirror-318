@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+satvatml/1.py
+satvatml/2.py
+satvatml/3.py
+satvatml/4.py
+satvatml/5.py
+satvatml/6.py
+satvatml/7.py
+satvatml/8.py
+satvatml/9.py
+satvatml/__init__.py
+your_module.egg-info/PKG-INFO
+your_module.egg-info/SOURCES.txt
+your_module.egg-info/dependency_links.txt
+your_module.egg-info/top_level.txt
