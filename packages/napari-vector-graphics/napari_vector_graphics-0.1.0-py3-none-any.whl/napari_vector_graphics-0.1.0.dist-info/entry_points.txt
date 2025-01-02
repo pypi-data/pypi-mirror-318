@@ -1,0 +1,2 @@
+[napari.manifest]
+napari-vector-graphics = napari_vector_graphics:napari.yaml

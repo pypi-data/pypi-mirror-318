@@ -1,0 +1,14 @@
+name: napari-vector-graphics
+display_name: Napari Vector Graphics
+# use 'hidden' to remove plugin from napari hub search results
+visibility: public
+# see https://napari.org/stable/plugins/manifest.html for valid categories
+categories: ["Utilities", "Visualization"]
+contributions:
+  commands:
+    - id: napari-vector-graphics.widget
+      python_name: napari_vector_graphics:NapariVectorGraphicsWidget
+      title: Vector Graphics Screenshots
+  widgets:
+    - command: napari-vector-graphics.widget
+      display_name: Vector Graphics Screenshots
