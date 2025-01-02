@@ -1,0 +1,17 @@
+fastapi_extra/__init__.py,sha256=DgMHXQo8iKj_jrge574Zb0iq9_zNmPKUWIVaigBvu5I,310
+fastapi_extra/cursor.cp312-win_amd64.pyd,sha256=c0rgFuCuy2msqHfTQxI7Nk64UvgnTrr0qAQpPyd_hzM,57344
+fastapi_extra/databases.py,sha256=KNMQUGn7ABsZfk7_XfkqNZ1zP8IkP1JoJf2MQxtmaBo,2639
+fastapi_extra/form.py,sha256=LikaJkA16dSRGCqX9K7z2S8-e3SJcMiVXX5nRZU_kVY,957
+fastapi_extra/model.py,sha256=_I-cp_E4Vm1D73OKGqNImiUNuKl9DvkhiONrGt5DEZg,2306
+fastapi_extra/response.py,sha256=DHvhOSgwot5eBNKuI_jPYxZ5rshZ55Xkg-FNBJlHD1E,9609
+fastapi_extra/routing.cp312-win_amd64.pyd,sha256=dCFyilewdtYWCBPulIWER6kWus3fntLBGJRaJzMFqMc,115200
+fastapi_extra/settings.py,sha256=gegO1r-lV3rO_qauk8J9L5qikn1ffKAp-Z9luyMv5iQ,1118
+fastapi_extra/types.py,sha256=FFX5831Bkjy5DGkgpiScAZuOv5AqrI58ReuP3aRvtp8,421
+fastapi_extra/utils.py,sha256=tsPX3kpF_P5D9Bd3gnlG6rkVsLkv5gbxjml-s6ZL_6I,346
+fastapi_extra/native/cursor.pyx,sha256=bESprFDgk9gGjyPQ4YCSg51dov2WB6s60XrOs3r5-r0,1146
+fastapi_extra/native/routing.pyx,sha256=Umgpiz6FMevIo7428LdRm_v2O1NHKEgXWxDqGiZUS3c,5115
+fastapi_extra-0.1.0.dist-info/LICENSE,sha256=0vTjHDa3VDsxTT-R-sH6SpYcA2F1hKtbX9ZFZQm-EcU,1516
+fastapi_extra-0.1.0.dist-info/METADATA,sha256=TNS1sgrLbwu85E9qVtgLcNofU16JRbtnGfJJy_HNqAk,1006
+fastapi_extra-0.1.0.dist-info/WHEEL,sha256=pWXrJbnZSH-J-PhYmKs2XNn4DHCPNBYq965vsBJBFvA,101
+fastapi_extra-0.1.0.dist-info/top_level.txt,sha256=B7D80bEftE2E-eSd1be2r9BWkLLMZN21dRTWpb4y4Ig,14
+fastapi_extra-0.1.0.dist-info/RECORD,,
