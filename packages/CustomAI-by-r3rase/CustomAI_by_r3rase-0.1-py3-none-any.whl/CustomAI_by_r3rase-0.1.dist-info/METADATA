@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: CustomAI-by-r3rase
+Version: 0.1
+Summary: A custom AI library for handwriting analysis and generation.
+Home-page: https://github.com/Reetesh7/CustomAI-by-r3rase.git
+Author: Reetesh Rajput
+Author-email: reeteshr7107@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: tensorflow
+Requires-Dist: matplotlib
+
+UNKNOWN
+
