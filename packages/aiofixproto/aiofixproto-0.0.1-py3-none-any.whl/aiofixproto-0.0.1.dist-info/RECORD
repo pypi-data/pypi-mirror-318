@@ -1,0 +1,14 @@
+aiofix/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiofix/client.py,sha256=9GcFLGq6_V6lDLL3fKfGxMW0UM56I2bkMGyFJO-fgJc,1536
+aiofix/engine_streams.py,sha256=G7Cp9ujhTReWXwzgNWnQE91yZPhKp0lhBEpKelWOxaA,18772
+aiofix/message.py,sha256=qXzUqQlvhAIqbLnirif4QTPgmXJBIGSW5xBur7tIKZE,12647
+aiofix/msgtype.py,sha256=4wzQgqBzyHLTyz2U87AkOqpiA88JOHIC-qECayOaAXk,228
+aiofix/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiofix/server.py,sha256=DiEtKRjopKIw8tpV9PEwVY7fSEVSi2xilUOHzpWk66E,1112
+aiofix/spec.py,sha256=tgY3APF2AU4WIG4kcQDmW-gMlvn7cQY6_RaCU0cwzKU,4921
+aiofix/tags.py,sha256=nve6TZylz8GqD9GM6RPz_pWzZIryouU3PTnff8m3IUU,1669
+aiofix/validator.py,sha256=e0ra-WdRpUj0cbwDP1TTRq4a3vUVKJb2PkUCPmn8pVk,16001
+aiofixproto-0.0.1.dist-info/METADATA,sha256=Pr5X1p16fpUizx0xvbmRbEzLfEiYzza79MgWnctoBOs,1638
+aiofixproto-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+aiofixproto-0.0.1.dist-info/top_level.txt,sha256=5jE3sKsKofg8rihnnX1ZaGhxocviKfAbL88gCSeu6A8,7
+aiofixproto-0.0.1.dist-info/RECORD,,
