@@ -1,0 +1,6 @@
+ipynbname>=2024.1.0.0
+jupyter>=1.1.1
+pydantic-ai>=0.0.15
+python-dotenv>=1.0.1
+
+[dev]
