@@ -1,0 +1,11 @@
+oxidasim-0.1.0.dist-info/METADATA,sha256=5TloBsa7W4555YpGAw3vRQxQBzuwLD2GOzDGwr8HJf0,1977
+oxidasim-0.1.0.dist-info/WHEEL,sha256=ff_aotEPDeP8au5CC0c1B8Qp-UHc3TEJkBgH6hZZ_jU,95
+oxidasim-0.1.0.dist-info/licenses/LICENSE-APACHE,sha256=bR2Wj7Il7KNny38LiDGrASo12StUfpReF--OewXD5cw,10349
+oxidasim-0.1.0.dist-info/licenses/LICENSE-MIT,sha256=GrnRMHzTuknIeGFQZUe6hyb6NUAdYgFmmDJckWuCHC8,1091
+oxidasim/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oxidasim/sampling/__init__.py,sha256=gRp8tLGK4DaVwY-HEf_zKDWrP1qzNl59UoT4cQDglBI,51
+oxidasim/_rs/sampling/__init__.pyi,sha256=SGxsoVd7Ich3fCml0Na2rAVkf1GHpD2_KYZ-vDz0FOk,1227
+oxidasim/_rs/__init__.pyi,sha256=MItJStXiSz7tNuw5-BmC9LIAAEmNMIOMjhxmvexf9FI,38
+oxidasim/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oxidasim/_rs.pyd,sha256=9c-OoCkFFuwlqinjNhFpdYujbFKSfCV8nCyOnUjvVec,425984
+oxidasim-0.1.0.dist-info/RECORD,,

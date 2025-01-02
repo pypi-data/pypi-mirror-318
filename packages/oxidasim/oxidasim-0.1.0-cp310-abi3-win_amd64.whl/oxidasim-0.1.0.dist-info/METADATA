@@ -1,0 +1,41 @@
+Metadata-Version: 2.4
+Name: oxidasim
+Version: 0.1.0
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Rust
+Classifier: License :: OSI Approved :: MIT License
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Games/Entertainment :: Simulation
+Requires-Dist: oxidasim[dev] ; extra == 'all'
+Requires-Dist: oxidasim[test] ; extra == 'dev'
+Requires-Dist: pytest ~=8.0 ; extra == 'test'
+Provides-Extra: all
+Provides-Extra: dev
+Provides-Extra: test
+License-File: LICENSE-APACHE
+License-File: LICENSE-MIT
+Summary: Utilities for simulations
+Keywords: simulation,robotics
+Home-Page: https://github.com/AndrejOrsula/oxidasim
+Author-email: Andrej Orsula <orsula.andrej@gmail.com>
+Maintainer-email: Andrej Orsula <orsula.andrej@gmail.com>
+License: MIT OR Apache-2.0
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Repository, https://github.com/AndrejOrsula/oxidasim
+
+# OxidaSim
+
+[![PyPi](https://img.shields.io/pypi/v/oxidasim.svg)](https://pypi.python.org/pypi/oxidasim)
+[![crates.io](https://img.shields.io/crates/v/oxidasim.svg)](https://crates.io/crates/oxidasim)
+[![docs.rs](https://docs.rs/oxidasim/badge.svg)](https://docs.rs/oxidasim)
+[![Rust](https://github.com/AndrejOrsula/oxidasim/actions/workflows/rust.yml/badge.svg)](https://github.com/AndrejOrsula/oxidasim/actions/workflows/rust.yml)
+[![Python](https://github.com/AndrejOrsula/oxidasim/actions/workflows/python.yml/badge.svg)](https://github.com/AndrejOrsula/oxidasim/actions/workflows/python.yml)
+[![Codecov](https://codecov.io/gh/AndrejOrsula/oxidasim/graph/badge.svg)](https://codecov.io/gh/AndrejOrsula/oxidasim)
+
+**OxidaSim** is a framework with utilities for simulations. It is written in Rust for performance and exposes a Python API for ease of integration.
+
+## License
+
+This project is dual-licensed under either the [MIT](LICENSE-MIT) or [Apache 2.0](LICENSE-APACHE) licenses.
+
