@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: bitstruct-annotated
+Version: 0.1.1
+Summary: Provides Annotated metadata classes to define a packing/unpacking format strings for bitstruct.
+Author-email: Oliver Kleinke <oliver.kleinke@ok-ss.de>
+Keywords: bitstruct,struct,annotated,packing,serialization
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: bitstruct
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: coverage; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pydantic; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: tomli; extra == "dev"
+Requires-Dist: validate-pyproject[all]; extra == "dev"
+Requires-Dist: vulture; extra == "dev"
