@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: PanMCL
+Version: 0.6.6
+Summary: A simple command-line tool
+Home-page: https://github.com/yourusername/PanMCL
+Author: yuzijian
+Author-email: yuzijian1010@163.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+

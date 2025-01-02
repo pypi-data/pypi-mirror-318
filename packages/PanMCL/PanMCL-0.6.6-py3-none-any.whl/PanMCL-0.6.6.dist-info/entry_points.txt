@@ -1,0 +1,2 @@
+[console_scripts]
+PanMCL = my_commandline_tool.cli:main
