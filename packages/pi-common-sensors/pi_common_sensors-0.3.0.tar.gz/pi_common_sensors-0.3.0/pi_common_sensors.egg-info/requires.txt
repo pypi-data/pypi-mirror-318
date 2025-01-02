@@ -1,0 +1,6 @@
+logzero
+RPi.GPIO
+pigpio
+smbus
+spidev
+pyserial
