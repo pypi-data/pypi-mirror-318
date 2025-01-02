@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+BingoResearch/__init__.py
+BingoResearch/module.py
+BingoResearch.egg-info/PKG-INFO
+BingoResearch.egg-info/SOURCES.txt
+BingoResearch.egg-info/dependency_links.txt
+BingoResearch.egg-info/requires.txt
+BingoResearch.egg-info/top_level.txt
