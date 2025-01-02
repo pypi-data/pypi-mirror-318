@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "caa-v22"
+version = "0.1.3"
+description = "Official implementation of CA-ToMe for stable diffusion models"
+authors = ["Omid Saghatchian <omidsaghatchian@gmail.com>"]
+readme = "README.md"
+packages = [{include = "caa_v22", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+torch = ">=1.12.1,<2.2.2"
+diffusers = ">=0.32.1"
+transformers = ">=4.39.1"
+numpy = "<2.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
