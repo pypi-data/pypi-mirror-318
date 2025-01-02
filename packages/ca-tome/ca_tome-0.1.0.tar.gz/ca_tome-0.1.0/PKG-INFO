@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: ca-tome
+Version: 0.1.0
+Summary: Official implementation of CA-ToMe for stable diffusion models
+Author: Omid Saghatchian
+Author-email: omidsaghatchian@gmail.com>, Atiyeh Gh. Moghadam <atiyeh1997@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: diffusers (>=0.32.1)
+Requires-Dist: numpy (<2.0.0)
+Requires-Dist: torch (>=1.12.1,<2.2.2)
+Requires-Dist: transformers (>=4.39.1)
+Description-Content-Type: text/markdown
+
+# CA_tome
