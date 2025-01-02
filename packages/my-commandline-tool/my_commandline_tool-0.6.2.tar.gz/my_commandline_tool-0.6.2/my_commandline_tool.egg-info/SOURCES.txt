@@ -1,0 +1,13 @@
+README.md
+setup.py
+my_commandline_tool/__init__.py
+my_commandline_tool/cli.py
+my_commandline_tool/core_test_2.py
+my_commandline_tool/core_test_3.py
+my_commandline_tool/orthogroups_identity.py
+my_commandline_tool/run_blast_diamond.py
+my_commandline_tool.egg-info/PKG-INFO
+my_commandline_tool.egg-info/SOURCES.txt
+my_commandline_tool.egg-info/dependency_links.txt
+my_commandline_tool.egg-info/entry_points.txt
+my_commandline_tool.egg-info/top_level.txt
