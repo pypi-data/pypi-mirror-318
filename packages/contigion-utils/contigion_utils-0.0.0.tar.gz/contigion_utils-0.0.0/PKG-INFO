@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: contigion-utils
+Version: 0.0.0
+Summary: A library for utility functions common across Contigion projects
+Author-email: Contigion <contigion@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.21.0
+
+# py-template
+A template repo for future Contigion repositories
+
+[![Pylint](https://github.com/Contigion/utils/actions/workflows/pylint.yml/badge.svg?branch=main)](https://github.com/Contigion/utils/actions/workflows/pylint.yml)

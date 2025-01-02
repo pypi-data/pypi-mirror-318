@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=42", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "contigion-utils"
+version = "0.0.0"
+description = "A library for utility functions common across Contigion projects"
+authors = [
+    { name = "Contigion", email = "contigion@gmail.com" }
+]
+readme = "README.md"
+dependencies = [
+    "numpy>=1.21.0",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools]
+packages = ["contigion-utils"]
