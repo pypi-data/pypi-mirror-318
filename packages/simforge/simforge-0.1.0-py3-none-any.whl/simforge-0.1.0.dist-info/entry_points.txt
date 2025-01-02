@@ -1,0 +1,3 @@
+[console_scripts]
+sf = simforge.__main__:main
+simforge = simforge.__main__:main
