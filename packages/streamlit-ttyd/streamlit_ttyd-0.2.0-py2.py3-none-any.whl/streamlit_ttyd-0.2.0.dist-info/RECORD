@@ -1,0 +1,9 @@
+streamlit_ttyd/__init__.py,sha256=2VV7Yq9AKnxTYOVgTpTOk-DWhN8vidPOVUemLI5RX4c,1646
+streamlit_ttyd/binary/ttyd.aarch64,sha256=s4rK3YnR05ag9WSapSxTntutB_S8c0iye09LchndQWU,1370112
+streamlit_ttyd/binary/ttyd.arm,sha256=BerBIjkU8YxliY1yyNFOdru1Q193YsbcfxbwQZlKgQk,1279284
+streamlit_ttyd/binary/ttyd.win32.exe,sha256=4zonUBsQuWmBM1vLqTixFFx_UlUaND5yFg8Aq3GDKzc,1409024
+streamlit_ttyd/binary/ttyd.x86_64,sha256=iiF8loq6Fy4Nvz80RHIY3AFbxNXlm_UdsvLNEre-T1U,1362040
+streamlit_ttyd-0.2.0.dist-info/LICENSE,sha256=uZW1MCts1HWBgHvKTJmcxGsj4kfUdxBoUnq-ZE12GXM,1083
+streamlit_ttyd-0.2.0.dist-info/WHEEL,sha256=ssQ84EZ5gH1pCOujd3iW7HClo_O_aDaClUbX4B8bjKY,100
+streamlit_ttyd-0.2.0.dist-info/METADATA,sha256=5K7ou5Rv2W5-6kwxcvWpd154xY1tvUoV1yfLYJJ2LtE,2034
+streamlit_ttyd-0.2.0.dist-info/RECORD,,
