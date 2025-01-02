@@ -1,0 +1,23 @@
+{
+
+  "alpaca_zh_51k": {
+    "hub_url": "AI-Research/alpaca_zh_51k"
+  },
+
+  "alpaca": {
+    "hub_url": "AI_Connect/alpaca"
+  },
+
+  "alpaca-gpt4-data": {
+    "hub_url": "AI_Connect/alpaca-gpt4-data"
+  },
+
+  "alpaca-gpt4-data-zh": {
+    "hub_url": "AI_Connect/alpaca-gpt4-data-zh"
+  },
+
+  "sharegpt_gpt4": {
+    "hub_url": "AI-Research/sharegpt_gpt4",
+    "formatting": "sharegpt"
+  }
+}

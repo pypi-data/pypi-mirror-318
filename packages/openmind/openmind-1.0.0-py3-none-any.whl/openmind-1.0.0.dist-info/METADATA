@@ -1,0 +1,321 @@
+Metadata-Version: 2.4
+Name: openmind
+Version: 1.0.0
+Summary: openMind is a magicain who takes you to experience the mystery and creativity of AI.
+Project-URL: Homepage, https://gitee.com/openmind-ai/openmind
+Project-URL: Repository, https://gitee.com/openmind-ai/openmind
+Author: The openMind Team
+Author-email: dev@public.openmind.cn
+License: 木兰宽松许可证， 第2版
+License-File: LICENSE
+License-File: LICENSE-Apache-2.0
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Mulan Permissive Software License v2 (MulanPSL-2.0)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: <3.11,>=3.8
+Requires-Dist: datasets<=2.21.0,>=2.18.0
+Requires-Dist: decorator
+Requires-Dist: docker>=4.34.2
+Requires-Dist: einops==0.8.0
+Requires-Dist: numpy<2.0.0
+Requires-Dist: openmind-hub==0.9.1
+Requires-Dist: packaging
+Requires-Dist: sentencepiece
+Requires-Dist: setuptools==69.5.1
+Requires-Dist: tabulate
+Requires-Dist: tiktoken
+Requires-Dist: tokenizers
+Requires-Dist: tqdm
+Provides-Extra: ci
+Requires-Dist: requests; extra == 'ci'
+Provides-Extra: lint
+Requires-Dist: black==24.8.0; extra == 'lint'
+Requires-Dist: ruff==0.6.1; extra == 'lint'
+Provides-Extra: ms
+Requires-Dist: mindformers==1.3.0; extra == 'ms'
+Requires-Dist: mindspore==2.4.0; extra == 'ms'
+Provides-Extra: pt
+Requires-Dist: accelerate<=1.0.0rc1,>=0.28.0; extra == 'pt'
+Requires-Dist: deepspeed<=0.15.4,>=0.12.6; extra == 'pt'
+Requires-Dist: diffusers<=0.31.0,>=0.29.0; extra == 'pt'
+Requires-Dist: evaluate==0.4.1; extra == 'pt'
+Requires-Dist: lm-eval==0.4.3; extra == 'pt'
+Requires-Dist: peft<=0.14.0,>=0.12.0; extra == 'pt'
+Requires-Dist: torch-npu==2.1.0.post8; extra == 'pt'
+Requires-Dist: torch==2.1.0; extra == 'pt'
+Requires-Dist: transformers<=4.45.2,>=4.39.2; extra == 'pt'
+Provides-Extra: pt-cpu
+Requires-Dist: accelerate<=1.0.0rc1,>=0.28.0; extra == 'pt-cpu'
+Requires-Dist: deepspeed<=0.15.4,>=0.12.6; extra == 'pt-cpu'
+Requires-Dist: diffusers<=0.31.0,>=0.29.0; extra == 'pt-cpu'
+Requires-Dist: evaluate==0.4.1; extra == 'pt-cpu'
+Requires-Dist: lm-eval==0.4.3; extra == 'pt-cpu'
+Requires-Dist: peft<=0.14.0,>=0.12.0; extra == 'pt-cpu'
+Requires-Dist: torch==2.1.0; extra == 'pt-cpu'
+Requires-Dist: transformers<=4.45.2,>=4.39.2; extra == 'pt-cpu'
+Provides-Extra: test
+Requires-Dist: accelerate<=1.0.0rc1,>=0.28.0; extra == 'test'
+Requires-Dist: deepspeed<=0.15.4,>=0.12.6; extra == 'test'
+Requires-Dist: diffusers<=0.31.0,>=0.29.0; extra == 'test'
+Requires-Dist: evaluate==0.4.1; extra == 'test'
+Requires-Dist: lm-eval==0.4.3; extra == 'test'
+Requires-Dist: peft<=0.14.0,>=0.12.0; extra == 'test'
+Requires-Dist: pillow; extra == 'test'
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-cov; extra == 'test'
+Requires-Dist: testtools; extra == 'test'
+Requires-Dist: torch==2.1.0; extra == 'test'
+Requires-Dist: transformers<=4.45.2,>=4.39.2; extra == 'test'
+Description-Content-Type: text/markdown
+
+<p align="center"> <img src="./sources/images/logo.png" height="100px" width="350px"> </p>
+
+<p align="center">
+    <a href="http://license.coscl.org.cn/MulanPSL2">
+        <img alt="Badge" src="https://img.shields.io/badge/license-MulanPSL2-blue.svg">
+    </a>
+    <a href="https://modelers.cn/">
+        <img alt="Visit our community" src="https://img.shields.io/badge/community-modelers.cn-green">
+    </a>
+    <a>
+        <img src="https://app.codacy.com/project/badge/Grade/1710faac5e634acaabfc26b0a778cdde">
+    </a>
+</p>
+
+---
+
+## 📝 简介
+
+openMind Library是一个大模型微调套件，通过命令行接口或SDK原生支持在昇腾NPU上进行微调、推理、评估和部署。通过简化使用流程，充分利用NPU的独特优势，为大模型应用提供高效、可扩展的解决方案。
+
+**为什么使用 openMind Library？**
+
+基于Transformers框架，openMind Library实现了高效的微调流程。它集成了PyTorch生态中常用的工具库功能，提供数据预处理、权重加载、低参微调、量化适配以及训练跟踪等全流程的一键式解决方案。此外，库内融合了针对昇腾NPU的优化算子，可大幅提升模型训练效率。
+
+openMind Library提供了统一的Pipeline SDK，提供更快速、更高效的推理体验。
+
+模型部署方面，openMind Library基于LMDeploy和MindIE，提供多后端部署支持，极大地简化了部署流程，使得模型部署更加便捷。
+
+openMind Library目前支持的特性如下：
+
+- 模型类型：支持Qwen2，Qwen2.5系列模型，更多模型适配中
+- 微调训练：SFT训练
+- 高效微调：BF16微调，LoRA微调，4bit QLoRA微调
+- 分布式训练：DDP，DeepSpeed
+- 微调加速：npu_fusion_attention融合算子，npu_rms_norm融合算子
+- 训练监控：SwanLab
+- 推理：Transformers/Diffusers多backend，text-generation/text-to-image多任务
+- 部署：LMDeploy，MindIE
+- 评估：lm_eval
+
+---
+
+## 🌟 项目特色
+
+openMind Library支持QLoRA，融合算子等训练加速手段，帮助您减少显存开销，提升微调训练速度。
+
+<table style="border-collapse: collapse; border-spacing: 0; border: none">
+    <tr style="border: none;">
+      <td style="border: none; text-align: center;"><img src="./sources/images/memory_optimization.png" alt="Memory Optimization"></td>
+      <td style="border: none; text-align: center;"><img  src="./sources/images/performance_boosting.png"  alt="Performance Boosting"></td>
+    </tr>
+    <tr style="border: none;">
+    <td style="border: none; text-align: center; vertical-align: top;">
+      <strong>Qwen2.5-7B Full/LoRA/QLoRA显存开销</strong>
+      <br>
+      <span style="font-size: 12px; color: gray;">npu=8, per_device_train_batch_size=1, max_length=1024</span>
+    </td>
+    <td style="border: none; text-align: center; vertical-align: top;">
+      <strong>Qwen2.5-7B Full/LoRA性能对比</strong>
+      <br>
+      <span style="font-size: 12px; color: gray;">npu=8, max_length=1024, train_samples_per_second</span>
+    </td>
+  </tr>
+</table>
+
+---
+
+## 🚀 更新日志
+
+- 2024/12: openMind Library 1.0.0版本发布，支持cli命令启动微调，LoRA权重合并，SwanLab训练监控，LMDeploy/MindIE部署。
+
+---
+
+## 🛠️ 安装 
+
+openMind Library支持PyTorch和MindSpore双框架，您可以根据需求选择安装对应框架和依赖。请注意**不要同时安装双框架**。
+
+使用pip进行安装：
+
+```shell
+# 不安装框架，仅安装openMind Library
+pip install openmind
+
+# aarch64环境下安装PyTorch框架及其框架
+pip install openmind[pt]
+
+# x86环境下安装PyTorch框架及其框架
+pip install openmind[pt] --extra-index-url https://download.pytorch.org/whl/cpu    
+
+# MindSpore框架及其依赖
+pip install openmind[ms]
+```
+
+从源代码安装：
+
+```shell
+git clone https://gitee.com/modelers/openmind.git
+cd openmind
+
+# 不安装框架，仅安装openMind Library
+pip install -e .
+
+# aarch64环境下安装PyTorch框架及其框架
+pip install -e .[pt]
+
+# x86环境下安装PyTorch框架及其框架
+pip install -e .[pt] --extra-index-url https://download.pytorch.org/whl/cpu    
+
+# MindSpore框架及其依赖
+pip install -e .[ms]
+```
+
+关于openMind Library的安装步骤，推荐用户参考[《安装》](https://modelers.cn/docs/zh/openmind-library/install.html)文档，以确保顺利并正确地完成安装过程。
+
+---
+
+## 🧰 快速上手
+
+openMind Library支持通过cli或SDK方式启动微调，推理，评估和部署。
+
+### 微调
+
+openMind Library支持通过`openmind-cli train`命令行方式解析yaml文件运行微调全流程。openMind Library为您提供了examples示例，您可以通过以下命令快速启动微调示例。
+
+#### 全参微调
+
+```shell
+openmind-cli train examples/features/train_sft_full.yaml
+```
+
+#### LoRA微调
+
+```shell
+openmind-cli train examples/features/train_sft_lora.yaml
+```
+
+#### QLoRA微调
+
+QLoRA微调启动前，需要手动安装bitandbytes仓，请参考[微调QLoRA章节](https://modelers.cn/docs/zh/openmind-library/basic_tutorial/finetune/finetune_pt.html)中的安装指引完成前置配置。
+
+```shell
+openmind-cli train examples/features/train_sft_qlora.yaml
+```
+
+#### NPU亲和算子优化
+
+openMind Library目前集成了npu_fusion_attention和npu_rms_norm融合算子，可以显著提升模型微调训练性能。您可以参考[融合算子使能文档](https://modelers.cn/docs/zh/openmind-library/basic_tutorial/fused_ops.html)使用该功能提升训练速度。
+
+### 推理
+
+openMind Library支持基于cli命令快速启动文本生成推理。
+
+```shell
+openmind-cli run text-generation --framework pt --input "What is AI?"
+```
+
+`openmind-cli run`也支持文生图推理。
+
+```shell
+openmind-cli run  text-to-image  --framework pt --backend diffusers --input "masterpiece, best quality, Cute dragon creature, pokemon style, night, moonlight, dim lighting"
+```
+
+如果您需要集成openMind Library的推理功能，或者有其他使用需求，您也可以使用对应的SDK接口进行调用。
+
+```shell
+from openmind import pipeline
+   
+pipe = pipeline(
+    task="text-generation",
+    model="Baichuan/Baichuan2_7b_chat_pt",
+    framework="pt",
+    backend="transformers",
+    trust_remote_code=True,
+    device="npu:0",
+)
+output = pipe("Give three tips for staying healthy.")
+print(output)
+```
+
+更多推理功能使用，您可以参考[推理文档](https://modelers.cn/docs/zh/openmind-library/basic_tutorial/pipeline.html)和[openmind-cli run章节](https://modelers.cn/docs/zh/openmind-library/basic_tutorial/cli.html)。
+
+### 评估
+
+openMind Library集成了lm_eval进行模型评估推理。您可以调用`openmind-cli lmeval`命令，从魔乐社区下载评估数据集完成评估。
+
+```shell
+openmind-cli lmeval --model Baichuan/Baichuan2_7b_chat_pt --device npu:0 --tasks arithmetic --batch_size 64 --trust_remote_code 1
+```
+
+更多使用方式和支持的评估数据集列表，请查看[openmind-cli lmeval章节](https://modelers.cn/docs/zh/openmind-library/basic_tutorial/cli.html)。
+
+### 部署
+
+openMind Library支持了LMDeploy和MindIE部署模型服务。您可以使用以下命令运行示例，完成服务部署。
+
+- 基于LMDeploy部署Qwen2-7B模型
+
+    ```shell
+    openmind-cli deploy AI-Research/Qwen2-7B --backend lmdeploy
+    ```
+- 调用API接口完成推理
+
+    ```shell
+    curl http://127.0.0.1:1025/v1/chat/completions \
+          -H 'Content-Type: application/json' \
+          -d '{"model": "AI-Research/Qwen2-7B", "messages": "推荐一个海边度假的地方"}'
+    ```
+
+更多deploy接口使用和MindIE后端使用，请查看[openmind-cli deploy文档](https://modelers.cn/docs/zh/openmind-library/basic_tutorial/cli.html)。
+
+---
+
+## 📚 贡献
+
+1. 在上传PR之前，请确保所有测试都通过。首先在本地运行如下命令。
+
+```shell
+# The scripts below run on system default python version by default. If you want to use other python version, set the env
+# PY_VERSION. For example, `PY_VERSION=3.8 ./ci/lint.sh`
+# Lint check
+./ci/lint.sh
+# Unit test
+./ci/unit_test.sh
+# Functional test, Please generate the HUB_TOKEN from openmind by yourself and use it privatelly.
+HUB_TOKEN=your_hub_token ./ci/functional_test.sh
+```
+
+2. 当您推送或更新PR（Pull Request）后，系统将自动触发CI（持续集成）构建和测试流程。若所有CI构建和测试均顺利通过，`ci-success`标记将自动添加到您的PR中。然而，若出现CI故障，您可以点击CI日志链接以详细查看失败原因，并在本地进行必要的修复。一旦您完成了修复并希望重新运行CI作业，只需在PR中留下评论`/recheck`即可。
+
+3. 详细贡献指南请参考：
+    https://gitee.com/modelers/openmind/blob/dev/docs/zh/developer_tutorial/contribution.md
+
+---
+
+## 🔒 安全声明
+
+为保障使用过程安全，推荐用户参考[《安全声明》](./security_statement.md)了解相关安全信息，进行必要的安全加固。
+
+---
+
+## 📖 许可证
+MulanPSL v2
+openMind Library使用木兰宽松许可证第2版（MulanPSL v2）。详见[LICENSE](http://license.coscl.org.cn/MulanPSL2)文件。

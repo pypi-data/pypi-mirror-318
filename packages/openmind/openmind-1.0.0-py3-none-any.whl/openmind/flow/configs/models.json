@@ -1,0 +1,32 @@
+{
+    "qwen2": {
+        "models": {
+            "Qwen1.5-7B": {
+                "modelers": "PyTorch-NPU/qwen1.5_7b"
+            },
+            "Qwen1.5-7B-Chat": {
+                "modelers": "PyTorch-NPU/qwen1.5_7b_chat"
+            },
+            "Qwen2-0.5B": {
+                "modelers": "AI_Connect/Qwen2_0.5B"
+            },
+            "Qwen2-1.5B": {
+                "modelers": "AI_Connect/Qwen2_1.5B"
+            },
+            "Qwen2-7B": {
+                "modelers":"AI-Research/Qwen2-7B"
+            },
+            "Qwen2.5-7B": {
+                "modelers":"AI-Research/Qwen2.5-7B"
+            },
+            "Qwen2.5-7B-Chat": {
+                "modelers": "AI-Research/Qwen2.5-7B-Instruct"
+            },
+            "Qwen2.5-32B": {
+                "modelers": "AI-Research/Qwen2.5-32B"
+            }
+        },
+        "lora_target": "q_proj, k_proj",
+        "template": "qwen"
+    }
+}

@@ -1,0 +1,10 @@
+[
+    {
+        "name": "qwen",
+        "system_template": "<|im_start|>system\n{content}<|im_end|>\n",
+        "user_template": "<|im_start|>user\n{content}<|im_end|>\n<|im_start|>assistant\n",
+        "assistant_template": "{content}",
+        "separator_template": "{content}\n",
+        "default_system": "You are a helpful assistant."
+    }
+]
