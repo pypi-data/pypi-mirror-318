@@ -1,0 +1,2 @@
+[console_scripts]
+git-development-cli-tools = git_development_cli_tools.cli.main:main
