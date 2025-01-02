@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: bgblur
+Version: 0.1.1
+Summary: Convert vertical video to 16:9 horizontal video and make the excess background blur
+Author-email: Akio Kondo <kojiran+pypl@gmail.com>
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: opencv-python>=4.0
+Requires-Dist: numpy>=1.19
+Requires-Dist: Pillow>=9.0
+Requires-Dist: tqdm
+
+# video blur background
+
+Convert vertical video to 16:9 horizontal video and make the excess background blur
+
+## install
+
+```sh
+pip install bgblur
+```
+
+## How to use
+
+```sh
+bgblur -i "input video file path" -o "output video file path"
+```

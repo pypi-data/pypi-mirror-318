@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+bgblur/__init__.py
+bgblur/main.py
+bgblur.egg-info/PKG-INFO
+bgblur.egg-info/SOURCES.txt
+bgblur.egg-info/dependency_links.txt
+bgblur.egg-info/entry_points.txt
+bgblur.egg-info/requires.txt
+bgblur.egg-info/top_level.txt
