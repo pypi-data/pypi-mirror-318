@@ -1,0 +1,11 @@
+pyproject.toml
+setup.py
+deja-file/__init__.py
+deja-file/__main__.py
+deja-file/cli.py
+deja_file.egg-info/PKG-INFO
+deja_file.egg-info/SOURCES.txt
+deja_file.egg-info/dependency_links.txt
+deja_file.egg-info/entry_points.txt
+deja_file.egg-info/requires.txt
+deja_file.egg-info/top_level.txt

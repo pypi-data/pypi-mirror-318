@@ -1,0 +1,2 @@
+[console_scripts]
+deja-file = deja_file.cli:main

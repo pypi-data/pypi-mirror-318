@@ -1,0 +1,12 @@
+[tool.poetry]
+name = "deja-file"
+version = "1.5.1"
+description = "A duplicate file detection tool."
+authors = ["Kartik Jain <kartik@yeezus.live>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
