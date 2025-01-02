@@ -1,0 +1,2 @@
+[nbdev]
+jupy_juice = jupy_juice._modidx:d

@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+settings.ini
+setup.py
+jupy_juice/__init__.py
+jupy_juice/_modidx.py
+jupy_juice/core.py
+jupy_juice.egg-info/PKG-INFO
+jupy_juice.egg-info/SOURCES.txt
+jupy_juice.egg-info/dependency_links.txt
+jupy_juice.egg-info/entry_points.txt
+jupy_juice.egg-info/not-zip-safe
+jupy_juice.egg-info/requires.txt
+jupy_juice.egg-info/top_level.txt
