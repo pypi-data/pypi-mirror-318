@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: logstore
+Version: 1.0.0
+Summary: Python log store.
+Home-page: https://gitlab.widas.de/cnips/arc-libs/py-logstore
+Author: Vicky Tenzin
+Author-email: vicky.tenzin@widas.in
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Logstore
+
+A simple Python logging package which stores log in memory.
+
+## Installation
+
+```bash
+pip install logstore
+```
+
+## Usage
+```python
+from logstore import Logger, DEBUG, INFO
+
+logger = Logger(level=INFO, app="MyApp")
+logger.info("This is an info message")
+print(logger)
+
+```
+## License
+
+```text
+MIT License
+...
