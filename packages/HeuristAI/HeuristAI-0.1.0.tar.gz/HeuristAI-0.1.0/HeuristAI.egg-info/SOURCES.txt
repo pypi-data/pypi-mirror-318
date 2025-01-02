@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+HeuristAI/__init__.py
+HeuristAI/example_EvolutionofHeuristics.py
+HeuristAI/example_FunSearch.py
+HeuristAI/example_ReEvo.py
+HeuristAI/text_utils.py
+HeuristAI/utils.py
+HeuristAI.egg-info/PKG-INFO
+HeuristAI.egg-info/SOURCES.txt
+HeuristAI.egg-info/dependency_links.txt
+HeuristAI.egg-info/requires.txt
+HeuristAI.egg-info/top_level.txt
