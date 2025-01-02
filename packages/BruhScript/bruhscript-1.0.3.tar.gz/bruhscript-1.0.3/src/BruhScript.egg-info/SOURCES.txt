@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/BruhScript.egg-info/PKG-INFO
+src/BruhScript.egg-info/SOURCES.txt
+src/BruhScript.egg-info/dependency_links.txt
+src/BruhScript.egg-info/entry_points.txt
+src/BruhScript.egg-info/requires.txt
+src/BruhScript.egg-info/top_level.txt
+src/bruhscript/__init__.py
+src/bruhscript/core.py
+src/bruhscript/plugins/__init__.py
+src/bruhscript/plugins/file_plugin.py
+src/bruhscript/plugins/math_plugin.py
