@@ -1,0 +1,2 @@
+[console_scripts]
+cohesionlm = cohesionlm:main
