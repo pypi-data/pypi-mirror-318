@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "python_sip_client"
+version = "0.0.2"
+authors = [{ name = "Michael Schleider", email = "maschleider@yahoo.com" }]
+description = "A baresip-based, multithreaded, event handling SIP client written in Python"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Topic :: Communications :: Internet Phone",
+]
+keywords = ["sip", "voip", "telephony", "communications", "baresip"]
+
+depdendencies = ["pexpect >= 4.8.0"]
+
+[project.optional-dependencies]
+tests = ["pytest >= 6.2.4"]
+
+[project.urls]
+Homepage = "https://github.com/mschleid/python_sip_client"
+Issues = "https://github.com/mschleid/python_sip_client/issues"
+Documentation = "https://github.com/mschleid/python_sip_client/wiki"
