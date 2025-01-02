@@ -1,0 +1,2 @@
+[console_scripts]
+Jzdj = Jzdj.gui:main_interface

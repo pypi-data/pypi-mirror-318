@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: Jzdj
+Version: 0.1
+Summary: 农用地调查系统
+Author: Zuo Zhang
+Author-email: www.824979925@qq.com
+Requires-Dist: pandas
+Requires-Dist: folium
