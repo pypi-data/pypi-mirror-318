@@ -1,0 +1,29 @@
+[project]
+name = "find-frame-tv"
+version = "0.1.0"
+description = "Finds Samsung Frame TVs on a local network using UPnP (Simple Service Discovery Protocol)"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "requests>=2.32.3",
+]
+authors = [
+    {name = "Seshadri Mahalingam", email="seshadri.mahalingam@gmail.com"}
+]
+license = { file = "LICENSE" }
+keywords = ["samsung", "frame", "tv", "upnp", "ssdp"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+]
+
+[project.urls]
+Repository = "https://github.com/seshness/find-frame-tv"
+
+[project.scripts]
+find-frame-tv = "find_frame_tv:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
