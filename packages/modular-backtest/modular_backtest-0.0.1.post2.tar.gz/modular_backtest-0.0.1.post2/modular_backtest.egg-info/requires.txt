@@ -1,0 +1,15 @@
+numpy<3,>=2
+pandas<3,>=2
+zipline-reloaded>=3.1
+pydantic<3,>=2
+multimethod<3,>=2
+ta-lib>=0.5
+bottleneck>=1.4
+more-itertools<11,>=10
+tqdm<5,>=4
+yfinance>=0.2.50
+tradingview-screener>=2.5
+
+[docs]
+sphinx-autoapi
+pydata-sphinx-theme
