@@ -1,0 +1,15 @@
+django>=3.2
+
+[all]
+boto3>=1.17.0
+messagebird>=1.5.0
+twilio>=7.0.0
+
+[boto3]
+boto3>=1.17.0
+
+[messagebird]
+messagebird>=1.5.0
+
+[twilio]
+twilio>=7.0.0
