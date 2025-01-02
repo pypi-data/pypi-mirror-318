@@ -1,0 +1,3 @@
+[console_scripts]
+docker-mount=docker_mounter.mounter:app
+
