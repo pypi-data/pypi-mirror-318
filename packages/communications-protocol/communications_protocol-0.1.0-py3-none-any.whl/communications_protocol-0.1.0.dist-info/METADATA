@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: communications-protocol
+Version: 0.1.0
+Summary: A package for communication protocol handling
+Home-page: https://github.com/yourusername/yourproject
+Author: lhb
+Author-email: spike.edjet@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: PySide6
+
+# Communications Protocol
+
+这是一个用于处理通信协议的Python包，提供了一些常用的通信命令和帧创建功能。
+
+## 功能
+
+- 握手请求
+- 数据请求
+- 设置速度
+- 停止运动
+- 设置零位
+- 单轴运动
+
+## 安装
+
+你可以通过以下命令安装此包：
+pip install communications_protocol-0.1.0-py3-none-any.whl
+
+## 使用示例
+
+### 以下是如何使用`CommunicationsProtocol`类的示例：
+
+from communications_protocol import CommunicationsProtocol
+
+### 创建协议实例
+protocol = CommunicationsProtocol()
+
+### 生成握手请求帧
+handshake_frame = protocol.handshake()
+print("Handshake Frame:", handshake_frame)
+
+### 请求数据
+data_request_frame = protocol.request_data()
+print("Data Request Frame:", data_request_frame)
+
+### 设置速度
+speed_frame = protocol.set_speed(1.5)
+print("Set Speed Frame:", speed_frame)
+
+### 停止运动
+stop_frame = protocol.stop_motion(0x01)
+print("Stop Motion Frame:", stop_frame)
+
+### 设置零位
+zero_position_frame = protocol.zero_position()
+print("Zero Position Frame:", zero_position_frame)
+
+### 单轴运动
+single_axis_frame = protocol.single_axis_motion(1000)
+print("Single Axis Motion Frame:", single_axis_frame)
+
+
