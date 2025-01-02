@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: student3D
+Version: 0.0.1
+Summary: none
+Home-page: https://github.com/vtongxue/student3D
+Author: student_v
+Author-email: 13974164156@163.com
+Project-URL: bug tracker, https://github.com/vtongxue/student3D/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ursina>=3.0.0
+
+# student3D
+This is a test repo for student3D
+
+Input 'student3D.test' to run the tests.

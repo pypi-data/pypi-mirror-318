@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+student3D.egg-info/PKG-INFO
+student3D.egg-info/SOURCES.txt
+student3D.egg-info/dependency_links.txt
+student3D.egg-info/requires.txt
+student3D.egg-info/top_level.txt
+第三方库/__init__.py
+第三方库/student3D.py
