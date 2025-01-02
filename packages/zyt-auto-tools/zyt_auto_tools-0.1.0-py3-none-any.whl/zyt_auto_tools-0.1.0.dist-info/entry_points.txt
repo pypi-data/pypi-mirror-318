@@ -1,0 +1,5 @@
+[console_scripts]
+auto-generate-all-utils = my_automation_tools.auto_generate_all_utils:main
+auto-init-python-file = my_automation_tools.auto_init_python_file:main
+auto-update-ctime = my_automation_tools.auto_update_ctime:main
+
