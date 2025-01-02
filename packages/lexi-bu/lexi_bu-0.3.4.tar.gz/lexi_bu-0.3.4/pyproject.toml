@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "lexi_bu"
+version = "0.3.4"
+description = "A python package for data analysis related to LEXI"
+authors = ["qudsiramiz <qudsiramiz@gmail.com>"]
+maintainers = [
+    "Brian Walsh <bwalsh@bu.edu>",
+    "Cadin Connor <cmconnor@bu.edu>",
+]
+license = "GNU GPLv3"
+readme = "README.md"
+homepage = "https://lexi-bu.github.io/"
+repository = "https://github.com/Lexi-BU/lexi"
+documentation = "https://lexi-bu.github.io/lexi"
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+toml = "^0.10.2"
+pandas = "^2.2.0"
+pytest = "^8.0.0"
+cdflib = "^1.2.3"
+matplotlib = "^3.8.2"
+jupyter = "^1.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
