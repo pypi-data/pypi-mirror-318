@@ -1,0 +1,11 @@
+chery_pom_tool/__init__.py,sha256=RZ1EuSrc9EVz3SiFLAsgjCnr7Jyou7iGTWAw-ysJbeU,283
+chery_pom_tool/build_tool.py,sha256=cJwCN3QdphCn3pLOzj4NaUPoOVZn-tylEHiZUx36Hmg,4265
+chery_pom_tool/install_tool.py,sha256=K45U6fdu_Bp0Vry4rpl3Kltv3x5PMSXyWAgHrmRhELM,7
+chery_pom_tool/package_tools.py,sha256=J95MkhxIaOF-r4PMFpAaoA46NI116vjYziUxC2OUBHY,4249
+chery_pom_tool/temp_a.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+com_chery/__init__.py,sha256=cvfR00qLOOBPmb44RrJM83weI8LJ_PhVMUE-Jb3I4II,356
+com_chery/chery_pom_root.py,sha256=0-qZUeBaVdA_hOm-BXgn8BYzsXRa23ACQV4n2-fxdW0,1923
+com_chery_pom_root-0.0.1.dist-info/METADATA,sha256=PxH5ABnqLe4j-IyYn_R2QfaPhPQqFFZeKPPSN2DNeGs,267
+com_chery_pom_root-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+com_chery_pom_root-0.0.1.dist-info/top_level.txt,sha256=lIY4Qj7ICPPiNQDk11288yK-MA4MLIrTJ0qNBbsyMWA,25
+com_chery_pom_root-0.0.1.dist-info/RECORD,,
