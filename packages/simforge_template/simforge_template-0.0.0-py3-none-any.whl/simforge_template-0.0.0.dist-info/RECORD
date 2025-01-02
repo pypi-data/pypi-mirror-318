@@ -1,0 +1,10 @@
+simforge_template/__init__.py,sha256=Af5wi7Mp3cZ-ZXFDTN-IeRCGE1wlgPklY_LdhnjrMq0,30
+simforge_template/articulation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simforge_template/geometry/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simforge_template/image/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simforge_template/material/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simforge_template/model/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simforge_template-0.0.0.dist-info/METADATA,sha256=Y-udxxYmEEmZChOgE6JrrkvcBzgZdwDpX7fNlx_ewwA,1625
+simforge_template-0.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+simforge_template-0.0.0.dist-info/licenses/LICENSE-CC0,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
+simforge_template-0.0.0.dist-info/RECORD,,
