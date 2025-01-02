@@ -1,0 +1,95 @@
+Metadata-Version: 2.1
+Name: rdgai
+Version: 0.1.0
+Summary: Adding relation elements to classify readings in a TEI XML critical apparatus.
+Home-page: https://github.com/rbturnbull/rdgai/
+License: Apache-2.0
+Keywords: command-line interface
+Author: Robert Turnbull
+Author-email: robert.turnbull@unimelb.edu.au
+Requires-Python: >=3.10,<3.12
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: flask (>=3.0.3,<4.0.0)
+Requires-Dist: kmedoids (>=0.5.3.1,<0.6.0.0)
+Requires-Dist: langchain (>=0.2.1)
+Requires-Dist: levenshtein (>=0.26.1,<0.27.0)
+Requires-Dist: llmloader (>=0.1.1)
+Requires-Dist: lxml (>=5.2.2,<6.0.0)
+Requires-Dist: openpyxl (>=3.1.5,<4.0.0)
+Requires-Dist: pandas (>=2.2.3,<3.0.0)
+Requires-Dist: plotly (>=5.24.1,<6.0.0)
+Requires-Dist: rich (>=13.7.1,<14.0.0)
+Requires-Dist: scikit-learn (>=1.5.2,<2.0.0)
+Requires-Dist: transformers (>=4.46.1,<5.0.0)
+Requires-Dist: typer (>=0.12.3,<0.13.0)
+Project-URL: Documentation, https://rbturnbull.github.io/rdgai
+Project-URL: Repository, https://github.com/rbturnbull/rdgai/
+Description-Content-Type: text/x-rst
+
+================================================================
+rdgai
+================================================================
+
+.. start-badges
+
+|testing badge| |coverage badge| |docs badge| |black badge|
+
+.. |testing badge| image:: https://github.com/rbturnbull/rdgai/actions/workflows/testing.yml/badge.svg
+    :target: https://github.com/rbturnbull/rdgai/actions
+
+.. |docs badge| image:: https://github.com/rbturnbull/rdgai/actions/workflows/docs.yml/badge.svg
+    :target: https://rbturnbull.github.io/rdgai
+    
+.. |black badge| image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/psf/black
+    
+.. |coverage badge| image:: https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/rbturnbull/1cf1aae1e72f85de97c7f79bb41f3d76/raw/coverage-badge.json
+    :target: https://rbturnbull.github.io/rdgai/coverage/
+    
+.. end-badges
+
+.. start-quickstart
+
+Adding relation elements to classify readings in a TEI XML critical apparatus
+
+Installation
+==================================
+
+Install using pip:
+
+.. code-block:: bash
+
+    pip install git+https://github.com/rbturnbull/rdgai.git
+
+
+Usage
+==================================
+
+See the options with the command:
+
+.. code-block:: bash
+
+    rdgai --help
+
+.. end-quickstart
+
+
+Credits
+==================================
+
+.. start-credits
+
+Robert Turnbull
+For more information contact: <robert.turnbull@unimelb.edu.au>
+
+Created using torchapp (https://github.com/rbturnbull/torchapp).
+
+.. end-credits
+
+
