@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+cillow.egg-info/PKG-INFO
+cillow.egg-info/SOURCES.txt
+cillow.egg-info/dependency_links.txt
+cillow.egg-info/top_level.txt
+tests/test_foo.py
