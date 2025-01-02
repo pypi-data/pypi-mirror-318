@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: libdata
+Version: 0.8.5
+Summary: Unified interface to access data.
+Home-page: https://github.com/XoriieInpottn/libdata
+Author: xi
+Author-email: gylv@mail.ustc.edu.cn
+License: MIT
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: PyYAML
+Requires-Dist: numpy
+Requires-Dist: pydantic
+Requires-Dist: scipy
+Requires-Dist: tqdm
+
+# This is the libdata project.
+
+
