@@ -1,0 +1,8 @@
+zeevro_cgeo-1.1.0.dist-info/top_level.txt,sha256=dBfrmJ3_bDYsNOhZMUEJZugcb03bcLc9t_pFWlmNP-4,5
+zeevro_cgeo-1.1.0.dist-info/RECORD,,
+zeevro_cgeo-1.1.0.dist-info/METADATA,sha256=a43GNWnRew_UJoGzPdIfxgqQhOC9-DquGAAfpQ0JhOk,1025
+zeevro_cgeo-1.1.0.dist-info/WHEEL,sha256=Z2xT-Odoppk1TCMBPyAZag5qOX0ZUbQ8UaAgmTCvj3U,112
+cgeo/_cgeo.cpython-313-arm-linux-musleabihf.so,sha256=4yGn4UwqNAoVZJFcP7v8CwHAfMX_3YQWmP5g0r8p93w,22608
+cgeo/__init__.py,sha256=iIkcbWxLco1grkce2u6N10kDG8ml559qK3hYZNPYJws,125
+cgeo/_cgeo.py,sha256=Ru17RjXqcgUSb-HnEozfcHg_C44aiT6bJ86QjE940PU,1598
+cgeo/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
