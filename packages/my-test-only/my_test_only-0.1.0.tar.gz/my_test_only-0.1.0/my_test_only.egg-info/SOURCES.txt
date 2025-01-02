@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+my_test_only/__init__.py
+my_test_only/core.py
+my_test_only.egg-info/PKG-INFO
+my_test_only.egg-info/SOURCES.txt
+my_test_only.egg-info/dependency_links.txt
+my_test_only.egg-info/top_level.txt
+tests/test_core.py
