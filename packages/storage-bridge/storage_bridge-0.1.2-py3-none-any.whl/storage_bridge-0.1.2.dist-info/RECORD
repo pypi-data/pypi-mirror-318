@@ -1,0 +1,8 @@
+storage_bridge/__init__.py,sha256=MFjT4el-uv2CNg97FMbuquf7Xq4ok9MdfS_MaLCaXJc,86
+storage_bridge/local.py,sha256=nXTKky-ySFM23mvyHeCAX3iM3VXsFWF6UQdhySPFptM,833
+storage_bridge/s3.py,sha256=2nHg15iwD2diuyHSJHDY2CczBB0VjvBwmn70-EoLqjA,1025
+storage_bridge/storage.py,sha256=oHkZV4BuS9Q-gCaHWbR6X_ZA32c8wkkQMzR0_hnkPcI,377
+storage_bridge-0.1.2.dist-info/METADATA,sha256=mtUmphvVpFkDEe_3cMrpsQ2dVrjKOqpMkDAvlwL3Nbo,4318
+storage_bridge-0.1.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+storage_bridge-0.1.2.dist-info/top_level.txt,sha256=cGoz6Rcey1lk8vLMFjkUFWx5WOaTDZk3GWNeCAhgX3Y,15
+storage_bridge-0.1.2.dist-info/RECORD,,
