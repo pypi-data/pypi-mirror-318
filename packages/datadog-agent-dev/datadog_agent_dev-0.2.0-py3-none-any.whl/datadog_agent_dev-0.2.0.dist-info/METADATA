@@ -1,0 +1,180 @@
+Metadata-Version: 2.4
+Name: datadog-agent-dev
+Version: 0.2.0
+Summary: Tool for developing on the Datadog Agent platform
+Project-URL: Homepage, https://github.com/DataDog/datadog-agent-dev
+Project-URL: Documentation, https://datadoghq.dev/datadog-agent/setup/
+Author-email: "Datadog, Inc." <dev@datadoghq.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Keywords: agent,datadog
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.12
+Requires-Dist: click~=8.1
+Requires-Dist: dep-sync~=0.1
+Requires-Dist: find-exe~=0.1
+Requires-Dist: msgspec-click~=0.2
+Requires-Dist: msgspec~=0.18
+Requires-Dist: platformdirs~=4.2
+Requires-Dist: rich-click~=1.8
+Requires-Dist: rich~=13.7
+Requires-Dist: tomlkit~=0.13
+Requires-Dist: typing-extensions>=4.6.0; python_version < '3.13'
+Requires-Dist: uv~=0.5.11
+Provides-Extra: legacy-agent-deploy
+Requires-Dist: azure-identity==1.14.1; extra == 'legacy-agent-deploy'
+Requires-Dist: azure-mgmt-resource==23.0.1; extra == 'legacy-agent-deploy'
+Requires-Dist: pygithub==1.59.1; extra == 'legacy-agent-deploy'
+Requires-Dist: setuptools==42.0.2; extra == 'legacy-agent-deploy'
+Requires-Dist: virtualenv==16.7.9; extra == 'legacy-agent-deploy'
+Provides-Extra: legacy-btf-gen
+Requires-Dist: awscli==1.29.45; extra == 'legacy-btf-gen'
+Requires-Dist: invoke==2.2.0; extra == 'legacy-btf-gen'
+Requires-Dist: python-gitlab==4.4.0; extra == 'legacy-btf-gen'
+Requires-Dist: requests==2.31.0; extra == 'legacy-btf-gen'
+Provides-Extra: legacy-build
+Requires-Dist: awscli==1.29.45; extra == 'legacy-build'
+Requires-Dist: boto3==1.28.45; extra == 'legacy-build'
+Requires-Dist: codeowners==0.6.0; extra == 'legacy-build'
+Requires-Dist: datadog-api-client==2.29.0; extra == 'legacy-build'
+Requires-Dist: docker-squash==1.1.0; extra == 'legacy-build'
+Requires-Dist: docker==6.1.3; extra == 'legacy-build'
+Requires-Dist: dulwich==0.21.6; extra == 'legacy-build'
+Requires-Dist: invoke==2.2.0; extra == 'legacy-build'
+Requires-Dist: mypy==1.10.0; extra == 'legacy-build'
+Requires-Dist: packaging==24.1; extra == 'legacy-build'
+Requires-Dist: parameterized==0.9.0; extra == 'legacy-build'
+Requires-Dist: pygithub==1.59.1; extra == 'legacy-build'
+Requires-Dist: python-gitlab==4.4.0; extra == 'legacy-build'
+Requires-Dist: reno==3.5.0; extra == 'legacy-build'
+Requires-Dist: requests==2.31.0; extra == 'legacy-build'
+Requires-Dist: ruff==0.3.5; extra == 'legacy-build'
+Requires-Dist: semver==2.10.0; extra == 'legacy-build'
+Requires-Dist: toml==0.10.2; extra == 'legacy-build'
+Requires-Dist: types-pyyaml==6.0.12.20240311; extra == 'legacy-build'
+Requires-Dist: types-requests==2.30.0; extra == 'legacy-build'
+Requires-Dist: types-tabulate==0.9.0.20240106; extra == 'legacy-build'
+Requires-Dist: types-toml==0.10.8.20240310; extra == 'legacy-build'
+Requires-Dist: urllib3==1.26.15; extra == 'legacy-build'
+Requires-Dist: vulture==2.6; extra == 'legacy-build'
+Provides-Extra: legacy-circleci
+Requires-Dist: wheel==0.40.0; extra == 'legacy-circleci'
+Provides-Extra: legacy-constraints
+Requires-Dist: azure-identity==1.14.1; extra == 'legacy-constraints'
+Requires-Dist: azure-mgmt-resource==23.0.1; extra == 'legacy-constraints'
+Requires-Dist: jira==3.5.2; extra == 'legacy-constraints'
+Requires-Dist: setuptools==42.0.2; extra == 'legacy-constraints'
+Requires-Dist: virtualenv==16.7.9; extra == 'legacy-constraints'
+Requires-Dist: wheel==0.40.0; extra == 'legacy-constraints'
+Provides-Extra: legacy-docs
+Requires-Dist: linkchecker~=10.5.0; extra == 'legacy-docs'
+Requires-Dist: mkdocs-git-revision-date-localized-plugin~=1.2.1; extra == 'legacy-docs'
+Requires-Dist: mkdocs-glightbox~=0.3.5; extra == 'legacy-docs'
+Requires-Dist: mkdocs-material~=9.5.1; extra == 'legacy-docs'
+Requires-Dist: mkdocs-minify-plugin~=0.7.1; extra == 'legacy-docs'
+Requires-Dist: mkdocs~=1.5.3; extra == 'legacy-docs'
+Requires-Dist: pygments~=2.17.2; extra == 'legacy-docs'
+Requires-Dist: pymdown-extensions~=10.5.0; extra == 'legacy-docs'
+Provides-Extra: legacy-e2e
+Requires-Dist: codeowners==0.6.0; extra == 'legacy-e2e'
+Requires-Dist: docker-squash==1.1.0; extra == 'legacy-e2e'
+Requires-Dist: docker==6.1.3; extra == 'legacy-e2e'
+Requires-Dist: invoke==2.2.0; extra == 'legacy-e2e'
+Requires-Dist: packaging==24.1; extra == 'legacy-e2e'
+Requires-Dist: python-gitlab==4.4.0; extra == 'legacy-e2e'
+Requires-Dist: reno==3.5.0; extra == 'legacy-e2e'
+Requires-Dist: requests==2.31.0; extra == 'legacy-e2e'
+Requires-Dist: toml==0.10.2; extra == 'legacy-e2e'
+Provides-Extra: legacy-github
+Requires-Dist: beautifulsoup4~=4.12.3; extra == 'legacy-github'
+Requires-Dist: cryptography==39.0.1; extra == 'legacy-github'
+Requires-Dist: lxml~=5.2.2; extra == 'legacy-github'
+Requires-Dist: pygithub==1.59.1; extra == 'legacy-github'
+Requires-Dist: pyjwt==2.4.0; extra == 'legacy-github'
+Requires-Dist: slack-sdk~=3.27.1; extra == 'legacy-github'
+Requires-Dist: toml~=0.10.2; extra == 'legacy-github'
+Provides-Extra: legacy-kernel-matrix-testing
+Requires-Dist: jinja2==3.0.3; extra == 'legacy-kernel-matrix-testing'
+Requires-Dist: libvirt-python==10.9.0; extra == 'legacy-kernel-matrix-testing'
+Requires-Dist: python-levenshtein==0.26.1; extra == 'legacy-kernel-matrix-testing'
+Requires-Dist: tabulate[widechars]==0.9.0; extra == 'legacy-kernel-matrix-testing'
+Requires-Dist: termcolor==2.5.0; extra == 'legacy-kernel-matrix-testing'
+Requires-Dist: thefuzz==0.22.1; extra == 'legacy-kernel-matrix-testing'
+Provides-Extra: legacy-notifications
+Requires-Dist: codeowners==0.6.0; extra == 'legacy-notifications'
+Requires-Dist: invoke==2.2.0; extra == 'legacy-notifications'
+Requires-Dist: pyyaml==6.0.1; extra == 'legacy-notifications'
+Requires-Dist: requests==2.31.0; extra == 'legacy-notifications'
+Requires-Dist: slack-sdk~=3.27.1; extra == 'legacy-notifications'
+Provides-Extra: legacy-release
+Requires-Dist: atlassian-python-api==3.41.3; extra == 'legacy-release'
+Requires-Dist: pandoc==2.4; extra == 'legacy-release'
+Requires-Dist: reno==3.5.0; extra == 'legacy-release'
+Requires-Dist: yattag==1.15.2; extra == 'legacy-release'
+Provides-Extra: legacy-tasks
+Requires-Dist: atlassian-python-api==3.41.3; extra == 'legacy-tasks'
+Requires-Dist: awscli==1.29.45; extra == 'legacy-tasks'
+Requires-Dist: beautifulsoup4~=4.12.3; extra == 'legacy-tasks'
+Requires-Dist: boto3==1.28.45; extra == 'legacy-tasks'
+Requires-Dist: codeowners==0.6.0; extra == 'legacy-tasks'
+Requires-Dist: cryptography==39.0.1; extra == 'legacy-tasks'
+Requires-Dist: datadog-api-client==2.29.0; extra == 'legacy-tasks'
+Requires-Dist: debugpy==1.8.2; extra == 'legacy-tasks'
+Requires-Dist: docker-squash==1.1.0; extra == 'legacy-tasks'
+Requires-Dist: docker==6.1.3; extra == 'legacy-tasks'
+Requires-Dist: dulwich==0.21.6; extra == 'legacy-tasks'
+Requires-Dist: invoke==2.2.0; extra == 'legacy-tasks'
+Requires-Dist: linkchecker~=10.5.0; extra == 'legacy-tasks'
+Requires-Dist: lxml~=5.2.2; extra == 'legacy-tasks'
+Requires-Dist: mkdocs-git-revision-date-localized-plugin~=1.2.1; extra == 'legacy-tasks'
+Requires-Dist: mkdocs-glightbox~=0.3.5; extra == 'legacy-tasks'
+Requires-Dist: mkdocs-material~=9.5.1; extra == 'legacy-tasks'
+Requires-Dist: mkdocs-minify-plugin~=0.7.1; extra == 'legacy-tasks'
+Requires-Dist: mkdocs~=1.5.3; extra == 'legacy-tasks'
+Requires-Dist: mypy==1.10.0; extra == 'legacy-tasks'
+Requires-Dist: packaging==24.1; extra == 'legacy-tasks'
+Requires-Dist: pandoc==2.4; extra == 'legacy-tasks'
+Requires-Dist: parameterized==0.9.0; extra == 'legacy-tasks'
+Requires-Dist: pygithub==1.59.1; extra == 'legacy-tasks'
+Requires-Dist: pygments~=2.17.2; extra == 'legacy-tasks'
+Requires-Dist: pyjwt==2.4.0; extra == 'legacy-tasks'
+Requires-Dist: pymdown-extensions~=10.5.0; extra == 'legacy-tasks'
+Requires-Dist: python-gitlab==4.4.0; extra == 'legacy-tasks'
+Requires-Dist: pyyaml==6.0.1; extra == 'legacy-tasks'
+Requires-Dist: reno==3.5.0; extra == 'legacy-tasks'
+Requires-Dist: requests==2.31.0; extra == 'legacy-tasks'
+Requires-Dist: ruff==0.3.5; extra == 'legacy-tasks'
+Requires-Dist: semver==2.10.0; extra == 'legacy-tasks'
+Requires-Dist: slack-sdk~=3.27.1; extra == 'legacy-tasks'
+Requires-Dist: toml==0.10.2; extra == 'legacy-tasks'
+Requires-Dist: toml~=0.10.2; extra == 'legacy-tasks'
+Requires-Dist: types-pyyaml==6.0.12.20240311; extra == 'legacy-tasks'
+Requires-Dist: types-requests==2.30.0; extra == 'legacy-tasks'
+Requires-Dist: types-tabulate==0.9.0.20240106; extra == 'legacy-tasks'
+Requires-Dist: types-toml==0.10.8.20240310; extra == 'legacy-tasks'
+Requires-Dist: urllib3==1.26.15; extra == 'legacy-tasks'
+Requires-Dist: vulture==2.6; extra == 'legacy-tasks'
+Requires-Dist: yattag==1.15.2; extra == 'legacy-tasks'
+Description-Content-Type: text/markdown
+
+# Datadog Agent platform developer tooling
+
+-----
+
+This is the main interface for developing on the Datadog Agent platform.
+
+## Installation
+
+```console
+pip install datadog-agent-dev
+```
+
+See the [standard instructions](https://datadoghq.dev/datadog-agent/setup/#deva-recommended) for more information.
+
+## License
+
+`datadog-agent-dev` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
