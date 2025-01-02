@@ -1,0 +1,3 @@
+[console_scripts]
+flask-session-cookie-manager2 = flask_session_cookie_manager2:main
+flask-session-cookie-manager3 = flask_session_cookie_manager3:main
