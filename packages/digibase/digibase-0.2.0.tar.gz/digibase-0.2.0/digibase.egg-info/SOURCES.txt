@@ -1,0 +1,10 @@
+LICENSE
+README.md
+digibase.py
+pyproject.toml
+digibase.egg-info/PKG-INFO
+digibase.egg-info/SOURCES.txt
+digibase.egg-info/dependency_links.txt
+digibase.egg-info/requires.txt
+digibase.egg-info/top_level.txt
+tests/test_hw.py
