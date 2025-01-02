@@ -1,0 +1,9 @@
+setup.py
+com_chery/chery_user/__init__.py
+com_chery/chery_user/pom.py
+com_chery/chery_user/user_api.py
+com_chery_user.egg-info/PKG-INFO
+com_chery_user.egg-info/SOURCES.txt
+com_chery_user.egg-info/dependency_links.txt
+com_chery_user.egg-info/requires.txt
+com_chery_user.egg-info/top_level.txt
