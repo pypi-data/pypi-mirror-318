@@ -1,0 +1,7 @@
+README.md
+setup.py
+axium/__init__.py
+axium.egg-info/PKG-INFO
+axium.egg-info/SOURCES.txt
+axium.egg-info/dependency_links.txt
+axium.egg-info/top_level.txt
