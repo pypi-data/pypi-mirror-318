@@ -1,0 +1,59 @@
+Metadata-Version: 2.4
+Name: dogcrud
+Version: 0.0.1
+Summary: Datadog CRUD resources from the command line.
+Project-URL: Documentation, https://github.com/drichardson/dogcrud
+Project-URL: Issues, https://github.com/drichardson/dogcrud/issues
+Project-URL: Source, https://github.com/drichardson/dogcrud.git
+Author-email: Doug Richardson <git@rekt.email>
+License-File: LICENSE.txt
+Keywords: cli,datadog
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: System :: Monitoring
+Requires-Python: >=3.13
+Requires-Dist: aiofiles~=24.1.0
+Requires-Dist: aiohttp[speedups]~=3.11.11
+Requires-Dist: click~=8.1.8
+Requires-Dist: orjson~=3.10.13
+Requires-Dist: pydantic~=2.10.4
+Description-Content-Type: text/markdown
+
+# dogcrud
+
+`dogcrud` is a command line tool for working with Datadog CRUD resources, like
+dashboards, monitors, and log pipelines.
+
+[![PyPI - Version](https://img.shields.io/pypi/v/dogcrud.svg)](https://pypi.org/project/dogcrud)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/dogcrud.svg)](https://pypi.org/project/dogcrud)
+
+
+## Installation
+
+```console
+pip install dogcrud
+```
+
+# Shell Completion
+
+`dogcrud` supports command line completion.
+
+For `bash`, add this to `~/.bashrc`:
+
+```bash
+eval "$(_DOGCRUD_COMPLETE=bash_source dogcrud)"
+```
+
+For `zsh`, add this to `~/.zshrc`:
+
+```zsh
+eval "$(_DOGCRUD_COMPLETE=zsh_source dogcrud)"
+```
+
+For `fish`, add this to `~/.config/fish/completions/dogcrud.fish`:
+
+```fish
+_DOGCRUD_COMPLETE=fish_source dogcrud | source
+```
