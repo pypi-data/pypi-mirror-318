@@ -1,0 +1,8 @@
+setup.py
+soit-cli/__init__.py
+soit-cli/main.py
+soit_cli.egg-info/PKG-INFO
+soit_cli.egg-info/SOURCES.txt
+soit_cli.egg-info/dependency_links.txt
+soit_cli.egg-info/not-zip-safe
+soit_cli.egg-info/top_level.txt
