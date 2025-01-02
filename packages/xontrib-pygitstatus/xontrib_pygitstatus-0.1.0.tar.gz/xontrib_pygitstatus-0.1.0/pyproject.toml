@@ -1,0 +1,78 @@
+[project]
+name = "xontrib-pygitstatus"
+version = "0.1.0"
+authors = [{ name = "Kyle Gottfried", email = "Kyle.Gottfried@outlook.com" }]
+description = "PyGit implementation of xonsh's builtin gitstatus PROMPT"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+classifiers = [
+    'Programming Language :: Python :: 3 :: Only',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
+    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+    "Operating System :: OS Independent",
+    "Topic :: System :: Shells",
+    "Topic :: System :: System Shells",
+    "Topic :: Terminals",
+]
+dependencies = ["xonsh>=0.12.5", "pygit2>=1.11.1"]
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[project.entry-points."xonsh.xontribs"]
+"pygitstatus" = "xontrib.pygitstatus.entrypoint"
+
+[project.urls]
+# https://daniel.feldroy.com/posts/2023-08-pypi-project-urls-cheatsheet
+Homepage = "https://github.com/Spitfire1900/xontrib-pygitstatus"
+Documentation = "https://github.com/Spitfire1900/xontrib-pygitstatus/blob/main/README.md"
+Code = "https://github.com/Spitfire1900/xontrib-pygitstatus"
+Issues = "https://github.com/Spitfire1900/xontrib-pygitstatus/issues"
+
+[project.optional-dependencies]
+dev = ["build>=1.2.2", "pytest>=7.0", "gitpython>=3.1.43"]
+
+[build-system]
+requires = [
+    "setuptools>=62",
+    "wheel",          # for bdist package distribution
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+platforms = ["any"]
+include-package-data = false
+
+[tool.setuptools.package-data]
+
+
+[tool.isort]
+line_length = 88
+force_grid_wrap = 2
+multi_line_output = 3
+include_trailing_comma = true
+
+[tool.ruff]
+lint.select = [
+    "E",
+    "F",
+    "B",   # flake8-bugbear
+    "I",   # isort
+    "UP",  # pyupgrade
+    "SIM", # simplify
+    "TC",  # flake8-type-checking
+    "RUF", # ruff specific rules
+
+]
+
+[tool.yapf]
+based_on_style = "pep8"
+column_limit = "88"
+coalesce_brackets = "True"
+each_dict_entry_on_separate_line = "False"
+dedent_closing_brackets = "False"
+split_before_named_assigns = "False"

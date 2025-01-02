@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_autoload.py
+tests/test_xontrib.py
+xontrib/pygitstatus/__init__.py
+xontrib/pygitstatus/entrypoint.py
+xontrib/pygitstatus/event_hooks.py
+xontrib/pygitstatus/prompts.py
+xontrib_pygitstatus.egg-info/PKG-INFO
+xontrib_pygitstatus.egg-info/SOURCES.txt
+xontrib_pygitstatus.egg-info/dependency_links.txt
+xontrib_pygitstatus.egg-info/entry_points.txt
+xontrib_pygitstatus.egg-info/requires.txt
+xontrib_pygitstatus.egg-info/top_level.txt
