@@ -1,0 +1,114 @@
+Metadata-Version: 2.1
+Name: func2json
+Version: 0.1.2
+Summary: Convert Python functions to JSON schemas using Pydantic, Compatible with LLM Function Calling.
+Home-page: https://github.com/ThanabordeeN/func2json
+Author: Thanabordee Noun.
+Author-email: thanabordee.noun@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic
+Requires-Dist: docstring_parser
+
+# Func2JSON
+
+## Description
+
+Func2JSON is a Python library designed to convert Python functions into a standardized JSON format, which is particularly useful for API integration and AI function calling in applications like OpenAI's function calling.
+
+## Installation
+
+Install Func2JSON using pip:
+
+```bash
+pip install func2json
+```
+
+## Usage
+
+Import the function and use it as follows:
+
+```python
+from func2json import execf
+
+def example_function(param1: str, param2: int) -> str:
+    """Example function that takes a string and an integer."""
+    pass
+
+json_struct = execf(example_function)
+print(json_struct)
+```
+
+**Output:**
+
+```json
+{
+  "type": "function",
+  "function": {
+    "name": "example_function",
+    "description": "Example function that takes a string and an integer.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "param1": {
+          "type": "string",
+          "description": "param1 description"
+        },
+        "param2": {
+          "type": "integer",
+          "description": "param2 description"
+        }
+      },
+      "required": ["param1", "param2"]
+    }
+  }
+}
+```
+
+## Features
+
+- Converts function signature and docstring into JSON.
+- Handles parameter types and descriptions.
+- Supports optional parameters.
+- Gracefully handles functions without annotations or docstrings.
+
+## Requirements
+
+- Python 3.10 or higher
+- Dependencies:
+  - pydantic
+  - docstring_parser
+
+## Contributing
+
+Contributions are welcome!
+
+## License
+
+Func2JSON is licensed under the MIT License.
+
+## Contact
+
+For questions or feedback, please contact [thanabordee.noun@gmail.com](mailto:thanabordee.noun@gmail.com).
+
+
+## Limitations
+
+- Does not support functions with *args or **kwargs.
+- Complex type annotations may be converted to strings.
+
+## FAQs
+
+- **Q:** Why use Func2JSON?
+  - **A:** To easily convert Python functions into a standardized JSON format for use in APIs and AI applications.
+  
+- **Q:** Does it support async functions?
+  - **A:** Currently, only synchronous functions are supported.
+
+## Change Log
+
+- **0.1:** Initial release
+
+---

@@ -1,0 +1,7 @@
+README.md
+setup.py
+func2json.egg-info/PKG-INFO
+func2json.egg-info/SOURCES.txt
+func2json.egg-info/dependency_links.txt
+func2json.egg-info/requires.txt
+func2json.egg-info/top_level.txt
