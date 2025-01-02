@@ -1,0 +1,16 @@
+glidergun/__init__.py,sha256=JBX_3ptbXx7i9g8xhD1G0trOIkHhsXmykJLZqiTO9CA,491
+glidergun/_display.py,sha256=MGBUEznQWLsPgvlsopzWJGJPgd5Jp5JmnKx31RFuNTg,3860
+glidergun/_focal.py,sha256=IfjU3jKj_mprvYkk7D701Nv5nrOEbnFKPlUqo5Me9T0,6447
+glidergun/_grid.py,sha256=HGiNVSY6ZN9vX_uT1sq4snO15tBeuzj5oNJ4KwMV6C8,36144
+glidergun/_interpolation.py,sha256=arSOnQPwE0aMjOC56yTpMZ25_XRVLRx4KkX10xd3660,3278
+glidergun/_literals.py,sha256=39Ns6MZNUuGFcWgPZMmeD_mQXRFwtMW1lWV2lYm94Kk,3442
+glidergun/_mosaic.py,sha256=LW3grK6ANF_h2iyiTtp_qZDkqZHZgttiwN5eT3Qvaeg,1479
+glidergun/_prediction.py,sha256=8kU2pUSl4zhkO-PcXfXoea5qzkb5CNgPawYc8qPPrLg,3720
+glidergun/_stack.py,sha256=_8IlDFim3NcwByBJ5ZZwVPAcD0MtnYNJ8fUbBJCeyxg,12640
+glidergun/_types.py,sha256=g00wdGnf534F6t7xilU3Hl-dvOlSImly1bBvqZCpaGY,1410
+glidergun/_utils.py,sha256=DSWckac75h2bqKpCYkrfzQ4JuXHpoaHoRAYj0ay_mgk,1012
+glidergun/_zonal.py,sha256=sU4kTF59vX-fVncYxLqmZMhaqwthYXCkJqkGtLXc4gE,2314
+glidergun-0.8.26.dist-info/METADATA,sha256=4vJ5Kg-9hQpJVbBbJ3jKp8a8oAG1RlmA5rhVsrPBGQQ,2124
+glidergun-0.8.26.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+glidergun-0.8.26.dist-info/top_level.txt,sha256=G-FZXZgOeWxicU4QRFJP0KntDGDbTgJJ-tdwRlpmFi4,10
+glidergun-0.8.26.dist-info/RECORD,,
