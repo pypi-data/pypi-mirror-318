@@ -1,0 +1,13 @@
+pywechat/Clock.py,sha256=b6b1BZEUhZilVW7hr4xwUrszUhMHUOfnhhwljQUJcVI,4596
+pywechat/Errors.py,sha256=yRQul91ymZx3NWa6WjjFtjboqMLo8gw11VxRdEw6MB4,1769
+pywechat/Uielements.py,sha256=nh4dNjk1Vetg1cOiB5NLHjnePHrzmJrLj1ktjzUeGXE,5536
+pywechat/Warnings.py,sha256=Sxfu-8iX7vWw6Wq9XXJEvGBpuzW-fAEVafJzVm8PGa8,146
+pywechat/WechatAuto.py,sha256=Ocue813ERAoJL5R8jU97I2oyKM3oLMtJVfnyGS92Amg,454023
+pywechat/WechatTools.py,sha256=7ucpvf-iQeONvJhG2COHuNgoJqwK2XsqATGAMweZ5CA,107042
+pywechat/WinSettings.py,sha256=1QCPxWSjzn4HFmHBXgBlyWHP0g7Vw7TT2PjKkTdoYfw,14346
+pywechat/__init__.py,sha256=BwUxaVjxIukaOp1iWJxKgN_oEzZvusgkb87MpsgyKzo,2385
+pywechat127-1.4.5.dist-info/LICENSE.txt,sha256=gLKJStrY_lvoMBwA7FiyhQtxqMO6IGJ2qBa1PwCqdLc,11354
+pywechat127-1.4.5.dist-info/METADATA,sha256=8DfWDoUeZY6-R3TA-uDHRlRX0kIMQE1mKt6fykMaCrA,6668
+pywechat127-1.4.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pywechat127-1.4.5.dist-info/top_level.txt,sha256=-CZ3dgX9lOXCG_l7J6A0yhgu0_mLVbdI13CqdrcmeqE,9
+pywechat127-1.4.5.dist-info/RECORD,,
