@@ -1,0 +1,134 @@
+Metadata-Version: 2.1
+Name: sallmon-core
+Version: 1.4.9
+Summary: Sallmon Blockchain FastAPI Server
+Home-page: https://github.com/minakilabs/sallmon-sdk
+Author: Andrew Polykandriotis
+Author-email: andrew@minakilabs.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi>=0.101.0
+Requires-Dist: uvicorn>=0.27.1
+Requires-Dist: websockets>=10.4
+Requires-Dist: requests>=2.0
+
+Here’s a phased implementation plan for your sallmon-core blockchain project, outlined in the README to guide the project toward a fully functional blockchain system.
+
+sallmon-core
+
+Blockchain CLI Project
+
+Overview
+
+This project is a modular blockchain implementation written in Python. It features a command-line interface (CLI) powered by Click, allowing users to interact with the blockchain by creating wallets, performing transactions, and mining blocks.
+
+The project is designed for learning and experimentation, gradually expanding features like UTXOs, Proof-of-Work, and peer-to-peer networking.
+
+Features
+	•	Create a blockchain with a Genesis block.
+	•	Generate wallets with unique addresses.
+	•	Perform transactions between wallets using UTXO validation.
+	•	Mine blocks using a basic Proof-of-Work algorithm.
+	•	Modular and extensible structure for future enhancements.
+
+Installation
+	1.	Clone the Repository
+
+git clone https://github.com/your-username/blockchain-cli.git
+cd blockchain-cli
+
+
+	2.	Set Up the Virtual Environment
+
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+
+	3.	Run the CLI
+
+python cli.py --help
+
+Phased Development Plan
+
+Phase 1: Core Blockchain and CLI
+	•	Implement a basic blockchain with Genesis block creation.
+	•	Add CLI commands for mining blocks, displaying the chain, and validating integrity.
+	•	Log all activities for transparency and debugging.
+	•	Deliverable: A CLI interface to mine and validate blocks, with basic Proof-of-Work (PoW).
+
+Phase 2: Wallet and Transactions
+	•	Introduce wallet creation using public/private key pairs.
+	•	Enable transaction creation signed with private keys.
+	•	Implement UTXO (Unspent Transaction Output) model for transaction validation.
+	•	Deliverable: Wallets can send/receive transactions validated against the blockchain.
+
+Phase 3: Enhanced Proof-of-Work
+	•	Implement dynamic difficulty adjustment for PoW.
+	•	Add block rewards for miners to incentivize block creation.
+	•	Incorporate a transaction pool for pending transactions to be mined.
+	•	Deliverable: Mining rewards and dynamic PoW adjustment to mimic real-world blockchain behavior.
+
+Phase 4: Persistent Storage
+	•	Save the blockchain to a database or flat file for persistence.
+	•	Load the blockchain state on startup.
+	•	Deliverable: Blockchain state survives restarts and can scale with additional blocks and transactions.
+
+Phase 5: Networking and Peer-to-Peer (P2P)
+	•	Introduce a WebSocket server to communicate with other nodes.
+	•	Enable blockchain synchronization across peers.
+	•	Implement consensus rules for handling conflicting chains (e.g., longest-chain rule).
+	•	Deliverable: A decentralized blockchain network where nodes can communicate and reach consensus.
+
+Phase 6: Security Enhancements
+	•	Use elliptic curve cryptography (ECC) for wallet and transaction signing.
+	•	Add encryption for transactions during network communication.
+	•	Implement protection against common attacks (e.g., 51% attack simulations, DDoS).
+	•	Deliverable: A secure and robust blockchain resistant to tampering and attacks.
+
+Phase 7: Scalability and Optimization
+	•	Implement Merkle trees for efficient transaction validation.
+	•	Optimize block and chain data structures for scalability.
+	•	Explore sharding or sidechains for improved performance.
+	•	Deliverable: A scalable blockchain ready for high transaction throughput.
+
+Phase 8: Advanced Features
+	•	Smart contract support with a basic scripting language.
+	•	Add a governance mechanism for decision-making in the network.
+	•	Experiment with alternative consensus mechanisms (e.g., Proof-of-Stake, Delegated PoS).
+	•	Deliverable: A full-featured blockchain supporting advanced use cases.
+
+Usage
+
+CLI Commands
+	1.	Mine a New Block
+
+python cli.py mine-block "Transaction data"
+
+
+	2.	Show the Blockchain
+
+python cli.py show-chain
+
+
+	3.	Validate the Blockchain
+
+python cli.py validate
+
+
+
+Expected Workflow
+	1.	Create wallets for users.
+	2.	Perform transactions between wallets.
+	3.	Mine blocks to validate and add transactions to the blockchain.
+	4.	Synchronize the blockchain across nodes in the network.
+
+Contributions
+
+Contributions are welcome! Please fork the repository, make changes, and submit a pull request. Ensure your code passes all tests and adheres to the project’s style guidelines.
+
+This plan provides a roadmap for the project’s evolution from a simple blockchain prototype to a fully functional, production-ready system. Would you like me to help with any specific phase or feature?
