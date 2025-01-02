@@ -1,0 +1,12 @@
+repozee/__init__.py,sha256=v_M3jB66EgmYksFly6SDgohLLt-GusJePKMe_2OjuJM,1403
+repozee/__main__.py,sha256=SY9G6vM8mJr0-m7gNjLoMa0kMkPsdo-lL0Bpn-Nmi7g,94
+repozee/ai.py,sha256=DoMJp2xXpeieD11EfziRg_3395LoJ1MWZJynv1PFg7E,2954
+repozee/command/__init__.py,sha256=1Bs3FH2cAIZJxnHEvAuSrG3mdGcaSu2pJ0-IQQ6H0n4,218
+repozee/command/shell_command.py,sha256=YN_ebS_uNivC4pm7TZW23pJ5QMW9ZBYzVGj4HO7l7Dw,601
+repozee/definitions/system.md,sha256=PhCW4hEROS8Ao6yp6hxvI3T0b5JIPmnLQoa1Btpszw0,724
+repozee/definitions/tools.yml,sha256=v3i-bJjny8TEhvQ419t2Qc0rinArKS7GtzY1FfwPBmE,565
+repozee/definitions/user.md,sha256=GAh2wPp2D6vUDbDoKiwSnIjgx4C7PghM36-aVmPbOxY,84
+repozee/projectdir.py,sha256=H-UvGZitpZHRzeWKTTYrvS0Z27LDKpZlDY7H6oIZBqk,809
+repozee-0.0.0.dist-info/METADATA,sha256=whS4cNuRKGEWWO5F5elE7QuaM-G_z-nP26-o8rLjjEA,2636
+repozee-0.0.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+repozee-0.0.0.dist-info/RECORD,,
