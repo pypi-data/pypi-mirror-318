@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+etui/__init__.py
+etui.egg-info/PKG-INFO
+etui.egg-info/SOURCES.txt
+etui.egg-info/dependency_links.txt
+etui.egg-info/top_level.txt
