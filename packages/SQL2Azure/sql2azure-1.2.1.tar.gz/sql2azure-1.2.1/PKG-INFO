@@ -1,0 +1,188 @@
+Metadata-Version: 2.1
+Name: SQL2Azure
+Version: 1.2.1
+Summary: Load data from an on-prem SQL database to Azure Storage as JSON or CSV.
+Home-page: https://github.com/mr-speedster/SQL2Azure
+Author: Ajith D
+Author-email: ajithd78564@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyodbc
+Requires-Dist: azure-storage-blob
+
+<picture align="center">
+  <source media="(prefers-color-scheme: dark)" srcset="https://ik.imagekit.io/isyob5kdk4y/pixelcut-export_LLUfSTxHg.png?updatedAt=1734718506267">
+  <img alt="SQL2Azure Logo" src="https://ik.imagekit.io/isyob5kdk4y/pixelcut-export_LLUfSTxHg.png?updatedAt=1734718506267">
+</picture>
+
+# SQL2Azure
+
+SQL2Azure is a Python package designed to simplify the process of loading data from an on-premises SQL Server database into Azure Blob Storage. With this package, users can execute SQL queries to retrieve data and upload it in two formats: JSON or CSV. Whether you’re looking to move data for backup, reporting, or integration purposes, SQL2Azure makes it easy to seamlessly transfer your database information to Azure.
+
+## Table of Contents
+- [Description](#description)
+- [Prerequisites and Requirements](#prerequisites-and-requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Loading Data to JSON](#loading-data-to-json)
+  - [Loading Data to CSV](#loading-data-to-csv)
+  - [Sample Demo](#sample-demo)
+- [Copyright](#copyright)
+
+## Description
+
+SQL2Azure helps to directly transfer data from an on-premises SQL Server database to an Azure Blob Storage container. This package provides two main functions for uploading data:
+- **JSON Format:** The data retrieved from the SQL query is converted into JSON format and uploaded to Azure Blob Storage.
+- **CSV Format:** The data retrieved from the SQL query is converted into CSV format and uploaded to Azure Blob Storage.
+
+The tool connects to your SQL Server using a connection string, executes a SQL query, fetches the data, and then uploads it to a specified Azure Blob Storage container in the format of your choice.
+
+### Key Features:
+- **SQL Server to Azure Blob:** Automates the process of transferring data between SQL Server and Azure Blob Storage.
+- **Two File Formats:** Uploads data as either JSON or CSV files.
+- **Customizable Connection:** The user can specify SQL queries, Azure container names, blob names, and connection strings.
+- **Error Handling:** Returns clear status messages for success or failure, including the number of rows uploaded or any error encountered.
+
+## Prerequisites and Requirements
+
+Before you start using **SQL2Azure**, make sure you have the following prerequisites:
+
+1. **Python 3.6+** - SQL2Azure is compatible with Python 3.6 and above.
+2. **SQL Server Database** - You need access to an on-premises SQL Server and a valid connection string for it.
+3. **Azure Subscription** - You must have an Azure account and a Blob Storage account.
+4. **Required Python Packages**:
+   - `pyodbc`: For connecting to SQL Server and executing queries.
+   - `azure-storage-blob`: For interacting with Azure Blob Storage.
+
+These dependencies are listed in the `requirements.txt` file.
+
+To install them, use the following command:
+```bash
+pip install -r requirements.txt
+```
+
+## Installation
+
+You can install **SQL2Azure** by using pip or by cloning this repository.
+
+### Option 1: Install from PyPI (once published)
+```bash
+pip install SQL2Azure
+```
+
+### Option 2: Install from GitHub
+Clone the repository and install it using the following commands:
+```bash
+git clone https://github.com/yourusername/SQL2Azure.git
+cd SQL2Azure
+pip install .
+```
+
+## Usage
+
+Once the package is installed, you can start using it to load data from your SQL Server to Azure Blob Storage. The package has two main functions, one for loading data as **JSON** and another for **CSV**. Here’s how you can use them:
+
+### Loading Data to JSON
+
+To load data from SQL Server to Azure Blob Storage in JSON format, use the `load_to_json` function. It accepts the following parameters:
+- `sql_query`: The SQL query you want to run on the database.
+- `connection_string`: The connection string to the SQL Server.
+- `container_name`: The name of the Azure Blob Storage container where the file will be uploaded.
+- `folder_path`: The folder path within the container where the file will be saved.
+- `file_name`: The name of the blob (file) in the Azure container.
+- `azure_blob_url`: The base URL for your Azure Blob Storage account.
+- `sas_token`: The SAS token for accessing Azure Blob Storage.
+
+```python
+from sql2azure.json_loader import load_to_json
+
+# SQL Query
+query = "SELECT [UserID],[FirstName],[LastName],[Email],[Age] FROM [SampleDB].[dbo].[Users]"
+
+# SQL Server connection string
+sql_conn = r"Driver={SQL Server};Server=<SQL_SERVER_HOST>;Database=<SQL_SERVER_DB>;Trusted_Connection=yes;"
+
+# Azure Blob Storage parameters
+container = "<AZURE_CONTAINER_NAME>"
+folder_json = "/data/json/"
+json_blob = "user.json"
+azure_blob_url = "<AZURE_BLOB_URL>"
+sas_token = "<SAS_TOKEN>"
+
+# Load to JSON
+json_status = load_to_json(query, sql_conn, container, folder_json, json_blob, azure_blob_url, sas_token)
+print("JSON Upload Status:", json_status)
+```
+
+### Loading Data to CSV
+
+To load data to CSV format, use the `load_to_csv` function. It has the same parameters as `load_to_json`, but the data will be saved in CSV format instead of JSON.
+
+```python
+from sql2azure.csv_loader import load_to_csv
+
+# SQL Query
+query = "SELECT [UserID],[FirstName],[LastName],[Email],[Age] FROM [SampleDB].[dbo].[Users]"
+
+# SQL Server connection string
+sql_conn = r"Driver={SQL Server};Server=<SQL_SERVER_HOST>;Database=<SQL_SERVER_DB>;Trusted_Connection=yes;"
+
+# Azure Blob Storage parameters
+container = "<AZURE_CONTAINER_NAME>"
+folder_csv = "/data/csv/"
+csv_blob = "user.csv"
+azure_blob_url = "<AZURE_BLOB_URL>"
+sas_token = "<SAS_TOKEN>"
+
+# Load to CSV
+csv_status = load_to_csv(query, sql_conn, container, folder_csv, csv_blob, azure_blob_url, sas_token)
+print("CSV Upload Status:", csv_status)
+```
+
+### Sample Demo
+
+Here’s a simple demo of how to use both functions:
+
+```python
+from sql2azure import json_loader
+from sql2azure import csv_loader
+
+# SQL Query
+query = "SELECT [UserID],[FirstName],[LastName],[Email],[Age] FROM [SampleDB].[dbo].[Users]"
+
+# SQL Server connection string
+sql_conn = r"Driver={SQL Server};Server=<SQL_SERVER_HOST>;Database=<SQL_SERVER_DB>;Trusted_Connection=yes;"
+
+# Azure Blob Storage parameters
+container = "<AZURE_CONTAINER_NAME>"
+folder_json = "/data/json/"
+folder_csv = "/data/csv/"
+json_blob = "user.json"
+csv_blob = "user.csv"
+azure_blob_url = "<AZURE_BLOB_URL>"
+sas_token = "<SAS_TOKEN>"
+
+# Load to JSON
+json_status = json_loader.load_to_json(query, sql_conn, container, folder_json, json_blob, azure_blob_url, sas_token)
+print("JSON Upload Status:", json_status)
+
+# Load to CSV
+csv_status = csv_loader.load_to_csv(query, sql_conn, container, folder_csv, csv_blob, azure_blob_url, sas_token)
+print("CSV Upload Status:", csv_status)
+```
+
+The status returned from both functions will provide the result of the operation. For a successful operation, it will contain:
+- **`status`:** `"success"`
+- **`rows_uploaded`:** The number of rows uploaded to the Azure container.
+
+If an error occurs, the status will be `"error"`, and an error message will be included.
+## Copyright
+
+© 2024 **Ajith D**. All rights reserved.
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
