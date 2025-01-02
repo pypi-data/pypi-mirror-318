@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+mypy.ini
+requirements.txt
+setup.py
+test-requirements.txt
+dfrgblcdpy/__init__.py
+dfrgblcdpy.egg-info/PKG-INFO
+dfrgblcdpy.egg-info/SOURCES.txt
+dfrgblcdpy.egg-info/dependency_links.txt
+dfrgblcdpy.egg-info/requires.txt
+dfrgblcdpy.egg-info/top_level.txt
