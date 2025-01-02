@@ -1,0 +1,16 @@
+maatpy/__init__.py,sha256=AvcdQIxa2zkqaxHkUnDnYEDTMBjFQxy4o_yNk0qBWJs,263
+maatpy/alias.py,sha256=ocCse2DVSUDMXM__WNSkjJ2jH1Ed_lOCb7WJQoaEWFs,3664
+maatpy/atoms.py,sha256=FyG-uphRUBvSlc-b5YcubKUv27N2OWBNLMlD3N3HN_s,6744
+maatpy/classes.py,sha256=uaMtzISfvFDT0IYnS2BESezeLN64Kh3PPRgumv6b63U,21791
+maatpy/constants.py,sha256=fynaISNcSc6I9lJC0gjV98yqUnnX0gA5pIfKfCMBTSs,2462
+maatpy/deuteration.py,sha256=tedOosPvoum3BjT_TpyeIyiAAW9-Fc_RoQSiaTHsz-I,13437
+maatpy/elements.py,sha256=kxrbI7ijNkeP-6EZ1U-2FCkAbKiiGwyQpggSSDnUoto,73416
+maatpy/fit.py,sha256=6QRYdqTIxvhecviTiHDHL9NPUajm0xXtz0OqPyWO7k4,6488
+maatpy/normalize.py,sha256=W2GU_FsWrUHZJTHbT2xaxNKDEIcbHORZeHW_emwOLp4,3871
+maatpy/plot.py,sha256=QRQVX66brUS_qDJvG9zw4S21RoRFw52tUzfwgjsur8I,7038
+maatpy/sample.py,sha256=Yu7ihUZ72nLGS3hP5ePLn91--RheLk-fglDWIRe4MEQ,1689
+maatpy-3.1.0.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+maatpy-3.1.0.dist-info/METADATA,sha256=Ix7Ogkpn4yNUNPPT6eV6Z8M9twdwOzoF7wOR-bH69xU,4583
+maatpy-3.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+maatpy-3.1.0.dist-info/top_level.txt,sha256=FiJyehcCCPTWh9rADmayw2K6S4LUbarEka0ZhfnbNv8,7
+maatpy-3.1.0.dist-info/RECORD,,
