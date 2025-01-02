@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+cookiesparser/__init__.py
+cookiesparser/__version__.py
+cookiesparser/cparser.py
+cookiesparser/utils.py
+cookiesparser.egg-info/PKG-INFO
+cookiesparser.egg-info/SOURCES.txt
+cookiesparser.egg-info/dependency_links.txt
+cookiesparser.egg-info/top_level.txt
