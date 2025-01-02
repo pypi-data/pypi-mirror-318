@@ -1,0 +1,20 @@
+[project]
+name = "uvi"
+version = "0.0.0"
+description = "Python project bootstrapper using uv"
+authors = [{ name = "Shane Holloman" }]
+dependencies = []
+requires-python = ">=3.11"
+urls = { Homepage = "https://github.com/shaneholloman/uvi" }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 120
+src = ["uvi"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true

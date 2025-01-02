@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: uvi
+Version: 0.0.0
+Summary: Python project bootstrapper using uv
+Project-URL: Homepage, https://github.com/shaneholloman/uvi
+Author: Shane Holloman
+Requires-Python: >=3.11
