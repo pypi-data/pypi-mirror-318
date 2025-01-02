@@ -1,0 +1,51 @@
+{% load static wagtail_hljs_tags %}
+{% spaceless %}
+    {% load_hljs_theme %}
+    <script nonce="{{ request.csp_nonce }}">
+        if (typeof loadHighlightJS !== 'function') {
+            window.loadHighlightJS = (language) => {
+                window.loadedLibraries = new Set();
+                const libraryLink = document.createElement('script');
+                libraryLink.setAttribute('src', '{% hljs_prefix %}/{% hljs_version %}/highlight.min.js');
+                libraryLink.addEventListener('load', () => {
+                    const languageLibraries = [
+                        /*Since there is no html.min.js this check makes sure we
+                        bypass the loading of the script when syntax is set to HTML */
+                        {% if val != "html" %}
+                            { "url": "{% hljs_prefix %}/{% hljs_version %}/languages/" + language + ".min.js" }
+                        {% endif %}
+                    ];
+                    const scripts = [];
+                    window.codeScriptsLoaded = false;
+
+                    for (const library of languageLibraries) {
+                        if (document.getElementById(library["id"]) === null) {
+                            let s = document.createElement("script");
+                            s.id = library["id"];
+                            s.type = "text/javascript";
+                            s.src = library["url"];
+                            s.async = false;
+                            s.addEventListener('load', (event) => {
+                                const src = event.target.getAttribute('src');
+                                loadedLibraries.add(src);
+
+                                if (loadedLibraries.size === languageLibraries.length) {
+                                    console.log('loaded highlight.js...');
+                                    hljs.highlightAll();
+                                }
+                            });
+                            scripts.push(s);
+                        }
+                    }
+                    document.head.append(...scripts);
+                });
+                document.head.appendChild(libraryLink);
+            };
+        }
+
+        loadHighlightJS('{{ self.language }}');
+        </script>
+        <pre class="line-numbers">
+            <code class="language-{{ self.language }}">{{ self.code }}</code>
+        </pre>
+{% endspaceless %}
