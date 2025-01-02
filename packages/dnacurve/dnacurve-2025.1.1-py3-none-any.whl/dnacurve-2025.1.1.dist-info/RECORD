@@ -1,0 +1,11 @@
+dnacurve/__init__.py,sha256=yY6Zc4nT4DLerIExkUMlR24dqWlktQXFGJQNcgVl_Mg,104
+dnacurve/__main__.py,sha256=kYYuq9q0ctgzHLw5u15OPvPNsYXgCZyN2YDRqzwLoGY,135
+dnacurve/dnacurve.py,sha256=YHsOXvrKeNq6DVMugTz48RoW5QBK4yS03TPxmzcos4A,55671
+dnacurve/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dnacurve/web.py,sha256=iqTRGLCKoLaPCcy3bc6nLUQZ-0_0w38wP6KHSaVU2ss,16074
+dnacurve-2025.1.1.dist-info/LICENSE,sha256=FgmS5qUrdiOCTUReuz2oYtUYsMK4loKnt_XFoedkgKw,1559
+dnacurve-2025.1.1.dist-info/METADATA,sha256=rhB4FfMm9yRx-n2vBGhkJHpt7krDpqxHV26gTTljfNs,5699
+dnacurve-2025.1.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+dnacurve-2025.1.1.dist-info/entry_points.txt,sha256=vJgwdv_lgiWjG1vBM6GQDrEe3kZwh2ims7NEug7hu1k,85
+dnacurve-2025.1.1.dist-info/top_level.txt,sha256=LMQy6Wuy-GhQCfwXv2MWjHSbf686Phx3HqIdw3PEZdA,9
+dnacurve-2025.1.1.dist-info/RECORD,,
