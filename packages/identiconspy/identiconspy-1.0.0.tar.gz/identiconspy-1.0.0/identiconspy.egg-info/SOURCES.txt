@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+identicons/__init__.py
+identiconspy.egg-info/PKG-INFO
+identiconspy.egg-info/SOURCES.txt
+identiconspy.egg-info/dependency_links.txt
+identiconspy.egg-info/top_level.txt
