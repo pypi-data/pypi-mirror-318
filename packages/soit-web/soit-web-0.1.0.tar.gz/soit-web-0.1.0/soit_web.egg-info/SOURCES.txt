@@ -1,0 +1,8 @@
+setup.py
+soit-web/__init__.py
+soit-web/main.py
+soit_web.egg-info/PKG-INFO
+soit_web.egg-info/SOURCES.txt
+soit_web.egg-info/dependency_links.txt
+soit_web.egg-info/not-zip-safe
+soit_web.egg-info/top_level.txt
