@@ -1,0 +1,11 @@
+bruhscript/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bruhscript/core.py,sha256=Q4Ku7Q9iDPYioTG7j3jq6daNW5ab1GYUJHM4qHkI8a4,538
+bruhscript/plugins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bruhscript/plugins/file_plugin.py,sha256=KAtLTlQZDalyBAkrMzHZsm_nrW08LdnrqiAh7gnTHok,287
+bruhscript/plugins/math_plugin.py,sha256=y-sYsi6QB_FJ7M4iZ2dzPYNGXom-zpAIsEKRFrz3BRk,192
+BruhScript-1.0.3.dist-info/LICENSE,sha256=Btzdu2kIoMbdSp6OyCLupB1aRgpTCJ_szMimgEnpkkE,1056
+BruhScript-1.0.3.dist-info/METADATA,sha256=bohndT9zNVlCIDTHT3YZFqEHXintiDnrIz_2r9HqQ2Y,826
+BruhScript-1.0.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+BruhScript-1.0.3.dist-info/entry_points.txt,sha256=VQw3d-8Flez6SD_0EsvirLDQ48ATlD8iVCQ87L9ENsA,52
+BruhScript-1.0.3.dist-info/top_level.txt,sha256=WDEmALvYMqr2IMNPJETMIDrDaW2G062H_P3h3MkAgEc,11
+BruhScript-1.0.3.dist-info/RECORD,,
