@@ -1,0 +1,8 @@
+fastapi_sqlalchemy_monitor/__init__.py,sha256=kV3x-CuY9eYRXG69GYnNb0jL_HJKbw8Us7RBdtPRdbM,218
+fastapi_sqlalchemy_monitor/action.py,sha256=tq5zuJauKuG9FEE3LbChYTV3p6RPOYOSpcrFqB5_Px4,5582
+fastapi_sqlalchemy_monitor/middleware.py,sha256=uRdvnsUelXLlo7IB2Crjb3vp-i3ClqGT3EkIfiu2ljs,3350
+fastapi_sqlalchemy_monitor/statistics.py,sha256=zWXDy2zWpJDhjADGBMSNpyzGKL6L0jZBAUahWW13e9c,1775
+fastapi_sqlalchemy_monitor-0.0.1.dist-info/METADATA,sha256=LNU9CkL9zrR86pgEmHA-gyvV7eYAlkeyXA-_CLGEWOE,6079
+fastapi_sqlalchemy_monitor-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+fastapi_sqlalchemy_monitor-0.0.1.dist-info/licenses/LICENSE,sha256=xl16Vb68pS0JNBUQvh6dyqFvC-3ZoOEB4QHOB8DldN8,1069
+fastapi_sqlalchemy_monitor-0.0.1.dist-info/RECORD,,
