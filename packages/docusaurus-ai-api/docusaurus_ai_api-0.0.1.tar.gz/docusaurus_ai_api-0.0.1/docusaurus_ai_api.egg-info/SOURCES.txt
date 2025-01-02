@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+requirements.txt
+setup.cfg
+docusaurus_ai_api.egg-info/PKG-INFO
+docusaurus_ai_api.egg-info/SOURCES.txt
+docusaurus_ai_api.egg-info/dependency_links.txt
+docusaurus_ai_api.egg-info/requires.txt
+docusaurus_ai_api.egg-info/top_level.txt
