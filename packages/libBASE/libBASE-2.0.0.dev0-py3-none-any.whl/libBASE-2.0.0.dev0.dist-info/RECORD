@@ -1,0 +1,16 @@
+libBASE/IgBlastParser.py,sha256=oR3XIP5-zXtVaeA44cWX0t-DQ8bZL-SPifdm-uJbvQU,19806
+libBASE/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+libBASE/libBASE.py,sha256=i6VOyN-vNnIZCLWdZUFeccqWnu_cQ4JSWzPFW1OYG-M,55495
+libBASE/pathconfig.py,sha256=yp2ib50qVEaeVkohZ21rMKmLa5eP9ck3LUFzKrc4DHI,499
+libBASE/primer.py,sha256=iCtS5qaR_kBaLOr2yzqiDqTdZWJRnkZDFBVmH9A7xyk,21783
+libBASE/primer-data/README,sha256=TXtXNTjQKz897Mj54aeHYGvnwIs6iOPRlLMFLI2BtV0,318
+libBASE/primer-data/createPrimerDB.py,sha256=qoY12X7ccsG4ndz1_lUhWFtQ1RMmWJ-WhXXBSWNfKyI,5130
+libBASE/primer-data/primer_created_manually.py,sha256=ul6lD2a-kXba2XID81LGRgbjOyg0t1RdTx_igMhZw7s,5487
+libBASE/primer-data/specPCR_primer_2019_04_14.xlsx,sha256=B47FCaI3K-Yjre7b_dmFbY7kmXE0PupOhPSm80jLKgQ,53881
+libBASE/tests/__init__.py,sha256=jdrRTVWFyiVCG-hUMkU5fCloeNv07x3LC5_Chw3v3Qc,228
+libBASE/tests/test_1984.py,sha256=GPfy8FPaGbj-w9uGHkJYSjmlSReVAXwiHS8JydJaERw,187
+libBASE-2.0.0.dev0.dist-info/LICENSE.txt,sha256=xTplwv1WHIfqq_EHLvXcq4ZTBCvBUwhGX1JBNYXrYnE,35146
+libBASE-2.0.0.dev0.dist-info/METADATA,sha256=PbmLIMVVHmPqXk6wQ6FhLrSwLQEzueO469IT7zU4cVs,41878
+libBASE-2.0.0.dev0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+libBASE-2.0.0.dev0.dist-info/top_level.txt,sha256=2R29VtU-lpckzNaHzdwZvYNGqq-e61Ns8XRRF8URbvs,8
+libBASE-2.0.0.dev0.dist-info/RECORD,,
