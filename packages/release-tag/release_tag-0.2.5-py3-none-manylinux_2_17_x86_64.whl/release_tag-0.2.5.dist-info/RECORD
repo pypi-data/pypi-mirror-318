@@ -1,0 +1,12 @@
+go.mod,sha256=yqrrzLAqT2bxEcjq-XEp7hRrtrLVgyozVrUUSo-UE9Y,371
+go.sum,sha256=NhTyKeYVMD29_XicuWpg9bSSxCALHSPAHkAtC8AZO9I,1592
+main.go,sha256=wrz-whOruIWj-1lRCyDNqS2DNHRf8o99hsW1l62MHGs,3377
+completion/completion.go,sha256=5d7jq9-sQATbG2jqEnhmLvoBBKpkP0HrCs2B9EeTwDM,2055
+git/git.go,sha256=LKx7fmBwa2jgRkZJwUfDeelke0ryTwPeQ2isfCBuB0E,2733
+semver/semver.go,sha256=LQgpwqqne2NV312U8_6AMQvS-VSh6TD2Dg6AtuDmYOA,3046
+semver/semver_test.go,sha256=XosZIXKOZeK1x6r9W1GUBdghXXKYtFeXD1YjwlHq8kU,5793
+release_tag-0.2.5.data/scripts/tag,sha256=xiX8z_-y4p2JmAmAM-eVt584Lfccp4lQudFLkA4pXN8,3838212
+release_tag-0.2.5.dist-info/METADATA,sha256=NUM0ZWh-xy_aGV79N5X_8ZuKz7TL_T0eebJbiCj2DzU,4378
+release_tag-0.2.5.dist-info/WHEEL,sha256=L5EYQYv0Siu-7D4XLi8ftu8fSChWr2L3Qb0Bt7iuCAg,106
+release_tag-0.2.5.dist-info/licenses/LICENSE,sha256=P_te03YIieIzk4EnP3-blVrdJGbhityi_YcHwxaL7gk,1071
+release_tag-0.2.5.dist-info/RECORD,,
