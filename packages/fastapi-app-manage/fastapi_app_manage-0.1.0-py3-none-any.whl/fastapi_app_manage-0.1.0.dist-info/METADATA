@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: fastapi-app-manage
+Version: 0.1.0
+Summary: fastapi-app-manage make fastapi dev easy
+Author: tiebingice
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: questionary (>=2.1.0,<3.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: tomli-w (>=1.1.0,<2.0.0)
+Requires-Dist: typer (>=0.15.1,<0.16.0)
+Description-Content-Type: text/markdown
+
+# FastAPI-APP-Manage
+
+FastAPI-APP-Manage 是一个由Typer构建的命令行工具，能够简化fastapi项目结构的配置。
+你可以下载安装用如下指令：
+
+```
+pip install fastapi_app_manage
+```
+
+或者使用poetry
+
+```
+poetry add fastapi_app_manage --group dev
+```
+
+完成后你将可以在命令行输入如下指令
+
+```
+fastapi-app start [appname]
+
+
+```
+
+简写方式
+
+```
+fastapi-app st [appname]
+
+```
+
+第一次的时候会询问用户配置后续会将配置存入fastapi-app-manage.toml文件下，后续不会再次询问
