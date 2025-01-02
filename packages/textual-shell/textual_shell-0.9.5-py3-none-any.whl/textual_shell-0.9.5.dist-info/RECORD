@@ -1,0 +1,14 @@
+textual_shell/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+textual_shell/app.py,sha256=C54BA61y6U0AbSG4GHgv_nkfrcDNRopjPgcJqKBrhYc,1541
+textual_shell/command.py,sha256=LtyIWyOKGqVT3UJvgMtKpVS0aaqQd-YOyIbrFa7Sgvw,13443
+textual_shell/configure.py,sha256=MJQJevnBkBWdnkjTVBDSK2et8QjhMU8po5TZP1uUPSE,3924
+textual_shell/screen.py,sha256=P3D8NvU79eZg3Oq9dGXNB9cvzb2gp1maaJX-NpuCU5c,2869
+textual_shell/widgets/__init__.py,sha256=y9a3Vup4V-ICbNvHxkv8t6LGWKm98O8xWUhduy9AMWw,331
+textual_shell/widgets/command_list.py,sha256=M0e5mp34Uyb0_nqhCNTYu-NpUciIXEJquxg7IJrr4wA,1306
+textual_shell/widgets/command_log.py,sha256=NyvGIDV1QMEDi37G2BsiAWmLvwp8z9ntm0wfY0aJiR4,2192
+textual_shell/widgets/settings.py,sha256=nKwYkxeGIV0Pdc1SoAox2EMNz9uhHCQvG12HCc-9oOs,1807
+textual_shell/widgets/shell.py,sha256=H3CJkjsZavSe-lHJQVKdcD00crsI2rX---VV2wfGx6E,24030
+textual_shell-0.9.5.dist-info/METADATA,sha256=9QcqCW33pTytzEELtkxPcVJ0QlJrt9dFjMDlluNIu2w,3542
+textual_shell-0.9.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+textual_shell-0.9.5.dist-info/licenses/LICENSE,sha256=6jJZJkHZqTDVUHz_5x58n-iEMWYpCLKCG1OHTQbansk,1071
+textual_shell-0.9.5.dist-info/RECORD,,
