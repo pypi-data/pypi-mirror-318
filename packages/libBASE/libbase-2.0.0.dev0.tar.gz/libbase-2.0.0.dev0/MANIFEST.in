@@ -1,0 +1,2 @@
+include src/libBASE/primer-data/README
+recursive-include src *.xlsx
