@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+soed/__init__.py
+soed.egg-info/PKG-INFO
+soed.egg-info/SOURCES.txt
+soed.egg-info/dependency_links.txt
+soed.egg-info/requires.txt
+soed.egg-info/top_level.txt
