@@ -1,0 +1,9 @@
+gmp.cpython-310-darwin.so,sha256=dgIO9rK_FRMznWBwbUd8WALMdf8CF0lRuDq46KGZ3Xs,132640
+_gmp_utils.py,sha256=Hwj2BXr6st2e33eWvVpmQbQVAsthUzRy_fC9Qu30hy8,1592
+_gmp_fractions.py,sha256=Q4NO_NiWLM8ejsr0TreNWA-dJEUG_aipa5BDxFnK3SA,40964
+python_gmp../python-gmp.libs/libgmp.10.dylib,sha256=a946tjw3ZyaL1GypUSHbZafX9RATAoI9ar6fD_CspPo,468768
+python_gmp-0.2.0.dist-info/RECORD,,
+python_gmp-0.2.0.dist-info/LICENSE,sha256=46etH7SAmKYIQsG2tDK9dLYTZVqxl73G9tUZJYfNM0Q,1075
+python_gmp-0.2.0.dist-info/WHEEL,sha256=HYqjRdli_HnmdRYswLM91KP1v-KILRKMRXsFGStbfQs,109
+python_gmp-0.2.0.dist-info/top_level.txt,sha256=cjY4HEHXLZxT7hA_SoJgBKiaRGRQxDXB_j8JNoOiCHk,30
+python_gmp-0.2.0.dist-info/METADATA,sha256=bFN_MODOgNnc9UoMJG-z0xlouzn7u5B2QeOLEfvOEc8,3980
