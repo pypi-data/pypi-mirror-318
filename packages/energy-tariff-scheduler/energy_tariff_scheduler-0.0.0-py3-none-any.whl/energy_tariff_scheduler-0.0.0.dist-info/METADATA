@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: energy_tariff_scheduler
+Version: 0.0.0
+Summary: Schedule actions based on energy tariffs
+Author: Craig White
+Author-email: dev.craigw@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: pydantic==2.10.4
+Requires-Dist: requests==2.32.3
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: apscheduler==3.11.0
