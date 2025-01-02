@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: RealPass
+Version: 0.2
+Summary: RealPass is a Python package that generates highly secure, realistic passwords with customizable length and complexity.
+Home-page: https://github.com/codex-yv
+Author: Youraj Verma
+Author-email: yourajverma960@gmail.com
+License: codexyv
+Platform: UNKNOWN
+License-File: licence.md
+Requires-Dist: numpy
+
+RealPass is a Python package that generates strong, realistic passwords by combining uppercase and lowercase letters, numbers, and special characters, with customizable length and complexity settings to ensure both security and practicality.
+
