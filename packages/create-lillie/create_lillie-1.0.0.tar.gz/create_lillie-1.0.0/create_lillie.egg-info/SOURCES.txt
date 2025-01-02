@@ -1,0 +1,8 @@
+README.md
+setup.py
+create_lillie.egg-info/PKG-INFO
+create_lillie.egg-info/SOURCES.txt
+create_lillie.egg-info/dependency_links.txt
+create_lillie.egg-info/entry_points.txt
+create_lillie.egg-info/requires.txt
+create_lillie.egg-info/top_level.txt
