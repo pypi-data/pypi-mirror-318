@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+bigger_xml.egg-info/PKG-INFO
+bigger_xml.egg-info/SOURCES.txt
+bigger_xml.egg-info/dependency_links.txt
+bigger_xml.egg-info/top_level.txt
+bxml/PyInit_xmlmodule.c
+bxml/__init__.py
+bxml/bxml.py
