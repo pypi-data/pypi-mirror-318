@@ -1,0 +1,12 @@
+README.md
+setup.py
+fileMapping/__init__.py
+fileMapping/config.py
+fileMapping/empty.py
+fileMapping/plugIns.py
+fileMapping/pluginLoading.py
+fileMapping/string.py
+fileMapping.egg-info/PKG-INFO
+fileMapping.egg-info/SOURCES.txt
+fileMapping.egg-info/dependency_links.txt
+fileMapping.egg-info/top_level.txt
