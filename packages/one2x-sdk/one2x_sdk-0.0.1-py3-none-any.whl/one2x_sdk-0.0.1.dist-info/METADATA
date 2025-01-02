@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: one2x-sdk
+Version: 0.0.1
+Summary: A lightweight and efficient SDK for interacting with the One2X platform.
+Home-page: https://github.com/one2x-ai/one2x-sdk
+Author: Zhen
+Author-email: xiazhen@one2x.ai
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# One2x-sdk
+
+SDK for One2x Developer
+
+1. pip-compile requirements.in
+
+Medeo Core APi
+
+
+
