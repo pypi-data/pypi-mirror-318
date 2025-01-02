@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: aiofixproto
+Version: 0.0.1
+Summary: Speak FIX using asyncio
+Author-email: Chris Shucksmith <chris@shucksmith.co.uk>
+Project-URL: Homepage, https://github.com/TeaEngineering/aiofixproto
+Project-URL: Issues, https://github.com/TeaEngineering/aiofixproto/issues
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+![Python versions](https://img.shields.io/pypi/pyversions/aiofixproto.svg) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/TeaEngineering/aiofixproto/check.yml) [![PyPI version](https://badge.fury.io/py/aiofixproto.svg)](https://badge.fury.io/py/aiofixproto)
+
+# aiofixproto
+
+This is a toy FIX protocol server/client used to test various other systems over the years.
+
+In particular the server component can deliver precise Rejects/BusinessMessageRejects for malformed custom messages with little extra code.
+
+    $ pip install aiofixproto
+    $ python -m aiofix.server &
+    INFO:root:Serving on ('127.0.0.1', 8888)
+    ...
+    INFO:fix-1-127.0.0.1:49516:Socket connected
+    INFO:fix-1-127.0.0.1:49516:post_login (server) reached - hb_interval=5
+
+    $ python -m aiofix.client
+    INFO:fix-1-127.0.0.1:8888:post_connect (client) reached - hb_interval=5
+    INFO:fix-1-127.0.0.1:8888:Socket connected
+
+
+## Supported FIX versions
+* FIX42
+* FIX44
+
