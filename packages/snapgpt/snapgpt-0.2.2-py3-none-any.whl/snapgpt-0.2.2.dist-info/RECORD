@@ -1,0 +1,16 @@
+snapgpt/__init__.py,sha256=D0nDoHaRQ1AGU8GS_NFKghgVQ5Az3fhfGeerCy_6pv8,93
+snapgpt/__main__.py,sha256=vYt-2JEAAV8rHSlQay5H7hIlzDcobFyQ9wi0le8f08g,117
+snapgpt/incremental.py,sha256=pOObkD4zU1HEtMGqGb8csDRtnue1wclCjXvuOHyWJbA,3859
+snapgpt/watch.py,sha256=896U7Dq7TkXOiUZ-jmqMcGLzGi8lL_T8m1jdPiuFlE4,5624
+snapgpt/cli/__init__.py,sha256=nxq31yHwen65OxD-Tf4CSezfBiMW_WO9ab6YAa3rAkU,338
+snapgpt/cli/commands.py,sha256=QXDK9Tfge-nRZho1od5DoTmE-AbbpyY42erf-XjCP3s,9272
+snapgpt/cli/config.py,sha256=Fh6ASVncNmeWqzFsRQYZtdxxc4rRjOulc5lDOZfljjw,6249
+snapgpt/cli/editor.py,sha256=6HKlJCQc2woxTPJn7BF0fBCfji8vV79GNHyUozrtBzs,10068
+snapgpt/cli/main.py,sha256=K2tLelYGzrH_qxCVh4dYVQbNt79MrJ4KZBUOKbkbQ1M,2063
+snapgpt/cli/parser.py,sha256=e99LraDYJATX3SdDxwMrPooQT_L0fAGd2Qn8iV-dfYY,5726
+snapgpt-0.2.2.dist-info/LICENSE,sha256=_Vaac0cO8PtgQoZTlyp55zm5JF_QTtBawMWxguHlYvw,1069
+snapgpt-0.2.2.dist-info/METADATA,sha256=EKRxavgp9ms6Vk3ndMl5xlFfoLoM3bOS91XKmiSYCRY,9641
+snapgpt-0.2.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+snapgpt-0.2.2.dist-info/entry_points.txt,sha256=tySNWzfx4QTUswJDbMyJvnQ8gmHIaavVRrXXYRrFzcc,50
+snapgpt-0.2.2.dist-info/top_level.txt,sha256=F781eMGz7DCIFs1lSrepc1uB88ofYvs_6kKjxlJqi0g,8
+snapgpt-0.2.2.dist-info/RECORD,,
