@@ -1,0 +1,32 @@
+{% extends "powerwiki/base.html" %}
+{% load powerwiki %}
+
+{% block wiki_menu %}
+{% endblock %}
+
+{% block wiki_content %}
+  <ul>
+    {% for page in pages %}
+      <li>
+        <div class="title">
+          <a href="{{ page.get_absolute_url }}">{{ page.title }}</a>
+        </div>
+        {% include "powerwiki/includes/breadcrumbs.html" with breadcrumbs=page.gen_breadcrumbs %}
+
+        {% if page.summary %}
+          <div class="summary">
+            {{ page.summary|powerwiki_summary }}
+          </div>
+        {% endif %}
+      </li>
+    {% empty %}
+      <li>No results</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
+{% block wiki_sidebar %}
+  <div class="powerwiki__sidebar">
+      {% include "powerwiki/includes/search.html" %}
+  </div>
+{% endblock %}
