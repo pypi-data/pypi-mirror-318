@@ -1,0 +1,12 @@
+README.rst
+pyproject.toml
+src/mono2repo/__init__.py
+src/mono2repo/mono2repo.py
+src/mono2repo.egg-info/PKG-INFO
+src/mono2repo.egg-info/SOURCES.txt
+src/mono2repo.egg-info/dependency_links.txt
+src/mono2repo.egg-info/entry_points.txt
+src/mono2repo.egg-info/top_level.txt
+tests/test_cli.py
+tests/test_end2end.py
+tests/test_mono2repo.py
