@@ -1,0 +1,2 @@
+[console_scripts]
+clfd = clfd.apps.cleanup:main
