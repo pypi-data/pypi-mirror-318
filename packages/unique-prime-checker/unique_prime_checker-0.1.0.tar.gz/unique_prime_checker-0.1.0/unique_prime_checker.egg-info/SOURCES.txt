@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+prime_checker/__init__.py
+prime_checker/core.py
+tests/test_core.py
+unique_prime_checker.egg-info/PKG-INFO
+unique_prime_checker.egg-info/SOURCES.txt
+unique_prime_checker.egg-info/dependency_links.txt
+unique_prime_checker.egg-info/top_level.txt
