@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: youtube_dl_scraper
+Version: 0.0.0a1
+Summary: Python 3 library for downloading YouTube Videos.
+Home-page: https://github.com/DannyAkintunde/Youtube-dl-scraper/tree/dev
+Author: Daniel Akintunde
+Author-email: dan29july@gmail.com
+License: MIT
+Project-URL: Bug Reports, https://github.com/DannyAkintunde/Youtube-dl-scraper/issues
+Keywords: youtube,download,video,stream
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Internet
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: fake-useragent
+Requires-Dist: ffmpeg-python
+Requires-Dist: fleep
+Requires-Dist: langcodes
+Requires-Dist: tqdm
+Requires-Dist: Unidecode
+
+
+# YouTube DL Scraper
+
+![preview image](https://raw.githubusercontent.com/DannyAkintunde/Youtube-dl-scraper/refs/heads/dev/images/preview.png)
+
+## Introduction
+
+**Youtube-dl-scraper** is a Python package designed to address the scarcity of reliable YouTube downloader libraries. While existing solutions often suffer from outdated functionality or limited support, this package provides a robust, modern, and easy-to-use interface for downloading videos and extracting captions from [YouTube](https://youtube.com).
+
+### Key Features
+
+-   Video and Audio Downloads: Download videos or extract audio in various qualities.
+
+-   Caption Support: Retrieve captions from supported videos with ease.
+
+-   Customizable: Supports both synchronous and asynchronous operations.
+
+-   Wide Compatibility: Compatible with multiple YouTube downloader websites for enhanced reliability.
+
+-   Error Handling: Custom error-handling mechanisms for a seamless user experience.
+
+---
+
+## Why Use YouTube-DL-Scraper?
+
+If you've struggled with broken or outdated YouTube downloader libraries, this package was created with you in mind. Built to solve these issues, it combines flexibility, reliability, and ease of use into one comprehensive package.
+
+Start by following the Getting Started guide to install and use the package.

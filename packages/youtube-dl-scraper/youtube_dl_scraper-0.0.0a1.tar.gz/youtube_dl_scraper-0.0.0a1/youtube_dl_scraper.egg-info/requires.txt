@@ -1,0 +1,7 @@
+requests
+fake-useragent
+ffmpeg-python
+fleep
+langcodes
+tqdm
+Unidecode
