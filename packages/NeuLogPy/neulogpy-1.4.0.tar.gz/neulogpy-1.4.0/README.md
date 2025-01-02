@@ -1,0 +1,162 @@
+# NeuLogPy
+
+A Python interface for NeuLog sensors, providing easy-to-use functions for data collection, experiment management, and real-time visualization. This package simplifies the process of collecting and analyzing data from NeuLog sensors in educational and research settings.
+
+## Features
+
+- Simple and intuitive interface for NeuLog sensors
+- Real-time data collection and visualization
+- Configurable sampling rates (up to 100 Hz)
+- Support for multiple concurrent sensors
+- Automatic sensor discovery and configuration
+- Robust error handling and detailed logging
+- Interactive respiratory data visualization with DearPyGui
+- YAML-based sensor configuration
+- Comprehensive experiment management
+- Built-in data export capabilities
+
+## Installation
+
+```bash
+pip install NeuLogPy
+```
+
+## Quick Start
+
+### Basic Data Collection
+
+```python
+from NeuLogPy import NeuLog
+import time
+
+# Initialize NeuLog
+neulog = NeuLog(config_file="config/sensors.yaml")
+
+# Setup experiment parameters
+sensor_name = "Respiration"
+rate = 8        # 8 Hz sampling rate
+samples = 1000  # Number of samples to collect
+respiration_sensor = [(sensor_name, 1)]  # Sensor name and ID
+
+# Start experiment
+neulog.start_experiment(sensors=respiration_sensor, rate=rate, samples=samples)
+
+# Wait for data collection
+time_to_wait = samples / rate
+time.sleep(time_to_wait)
+
+# Get samples
+samples = neulog.experiment.get_samples()
+if samples:
+    print(f"Collected {len(samples)} samples")
+    # Access data for specific sensor
+    sensor_data = samples.get(sensor_name, [])
+    
+# Stop experiment
+neulog.experiment.stop()
+```
+
+### Advanced Usage
+
+```python
+from NeuLogPy import NeuLog
+
+# Initialize with custom logging level
+neulog = NeuLog(config_file="config/sensors.yaml", log_level="DEBUG")
+
+# Configure multiple sensors
+sensors = [
+    ("Respiration", 1),
+    ("Temperature", 2)
+]
+
+# Start continuous experiment
+neulog.start_experiment(
+    sensors=sensors,
+    rate=100,  # 100 Hz sampling
+    samples=0  # 0 means continuous sampling
+)
+
+# Get real-time data
+while True:
+    try:
+        latest_samples = neulog.experiment.get_samples()
+        # Process your data here
+        if latest_samples:
+            resp_data = latest_samples.get("Respiration", [])
+            temp_data = latest_samples.get("Temperature", [])
+    except KeyboardInterrupt:
+        break
+
+# Clean up
+neulog.experiment.stop()
+```
+
+### Real-time Visualization
+
+The package includes a built-in visualization tool for respiratory data:
+
+```bash
+# Run from command line
+neulog-respiratory-viz
+```
+
+Or in your Python code:
+
+```python
+from NeuLogPy.respiratory_visualization import RespiratoryVisualizer
+
+# Create and run visualizer
+app = RespiratoryVisualizer()
+app.setup_gui()
+app.run()
+```
+
+The visualization provides:
+- Real-time plotting of respiratory data
+- Adjustable time window (default: 60 seconds)
+- Auto-scaling axes
+- Configurable sample rate up to 100 Hz
+- Data export capabilities
+- Interactive GUI controls
+
+## Configuration
+
+Create a `sensors.yaml` file in your config directory:
+
+```yaml
+sensors:
+  Respiration:
+    id: 1
+    name: "Respiration"
+    type: "respiratory"
+    units: "arbitrary"
+  Temperature:
+    id: 2
+    name: "Temperature"
+    type: "temperature"
+    units: "celsius"
+```
+
+## Requirements
+
+- Python 3.7+
+- NeuLog Software and Drivers (latest version)
+- Connected NeuLog Sensor
+- Windows, macOS, or Linux operating system
+
+## Dependencies
+
+- pydantic >= 2.0.0
+- requests >= 2.25.0
+- pyyaml >= 5.4.0
+- dearpygui >= 1.9.0
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Support
+
+For bug reports and feature requests, please use the GitHub issue tracker.
+For general questions and discussions, feel free to reach out to info@sustronics.com
