@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/WhoisQuery.egg-info/PKG-INFO
+src/WhoisQuery.egg-info/SOURCES.txt
+src/WhoisQuery.egg-info/dependency_links.txt
+src/WhoisQuery.egg-info/entry_points.txt
+src/WhoisQuery.egg-info/requires.txt
+src/WhoisQuery.egg-info/top_level.txt
+src/whoisquery/__init__.py
+src/whoisquery/cli.py
+src/whoisquery/core.py
+tests/test_cli.py
+tests/test_core.py

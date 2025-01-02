@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "WhoisQuery"
+version = "0.1.4"
+authors = [{ name = "Yoandy Isse Oña", email = "yoandysse@gmail.com" }]
+description = "A simple and efficient WHOIS lookup library for Python"
+readme = { file = "README.md", content-type = "text/markdown" }
+license = { file = "LICENSE" }
+keywords = ["whois", "lookup", "library", "python"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "Intended Audience :: Telecommunications Industry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yoandysse/WhoisQuery"
+"Repository" = "https://github.com/yoandysse/WhoisQuery"
+"Issues" = "https://github.com/yoandysse/whoisquery/issues"
+"Bug Tracker" = "https://github.com/yoandysse/whoisquery/issues"
+
+[project.scripts]
+whoisquery = "whoisquery.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "-v --cov=whoisquery"
+
+[tool.coverage.run]
+source = ["whoisquery"]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "pytest-mock>=3.10"
+] 
