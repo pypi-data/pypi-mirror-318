@@ -1,0 +1,15 @@
+gemma_template/__init__.py,sha256=_lTGbG8tbfCrSltvSvJdcRGRBOVDWNnuACxnrqNA7gU,342
+gemma_template/__version__.py,sha256=zU0l14s-64T6Hf58mLqbRRkyJvPOmgoL_jZv-GSPHaU,463
+gemma_template/constants.py,sha256=WLCufghuu22LWbIyFiWcsW24C3EyBMr8l8ysRxOrnsA,8269
+gemma_template/exceptions.py,sha256=4BPurQeB3-vdfDPiSc7wiD2-fwlvSPve5u0-6wdLV9I,384
+gemma_template/models.py,sha256=ba8CsRc3Ng8S6YaeD4CyOMh8c7dsL7g8Ob7xj4JQ-H4,58398
+gemma_template/utils.py,sha256=PrK6QKGKUa3g5CZQ3X7k9_34LprkIOb2Xgo-ErlEy00,7443
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=5XMPxeokyxKzSVFEQ3qDoRQNOUQ-vSKoF4XRJl7-pVI,5049
+tests/test_load_dataset.py,sha256=fsNglXdwBqyjkRbtLmz_E6e4or_BR87vynGVeKpzoI8,4968
+tests/test_template.py,sha256=b2smDIEMNdCxGy8hsjBNCsAiZYxDZzU2Xpw4dSQo-Uc,331
+gemma_template-0.1.9.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+gemma_template-0.1.9.dist-info/METADATA,sha256=ZiOJPBLKGBPpfitYFPTyqcnCFO0LfO9mGHTy4UGPJgM,12863
+gemma_template-0.1.9.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+gemma_template-0.1.9.dist-info/top_level.txt,sha256=aA_IRn5xDrhg5OAbz1ZRWXnws5M1fh8ix834gtB96PU,21
+gemma_template-0.1.9.dist-info/RECORD,,
