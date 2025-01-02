@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "laila"
+version = "0.1.0"
+description = "Common utilities for LLM projects"
+authors = [ "Ergin Soysal <esoysal@gmail.com>" ]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[project.urls]
+Homepage = "https://github.com/soysal/laila"
+Issues = "https://github.com/soysal/laila/issues"
