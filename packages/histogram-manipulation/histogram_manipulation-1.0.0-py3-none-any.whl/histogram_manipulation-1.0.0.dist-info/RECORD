@@ -1,0 +1,9 @@
+histogram_manipulation/__init__.py,sha256=B-QPzGax9eAZob2DGyCWAo61yGXScJ5PV0IzeFD2yLg,228
+histogram_manipulation/equalization.py,sha256=TMDI3m54iJYS_4sfla-6aoK4rC_aeVsjmzdLOj6Ivb4,6671
+histogram_manipulation/matching.py,sha256=ZkAnxCxbDW5o83Akn3W5oSzpGBx_uO74T6yTPTlj5to,8260
+histogram_manipulation/stretching.py,sha256=geyX-twN5DQuLKtMHk6vXbs25C_DVqMDeO45A4yEiO0,9542
+histogram_manipulation-1.0.0.dist-info/LICENSE,sha256=hmrGKdYANFtKWNqEX-YLP2QkIUOyhkzvBfwJ0btxwKc,1127
+histogram_manipulation-1.0.0.dist-info/METADATA,sha256=ERd-qRl-oy8eRQBartxn1EoZTWy8xGyJpeHqmPU0oOM,5109
+histogram_manipulation-1.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+histogram_manipulation-1.0.0.dist-info/top_level.txt,sha256=sbNdbRSjO-0zbM2aL2XjAb4pHuHA14q4gLzRxmU4gzU,23
+histogram_manipulation-1.0.0.dist-info/RECORD,,
