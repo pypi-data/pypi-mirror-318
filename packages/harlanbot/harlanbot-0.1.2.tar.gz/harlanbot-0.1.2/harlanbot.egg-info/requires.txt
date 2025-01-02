@@ -1,0 +1,3 @@
+nltk
+tensorflow
+pillow==9.5.0

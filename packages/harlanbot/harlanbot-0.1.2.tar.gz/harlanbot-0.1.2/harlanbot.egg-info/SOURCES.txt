@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+harlanbot/__init__.py
+harlanbot/chatbot.py
+harlanbot/intents.json
+harlanbot.egg-info/PKG-INFO
+harlanbot.egg-info/SOURCES.txt
+harlanbot.egg-info/dependency_links.txt
+harlanbot.egg-info/requires.txt
+harlanbot.egg-info/top_level.txt
