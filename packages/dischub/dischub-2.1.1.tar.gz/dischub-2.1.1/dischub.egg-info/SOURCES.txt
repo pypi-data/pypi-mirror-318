@@ -1,0 +1,9 @@
+README.md
+setup.py
+dischub/__init__.py
+dischub/main.py
+dischub.egg-info/PKG-INFO
+dischub.egg-info/SOURCES.txt
+dischub.egg-info/dependency_links.txt
+dischub.egg-info/requires.txt
+dischub.egg-info/top_level.txt
