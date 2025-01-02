@@ -1,0 +1,3 @@
+[console_scripts]
+awinrm-cmdshell = awinrm.examples.shell:main
+awinrm-runcmd = awinrm.examples.runcmd:main
