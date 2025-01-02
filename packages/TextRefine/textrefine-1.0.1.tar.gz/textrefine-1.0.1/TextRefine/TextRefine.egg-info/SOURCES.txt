@@ -1,0 +1,7 @@
+LICENCE
+README.md
+setup.py
+TextRefine/TextRefine.egg-info/PKG-INFO
+TextRefine/TextRefine.egg-info/SOURCES.txt
+TextRefine/TextRefine.egg-info/dependency_links.txt
+TextRefine/TextRefine.egg-info/top_level.txt
