@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+temp_mail_so/__init__.py
+temp_mail_so/temp_mail_so.py
+temp_mail_so.egg-info/PKG-INFO
+temp_mail_so.egg-info/SOURCES.txt
+temp_mail_so.egg-info/dependency_links.txt
+temp_mail_so.egg-info/requires.txt
+temp_mail_so.egg-info/top_level.txt
