@@ -1,0 +1,32 @@
+[tool.pytest.init_options]
+testpaths = [
+    "tests"
+]
+addopts = [
+    "--import-mode=importlib"
+]
+pythonpath = [
+    "."
+]
+
+[tool.poetry]
+name = "fastapi-libkit"
+version = "0.1.1"
+description = "Toolkit for FastAPI"
+authors = ["bevzd <dbevzpr@mail.ru>"]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi-permissions = "^0.2.7"
+fastapi = "^0.115.6"
+python-multipart = "^0.0.20"
+
+
+[tool.poetry.group.tests.dependencies]
+pytest = "^8.3.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
