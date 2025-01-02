@@ -1,0 +1,4 @@
+requests
+Pillow
+aiohttp
+yt-dlp
