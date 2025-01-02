@@ -1,0 +1,17 @@
+COPYING.txt
+LONG_DESCR
+MANIFEST.in
+Makefile
+README
+README.md
+pyproject.toml
+setup.py
+py_find_1st.egg-info/PKG-INFO
+py_find_1st.egg-info/SOURCES.txt
+py_find_1st.egg-info/dependency_links.txt
+py_find_1st.egg-info/not-zip-safe
+py_find_1st.egg-info/requires.txt
+py_find_1st.egg-info/top_level.txt
+test/test_find_1st.py
+utils_find_1st/__init__.py
+utils_find_1st/find_1st.cpp
