@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+antr_checker/__init__.py
+antr_checker/__main__.py
+antr_checker/lib.py
+antr_checker.egg-info/PKG-INFO
+antr_checker.egg-info/SOURCES.txt
+antr_checker.egg-info/dependency_links.txt
+antr_checker.egg-info/top_level.txt
