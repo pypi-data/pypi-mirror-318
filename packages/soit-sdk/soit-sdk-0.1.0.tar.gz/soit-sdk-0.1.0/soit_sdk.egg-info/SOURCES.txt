@@ -1,0 +1,8 @@
+setup.py
+soit-sdk/__init__.py
+soit-sdk/main.py
+soit_sdk.egg-info/PKG-INFO
+soit_sdk.egg-info/SOURCES.txt
+soit_sdk.egg-info/dependency_links.txt
+soit_sdk.egg-info/not-zip-safe
+soit_sdk.egg-info/top_level.txt
