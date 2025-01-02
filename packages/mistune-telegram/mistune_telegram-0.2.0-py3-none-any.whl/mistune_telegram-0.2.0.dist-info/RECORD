@@ -1,0 +1,7 @@
+mistune_telegram/__init__.py,sha256=BCzsrkXQ1in8K1_Sje18A8LVIYVY4GrRCm9I3au_ltc,239
+mistune_telegram/renderers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mistune_telegram/renderers/telegram_markdown.py,sha256=5GLSkU70KNMqS0jIZ3WDGvNcZ-6373vUN84MajFwwgI,907
+mistune_telegram/renderers/telegram_markdown_v2.py,sha256=LjbnIiRHcWrlkfSuEFID1yuqr6oo1yv4rzqkXkSioH4,1126
+mistune_telegram-0.2.0.dist-info/METADATA,sha256=TV74_UpW-FOWe2mANjtJXeM7mhyUCw1k_1-Un_etCsk,4775
+mistune_telegram-0.2.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+mistune_telegram-0.2.0.dist-info/RECORD,,
