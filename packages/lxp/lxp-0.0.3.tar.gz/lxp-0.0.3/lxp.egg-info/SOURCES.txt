@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+lxp.egg-info/PKG-INFO
+lxp.egg-info/SOURCES.txt
+lxp.egg-info/dependency_links.txt
+lxp.egg-info/requires.txt
+lxp.egg-info/top_level.txt
+lxp/modules/lxp/__init__.py
+lxp/modules/lxp/lxp.py
