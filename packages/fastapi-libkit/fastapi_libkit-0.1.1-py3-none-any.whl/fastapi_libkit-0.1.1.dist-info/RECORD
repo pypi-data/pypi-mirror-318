@@ -1,0 +1,9 @@
+fastapi_libkit/__init__.py,sha256=Cg1CWg4w_ieTPONAfM7KavW8Is_f4ioEuiAORfS4T-o,146
+fastapi_libkit/exceptions.py,sha256=wzaXBmARvUDfIZviZ17wv3oQjn6fPdWHWLBYyVx8D54,52
+fastapi_libkit/permissions.py,sha256=e3S5MB37s6Q5dhdW135l3hnscxzxpPz8n3480aWDSQw,729
+fastapi_libkit/responses.py,sha256=PJhJ68sb9j_vQrq0a9dtSO94V-8PZInh6q02k2JGa7s,884
+fastapi_libkit/schemas.py,sha256=J7R8GNmEXNt1uNw9nLF0ARUuXAiI0Uc8DrvNhyHQIKA,1600
+fastapi_libkit-0.1.1.dist-info/LICENSE,sha256=pAZXnNE2dxxwXFIduGyn1gpvPefJtUYOYZOi3yeGG94,1068
+fastapi_libkit-0.1.1.dist-info/METADATA,sha256=jW63J8P_71fxvQAQ7l3ICmdATXHPDLGA7GRftk15DBo,517
+fastapi_libkit-0.1.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+fastapi_libkit-0.1.1.dist-info/RECORD,,

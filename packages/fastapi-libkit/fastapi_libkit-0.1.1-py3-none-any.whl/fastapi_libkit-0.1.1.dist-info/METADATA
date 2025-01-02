@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: fastapi-libkit
+Version: 0.1.1
+Summary: Toolkit for FastAPI
+Author: bevzd
+Author-email: dbevzpr@mail.ru
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: fastapi (>=0.115.6,<0.116.0)
+Requires-Dist: fastapi-permissions (>=0.2.7,<0.3.0)
+Requires-Dist: python-multipart (>=0.0.20,<0.0.21)
+Description-Content-Type: text/markdown
+
+***HELLO WORLD!***
