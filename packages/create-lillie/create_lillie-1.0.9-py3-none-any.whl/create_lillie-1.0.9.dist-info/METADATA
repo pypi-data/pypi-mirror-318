@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: create-lillie
+Version: 1.0.9
+Summary: A CLI tool for creating lilliepy projects
+Home-page: https://github.com/websitedeb/create-lillie
+Author: sarthak ghoshal
+Author-email: sarthak22.ghoshal@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: typer[all]
+Requires-Dist: colorama
+
+# create-lillie
+
+```bash
+create-lillie --is-empty YOUR_PROJECT_NAME
+```
+* create-lillie - cli name
+* --is-empty - if used, will generate empty project, if not, will generate starter project
+* YOUR_PROJECT_NAME - name for your project
