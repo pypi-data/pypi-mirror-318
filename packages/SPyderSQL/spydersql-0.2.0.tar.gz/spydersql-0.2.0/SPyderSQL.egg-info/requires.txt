@@ -1,0 +1,6 @@
+requests>=2.32.0
+numpy>=1.19.0
+pytest>=6.2.5
+flake8>=3.9.2
+setuptools~=75.6.0
+aiosqlite~=0.20.0
