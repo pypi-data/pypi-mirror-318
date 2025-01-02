@@ -1,0 +1,5 @@
+[console_scripts]
+dspsim = dspsim.main:main
+psoc = dspsim.psoc_creator:main
+avril = dspsim.avril:main
+
