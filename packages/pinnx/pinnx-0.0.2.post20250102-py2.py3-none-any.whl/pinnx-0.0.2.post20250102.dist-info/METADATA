@@ -1,0 +1,155 @@
+Metadata-Version: 2.1
+Name: pinnx
+Version: 0.0.2.post20250102
+Summary: Physics-informed.
+Home-page: https://github.com/chaobrain/pinnx
+Author: PINNx Developers
+Author-email: PINNx Developers <chao.brain@qq.com>
+License: Apache-2.0 license
+Project-URL: homepage, http://github.com/chaobrain/pinnx
+Project-URL: repository, http://github.com/chaobrain/pinnx
+Keywords: computational neuroscience,brain-inspired computation,brain dynamics programming
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: jax
+Requires-Dist: brainunit (>=0.0.3)
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: brainstate
+Requires-Dist: braintools
+Requires-Dist: optax
+Requires-Dist: scikit-optimize
+Provides-Extra: cpu
+Requires-Dist: jaxlib ; extra == 'cpu'
+Provides-Extra: cuda12
+Requires-Dist: jaxlib[cuda12] ; extra == 'cuda12'
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+Provides-Extra: tpu
+Requires-Dist: jaxlib[tpu] ; extra == 'tpu'
+
+# PINNx: Physics-Informed Neural Networks for Scientific Machine Learning in JAX
+
+
+<p align="center">
+  	<img alt="Header image of pinnx." src="https://github.com/chaobrain/pinnx/blob/main/docs/_static/pinnx.png" width=40%>
+</p> 
+
+
+[![Build Status](https://github.com/chaobrain/pinnx/actions/workflows/build.yml/badge.svg)](https://github.com/chaobrain/pinnx/actions/workflows/build.yml)
+[![Documentation Status](https://readthedocs.org/projects/pinnx/badge/?version=latest)](https://pinnx.readthedocs.io/en/latest/?badge=latest)
+[![PyPI Version](https://badge.fury.io/py/pinnx.svg)](https://badge.fury.io/py/pinnx)
+[![License](https://img.shields.io/github/license/chaobrain/pinnx)](https://github.com/chaobrain/pinnx/blob/master/LICENSE)
+
+``PINNx`` is a library for scientific machine learning and physics-informed learning in JAX. 
+It is inspired from [DeepXDE](https://github.com/lululxvi/deepxde) but is enhanced by our 
+[Brain Dynamics Programming (BDP) ecosystem](https://ecosystem-for-brain-dynamics.readthedocs.io/). 
+For example, it leverages 
+
+- [brainstate](https://brainstate.readthedocs.io/) for just-in-time compilation,
+- [brainunit](https://brainunit.readthedocs.io/) for dimensional analysis, 
+- [braintools](https://braintools.readthedocs.io/) for checkpointing, loss functions, and other utilities.
+
+
+## Quickstart
+
+
+Define a PINN with explicit variables and physical units.
+
+```python
+import brainstate as bst
+import brainunit as u
+import pinnx
+
+# geometry
+geometry = pinnx.geometry.GeometryXTime(
+    geometry=pinnx.geometry.Interval(-1, 1.),
+    timedomain=pinnx.geometry.TimeDomain(0, 0.99)
+).to_dict_point(x=u.meter, t=u.second)
+
+uy = u.meter / u.second
+v = 0.01 / u.math.pi * u.meter ** 2 / u.second
+
+# boundary conditions
+bc = pinnx.icbc.DirichletBC(lambda x: {'y': 0. * uy})
+ic = pinnx.icbc.IC(lambda x: {'y': -u.math.sin(u.math.pi * x['x'] / u.meter) * uy})
+
+# PDE equation
+def pde(x, y):
+    jacobian = approximator.jacobian(x)
+    hessian = approximator.hessian(x)
+    dy_x = jacobian['y']['x']
+    dy_t = jacobian['y']['t']
+    dy_xx = hessian['y']['x']['x']
+    residual = dy_t + y['y'] * dy_x - v * dy_xx
+    return residual
+
+# neural network
+approximator = pinnx.nn.Model(
+    pinnx.nn.DictToArray(x=u.meter, t=u.second),
+    pinnx.nn.FNN(
+        [geometry.dim] + [20] * 3 + [1],
+        "tanh",
+        bst.init.KaimingUniform()
+    ),
+    pinnx.nn.ArrayToDict(y=uy)
+)
+
+# problem
+problem = pinnx.problem.TimePDE(
+    geometry,
+    pde,
+    [bc, ic],
+    approximator,
+    num_domain=2540,
+    num_boundary=80,
+    num_initial=160,
+)
+
+# training
+trainer = pinnx.Trainer(problem)
+trainer.compile(bst.optim.Adam(1e-3)).train(iterations=15000)
+trainer.compile(bst.optim.LBFGS(1e-3)).train(2000, display_every=500)
+trainer.saveplot(issave=True, isplot=True)
+
+```
+
+
+
+## Installation
+
+- Install the stable version with `pip`:
+
+``` sh
+pip install pinnx --upgrade
+```
+
+
+## Documentation
+
+The official documentation is hosted on Read the Docs: [https://pinnx.readthedocs.io/](https://pinnx.readthedocs.io/)
+
+
+## See also the BDP ecosystem
+
+We are building the Brain Dynamics Programming ecosystem: https://ecosystem-for-brain-dynamics.readthedocs.io/
+
