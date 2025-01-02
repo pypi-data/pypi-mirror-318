@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: nexium_database
+Version: 0.1.2
+Summary: A module for seamless integration with MySQL using SQLModel, enabling quick and efficient database operations.
+Home-page: https://github.com/nexium-dev/nexium_database
+Author: Nexium
+Author-email: info@nexium.me
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sqlmodel
+Requires-Dist: sqlalchemy[asyncio]
+Requires-Dist: aiomysql
+
+# ♡ Nexium Database
+
+A module for seamless integration with MySQL using SQLModel, enabling quick and efficient database operations.
+
+# License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+Copyright © 2024 Yegor Yakubovich
