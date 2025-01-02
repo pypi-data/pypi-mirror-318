@@ -1,0 +1,15 @@
+llm_recorder-0.1.0.dist-info/METADATA,sha256=CS_rhlHj-thzg46lQVDCorwapL5KcmXt4pyiYBlqA74,3064
+llm_recorder-0.1.0.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+llm_recorder-0.1.0.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+llm_recorder-0.1.0.dist-info/licenses/LICENSE,sha256=c6gCAq3aH7NVj559mJBaMAbzU5tZ18yf_6NbRmhekyo,1075
+llm_recorder/__init__.py,sha256=gcubFUKf9ptiulMrC8JxSz0RWGtQTdoSkDI31JnRAXU,180
+llm_recorder/llm_injected_proxy.py,sha256=907sVNi865Mx98tFCR7i73SmIvD6vOuApWiKBXnXp6c,3099
+llm_recorder/llm_recorder.py,sha256=mtNGKFPXwUxKMSTE7ynzpUaXyKlalpTcRAiFiyqt5FY,8760
+llm_recorder/providers/anthropic_recorder.py,sha256=UpfFMPKVv62LvCpli03XWrw3BUruCgc9tR8E65x8wbA,2223
+llm_recorder/providers/google_recorder.py,sha256=ZqZP1HDSJnLUdA1Naok1YPMLgi81w3rUI0XIofC2nLw,2244
+llm_recorder/providers/http_recorder.py,sha256=4X3cL3QTtg2-6OupxZI1tDnd2Woa3qB6JmKnRUFFc34,2693
+llm_recorder/providers/litellm_recorder.py,sha256=Qj4gLcUXyYk0eXiqmpeIkAkzaSZD-qL6IJS2OGrZyQI,1964
+llm_recorder/providers/openai_recorder.py,sha256=kuAZs_1Gf-y6UFVFu1vatLECWgRYe2qisRyaVmuHaDo,2901
+llm_recorder/providers/test_litellm.py,sha256=koE0WVduVg-Jv2wo0dpbsgXqbet52PcAUlguNv7Dj9o,900
+llm_recorder/test_llm_recorder.py,sha256=8GYwUJFdi9MTiK17Z4ejnbRnlQTOtDwffi2bWNVmzbA,5173
+llm_recorder-0.1.0.dist-info/RECORD,,
