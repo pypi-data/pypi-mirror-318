@@ -1,0 +1,8 @@
+setup.py
+soit-client/__init__.py
+soit-client/main.py
+soit_client.egg-info/PKG-INFO
+soit_client.egg-info/SOURCES.txt
+soit_client.egg-info/dependency_links.txt
+soit_client.egg-info/not-zip-safe
+soit_client.egg-info/top_level.txt
