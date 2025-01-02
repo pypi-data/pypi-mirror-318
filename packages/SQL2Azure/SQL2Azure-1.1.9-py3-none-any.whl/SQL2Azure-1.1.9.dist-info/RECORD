@@ -1,0 +1,8 @@
+sql2azure/__init__.py,sha256=iPYO9UEGm8b-QsEL6WsR1wnrKrHTWxX6YYkEmmd0Y5Y,73
+sql2azure/csv_loader.py,sha256=SZowhtGnHELHZARbWe7RICimyDQs_WqFW2pox_W2txE,1633
+sql2azure/json_loader.py,sha256=R7KSqxEDjHIB8qevUv3bEfIKv7LMNiXkE4Q2zyX-QZo,1455
+SQL2Azure-1.1.9.dist-info/LICENSE,sha256=zzZXdRzt5Wo7YVRmQbG8n9uH4muHJXd6vH01A9RrqOo,1064
+SQL2Azure-1.1.9.dist-info/METADATA,sha256=YEad4VRoRBfWUuy1n3TAjUaJIU8Pmp5-n2tDOGKNAgo,7655
+SQL2Azure-1.1.9.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+SQL2Azure-1.1.9.dist-info/top_level.txt,sha256=JPFyFynIU0RZ3rrPlJbd6naWSyocOQt1TAVDW3XeXdw,10
+SQL2Azure-1.1.9.dist-info/RECORD,,
