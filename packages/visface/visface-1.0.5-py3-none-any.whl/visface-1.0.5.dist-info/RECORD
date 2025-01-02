@@ -1,0 +1,15 @@
+visface/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+visface/main.so,sha256=vDwBPyKLZyl8QVfd0YQjwwio_2spx0B7XLdFOe9zdvw,2002016
+visface/app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+visface/app/common.so,sha256=sogXhBDxTHufrcpQxNC0oOh4fRu5vEX8ppMrFqqrPww,566984
+visface/app/face_analysis.so,sha256=6UvuoGQaGc6GnlQOB8GoaAzT2Stx2mt7fQbeJYoo0R4,1098168
+visface/model_zoo/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+visface/model_zoo/arcface.so,sha256=ANmghiVNbkK23KTe3iaZkLBp2Ut9c3O7Dj8gHYsHmjM,889408
+visface/model_zoo/model_zoo.so,sha256=sOu3-QSoTiwJSseRisc1fSdkNaBB7ej2dzBi7BG-gdA,774952
+visface/model_zoo/retinaface.so,sha256=IG-Q6-SkHbfZdaf92pstYPNuMGhnzO9dhJQuNiBluKg,2519232
+visface/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+visface/utils/face_align.so,sha256=KL8Rj1rDIiqezyO5WLJ1I-JGIuA6Zt7lYR15dOMkgPE,1190072
+visface-1.0.5.dist-info/METADATA,sha256=rnukpGcOqAKwuRq7tjR7-kEpUGkv1YHpnQFd8LDFFgc,203
+visface-1.0.5.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+visface-1.0.5.dist-info/top_level.txt,sha256=t5n3Jcow1wIqL-9JaQff8dRv-zX1lXzWs6ME3qb5UBI,8
+visface-1.0.5.dist-info/RECORD,,
