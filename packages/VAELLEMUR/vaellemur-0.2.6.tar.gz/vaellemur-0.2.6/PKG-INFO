@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: VAELLEMUR
+Version: 0.2.6
+Summary: VAE for LLEMUR
+Home-page: https://github.com/Qwest1204/LLEMUR
+Author: Daniil Ogorodnikov
+Author-email: 128bit@128bit.xyz
+License: Apache 2.0
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+License-File: LICENSE
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: ray
+Requires-Dist: torchinfo
+Requires-Dist: torchmetrics
+Requires-Dist: tqdm
+Requires-Dist: numpy
