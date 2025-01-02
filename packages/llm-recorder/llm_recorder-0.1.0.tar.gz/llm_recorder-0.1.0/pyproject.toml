@@ -1,0 +1,46 @@
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[project]
+name = "llm-recorder"
+version = "0.1.0"
+description = "Record and replay LLM interactions"
+authors = [
+    { name = "Your Name", email = "your.email@example.com" },
+]
+dependencies = [
+    "litellm>=1.30.7",
+]
+requires-python = ">=3.9"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.optional-dependencies]
+openai = [
+    "openai>=1.0.0",
+]
+anthropic = [
+    "anthropic",
+]
+google = [
+    "google-generativeai",
+]
+
+[project.urls]
+Homepage = "https://github.com/zby/llm_recorder"
+
+[tool.pytest.ini_options]
+addopts = "-v"
+testpaths = [
+    "llm_recorder",
+]
+
+[tool.setuptools]
+packages = [
+    "llm_recorder",
+]
