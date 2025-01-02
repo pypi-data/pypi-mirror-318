@@ -1,0 +1,13 @@
+xclient/__init__.py,sha256=fpVbOM2-vUlqGQrjDNysT9x3y4etCH_iyJijxM0QBXc,142
+xclient/client.py,sha256=13tnKP2X4nchAZH5ulxe6y-5svam1x6pcvC7_bF0SdY,32372
+xclient/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xclient/models/actions.py,sha256=0CrQRVQ1p5QWVl7XbQ4afFxKsvgiwX8ETd8CofX1mvU,344
+xclient/models/error.py,sha256=XlVhqdz-V7lsQnr1u5crBJkUHTtxVqH5M7ARFSgg4k4,654
+xclient/models/timeline.py,sha256=mbTNPvH8sRr7luibJpUqT7BxCavL4VDITYt4dPQPJ-4,8754
+xclient/models/timestamp.py,sha256=Wx94gRWLY704Dpubh01ds1bPYADGFVA0-ukKHsPudpk,434
+xclient/models/tweet.py,sha256=MXtZcDI887hj3-tYSI4EIhmxRYMZG-W2E1TWVKFDWmg,10167
+xclient/models/user.py,sha256=R16nuYCU1RD-ng0UXYDXPopYQtitrkj2d0tJFBJKcsE,4627
+x_api_client-0.0.1.dist-info/METADATA,sha256=vRhs6fU9cPApuAep3oOP_zvXWSUnk23rKAMzaRI6X6w,3085
+x_api_client-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+x_api_client-0.0.1.dist-info/licenses/LICENSE,sha256=u85bpqcNkSjUGZIFAG76Tj-2nK_7YE1Q3rMPlLdiAMs,1069
+x_api_client-0.0.1.dist-info/RECORD,,
