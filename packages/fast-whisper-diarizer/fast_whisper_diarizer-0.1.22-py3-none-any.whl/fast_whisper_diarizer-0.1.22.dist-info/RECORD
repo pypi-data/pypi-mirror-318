@@ -1,0 +1,11 @@
+fast_whisper_diarizer/__init__.py,sha256=lGmgsX0wtcazVt38Lkw_c9G79uWckyF5f_jQ8qdNtgE,103
+fast_whisper_diarizer/diarizer.py,sha256=03gvtymEDC7NVoQoQD1NXE9Ailf77U3MGgcVtJxmihg,4500
+fast_whisper_diarizer/main.py,sha256=7RpvunuUCTRwiDPpJZEmEuhWuDJ8OdTDtaRoi0c9w24,6845
+fast_whisper_diarizer/transcriber.py,sha256=TD1K5h9YJ2nmgcbD7tu3Hvkli5jui4rDkZL8oqnc8v8,2346
+fast_whisper_diarizer/utils.py,sha256=DwOrbFACUpJAgkndHd5XHRaxnhyGDANNW3Q5ncP0x_M,8291
+fast_whisper_diarizer-0.1.22.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+fast_whisper_diarizer-0.1.22.dist-info/METADATA,sha256=b9DXnR4D8i2n6X-JWfH0iRJK3EgZSlKt-VS728V2ZVM,3196
+fast_whisper_diarizer-0.1.22.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+fast_whisper_diarizer-0.1.22.dist-info/entry_points.txt,sha256=HMYIDqoFhVc7VR7dXRqGc09TDPabsKY5bMA6da_4aNs,46
+fast_whisper_diarizer-0.1.22.dist-info/top_level.txt,sha256=CfvMb_pV_-PVDjUgtF-oVLDGym-nqKJ-2sll5zuDUgE,22
+fast_whisper_diarizer-0.1.22.dist-info/RECORD,,
