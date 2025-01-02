@@ -1,0 +1,9 @@
+foocheck/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+foocheck/cli.py,sha256=_ZMBovRY4aPTFAhsaGZ3P4ruI0P_Du9nRqfrLpyhGwU,2733
+foocheck/networks.py,sha256=FsHD7GwQ3TPBfxfFrwJtfHkOYZHBx-IkkeLvR0KfsT8,13786
+foocheck/utils.py,sha256=DPrmmPRrnau3hP5h6fi0eN3HUl-XrRgSryRXB48p3UE,1003
+foocheck-0.1.0.dist-info/LICENSE,sha256=Fe7_Ki1uQWqMmhgQN3aTLRAfs7-OqKonHDBP4AHfI0w,1069
+foocheck-0.1.0.dist-info/METADATA,sha256=YS5Ts9xCRYgEh2rA1hA9kimiBozSvfliBXn3f2W-YQQ,1417
+foocheck-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+foocheck-0.1.0.dist-info/entry_points.txt,sha256=ZFe2LDfWady6RovTIrw3DhCi-gpPtC9wa2WM-VQ2fuU,46
+foocheck-0.1.0.dist-info/RECORD,,
