@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: dataflow-airflow
+Version: 2.10.3
+Summary: Airflow customized for Dataflow
+Home-page: https://github.com/Digital-Back-Office/dataflow-airflow
+Author: Dataflow
+Requires-Dist: apache-airflow-providers-amazon
+Requires-Dist: apache-airflow-providers-postgres
+Requires-Dist: apache-airflow ==2.10.3
+Requires-Dist: eval-type-backport
+
