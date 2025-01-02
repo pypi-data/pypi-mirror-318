@@ -1,0 +1,37 @@
+[build-system]
+requires = ["maturin~=1.7"]
+build-backend = "maturin"
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+module-name = "oxidasim._rs"
+manifest-path = "crates/oxidasim_py/Cargo.toml"
+
+[project]
+name = "oxidasim"
+description = "Utilities for simulations"
+authors = [{ name = "Andrej Orsula", email = "orsula.andrej@gmail.com" }]
+maintainers = [{ name = "Andrej Orsula", email = "orsula.andrej@gmail.com" }]
+urls = { Repository = "https://github.com/AndrejOrsula/oxidasim" }
+classifiers = [
+  "Programming Language :: Python",
+  "Programming Language :: Rust",
+  "License :: OSI Approved :: MIT License",
+  "License :: OSI Approved :: Apache Software License",
+  "Topic :: Games/Entertainment :: Simulation",
+]
+keywords = ["simulation", "robotics"]
+readme = "README.md"
+license = { text = "MIT OR Apache-2.0" }
+requires-python = ">=3.10"
+dynamic = ["version"]
+dependencies = []
+
+[project.optional-dependencies]
+all = [
+  ## Utils
+  "oxidasim[dev]",
+]
+## Utils
+dev = ["oxidasim[test]"]
+test = ["pytest~=8.0"]
