@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: glorpen-wallpaper_picker
+Version: 1.1.3
+Summary: Randomize your wallpaper in a smarter way.
+Home-page: https://github.com/glorpen/wallpaper-picker
+Author: Arkadiusz Dzięgiel
+Author-email: arkadiusz.dziegiel@glorpen.pl
+Project-URL: Bug Tracker, https://github.com/glorpen/wallpaper-picker/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Environment :: X11 Applications
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Desktop Environment
+Classifier: Topic :: Utilities
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pillow>=7
+Requires-Dist: pyxattr>=0.7
+Provides-Extra: xorg
+Requires-Dist: xcffib>=0.9; extra == "xorg"
+Provides-Extra: wayland
+Requires-Dist: python-daemon>=3.0.0; extra == "wayland"
+
+# Wallpaper Picker
+
+| [Codeberg](https://codeberg.org/glorpen/wallpaper-picker)
+| Mirrors:
+    [GitLab](https://gitlab.com/glorpen/wallpaper-picker),
+    [GitHub](https://github.com/glorpen/wallpaper-picker),
+    [Bitbucket](https://bitbucket.org/glorpen/wallpaper-picker)
+|
+
+Randomize your wallpaper in a smarter way.
+
+Picker allows you to set X11 & Wayland wallpaper, picked at random from wallpaper dir.
+
+For each image you can define POI (x,y coords) and then image will always be centered on given point - e.g. in portrait mode. 
+Images will be scaled up or down to match screen resolution.
+
+## Installation
+
+```shell
+pip install glorpen-wallpaper-picker
+```
+
+## Usage
+
+To update wallpaper, including picking from images marked as offensive:
+
+```
+$ wallpaper-picker wallpaper --offensive
+```
+
+To change attrs:
+
+```
+$ ./.env/bin/wallpaper-picker attr-set image.jpg --offensive y --poi 1,2
+Details for image /tmp/image.jpg
+POI: x:1, y:2
+Offensive: yes
+```
+
+
+To list current attributes of given file:
+
+```
+$ wallpaper-picker attr-get image.jpg
+Details for image /tmp/image.jpg
+POI: x:1, y:2
+Offensive: yes
+```
+
+To remove attrs use `none` or `unset` as values:
+
+```
+$ wallpaper-picker attr-set image.jpg --offensive unset --poi unset
+Details for image /tmp/image.jpg
+POI: not set
+Offensive: no
+```

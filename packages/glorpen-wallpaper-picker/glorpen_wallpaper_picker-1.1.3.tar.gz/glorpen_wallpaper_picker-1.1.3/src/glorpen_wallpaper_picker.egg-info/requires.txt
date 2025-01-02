@@ -1,0 +1,8 @@
+pillow>=7
+pyxattr>=0.7
+
+[wayland]
+python-daemon>=3.0.0
+
+[xorg]
+xcffib>=0.9
