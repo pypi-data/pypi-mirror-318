@@ -1,0 +1,19 @@
+[project]
+name = "example_package_mahendran2020"
+version = "0.0.2"
+authors = [
+  { name="Mahendran", email="avalontechmahendran@gmail.com" },
+]
+description = "A small example package"
+readme = "README.md"
+requires-python = ">=3.12.1"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/Mahendran2016/mlpy"
+Issues = "https://github.com/Mahendran2016/mlpy"
+ 
