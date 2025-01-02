@@ -1,0 +1,130 @@
+[project]
+name = "dj-watchfiles"
+dynamic = ["version"]
+description = "Use watchfiles in Django’s autoreloader."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+authors = [{ name = "Max Shapira", email = "m@xshapira.com" }]
+maintainers = [{ name = "Max Shapira", email = "m@xshapira.com" }]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Framework :: Django :: 4.2",
+  "Framework :: Django :: 5.0",
+  "Framework :: Django :: 5.1",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Typing :: Typed",
+]
+dependencies = ["Django>=4.2", "watchfiles", "pytest"]
+
+[tool.hatch.envs.default]
+installer = "uv"
+dependencies = ["basedpyright", "ruff"]
+
+[[tool.hatch.envs.test.matrix]]
+python = ["3.9"]
+django = ["4.2"]
+
+[[tool.hatch.envs.test.matrix]]
+python = ["3.10", "3.11", "3.12"]
+django = ["4.2", "5.0", "5.1"]
+
+[[tool.hatch.envs.test.matrix]]
+python = ["3.13"]
+django = ["5.1"]
+
+[tool.hatch.envs.test]
+dependencies = [
+  "django~={matrix:django}.0",
+  "pytest",
+  "pytest-cov",
+  "coverage[toml]",
+  "pytest-django",
+  "pytest-randomly",
+  "parameterized",
+  "typing_extensions",
+]
+
+[tool.hatch.envs.test.scripts]
+test = "python -m django test --settings tests.settings"
+test-cov = "coverage run -m django test --settings tests.settings"
+cov-report = ["coverage combine", "coverage report"]
+cov = ["test-cov", "cov-report"]
+pytest-cov = "pytest --cov=src/dj_watchfiles --cov-branch --cov-report=xml"
+
+[project.urls]
+Homepage = "https://github.com/xshapira/dj-watchfiles"
+Documentation = "https://github.com/xshapira/dj-watchfiles"
+
+[tool.hatch.version]
+path = "src/dj_watchfiles/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+include = ["/src/dj_watchfiles"]
+exclude = ["/.github"]
+
+[tool.basedpyright]
+typeCheckingMode = "recommended"
+ignore = ["tests/"]
+
+[tool.ruff]
+line-length = 88
+exclude = [
+  '.git',
+  '__pycache__',
+  '__init__.py',
+  '.mypy_cache',
+  '.pytest_cache',
+  '.tox/*',
+]
+lint.select = [
+  "E",  # pycodestyle errors
+  "W",  # pycodestyle warnings
+  "F",  # pyflakes
+  "I",  # isort
+  "C4", # flake8-comprehensions
+  "B",  # flake8-bugbear
+  "UP", # pyupgrade
+]
+lint.ignore = [
+  "E501", # line too long
+  "C901", # Comprehension is too complex (11 > 10)
+  "W191", # indentation contains tabs
+]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "tests.settings"
+pythonpath = [".", "src"]
+testpaths = ["tests"]
+markers = ["flaky: marks tests that may require multiple runs to pass"]
+
+[tool.coverage.run]
+source = ["src/dj_watchfiles", "tests"]
+branch = true
+parallel = true
+omit = ["*/migrations/*", "*/tests/*", "*/conftest.py"]
+
+[tool.coverage.report]
+show_missing = true
+exclude_lines = [
+  "pragma: no cover",
+  "def __repr__",
+  "if self.debug:",
+  "raise NotImplementedError",
+  "pass",
+  "if __name__ == .__main__.:",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
