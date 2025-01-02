@@ -1,0 +1,37 @@
+image: python:3.7-stretch
+
+stages:
+- test
+- publish
+
+test:3.7:
+  image: python:3.7-stretch
+  stage: test
+  script:
+  - pip install poetry tox
+  # we use 3.7 to determine the code coverage
+  - tox -- --cov=timew -v -s
+
+test:3.6:
+  image: python:3.6
+  stage: test
+  script:
+  - pip install poetry tox
+  - tox
+
+# pages:
+#   stage: publish
+#   only: [master]
+#   script:
+#   - pip install poetry tox sphinx
+#   - tox -e docs
+#   artifacts:
+#     paths:
+#     - public
+
+publish:
+  only: [tags]
+  stage: publish
+  script:
+  - pip install poetry
+  - poetry publish --build --username ${PYPI_USER} --password ${PYPI_PASSWORD}

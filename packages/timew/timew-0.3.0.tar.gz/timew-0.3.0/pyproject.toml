@@ -1,0 +1,45 @@
+#
+
+[project]
+name        = "timew"
+readme      = "README.rst"
+keywords    = ["timewarrior",]
+dynamic     = ["version", "dependencies", "optional-dependencies",]
+authors     = [
+    {name = "Tjaart van der Walt", email = "tjaart@tjaart.org"},
+    {name = "Scott Mcdermott", email = "scott@smemsh.net"},
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: POSIX",
+    "License :: OSI Approved :: MIT License",
+]
+description = "Python interface to your timewarrior database"
+requires-python = ">= 3.9"
+
+[build-system]
+requires = [ "setuptools",]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Issues = "https://github.com/smemsh/python-timew/issues/"
+Homepage = "https://github.com/smemsh/python-timew/"
+Repository = "https://github.com/smemsh/python-timew/"
+Documentation = "https://github.com/smemsh/python-timew/blob/master/docs/api/modules.rst"
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.in"] }
+optional-dependencies.dev = { file = ["requirements-dev.txt"] }
+
+[tool.setuptools.packages]
+find = {namespaces = false}
+
+[tool.setuptools_scm]
+version_scheme = "only-version"
+local_scheme = "no-local-version"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = ["tests"]
+addopts = "--cov=timew -v -s"

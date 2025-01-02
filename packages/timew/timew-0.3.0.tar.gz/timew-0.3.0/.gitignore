@@ -1,0 +1,7 @@
+.coverage
+.pytest_cache/
+**/__pycache__
+build/
+dist/
+venv/
+timew.egg-info/

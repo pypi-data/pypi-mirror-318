@@ -1,0 +1,90 @@
+
+0.0.22 / 2019-03-04
+===================
+
+  * Merge branch '7-popen-does-not-accept-intervals-arguments-with-spaces' into 'master'
+  * Pass arguments as list instead of string
+  * Use correct package for code coverage
+  * Merge branch '6-apply-black-code-formatting' into 'master'
+  * Resolve "Apply Black code formatting"
+  * Comment out publishing API docs for now
+
+0.0.21 / 2019-03-04
+===================
+
+  * Set correct pypi project name in pyproject.toml
+
+0.0.20 / 2019-03-04
+===================
+
+  * Install sphinx dependency for gitlab pages
+
+0.0.19 / 2019-03-04
+===================
+
+  * Update version number for automated release
+  * Release 0.0.11
+  * Fix package name
+  * Add semver as dev dependency
+  * Merge branch '5-convert-project-to-pyproject-toml' into 'master'
+  * Resolve "Convert project to pyproject.toml"
+
+
+0.0.8
+-----
+
+* Release 0.0.8
+* Fix documentation
+* Update README
+* Create API documentation
+
+0.0.7
+-----
+
+* Release 0.0.7
+* Get PYPI to render Markdown
+
+0.0.6
+-----
+
+* Release 0.0.6
+* Get PYPI to render Markdown
+
+0.0.5
+-----
+
+* Release 0.0.5
+* Fix release process
+
+0.0.4
+-----
+
+* Release 0.0.4
+* Fix Markdown rendering for PYPI
+* Update README
+* Update README
+
+0.0.3
+-----
+
+* Release 0.0.3
+* Release --help
+* Update README
+* Fix args
+* Fix commands + update tests
+* Add data structures for Duration and Interval
+* Remove sphinx dependency from requirements and add to dev-requirements
+
+0.0.2
+-----
+
+* Fix release process
+
+0.0.1
+-----
+
+* Release --help
+* Prepare code for first release
+* Add codebeat badge
+* Add LICENSE
+* Initial commit
