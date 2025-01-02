@@ -1,0 +1,85 @@
+Metadata-Version: 2.4
+Name: langgraph_store_dynamodb
+Version: 0.1.0
+Summary: DynamoDB dtore for LangGraph
+Author-email: Kamal <skamalj@github.com>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: boto3
+Requires-Dist: botocore
+Requires-Dist: langchain-core
+Requires-Dist: langgraph
+Provides-Extra: dev
+Requires-Dist: black; extra == 'dev'
+Requires-Dist: isort; extra == 'dev'
+Requires-Dist: mypy; extra == 'dev'
+Requires-Dist: pytest-cov; extra == 'dev'
+Requires-Dist: pytest>=7.0; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# LangGraph DynamoDB Store
+
+A DynamoDB-based store implementation for LangGraph that allows long term memory implementation
+
+bash
+pip install langgraph-store-dynamodb
+
+
+## Usage
+
+### Basic Initialization
+
+python
+from langgraph_store_dynamodb import DynamoDBStore
+
+# Initialize the store with a table name
+store = DynamoDBStore(
+    table_name="your-dynamodb-table-name",
+    max_read_request_units=10,  # Optional, default is 10
+    max_write_request_units=10  # Optional, default is 10
+)
+
+
+### Alternative Initialization Using Context Manager
+
+python
+from langgraph_dynamodb_checkpoint import DynamoDBStore
+
+with DynamoDBStore.from_conn_info(table_name="your-dynamodb-table-name") as store:
+    # Use the store here
+    pass
+
+
+## Parameters
+
+### DynamoDBStore Constructor
+
+- `table_name` (str): Name of the DynamoDB table to use for storing checkpoints
+- `max_read_request_units` (int, optional): Maximum read request units for the DynamoDB table. Defaults to 10
+- `max_write_request_units` (int, optional): Maximum write request units for the DynamoDB table. Defaults to 10
+
+## Table Structure
+
+The store automatically creates a DynamoDB table if it doesn't exist, with the following structure:
+
+- Partition Key (PK): String type, used for namespace
+- Sort Key (SK): String type, used for memory key
+
+## AWS Configuration
+
+Ensure you have proper AWS credentials configured either through:
+- Environment variables (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY)
+- AWS credentials file (~/.aws/credentials)
+- IAM role when running on AWS services
+
+The AWS credentials should have permissions to:
+- Create DynamoDB tables (if table doesn't exist)
+- Read and write to DynamoDB tables
+
+## Notes
+
+- The store automatically creates the DynamoDB table if it doesn't exist
+- Uses on-demand billing mode for DynamoDB
+- Implements methods required by the LangGraph BaseStore interface
