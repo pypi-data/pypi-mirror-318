@@ -1,0 +1,13 @@
+bitstruct
+
+[dev]
+black
+build
+coverage
+isort
+mypy
+pydantic
+ruff
+tomli
+validate-pyproject[all]
+vulture
