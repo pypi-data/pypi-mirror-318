@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+kplaylisk/__init__.py
+kplaylisk/main.py
+kplaylisk/parsing.py
+kplaylisk/process.py
+kplaylisk.egg-info/PKG-INFO
+kplaylisk.egg-info/SOURCES.txt
+kplaylisk.egg-info/dependency_links.txt
+kplaylisk.egg-info/entry_points.txt
+kplaylisk.egg-info/requires.txt
+kplaylisk.egg-info/top_level.txt

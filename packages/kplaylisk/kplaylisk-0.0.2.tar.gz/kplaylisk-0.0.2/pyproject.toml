@@ -1,0 +1,40 @@
+# python3 -m pip install --upgrade pip build setuptools twine
+# python3 -m build
+# python3 -m twine upload --repository testpypi dist/*
+# python3 -m twine upload dist/*
+# pip3 install --no-deps --index-url https://test.pypi.org/simple {package_name}
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kplaylisk"
+dynamic = ["version"]
+authors = [
+  { name="The220th", email="The220th@gmail.com" },
+]
+description = "m3u8 playlist builder"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "argparse",
+    "ksupk",
+    "tqdm",
+    "m3u8",
+]
+
+[project.scripts]
+kplaylisk = "kplaylisk.main:main"
+
+[project.urls]
+Homepage = "https://github.com/The220th/kplaylisk"
+Issues = "https://github.com/The220th/kplaylisk/issues"
+
+[tool.setuptools.dynamic]
+version = {attr = "kplaylisk.__version__"}
