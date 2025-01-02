@@ -1,0 +1,13 @@
+apksearch/__init__.py,sha256=rv05nSqsXDSGgmlXomRpOK1qRxX-KYLVRWThg_IRJRk,156
+apksearch/__main__.py,sha256=MSmt_5Xg84uHqzTN38JwgseJK8rsJn_11A8WD99VtEo,61
+apksearch/cli.py,sha256=FshatyXLp7iMQOSPuKidDHn9tmZns1WJPYLVz1R8kjs,3895
+apksearch/sites/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apksearch/sites/apkmirror.py,sha256=IpS6r7ovM3g2dZrkR_a9zQpHy-jqrU2nJ3ykVkWxers,3127
+apksearch/sites/apkpure.py,sha256=oUH-D1Xh04Bdb9eWQlX74B8OR3wm9lOEWqvvCC0-dUo,4785
+apksearch/sites/appteka.py,sha256=in04JYF043n0fUvBW1QQeXnNbYekGUIh4qeame951nA,6372
+apksearch-1.1.0.dist-info/LICENSE,sha256=Icu9iAY9cAaraq-HaAk8aWpXS1nE-3U_wfaOhN-HQUw,1061
+apksearch-1.1.0.dist-info/METADATA,sha256=Oa0idOEPo3_bS1hQKR4Zf5HybgOxd7LkqEJwurCZp8E,5936
+apksearch-1.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+apksearch-1.1.0.dist-info/entry_points.txt,sha256=FeAPgNPSU1tCwQNaKAmk6eQYbMHtsltcgeWSGUTxu0k,49
+apksearch-1.1.0.dist-info/top_level.txt,sha256=VguZMODhlXWwDyJJNJms5syJ4EHmWSQOS45J9I5Cv5o,10
+apksearch-1.1.0.dist-info/RECORD,,
