@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+src/BASEoriginaldata/__init__.py
+src/BASEoriginaldata/__main__.py
+src/BASEoriginaldata.egg-info/PKG-INFO
+src/BASEoriginaldata.egg-info/SOURCES.txt
+src/BASEoriginaldata.egg-info/dependency_links.txt
+src/BASEoriginaldata.egg-info/top_level.txt
+src/BASEoriginaldata/tests/__init__.py
+src/BASEoriginaldata/tests/test_1984.py
