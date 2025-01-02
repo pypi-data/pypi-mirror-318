@@ -1,0 +1,11 @@
+python_snaptime/__init__.py,sha256=SXNpFH55l2POEo-5SVDzR06v7pTwensCR5Zwn-f5LH0,90
+python_snaptime/__version__.py,sha256=3qc-wWlE85_30Eg2JbixgbFl-tl1Y5zXm8LaahLq94M,80
+python_snaptime/handlers.py,sha256=dDpb3MRpOyGC61-DiVYhos3cZPcO6bY5bdIhkUlWaI8,3984
+python_snaptime/main.py,sha256=qftAvjQqoEUvVaOOJhKCRR_pHU-G7swJJa128eqvy90,1519
+python_snaptime/models.py,sha256=WsPZ9GTMSjlNeF6CRA_mlfOdxVoPXcrM600zoZGHKzk,2716
+python_snaptime/parsers.py,sha256=plKriKEEZ0MmrBUsWY2AtFRk0E0pnkm3XxOdSpF0U9U,1533
+python_snaptime/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_snaptime-0.1.1.dist-info/LICENSE,sha256=jYUwjCOp_DsiOxHK_8lgxK533N4EeEpuiHbcMefWL1k,747
+python_snaptime-0.1.1.dist-info/METADATA,sha256=OnD2imR4a6qsrRZzgI-XUORQmofUEt2_5i-xo8bCF68,6622
+python_snaptime-0.1.1.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+python_snaptime-0.1.1.dist-info/RECORD,,
