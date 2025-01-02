@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_basic.py
+wkit/__init__.py
+wkit.egg-info/PKG-INFO
+wkit.egg-info/SOURCES.txt
+wkit.egg-info/dependency_links.txt
+wkit.egg-info/top_level.txt
