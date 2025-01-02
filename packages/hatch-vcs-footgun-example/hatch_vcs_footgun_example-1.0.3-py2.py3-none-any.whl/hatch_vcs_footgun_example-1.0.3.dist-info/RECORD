@@ -1,0 +1,7 @@
+hatch_vcs_footgun_example/__init__.py,sha256=HtZ7vKBXpxbRiFtn3b6TJQtawwXp0ktphu_VUBhCUwk,202
+hatch_vcs_footgun_example/main.py,sha256=Wvo0Z9wqMB4qqIyb6mn_dGXIQU4FgQFnk96d1zkuwWY,155
+hatch_vcs_footgun_example/version.py,sha256=O99IaodDcNenA8Q2oYpyneGpCdIQBb55kSmK24sdWFw,1732
+hatch_vcs_footgun_example-1.0.3.dist-info/METADATA,sha256=CweIScCDtBMds4UPpv2mH5Wd0zckDx-0n4YI8iWmdvI,8183
+hatch_vcs_footgun_example-1.0.3.dist-info/WHEEL,sha256=tkmg4JIqwd9H8mL30xA7crRmoStyCtGp0VWshokd1Jc,105
+hatch_vcs_footgun_example-1.0.3.dist-info/licenses/LICENSE,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+hatch_vcs_footgun_example-1.0.3.dist-info/RECORD,,
