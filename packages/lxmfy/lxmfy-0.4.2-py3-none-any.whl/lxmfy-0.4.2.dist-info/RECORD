@@ -1,0 +1,17 @@
+lxmfy/__init__.py,sha256=3HXKJmu1i533Im85Ek_ugPKcd5QHo1LW6l6IM2OxFw4,743
+lxmfy/cli.py,sha256=FAmhFOgXXRVwaU84az4VrKk-VzSZt_0DAKkHQpbJVy4,11027
+lxmfy/cogs_core.py,sha256=yquJfP75uvsqFxvhbMicZFDLxtnM4WxYlpB1plGqD2M,1875
+lxmfy/commands.py,sha256=f3ts0UHusIzUNGo3oqD-9SmnIN2L3a-fZqSu_4VtclM,4388
+lxmfy/core.py,sha256=rO1ZKSVnoLaNV0WZwnQ82y6bcvMyLO0-ATnVM0b6Z6k,12163
+lxmfy/help.py,sha256=hab2cY3B7j4MfDof16WPcsmITkBEXnbbcsHK0mKGUPw,3354
+lxmfy/moderation.py,sha256=qRWrmk28Xw_1-leFFQSRZNTcQt2ZZliEvIlppRV4p8g,5103
+lxmfy/permissions.py,sha256=8hC1KcyvL4OrDCbxbNSu5zN2KPDV5BF7gw32UdR3CNE,5535
+lxmfy/storage.py,sha256=pzmBp4e0Sd2b71W7NiGxcZHBoKDsHTTpVnnoFUj_MJo,4008
+lxmfy/templates/__init__.py,sha256=DLa-Xh-YLWy5tQU8BvEeLjk_EFa875Nyc9KnME8zLWU,182
+lxmfy/templates/full_bot.py,sha256=rDEiHD3TQktI13G6NlhBf2yHtqz4cTLykf1x573ch9g,5488
+lxmfy/transport.py,sha256=v8jsf62DaQRa7EsWhq1D_pOESoWVNpQntNwvmUCt4Vo,4028
+lxmfy-0.4.2.dist-info/LICENSE,sha256=f3cfjz6C450aGb6gDBpN6pZO0YbI_XqotL4RwW-WOWk,1077
+lxmfy-0.4.2.dist-info/METADATA,sha256=Ax78JHwg9XN-6W9Y-mKjSg8de8fWuEi5gmKAJepnncQ,2697
+lxmfy-0.4.2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+lxmfy-0.4.2.dist-info/entry_points.txt,sha256=hFMTwhNQqc5Or2azDblP-_kNQ5sLRsL3fniVv2cdmW8,110
+lxmfy-0.4.2.dist-info/RECORD,,
