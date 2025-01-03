@@ -1,0 +1,15 @@
+hwhkit/__init__.py,sha256=Z1yKevvmDWPWcUavLrI_vfo-dvfTTQJ3F_O2s7QcQYo,62
+hwhkit/connection/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+hwhkit/connection/mqtt/__init__.py,sha256=-TU_3VZfCXcHV4oQiwnyxDX-ksA-XgZYNmaJP3mnPDA,102
+hwhkit/connection/mqtt/client.py,sha256=wSzT_I-gb6AU8AcQEfRiowS6kMev7nAEY_YBNCYBsJA,3059
+hwhkit/llm/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+hwhkit/llm/config/__init__.py,sha256=HHcuD-qNbS2b6b4cI4AjNya2nJsUGLdDfoOBDKFJXVM,1113
+hwhkit/llm/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hwhkit/llm/models/base.py,sha256=sBP3TLSQEnRRvYwp_OXV8znr6KXzPXB5SkiC_hqySBM,3527
+hwhkit/llm/models/gpt.py,sha256=wtULG7Ih1eAWTpQS50vRdnTNquK3EkfCngsZ11nu35E,3536
+hwhkit/utils/__init__.py,sha256=WNxfJwDg1aP7w3k4iBzypnJu5kIpjhnGyr64l4xOUuU,438
+hwhkit-1.0.0.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hwhkit-1.0.0.dist-info/METADATA,sha256=iWO20ZG3Nf7J5U0axiSamrBrFbTNhjK8NZXXnut6s-Y,2373
+hwhkit-1.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+hwhkit-1.0.0.dist-info/top_level.txt,sha256=t--xEiaPw0UwG-9VfuOIenPf8KpPEUaHOcHqlKkLS6g,7
+hwhkit-1.0.0.dist-info/RECORD,,
