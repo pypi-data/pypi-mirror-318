@@ -1,0 +1,1 @@
+::: vbl_aquarium.utils.vbl_base_model
