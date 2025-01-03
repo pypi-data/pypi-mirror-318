@@ -1,0 +1,7 @@
+tdm/__init__.py,sha256=86snHF-FDZwwZEN5WuU9GsUwfNjXWqVDbr0IcoKDx-0,76
+tdm/client.py,sha256=iL9Yb3ALbF1k7Dxc-6S1Dvu2avLkGlpn8h8DYNsERe0,9495
+tdm/version.py,sha256=vxh3tgh1kygAUSJN7ehFbNmEq7gUjlSm420lDV0xaSE,23
+eratos_tdm-2.33.1.dist-info/METADATA,sha256=kIjAN629ACNS6ImCdrYl1LMLCayfrixmnm5zJIzVSmw,1166
+eratos_tdm-2.33.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+eratos_tdm-2.33.1.dist-info/licenses/LICENSE,sha256=yQVZ6ddG6fWeH1dM-xUG4-O1dzbRahmHmozSJ02rhZE,1182
+eratos_tdm-2.33.1.dist-info/RECORD,,
