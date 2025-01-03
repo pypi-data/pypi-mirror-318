@@ -1,0 +1,74 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Az eszk\u00f6z m\u00e1r konfigur\u00e1lva van"
+        },
+        "error": {
+            "already_configured": "Az eszk\u00f6z m\u00e1r konfigur\u00e1lva van",
+            "cannot_connect": "Sikertelen csatlakoz\u00e1s"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "name": "A velbus kapcsolat neve",
+                    "port": "Kapcsol\u00f3d\u00e1si karakterl\u00e1nc"
+                },
+                "title": "Adja meg a velbus kapcsol\u00f3d\u00e1s t\u00edpus\u00e1t"
+            }
+        }
+    },
+    "exceptions": {
+        "invalid_hvac_mode": {
+            "message": "A(z) {hvac_mode} kl\u00edma m\u00f3d nem t\u00e1mogatott."
+        }
+    },
+    "services": {
+        "clear_cache": {
+            "description": "T\u00f6rli a velbuscache-t, majd elind\u00edt egy \u00faj vizsg\u00e1latot.",
+            "fields": {
+                "address": {
+                    "name": "C\u00edm"
+                },
+                "interface": {
+                    "description": "A velbus interf\u00e9sz, amelyre a parancsot k\u00fcldeni kell, ez ugyanaz az \u00e9rt\u00e9k, mint amit a konfigur\u00e1ci\u00f3 sor\u00e1n haszn\u00e1ltunk.",
+                    "name": "Interf\u00e9sz"
+                }
+            },
+            "name": "Gyors\u00edt\u00f3t\u00e1r t\u00f6rl\u00e9se"
+        },
+        "scan": {
+            "fields": {
+                "interface": {
+                    "description": "A velbus interf\u00e9sz, amelyre a parancsot k\u00fcldeni kell, ez ugyanaz az \u00e9rt\u00e9k, mint amit a konfigur\u00e1ci\u00f3 sor\u00e1n haszn\u00e1ltunk.",
+                    "name": "Interf\u00e9sz"
+                }
+            },
+            "name": "Keres\u00e9s"
+        },
+        "set_memo_text": {
+            "fields": {
+                "address": {
+                    "name": "C\u00edm"
+                },
+                "interface": {
+                    "description": "A velbus interf\u00e9sz, amelyre a parancsot k\u00fcldeni kell, ez ugyanaz az \u00e9rt\u00e9k, mint amit a konfigur\u00e1ci\u00f3 sor\u00e1n haszn\u00e1ltunk.",
+                    "name": "Interf\u00e9sz"
+                },
+                "memo_text": {
+                    "name": "Jegyzet sz\u00f6vege"
+                }
+            },
+            "name": "Jegyzet sz\u00f6veg be\u00e1ll\u00edt\u00e1sa"
+        },
+        "sync_clock": {
+            "description": "A Velbus modulok \u00f3r\u00e1j\u00e1t szinkroniz\u00e1lja a Home Assistant \u00f3r\u00e1j\u00e1val, ez ugyanaz, mint a 'sync clock' a VelbusLinkb\u0151l.",
+            "fields": {
+                "interface": {
+                    "description": "A velbus interf\u00e9sz, amelyre a parancsot k\u00fcldeni kell, ez ugyanaz az \u00e9rt\u00e9k, mint amit a konfigur\u00e1ci\u00f3 sor\u00e1n haszn\u00e1ltunk.",
+                    "name": "Interf\u00e9sz"
+                }
+            },
+            "name": "\u00d3ra szinkroniz\u00e1l\u00e1sa"
+        }
+    }
+}
