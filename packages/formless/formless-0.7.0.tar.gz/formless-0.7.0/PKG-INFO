@@ -1,0 +1,202 @@
+Metadata-Version: 2.4
+Name: formless
+Version: 0.7.0
+Summary: Handwritten + image OCR.
+License-File: LICENSE
+Requires-Python: >=3.12
+Requires-Dist: alembic>=1.14.0
+Requires-Dist: modal>=0.64.178
+Requires-Dist: pre-commit>=4.0.1
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: requests>=2.32.3
+Requires-Dist: sqlmodel>=0.0.22
+Requires-Dist: term-image>=0.7.2
+Provides-Extra: training
+Requires-Dist: accelerate>=1.0.1; extra == 'training'
+Requires-Dist: blobfile>=3.0.0; extra == 'training'
+Requires-Dist: safetensors>=0.4.5; extra == 'training'
+Requires-Dist: tiktoken>=0.8.0; extra == 'training'
+Requires-Dist: torch>=2.5.0; extra == 'training'
+Requires-Dist: torchao>=0.6.1; extra == 'training'
+Requires-Dist: torchvision>=0.20.0; extra == 'training'
+Requires-Dist: transformers>=4.46.0; extra == 'training'
+Description-Content-Type: text/markdown
+
+# formless
+
+Hard handwriting understanding.
+
+## Usage
+
+Use the web app:
+
+```bash
+https://andrewhinh--formless-frontend-modal-get.modal.run/
+```
+
+Or hit the API:
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{"image_url": "<image-url>"}' https://andrewhinh--formless-api-modal-get.modal.run
+```
+
+Or use the CLI:
+
+```bash
+uv run formless -i <image-url> [-v]
+or
+uv run formless -p <local-image-path> [-v]
+```
+
+Or use in Python:
+
+```python
+from formless import scan
+scan(image_url="<image-url>", verbose=1)
+scan(image_path="<local-image-path>", verbose=1)
+```
+
+## Development
+
+### Set Up
+
+Set up the environment:
+
+```bash
+uv sync --all-extras --dev
+uv run pre-commit install
+export PYTHONPATH=.
+echo "export PYTHONPATH=.:$PYTHONPATH" >> ~/.bashrc
+modal setup
+```
+
+Create a `.env` (+ `.env.dev` + `.env.local`):
+
+```bash
+API_URL=
+HF_TOKEN=
+
+LIVE=
+DEBUG=
+STRIPE_PUBLISHABLE_KEY=
+STRIPE_SECRET_KEY=
+STRIPE_WEBHOOK_SECRET=
+DOMAIN=
+
+WANDB_API_KEY=
+WANDB_ENTITY=
+```
+
+### Useful Commands
+
+Lint and format:
+
+```bash
+uv run pre-commit run --all-files
+```
+
+Pull latest db and migrate (do before running the frontend/api):
+
+```bash
+make migrate env=<env> message=<message>
+```
+
+### Repository Structure
+
+```bash
+.
+├── api                 # API.
+├── frontend            # frontend.
+├── src/formless        # python bindings.
+├── training            # training.
+```
+
+### API
+
+Test the API:
+
+```bash
+modal run api/app.py
+```
+
+Run the API "locally":
+
+```bash
+modal serve --env=dev api/app.py
+```
+
+Deploy on dev:
+
+```bash
+modal deploy --env=dev api/app.py
+```
+
+Deploy on main:
+
+```bash
+modal deploy --env=main api/app.py
+```
+
+### Frontend
+
+Run the web app "locally":
+
+```bash
+modal serve --env=dev frontend/app.py
+stripe listen --forward-to <url>/webhook
+# update API_URL, STRIPE_WEBHOOK_SECRET, and DOMAIN in .env.dev
+```
+
+Deploy on dev:
+
+```bash
+modal deploy --env=dev frontend/app.py
+# update API_URL, STRIPE_WEBHOOK_SECRET, and DOMAIN in .env.dev
+```
+
+Deploy on main:
+
+```bash
+modal deploy --env=main frontend/app.py
+```
+
+### PyPI
+
+Run the package:
+
+```bash
+uv run formless -v
+# update API_URL in src/formless/__init__.py
+```
+
+Build the package:
+
+```bash
+uvx --from build pyproject-build --installer uv
+```
+
+Upload the package:
+
+```bash
+uvx twine upload dist/*
+```
+
+Test the uploaded package:
+
+```bash
+uv run --with formless --no-project -- formless -v
+```
+
+### Training
+
+Run ETL:
+
+```bash
+modal run training/etl.py
+```
+
+Run training:
+
+```bash
+modal run training/train.py
+```
