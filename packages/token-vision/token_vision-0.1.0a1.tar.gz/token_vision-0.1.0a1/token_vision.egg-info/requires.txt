@@ -1,0 +1,8 @@
+numpy
+pillow
+
+[dev]
+pytest>=7.0
+black
+isort
+flake8

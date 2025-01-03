@@ -1,0 +1,182 @@
+<div align="center">
+  <img src="token-vision-banner.jpg" alt="Token Vision Banner" width="100%" />
+</div>
+
+> **Warning**: This is an experimental alpha release. APIs and functionality may change significantly between versions.
+
+# Token Vision
+
+A fast, offline token calculator for images with various AI models (Claude, OpenAI, Google). Calculate image tokens and costs without making API calls or hitting rate limits.
+
+## Author
+Ashraf Ali (ashrafali.net)
+
+## Advantages
+
+- **Offline Operation**: Calculate tokens without internet connectivity or API keys
+- **No Rate Limits**: Process unlimited images without worrying about API quotas
+- **Ultra Fast**: Get instant results without network latency
+- **Cost Efficient**: Plan and estimate costs without spending API credits
+- **Multi-Model Support**: One library for all major vision models
+- **Accurate**: Uses the same tiling and scaling algorithms as the official implementations
+- **Developer Friendly**: Clean API with type hints and comprehensive documentation
+- **Extensible**: Support for custom models and pricing configurations
+
+## Installation
+
+```bash
+pip install token-vision
+```
+
+## Quick Start
+
+```python
+from token_vision import ImageTokenCalculator
+
+# Initialize calculator
+calculator = ImageTokenCalculator()  # Defaults to gemini-1-5-flash
+
+# Calculate tokens for an image
+tokens = calculator.calculate(
+    image_path="path/to/image.jpg",
+    model="gemini-1-5-flash"  # Optional, defaults to gemini-1-5-flash
+)
+
+# Get cost
+cost = calculator.get_cost(tokens)
+print(f"Tokens: {tokens:,}")
+print(f"Cost: ${cost:.6f}")
+```
+
+## Features
+
+- Support for multiple AI models:
+  - Claude (3.5 Sonnet, 3.5 Haiku, 3 Opus, 3 Sonnet, 3 Haiku)
+  - GPT-4o (Latest, Nov 2024, Aug 2024, May 2024)
+  - Gemini (1.5 Pro, 1.5 Flash)
+- Accurate token calculation based on image dimensions
+- Cost estimation for both input and output tokens
+- Support for various image input formats
+- Batch processing capabilities
+- Memory efficient processing
+- Custom model configuration support
+
+## Documentation
+
+### Supported Models
+
+The library supports the following models with their respective token calculation methods:
+
+#### Claude Models
+- claude-3-5-sonnet-20241022
+- claude-3-5-haiku-20241022
+- claude-3-opus-20240229
+- claude-3-sonnet-20240229
+- claude-3-haiku-20240307
+
+#### OpenAI Models
+- gpt-4o
+- gpt-4o-2024-11-20
+- gpt-4o-2024-08-06
+- gpt-4o-2024-05-13
+
+#### Google Models
+- gemini-1-5-pro
+- gemini-1-5-flash (default)
+
+### Custom Models
+
+You can add your own models or override existing ones using a JSON configuration file:
+
+```python
+from token_vision import ImageTokenCalculator
+from token_vision.models import load_custom_models
+
+# Load custom models
+load_custom_models("path/to/custom_models.json")
+
+# Use custom model
+calculator = ImageTokenCalculator()
+tokens = calculator.calculate("image.jpg", model="custom-model-v1")
+```
+
+Example custom_models.json:
+```json
+{
+    "custom-provider": {
+        "name": "Custom Provider",
+        "max_images": 10,
+        "token_multiplier": 1.0,
+        "models": {
+            "custom-model-v1": {
+                "name": "Custom Model V1",
+                "input_rate": 15000,
+                "output_rate": 75000,
+                "batch_input_rate": 7500,
+                "batch_output_rate": 37500,
+                "cached_input_rate": 1500,
+                "cached_output_rate": 7500
+            }
+        }
+    }
+}
+```
+
+### Advanced Usage
+
+```python
+# Custom configuration
+calculator = ImageTokenCalculator(
+    default_model="gemini-1-5-flash",
+    detail_level="high"
+)
+
+# Process multiple images
+results = calculator.calculate_batch([
+    "image1.jpg",
+    "image2.jpg"
+])
+
+# Get batch costs (uses batch rates)
+costs = calculator.get_cost_batch(results)
+
+# Using numpy arrays
+import numpy as np
+image_array = np.array(...)  # Your image data
+result = calculator.calculate(
+    image=image_array,
+    model="gemini-1-5-flash",
+    detail_level="low"
+)
+```
+
+## Development
+
+### Setup
+
+1. Clone the repository:
+```bash
+git clone https://github.com/nerveband/token-vision.git
+cd token-vision
+```
+
+2. Create a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+3. Install development dependencies:
+```bash
+pip install -e ".[dev]"
+```
+
+### Running Tests
+
+```bash
+pytest
+```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details. 
