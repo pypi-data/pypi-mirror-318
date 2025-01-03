@@ -1,0 +1,10 @@
+cacaodocs/__init__.py,sha256=POdlhRaQ7T7kZ4AxRmkkFEjVOLPaIkP2JCsdoNxbvCc,719
+cacaodocs/documentation.py,sha256=NRBbRFLxd8psNC5R9LgWcSzxNZYmOhpWxnmCZrkIiaI,22996
+cacaodocs/generator.py,sha256=gImVPTO5K4haC4hNpV8-bSz6fII__imCMHVMyb6fFAI,1881
+cacaodocs/parser.py,sha256=8LDRzR8k3bXFnZRGAD574NZgBbDdadojKVRNaCRGNAs,1865
+cacaodocs/type_definitions.py,sha256=F8Hb3CsAEgThrNw_IudBxEcU1mhWP4qYwzris9b2ay0,3441
+cacaodocs-0.1.2.dist-info/LICENSE,sha256=A2ZZPw8YgToxetKtgOmVApuuXxrmu2k9jnrYXO1I2QQ,1086
+cacaodocs-0.1.2.dist-info/METADATA,sha256=c_Ldz36WqTCTT9KeXPPiLUhzAZnU7ArWYW18ynsK--o,9802
+cacaodocs-0.1.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+cacaodocs-0.1.2.dist-info/top_level.txt,sha256=CtoeKFgbRMHuWumePj8_LG1qPec8GF2OASWq1GrrfaQ,10
+cacaodocs-0.1.2.dist-info/RECORD,,
