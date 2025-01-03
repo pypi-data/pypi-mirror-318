@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: py-code-docgen
+Version: 0.2.2
+Summary: Generate structured Markdown documentation from project directories
+Home-page: https://github.com/ci-psy/DocGen
+Author: ci-psy
+Author-email: icosmo2@gmail.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Documentation
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: dataclasses>=0.6; python_version < "3.7"
+
+# DocGen — Codebase Documentation Generator
+
+DocGen scans your project directory and automatically generates comprehensive Markdown documentation. It creates:
+- A visual directory tree of your codebase
+- Code snippets with syntax highlighting
+- File summaries and statistics
+- A structured table of contents
+
+You can target specific:
+- Directories (e.g., only 'src/' and 'tests/')
+- File types (e.g., only Python and JavaScript files)
+- Code sections (using chunk size limits)
+- Tree depth and visibility
+
+[![PyPI version](https://img.shields.io/pypi/v/py-code-docgen.svg?x=0)](https://pypi.org/project/py-code-docgen/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+## Quick Start
+```bash
+# Install
+pip install py-code-docgen
+
+# Run interactive wizard
+docgen -i
+
+# Or generate docs directly
+docgen . -o docs.md --include "py,js,cpp"
+
+# Target specific folders and types
+docgen . --folders "src,tests" --include "py" --show-progress
+```
+
+## Features
+- 🧙‍♂️ Interactive wizard for easy configuration
+- 🌳 Project structure visualization with file filtering
+- 📝 Code blocks with language detection
+- 🎨 Customizable output (minimal/detailed)
+- 📊 File statistics and line counts
+- ⚡ Fast report mode for quick overviews
+- 🎯 Selective documentation of directories and file types
+
+Perfect for:
+- Project documentation
+- Codebase exploration
+- Technical documentation
+- Code review preparation
