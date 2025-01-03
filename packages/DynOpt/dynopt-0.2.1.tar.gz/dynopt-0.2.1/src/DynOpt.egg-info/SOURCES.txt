@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/DynOpt/__init__.py
+src/DynOpt/dyno.py
+src/DynOpt.egg-info/PKG-INFO
+src/DynOpt.egg-info/SOURCES.txt
+src/DynOpt.egg-info/dependency_links.txt
+src/DynOpt.egg-info/not-zip-safe
+src/DynOpt.egg-info/requires.txt
+src/DynOpt.egg-info/top_level.txt
