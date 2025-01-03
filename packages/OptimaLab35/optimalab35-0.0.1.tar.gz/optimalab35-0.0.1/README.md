@@ -1,0 +1,113 @@
+# OptimaLab35
+UI for [OPTIMA35](https://gitlab.com/CodeByMrFinchum/optima-35) package, WIP.
+
+## Overview
+
+**OPTIMA-35** (**Organizing, Processing, Tweaking Images, and Modifying scanned Analogs from 35mm Film**) is a Python-based project designed to streamline the management and editing of metadata and images from analog photography. While it was created with analog photography in mind, it is versatile enough to handle any type of images.
+
+## Current Status
+
+### Development and Versioning Notes
+
+**OptimaLab35** is currently in an **alpha stage** and under active development. As a result:
+- The README may occasionally be outdated.
+- Users are encouraged to check for new branches and read the Changelog
+- Bugs or unforeseen behavior may occur.
+
+While the project follows a semantic versioning structure (major.minor.patch), breaking changes—typically reserved for major version increments—may also occur in minor version updates during this development phase. Please review the changelog carefully before updating.
+
+**OptimaLab35** supports two modes: **GUI** and **TUI**.
+- The **GUI** is loaded by default if **PySide6** is available.
+- The **TUI** serves as a fallback when **PySide6** is unavailable or can be started explicitly using the `--tui` option with `main.py`.
+
+While all features are implemented and functional, the designs of both the GUI and TUI are not yet finalized. Some safety checks are still under development.
+
+
+### Available Features:
+
+**Implemented Features:**
+- **Image Processing:**
+  - Resizing
+  - Renaming with order adjustment
+  - Grayscale conversion
+  - Brightness adjustment
+  - Contrast adjustment
+- **EXIF Management:**
+  - Copy EXIF data
+  - Add custom EXIF information
+  - Add GPS data
+  - Add a date to EXIF
+  - Remove EXIF
+- **Watermarking**
+
+
+### Preview GUI
+**GUI for OPTIMA-35** with KvArcDark theme on Linux
+
+**Main windows**
+
+![main_tab](https://gitlab.com/CodeByMrFinchum/optima-35/-/raw/main/media/main_tab.png){width=40%}
+
+**Exif tab when opened, settings disabled by default**
+
+![exif_tab_disabled](https://gitlab.com/CodeByMrFinchum/optima-35/-/raw/main/media/exif_tab_disabled.png){width=40%}
+
+**Exif tab after enabeling own exif data**
+
+![exif_tab_enabled](https://gitlab.com/CodeByMrFinchum/optima-35/-/raw/main/media/exif_tab_enabled.png){width=40%}
+
+**Dialog window to modify exif file without need to open yaml file**
+
+![exifeditor](https://gitlab.com/CodeByMrFinchum/optima-35/-/raw/main/media/exifeditor.png){width=40%}
+
+### Preview TUI
+**asciinema recording for TUI**
+
+![demo_gif](https://gitlab.com/CodeByMrFinchum/optima-35/-/raw/main/media/demo_v041.gif)
+
+
+## Dependencies
+
+**OPTIMA-35** has two modes: **GUI** and **TUI**. Each mode has its own set of dependencies, so you don’t need to install TUI dependencies if you only plan to use the GUI (and vice versa).
+
+**Required Dependencies:**
+- **optima35**
+- **pyside6**: For the GUI mode.
+- **simple_term_menu**: For the TUI mode.
+
+### Installing Dependencies
+
+You can install the dependencies using the  requirements file
+
+Using `pip`:
+```bash
+pip install -r requirements.txt
+```
+
+# Use of LLMs
+In the interest of transparency, I disclose that Generative AI (GAI) large language models (LLMs), including OpenAI’s ChatGPT and Ollama models (e.g., OpenCoder and Qwen2.5-coder), have been used to assist in this project.
+
+## Areas of Assistance:
+- Project discussions and planning
+- Spelling and grammar corrections
+- Suggestions for suitable packages and libraries
+- Guidance on code structure and organization
+
+In cases where LLMs contribute directly to code or provide substantial optimizations, such contributions will be disclosed and documented in the relevant sections of the codebase.
+
+**Ollama**
+- mradermacher gguf Q4K-M Instruct version of infly/OpenCoder-1.5B
+- unsloth gguf Q4K_M Instruct version of both Qwen/QWEN2 1.5B and 3B
+
+### References
+1. **Huang, Siming, et al.**
+   *OpenCoder: The Open Cookbook for Top-Tier Code Large Language Models.*
+   2024. [PDF](https://arxiv.org/pdf/2411.04905)
+
+2. **Hui, Binyuan, et al.**
+   *Qwen2.5-Coder Technical Report.*
+   *arXiv preprint arXiv:2409.12186*, 2024. [arXiv](https://arxiv.org/abs/2409.12186)
+
+3. **Yang, An, et al.**
+   *Qwen2 Technical Report.*
+   *arXiv preprint arXiv:2407.10671*, 2024. [arXiv](https://arxiv.org/abs/2407.10671)
