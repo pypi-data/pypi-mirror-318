@@ -1,0 +1,2 @@
+[console_scripts]
+scad2gltf = scad2gltf.__main__:main
