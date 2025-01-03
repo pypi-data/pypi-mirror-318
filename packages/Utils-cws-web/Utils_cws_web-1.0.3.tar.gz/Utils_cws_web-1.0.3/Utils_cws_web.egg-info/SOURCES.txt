@@ -1,0 +1,17 @@
+LICENCE
+README.md
+setup.py
+Utils_cws_web.egg-info/PKG-INFO
+Utils_cws_web.egg-info/SOURCES.txt
+Utils_cws_web.egg-info/dependency_links.txt
+Utils_cws_web.egg-info/top_level.txt
+utils_cws_web/__init__.py
+utils_cws_web/integration.py
+utils_cws_web/middleware.py
+utils_cws_web/dto/__init__.py
+utils_cws_web/dto/dto_data.py
+utils_cws_web/dto/schema_error.py
+utils_cws_web/dto/schema_registry.py
+utils_cws_web/exception/__init__.py
+utils_cws_web/exception/integration_error.py
+utils_cws_web/exception/schema_exception.py
