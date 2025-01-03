@@ -1,0 +1,13 @@
+pybit7z.libs/libgcc_s-493bcbf3.so.1,sha256=tAAN5ajqbmdGiiwJ2HgUD8eRUYmjx1O-Yrl86x6eGDU,200345
+pybit7z.libs/libstdc++-62bfff6d.so.6.0.32,sha256=1C4fUqLtpaTP6wDAErLN94_ESKB1LjID1VU3LxMCP64,4174113
+pybit7z-0.3.2.dist-info/METADATA,sha256=zHodP21lJTbOezyNr2f3T7pQR1NdjZFyldksTbZArLE,8598
+pybit7z-0.3.2.dist-info/RECORD,,
+pybit7z-0.3.2.dist-info/WHEEL,sha256=5XdhmdDNdwFvXs10jvNCWutg1cEnrnlzL_iKXciOMKY,116
+pybit7z-0.3.2.dist-info/licenses/LICENSE,sha256=2I3yMS1n1hD9PilLLFd0YmcgWxqocb3yJltxpMcoCiE,11326
+pybit7z/_version.pyi,sha256=j5kbzfm6lOn8BzASXWjGIA1yT0OlHTWqlbyZ8Si_o0E,118
+pybit7z/_core.pyi,sha256=H2AEdn1b8NSvxwNDuxaX9byF-8Rv0cJLZY5BPrd2jHE,92366
+pybit7z/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pybit7z/__init__.py,sha256=94bxc8_NvHpYzu2u82tmvoef8pZjkuEVp1bq8Sd9dIs,4897
+pybit7z/_version.py,sha256=9jP8Fo8egXoMs_T3DFqSuJYg4n9o9mnwYubl_hnut4k,411
+pybit7z/_core.cpython-39-powerpc64le-linux-gnu.so,sha256=fy4FTRbrr0pc8bWT3XSH0z_8zgJbEblZJkxMYeyh3_4,1718689
+pybit7z/lib7zip.so,sha256=U5a417owhTyhg4feGEKGt-kdY2uyJRcMsAQYeexeSao,5555633
