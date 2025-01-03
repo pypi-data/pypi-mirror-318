@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: bethe
+Version: 0.1.1
+Summary: Bethe Equation Solver
+Home-page: https://github.com/CyberGuy99/bethe
+Author: CyberGuy99
+Author-email: rushilcd@umd.edu
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+# bethe
+bethe equation solver and ansatz computer
+
+follows [Robbins and Love](https://arxiv.org/pdf/2105.06761)
