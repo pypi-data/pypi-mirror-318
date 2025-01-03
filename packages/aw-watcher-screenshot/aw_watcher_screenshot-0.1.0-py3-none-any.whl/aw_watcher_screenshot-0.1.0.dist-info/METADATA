@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: aw-watcher-screenshot
+Version: 0.1.0
+Summary: 
+Author: tiagovla
+Author-email: tiagovla@gmail.com
+Requires-Python: >=3.13,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: aw-client (>=0.5.14,<0.6.0)
+Requires-Dist: mss (>=10.0.0,<11.0.0)
+Requires-Dist: pillow (>=11.1.0,<12.0.0)
+Description-Content-Type: text/markdown
+
+
