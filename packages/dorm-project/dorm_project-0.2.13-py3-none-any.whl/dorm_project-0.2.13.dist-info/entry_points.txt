@@ -1,0 +1,2 @@
+[console_scripts]
+dorm = dorm:_cli
