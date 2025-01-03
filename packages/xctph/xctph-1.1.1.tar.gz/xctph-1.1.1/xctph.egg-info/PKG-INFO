@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: xctph
+Version: 1.1.1
+Summary: Package for computing exciton phonon matrix elements.
+Author: Krishnaa Vadivel
+Author-email: 
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: h5py
+Requires-Dist: xmltodict
+Requires-Dist: setuptools
