@@ -1,0 +1,8 @@
+pytest_atstack/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_atstack/plugin.py,sha256=Ob-vAlwrlNWU4ZeVmFhUakhS_CkGzXZRdPHbOfxa0Do,7697
+pytest_atstack-0.1.4.dist-info/LICENSE,sha256=1D6Qd3b86-k-sYYI3hjfwVaaqZXOLOQfpNAcKUIvF7A,1078
+pytest_atstack-0.1.4.dist-info/METADATA,sha256=IBHpPm26fwTqHxc9S8FkXm3xNtCcBIqZ4eCh4R_p6C4,2631
+pytest_atstack-0.1.4.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pytest_atstack-0.1.4.dist-info/entry_points.txt,sha256=WdkStHQiEl58paDuLBqvClkGh5pYYjaSlZgGcqHfPRI,43
+pytest_atstack-0.1.4.dist-info/top_level.txt,sha256=GEyW-qEt9EgjYpiSfog3Ok2GJD2lf3Wt_RvEn7rCRnU,15
+pytest_atstack-0.1.4.dist-info/RECORD,,
