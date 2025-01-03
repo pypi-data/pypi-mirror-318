@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: muji-bhasa
+Version: 1.1.4
+Summary: Muji Programming Language Interpreter
+Home-page: https://github.com/theSandeshStha/muji-bhasa
+Author: Gulugulu Man
+Author-email: guluguluman4@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Muji Programming Language
+
+## Installation
+
+```bash
+pip install muji-bhasa==1.0.0
+```
