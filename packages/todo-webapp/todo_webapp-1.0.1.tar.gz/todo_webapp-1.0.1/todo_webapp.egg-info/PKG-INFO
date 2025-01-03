@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: todo-webapp
+Version: 1.0.1
+Summary: This package can be used to run both desktop to-do app (python3 todo-list-GUI.py and todo-list-CLI.py ) and web based to-do app (streamlit run main.py) to save and manage daily To-Do tasks.
+Home-page: https://de.linkedin.com/in/abdul-rahman-vakili-052172120
+Author: Abdul Rahman, Vakili
+Author-email: vakili.hu.it@gamil.com
+License: MIT
+Keywords: to-do,task
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+
+UNKNOWN
+
