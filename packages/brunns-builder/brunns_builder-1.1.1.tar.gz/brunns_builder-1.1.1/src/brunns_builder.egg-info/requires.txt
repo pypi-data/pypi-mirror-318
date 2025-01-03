@@ -1,0 +1,2 @@
+yarl>=1.9
+more_itertools>=2.0
