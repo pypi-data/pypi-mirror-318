@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+yophonebot.egg-info/PKG-INFO
+yophonebot.egg-info/SOURCES.txt
+yophonebot.egg-info/dependency_links.txt
+yophonebot.egg-info/requires.txt
+yophonebot.egg-info/top_level.txt
