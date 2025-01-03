@@ -1,0 +1,14 @@
+tkinter
+pillow>=10.0.0
+python-vlc
+requests
+boto3
+oss2
+minio
+tkinterdnd2
+colorama
+pydantic
+pytest
+pytest-html
+pytest-cov
+pywin32>=305
