@@ -1,0 +1,9 @@
+superleap/__init__.py,sha256=fcIwzhZCYk1Xj50Z144r3dIfC8esT1QLk66VkRyaazE,81
+superleap/__main__.py,sha256=UsyNenDHcLdD4xgVw1CeW1BgkDOG9_of5nLR4Jx4-UY,178
+superleap/audit_data.py,sha256=gTngVuRMX5ZAQ6fmYJ3sm9TqBZD0Z_SeNGK4W2gb434,2924
+superleap/client.py,sha256=KCMgmPT4R7VOPrR2mtbrhWmMuqsTWXeW8SeqFvecjUw,4541
+superleap/common.py,sha256=Sxcp-3BfXaxd7dnwqeLGscWmAzarOTpE3ZGb3pxXjao,367
+superleap-0.1.0.dist-info/METADATA,sha256=23JGdNYRfDiBrlB1xWnrpBN95dWqTe6lqcEDZz_OXTU,3238
+superleap-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+superleap-0.1.0.dist-info/licenses/LICENSE,sha256=ypITTkvWIUZFHWa-u7V4HEkpvAldQ5mONK10jtoWQTk,1066
+superleap-0.1.0.dist-info/RECORD,,
