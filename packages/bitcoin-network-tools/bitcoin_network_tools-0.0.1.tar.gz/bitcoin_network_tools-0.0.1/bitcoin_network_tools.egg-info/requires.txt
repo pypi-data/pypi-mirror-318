@@ -1,0 +1,6 @@
+requests>=2.32.3
+dnspython>=2.7.0
+
+[dev]
+pytest
+flake8

@@ -1,0 +1,2 @@
+[console_scripts]
+bitcoin_network_tools = bitcoin_network_tools.cli:main
