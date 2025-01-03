@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/artifactory-version-management/__init__.py
+src/artifactory-version-management/check_version_bump.py
+src/artifactory_version_management.egg-info/PKG-INFO
+src/artifactory_version_management.egg-info/SOURCES.txt
+src/artifactory_version_management.egg-info/dependency_links.txt
+src/artifactory_version_management.egg-info/top_level.txt
