@@ -1,0 +1,8 @@
+astyle-3.6.6.data/scripts/astyle,sha256=9Hwq2rfpcJzIqd4zgPQEETTPZ9jOWRoRwJmKbuNjLzc,1457928
+astyle/__init__.py,sha256=8Mv4RYvZ6L3SQ74qv0ZjsH8FARLjS1YMV4AuI5gjDHw,646
+astyle/__init__.cpython-310-darwin.so,sha256=RpSxr4Pqqa9DVefDmQjCCgUbagS7jYMwLzCAmxGjo1k,885648
+astyle/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+astyle/__main__.py,sha256=zBFKncTynP-BbFChmk61qYbdSJYxmVeb_qef4pEWvio,856
+astyle-3.6.6.dist-info/RECORD,,
+astyle-3.6.6.dist-info/WHEEL,sha256=B-GzzknW2FgzesYoV42VyyodP74pdbSecIhTs2ot0rc,120
+astyle-3.6.6.dist-info/METADATA,sha256=vcUu_kQ8xVK4-qacJT22LLnh-QDD9sj2cOiND71-enE,2040
