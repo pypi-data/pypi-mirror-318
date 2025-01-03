@@ -1,0 +1,3 @@
+[console_scripts]
+check_schema=json_argparse.argparse_schema.argparse_schema:main
+
