@@ -1,0 +1,5 @@
+setup.py
+insightxcpackage.egg-info/PKG-INFO
+insightxcpackage.egg-info/SOURCES.txt
+insightxcpackage.egg-info/dependency_links.txt
+insightxcpackage.egg-info/top_level.txt
