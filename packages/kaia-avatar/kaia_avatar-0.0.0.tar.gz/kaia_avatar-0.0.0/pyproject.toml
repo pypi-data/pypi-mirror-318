@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kaia-avatar"
+description = "One of the modules for KAIA project"
+version = "0.0.0"
+requires-python = ">=3.10, <4.0"
+
+license = { text = "GPLv3" }
+
+authors = [
+    {name = "Yuri Okulovsky", email = "yuri.okulovsky@gmail.com"}
+]
+
+dependencies = [
+
+]
+
+classifiers = [
+
+]
+
+[tool.setuptools.packages.find]
+where = ["."]

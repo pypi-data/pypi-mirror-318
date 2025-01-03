@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+avatar/__init__.py
+kaia_avatar.egg-info/PKG-INFO
+kaia_avatar.egg-info/SOURCES.txt
+kaia_avatar.egg-info/dependency_links.txt
+kaia_avatar.egg-info/top_level.txt
