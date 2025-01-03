@@ -1,0 +1,9 @@
+setup.py
+shenanigans/__init__.py
+shenanigans/morethreadstuff.py
+shenanigans/nerdlib.py
+shenanigans.egg-info/PKG-INFO
+shenanigans.egg-info/SOURCES.txt
+shenanigans.egg-info/dependency_links.txt
+shenanigans.egg-info/requires.txt
+shenanigans.egg-info/top_level.txt

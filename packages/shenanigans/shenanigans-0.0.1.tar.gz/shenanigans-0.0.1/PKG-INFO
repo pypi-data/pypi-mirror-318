@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: shenanigans
+Version: 0.0.1
+Summary: Random utilities for great convienence.
+Author: Noahlski
+Author-email: noahc018@proton.me
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: requests
+Requires-Dist: numpy
