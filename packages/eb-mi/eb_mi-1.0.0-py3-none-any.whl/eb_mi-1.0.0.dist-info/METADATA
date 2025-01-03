@@ -1,0 +1,113 @@
+Metadata-Version: 2.1
+Name: eb-mi
+Version: 1.0.0
+Summary: 
+Author: Philipp Zettl
+Author-email: philipp@easybits.tech
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: aio-pika (>=9.4.0,<10.0.0)
+Description-Content-Type: text/markdown
+
+# MoBits Module Interface 
+Library to simplify the creation of modules for the mobits infrastructure.
+
+> [!NOTE]
+> This library is still under active development, the API might change.
+> For instance since version 1.0.0 we moved from `pika` to `aio-pika` as the underlying RMQ library.
+> Moving from synchronous to asynchronous code is a breaking change, therefore we bumped the major version.
+
+# Usage
+Install this repository as a dependency of your project to bootstrap the creation process of a module inside the mobits infrastructure.
+
+## Example usage
+```python
+import asyncio
+from mobits_module_interface import ModuleInterface, main
+
+
+class MyInterface(ModuleInterface):
+    async def callback(self, message):
+      # do something with message
+      await self.publish(message)
+
+
+if __name__ == "__main__":
+  asyncio.run(main(MyInterface, broker={'uri': 'amqp://localhost'}))
+```
+
+
+---
+
+## Dev Stuff
+### Development
+#### Test Execution
+To run the tests simply execute
+```shell
+poetry run pytest [-rpP --cov]
+```
+
+To generate HTML reports run
+```shell
+poetry run coverage html
+```
+you can find the generated coverage report in `./coverage_html/`
+### High Level Overview
+The `ModuleInterface` class handles two main tasks
+
+1) Consume incoming messages from RMQ
+2) Publish outgoing messages to RMQ
+
+The `ModuleInterface` class provides a `run()` method to start the consumer process as well as establish a connection-channel
+for the publisher.
+
+The main entry point for module applications is the `main()` function. It takes a `ModuleInterface` class as an argument and
+starts the `run()` method. Apart from this, it also simplifies the configuration process of the underlying module.
+
+### Documentation
+Documentation is created using `sphinx` [docs](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html#)
+
+To check documentation, open `docs/build/index.html` in your favorite browser (firefox of course)
+#### Create / update documentation (using `sphinx`)
+```shell
+poetry run sphinx-build -b html docs/source docs/build
+```
+
+
+#### Add new file/module to documentation
+Using new file `models` as example:
+1. In `docs/build/_sources/index.rst.txt` add a file name in TOC e.g. `models`
+    ```text
+    .. toctree::
+       :maxdepth: 2
+       :caption: Contents:
+
+       mobits_module_interface
+       module_interface
+       state_machine
+       models
+    ```
+2. In `docs/build/_sources/` create new file with the name of the added module plus `.rst.txt` extension. For `models` this would be 
+    ```
+    docs/build/_sources/models.rst.txt
+    ```
+3. Depending on the added type (file in existing module, or new module), add content in file
+
+   - length of the `^^^` part must be same length as Headline (Here `Dataclass Models`)
+   - check different content in existing files 
+   ```text
+   Dataclass Models
+   ^^^^^^^^^^^^^^^^
+
+   .. automodule:: mobits_module_interface.models
+      :members:
+      :undoc-members:
+      :show-inheritance:
+
+   ```
+4. Update documentation (see section above)
+
