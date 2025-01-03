@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: Stockify
+Version: 0.1.1
+Summary: A Python library for financial data analysis and portfolio management
+Home-page: https://github.com/ray-singh/Stockify
+Author: Rayansh Singh
+Author-email: rayansh365@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: yfinance
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: datetime
+Requires-Dist: seaborn
+
+# Stockify
+
+Stockify is a Python toolkit for financial data analysis and portfolio management. It allows users to easily fetch stock market data, analyze performance, and build custom stock portfolios. Whether you're an investor, data scientist, or student, Stockily aims to make stock analysis more accessible and efficient.
+
+---
+
+## Features
+
+- **Fetch Stock Data**: Retrieve stock data from Yahoo Finance (via `yfinance`) and Alpha Vantage.
+- **Portfolio Management**: Simulate and manage stock portfolios with custom weightings and investment strategies.
+- **Risk Analysis**: Calculate key financial metrics such as volatility, returns, and correlations between stocks in a portfolio.
+- **Easy Integration**: Use Stockily as part of your financial analysis pipeline or as a stand-alone tool.
+
+---
+
+## Installation
+
+You can install Stockily using **pip**:
+
+```bash
+pip install stockify

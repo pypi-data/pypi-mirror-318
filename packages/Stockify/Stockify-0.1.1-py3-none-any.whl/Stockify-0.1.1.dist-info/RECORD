@@ -1,0 +1,17 @@
+QuantKit/Portfolio.py,sha256=YXRc3RArPKofabbh1ZHkIlqayz63OrjxClHu1CqPf-U,17030
+QuantKit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+QuantKit/data_fetching.py,sha256=rk8ouML4yNRaew3s3IhzVF0KltAikLJgkSfZeqQ93Pw,5671
+QuantKit/indicators.py,sha256=v-5XS8HLzVC0tqcnRlBGMA5oUeh-T6JCcoc814jJdzY,6934
+QuantKit/risk.py,sha256=AQfN4kiwwzDGK4azXvcewYS8Eo3DdBjo_JVMFt88Aso,2626
+QuantKit/visualization.py,sha256=ixMnrV_83vp7uKVHJ_A9NODrvV1PX1LzqxbFiupsbgg,14390
+Stockify/Portfolio.py,sha256=uCHqcpoCHvBZW0ID95dYCJzNwlGWBh1lGUcE2hm4SIA,17030
+Stockify/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+Stockify/data_fetching.py,sha256=rk8ouML4yNRaew3s3IhzVF0KltAikLJgkSfZeqQ93Pw,5671
+Stockify/indicators.py,sha256=v-5XS8HLzVC0tqcnRlBGMA5oUeh-T6JCcoc814jJdzY,6934
+Stockify/risk.py,sha256=AQfN4kiwwzDGK4azXvcewYS8Eo3DdBjo_JVMFt88Aso,2626
+Stockify/visualization.py,sha256=ixMnrV_83vp7uKVHJ_A9NODrvV1PX1LzqxbFiupsbgg,14390
+Stockify-0.1.1.dist-info/LICENSE,sha256=_n20Z-sJmaJpIfV7h3zsuWhX7BBxfcPgCFpmiNYm9KI,1066
+Stockify-0.1.1.dist-info/METADATA,sha256=oN6BEIGKEoeODz3nCYncyK7faARvmLRJ4AhvPLXJAWY,1519
+Stockify-0.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+Stockify-0.1.1.dist-info/top_level.txt,sha256=9c-0Gf1odaHn4Q8UbLYFsOwHawiuE4L8pAAWiHbKw44,9
+Stockify-0.1.1.dist-info/RECORD,,
