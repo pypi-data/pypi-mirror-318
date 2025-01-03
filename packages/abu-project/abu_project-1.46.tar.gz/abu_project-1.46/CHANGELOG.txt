@@ -1,0 +1,11 @@
+Change Log
+==========
+
+1.46(02/01/2025)
+--------------------
+- Seventh Release (bug fixed)
+- Encapsulating the implementation of the ``main()`` function
+- Added Docstring for every function.
+- Added an interactive ``fibonacci_series_generator`` function to generate Fibonacci numbers in groups of 10 with user-controlled continuation.
+- Fixed the type annotation in the ``process_data`` function argument.
+
