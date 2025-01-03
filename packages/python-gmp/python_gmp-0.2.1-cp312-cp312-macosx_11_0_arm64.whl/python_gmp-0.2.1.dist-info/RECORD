@@ -1,0 +1,9 @@
+_gmp_utils.py,sha256=Hwj2BXr6st2e33eWvVpmQbQVAsthUzRy_fC9Qu30hy8,1592
+gmp.cpython-312-darwin.so,sha256=UNKXeCB5U1jfMjw0Ww_2XBvsU3_jKHQbkBQl-IRI-j4,132640
+_gmp_fractions.py,sha256=Q4NO_NiWLM8ejsr0TreNWA-dJEUG_aipa5BDxFnK3SA,40964
+python_gmp-0.2.1.dist-info/RECORD,,
+python_gmp-0.2.1.dist-info/LICENSE,sha256=0HHetIH5sD-VSYWBay1IgLx4QArlVBLZT-iPcdcVTkY,1080
+python_gmp-0.2.1.dist-info/WHEEL,sha256=7Wd-yga4fjSiXpUH443rsPZpiZ4h8-uNrXJrYRW_e14,109
+python_gmp-0.2.1.dist-info/top_level.txt,sha256=cjY4HEHXLZxT7hA_SoJgBKiaRGRQxDXB_j8JNoOiCHk,30
+python_gmp-0.2.1.dist-info/METADATA,sha256=av_jfhaX4p-_wh853QZXTZbt0le4znD1An9nbkP2mAE,4263
+python_gmp../python-gmp.libs/libgmp.10.dylib,sha256=a946tjw3ZyaL1GypUSHbZafX9RATAoI9ar6fD_CspPo,468768
