@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+license_control/1.py
+license_control/__init__.py
+license_control/core.py
+license_control/license_control.py
+license_control.egg-info/PKG-INFO
+license_control.egg-info/SOURCES.txt
+license_control.egg-info/dependency_links.txt
+license_control.egg-info/requires.txt
+license_control.egg-info/top_level.txt
+tests/__init__.py
+tests/test_core.py
