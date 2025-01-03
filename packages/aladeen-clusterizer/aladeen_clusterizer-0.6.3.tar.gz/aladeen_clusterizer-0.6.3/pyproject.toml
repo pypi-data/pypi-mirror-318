@@ -1,0 +1,31 @@
+[project]
+name = "aladeen-clusterizer"
+description = "A package for clustering news articles"
+version = "0.6.3"
+authors = [
+    { name = "Irakli Janiashvili", email = "irakli.janiashvili@gmail.com" },
+]
+requires-python = "<4.0,>=3.12"
+dependencies = [
+    "pandas==2.1.4",
+    "torch",
+    "hdbscan<1.0.0,>=0.8.40",
+    "scikit-learn<2.0.0,>=1.6.0",
+    "sentence-transformers<4.0.0,>=3.3.1",
+    "umap-learn<1.0.0,>=0.5.7",
+    "tqdm<5.0.0,>=4.67.1",
+    "transformers<5.0.0,>=4.47.0",
+    "huggingface-hub[cli]<1.0.0,>=0.26.5",
+    "numba>=0.60.0",
+]
+
+[dependency-groups]
+dev = ["sqlalchemy<3.0.0,>=2.0.36", "psycopg2<3.0.0,>=2.9.10"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["aladeen_clusterizer*", "aladeen_clusterizer.*"]

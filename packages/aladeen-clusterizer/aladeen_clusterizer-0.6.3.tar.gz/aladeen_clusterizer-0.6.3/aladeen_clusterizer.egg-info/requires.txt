@@ -1,0 +1,10 @@
+pandas==2.1.4
+torch
+hdbscan<1.0.0,>=0.8.40
+scikit-learn<2.0.0,>=1.6.0
+sentence-transformers<4.0.0,>=3.3.1
+umap-learn<1.0.0,>=0.5.7
+tqdm<5.0.0,>=4.67.1
+transformers<5.0.0,>=4.47.0
+huggingface-hub[cli]<1.0.0,>=0.26.5
+numba>=0.60.0

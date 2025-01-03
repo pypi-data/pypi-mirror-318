@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: aladeen-clusterizer
+Version: 0.6.3
+Summary: A package for clustering news articles
+Author-email: Irakli Janiashvili <irakli.janiashvili@gmail.com>
+Requires-Python: <4.0,>=3.12
+Requires-Dist: pandas==2.1.4
+Requires-Dist: torch
+Requires-Dist: hdbscan<1.0.0,>=0.8.40
+Requires-Dist: scikit-learn<2.0.0,>=1.6.0
+Requires-Dist: sentence-transformers<4.0.0,>=3.3.1
+Requires-Dist: umap-learn<1.0.0,>=0.5.7
+Requires-Dist: tqdm<5.0.0,>=4.67.1
+Requires-Dist: transformers<5.0.0,>=4.47.0
+Requires-Dist: huggingface-hub[cli]<1.0.0,>=0.26.5
+Requires-Dist: numba>=0.60.0
