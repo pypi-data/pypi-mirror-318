@@ -1,0 +1,17 @@
+Adlib/__init__.py,sha256=e03iNFXzwGz4EL05_RbYp2rBcbAUqu7JCoLTJxu6QEY,75
+Adlib/api.py,sha256=6U-ekHUrNUjVuZHSWoKMzQvKDIFhW3cYO459lgjd6P4,8043
+Adlib/criacao.py,sha256=M8p7EYXiFjTRZWpXYyy3rVtBxPHGhpkGFH0SBgNEfqk,6750
+Adlib/exceptions.py,sha256=f4yTgIgjPqmSqEYzm4ox-ClIC1_8BsrkdRe38EG8kUI,333
+Adlib/fluxguard.py,sha256=90QvoEYjG7oeklQQAcSiK_gs0ZFMYHKvNvhagnohPTM,2787
+Adlib/funcoes.py,sha256=_nW4CNWyUzGPvyG6c_BF-1_7M9zPQUvWx3mGGAvlLuw,13418
+Adlib/importacao.py,sha256=dVvmhP-7kYy5IZ2myo75LL3UQy-R1g7_1yrBatFayPs,3867
+Adlib/integracao.py,sha256=AVBjMx6uu1jFC-8yOsbP7Xhg8pz7SziQODPFInFzdvY,7235
+Adlib/logins.py,sha256=ZPRAVKtrGriVznj0sXUeVC0xrrweR3sywVbc9m-8h40,4311
+Adlib/teste.py,sha256=ibVRyjDqqqxmSZPtt1Qp4DTunxXflDi3SaHSeMBgFgk,42
+Adlib/utils.py,sha256=bSezVsXdynjpuMlwXpTRyFSG3eBJosnBZfSHc6gjMwY,1718
+Adlib/virtaus.py,sha256=7Bn3Ox195ctxGMCbGDfUUlb4DBDjzXvYJ9MYByaT-zc,6509
+LIB_ADTECH-3.3.4.dist-info/LICENSE,sha256=slBP2nRxZCnaXwI2_MHaeUxfMCSLUKtPKvRLdtZZW0s,1108
+LIB_ADTECH-3.3.4.dist-info/METADATA,sha256=ro_E0Uuncu-UiGZjZoe9U_YMaNniDLcFEUN_o8fxYvo,1130
+LIB_ADTECH-3.3.4.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+LIB_ADTECH-3.3.4.dist-info/top_level.txt,sha256=JEVw8ysST5PdlC5xak9rjQ4MqDwwF3y41MApgzmCLmw,6
+LIB_ADTECH-3.3.4.dist-info/RECORD,,
