@@ -1,0 +1,3 @@
+tests/outputs/*
+.ipynb_checkpoints/
+dynamicviz/__pycache__/
