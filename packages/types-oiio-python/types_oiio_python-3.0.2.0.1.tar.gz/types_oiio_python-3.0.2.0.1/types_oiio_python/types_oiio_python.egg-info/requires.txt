@@ -1,0 +1,9 @@
+typing-extensions
+
+[dev]
+mypy
+isort
+black
+build
+typing-extensions
+oiio-python==3.0.2.0.1
