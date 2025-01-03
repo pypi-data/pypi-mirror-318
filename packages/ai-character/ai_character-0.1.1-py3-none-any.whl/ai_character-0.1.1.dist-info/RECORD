@@ -1,0 +1,9 @@
+ai_character/__init__.py,sha256=WiRgZskCRBYuuEsl5vvZPHZRUQyX2Hb5n09CN3mvvfY,163
+ai_character/ai_character.py,sha256=xZPubZ6sGHruxOgAwjAU_GsZYDzPrxFypj_ihn3bD4A,19220
+ai_character/audio_processor.py,sha256=-hoDLya8YyjiSLa-10AUT7qP5uVab_CvSWo1mrhCgaQ,5560
+ai_character/model_handlers.py,sha256=EHlZSd6Go_6YrjRYxTIrE5yuj2PKxhtAc61SU9xQ2Pk,2198
+ai_character-0.1.1.dist-info/LICENSE,sha256=zehFFKpHGVXopex1EvdHvvdsyu6xgFueZLl-4KVsO48,1066
+ai_character-0.1.1.dist-info/METADATA,sha256=sj4fYlWL82i0a5Br3UP_H4oDHFTjV_BakGkd0hAZe_g,11033
+ai_character-0.1.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+ai_character-0.1.1.dist-info/top_level.txt,sha256=7j73Bx3vwLW47_uxx8WGNBKr1MGi2MSzkP9bylIgIFI,13
+ai_character-0.1.1.dist-info/RECORD,,
