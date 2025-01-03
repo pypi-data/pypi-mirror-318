@@ -1,0 +1,15 @@
+churchsong/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+churchsong/__main__.py,sha256=4BOzncW1ga20619LOx26xYjrmAgtZJptS4dz5CrMBMg,7276
+churchsong/configuration.py,sha256=UhnCH1T7FTfYgDr8RqImthAjF4Ke0H96tSdVN0GK82E,7273
+churchsong/powerpoint.py,sha256=TJdDDvDbtlC5Z_-Hua2EmRHU4VmSY5glqVdofyA0In0,2777
+churchsong/utils.py,sha256=PBhJL_7G-n8I2ykmSgv_NsPhRuAV4xyW6Il1D33CKdw,202
+churchsong/churchtools/__init__.py,sha256=xWC-TrgFC-1ATUBloRi4WHhbc6iR7icqWc57wbF6bDQ,12205
+churchsong/churchtools/events.py,sha256=8hRMMwoj9f_j3gr83uT5u8D9Ypk9-__jgyC2OPyOJJ8,4023
+churchsong/churchtools/song_verification.py,sha256=0QBlAiMJu4aHIaD0iptcTr3RJvJPevubTaa7gHgTPsk,8257
+churchsong/songbeamer/__init__.py,sha256=ru39-b721MP77mjxRwRTI1sVF2BK9INjSOIfoNGgSgQ,8844
+churchsong/songbeamer/windows.py,sha256=TbCvZu4YwNTVJAh1W8u2aNY1GHsVPXKXbgHtTUEBTLs,1785
+ChurchSong-0.5.1.dist-info/METADATA,sha256=WrXaXHJZpRdiWOYJkPFcak2nfjaiYN0GA2WA9VTL5O8,5172
+ChurchSong-0.5.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+ChurchSong-0.5.1.dist-info/entry_points.txt,sha256=YGqrKJN-Q75S_dAgkDFPjkx7z8kv75Tu6vp-DgbAoP8,56
+ChurchSong-0.5.1.dist-info/top_level.txt,sha256=tqy2Tb-QbHuJ3I-ZrhMOQqLha119AjWZBZm9VJUQM8Q,11
+ChurchSong-0.5.1.dist-info/RECORD,,
