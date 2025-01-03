@@ -1,0 +1,2 @@
+ENDPOINT_RESTAURANT = "/restaurant/v1/"
+ENDPOINT_RESTAURANT_ORDERS = "orders"

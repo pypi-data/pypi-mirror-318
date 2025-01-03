@@ -1,0 +1,2 @@
+ENDPOINT_CUSTOMER = "/customer/v1/"
+ENDPOINT_CUSTOMER_IDENTITY = "identity"

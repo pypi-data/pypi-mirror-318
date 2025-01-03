@@ -1,0 +1,13 @@
+fairepay_api/__init__.py,sha256=poRVpRlnPHdmO-TtaHZ5itgSEKOCZ_Yu0ZCQ0q1oSNw,696
+fairepay_api/authorize.py,sha256=nTosANg7Ooq0wh1QXOURzhInKmDJ1tgF_FkaFCKspXs,778
+fairepay_api/customer/__init__.py,sha256=tZ-dZE_8-luEjG4WFShjZKwifuhcMParmcUiS8dHUgg,337
+fairepay_api/customer/identity.py,sha256=CuQd7vFL94W6bqR7runiRydPzmTGK6RH3A1y_cBWn9U,748
+fairepay_api/customer/orders.py,sha256=-r5QrrolcZ4He2v57L4zthpQ7k5HE5-l83xALMAEZo4,175
+fairepay_api/customer/settings.py,sha256=ZugM1l36_UzOjewdbpzvk9DXCMvm4D8xMnBcRoBf660,76
+fairepay_api/restaurant/__init__.py,sha256=tgQD6RFyyHnlOWLIG2npOo8WIy2xZzrHdUI03yyGbgY,204
+fairepay_api/restaurant/orders.py,sha256=W8bhuZ4dFTmJcVfc5PSM4qhC7YF36BE_CHBswxYlTBI,762
+fairepay_api/restaurant/settings.py,sha256=Ljll6EbA-KEegYEYIK23I70aW0H-McXRmzPmx7unb_w,78
+fairepay_api/settings.py,sha256=kQZA6dVb2kHGv_SQ0Iuy77b9M06-ZEFLsQZ1Cj3gOqc,82
+fairepay_api-0.0.1.dist-info/METADATA,sha256=bEb05RbaC0ZQ1N9ZHgWN8qUREcKsxdMXn6EB4sjuNU8,522
+fairepay_api-0.0.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+fairepay_api-0.0.1.dist-info/RECORD,,
