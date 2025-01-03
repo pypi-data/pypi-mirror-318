@@ -1,0 +1,6 @@
+PySide2<6,>=5.15
+qt-material-icons<1,>=0.2
+
+[dev]
+black>=24.0
+python-semantic-release>=9.0
