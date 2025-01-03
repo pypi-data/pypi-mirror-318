@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: slimevb
+Version: 0.1.0
+Summary: Port of David Ha's Slime volleyball for gymnasium.
+Author: Chase McDonald
+Author-email: chasemcd@andrew.cmu.edu
+Requires-Dist: numpy
+Requires-Dist: gymnasium
+
