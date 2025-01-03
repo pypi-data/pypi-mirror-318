@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: kenobi
+Version: 4.0
+Summary: document based database using sqlite
+Home-page: http://patx.github.io/kenobi
+Author: Harrison Erd
+Author-email: harrisonerd@gmail.com
+License: three-clause BSD
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Database
+License-File: LICENSE
+
+
+KenobiDB is a small document based DB, supporting very simple
+usage including insertion, removal and basic search. Made with SQLite.
+Written by Harrison Erd (https://patx.github.io/)
+Website: https://patx.github.io/kenobi/
