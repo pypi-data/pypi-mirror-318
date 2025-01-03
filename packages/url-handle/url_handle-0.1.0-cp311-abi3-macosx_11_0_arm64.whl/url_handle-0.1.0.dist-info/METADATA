@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: url_handle
+Version: 0.1.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: pytest ; extra == 'tests'
+Provides-Extra: tests
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+npm i wasm-pack-inline -g
+
+
+RUSTFLAGS="-Zlocation-detail=none -Zfmt-debug=none"  rustup run nightly wasm-pack build . --target web --out-dir pkg --out-name index --release \
+--reference-types --weak-refs \
+-Z build-std=std,panic_abort \
+-Z build-std-features=panic_immediate_abort
+wasm-pack-inline ./pkg --dir wasm-inline --name index
+wc -c  pkg/index_bg.wasm
+
+wasm-pack build . --target web --out-dir pkg --out-name index --dev
+wasm-pack-inline ./pkg --dir wasm-inline --name index
+
