@@ -1,0 +1,10 @@
+compareworkbooks/__init__.py,sha256=Axl0dtCghpQc6dft2pH7_YAAmoU54tBSbyxcRPHHPkI,85
+compareworkbooks/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+compareworkbooks/core/equivalent.py,sha256=ZcfP7GRpuPLQKIGSUOcfLKwZjgrbfEDUXVQXAD1J-rQ,1779
+compareworkbooks/tests/__init__.py,sha256=9g8GWIAnipD1CH3vxDhePA9SmhsqZP35rb9nufFB50I,237
+compareworkbooks/tests/test_1984.py,sha256=GPfy8FPaGbj-w9uGHkJYSjmlSReVAXwiHS8JydJaERw,187
+compareworkbooks-0.1.1.dist-info/LICENSE.txt,sha256=fOh9FHccUt9OcJPBaVJ482GX4yrl_FxCUk9YRZ53JOI,1074
+compareworkbooks-0.1.1.dist-info/METADATA,sha256=VlVfEGF6A5jyg_JnNeMZOTU_1618T_x1Gf3rCxGii9I,2674
+compareworkbooks-0.1.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+compareworkbooks-0.1.1.dist-info/top_level.txt,sha256=ijIrvkHKTbjUIvfDv3NQxDtXwWbsbllsDNXbWVLLW0o,17
+compareworkbooks-0.1.1.dist-info/RECORD,,
