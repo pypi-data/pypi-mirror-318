@@ -1,0 +1,8 @@
+polars_qf-0.1.0.dist-info/METADATA,sha256=alUmy9vZkB1WNjG1rtoPN7FFyKRPzXM4xPJ_FDAIumc,1251
+polars_qf-0.1.0.dist-info/WHEEL,sha256=2fdNHxJvS2bAcI00delQ4QrnR7Oujl4cP2y-SRm5elU,96
+polars_qf-0.1.0.dist-info/licenses/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+polars_qf/_quant_factors.py,sha256=NcZCKCUxGJ7wWA3XvP0JeeWFF1Y6FTmDUpEfSM79XC8,748
+polars_qf/_utils.py,sha256=cdU8rd_jHB4Itd7GlzjQVE-QRaOIUPadzISS16VD9EA,365
+polars_qf/__init__.py,sha256=XMrEc4YAG09abq1dhfOd-2XIBSHdCcEpDT9tCC633OE,619
+polars_qf/_polars_qf_core.cp312-win_amd64.pyd,sha256=9A0dK9ZwGAxIAmis3whvThYJNdys16XJrR3KXUT-hbQ,16830464
+polars_qf-0.1.0.dist-info/RECORD,,
