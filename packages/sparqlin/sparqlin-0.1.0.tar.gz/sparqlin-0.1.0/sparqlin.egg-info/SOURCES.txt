@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+sparqlin/__init__.py
+sparqlin.egg-info/PKG-INFO
+sparqlin.egg-info/SOURCES.txt
+sparqlin.egg-info/dependency_links.txt
+sparqlin.egg-info/requires.txt
+sparqlin.egg-info/top_level.txt
+sparqlin/common/__init__.py
+sparqlin/testing/__init__.py
+sparqlin/testing/base_test_config.py
+sparqlin/testing/fixtures.py
+sparqlin/testing/helpers.py
+tests/__init__.py
