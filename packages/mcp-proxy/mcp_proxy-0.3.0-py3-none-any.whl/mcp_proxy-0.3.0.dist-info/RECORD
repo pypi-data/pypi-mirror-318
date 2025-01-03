@@ -1,0 +1,12 @@
+mcp_proxy/__init__.py,sha256=7o0Uu2-JufF3OSdbOlRUNlTfXAD0SgpZX5gvCQHgVLs,68
+mcp_proxy/__main__.py,sha256=DfNv2KAczfVgaeHJ-t9owMVi8bj345Ek1jmZ0COriks,4063
+mcp_proxy/proxy_server.py,sha256=aBo7rUggaIAYBm8_0pcQ8qdlCb8k5XUAfYjpMUi-hKQ,4546
+mcp_proxy/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mcp_proxy/sse_client.py,sha256=8QFaugkBO3MG96YYSS8zDeVyBuZEZkVmGNQClVoYOV0,967
+mcp_proxy/sse_server.py,sha256=ag_zTKRlViHV02g89HsBUscmuZXOjqyzM9rIk1cdPaQ,2479
+mcp_proxy-0.3.0.dist-info/LICENSE,sha256=IB5Kq1DC-6sU8yGp_Hzv6SXBKRrlSbYcKCLNkciNBUg,1073
+mcp_proxy-0.3.0.dist-info/METADATA,sha256=HnIrplsN0l7GJS0EfcED_lX9VglfPo-8WjG5Iz3gjb4,10646
+mcp_proxy-0.3.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+mcp_proxy-0.3.0.dist-info/entry_points.txt,sha256=DUvXlISh_AL4e5tkDRAFaiIbSFlplAzSAW-gR5yBKzo,100
+mcp_proxy-0.3.0.dist-info/top_level.txt,sha256=Sc_nmlR8kpkoOyksgzzlMw7rdAn5ZsPfRsd_tVWgiBI,10
+mcp_proxy-0.3.0.dist-info/RECORD,,
