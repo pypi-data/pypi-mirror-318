@@ -1,0 +1,21 @@
+[project]
+name = "vxutils"
+version = "20250102"
+description = "python 常用工具箱"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "polars>=1.8.2",
+    "pydantic>=2.10.4",
+]
+
+[project.scripts]
+vxsched = "vxutils.sched:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true

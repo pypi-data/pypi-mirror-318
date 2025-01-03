@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: vxutils
+Version: 20250102
+Summary: python 常用工具箱
+Requires-Python: >=3.8
+Requires-Dist: polars>=1.8.2
+Requires-Dist: pydantic>=2.10.4
