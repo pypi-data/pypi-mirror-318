@@ -1,0 +1,8 @@
+pandas
+pyarrow
+tqdm
+orjson
+requests
+ipywidgets
+pydantic
+pydantic-settings
