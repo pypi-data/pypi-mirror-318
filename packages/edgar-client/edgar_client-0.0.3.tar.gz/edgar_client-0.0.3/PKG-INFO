@@ -1,0 +1,77 @@
+Metadata-Version: 2.4
+Name: edgar-client
+Version: 0.0.3
+Summary: A Python client for retrieving filings from the SEC Edgar.
+Project-URL: Homepage, https://github.com/joeychilson/edgar-client
+Project-URL: Documentation, https://github.com/joeychilson/edgar-client/blob/main/README.md
+Project-URL: Repository, https://github.com/joeychilson/edgar-client.git
+Project-URL: Issues, https://github.com/joeychilson/edgar-client/issues
+Author-email: Joey Chilson <joeychilson@outlook.com>
+License: MIT License
+        
+        Copyright (c) 2024 Joey Chilson
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: pydantic>=2.10.4
+Requires-Dist: ratelimit>=2.2.1
+Description-Content-Type: text/markdown
+
+# edgar-client
+
+A Python client for retrieving filings from the SEC Edgar.
+
+## Installation
+
+```bash
+uv add edgar-client
+```
+
+## Examples
+
+```python
+from datetime import datetime
+from edgar_client import EdgarClient
+
+
+with EdgarClient(user_agent="YourCompany contact@email.com") as client:
+    companies = client.search_companies(tickers=["AAPL"], limit=1)
+
+    filings = client.get_filings(
+        cik=companies[0].cik,
+        forms=["10-K", "10-Q"],
+        start_date=datetime(2000, 1, 1),
+        end_date=datetime(2001, 12, 31),
+        limit=1,
+    )
+
+    print(filings)
+```

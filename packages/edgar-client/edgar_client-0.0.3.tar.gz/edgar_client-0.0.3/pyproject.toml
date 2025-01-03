@@ -1,0 +1,49 @@
+[build-system]
+requires = ["hatchling", "hatch-fancy-pypi-readme"]
+build-backend = "hatchling.build"
+
+[project]
+name = "edgar-client"
+version = "0.0.3"
+description = "A Python client for retrieving filings from the SEC Edgar."
+license = { file = "LICENSE" }
+readme = "README.md"
+authors = [
+    { name = "Joey Chilson", email = "joeychilson@outlook.com" },
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "httpx>=0.28.1",
+    "pydantic>=2.10.4",
+    "ratelimit>=2.2.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/joeychilson/edgar-client"
+Documentation = "https://github.com/joeychilson/edgar-client/blob/main/README.md"
+Repository = "https://github.com/joeychilson/edgar-client.git"
+Issues = "https://github.com/joeychilson/edgar-client/issues"
+
+[dependency-groups]
+lint = [
+    "mypy>=1.14.1",
+    "ruff>=0.8.4",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["edgar_client"]
+
+[tool.ruff]
+line-length = 120
