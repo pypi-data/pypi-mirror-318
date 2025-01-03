@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: gepeto-core
+Version: 1.0.2
+Summary: pip install gepeto-core
+Home-page: https://github.com/gepetoai/gepeto-core
+Author: Uzair
+Author-email: uzair@hellogepeto.com
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic>=2.10.4
+
+#gepeto-core
+pip install gepeto-core
