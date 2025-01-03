@@ -1,0 +1,12 @@
+chargedPlanner/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chargedPlanner/chargedPlanner.py,sha256=vsYI-x28ACuRc5Gne4ZVXIt-BTAax93Z4vaGmhhR1SY,37719
+chargedPlanner/create_config.py,sha256=9Iss0dfpuoSSUcnox_F-1QnRXm_JcCxvZBikl7Ucr30,517
+chargedPlanner/decorators.py,sha256=QVA6QAjoK6DW6kc8-z2lCIETlVxO2KXJFuomcqquklA,867
+chargedPlanner/lucca_requests.py,sha256=8ULdXEfDQD358JjVGueClW6B1uKFj05BRIU4txYyeeg,844
+chargedPlanner/data/Project.json,sha256=RB-9LSnrfFfvK3IfwKYVULmpnP2aDag-7nTi91_FUBo,3525
+chargedPlanner/data/devs.json,sha256=iAu0JFmWJaAH2B5WX5J0k9Tgy6xkOUafMbkbBvRIr0k,240
+chargedPlanner-0.1.4.dist-info/LICENSE,sha256=FmoM4UVYbWe0_G4LgfpIAdiMdipL8Imn6aM6HSBulVg,1102
+chargedPlanner-0.1.4.dist-info/METADATA,sha256=Qjuy9Q9AjWJOYPU0klYVBj1Jh4hQBUJFs7oJexyy7og,3838
+chargedPlanner-0.1.4.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+chargedPlanner-0.1.4.dist-info/top_level.txt,sha256=AQ2FF8tCu0lA3zGkQlCCoBPO05hWiouGHMZo4noQ5Oo,15
+chargedPlanner-0.1.4.dist-info/RECORD,,
