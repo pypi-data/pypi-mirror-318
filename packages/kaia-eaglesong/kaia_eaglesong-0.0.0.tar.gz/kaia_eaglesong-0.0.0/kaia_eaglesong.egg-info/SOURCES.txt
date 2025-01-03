@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+eaglesong/__init__.py
+kaia_eaglesong.egg-info/PKG-INFO
+kaia_eaglesong.egg-info/SOURCES.txt
+kaia_eaglesong.egg-info/dependency_links.txt
+kaia_eaglesong.egg-info/top_level.txt
