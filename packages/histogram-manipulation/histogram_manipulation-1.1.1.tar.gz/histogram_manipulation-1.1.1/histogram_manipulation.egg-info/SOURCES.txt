@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+histogram_manipulation/__init__.py
+histogram_manipulation/equalization.py
+histogram_manipulation/matching.py
+histogram_manipulation/stretching.py
+histogram_manipulation.egg-info/PKG-INFO
+histogram_manipulation.egg-info/SOURCES.txt
+histogram_manipulation.egg-info/dependency_links.txt
+histogram_manipulation.egg-info/requires.txt
+histogram_manipulation.egg-info/top_level.txt
+tests/test_equalization.py
+tests/test_matching.py
+tests/test_stretching.py
