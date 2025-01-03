@@ -1,0 +1,2 @@
+[console_scripts]
+simple-config-builder = simple_config_builder.cli:config
