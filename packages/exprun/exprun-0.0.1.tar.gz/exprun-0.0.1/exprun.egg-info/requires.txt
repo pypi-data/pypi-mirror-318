@@ -1,0 +1,9 @@
+pyyaml
+
+[dev]
+black
+build
+flake8
+numpy
+pytest
+twine
