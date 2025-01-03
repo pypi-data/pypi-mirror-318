@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: page-explorer
+Version: 0.2.0
+Summary: A tool that enables page interactions via instructions.
+Home-page: https://github.com/MozillaSecurity/page-explorer
+Author: Tyson Smith
+Author-email: twsmith@mozilla.com
+Maintainer: Mozilla Fuzzing Team
+Maintainer-email: fuzzing@mozilla.com
+License: MPL 2.0
+Keywords: automation testing
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Testing
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: selenium
+Provides-Extra: dev
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: tox; extra == "dev"
+
+Page Explorer
+=============
+
+PageExplorer enables page interactions via instructions.
