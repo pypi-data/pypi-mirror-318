@@ -1,0 +1,10 @@
+azure-devops
+python-dotenv
+click
+
+[dev]
+build
+pytest
+pytest-cov
+pre-commit
+sphinx_rtd_theme
