@@ -1,0 +1,9 @@
+virtuals_sdk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+virtuals_sdk/game.py,sha256=iRX9Gkkh4_fCfzZi0t7feJowEZ7WAO2hrWhqFBV_wdA,9853
+virtuals_sdk/sdk.py,sha256=WESDOYdQDxPtCaDQoj8gSvYBa7icyPz1ESwx_tWFQ0Y,3552
+virtuals_sdk/functions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+virtuals_sdk/functions/discord.py,sha256=k56Nn-rEQpnR6BeAuZfI6-ifRR3K6Q1pfqcjzHWHHc8,6733
+virtuals_sdk/functions/telegram.py,sha256=K2CZyoJZJyvnoK12jthYmQMSKEgB3PHMCELHw860ZlM,11638
+virtuals_sdk-0.1.4.dist-info/METADATA,sha256=3VjEx3Bpxj9tG8gd0WnG3TuNgphUXOdqtaLxxed6cYY,10607
+virtuals_sdk-0.1.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+virtuals_sdk-0.1.4.dist-info/RECORD,,
