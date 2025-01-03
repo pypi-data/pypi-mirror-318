@@ -1,0 +1,6 @@
+
+[dev]
+build
+cython
+pytest
+twine

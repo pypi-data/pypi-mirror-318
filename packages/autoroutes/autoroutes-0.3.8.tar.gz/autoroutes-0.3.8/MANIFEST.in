@@ -1,0 +1,3 @@
+include README.md
+include autoroutes.c
+include autoroutes.pyx

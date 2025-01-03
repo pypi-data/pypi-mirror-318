@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: autoroutes
+Version: 0.3.8
+Author-email: Yohan Boniface <yohanboniface@free.fr>
+License: MIT License
+        
+        Copyright (c) 2017 Yohan Boniface
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/pyrates/autoroutes
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Environment :: Web Environment
+Classifier: Development Status :: 4 - Beta
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: cython; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+
+# Autoroutes
+
+Routes for speed.
+
+
+## Install
+
+    pip install autoroutes
+
+
+## API
+
+```python
+# Create a Routes instance
+from autoroutes import Routes
+routes = Routes()
+
+# Register a new route
+routes.add('path/to/resource/{id}', something='value', anything='else')
+
+# Try to match a route
+routes.match('path/to/resource/1234')
+> ({'something': 'value', 'anything': 'else'}, {'id': '1234'})
+```
+
+Note: the order the routes are registered matters. At match time, routes will be
+tried in that order.
+
+### Placeholders
+
+Placeholders are defined by a curly brace pair: `path/{var}`. By default, this
+will match any character but the slash ('/').
+
+It's possible to control the placeholder type, either by:
+- using a named type: `alnum`, `digit`, `alpha`, `path` (matches everything),
+  `any` (matches everything, including empty string), `string` (default):
+
+        path/to/{var:digit}
+        path/to/{var:string}  # Same as path/to/{var}
+
+- using a normal regex (slower; also note that regex containing curly braces is
+  not yet supported)
+
+        path/to/{var:\d\d\d}
+
+Placeholders can appear anywhere in the path
+
+    path/to/file.{ext}
+    path/to/{name}.{ext}
+
+
+## Building from source
+
+    pip install cython
+    make compile
+    python setup.py develop
+
+
+## Tests
+
+    make test
+
+## Benchmark
+
+![](https://raw.githubusercontent.com/pyrates/autoroutes/master/benchmark.png)
+
+See [Benchmark](https://github.com/pyrates/autoroutes/wiki/Benchmark) for more
+details.
+
+## Acknowledgements
+
+This package has been first made as a Cython port of the [R3](https://github.com/c9s/r3/)
+C router.
+See also [python-r3](https://framagit.org/ybon/python-r3), which was a first
+attempt to wrap R3. I was unhappy with the stability, and more curious about
+Cython, so I tried to make a first POC port, and was happy with it.
