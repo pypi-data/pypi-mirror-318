@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+gemgroq/__init__.py
+gemgroq/api.py
+gemgroq.egg-info/PKG-INFO
+gemgroq.egg-info/SOURCES.txt
+gemgroq.egg-info/dependency_links.txt
+gemgroq.egg-info/requires.txt
+gemgroq.egg-info/top_level.txt
