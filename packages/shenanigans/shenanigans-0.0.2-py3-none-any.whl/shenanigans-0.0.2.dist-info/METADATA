@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: shenanigans
+Version: 0.0.2
+Summary: Random utilities for great convienence.
+Author: Noahlski
+Author-email: noahc018@proton.me
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+
+# shenanigans
+Random utilities for great convienence.
+
+## Installation
+"Normal" installation :
+`pip install shenanigans`
+Install this version :
+`pip install shenanigans==0.0.1`
+
+## **Features**
+### Thread (*MThread*)
+Parameters:
+    Function (Callable): The function that the thread will run.
+    Arguments (Optional[Iterable]): The arguments to pass to the function.
+    Kwarguments (Optional[dict]): The keyword arguments to pass to the function.
+    ThreadName (Optional[str]): The name for the thread.
+    ThreadGroup (ThreadGroup): The thread group to add the thread to.
+    Daemon (bool): Whether the thread should run as a daemon.
+    UncaughtExceptionHandler (bool): Whether the thread should catch and store any unhandled exceptions.
+    AutoStart (bool): Whether the thread should start automatically.
+### ThreadGroup (*ThreadGroup*)
+Initializes a new instance of the ThreadGroup class.
+
+This constructor initializes an empty list to store MThread instances 
+that will be managed by this thread group.
