@@ -1,0 +1,4 @@
+BASEoriginaldata>=2.0.0.dev1
+biopython==1.76
+libBASE>=2.0.0.dev1
+openpyxl==3.0.3
