@@ -1,0 +1,9 @@
+git_clone_group/__init__.py,sha256=mznN91o0H9HykWwyBCtqeqzeOyNYyGXCzBlGXI5Pg7Y,79
+git_clone_group/__version__.py,sha256=RPjQ5Y0AiaPLfWvQ71qrhQNq1NbU9aCHLb9B242Whhg,63
+git_clone_group/core.py,sha256=0IkcQmCLTqdAeSVS5FEeKAoCz8pMTpqtx3jUN6uDnko,10721
+git_clone_group-1.0.0.dist-info/LICENSE,sha256=5mGKT-8JivLkYytFwVxN4KGDFE_yBq8WU3VdjGwRQ7k,1060
+git_clone_group-1.0.0.dist-info/METADATA,sha256=PpzmXP3LNx-YdVcCUiQkzqj00EF4PazIqXtJkqAn33s,2285
+git_clone_group-1.0.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+git_clone_group-1.0.0.dist-info/entry_points.txt,sha256=GbcTNYwMusfAuzdoZ7OnARLOeJ0qWsQftOFUdvBPELU,92
+git_clone_group-1.0.0.dist-info/top_level.txt,sha256=hgob3gmJImhIKUqgv2udrp3I4kRqBsMQ-ddOJ4R0_ms,16
+git_clone_group-1.0.0.dist-info/RECORD,,
