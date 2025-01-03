@@ -1,0 +1,9 @@
+pyproject.toml
+setup.py
+python_example_sdk_debug/__init__.py
+python_example_sdk_debug/sdk.py
+python_example_sdk_debug.egg-info/PKG-INFO
+python_example_sdk_debug.egg-info/SOURCES.txt
+python_example_sdk_debug.egg-info/dependency_links.txt
+python_example_sdk_debug.egg-info/top_level.txt
+tests/test_example.py
