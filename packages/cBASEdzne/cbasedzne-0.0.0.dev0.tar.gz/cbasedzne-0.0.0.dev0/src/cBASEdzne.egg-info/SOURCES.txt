@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+src/cBASEdzne/__init__.py
+src/cBASEdzne/__main__.py
+src/cBASEdzne.egg-info/PKG-INFO
+src/cBASEdzne.egg-info/SOURCES.txt
+src/cBASEdzne.egg-info/dependency_links.txt
+src/cBASEdzne.egg-info/top_level.txt
+src/cBASEdzne/tests/__init__.py
+src/cBASEdzne/tests/test_1984.py
