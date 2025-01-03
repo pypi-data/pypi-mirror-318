@@ -1,0 +1,7 @@
+README.md
+setup.py
+pygameplayy.egg-info/PKG-INFO
+pygameplayy.egg-info/SOURCES.txt
+pygameplayy.egg-info/dependency_links.txt
+pygameplayy.egg-info/requires.txt
+pygameplayy.egg-info/top_level.txt
