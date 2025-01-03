@@ -1,0 +1,35 @@
+- name: quit
+  description: >-
+    End the conversation.
+  input_schema:
+    type: object
+    properties:
+- name: list
+  description: >-
+    List the contents of the local directory, including its subdirectories.
+  input_schema:
+    type: object
+    properties:
+- name: read_file
+  description: >-
+    Read the contents of a particular file
+  input_schema:
+    type: object
+    properties:
+      file_path:
+        type: string
+        description: >-
+          Complete path from the repo root to the file, including filename.
+    required:
+      - file_path
+- name: git_diff
+  description: >-
+    Show changes between HEAD and working tree using git diff
+  input_schema:
+    type: object
+    properties:
+      path:
+        type: string
+        description: >-
+          Optional path to show diff for specific file or directory. If not
+          provided, shows diff for entire repository.

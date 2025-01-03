@@ -1,0 +1,3 @@
+[console_scripts]
+repozee=repozee:RepoZeeApp.main
+
