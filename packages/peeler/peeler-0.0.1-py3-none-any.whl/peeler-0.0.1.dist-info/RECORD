@@ -1,0 +1,8 @@
+peeler/cli.py,sha256=Y-9jWJmVm-_AQd2nZ7Ye3eWp2QoqgEkNavouiuKM39o,501
+peeler/command/__init__.py,sha256=QMdk_sGBy0rU0lExd2Is44q2wR4KnNPtcwYM67hZSaU,83
+peeler/command/version.py,sha256=sLLvyrSw7dRUJZGxOXlwczv_KIxK3qJNrYTS1gx47PI,254
+peeler-0.0.1.dist-info/METADATA,sha256=u-9XXKYTuxQqwOdUpPwldpZGLh8XdxLB8nO4Bl4VP-4,42907
+peeler-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+peeler-0.0.1.dist-info/entry_points.txt,sha256=7RgJYC_odf2_PISoE1NQVcFH67MW90XXYpKjWnFEO0c,42
+peeler-0.0.1.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+peeler-0.0.1.dist-info/RECORD,,
