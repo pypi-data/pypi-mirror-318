@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+frangle/__init__.py
+frangle.egg-info/PKG-INFO
+frangle.egg-info/SOURCES.txt
+frangle.egg-info/dependency_links.txt
+frangle.egg-info/requires.txt
+frangle.egg-info/top_level.txt

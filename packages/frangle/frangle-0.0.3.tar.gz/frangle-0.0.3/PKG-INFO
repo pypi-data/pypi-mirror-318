@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: frangle
+Version: 0.0.3
+Summary: frangle: tools for image and video data preparation.
+Home-page: https://github.com/conservationtechlab/frangle
+Author: Conservation Technology Lab at the San Diego Zoo Wildlife Alliance
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: ffmpeg
+Requires-Dist: pygame
+Requires-Dist: pyyaml
+
+# frangle
+
+Tools for misc. image and video processing/preparation tasks common to
+CTL workflows
