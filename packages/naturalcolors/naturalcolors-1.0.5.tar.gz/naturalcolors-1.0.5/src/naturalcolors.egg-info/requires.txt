@@ -1,0 +1,12 @@
+numpy
+matplotlib
+seaborn
+
+[dev]
+devtools
+pytest
+bumpver
+mkdocs
+mkdocs-material
+mkdocs-jupyter
+mkdocstrings-python
