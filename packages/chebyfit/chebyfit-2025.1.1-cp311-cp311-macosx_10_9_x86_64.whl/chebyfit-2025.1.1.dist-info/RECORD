@@ -1,0 +1,10 @@
+chebyfit/conftest.py,sha256=RuBpOF4DYjYQrDB9GUAYUx7OSYBLgdm2lJgUd-gt6_M,313
+chebyfit/_chebyfit.cpython-311-darwin.so,sha256=7xC6cgZkFOvraRci1B347xKe13rqHhk7imWpzyCromg,71400
+chebyfit/__init__.py,sha256=6qSaxBTvOnxLT-osFGeCIGmN0CxDgAru_5HYOmK_qfU,100
+chebyfit/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chebyfit/chebyfit.py,sha256=YWtVkRSydZbfnw7Fchl03EUXJm808W6FOIBufSCDZcE,10217
+chebyfit-2025.1.1.dist-info/RECORD,,
+chebyfit-2025.1.1.dist-info/LICENSE,sha256=WHToIWF_Fgvr5vmFWffXIvgMti8TY-zo3nBWN1XQFdo,1529
+chebyfit-2025.1.1.dist-info/WHEEL,sha256=dqcMvds7ym-Clu_2fY2xyUvpe9ORKPgCJKUqdwjOvr8,110
+chebyfit-2025.1.1.dist-info/top_level.txt,sha256=jhUvbkQjWgxRQ7LGOY9h-ZNMyjHxzp61iPfUnYKlPo4,9
+chebyfit-2025.1.1.dist-info/METADATA,sha256=KcChL3oefyl7cbq2Vc4q1xo1kaLjv5uhzBvGeJ36y7Y,4218
