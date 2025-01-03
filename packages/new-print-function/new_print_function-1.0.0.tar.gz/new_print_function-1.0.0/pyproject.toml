@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools >= 65.0"]
+
+[project]
+name = "new_print_function"
+version = "1.0.0"
+authors = [
+    {name = "Haripo Wesley T.", email = "haripowesleyt@proton.me"}
+]
+maintainers = [
+    {name = "Haripo Wesley T.", email = "haripowesleyt@proton.me"}
+]
+description = "The New Python Print Function."
+readme = "README.md"
+requires-python = ">=3.0"
+keywords = [
+    "new print function", "color print", "background color", "font style", "foreground color", "terminal color"
+]
+classifiers=[
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/pypa/new_print_function"
+Issues = "https://github.com/pypa/new_print_function/issues"
+Repository = "https://github.com/haripowesleyt/new_print_function/"
+
