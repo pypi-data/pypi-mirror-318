@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+lightweight_chess_engine/__init__.py
+lightweight_chess_engine/engine.py
+lightweight_chess_engine.egg-info/PKG-INFO
+lightweight_chess_engine.egg-info/SOURCES.txt
+lightweight_chess_engine.egg-info/dependency_links.txt
+lightweight_chess_engine.egg-info/top_level.txt
+lightweight_chess_engine/binaries/bbc_1_engin
