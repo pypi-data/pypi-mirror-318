@@ -1,0 +1,141 @@
+[build-system]
+build-backend = "pdm.backend"
+requires = [
+    "pdm-backend",
+]
+
+[project]
+authors = [
+    { name = "Niklas Rosenstein", email = "rosensteinniklas@gmail.com" },
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Programming Language :: Python :: 3.10",
+]
+dependencies = [
+    "beautifulsoup4<5.0.0,>=4.10.0",
+    "cleo>=1.0.0a4",
+    "databind<5.0.0,>=4.4.0",
+    "flit<4.0.0,>=3.6.0",
+    "poetry-core<1.10,>=1.9",
+    "ptyprocess<1.0.0,>=0.7.0",
+    "pygments<3.0.0,>=2.11.2",
+    "PyYAML>=6.0",
+    "requests<3.0.0,>=2.27.1",
+    "setuptools>=39.1.0",
+    "tomli<3.0.0,>=2.0.0",
+    "tomlkit<1.0.0,>=0.12.1",
+    "twine<6.0.0,>=5.0.0",
+    "tqdm<5.0.0,>=4.64.0",
+    "build<2.0.0,>=1.0.0",
+    "nr-python-environment<1.0.0,>=0.1.4",
+    "gitpython<4.0.0,>=3.1.31",
+    "nr-stream<2.0.0,>=1.1.5",
+    "uv<1.0.0,>=0.2.0",
+]
+description = "Slap is a command-line utility for developing Python applications."
+name = "slap-cli"
+requires-python = "<4,>=3.10"
+version = "1.15.0"
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+Documentation = "https://niklasrosenstein.github.io/slap/"
+Homepage = "https://github.com/NiklasRosenstein/slap"
+Repository = "https://github.com/NiklasRosenstein/slap.git"
+
+[project.entry-points."slap.plugins.application"]
+add = "slap.ext.application.add:AddCommandPlugin"
+changelog = "slap.ext.application.changelog:ChangelogCommandPlugin"
+check = "slap.ext.application.check:CheckCommandPlugin"
+config = "slap.ext.application.config:SlapConfigCommand"
+info = "slap.ext.application.info:InfoCommandPlugin"
+init = "slap.ext.application.init:InitCommandPlugin"
+install = "slap.ext.application.install:InstallCommandPlugin"
+link = "slap.ext.application.link:LinkCommandPlugin"
+publish = "slap.ext.application.publish:PublishCommandPlugin"
+release = "slap.ext.application.release:ReleaseCommandPlugin"
+report = "slap.ext.application.report:ReportPlugin"
+run = "slap.ext.application.run:RunCommandPlugin"
+test = "slap.ext.application.test:TestCommandPlugin"
+venv = "slap.ext.application.venv:VenvPlugin"
+
+[project.entry-points."slap.plugins.repository_ci"]
+github-actions = "slap.ext.repository_ci.github_actions:GithubActionsRepositoryCIPlugin"
+
+[project.entry-points."slap.plugins.check"]
+changelog = "slap.ext.checks.changelog:ChangelogValidationCheckPlugin"
+general = "slap.ext.checks.general:GeneralChecksPlugin"
+poetry = "slap.ext.checks.poetry:PoetryChecksPlugin"
+release = "slap.ext.checks.release:ReleaseChecksPlugin"
+
+[project.entry-points."slap.plugins.release"]
+changelog_release = "slap.ext.release.changelog:ChangelogReleasePlugin"
+source_code_version = "slap.ext.release.source_code_version:SourceCodeVersionReferencesPlugin"
+
+[project.entry-points."slap.plugins.version_incrementing_rule"]
+major = "slap.ext.version_incrementing_rule:major"
+minor = "slap.ext.version_incrementing_rule:minor"
+patch = "slap.ext.version_incrementing_rule:patch"
+premajor = "slap.ext.version_incrementing_rule:premajor"
+preminor = "slap.ext.version_incrementing_rule:preminor"
+prepatch = "slap.ext.version_incrementing_rule:prepatch"
+prerelease = "slap.ext.version_incrementing_rule:prerelease"
+
+[project.entry-points."slap.plugins.project"]
+flit = "slap.ext.project_handlers.flit:FlitProjectHandler"
+poetry = "slap.ext.project_handlers.poetry:PoetryProjectHandler"
+setuptools = "slap.ext.project_handlers.setuptools:SetuptoolsProjectHandler"
+uv = "slap.ext.project_handlers.uv:UvProjectHandler"
+
+[project.entry-points."slap.plugins.repository"]
+default = "slap.ext.repository_handlers.default:DefaultRepositoryHandler"
+
+[project.entry-points."slap.plugins.repository_host"]
+github = "slap.ext.repository_hosts.github:GithubRepositoryHost"
+
+[project.scripts]
+slap = "slap.__main__:main"
+
+[tool.slap]
+typed = true
+
+[tool.slap.test]
+check = "slap check"
+mypy = "dmypy run src"
+pytest = "pytest tests/ -vv"
+ruff-format = "ruff format --check"
+ruff-lint = "ruff check"
+
+[tool.slap.run]
+"docs:build" = "cd docs && uv run -- bash -xc 'mksync -i docs/changelog.md && mkdocs build'"
+"docs:dev" = "cd docs && uv run -- bash -xc 'mksync -i docs/changelog.md && mkdocs serve'"
+fmt = "ruff format ."
+
+[tool.mypy]
+pretty = true
+warn_redundant_casts = true
+exclude = "src/slap/templates/.*"
+namespace_packages = true
+show_error_codes = true
+show_error_context = true
+warn_no_return = true
+warn_unreachable = true
+
+[tool.ruff]
+line-length = 120
+
+[tool.uv]
+dev-dependencies = [
+    "mypy<2.0.0,>=1.8.0",
+    "pytest<9.0.0,>=8.0.0",
+    "ruff>=0.8.5",
+    "types-beautifulsoup4<5.0.0,>=4.10.0",
+    "types-pygments<3.0.0,>=2.9.16",
+    "types-PyYAML<7.0.0,>=6.0.3",
+    "types-requests<3.0.0,>=2.27.7",
+    "types-termcolor<2.0.0,>=1.1.3",
+]

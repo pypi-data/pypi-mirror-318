@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: slap-cli
+Version: 1.15.0
+Summary: Slap is a command-line utility for developing Python applications.
+Author-Email: Niklas Rosenstein <rosensteinniklas@gmail.com>
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3.10
+Project-URL: Documentation, https://niklasrosenstein.github.io/slap/
+Project-URL: Homepage, https://github.com/NiklasRosenstein/slap
+Project-URL: Repository, https://github.com/NiklasRosenstein/slap.git
+Requires-Python: <4,>=3.10
+Requires-Dist: beautifulsoup4<5.0.0,>=4.10.0
+Requires-Dist: cleo>=1.0.0a4
+Requires-Dist: databind<5.0.0,>=4.4.0
+Requires-Dist: flit<4.0.0,>=3.6.0
+Requires-Dist: poetry-core<1.10,>=1.9
+Requires-Dist: ptyprocess<1.0.0,>=0.7.0
+Requires-Dist: pygments<3.0.0,>=2.11.2
+Requires-Dist: PyYAML>=6.0
+Requires-Dist: requests<3.0.0,>=2.27.1
+Requires-Dist: setuptools>=39.1.0
+Requires-Dist: tomli<3.0.0,>=2.0.0
+Requires-Dist: tomlkit<1.0.0,>=0.12.1
+Requires-Dist: twine<6.0.0,>=5.0.0
+Requires-Dist: tqdm<5.0.0,>=4.64.0
+Requires-Dist: build<2.0.0,>=1.0.0
+Requires-Dist: nr-python-environment<1.0.0,>=0.1.4
+Requires-Dist: gitpython<4.0.0,>=3.1.31
+Requires-Dist: nr-stream<2.0.0,>=1.1.5
+Requires-Dist: uv<1.0.0,>=0.2.0
+
