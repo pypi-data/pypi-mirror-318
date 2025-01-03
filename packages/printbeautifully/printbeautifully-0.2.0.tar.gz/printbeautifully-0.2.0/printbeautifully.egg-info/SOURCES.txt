@@ -1,0 +1,15 @@
+README.md
+setup.py
+beautifulprint/__init__.py
+beautifulprint/bprint.py
+beautifulprint/colors.py
+beautifulprint/kvstorage.py
+beautifulprint/old.py
+beautifulprint/packing.py
+beautifulprint/theme.py
+beautifulprint/themes.py
+beautifulprint/util.py
+printbeautifully.egg-info/PKG-INFO
+printbeautifully.egg-info/SOURCES.txt
+printbeautifully.egg-info/dependency_links.txt
+printbeautifully.egg-info/top_level.txt
