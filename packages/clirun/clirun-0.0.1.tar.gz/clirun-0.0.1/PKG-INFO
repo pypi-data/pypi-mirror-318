@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: clirun
+Version: 0.0.1
+Summary: Simple, run command with Python
+Author: Mingyi Zhang
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+# Clirun
+
+[![PyPI](https://img.shields.io/pypi/v/cli)](https://pypi.org/project/cli/)
+
+
+"Simple, run command with Python"
+
+## Installation
+
+```shell
+pip install clirun
+```
+

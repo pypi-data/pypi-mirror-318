@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "clirun"
+version = "0.0.1"
+description = "Simple, run command with Python"
+authors = ["Mingyi Zhang"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+# Optional dependencies for different providers
+
+
+[tool.poetry.group.dev.dependencies]
+python-dotenv = "^1.0.1"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.2.2"
+pytest-cov = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths="tests"
+markers = [
+    "integration: marks tests as integration tests that interact with external services",
+]
