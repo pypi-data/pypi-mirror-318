@@ -1,0 +1,52 @@
+[project]
+authors = [
+    {name = "tadashi-aikawa", email = "syou.maman@gmail.com"},
+]
+license = {text = "MIT"}
+requires-python = "<4.0,>=3.9"
+dependencies = [
+    "pyyaml<7.0,>=6.0",
+]
+name = "owlmixin"
+version = "7.0.0"
+description = "Mixin which converts ``data class instance`` and others each other more simple."
+readme = "README.md"
+keywords = [
+    "dict",
+    "json",
+    "yaml",
+    "parser",
+    "mixin",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+homepage = "https://github.com/tadashi-aikawa/owlmixin"
+repository = "https://github.com/tadashi-aikawa/owlmixin"
+documentation = "https://tadashi-aikawa.github.io/owlmixin/"
+
+[dependency-groups]
+dev = [
+    "ruff<1.0.0,>=0.8.5",
+    "sphinx<8.0,>=7",
+    "pytest<8.0,>=7.2",
+    "mock<4.0,>=3.0",
+    "pytest-cov<5.0,>=4.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff.lint]
+# import順を最適化
+extend-select = ["I"]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
