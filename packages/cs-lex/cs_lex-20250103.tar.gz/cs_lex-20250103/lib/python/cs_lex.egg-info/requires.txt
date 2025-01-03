@@ -1,0 +1,10 @@
+cs.dateutils>=20230210
+cs.deco>=20250103
+cs.gimmicks>=20240316
+cs.obj>=20250103
+cs.pfx>=20241208
+cs.py.func>=20240630
+cs.seq>=20200914
+icontract
+python-dateutil
+typeguard
