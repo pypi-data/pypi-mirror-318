@@ -1,0 +1,2 @@
+[console_scripts]
+pykill = pykill.__main__:main
