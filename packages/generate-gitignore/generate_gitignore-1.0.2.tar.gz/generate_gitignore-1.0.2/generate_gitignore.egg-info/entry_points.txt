@@ -1,0 +1,2 @@
+[console_scripts]
+generate-gitignore = generate_gitignore.main:main
