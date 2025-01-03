@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+needlr.egg-info/PKG-INFO
+needlr.egg-info/SOURCES.txt
+needlr.egg-info/dependency_links.txt
+needlr.egg-info/requires.txt
+needlr.egg-info/top_level.txt
