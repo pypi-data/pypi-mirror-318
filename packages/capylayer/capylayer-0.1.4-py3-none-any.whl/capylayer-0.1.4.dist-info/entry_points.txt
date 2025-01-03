@@ -1,0 +1,3 @@
+[console_scripts]
+capylayer=capylayer.__main__:main
+
