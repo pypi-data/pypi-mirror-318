@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Errors &#8212; owlmixin  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pyramid.css?v=6f14c262" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="OwlEnum" href="owlenum.html" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="../_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head><body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="owlenum.html" title="OwlEnum"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">owlmixin  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Errors</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="errors">
+<h1>Errors<a class="headerlink" href="#errors" title="Permalink to this heading">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Usage on each methods are valid on the premise that the following classes is defined in advance.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># coding: utf-8</span>
+
+<span class="kn">from</span> <span class="nn">owlmixin</span> <span class="kn">import</span> <span class="n">OwlMixin</span><span class="p">,</span> <span class="n">TOption</span>
+<span class="kn">from</span> <span class="nn">owlmixin.owlcollections</span> <span class="kn">import</span> <span class="n">TDict</span><span class="p">,</span> <span class="n">TList</span>
+<span class="kn">from</span> <span class="nn">owlmixin.owlenum</span> <span class="kn">import</span> <span class="n">OwlEnum</span><span class="p">,</span> <span class="n">OwlObjectEnum</span>
+
+
+<span class="k">class</span> <span class="nc">Animal</span><span class="p">(</span><span class="n">OwlObjectEnum</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+    <span class="n">DOG</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;dog&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;cry&quot;</span><span class="p">:</span> <span class="s2">&quot;bow-wow&quot;</span><span class="p">})</span>
+    <span class="n">CAT</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;cry&quot;</span><span class="p">:</span> <span class="s2">&quot;mewing&quot;</span><span class="p">})</span>
+
+    <span class="k">def</span> <span class="nf">cry</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">object</span><span class="p">[</span><span class="s2">&quot;cry&quot;</span><span class="p">]</span>
+
+
+<span class="k">class</span> <span class="nc">Color</span><span class="p">(</span><span class="n">OwlEnum</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+    <span class="n">RED</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span>
+    <span class="n">GREEN</span> <span class="o">=</span> <span class="s2">&quot;green&quot;</span>
+    <span class="n">BLUE</span> <span class="o">=</span> <span class="s2">&quot;blue&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Food</span><span class="p">(</span><span class="n">OwlMixin</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">names_by_lang</span><span class="p">:</span> <span class="n">TOption</span><span class="p">[</span><span class="n">TDict</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span>
+
+
+<span class="k">class</span> <span class="nc">Human</span><span class="p">(</span><span class="n">OwlMixin</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">favorites</span><span class="p">:</span> <span class="n">TList</span><span class="p">[</span><span class="n">Food</span><span class="p">]</span>
+
+
+<span class="k">class</span> <span class="nc">Machine</span><span class="p">(</span><span class="n">OwlMixin</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+
+
+<span class="k">class</span> <span class="nc">Japanese</span><span class="p">(</span><span class="n">OwlMixin</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">language</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;japanese&quot;</span>
+</pre></div>
+</div>
+</div>
+<section id="invalidtypeerror">
+<h2>InvalidTypeError<a class="headerlink" href="#invalidtypeerror" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="owlmixin.errors.InvalidTypeError">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">owlmixin.errors.</span></span><span class="sig-name descname"><span class="pre">InvalidTypeError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expected</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">actual</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/owlmixin/errors.html#InvalidTypeError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#owlmixin.errors.InvalidTypeError" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> (<em>str</em>) – Error title</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – Error description</p></li>
+<li><p><strong>cls</strong> (<em>str</em>) – Class name</p></li>
+<li><p><strong>prop</strong> (<em>str</em>) – Property name</p></li>
+<li><p><strong>value</strong> (<em>Any</em>) – Property value</p></li>
+<li><p><strong>expected</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – Expected types</p></li>
+<li><p><strong>actual</strong> (<em>str</em>) – Actual type</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="owlmixin.errors.InvalidTypeError.add_note">
+<span class="sig-name descname"><span class="pre">add_note</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#owlmixin.errors.InvalidTypeError.add_note" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.add_note(note) –
+add a note to the exception</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="owlmixin.errors.InvalidTypeError.with_traceback">
+<span class="sig-name descname"><span class="pre">with_traceback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#owlmixin.errors.InvalidTypeError.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="unknownpropertieserror">
+<h2>UnknownPropertiesError<a class="headerlink" href="#unknownpropertieserror" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="owlmixin.errors.UnknownPropertiesError">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">owlmixin.errors.</span></span><span class="sig-name descname"><span class="pre">UnknownPropertiesError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">props</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/owlmixin/errors.html#UnknownPropertiesError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#owlmixin.errors.UnknownPropertiesError" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> (<em>str</em>) – Error title</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – Error description</p></li>
+<li><p><strong>cls</strong> (<em>str</em>) – Class name</p></li>
+<li><p><strong>props</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – Unknown property names</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="owlmixin.errors.UnknownPropertiesError.add_note">
+<span class="sig-name descname"><span class="pre">add_note</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#owlmixin.errors.UnknownPropertiesError.add_note" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.add_note(note) –
+add a note to the exception</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="owlmixin.errors.UnknownPropertiesError.with_traceback">
+<span class="sig-name descname"><span class="pre">with_traceback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#owlmixin.errors.UnknownPropertiesError.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="requirederror">
+<h2>RequiredError<a class="headerlink" href="#requirederror" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="owlmixin.errors.RequiredError">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">owlmixin.errors.</span></span><span class="sig-name descname"><span class="pre">RequiredError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/owlmixin/errors.html#RequiredError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#owlmixin.errors.RequiredError" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> (<em>str</em>) – Error title</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – Error description</p></li>
+<li><p><strong>cls</strong> (<em>str</em>) – Class name</p></li>
+<li><p><strong>prop</strong> (<em>str</em>) – Property name</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – Property type</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="owlmixin.errors.RequiredError.add_note">
+<span class="sig-name descname"><span class="pre">add_note</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#owlmixin.errors.RequiredError.add_note" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.add_note(note) –
+add a note to the exception</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="owlmixin.errors.RequiredError.with_traceback">
+<span class="sig-name descname"><span class="pre">with_traceback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#owlmixin.errors.RequiredError.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Errors</a><ul>
+<li><a class="reference internal" href="#invalidtypeerror">InvalidTypeError</a><ul>
+<li><a class="reference internal" href="#owlmixin.errors.InvalidTypeError"><code class="docutils literal notranslate"><span class="pre">InvalidTypeError</span></code></a><ul>
+<li><a class="reference internal" href="#owlmixin.errors.InvalidTypeError.add_note"><code class="docutils literal notranslate"><span class="pre">InvalidTypeError.add_note()</span></code></a></li>
+<li><a class="reference internal" href="#owlmixin.errors.InvalidTypeError.with_traceback"><code class="docutils literal notranslate"><span class="pre">InvalidTypeError.with_traceback()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#unknownpropertieserror">UnknownPropertiesError</a><ul>
+<li><a class="reference internal" href="#owlmixin.errors.UnknownPropertiesError"><code class="docutils literal notranslate"><span class="pre">UnknownPropertiesError</span></code></a><ul>
+<li><a class="reference internal" href="#owlmixin.errors.UnknownPropertiesError.add_note"><code class="docutils literal notranslate"><span class="pre">UnknownPropertiesError.add_note()</span></code></a></li>
+<li><a class="reference internal" href="#owlmixin.errors.UnknownPropertiesError.with_traceback"><code class="docutils literal notranslate"><span class="pre">UnknownPropertiesError.with_traceback()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#requirederror">RequiredError</a><ul>
+<li><a class="reference internal" href="#owlmixin.errors.RequiredError"><code class="docutils literal notranslate"><span class="pre">RequiredError</span></code></a><ul>
+<li><a class="reference internal" href="#owlmixin.errors.RequiredError.add_note"><code class="docutils literal notranslate"><span class="pre">RequiredError.add_note()</span></code></a></li>
+<li><a class="reference internal" href="#owlmixin.errors.RequiredError.with_traceback"><code class="docutils literal notranslate"><span class="pre">RequiredError.with_traceback()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="owlenum.html"
+                          title="previous chapter">OwlEnum</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/errors.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="owlenum.html" title="OwlEnum"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">owlmixin  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Errors</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2019, tadashi-aikawa.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+    </div>
+  </body>
+</html>
