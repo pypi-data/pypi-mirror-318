@@ -1,0 +1,9 @@
+polars_mssql/__init__.py,sha256=rVx2Gv7IRfEshmYjYN9TWP9P40SQqlpENtf75Vvt4-k,346
+polars_mssql/config.py,sha256=9xmw8i4eC8PnI4HKDskWeZOUTVBH5EQhktUYmyCGYX0,981
+polars_mssql/connection.py,sha256=ptwNI7OqPRC6hhPnVQF_2B7bTcDBSHgBmCbiVcXkcA4,12077
+polars_mssql/connection_string.py,sha256=SZJcWdPGUk6IUXo9-X4g3HrIpdMyk5hOYx4xcJlQ7Vg,579
+polars_mssql-0.3.1.dist-info/LICENSE,sha256=y2euJILSjgmc5Xu1DLEhD89QasDYzt9KrbghayC8lBo,1091
+polars_mssql-0.3.1.dist-info/METADATA,sha256=HGIc0Td-RWlujYR0LoE6veQKPeV9UYrLegykTydqCXY,10131
+polars_mssql-0.3.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+polars_mssql-0.3.1.dist-info/top_level.txt,sha256=h69vospZNDGqamiAGzk5iWpY2gIU9aY5W9d1MfjcLUw,13
+polars_mssql-0.3.1.dist-info/RECORD,,
