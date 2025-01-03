@@ -1,0 +1,78 @@
+[project]
+name = "cs-semantics"
+description = "Some basic functions and exceptions for various semantics shared by modules."
+authors = [
+    { name = "Cameron Simpson", email = "cs@cskk.id.au" },
+]
+keywords = [
+    "python3",
+]
+dependencies = [
+    "cs.deco>=20241206",
+]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+]
+version = "20250103"
+
+[project.license]
+text = "GNU General Public License v3 or later (GPLv3+)"
+
+[project.urls]
+"Monorepo Hg/Mercurial Mirror" = "https://hg.sr.ht/~cameron-simpson/css"
+"Monorepo Git Mirror" = "https://github.com/cameron-simpson/css"
+"MonoRepo Commits" = "https://bitbucket.org/cameron_simpson/css/commits/branch/main"
+Source = "https://github.com/cameron-simpson/css/blob/main/lib/python/cs/semantics.py"
+
+[project.readme]
+text = """
+Some basic functions and exceptions for various semantics shared by modules.
+
+*Latest release 20250103*:
+Initial PyPI release: ClosedError and @not_closed.
+
+## <a name=\"ClosedError\"></a>Class `ClosedError(builtins.Exception)`
+
+Exception for operations which are invalid when something is closed.
+
+## <a name=\"not_closed\"></a>`not_closed(*da, **dkw)`
+
+A decorator to wrap methods of objects with a `.closed` property
+which should raise when `self.closed`.
+This raised `ClosedError` if the object is closed.
+
+Excample:
+
+    @not_closed
+    def doit(self):
+        ... proceed know we were not closed ...
+
+# Release Log
+
+
+
+*Release 20250103*:
+Initial PyPI release: ClosedError and @not_closed."""
+content-type = "text/markdown"
+
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+    "setuptools >= 61.2",
+    "trove-classifiers",
+    "wheel",
+]
+
+[tool.setuptools]
+py-modules = [
+    "cs.semantics",
+]
+
+[tool.setuptools.package-dir]
+"" = "lib/python"
