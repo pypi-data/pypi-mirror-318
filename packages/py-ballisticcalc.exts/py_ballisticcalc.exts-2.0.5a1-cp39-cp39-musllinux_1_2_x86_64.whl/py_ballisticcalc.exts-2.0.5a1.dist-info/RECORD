@@ -1,0 +1,9 @@
+py_ballisticcalc_exts/trajectory_calc.pyi,sha256=GNphqlHcnOaEk1flmt_IDHzqsgM5iDd_I8_zZUh-GDY,2546
+py_ballisticcalc_exts/trajectory_calc.cpython-39-x86_64-linux-gnu.so,sha256=er1Snk6788YKzfyrHMVfRRKhXh-KXU3FeK5zJ2ps_ng,991192
+py_ballisticcalc_exts/trajectory_calc.c,sha256=gxSom3xTcrL6NGkUvzuCuE4PUSNeBIxar0d9OknBGI4,818178
+py_ballisticcalc_exts/__init__.py,sha256=7bfW0hngnvZc0T22MTLaKv5eWqs6_7yvbxGQn4tRy60,260
+py_ballisticcalc.exts-2.0.5a1.dist-info/top_level.txt,sha256=PUuca7fmBjPxHDzUzWYfb2pi6j54yVqvF0hsu6lJPZY,22
+py_ballisticcalc.exts-2.0.5a1.dist-info/RECORD,,
+py_ballisticcalc.exts-2.0.5a1.dist-info/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+py_ballisticcalc.exts-2.0.5a1.dist-info/METADATA,sha256=ll46_4fCe5lea9U2eSf2ndy6nh4Ak8V0S9Q-ynN5FRc,19158
+py_ballisticcalc.exts-2.0.5a1.dist-info/WHEEL,sha256=dLfYYE4Z0SdCP38w6DLJJIjF3b49-RaiVJ7jY48RSJg,110
