@@ -1,0 +1,10 @@
+README.md
+setup.py
+py_socialite/__init__.py
+py_socialite/exceptions.py
+py_socialite/socialite.py
+py_socialite.egg-info/PKG-INFO
+py_socialite.egg-info/SOURCES.txt
+py_socialite.egg-info/dependency_links.txt
+py_socialite.egg-info/requires.txt
+py_socialite.egg-info/top_level.txt
