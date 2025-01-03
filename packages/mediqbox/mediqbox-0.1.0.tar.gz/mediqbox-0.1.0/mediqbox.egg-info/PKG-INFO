@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: mediqbox
+Version: 0.1.0
+Summary: A toolbox for smart medical information processing and application development.
+Home-page: https://github.com/SmartMediQ/mediqbox
+Author: Smartmediq
+Author-email: dev@smartmediq.com
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiofiles
+Requires-Dist: aiohttp
+Requires-Dist: biopython
+Requires-Dist: pydantic[email]
+
+# mediqbox
+
+A toolbox for smart medical information processing and application development.
+
+Currently, the toolbox includes the following tools:
+
+* `download`: Download files
+* `pubmed`: Query PubMed
+* `sendmail`: Send email

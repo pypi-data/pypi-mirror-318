@@ -1,0 +1,4 @@
+aiofiles
+aiohttp
+biopython
+pydantic[email]
