@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: ffmpeg_installer
+Version: 0.1.1
+Summary: A Python package to install and use ffmpeg
+Author: Vinay Kumar K V
+Author-email: vinaykumar.kv@outlook.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+
