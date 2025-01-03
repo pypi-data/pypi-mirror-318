@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/ai_character/__init__.py
+src/ai_character/ai_character.py
+src/ai_character/audio_processor.py
+src/ai_character/model_handlers.py
+src/ai_character.egg-info/PKG-INFO
+src/ai_character.egg-info/SOURCES.txt
+src/ai_character.egg-info/dependency_links.txt
+src/ai_character.egg-info/requires.txt
+src/ai_character.egg-info/top_level.txt
+tests/test_ai_character.py
+tests/test_audio_processor.py
+tests/test_model_handlers.py
