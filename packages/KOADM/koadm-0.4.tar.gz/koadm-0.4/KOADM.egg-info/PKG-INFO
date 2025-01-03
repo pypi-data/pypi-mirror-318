@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: KOADM
+Version: 0.4
+Summary: Knee osteoarthritis diagnosis model
+Author: QWB
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: xgboost
+Requires-Dist: lightgbm
+Requires-Dist: keras
+Requires-Dist: tensorflow
+
+This is a Python package for the diagnosis of knee osteoarthritis using blood indicators
