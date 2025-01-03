@@ -1,0 +1,17 @@
+svnm/__init__.py,sha256=ybHv9F54RAeSi2BpuzVN2GSXRbU8TIX1ns64G6AGfmI,446
+svnm/__main__.py,sha256=qIMnfXNM7yXvO2nw95Jt7LggbF9EWJBo-wVoSzuuRBs,71
+svnm/basemodels.py,sha256=C3iXs79H1n7oXYcw-UDo3Xp21mGZ9R39TZY8A-MZRVY,7426
+svnm/cifar10.py,sha256=VaUw1kUCw6a_KEEpJlgYcyRV9UUwHO5nXnEM6KTaUD0,1952
+svnm/config.py,sha256=y0re79KEL87A6ZnIOaAY_inHjL6zZKWuJuHMMLWhfYA,961
+svnm/facedetection.py,sha256=duAFu8zWDaTzfhDpNNY6TDr1VKp0iujFOuljzjrwBjI,232
+svnm/facerecognition.py,sha256=jv93q7RFNBKat5MLy44nRN86IUm63bxrEFew3VGjMi8,4438
+svnm/genderdetection.py,sha256=Y_xA4aeZcx0b_giBYw-XDNg_CVd5Fu7r_W7_80Rk9Gw,183
+svnm/models.py,sha256=mztmTdpkEx_y_LEWyYpoD1ycYo89K76rqNLAj9EBxtc,128
+svnm/preprocessing.py,sha256=v-HQ1TIjstSlWqKZE2TjWdnUFeMPZqX7X9uPkyLUmCc,684
+svnm/projects.py,sha256=t_u3IzwsF7zFh3GAWT8rQJYMh2AHNxpRenBNrO1UXHA,48
+svnm/utils.py,sha256=I3P6b4x87fPhXbQTp8NoQukei89L0x0uahNWPyLiEpk,1047
+svnm/welcome.py,sha256=D-wzmm_w5QDOZyXDz64KMzPU1UCflRkUIaXSBxmgFr8,50
+svnm-0.1.6.5.dist-info/METADATA,sha256=7seq0-QtdQk2KArP0tR_a8Ptaxnf1d0B9bs3KF8yv28,854
+svnm-0.1.6.5.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+svnm-0.1.6.5.dist-info/top_level.txt,sha256=OMYkMOnvY7-CZ-IPEcuB-2YfamEGlSqKqPplO74v3sc,5
+svnm-0.1.6.5.dist-info/RECORD,,
