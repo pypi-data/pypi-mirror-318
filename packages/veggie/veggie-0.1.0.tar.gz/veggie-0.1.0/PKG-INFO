@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: veggie
+Version: 0.1.0
+Summary: A dead-simple Celery monitor and admin dashboard
+Author-email: Theodore Tsitsimis <th.tsitsimis@gmail.com>
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: dash>=2.5.1
+Requires-Dist: dash-extensions>=1.0.19
+Requires-Dist: dash-mantine-components>=0.15.1
+Requires-Dist: dash-iconify
+Requires-Dist: loguru
+Requires-Dist: celery[redis]
+Requires-Dist: humanize
+
+# Development
+```bash
+# Setup virtual environment
+python -m venv venv
+.\venv\Scripts\activate # On Linux: . venv/bin/activate
+pip install -r requirements.txt
+pip install -r requirements-dev.txt
+pre-commit install
+mypy --install-types
+```
+
+# Roadmap
+- [X] Click on events table to view details
+- [ ] Update event status periodically
+- [ ] README with usage and nice intro
+- [X] Requirements versions
+- [ ] Pypi packaging: veggie
+- [X] Parameterize ports, etc.
+- [ ] Reddit post
+- [ ] Add tests
