@@ -1,0 +1,5 @@
+[cloudcoil_kinds]
+default = cloudcoil.kinds
+
+[pytest11]
+cloudcoil = cloudcoil._testing.plugin
