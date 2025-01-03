@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: olab_open_api
+Version: 0.0.4
+Summary: call openapi directly without using complete sdk
+Home-page: 
+Author: nik.opinionlabs
+Author-email: nik_opinionlabs <nik@opinionlabs.xyz>
