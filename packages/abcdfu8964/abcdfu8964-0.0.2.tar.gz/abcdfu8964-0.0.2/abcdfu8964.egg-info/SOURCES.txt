@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+abcdfu8964/data.txt
+abcdfu8964.egg-info/PKG-INFO
+abcdfu8964.egg-info/SOURCES.txt
+abcdfu8964.egg-info/dependency_links.txt
+abcdfu8964.egg-info/entry_points.txt
+abcdfu8964.egg-info/top_level.txt
