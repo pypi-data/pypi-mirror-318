@@ -1,0 +1,12 @@
+spankbang_api/__init__.py,sha256=2bzINRRaTpv-frh9F27y8Sq_QUU0ZapBt0TSzejjVXE,175
+spankbang_api/spankbang_api.py,sha256=-M_6vJ7rdNXPFuO_YgtkObmG5go_VHsQhh8bCUTGYbI,7372
+spankbang_api/modules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spankbang_api/modules/consts.py,sha256=bpkCnc3xLCGIA-zmxKFEKd4wXwutF5UMYEVmRn5gUBw,599
+spankbang_api/modules/errors.py,sha256=PnC8jqONVBe_JmYE5q7vszukhlSbDkxlA8hvN6odk4g,134
+spankbang_api/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spankbang_api/tests/test_video.py,sha256=UQRPUbJGBKkwTklbhPS6AwlJAf1iPAOES5YrrXJv1jE,1558
+spankbang_api-1.1.dist-info/LICENSE,sha256=ohYRaFO0ISwaiv3fifo3YtRbSdlh1DtueZcn7DlUjFg,7369
+spankbang_api-1.1.dist-info/METADATA,sha256=SOeiaOaN9D9KTu-3lT0SL7ar4rcSLbXFvlPRb3Tgu2o,2807
+spankbang_api-1.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+spankbang_api-1.1.dist-info/top_level.txt,sha256=94kF1aPYmkxCVWYV6aewkYD5-bvfBiLtqx7ZHcVMt0I,14
+spankbang_api-1.1.dist-info/RECORD,,
