@@ -1,0 +1,6 @@
+airflow_providers_rdb_to_rdb/PostgresToTiDBOperator.py,sha256=JVJKU5gHbya_i9qcz5jXO7MRdq24OvR9WEtk-lFNEm4,8114
+airflow_providers_rdb_to_rdb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+airflow_providers_rdb_to_rdb-0.1.6.dist-info/METADATA,sha256=2LY9yCzky_1Y5JuBa77eHedJ_EHdmrsqgjqIz_mflNM,338
+airflow_providers_rdb_to_rdb-0.1.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+airflow_providers_rdb_to_rdb-0.1.6.dist-info/top_level.txt,sha256=LFYUgq_MNUILdpm8zWiEbVxq86eSvMtfEkm7lcZ74Ak,29
+airflow_providers_rdb_to_rdb-0.1.6.dist-info/RECORD,,
