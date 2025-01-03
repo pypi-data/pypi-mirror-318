@@ -1,0 +1,99 @@
+Metadata-Version: 2.1
+Name: aiogo
+Version: 0.1.2
+Summary: Tiny helper for running your async code
+Home-page: https://github.com/zzzzlzzzz/aiorun
+License: MIT
+Author: tony9152273
+Author-email: 9152273+zzzzlzzzz@users.noreply.github.com
+Requires-Python: >=3.10,<4.0
+Classifier: Framework :: AsyncIO
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Provides-Extra: ci
+Requires-Dist: mypy (>=1.14.1,<2.0.0) ; extra == "ci"
+Requires-Dist: pre-commit (>=4.0.1,<5.0.0) ; extra == "ci"
+Requires-Dist: pytest (>=8.3.4,<9.0.0) ; extra == "ci"
+Requires-Dist: pytest-xdist (>=3.6.1,<4.0.0) ; extra == "ci"
+Requires-Dist: ruff (>=0.8.5,<0.9.0) ; extra == "ci"
+Project-URL: Repository, https://github.com/zzzzlzzzz/aiorun
+Description-Content-Type: text/markdown
+
+# 😈 What the heck?
+aioGo is the tiny helper library that doing two simple thinks: 
+- run your async code
+
+and
+- correct terminate your async code
+
+Default python asyncio have troubles with this: when you hit Ctrl+C asyncio just cancel all your coroutines.
+
+This can lead to many race conditions and hanging your application at exit point.
+
+# 📘 How to use?
+
+Install from pypi:
+
+```shell
+pip install aiogo
+```
+
+or, if you prefer poetry:
+
+```shell
+poetry add aiogo
+```
+
+And just:
+
+```python
+from asyncio import Future
+from aiogo import go
+
+async def main(termination: Future[bool]) -> None:
+    await termination
+
+if __name__ == "__main__":
+    go(main)
+```
+
+That's all. You just wait while termination future was resolved (when your application got SIGINT or SIGTERM).
+
+When you will be use this library in real world, just: 
+```python
+import asyncio
+
+async def main(termination: asyncio.Future[bool]) -> None:
+    done, _ = asyncio.wait((termination, your_awesome_read_task), return_when=asyncio.FIRST_COMPLETED)
+```
+and check done set.
+
+## I want custom event loop (uvloop)!
+That I have! Again, just:
+
+```python
+import uvloop
+from aiogo import go
+
+go(main, event_loop_factory=uvloop.new_event_loop)
+```
+
+## I want forced exit!
+If you can't write correct exit behaviour, well... Do that:
+
+```python
+from aiogo import go
+go(main, exit_timeout=10)
+```
+And all your coroutines will be got CancelledError, as doing old good asyncio.run.
+
+# 🌎 Hot to contribute?
+- Make a repository fork
+- Apply your changes (don't forget install pre-commit before making commit)
+- Make a pull request
+
