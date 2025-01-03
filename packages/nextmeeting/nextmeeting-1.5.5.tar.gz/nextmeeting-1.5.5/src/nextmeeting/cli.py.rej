@@ -1,0 +1,32 @@
+--- nextmeeting/cli.py
++++ nextmeeting/cli.py
+@@ -61,7 +61,7 @@ REG_TSV = re.compile(
+ DEFAULT_CALENDAR = os.environ.get("GCALCLI_DEFAULT_CALENDAR", "Work")
+ GCALCLI_CMDLINE = f"gcalcli --nocolor --calendar={DEFAULT_CALENDAR} agenda today --nodeclined  --details=end --details=url --tsv "
+ TITLE_ELIPSIS_LENGTH = 50
+-NOTIFY_MIN_BEFORE_EVENTS = 5
++NOTIFY_MIN_BEFORE_EVENTS = 10
+ NOTIFY_MIN_COLOR = "#FF0000"  # red
+ CACHE_DIR = pathlib.Path(os.path.expanduser("~/.cache/nextmeeting"))
+ NOTIFY_PROGRAM: str = shutil.which("notify-send") or ""
+@@ -142,8 +142,8 @@ def process_file(fp) -> list[re.Match]:
+ 
+ def gcalcli_output(args: argparse.Namespace) -> list[re.Match]:
+     # TODO: do unittests with this
+-    # with open("/tmp/debug") as f:
+-    #     return process_file(f)
++    with open("/tmp/debug") as f:
++        return process_file(f)
+ 
+     with subprocess.Popen(
+         args.gcalcli_cmdline, shell=True, stdout=subprocess.PIPE
+@@ -242,7 +242,8 @@ def notify(
+     elif args.notify_expiry < 0:
+         milliseconds = NOTIFY_MIN_BEFORE_EVENTS * 60 * 1000
+         other_args += ["-t", str(milliseconds)]
+-    subprocess.call(
++    # subprocess.call(
++    print(
+         [
+             NOTIFY_PROGRAM,
+             "-i",

@@ -1,0 +1,22 @@
+[project]
+name = "nextmeeting"
+version = "1.5.5"
+description = "Show your nextmeeting in your poly/waybar with gcalcli"
+readme = "README.md"
+authors = [{ name = "Chmouel Boudjnah", email = "chmouel@chmouel.com" }]
+requires-python = ">=3.9"
+license = "Apache-2.0"
+dependencies = ["python-dateutil>=2.9.0.post0"]
+classifiers = ["License :: OSI Approved :: Apache Software License"]
+keywords = ["calendar", "cli"]
+
+[project.scripts]
+nextmeeting = "nextmeeting.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff.lint]
+ignore = ["E501", "PLR0912"]
+select = ["E", "F", "D4", "PT", "PL"]
