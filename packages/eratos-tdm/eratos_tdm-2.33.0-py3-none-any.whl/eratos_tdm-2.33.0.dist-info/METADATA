@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: eratos-tdm
+Version: 2.33.0
+Summary: THREDDS Data Manager Client
+Project-URL: Homepage, https://github.com/eratosio/tdm-client-python
+Author-email: Mac Coombe <mac.coombe@csiro.au>, Eratos <support@eratos.com>
+Maintainer-email: Eratos <support@eratos.com>
+License-File: LICENSE
+Keywords: THREDDS
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Requires-Python: >=3.0
+Requires-Dist: requests
+Provides-Extra: large-files
+Requires-Dist: requests-toolbelt; extra == 'large-files'
+Description-Content-Type: text/markdown
+
+# THREDDS Data Manager Client
+
+This software is part of the [Eratos](eratos.com) platform.
+
+```sh
+pip install eratos-tdm
+```
