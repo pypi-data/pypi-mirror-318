@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: mtmaisdk
+Version: 0.5.26
+Summary: A web scraping library based on LangChain which uses LLM and direct graph logic to create scraping pipelines.
+Author-email: Marco Vinciguerra <mvincig11@gmail.com>
+Requires-Dist: aiohttp-retry>=2.8.3
+Requires-Dist: aiohttp>=3.10.5
+Requires-Dist: aiostream>=0.5.2
+Requires-Dist: cel-python>=0.1.5
+Requires-Dist: grpcio-tools>=1.68.1
+Requires-Dist: grpcio>=1.68.1
+Requires-Dist: langchain>=0.3.0
+Requires-Dist: loguru>=0.7.3
+Requires-Dist: nest-asyncio>=1.6.0
+Requires-Dist: opentelemetry-api>=1.28.0
+Requires-Dist: opentelemetry-distro>=0.49b0
+Requires-Dist: opentelemetry-exporter-otlp-proto-http>=1.28.0
+Requires-Dist: opentelemetry-exporter-otlp>=1.28.0
+Requires-Dist: opentelemetry-instrumentation>=0.49b0
+Requires-Dist: opentelemetry-sdk>=1.28.0
+Requires-Dist: prometheus-client>=0.21.1
+Requires-Dist: protobuf>=5.29.1
+Requires-Dist: python-dateutil>=2.9.0.post0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: pyyaml>=6.0.1
+Requires-Dist: tenacity>=8.4.1
