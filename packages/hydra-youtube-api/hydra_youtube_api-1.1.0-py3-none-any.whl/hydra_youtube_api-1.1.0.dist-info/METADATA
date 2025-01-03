@@ -1,0 +1,197 @@
+Metadata-Version: 2.1
+Name: hydra_youtube_api
+Version: 1.1.0
+Summary: Fast and simple API for YouTube and YouTube Music
+Home-page: https://github.com/Hydralerne/youtube-api
+Author: Hydra de lerne
+Author-email: hydra@onvo.me
+License: AGPL-3.0
+Keywords: youtube,music,api,metadata,downloader
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: aiohttp
+
+"""
+# YouTube & YouTube Music API
+
+A powerful, lightweight, and high-performance API for accessing YouTube and YouTube Music content, metadata, and streams. Designed for simplicity and flexibility, this library provides full access to YouTube sources, including videos, playlists, metadata, and more.
+"""
+
+# Features
+# - Fetch videos, playlists, and metadata from YouTube and YouTube Music.
+# - Retrieve lyrics, related tracks, and detailed metadata.
+
+from typing import Union, List, Dict, Any
+
+# Core Functions
+
+async def get_video_id(q: str, is_youtube: bool) -> Union[str, Dict[str, str]]:
+    """
+    Retrieves the YouTube video ID for a given song or title.
+
+    Parameters:
+    - q (str): The search query (e.g., song name or title).
+    - is_youtube (bool): If true, searches YouTube; otherwise, searches YouTube Music.
+
+    Returns:
+    - str | Dict: The video ID or an error object.
+    """
+    pass
+
+async def get_youtube_list(id: str) -> Union[Dict[str, Any], Dict[str, str]]:
+    """
+    Fetches metadata and tracks for a YouTube playlist.
+
+    Parameters:
+    - id (str): The ID of the YouTube playlist.
+
+    Returns:
+    - Dict: Playlist metadata and track list or an error object.
+    """
+    pass
+
+async def get_youtube_music_list(id: str) -> Union[Dict[str, Any], Dict[str, str]]:
+    """
+    Fetches metadata and tracks for a YouTube Music playlist.
+
+    Parameters:
+    - id (str): The ID of the YouTube Music playlist.
+
+    Returns:
+    - Dict: Playlist metadata and track list or an error object.
+    """
+    pass
+
+async def youtube_music_search(q: str, method: str = 'songs') -> Union[List[Any], Dict[str, str]]:
+    """
+    Searches YouTube Music for songs, artists, albums, or playlists.
+
+    Parameters:
+    - q (str): The search query.
+    - method (str): The search category (songs, artists, albums, etc.).
+
+    Returns:
+    - List | Dict: An array of search results or an error object.
+    """
+    pass
+
+async def get_related_and_lyrics(id: str) -> Union[Dict[str, Any], Dict[str, str]]:
+    """
+    Fetches related tracks, playlist queue, and lyrics for a given video ID.
+
+    Parameters:
+    - id (str): The YouTube video ID.
+
+    Returns:
+    - Dict: Related tracks, playlist queue, and lyrics data or an error object.
+    """
+    pass
+
+async def get_lyrics(id: str) -> Union[str, Dict[str, str]]:
+    """
+    Fetches lyrics for a specific video ID.
+
+    Parameters:
+    - id (str): The YouTube video ID.
+
+    Returns:
+    - str | Dict: Lyrics or an error object.
+    """
+    pass
+
+async def get_yt_music_related(id: str) -> Union[Any, Dict[str, str]]:
+    """
+    Fetches related tracks for YouTube Music based on the provided ID.
+
+    Parameters:
+    - id (str): The ID of the track.
+
+    Returns:
+    - Any | Dict: Related track details or an error object.
+    """
+    pass
+
+async def get_artist(id: str) -> Union[Any, Dict[str, str]]:
+    """
+    Fetches information about an artist.
+
+    Parameters:
+    - id (str): The artist ID.
+
+    Returns:
+    - Any | Dict: Artist details or an error object.
+    """
+    pass
+
+async def get_album(id: str) -> Union[Any, Dict[str, str]]:
+    """
+    Fetches information about an album.
+
+    Parameters:
+    - id (str): The album ID.
+
+    Returns:
+    - Any | Dict: Album details or an error object.
+    """
+    pass
+
+async def get_track_data(id: str) -> Union[Dict[str, Any], Dict[str, str]]:
+    """
+    Fetches detailed track data, including artist, album, duration, and poster information.
+
+    Parameters:
+    - id (str): The track ID.
+
+    Returns:
+    - Dict: Track metadata and details or an error object.
+    """
+    pass
+
+async def get_podcast(id: str) -> Union[Any, Dict[str, str]]:
+    """
+    Fetches details about a podcast.
+
+    Parameters:
+    - id (str): The podcast ID.
+
+    Returns:
+    - Any | Dict: Podcast details or an error object.
+    """
+    pass
+
+# CLI Script
+import argparse
+import asyncio
+from hydra_youtube_api import get_data, filter_formats, get_lyrics
+
+async def main():
+    parser = argparse.ArgumentParser(description="Fast and simple API for YouTube and YouTube Music.")
+    parser.add_argument("video_id", help="YouTube video ID")
+    parser.add_argument("--formats", action="store_true", help="List available formats")
+    parser.add_argument("--lyrics", action="store_true", help="Fetch lyrics for the video")
+    args = parser.parse_args()
+
+    video_id = args.video_id
+
+    if args.formats:
+        # Fetch and list available formats
+        data = await get_data(video_id, client_name="ios")
+        formats = filter_formats(data, filter_type="all")
+        for fmt in formats:
+            print(f"Format: {fmt.get('mimeType')}, Resolution: {fmt.get('width')}x{fmt.get('height')}, Bitrate: {fmt.get('bitrate')}")
+
+    if args.lyrics:
+        # Fetch and display lyrics
+        lyrics = await get_lyrics(video_id)
+        if lyrics:
+            print("Lyrics:")
+            print(lyrics)
+        else:
+            print("No lyrics found.")
+
+if __name__ == "__main__":
+    asyncio.run(main())
