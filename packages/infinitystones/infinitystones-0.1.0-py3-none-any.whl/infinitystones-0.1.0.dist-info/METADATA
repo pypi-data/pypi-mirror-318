@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: infinitystones
+Version: 0.1.0
+Summary: Python package for data operations using Infinity Stones
+Project-URL: Homepage, https://github.com/Tiririkha/infinity-stones
+Project-URL: Bug Tracker, https://github.com/Tiririkha/infinity-stones/issues
+Author-email: Eric Kweyunga <maverickweyunga@gmail.com>
+License-File: LICENSE
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Requires-Dist: phonenumbers>=8.13.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: pydantic[email]
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: pytz
+Requires-Dist: requests>=2.31.0
+Provides-Extra: all
+Requires-Dist: black>=22.0.0; extra == 'all'
+Requires-Dist: flake8>=4.0.0; extra == 'all'
+Requires-Dist: isort>=5.0.0; extra == 'all'
+Requires-Dist: pytest-cov>=4.0.0; extra == 'all'
+Requires-Dist: pytest>=7.0.0; extra == 'all'
+Requires-Dist: sphinx-rtd-theme>=1.0.0; extra == 'all'
+Requires-Dist: sphinx>=4.0.0; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: black>=22.0.0; extra == 'dev'
+Requires-Dist: flake8>=4.0.0; extra == 'dev'
+Requires-Dist: isort>=5.0.0; extra == 'dev'
+Requires-Dist: pytest-cov>=4.0.0; extra == 'dev'
+Requires-Dist: pytest>=7.0.0; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: sphinx-rtd-theme>=1.0.0; extra == 'docs'
+Requires-Dist: sphinx>=4.0.0; extra == 'docs'
+Description-Content-Type: text/markdown
+
+# Infinity Stones
+
+
+## Installation
+
+```bash
+pip install infinity-stones
+```
