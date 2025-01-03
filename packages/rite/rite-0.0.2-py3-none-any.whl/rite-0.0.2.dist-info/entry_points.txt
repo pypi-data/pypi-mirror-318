@@ -1,0 +1,7 @@
+[console_scripts]
+format=blacksrc/rite/:main
+lint=flake8src/rite/:main
+rite=rite.__main__:main
+test=pytest--cov=ritetests/:main
+type-check=mypysrc/rite/:main
+
