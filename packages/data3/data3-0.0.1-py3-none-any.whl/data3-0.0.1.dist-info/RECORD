@@ -1,0 +1,11 @@
+data3/__init__.py,sha256=kWq_tR1JleT5GJm03sUwmZ664gwq3XgcuWOs95DHkNI,1223
+data3/columnObject.py,sha256=BXF7R0mjiOEf67i2JXFiqJpaO88mDz0N4BmolEBEEqw,549
+data3/databaseObject.py,sha256=NJbAfmtFrSf1QWxpurqigADtJKKDItM_0Kha-LO_crk,2114
+data3/rowObject.py,sha256=RoKfx2Ppc3EL1ny3CMYmAeZwJPNfFK8QEZZ9rtFY2SI,999
+data3/searchParams.py,sha256=m80iOUABXHO92tLkAQkrzaNPnWWNHoc1ocywNQ12Fs4,520
+data3/tableObject.py,sha256=nAue3Mva7gO2fIXLjstVsh0v8GySwcP5v5v-Xk2CNcw,3747
+data3-0.0.1.dist-info/LICENSE,sha256=GXtU9fuWh7op4OkZKbStGlcVLSECjYS1vocpHrGj9MI,1097
+data3-0.0.1.dist-info/METADATA,sha256=jEwWu-G6C6blT6qPhLtCn9hcMM1dFSANan2isJb_Xtk,1471
+data3-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+data3-0.0.1.dist-info/top_level.txt,sha256=3M3r1qYBawg9WeVQKx9Q-2Ghe3w8ejrFTpSj3K1KFgA,6
+data3-0.0.1.dist-info/RECORD,,
