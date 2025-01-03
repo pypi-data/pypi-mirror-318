@@ -1,0 +1,9 @@
+spotipy
+py-sonic
+musicbrainzngs
+thefuzz
+streamrip
+ytmusicapi
+
+[:python_version < "3.10"]
+importlib-metadata
