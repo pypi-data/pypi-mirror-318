@@ -1,0 +1,10 @@
+typehandler/__init__.py,sha256=P3CR3QGCUPRTuTAZhpFiu7dLgOp149HpNq6a7fUKiwU,28
+typehandler/process.py,sha256=l7pMbSOOrjGqnu239pp8VwNLgUYE3pGyiEs9exP4qys,23544
+typehandler/test.py,sha256=5dVyZORX6aNdcEn74G7VfwQq7-tMWD_v5CEWxHTLixU,2001
+typehandler/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+typehandler/tests/example.py,sha256=-DJMHrpTZHTPRTatN3_-A4tMWuEPnsmJrTpvpM5Un1o,2005
+typehandler/tests/minimum.py,sha256=zQqAyZkzrj9obpo-UA2n_ocdmU-i7sDemMlHJ6ymjPc,345
+typehandler-0.4.dist-info/METADATA,sha256=-T7_qOV_LsOimUMCu9Q02UaEEPgTmTg5IXXL8TuMKJY,15844
+typehandler-0.4.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+typehandler-0.4.dist-info/top_level.txt,sha256=kQJs7gY2fBTT0TMVztUPKXJIX08Ws4dKn2HDMhOKueA,12
+typehandler-0.4.dist-info/RECORD,,
