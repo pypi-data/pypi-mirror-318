@@ -1,0 +1,2 @@
+dbt-osmosis[workbench,duckdb]==1.0.1
+setuptools>=70
