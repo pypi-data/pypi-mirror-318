@@ -1,0 +1,4 @@
+The germline V,D,J genes in this folder were downloaded from from http://www.imgt.org/vquest/refseqh.html and are provided to academic users under the Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0) license.
+They have been merged, and put into a nucleotide database as explained in https://ncbi.github.io/igblast/cook/How-to-set-up.html. Unfortunately, using codeocean, this process could not be done in more fine-grained steps. Therefore we provide the full sequence database.
+
+The constant human IgH genes were similarily downloaded from from NCBI Entrez as described in sciReptor ( https://github.com/b-cell-immunology/sciReptor_library)
