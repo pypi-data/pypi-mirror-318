@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+ECCX.egg-info/PKG-INFO
+ECCX.egg-info/SOURCES.txt
+ECCX.egg-info/dependency_links.txt
+ECCX.egg-info/requires.txt
+ECCX.egg-info/top_level.txt
