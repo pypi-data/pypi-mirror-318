@@ -1,0 +1,102 @@
+Metadata-Version: 2.1
+Name: callbacker
+Version: 0.1.0
+Summary: Callback library for sync/async python
+Author-Email: ipfans <363344+ipfans@users.noreply.github.com>
+License: MIT
+Requires-Python: >=3.11
+Requires-Dist: frozenlist>=1.5.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.3.4; extra == "dev"
+Requires-Dist: ruff>=0.8.4; extra == "dev"
+Requires-Dist: flake8>=7.1.1; extra == "dev"
+Requires-Dist: black>=24.10.0; extra == "dev"
+Requires-Dist: mypy>=1.14.1; extra == "dev"
+Description-Content-Type: text/markdown
+
+# Callbacker
+
+Callbacker is a lightweight and flexible callback library for both synchronous and asynchronous Python programming. It provides a simple yet powerful way to implement event-driven programming patterns in Python.
+
+## Features
+
+- Support for both synchronous and asynchronous callbacks
+- Decorator-based event registration
+- Type-safe event handling
+- Easy to integrate with existing codebases
+- Minimal dependencies (only requires `frozenlist`)
+- Python 3.11+ support
+- Thread-safe event dispatching
+
+## Installation
+
+You can install Callbacker using PDM:
+
+```sh
+pip callbacker
+```
+
+## Quick Start
+
+Here's a simple example of how to use Callbacker:
+
+```python
+from callbacker.callback import EventWrapper
+
+# Create an event
+custom_event = EventWrapper()
+
+# Register a callback using decorator syntax
+@custom_event
+async def on_event(data):
+    print(f"Received event with data: {data}")
+
+# Trigger the event asynchronously
+await custom_event.aio_send("Hello, World!")
+```
+
+## Advanced Usage
+
+### Class-based Events
+
+```python
+from callbacker.callback import event, contextevent
+
+class MyClass:
+    @event
+    async def on_data(self, data):
+        """This is a regular event"""
+        print(f"Received data: {data}")
+
+    @contextevent
+    async def on_update(self, context, data):
+        """This event includes the class instance as context"""
+        print(f"Update from {context} with data: {data}")
+```
+
+### Synchronous Callbacks
+
+```python
+from callbacker.callback import EventWrapper
+
+event = EventWrapper()
+
+@event
+def sync_handler(data):
+    print(f"Handling {data} synchronously")
+
+# Trigger synchronously
+event.send("test data")
+```
+
+## Documentation
+
+For more detailed documentation and examples, please visit [the documentation page](https://github.com/ipfans/callbacker).
+
+## Contributing
+
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on how to submit pull requests, report issues, and contribute to the project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

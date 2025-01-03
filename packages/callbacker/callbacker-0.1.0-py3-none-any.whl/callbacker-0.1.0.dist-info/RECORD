@@ -1,0 +1,8 @@
+callbacker-0.1.0.dist-info/METADATA,sha256=a_7aaRbnrn4vOD4a1l45rjD4CpFNnIFAlDE2iwqQbAQ,2619
+callbacker-0.1.0.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+callbacker-0.1.0.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+callbacker-0.1.0.dist-info/licenses/LICENSE,sha256=asxeb3ZpKNQPhlFfWPFhruF5xLBlpFfpKeEPH7dSud0,1063
+callbacker/__init__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+callbacker/callback.py,sha256=TQe3Sol7NN5T4v2ZZM1qOj56H9oRZPiwnoZqcSwRz2I,4314
+callbacker/signal.py,sha256=ruTS7frAVF68h4eGYfvNCDEf-kl_8d0z2bHDfprGpGo,1546
+callbacker-0.1.0.dist-info/RECORD,,
