@@ -1,0 +1,14 @@
+{
+    "issues": {
+        "automatic_backup_failed_create": {
+            "description": "Otomatik yedekleme olu\u015fturulamad\u0131. Daha fazla bilgi i\u00e7in l\u00fctfen g\u00fcnl\u00fckleri kontrol edin. Bir yedekleme zamanlamas\u0131 yap\u0131land\u0131r\u0131lm\u0131\u015fsa, bir sonraki zamanlanm\u0131\u015f zamanda ba\u015fka bir deneme yap\u0131lacakt\u0131r.",
+            "title": "Otomatik yedekleme olu\u015fturulamad\u0131"
+        }
+    },
+    "services": {
+        "create": {
+            "description": "Yeni bir yedek olu\u015fturur.",
+            "name": "Yedekleme olu\u015ftur"
+        }
+    }
+}
