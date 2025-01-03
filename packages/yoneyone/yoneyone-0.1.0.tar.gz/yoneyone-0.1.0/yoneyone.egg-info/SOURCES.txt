@@ -1,0 +1,8 @@
+README.md
+setup.py
+yoneyone/__init__.py
+yoneyone/mailer.py
+yoneyone.egg-info/PKG-INFO
+yoneyone.egg-info/SOURCES.txt
+yoneyone.egg-info/dependency_links.txt
+yoneyone.egg-info/top_level.txt
