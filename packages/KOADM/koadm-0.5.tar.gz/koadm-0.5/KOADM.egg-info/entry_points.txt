@@ -1,0 +1,2 @@
+[console_scripts]
+KOADM = KOADM:KOA_diag
