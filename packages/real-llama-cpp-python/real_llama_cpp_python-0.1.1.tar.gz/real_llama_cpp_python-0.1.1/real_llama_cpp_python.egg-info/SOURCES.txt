@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+real_llama_cpp_python.egg-info/PKG-INFO
+real_llama_cpp_python.egg-info/SOURCES.txt
+real_llama_cpp_python.egg-info/dependency_links.txt
+real_llama_cpp_python.egg-info/requires.txt
+real_llama_cpp_python.egg-info/top_level.txt
+real_llama_cpp_python.egg-info/.ipynb_checkpoints/requires-checkpoint.txt
+real_llamacpp/__init__.py
+real_llamacpp/_utils.py
+real_llamacpp/model.py
+test/test_object.py
