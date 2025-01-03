@@ -1,0 +1,11 @@
+nsdev/__init__.py,sha256=msHkPAkzQp9KficZJ6lwDH-Z_uxRHUfSNqAXSTrU968,272
+nsdev/addUser.py,sha256=nbd8y6GtAiFJDhkacbDWK--lTg5djtwZGnkaan9gftw,3182
+nsdev/database.py,sha256=dtFrppNIwN0ocXlSYBOhZtw7hlpvJCCE2QU91rmuAoE,10191
+nsdev/encrypt.py,sha256=XxY0Etk9SIGilqjnSzuzZ8lpmHvkf_5ixvNlqQ1UQN8,3790
+nsdev/gradient.py,sha256=1TGfEf_cwiLQDNf1iBqzUJgPxYYzv42pJvKbVuY_jM8,1965
+nsdev/logger.py,sha256=gpEhHw9C38fk77_0zyjcO6_X8XVhJq1y2COYppldiIM,3416
+nsdev/storekey.py,sha256=SzFA827X8GGmMD8qXyW1MTo-LJ_rJOIyYP1QnYk2hb0,1571
+norsodikin-0.2.dev0.dist-info/METADATA,sha256=MYIskJSr5qT9KoyYVlVlpzuIHzj8N1cDu2GxtpsU7DQ,795
+norsodikin-0.2.dev0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+norsodikin-0.2.dev0.dist-info/top_level.txt,sha256=DHMeAdlCwNpMqzYy76XLsUcBJSQBp3KaZbkibZu7VlE,6
+norsodikin-0.2.dev0.dist-info/RECORD,,
