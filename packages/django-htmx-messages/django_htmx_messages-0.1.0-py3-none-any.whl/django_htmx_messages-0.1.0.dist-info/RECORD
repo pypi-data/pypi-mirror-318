@@ -1,0 +1,12 @@
+django_htmx_messages/__init__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+django_htmx_messages/apps.py,sha256=7BlYhpDp-iZWh0V0VVyKHe_GzyAU88_PkQadsR0Ut1I,251
+django_htmx_messages/conf.py,sha256=_w_kB61DsG6ve0n_XYLLIH6yQY7EdDNpguvTQx-hifs,1174
+django_htmx_messages/main.py,sha256=cNdXOpk1IWWUjmowpzQcWmGQRgTB4CRh3MJ-lJWdQ6w,230
+django_htmx_messages/middleware.py,sha256=Vh2SXS5hGgkbMLDP-7NyBtXhKZQqKJ7VdJRWeD4hZu8,1615
+django_htmx_messages/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_htmx_messages/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_htmx_messages-0.1.0.dist-info/LICENSE,sha256=WczKP9Zf0jAKJugISvk7fpPZ9zmfQrWzABqqnuMm6Us,1068
+django_htmx_messages-0.1.0.dist-info/METADATA,sha256=NOlCLy8yHgorlCxMyAfBzXK8rE1GbResWBPQ-gEdQlE,6054
+django_htmx_messages-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+django_htmx_messages-0.1.0.dist-info/top_level.txt,sha256=9VP_fdKeciiXbN72WasWJJacovBlqvgsLSBGwiqKHU0,21
+django_htmx_messages-0.1.0.dist-info/RECORD,,
