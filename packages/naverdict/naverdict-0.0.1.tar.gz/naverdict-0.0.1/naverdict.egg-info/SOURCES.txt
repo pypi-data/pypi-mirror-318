@@ -1,0 +1,15 @@
+LICENSE.md
+README.md
+pyproject.toml
+naverdict/__init__.py
+naverdict/cli.py
+naverdict/constants.py
+naverdict/exceptions.py
+naverdict/search.py
+naverdict.egg-info/PKG-INFO
+naverdict.egg-info/SOURCES.txt
+naverdict.egg-info/dependency_links.txt
+naverdict.egg-info/entry_points.txt
+naverdict.egg-info/requires.txt
+naverdict.egg-info/top_level.txt
+tests/test_search.py
