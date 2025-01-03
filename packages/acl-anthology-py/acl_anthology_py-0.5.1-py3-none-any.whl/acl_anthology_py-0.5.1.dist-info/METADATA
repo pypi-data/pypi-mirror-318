@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: acl-anthology-py
+Version: 0.5.1
+Summary: acl-anthology-py is now acl-anthology
+Author: Marcel Bollmann
+Author-email: marcel@bollmann.me
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 7 - Inactive
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: acl-anthology (>=0.5.1,<0.6.0)
+Description-Content-Type: text/markdown
+
+# acl-anthology-py is now acl-anthology
+
+This package has been renamed.  Use `pip install acl-anthology` instead.
+
+New package: https://pypi.org/project/acl-anthology/
+
