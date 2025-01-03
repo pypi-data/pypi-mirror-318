@@ -1,0 +1,6 @@
+deeptensor/__init__.py,sha256=eRAR8RRlf9jHZcAREoC9spFcloyvs4jCzxDyiyeOoz0,103
+deeptensor/_core.cp310-win32.pyd,sha256=6xm0mEt-LEOgTInVlC-rMRAKuQKLbBSlElD2KNxFfC4,89600
+deeptensor-0.0.1.dist-info/METADATA,sha256=oHQ1EdqIcgPPLnjMsu2XqDVPzyuzLgQ9K7jlK3JYcps,835
+deeptensor-0.0.1.dist-info/WHEEL,sha256=Jo8ToU2hV5YuPkKVjfss3viHcL26PBf8PgbBTLsKik4,102
+deeptensor-0.0.1.dist-info/licenses/LICENSE,sha256=P9ikni1pEqmaWDx7N3nvAmh8EtFbTUtvCaUeofGtDN0,1086
+deeptensor-0.0.1.dist-info/RECORD,,
