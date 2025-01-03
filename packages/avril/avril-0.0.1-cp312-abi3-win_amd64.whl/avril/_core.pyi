@@ -1,0 +1,3 @@
+
+
+def hello_from_bin() -> str: ...
