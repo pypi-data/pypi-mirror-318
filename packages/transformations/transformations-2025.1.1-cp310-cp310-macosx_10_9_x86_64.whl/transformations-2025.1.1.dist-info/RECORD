@@ -1,0 +1,9 @@
+transformations/conftest.py,sha256=OIU04kokrefCYVtDKmSPUMJ81OKScNqESptIBvdqLU0,418
+transformations/_transformations.cpython-310-darwin.so,sha256=6fAEZHpkdgvAMpd5fLvqZvEwzqBeGUzYKB4TKCif57A,96920
+transformations/transformations.py,sha256=klVhjtDHecT7k1kg2ElMZ-8SfiI1wuEV6ELDCVRjeYs,69610
+transformations/__init__.py,sha256=or7gZl82olNVoh2KzWOsP7iiYsTSKC5hczWRdPp_ing,112
+transformations-2025.1.1.dist-info/RECORD,,
+transformations-2025.1.1.dist-info/LICENSE,sha256=__sWHeZ7Z2OJnRNI0c_jVzHu6nwmBBCOVudd51vzrH8,1529
+transformations-2025.1.1.dist-info/WHEEL,sha256=URKZMCQZKbMzwwK3mUqFjaiRuB-NVc1rVOjUiMNMB58,110
+transformations-2025.1.1.dist-info/top_level.txt,sha256=aLjIe_YXrdETEWfWoV1Ld7rLmK0F5cB6W9jYDymktOE,16
+transformations-2025.1.1.dist-info/METADATA,sha256=Vn_ptB-kHnSeczYNPBXrljOaXKR3tvTIJsnM6LRo6fI,9010
