@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/tailscale_lambda_extension/__init__.py
+src/tailscale_lambda_extension/py.typed
+src/tailscale_lambda_extension.egg-info/PKG-INFO
+src/tailscale_lambda_extension.egg-info/SOURCES.txt
+src/tailscale_lambda_extension.egg-info/dependency_links.txt
+src/tailscale_lambda_extension.egg-info/requires.txt
+src/tailscale_lambda_extension.egg-info/top_level.txt
+src/tailscale_lambda_extension/_jsii/__init__.py
+src/tailscale_lambda_extension/_jsii/tailscale-lambda-extension@0.0.5.jsii.tgz
