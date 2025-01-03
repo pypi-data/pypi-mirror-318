@@ -1,0 +1,13 @@
+beautifulprint/__init__.py,sha256=7yw_N_gNh7f-DOlzwxTHJxgNYzMsNjPv3BQCTAJkYVc,192
+beautifulprint/bprint.py,sha256=PAf6pm5FTi5bT3Ug8HbKQb7nNoOeKnMIje5-_FcyZIA,658
+beautifulprint/colors.py,sha256=lk05gmGlFZXyRxKozD8QwA6ZZgAW5nePcAGRYnSQP7o,398
+beautifulprint/kvstorage.py,sha256=8G5HiWtEfdwvVm_op0JgjtkkeayfzMQx3-RDvNr1BeY,1885
+beautifulprint/old.py,sha256=x_JSuDLYixo4ofRAPyguNQoGgbRCvWj1TECrY4gA0V4,5744
+beautifulprint/packing.py,sha256=MBp6ZGtesE5qd3Zzlgt0ja9cVViBS9vBy16al48nluw,1328
+beautifulprint/theme.py,sha256=knB9b1tKOyTSsOzaxRs8uyOpaoRGPI9a6gItCdeBdTk,1185
+beautifulprint/themes.py,sha256=8ogF7PdbPr3HU93UQxOSeUT_VUsTS6vAt8KLNKYMACs,3263
+beautifulprint/util.py,sha256=296H12nxpltii5oXzye_VQNLWGW6vFE6prjX1uW4Ino,228
+printbeautifully-0.2.0.dist-info/METADATA,sha256=RaJ_G1-Co81HulQwzkTDHyrtpHi6zMSouz_LKmTfaoE,2576
+printbeautifully-0.2.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+printbeautifully-0.2.0.dist-info/top_level.txt,sha256=D9VgwC1MPJFX6LD6dCJU8gfLcuK6vrAfA2kM4nhI1h8,15
+printbeautifully-0.2.0.dist-info/RECORD,,
