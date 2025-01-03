@@ -1,0 +1,8 @@
+README.md
+setup.py
+GodRandom/__init__.py
+GodRandom/main.py
+GodRandom.egg-info/PKG-INFO
+GodRandom.egg-info/SOURCES.txt
+GodRandom.egg-info/dependency_links.txt
+GodRandom.egg-info/top_level.txt
