@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/data_auto_profiler/__init__.py
+src/data_auto_profiler/core.py
+src/data_auto_profiler.egg-info/PKG-INFO
+src/data_auto_profiler.egg-info/SOURCES.txt
+src/data_auto_profiler.egg-info/dependency_links.txt
+src/data_auto_profiler.egg-info/requires.txt
+src/data_auto_profiler.egg-info/top_level.txt
+tests/test_data_auto_profiler.py
