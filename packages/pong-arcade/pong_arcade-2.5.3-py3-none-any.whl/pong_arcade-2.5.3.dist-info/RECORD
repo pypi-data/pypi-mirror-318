@@ -1,0 +1,16 @@
+pong_arcade/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pong_arcade/ball.py,sha256=kmSi76SGjS-0IOJ_Z2-nPrYkTDd_KGXIzA2ckYElBfg,4139
+pong_arcade/main.py,sha256=cIvhT32Oj-u33lK0IKWjm-yIDK6eV39HtGaeE9qlxyE,538
+pong_arcade/meta.py,sha256=Egjk2lUTH000PZL_P2RKkv-VHLwqdY74udujP5bt8cI,54
+pong_arcade/player.py,sha256=XNnR0tzofqWB9lkCxKwEbd6cxQzV_G-ELxWZmp2KLj8,1134
+pong_arcade/pong.py,sha256=wfb731lNR9N0eZlF_iZhGgUQavEtubCnh9wZtCMwPLA,19171
+pong_arcade/data/gfx/atari.otf,sha256=Ddy50vUWFQ5HstfmChX-0JB_iRv1KYNxbwk-qC4Eqdw,43908
+pong_arcade/data/gfx/logo.png,sha256=senRzSCSMe3B2viizqRo3e3LaViYvOtL0Vm0hFgYj1k,6068
+pong_arcade/data/sfx/paddle.wav,sha256=kIxLbTWz7D4WeGqNOkg1z9VRjFfCTqO19CSNWhQlRB0,32860
+pong_arcade/data/sfx/score.wav,sha256=Z-pPyeASBQspj-5r3ouRbwkz9xOHdtrVoUDnKRDM5Lo,96324
+pong_arcade/data/sfx/wall.wav,sha256=ClLJVFr-B6GSb6yoK1XNCeNBJ6CWn3CnnK1S69ig42g,43784
+pong_arcade-2.5.3.dist-info/METADATA,sha256=aPN3h-YkDLrorDZTFkXX5MX9KVUdYBYPdTozeJiVWMs,5697
+pong_arcade-2.5.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pong_arcade-2.5.3.dist-info/entry_points.txt,sha256=TsQT4Cqm9ZI0geGTqDqS0UpxmBFzQgUhJidaxu1JCts,43
+pong_arcade-2.5.3.dist-info/licenses/LICENSE,sha256=xfYMQUSTWtjZSgOa_uLeTn2ooQ-Fn4ZBxUD6ZVF4RHU,1080
+pong_arcade-2.5.3.dist-info/RECORD,,
