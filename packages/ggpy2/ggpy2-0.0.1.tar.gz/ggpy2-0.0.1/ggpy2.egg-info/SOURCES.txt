@@ -1,0 +1,6 @@
+setup.py
+ggpy2/__init__.py
+ggpy2.egg-info/PKG-INFO
+ggpy2.egg-info/SOURCES.txt
+ggpy2.egg-info/dependency_links.txt
+ggpy2.egg-info/top_level.txt

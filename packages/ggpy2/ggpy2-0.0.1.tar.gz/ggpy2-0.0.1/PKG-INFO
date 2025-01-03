@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: ggpy2
+Version: 0.0.1
+Summary: A grammar of graphics for Python inspired by ggplot2
+Requires-Python: >=3.6
