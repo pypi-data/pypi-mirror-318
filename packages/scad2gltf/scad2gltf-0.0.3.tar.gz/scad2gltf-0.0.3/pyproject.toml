@@ -1,0 +1,32 @@
+[project]
+name = "scad2gltf"
+version = "0.0.3"
+description = "Create GLTF files from OpenSCAD files."
+readme = "README.md"
+requires-python = ">= 3.6"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3.6"]
+keywords = ["OpenSCAD", "GLTF", "conversion"]
+authors = [
+    { name = "Julian Stirling", email = "julian@julianstirling.co.uk" },
+]
+dependencies = ["numpy", "numpy-stl", "pygltflib", "regex"]
+
+[project.urls]
+Homepage = "https://gitbuilding.io/"
+"Bug Tracker" = "https://gitlab.com/bath_open_instrumentation_group/scad2gltf/issues"
+"Source Code" = "https://gitlab.com/bath_open_instrumentation_group/scad2gltf"
+
+[project.scripts]
+scad2gltf = "scad2gltf.__main__:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "scad2gltf"
+]
