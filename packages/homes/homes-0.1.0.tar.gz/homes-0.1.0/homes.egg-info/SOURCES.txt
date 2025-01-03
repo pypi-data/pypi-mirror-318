@@ -1,0 +1,9 @@
+README.md
+homes.py
+pyproject.toml
+homes.egg-info/PKG-INFO
+homes.egg-info/SOURCES.txt
+homes.egg-info/dependency_links.txt
+homes.egg-info/entry_points.txt
+homes.egg-info/requires.txt
+homes.egg-info/top_level.txt
