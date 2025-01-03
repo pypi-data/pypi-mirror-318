@@ -1,0 +1,12 @@
+
+---
+
+### Step 6: Add a `LICENSE` File
+Choose an open-source license (e.g., MIT, Apache). For this example, add an MIT License:
+
+```plaintext
+MIT License
+
+Copyright (c) 2025 Your Name
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation...
