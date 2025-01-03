@@ -1,0 +1,3 @@
+exclude Metamorphic/**/*.pyx
+include Metamorphic/**/*.pxd
+include Metamorphic/**/*.c
