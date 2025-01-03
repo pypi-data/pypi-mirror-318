@@ -1,0 +1,14 @@
+extra_platforms/__init__.py,sha256=Fq3VB5dPs8mIN34grrFRhaS2WMrU-Bpzbkvayo0TUoY,11359
+extra_platforms/detection.py,sha256=Exts_0xBmx84JQ6wNVUrL8_FpycNcmVCY-CYnekYegA,10811
+extra_platforms/docs_update.py,sha256=WtikuusNXzIEsrWgGHeOXRrtLdTOykuNMrVm-_p9RWc,7258
+extra_platforms/group.py,sha256=uOx5dk5Kq1y-FW_HwEAVIcINVkww5L7SZCqvL1p51ls,12249
+extra_platforms/group_data.py,sha256=b0zQhIxqbKkXJwY-cPtUOgYRDeg9PHoHD7D4MM_1KqI,7174
+extra_platforms/platform.py,sha256=AJ0gMfSzdXFEq9czzr42LP-brfFS2zVBUljPY6Mz4XI,8775
+extra_platforms/platform_data.py,sha256=O-bjW_MhUWn6a_lOtVerGNzn7eIX0DopPlfaV-PD5ps,5880
+extra_platforms/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+extra_platforms/pytest.py,sha256=qsPgYAOi-guV2z2RfLixz5QP8Y_uG7_IulXecfqV7Rg,8222
+extra_platforms-2.0.0.dist-info/METADATA,sha256=L4NiMWNzYWO686bOiSE5NHv30IIfvNc3TccX9DvzCuM,34008
+extra_platforms-2.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+extra_platforms-2.0.0.dist-info/entry_points.txt,sha256=isBLN3Ql7i0xvHQnB1S36QVWepytJD7GvesLxzhPjCg,52
+extra_platforms-2.0.0.dist-info/top_level.txt,sha256=9182Fz_BFq0UF5vXtcQFkH1lQOeMK29bs3SH3e6tjJA,16
+extra_platforms-2.0.0.dist-info/RECORD,,
