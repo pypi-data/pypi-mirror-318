@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "acl-anthology-py"
+version = "0.5.1"
+description = "acl-anthology-py is now acl-anthology"
+authors = ["Marcel Bollmann <marcel@bollmann.me>"]
+readme = "README.md"
+classifiers = [
+    "Development Status :: 7 - Inactive",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+acl-anthology = "^0.5.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
