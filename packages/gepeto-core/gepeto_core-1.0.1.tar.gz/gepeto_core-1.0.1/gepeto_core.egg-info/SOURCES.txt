@@ -1,0 +1,13 @@
+README.md
+setup.py
+gepeto-core/__init__.py
+gepeto-core/prompt.py
+gepeto-core/client/__init__.py
+gepeto-core/client/agent.py
+gepeto-core/client/function.py
+gepeto-core/client/object.py
+gepeto_core.egg-info/PKG-INFO
+gepeto_core.egg-info/SOURCES.txt
+gepeto_core.egg-info/dependency_links.txt
+gepeto_core.egg-info/requires.txt
+gepeto_core.egg-info/top_level.txt
