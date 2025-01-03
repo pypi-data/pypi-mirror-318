@@ -1,0 +1,16 @@
+pyjson2dataclass/__init__.py,sha256=8Zd4_C6Brgnfbd8n7l6B-yWxhD9ozahqGMkEKWb28_Y,3846
+pyjson2dataclass/__main__.py,sha256=n_zquKP70goewCg_buWUoWO6HngAjUokVf5UC6DOVaM,1262
+pyjson2dataclass/field.py,sha256=HwbgB3GAV9cl61zvYrYOKSmyrYAnga4hm3-XX1ZCwZE,7284
+pyjson2dataclass/json2dataclass_test.py,sha256=n3sxqKEYJvZjj7OmM-vIPP3zvP9rizZv070JFEpO6iI,722
+pyjson2dataclass/tree.py,sha256=DP8t8HPUhXBdo0ISS5h3eq60mzqS2ppMckknP0fu1wQ,15781
+pyjson2dataclass/utils.py,sha256=yRORfYvxOHCSLb5pEDhNfraiPN-1TM8Gyz8dbUj_qag,830
+pyjson2dataclass/__pycache__/__init__.cpython-312.pyc,sha256=uXWlBHlpu7pJ3KIFQFxj1AxRcGz0MBJK8wNOmZFnv-o,5590
+pyjson2dataclass/__pycache__/__main__.cpython-312.pyc,sha256=MYejWZ451mXG_F_Zoh1u-wyKOR5YJoRWLx626UwYOk8,1396
+pyjson2dataclass/__pycache__/field.cpython-312.pyc,sha256=zLrl8_zXWffIzVuMN-7kKz5GhGUpPftwFreJKi9dQ4M,13227
+pyjson2dataclass/__pycache__/json2dataclass_test.cpython-312.pyc,sha256=ysu4Or2dXZUtu6H6q3z7LKk8u7WylxjJeufZkIfAgcw,1096
+pyjson2dataclass/__pycache__/utils.cpython-312.pyc,sha256=_6NvZRbT5lkbM1wuJfrA1-d8HssMG0SHjn1SGcEZu6g,1095
+pyjson2dataclass-2.1.2.dist-info/METADATA,sha256=OrlOJUjS8H5dCfXJXBL0v23pSTSLpynWnnDiagYGKGA,4088
+pyjson2dataclass-2.1.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pyjson2dataclass-2.1.2.dist-info/entry_points.txt,sha256=Ek_XoRx32Lj70h2kSc0zTO6LxcA13hD3wW-yoV63Hws,130
+pyjson2dataclass-2.1.2.dist-info/top_level.txt,sha256=ceRCgPWRzbfOPdAbWLuKvyedTpWlevq7Cc_mxfXaLGk,17
+pyjson2dataclass-2.1.2.dist-info/RECORD,,
