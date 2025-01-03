@@ -1,0 +1,9 @@
+README.md
+setup.py
+pygameplayer/__init__.py
+pygameplayer/main.py
+pygameplayer.egg-info/PKG-INFO
+pygameplayer.egg-info/SOURCES.txt
+pygameplayer.egg-info/dependency_links.txt
+pygameplayer.egg-info/requires.txt
+pygameplayer.egg-info/top_level.txt

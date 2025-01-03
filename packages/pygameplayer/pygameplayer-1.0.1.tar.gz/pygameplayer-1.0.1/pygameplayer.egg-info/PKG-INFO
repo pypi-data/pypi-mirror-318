@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pygameplayer
+Version: 1.0.1
+Summary: A simple pygame player
+Author: petteer
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pygame
+
+# pygameplayer 
+
+## This is a simple pygame audio player 
+## Examples : 
+``` from pygameplayer import play
+    play(audio_path)
+```
