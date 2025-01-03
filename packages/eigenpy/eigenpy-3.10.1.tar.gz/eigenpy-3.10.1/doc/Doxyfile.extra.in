@@ -1,0 +1,7 @@
+INPUT                  = @PROJECT_SOURCE_DIR@/src \
+                         @PROJECT_SOURCE_DIR@/doc/additionalDoc
+IMAGE_PATH             = @PROJECT_SOURCE_DIR@/doc/pictures
+
+FILE_PATTERNS          = *.cc *.cpp *.h *.hpp *.hxx
+
+TAGFILES               = \
