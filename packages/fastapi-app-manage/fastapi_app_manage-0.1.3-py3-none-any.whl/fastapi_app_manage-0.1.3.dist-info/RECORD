@@ -1,0 +1,10 @@
+fastapi_app_manage/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastapi_app_manage/enums.py,sha256=WPLAcrt9NmbJ5rPpHgrTOE_tWukIYOi5XPi58xgPGas,297
+fastapi_app_manage/get_package_version.py,sha256=bO9P4DIUaYdjGyQLAsH9vjyXBwudvVvPgdxj_XWSOuw,1225
+fastapi_app_manage/main.py,sha256=afcWfrrD1WVcUc1M1UAi3SvDEdHQaYuj1hTVTpG0ExE,336
+fastapi_app_manage/util.py,sha256=MoVYZOKemOxZ0PGwtdOwWpMI_CfC0qg4GwDxZrPiUo4,6160
+fastapi_app_manage/write.py,sha256=iWuBkDXydSSpl0ci6-w5gKdh02VEF-hm1CuK-GSE47E,6752
+fastapi_app_manage-0.1.3.dist-info/entry_points.txt,sha256=AojeYOGLSj3dEISzgVJkYYXsz92fyENMvnDfK-DhaHY,59
+fastapi_app_manage-0.1.3.dist-info/METADATA,sha256=0nvdpv1nTznWkTPXAZp_4gT8Hi7SpESTHVcJ_HTKc1Y,1062
+fastapi_app_manage-0.1.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+fastapi_app_manage-0.1.3.dist-info/RECORD,,
