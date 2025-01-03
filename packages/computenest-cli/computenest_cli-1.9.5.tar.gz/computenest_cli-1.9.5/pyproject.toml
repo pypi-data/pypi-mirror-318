@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "computenest-cli"
+version = "1.9.5"
+description = "A command line interface for running the compute nest project"
+readme = "README.md"
+authors = [
+    { name = "Saner", email = "xuhaoran.xhr@alibaba-inc.com" },
+    { name = "Renyun", email = "lyh376240@alibaba-inc.com" },
+    { name = "Yehan", email = "gn398171@alibaba-inc.com" }
+]
+
+dependencies = [
+    "alibabacloud-computenestsupplier20210521==5.0.1",
+    "alibabacloud_ecs20140526>=3.0.9",
+    "pyyaml>=1.0.0",
+    "oss2>=1.0.0",
+    "oos>=0.0.1",
+    "alibabacloud_oos20190601==2.0.0",
+    "argparse>=1.0.0",
+    "urllib3==1.26.15",
+    "click>=8.0.0",
+    "ruamel.yaml>=0.17.35",
+    "jinja2==3.0.3",
+    "importlib_resources>=5.0.0",
+    "dockerfile-parse>=2.0.1"
+]
+
+[project.urls]
+"Homepage" = "https://computenest.console.aliyun.com/welcome"
+"English Documentation" = "https://github.com/aliyun-computenest/computenest-cli-docs/blob/main/README-en.md"
+"Chinese Documentation" = "https://github.com/aliyun-computenest/computenest-cli-docs/blob/main/README-zh.md"
+
+
+[tool.setuptools.packages]
+find = { include = ["computenestcli", "computenestcli.*"] }
+
+[project.scripts]
+computenest-cli = "computenestcli.main:main"
