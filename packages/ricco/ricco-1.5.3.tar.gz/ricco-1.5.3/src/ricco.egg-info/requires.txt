@@ -1,0 +1,8 @@
+fuzzywuzzy>=0.18.0
+geojson<3
+numpy>=1
+pandarallel>=1.6.5
+pandas>=1
+python-Levenshtein>=0.25.0
+requests>=2.7
+tqdm>=4.62.0
