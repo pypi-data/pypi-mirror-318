@@ -1,0 +1,9 @@
+authlib
+requests
+quart
+
+[cache]
+cachelib
+
+[dev]
+black
