@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+src/primerdata/__init__.py
+src/primerdata/__main__.py
+src/primerdata.egg-info/PKG-INFO
+src/primerdata.egg-info/SOURCES.txt
+src/primerdata.egg-info/dependency_links.txt
+src/primerdata.egg-info/top_level.txt
+src/primerdata/tests/__init__.py
+src/primerdata/tests/test_1984.py
