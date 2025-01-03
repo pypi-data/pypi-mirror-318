@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: fairepay_api
+Version: 0.0.1
+Summary: Framework used to integrate with FairePay REST API
+Author: Paris Nakita Kejser
+Author-email: paris@nextgensilicon.io
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: setuptools (>=70.0.0)
+Description-Content-Type: text/markdown
+
+# FairePay Integration API - Python
+
