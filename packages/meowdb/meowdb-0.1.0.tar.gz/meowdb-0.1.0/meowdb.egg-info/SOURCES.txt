@@ -1,0 +1,6 @@
+README.md
+setup.py
+meowdb.egg-info/PKG-INFO
+meowdb.egg-info/SOURCES.txt
+meowdb.egg-info/dependency_links.txt
+meowdb.egg-info/top_level.txt
