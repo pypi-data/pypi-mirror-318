@@ -1,0 +1,7 @@
+ffmpeg_installer/__init__.py,sha256=jI8HO1apXokuHAkEpY_fHMBLxiEhJduZ5jz_DdQbfBY,108
+ffmpeg_installer/install_ffmpeg.py,sha256=vQZZwUPYwK5n9VBAMBl3yFRMrOc2meFrxyb6rkeJ9Ts,667
+ffmpeg_installer-0.1.0.dist-info/METADATA,sha256=6FygUJMitpWD1h4fHcmt_BvU-v186ndMZF2o_0toxcA,348
+ffmpeg_installer-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+ffmpeg_installer-0.1.0.dist-info/entry_points.txt,sha256=HR-kwoHBHN8JCtUsqJOKi0BxMMNWf6PqB17a2Khlvv8,82
+ffmpeg_installer-0.1.0.dist-info/top_level.txt,sha256=bidpKW6sXwpLRwxbwsl_pvEdc29tDZwwri9VNL9VriI,17
+ffmpeg_installer-0.1.0.dist-info/RECORD,,
