@@ -1,0 +1,13 @@
+plothic/ParseAsy.py,sha256=61qQu1haT12IWSJwvx_2FVPJW3gFBSQ4kjMpDJkseBg,1783
+plothic/ParseHiC.py,sha256=DSTuzd0Tmk--c8ZmQ566x28A_-DcYBKE33Hudhk2y4g,1856
+plothic/PlotBed.py,sha256=G4hPHbDmerpZ1ZkCtAbHqt1RvObB0rbRL6qlTGJXl54,4965
+plothic/PlotHiC.py,sha256=xHJ1qTNxG9dLzBazr8Nsz-9DHZ9k4Bq2oWsryyV6N5w,7759
+plothic/PlotMTX.py,sha256=EKnJXluVwpZVOCItF3bQ_o2f3TKJu5smi6wf8oCXZi4,2928
+plothic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+plothic/cli.py,sha256=wxQYfVK1rdlrL2xZKrnbohduC8-r9TnoqpIiC1uZMvs,5191
+plothic/logger.py,sha256=lsNmZBjvKE8uYAWgQ4rzoeN5rqg6E1_Z0Imnj0gqgdo,1180
+plothic-0.4.5.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+plothic-0.4.5.dist-info/METADATA,sha256=FLo6zf4WQ1w1btoaAVvAlVdZ0hU0Eqk7VXa3lnZT6q4,3619
+plothic-0.4.5.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+plothic-0.4.5.dist-info/entry_points.txt,sha256=FMjv5N3hs48pB8od7IhOS__6IzlIu9DH9N52GQJdo8c,44
+plothic-0.4.5.dist-info/RECORD,,
