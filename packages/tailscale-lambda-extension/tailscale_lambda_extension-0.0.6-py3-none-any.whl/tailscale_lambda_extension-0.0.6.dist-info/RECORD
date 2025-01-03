@@ -1,0 +1,9 @@
+tailscale_lambda_extension/__init__.py,sha256=pB4KabHRKtK0coxNkQFovTNLpTCuJgmMg18LR6EbE9E,13372
+tailscale_lambda_extension/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+tailscale_lambda_extension/_jsii/__init__.py,sha256=cSC7cO9Tv45lR7GbTO4XtvJ0FQ5TztFMIIMMuw4h43c,1476
+tailscale_lambda_extension/_jsii/tailscale-lambda-extension@0.0.6.jsii.tgz,sha256=jbGkml5tyMYLsNIxz4jtHQvXkq51NLTlA5BPwlOZXVY,29692065
+tailscale_lambda_extension-0.0.6.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+tailscale_lambda_extension-0.0.6.dist-info/METADATA,sha256=G0j3QP_ZmRE23nD6E1CvDfdWa1oKeFAwdNVDj4Gsj78,9014
+tailscale_lambda_extension-0.0.6.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+tailscale_lambda_extension-0.0.6.dist-info/top_level.txt,sha256=P42Tokkf7Nz-pBEZeHNE201c_p9yWseWxRS2RUtCjPQ,27
+tailscale_lambda_extension-0.0.6.dist-info/RECORD,,
