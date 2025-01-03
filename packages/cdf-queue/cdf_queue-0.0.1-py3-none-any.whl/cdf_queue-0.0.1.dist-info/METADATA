@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: cdf-queue
+Version: 0.0.1
+Summary: File processing queue. Ideal for contextualization workload.
+License: Apache-2.0
+Author: Felipe
+Author-email: felipeortegabustamante@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: cognite-sdk (>=7.70.7,<8.0.0)
+Description-Content-Type: text/markdown
+
+# CDF Queue
+
+File processing queue in Cognite Data Fusion
