@@ -1,0 +1,10 @@
+pytoml11.libs/libstdc++-0d31ccbe.so.6.0.32,sha256=QyUTnI2umnGgPmNJ-6F_BVIAJnq6-70cNoEWpma6EFQ,3494521
+pytoml11.libs/libgcc_s-a0b57c20.so.1,sha256=XPAr2giQZFaQKDEig3i_sQM7zfbaGkuhwmZ9ryvu-Vk,148041
+pytoml11-0.0.1.dist-info/RECORD,,
+pytoml11-0.0.1.dist-info/METADATA,sha256=K4kySzrkSLs4SnLYZU2M0z4Cb-ueCNhESeGglfj6FTs,928
+pytoml11-0.0.1.dist-info/WHEEL,sha256=3zA1ZuXZm16YEeXghxfkMxAdI01btIGLecr0IEG4IxU,117
+pytoml11-0.0.1.dist-info/licenses/LICENCE,sha256=az5GsZxI7ZTy-pEVA7kem-dZs25sWnCQgqs-lUtEHKA,1062
+pytoml11/_value.cpython-312-x86_64-linux-musl.so,sha256=RxUjujsi8NeItNZU1HXoHWPsDwGiu2RNdSajWPINdq0,12851689
+pytoml11/_value.pyi,sha256=Z16xM8F9k6heIytEuc_Up_YLH49MFBMp8dT5Wjmk7p8,3198
+pytoml11/__init__.py,sha256=r6X0Bn5q_bXmD8HpjU-3XgtcDmdL_R9Aj86U9o3jFPY,329
+pytoml11/__init__.pyi,sha256=00ObK3Mv4mV_xT0E_aF5quU82QOvTiuTCnOQcGnb0BE,343
