@@ -1,0 +1,9 @@
+cs.lex>=20250103
+cs.logutils>=20241109
+cs.obj>=20250103
+cs.pfx>=20241208
+cs.py3>=20220523
+cs.resources>=20250103
+cs.result>=20250103
+cs.seq>=20250103
+typeguard
