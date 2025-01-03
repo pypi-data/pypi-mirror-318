@@ -1,0 +1,15 @@
+replit/replit-code-v1-3b (https://huggingface.co/replit/replit-code-v1-3b): 724 likes, cc-by-sa-4.0
+ku-nlp/deberta-v2-base-japanese (https://huggingface.co/ku-nlp/deberta-v2-base-japanese): 28 likes, cc-by-sa-4.0
+classla/xlm-roberta-base-multilingual-text-genre-classifier (https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier): 28 likes, cc-by-sa-4.0
+shibing624/asian-role (https://huggingface.co/shibing624/asian-role): 27 likes, cc-by-sa-4.0
+ku-nlp/deberta-v2-large-japanese-char-wwm (https://huggingface.co/ku-nlp/deberta-v2-large-japanese-char-wwm): 8 likes, cc-by-sa-4.0
+replit/replit-code-v1-3b (https://huggingface.co/replit/replit-code-v1-3b): 724 likes, cc-by-sa-4.0
+ku-nlp/deberta-v2-base-japanese (https://huggingface.co/ku-nlp/deberta-v2-base-japanese): 28 likes, cc-by-sa-4.0
+classla/xlm-roberta-base-multilingual-text-genre-classifier (https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier): 28 likes, cc-by-sa-4.0
+shibing624/asian-role (https://huggingface.co/shibing624/asian-role): 27 likes, cc-by-sa-4.0
+ku-nlp/deberta-v2-large-japanese-char-wwm (https://huggingface.co/ku-nlp/deberta-v2-large-japanese-char-wwm): 8 likes, cc-by-sa-4.0
+replit/replit-code-v1-3b (https://huggingface.co/replit/replit-code-v1-3b): 724 likes, cc-by-sa-4.0
+ku-nlp/deberta-v2-base-japanese (https://huggingface.co/ku-nlp/deberta-v2-base-japanese): 28 likes, cc-by-sa-4.0
+classla/xlm-roberta-base-multilingual-text-genre-classifier (https://huggingface.co/classla/xlm-roberta-base-multilingual-text-genre-classifier): 28 likes, cc-by-sa-4.0
+shibing624/asian-role (https://huggingface.co/shibing624/asian-role): 27 likes, cc-by-sa-4.0
+ku-nlp/deberta-v2-large-japanese-char-wwm (https://huggingface.co/ku-nlp/deberta-v2-large-japanese-char-wwm): 8 likes, cc-by-sa-4.0
