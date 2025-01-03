@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+pyproject.toml
+lib/python/cs/configutils.py
+lib/python/cs_configutils.egg-info/PKG-INFO
+lib/python/cs_configutils.egg-info/SOURCES.txt
+lib/python/cs_configutils.egg-info/dependency_links.txt
+lib/python/cs_configutils.egg-info/requires.txt
+lib/python/cs_configutils.egg-info/top_level.txt
