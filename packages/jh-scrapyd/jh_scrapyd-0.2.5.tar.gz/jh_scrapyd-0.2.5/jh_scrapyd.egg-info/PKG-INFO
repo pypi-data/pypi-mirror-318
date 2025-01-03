@@ -1,0 +1,121 @@
+Metadata-Version: 2.1
+Name: jh_scrapyd
+Version: 0.2.5
+Summary: Preemptive scraping cluster
+Home-page: https://github.com/mrye5869/jh_scrapyd
+Author: Mr Ye
+Author-email: mrye5869@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: altgraph==0.17.4
+Requires-Dist: async-timeout==4.0.3
+Requires-Dist: attrs==24.2.0
+Requires-Dist: Automat==22.10.0
+Requires-Dist: backports.tarfile==1.2.0
+Requires-Dist: build==1.2.2.post1
+Requires-Dist: certifi==2024.7.4
+Requires-Dist: cffi==1.17.0
+Requires-Dist: charset-normalizer==3.3.2
+Requires-Dist: colorama==0.4.6
+Requires-Dist: constantly==23.10.4
+Requires-Dist: cryptography==43.0.0
+Requires-Dist: cssselect==1.2.0
+Requires-Dist: defusedxml==0.7.1
+Requires-Dist: docutils==0.21.2
+Requires-Dist: filelock==3.15.4
+Requires-Dist: hyperlink==21.0.0
+Requires-Dist: idna==3.7
+Requires-Dist: importlib_metadata==8.2.0
+Requires-Dist: incremental==24.7.2
+Requires-Dist: itemadapter==0.9.0
+Requires-Dist: itemloaders==1.3.1
+Requires-Dist: jaraco.classes==3.4.0
+Requires-Dist: jaraco.context==5.3.0
+Requires-Dist: jaraco.functools==4.0.2
+Requires-Dist: jmespath==1.0.1
+Requires-Dist: keyring==25.3.0
+Requires-Dist: lxml==5.2.2
+Requires-Dist: markdown-it-py==3.0.0
+Requires-Dist: mdurl==0.1.2
+Requires-Dist: more-itertools==10.4.0
+Requires-Dist: nh3==0.2.18
+Requires-Dist: packaging==24.1
+Requires-Dist: parsel==1.9.1
+Requires-Dist: pefile==2023.2.7
+Requires-Dist: pkginfo==1.10.0
+Requires-Dist: Protego==0.3.1
+Requires-Dist: pyasn1==0.6.0
+Requires-Dist: pyasn1_modules==0.4.0
+Requires-Dist: pycparser==2.22
+Requires-Dist: PyDispatcher==2.0.7
+Requires-Dist: Pygments==2.18.0
+Requires-Dist: pyOpenSSL==24.2.1
+Requires-Dist: pyproject_hooks==1.2.0
+Requires-Dist: pytz==2024.2
+Requires-Dist: pywin32==308
+Requires-Dist: pywin32-ctypes==0.2.2
+Requires-Dist: queuelib==1.7.0
+Requires-Dist: readme_renderer==44.0
+Requires-Dist: redis==5.0.8
+Requires-Dist: requests==2.32.3
+Requires-Dist: requests-file==2.1.0
+Requires-Dist: requests-toolbelt==1.0.0
+Requires-Dist: rfc3986==2.0.0
+Requires-Dist: rich==13.7.1
+Requires-Dist: Scrapy==2.12.0
+Requires-Dist: scrapyd-client==2.0.0
+Requires-Dist: service-identity==24.1.0
+Requires-Dist: six==1.16.0
+Requires-Dist: tldextract==5.1.2
+Requires-Dist: tomli==2.0.1
+Requires-Dist: twine==5.1.1
+Requires-Dist: Twisted==24.3.0
+Requires-Dist: twisted-iocpsupport==1.0.4
+Requires-Dist: typing_extensions==4.12.2
+Requires-Dist: uberegg==0.1.1
+Requires-Dist: urllib3==2.2.2
+Requires-Dist: w3lib==2.2.1
+Requires-Dist: zipp==3.19.2
+Requires-Dist: zope.interface==7.0.1
+
+Jh Scrapyd
+==========
+
+A preemptive scrapyd cluster built using Redis queues
+
+* Free software: MIT license (including the work distributed under the Apache 2.0 licen[WHEEL](..%2F..%2Fscrapy-cluster%2Fpyppeteer_frame%2Fvenv%2FLib%2Fsite-packages%2Fjh_scrapyd-0.0.1.dist-info%2FWHEEL)se)
+* Documentation: https://scrapyd.readthedocs.org/en/latest/
+
+## Installation
+
+python >= 3.8.0
+
+Install with `pip` from PyPI:
+
+```
+pip install jh_scrapyd
+```
+
+## Configuration
+editor scrapyd.conf
+```
+[api]
+# interface md5 key
+signature_key = 48jwmeX3iF6X0MdZy4atj2RpmNbQjAkm
+
+# Interface signature expiration time
+signature_expired_time = 300
+
+[cluster]
+# Add Redis to configure celarclear
+host = 127.0.0.1
+password = 
+port = 6379
+db = 1
+
+# Is there a unified queue (mainly used for different projects to share queue priority)
+is_unified_queue = 1
+
+# Queue prefix
+queue_prefix = jh_scrapyd
+```
