@@ -1,0 +1,9 @@
+click
+requests
+lxml
+
+[test]
+pytest
+black
+flake8
+isort

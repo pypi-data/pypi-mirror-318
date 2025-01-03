@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+ifq/__init__.py
+ifq/__main__.py
+ifq/cli.py
+ifq.egg-info/PKG-INFO
+ifq.egg-info/SOURCES.txt
+ifq.egg-info/dependency_links.txt
+ifq.egg-info/entry_points.txt
+ifq.egg-info/requires.txt
+ifq.egg-info/top_level.txt
+tests/test_ifq.py
