@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+cacaodocs/__init__.py
+cacaodocs/documentation.py
+cacaodocs/generator.py
+cacaodocs/parser.py
+cacaodocs/type_definitions.py
+cacaodocs.egg-info/PKG-INFO
+cacaodocs.egg-info/SOURCES.txt
+cacaodocs.egg-info/dependency_links.txt
+cacaodocs.egg-info/requires.txt
+cacaodocs.egg-info/top_level.txt
