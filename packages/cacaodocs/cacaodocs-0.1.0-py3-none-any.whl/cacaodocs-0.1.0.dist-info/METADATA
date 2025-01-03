@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: cacaodocs
+Version: 0.1.0
+Summary: A lightweight Python package to extract API documentation from docstrings.
+Home-page: https://github.com/jhd3197/CacaoDocs
+Author: Juan Denis
+Author-email: juan@vene.co
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# CacaoDocs
