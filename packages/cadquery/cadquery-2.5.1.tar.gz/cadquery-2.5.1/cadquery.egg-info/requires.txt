@@ -1,0 +1,8 @@
+
+[dev]
+docutils
+ipython
+pytest
+
+[ipython]
+ipython
