@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: refkeeper
+Version: 0.0.1
+Summary: A tool for managing and validating research references
+Home-page: https://github.com/michaeljhanley
+Author: Michael
+Author-email: michaelhanley11@gmail.com
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# refkeeper
+
+Coming soon! A Python package for scoring reference data.
+
+## Installation
+
+```pip install refkeeper```
+
+## Usage
+
+Documentation coming soon.
