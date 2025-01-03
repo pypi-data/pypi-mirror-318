@@ -1,0 +1,9 @@
+certbot_dns_bookmyname/__init__.py,sha256=mnPnRDj33HQw8G1O4XqU8zqVhvdvEbW9EHmJ9st-MDM,107
+certbot_dns_bookmyname/__main__.py,sha256=xoyMQYqRfdjGnIoj6_tcSGlT0Z35QoFxfh-4-WhDdDM,117
+certbot_dns_bookmyname/dns_bookmyname.py,sha256=2b9Egc9QLp8Amk5jPRfCQ_UEyL2F0kT8nAn4KZ0ZXFs,3943
+certbot_dns_bookmyname-1.0.0.dist-info/LICENSE,sha256=LMXecVrlqXbwhvukkwiAyeQhkUFz_IURG_9RTUdXEj8,10786
+certbot_dns_bookmyname-1.0.0.dist-info/METADATA,sha256=qYlJEBK8Z7UFT_QvYZCnkWclpVEWrcPWgq5gwpLKVYE,15328
+certbot_dns_bookmyname-1.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+certbot_dns_bookmyname-1.0.0.dist-info/entry_points.txt,sha256=o56A7iUBXB9CVbfgnMOW1BVM87zJncRL0A4F4OBeErc,87
+certbot_dns_bookmyname-1.0.0.dist-info/top_level.txt,sha256=V6xa0f8XDACOo8kUSJMyQiOobZtb9Fa8xtJFoxGdJOo,23
+certbot_dns_bookmyname-1.0.0.dist-info/RECORD,,
