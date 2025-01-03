@@ -1,0 +1,8 @@
+cryptography
+Kurigram
+tgcrypto
+gpytranslate
+google-generativeai
+gtts
+aiofiles
+aiohttp
