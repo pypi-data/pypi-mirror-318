@@ -1,0 +1,11 @@
+numpy
+numpy-financial
+pandas>=2.0
+scipy
+matplotlib
+requests
+pyomo
+entsoe-py
+
+[dev]
+pytest
