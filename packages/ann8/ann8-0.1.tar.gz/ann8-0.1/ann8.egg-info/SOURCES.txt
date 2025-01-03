@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+ann8/__init__.py
+ann8/nn.py
+ann8.egg-info/PKG-INFO
+ann8.egg-info/SOURCES.txt
+ann8.egg-info/dependency_links.txt
+ann8.egg-info/requires.txt
+ann8.egg-info/top_level.txt
