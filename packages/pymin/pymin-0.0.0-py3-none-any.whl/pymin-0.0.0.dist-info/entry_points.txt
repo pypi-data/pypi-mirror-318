@@ -1,0 +1,3 @@
+[console_scripts]
+pm = pypi_toolkit.cli:cli
+pymin = pypi_toolkit.cli:cli
