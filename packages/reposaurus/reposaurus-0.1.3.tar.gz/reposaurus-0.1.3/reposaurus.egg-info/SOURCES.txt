@@ -1,0 +1,9 @@
+README.md
+setup.py
+reposaurus/__init__.py
+reposaurus/main.py
+reposaurus.egg-info/PKG-INFO
+reposaurus.egg-info/SOURCES.txt
+reposaurus.egg-info/dependency_links.txt
+reposaurus.egg-info/entry_points.txt
+reposaurus.egg-info/top_level.txt
