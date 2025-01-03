@@ -1,0 +1,7 @@
+README.md
+setup.py
+vizably/__init__.py
+vizably.egg-info/PKG-INFO
+vizably.egg-info/SOURCES.txt
+vizably.egg-info/dependency_links.txt
+vizably.egg-info/top_level.txt

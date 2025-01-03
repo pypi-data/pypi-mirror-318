@@ -1,0 +1,19 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="vizably",
+    version="0.0.1",
+    author="Michael",
+    author_email="michaelhanley11@gmail.com",
+    description="Visualization tools for data analysis",
+    long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
+    packages=find_packages(),
+    classifiers=[
+        "Development Status :: 1 - Planning",
+        "Intended Audience :: Science/Research",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3",
+    ],
+    python_requires=">=3.6",
+)
