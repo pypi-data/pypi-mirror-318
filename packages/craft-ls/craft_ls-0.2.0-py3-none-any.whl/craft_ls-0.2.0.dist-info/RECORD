@@ -1,0 +1,12 @@
+craft_ls/__init__.py,sha256=ef3jAeAJer0UKhidKyVWSQq_vBRvoGL2RqZDQ8EHp_k,78
+craft_ls/__main__.py,sha256=fOv1G6aDubjPf2im_eV3yx04WvyyoBuiAT5HdnE3W5g,494
+craft_ls/core.py,sha256=yo3xirdsG2lPRNEac30ceSi3Gm_rrqmS46Lpj1IPfwg,8153
+craft_ls/server.py,sha256=6sYO9v_PXrpNm5F-LbN_DM5XW6yLV2u_De-8LRVYzt0,3430
+craft_ls/settings.py,sha256=6DJhSObJI-h168wgTZ-PSI43lIyBVORCPak_UWXiKlk,94
+craft_ls/schemas/rockcraft.json,sha256=249cYKffoBNJ43hTnIhYxzg9MxeBBQOO12UFtxl0zUI,161932
+craft_ls/schemas/snapcraft.json,sha256=pwkX_ziCc5FKmYK26z0LYw2OcZZIeZQwOlnRfzoD3FE,52296
+craft_ls-0.2.0.dist-info/METADATA,sha256=hdOVU0SNAR3n47mMdes4_9dVGY_Xny99UlN5XJohPjU,2504
+craft_ls-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+craft_ls-0.2.0.dist-info/entry_points.txt,sha256=ePvBS3zM8VKHDWpldZzsT66hAqhXws1JgoRgUjuinqw,52
+craft_ls-0.2.0.dist-info/licenses/LICENSE,sha256=ePQarbCsoV8KNByCiGCk4Et-fJMz5ntaWX88KnhG8-A,1484
+craft_ls-0.2.0.dist-info/RECORD,,
