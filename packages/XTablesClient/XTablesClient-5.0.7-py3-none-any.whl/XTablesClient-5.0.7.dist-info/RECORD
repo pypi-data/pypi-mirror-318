@@ -1,0 +1,16 @@
+JXTABLES/BaseHandler.py,sha256=zwVvNbMYhp1aXSp1jLFIkFL7z8gjxgMqcoUpry2fHc8,2151
+JXTABLES/CircularBuffer.py,sha256=ZuBngJmzKNlLExxmn8ZPO5LS2li3wuB8K9RthF-LIhQ,4273
+JXTABLES/ClientStatistics.py,sha256=m-9wQ3DHT04UnDncqT1UZ8Tt8egNHQslWhs1f9WfQvw,5303
+JXTABLES/ClientStatistics_pb2.py,sha256=Ge0Ybn26Pz0P2UhKpbBYvmsnWgcbxRq-ftNfeBcHmhQ,2568
+JXTABLES/PingResponse.py,sha256=_AJppoTQci5HpNX6Qe5zSi10plfY0O0aqy-Iv5zRCMg,2256
+JXTABLES/SubscribeHandler.py,sha256=z8j51Ymv6EkCp59SVArejl-B5pvbVpow-EqQqbgDIKA,6057
+JXTABLES/TempConnectionManager.py,sha256=ON90ywzghta6yHmLC-iR99zV8eukgmRdyXL6DzdNqWc,2629
+JXTABLES/Utilities.py,sha256=91bE-Ae77iLcKhE0UcqnmkCMc4bv1tcusGOg2SmP2i0,1377
+JXTABLES/XTableProto_pb2.py,sha256=sat5S8qR4klrWzNcVYo8KYl1v8L-LJw2r4wMQXQF8jU,4465
+JXTABLES/XTablesByteUtils.py,sha256=3yrNOwEujIdntuomaX0yKmrbPGuZu4sWTN4MAyr0kz8,3910
+JXTABLES/XTablesClient.py,sha256=bVJbl3v16QsFDkMa0Rn4Ob7myT4ZOifsTjg6NTp5tpc,22118
+JXTABLES/__init__.py,sha256=rm5bMEuJs9MTt1bpIG-6rtCo7iO6Ko3REdilv0k8oBE,251
+XTablesClient-5.0.7.dist-info/METADATA,sha256=pI_2QSOjuviwxSQnOxzA-oFSKaKaFaBM6jurVhjfZHw,4418
+XTablesClient-5.0.7.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+XTablesClient-5.0.7.dist-info/top_level.txt,sha256=NZ4AFtY_rDv_X9zg3L_k0Epug_mu9vqenrgdjbpIpC4,9
+XTablesClient-5.0.7.dist-info/RECORD,,
