@@ -1,0 +1,107 @@
+# DetectItEasy-Python
+
+[![Python 3.8+](https://img.shields.io/pypi/v/die-python.svg)](https://pypi.org/project/die-python/)
+[![Downloads](https://static.pepy.tech/badge/die-python)](https://pepy.tech/project/die-python)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Licence Apache2](https://img.shields.io/badge/License-Apache_2-blue)](https://github.com/elastic/die-python/blob/main/LICENSE)
+[![Build](https://github.com/elastic/die-python/actions/workflows/build.yml/badge.svg)](https://github.com/elastic/die-python/actions/workflows/build.yml)
+
+Native Python 3.8+ bindings for [@horsicq](https://github.com/horsicq/)'s [Detect-It-Easy](https://github.com/horsicq/Detect-It-Easy)
+
+
+## Install
+
+### From PIP
+
+The easiest and recommended installation is through `pip`.
+
+```console
+pip install die-python
+```
+
+### Using Git
+
+```console
+git clone https://github.com/elastic/die-python
+cd die-python
+```
+
+Install Qt into the `build`. It can be easily installed using [`aqt`](https://github.com/miurahr/aqtinstall) as follow (here with Qt version 6.6.2):
+
+```console
+python -m pip install aqtinstall --user -U
+python -m aqt install-qt -O ./build linux    desktop 6.6.2 gcc_64             # linux only
+python -m aqt install-qt -O ./build windows  desktop 6.6.2 win64_msvc2019_64  # windows only
+python -m aqt install-qt -O ./build mac      desktop 6.6.2 clang_64           # mac only
+```
+
+Then you can install the package
+
+```console
+python -m pip install . --user -U
+```
+
+
+## Quick start
+
+```python
+import die, pathlib
+
+print(die.scan_file("c:/windows/system32/ntdll.dll", die.ScanFlags.DEEP_SCAN))
+'PE64'
+
+print(die.scan_file("../upx.exe", die.ScanFlags.RESULT_AS_JSON, str(die.database_path/'db') ))
+{
+    "detects": [
+        {
+            "filetype": "PE64",
+            "parentfilepart": "Header",
+            "values": [
+                {
+                    "info": "Console64,console",
+                    "name": "GNU linker ld (GNU Binutils)",
+                    "string": "Linker: GNU linker ld (GNU Binutils)(2.28)[Console64,console]",
+                    "type": "Linker",
+                    "version": "2.28"
+                },
+                {
+                    "info": "",
+                    "name": "MinGW",
+                    "string": "Compiler: MinGW",
+                    "type": "Compiler",
+                    "version": ""
+                },
+                {
+                    "info": "NRV,brute",
+                    "name": "UPX",
+                    "string": "Packer: UPX(4.24)[NRV,brute]",
+                    "type": "Packer",
+                    "version": "4.24"
+                }
+            ]
+        }
+    ]
+}
+
+for db in die.databases():
+    print(db)
+C:\Users\User\AppData\Roaming\Python\Python312\site-packages\die\db\db\ACE
+C:\Users\User\AppData\Roaming\Python\Python312\site-packages\die\db\db\APK\PackageName.1.sg
+C:\Users\User\AppData\Roaming\Python\Python312\site-packages\die\db\db\APK\SingleJar.3.sg
+C:\Users\User\AppData\Roaming\Python\Python312\site-packages\die\db\db\APK\_APK.0.sg
+C:\Users\User\AppData\Roaming\Python\Python312\site-packages\die\db\db\APK\_init
+C:\Users\User\AppData\Roaming\Python\Python312\site-packages\die\db\db\Archive\_init
+C:\Users\User\AppData\Roaming\Python\Python312\site-packages\die\db\db\archive-file
+C:\Users\User\AppData\Roaming\Python\Python312\site-packages\die\db\db\arj
+C:\Users\User\AppData\Roaming\Python\Python312\site-packages\die\db\db\Binary\Amiga loadable.1.sg
+C:\Users\User\AppData\Roaming\Python\Python312\site-packages\die\db\db\Binary\archive.7z.1.sg
+[...]
+```
+
+## Licenses
+
+Released under Apache 2.0 License and integrates the following repositories:
+
+ - [Detect-It-Easy](https://github.com/horsicq/Detect-It-Easy): MIT license
+ - [die_library](https://github.com/horsicq/die_library): MIT license
+ - [qt](https://github.com/qt/qt): LGPL license
