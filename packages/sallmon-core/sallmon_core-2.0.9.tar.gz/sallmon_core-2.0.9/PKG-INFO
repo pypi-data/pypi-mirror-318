@@ -1,0 +1,108 @@
+Metadata-Version: 2.1
+Name: sallmon-core
+Version: 2.0.9
+Summary: Sallmon Core: a utility chain invented to eat Stripe's lunch
+Home-page: https://github.com/minakilabs/sallmon_core
+Author: c80129b (Andrew Polykandriotis)
+Author-email: andrew@minakilabs.com
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: websockets
+Requires-Dist: cryptography
+
+Sallmon Core 🐟
+
+The Next-Gen Blockchain Framework for Python
+
+![Sallmon Mascot](https://github.com/user-attachments/assets/9776bc05-08df-47f0-a122-66e13e5a46e4)
+
+🚀 Overview
+
+Sallmon Core is a Python-based blockchain utility network designed to empower developers with tools to create, manage, and deploy decentralized applications (dApps). Inspired by the agility of the dogfish, Sallmon Core ensures your blockchain solutions swim upstream, cutting through the complexities of blockchain development.
+
+Whether you’re a blockchain novice or a seasoned developer, Sallmon Core is here to streamline your blockchain journey.
+
+✨ Features
+	•	Lightweight Framework: Designed for CPU/GPU-friendly blockchain deployments.
+	•	Modular Design: Build only what you need with easy-to-use utilities.
+	•	FastAPI Support: Built-in WebSocket and REST API support for seamless integration.
+	•	Security: Cryptographic tools powered by cryptography.
+	•	CLI Ready: Manage nodes, transactions, and more right from your terminal.
+
+🛠 Installation
+
+Install Sallmon Core via PyPI:
+
+pip install sallmon-core
+
+Upgrade to the latest version:
+
+pip install --upgrade sallmon-core
+
+Uninstall:
+
+pip uninstall sallmon-core
+
+📦 Quick Start
+	1.	Initialize Sallmon Core
+
+sallmon init
+
+
+	2.	Start the Blockchain Node
+
+sallmon start
+
+
+	3.	Run a FastAPI Server
+
+sallmon-server
+
+
+	4.	Explore CLI Tools
+
+sallmon-cli help
+
+🧑‍💻 Development & Contributions
+
+We welcome contributions! Follow these steps to set up your local development environment:
+
+git clone https://github.com/minakilabs/sallmon-core.git
+cd sallmon-core
+pip install -r requirements.txt
+
+Run the tests:
+
+pytest
+
+📚 Documentation
+
+For comprehensive documentation, visit our Wiki.
+
+🐟 The Mascot
+
+
+![Sallmon Mascot](https://github.com/user-attachments/assets/9776bc05-08df-47f0-a122-66e13e5a46e4)
+
+
+Like the tenacious dogfish, Sallmon Core is unstoppable in helping you navigate blockchain development!
+
+🔗 Links
+	•	PyPI: Sallmon Core
+	•	GitHub: Sallmon Core Repository
+	•	Issues: Report an Issue
+
+❤️ Contributors
+
+Created with passion by Andrew Polykandriotis.
+
+📜 License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
