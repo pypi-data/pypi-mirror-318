@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+ampx/__init__.py
+ampx.egg-info/PKG-INFO
+ampx.egg-info/SOURCES.txt
+ampx.egg-info/dependency_links.txt
+ampx.egg-info/top_level.txt
