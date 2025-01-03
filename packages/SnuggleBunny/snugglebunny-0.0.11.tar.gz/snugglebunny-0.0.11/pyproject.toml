@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "SnuggleBunny"
+version = "0.0.11"
+authors = [
+  { name="Invizabel" },
+]
+description = "SnuggleBunny is a tool used to check the strength of encryption on web servers!"
+readme = "README.md"
+license = { file="LICENSE.txt" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = []
+
+[project.urls]
+"Homepage" = "https://github.com/Invizabel/SnuggleBunny"
+"Bug Tracker" = "https://github.com/Invizabel/SnuggleBunny/issues"
