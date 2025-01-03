@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+FalconEDA.egg-info/PKG-INFO
+FalconEDA.egg-info/SOURCES.txt
+FalconEDA.egg-info/dependency_links.txt
+FalconEDA.egg-info/entry_points.txt
+FalconEDA.egg-info/requires.txt
+FalconEDA.egg-info/top_level.txt
+falconEDA/__init__.py
+falconEDA/app.py
+falconEDA/main.py
+falconEDA/utils.py
