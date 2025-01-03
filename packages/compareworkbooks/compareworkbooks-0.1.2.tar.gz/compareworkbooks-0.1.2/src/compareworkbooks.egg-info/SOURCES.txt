@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+src/compareworkbooks/__init__.py
+src/compareworkbooks.egg-info/PKG-INFO
+src/compareworkbooks.egg-info/SOURCES.txt
+src/compareworkbooks.egg-info/dependency_links.txt
+src/compareworkbooks.egg-info/requires.txt
+src/compareworkbooks.egg-info/top_level.txt
+src/compareworkbooks/core/__init__.py
+src/compareworkbooks/core/equivalent.py
+src/compareworkbooks/tests/__init__.py
+src/compareworkbooks/tests/test_1984.py
