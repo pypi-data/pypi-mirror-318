@@ -1,0 +1,6 @@
+vcf_to_duckdb/__init__.py,sha256=GFf3_dDiEhVNPncjaHkdCK_FdWBnUOBTo7ZTtKSYZv8,286
+vcf_to_duckdb/__main__.py,sha256=vEeaDzIXjAXX-lyCEwNBCKv3K9HD96lWNBGunx_SF1E,1824
+vcf_to_duckdb/convert_utils.py,sha256=g8P8TVtcOJsTklAsseklfuCzHxLAJ3dweLAMa-X5vmI,32544
+vcf_to_duckdb-0.2.0.dist-info/METADATA,sha256=wX5ThLK6xKZPaUbsGoUajTB-9e2sgXM3tzvJFJOkS6E,3319
+vcf_to_duckdb-0.2.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+vcf_to_duckdb-0.2.0.dist-info/RECORD,,
