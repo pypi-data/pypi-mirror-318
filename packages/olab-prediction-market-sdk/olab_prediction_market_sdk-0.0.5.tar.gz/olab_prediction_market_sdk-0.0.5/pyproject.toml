@@ -1,0 +1,13 @@
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "olab_prediction_market_sdk"
+version = "0.0.5"
+description = "OpinionLabs Prediction Market SDK(beta)"
+authors = [
+    { name = "nik_opinionlabs", email = "nik@opinionlabs.xyz" }
+]
+dependencies = []
