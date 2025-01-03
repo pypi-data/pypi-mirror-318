@@ -1,0 +1,4 @@
+docker
+ipfs-toolkit
+termcolor
+pyperclip
