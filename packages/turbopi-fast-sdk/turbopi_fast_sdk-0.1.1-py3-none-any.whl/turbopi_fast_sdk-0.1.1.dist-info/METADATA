@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: turbopi-fast-sdk
+Version: 0.1.1
+Summary: Python SDK for hiwonder TurboPi device communication
+Home-page: https://github.com/dmberezovskyii/fast-hiwonder
+License: MIT
+Author: Dmytro Berezovskyi
+Author-email: dmberezovskyi@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pyserial (>=3.5,<4.0)
+Requires-Dist: pytest (>=8.3,<9.0)
+Requires-Dist: requests (>=2.31,<3.0)
+Project-URL: Repository, https://github.com/dmberezovskyii/fast-hiwonder
