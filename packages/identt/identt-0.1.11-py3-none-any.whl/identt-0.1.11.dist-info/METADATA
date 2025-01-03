@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: identt
+Version: 0.1.11
+Summary: Python SDK for Identt API interactions
+Home-page: https://github.com/brdgeai/identt-python
+Author: brdge.ai
+
