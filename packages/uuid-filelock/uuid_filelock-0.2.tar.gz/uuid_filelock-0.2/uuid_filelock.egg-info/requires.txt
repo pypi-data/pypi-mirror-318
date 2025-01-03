@@ -1,0 +1,5 @@
+setuptools
+setuptools-csm
+
+[dev]
+pytest
