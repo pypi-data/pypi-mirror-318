@@ -1,0 +1,80 @@
+[project]
+name = "meowmeow"
+version = "0.1.1"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+# [tool.setuptools]
+# packages = ["luna"]
+
+[tool.setuptools.packages.find]
+include = ["luna", "luna.*"]
+
+[tool.setuptools.package-data]
+"*" = ["luna/**/*.j2", "luna/**/*.sql"]
+
+[tool.ruff]
+line-length = 120
+# src = []
+include = ["pyproject.toml", "luna/**/*.py", "*.ipynb"]
+target-version = "py310"
+extend-exclude = ["transformers/**"]
+
+[tool.ruff.lint]
+# https://docs.astral.sh/ruff/rules/
+select = ["B", "C", "E", "F", "I", "N", "W", "PLE", "AIR", "PLW"]
+ignore = [
+  "F401", # unused imports
+  "F405",
+  # "I001",
+  "E501",
+  "PLE1142",
+  "F403",
+  "N817",
+  "N812",
+]
+
+[tool.pytest.ini_options]
+addopts = "--capture=tee-sys"
+log_cli = true
+log_cli_level = "INFO"
+log_cli_format = "%(asctime)s %(levelname)-7s %(message)s"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+filterwarnings = ["ignore:.*"]
+testpaths = ["luna"]
+asyncio_default_fixture_loop_scope = "session"
+
+[dependency-groups]
+dev = [
+  "attrs>=24.3.0",
+  "bs4>=0.0.2",
+  "google-cloud-bigquery-storage>=2.27.0",
+  "google-cloud-bigquery>=3.27.0",
+  "humanfriendly>=10.0",
+  "ipython>=8.31.0",
+  "jinja2>=3.1.5",
+  "pendulum>=3.0.0",
+  "polars>=1.18.0",
+  "psutil>=6.1.1",
+  "pyarrow>=18.1.0",
+  "pydantic>=2.10.4",
+  "pytest>=8.3.4",
+  "ruff>=0.8.4",
+  "tenacity>=9.0.0",
+  "psycopg>=3.2.3",
+  "psycopg-pool>=3.2.4",
+  "pyperclip>=1.9.0",
+  "colorama>=0.4.6",
+  "pytest-asyncio>=0.25.1",
+  "telethon>=1.38.1",
+  "python-telegram-bot>=21.9",
+  "duckdb>=1.1.3",
+  "google-ads>=25.1.0",
+  "httpx>=0.27.2",
+  "numpy>=2.1.1",
+]
+
+# [tool.pyright]
+# pythonPath = "/Users/goku/micromamba/envs/lm/bin/python"
