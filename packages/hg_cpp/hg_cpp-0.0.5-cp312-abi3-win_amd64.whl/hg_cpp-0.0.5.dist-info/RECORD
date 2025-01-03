@@ -1,0 +1,7 @@
+_hgraph/_hgraph.cp312-win_amd64.pyd,sha256=sLfS1ibnn7jAILCN6XteP_Iy54zX2o_11aKfgRTe2YI,384000
+hg_cpp/__init__.py,sha256=_Ir_BqK1_CHWByHByc_9WjsFnmy2-vetMwYsGXHqcGc,92
+hg_cpp/_builder_factories.py,sha256=BM4GWxqoleLU6P_tUDQYQrIQ_Up1NQIGFqE7eeaTf60,1101
+hg_cpp-0.0.5.dist-info/METADATA,sha256=9cr8uApPI5EJSncZr2D1PWJQ1DoDaP9AmeaLfsqvfIU,2637
+hg_cpp-0.0.5.dist-info/WHEEL,sha256=vEC2vgcau_KDUVRc0oMmm7glP6seg7dDCI6B0KGHsOk,105
+hg_cpp-0.0.5.dist-info/licenses/LICENSE,sha256=u1jntjdsvKnhpeeuO0HvNfVCRTAO7n9qbfAIjgMeO30,1091
+hg_cpp-0.0.5.dist-info/RECORD,,
