@@ -1,0 +1,45 @@
+[build-system]
+build-backend = 'setuptools.build_meta'
+requires = [
+    'setuptools >= 61.2',
+    'wheel',
+]
+
+[project]
+name = 'optrace'
+version = '0.1.0'
+description = '3D raytracer for optical simulations'
+readme = 'README.md'
+requires-python = '>=3.8'
+license = {file = 'LICENSE'}
+keywords = ['physics', 'optics', 'raytracing', 'simulation', 'laser spectroscopy']
+authors = [
+    {name = 'Patrick Müller', email = 'pmueller@physics.ucla.edu'},
+]
+classifiers = [
+    'Development Status :: 2 - Pre-Alpha',
+    'Intended Audience :: Science/Research',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: Microsoft :: Windows',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3 :: Only',
+    'Topic :: Scientific/Engineering :: Physics',
+]
+dependencies = [
+    'numpy>=2.0.2',
+    'scipy>=1.13.1',
+    'qspec>=0.3.6',
+    'pyqt5>=5.15.11',
+    'pyqtgraph>=0.13.7',
+    'pyopengl>=3.1.7'
+]
+
+[project.urls]
+# homepage = 'https://patmlr.github.io/qspec/'
+# documentation = 'https://patmlr.github.io/qspec/doc/doc.html'
+download = 'https://pypi.org/project/optrace/#files'
+source = 'https://github.com/patmlr/optrace'
+tracker = 'https://github.com/patmlr/optrace/issues'
+
+[tool.setuptools.package-data]
+'*' = ['*.dll']
