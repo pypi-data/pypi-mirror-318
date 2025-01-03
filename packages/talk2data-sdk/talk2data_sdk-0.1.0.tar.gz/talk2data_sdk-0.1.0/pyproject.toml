@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "talk2data-sdk"
+version = "0.1.0"
+description = "A set of python modules for accessing Bioturing's Talk2Data"
+authors = ["BioTuring <support@bioturing.com>"]
+readme = "README.md"
+packages = [{include = "talk2data_sdk"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "*"
+numpy = "*"
+pandas = "*"
+pydantic = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
