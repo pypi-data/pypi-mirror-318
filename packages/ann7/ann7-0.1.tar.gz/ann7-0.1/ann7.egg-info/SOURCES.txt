@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+ann7/__init__.py
+ann7/nn.py
+ann7.egg-info/PKG-INFO
+ann7.egg-info/SOURCES.txt
+ann7.egg-info/dependency_links.txt
+ann7.egg-info/requires.txt
+ann7.egg-info/top_level.txt
