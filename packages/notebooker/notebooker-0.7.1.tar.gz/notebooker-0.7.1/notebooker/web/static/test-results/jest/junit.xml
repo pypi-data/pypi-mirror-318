@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="4" failures="0" errors="0" time="1.692">
+  <testsuite name="index.js" errors="0" failures="0" skipped="0" timestamp="2025-01-02T15:33:43" time="1.143" tests="4">
+    <testcase classname="index.js getCurrentFolder" name="index.js getCurrentFolder" time="0.005">
+    </testcase>
+    <testcase classname="index.js updateNavigationPanel" name="index.js updateNavigationPanel" time="0.009">
+    </testcase>
+    <testcase classname="index.js updateContents" name="index.js updateContents" time="0.013">
+    </testcase>
+    <testcase classname="index.js load_data" name="index.js load_data" time="0.008">
+    </testcase>
+  </testsuite>
+</testsuites>
