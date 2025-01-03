@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: civitai-api
+Version: 0.1.2
+Summary: Default template for PDM package
+Author-Email: Pyon~ Pyon~~ <32931796+tick97115115@users.noreply.github.com>
+License: MIT
+Requires-Python: >=3.10
+Requires-Dist: httpx[socks]>=0.28.1
+Requires-Dist: pydantic>=2.10.4
+Requires-Dist: anyio>=4.7.0
+Description-Content-Type: text/markdown
+
+# civitai_api
