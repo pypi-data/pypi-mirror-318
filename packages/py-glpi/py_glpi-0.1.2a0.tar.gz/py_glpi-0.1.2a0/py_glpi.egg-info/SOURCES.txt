@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+py_glpi.egg-info/PKG-INFO
+py_glpi.egg-info/SOURCES.txt
+py_glpi.egg-info/dependency_links.txt
+py_glpi.egg-info/requires.txt
+py_glpi.egg-info/top_level.txt
+tests/test_connection.py
+tests/test_document_resource.py
+tests/test_ticket_resource.py
+tests/test_user_resource.py
