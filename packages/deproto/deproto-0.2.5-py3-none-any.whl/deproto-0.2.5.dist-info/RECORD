@@ -1,0 +1,10 @@
+deproto/__init__.py,sha256=uwd9_CjgRq7ntFZzswji7AFdomVVs72DYsUkVMmGPdM,572
+deproto/cluster.py,sha256=cqpZh4rbg0BnDGTJZxAeW0v6kA4QYDnHiKzEkeQq1Ik,7426
+deproto/node.py,sha256=9msG4-wsz_ywk2BrqX2o96ZRa6BQ5-9LsqBLmO5vtFU,2664
+deproto/protobuf.py,sha256=0ssFUjeWMkL0Tx05LpHpsxqkZ4xueRFzOxlcHPNOEdg,5065
+deproto/types.py,sha256=n9R_-rFyLI87CU0zV2qWpFgLxJvL5tWVwRZ3Q9dBCMo,4487
+deproto-0.2.5.dist-info/LICENSE,sha256=_5ItqYvcxdLRfprNhMxzuHZrjdKfS_3fwyURPgNomxU,1070
+deproto-0.2.5.dist-info/METADATA,sha256=PEB8fI6bL5aQwJhRyScKLs82RVZZap09pN3u7nbWcYw,11514
+deproto-0.2.5.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+deproto-0.2.5.dist-info/top_level.txt,sha256=0jX0j2UePUPnFZZaWhkMygrq9pA_FaTk3rjLdYkGEew,8
+deproto-0.2.5.dist-info/RECORD,,
