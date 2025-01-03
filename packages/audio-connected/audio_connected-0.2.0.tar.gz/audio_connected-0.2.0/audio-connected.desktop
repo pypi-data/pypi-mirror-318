@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.5
+Type=Application
+Name=Audio Connected
+Comment=Set EPOS ADAPT 660 headset as default sink when connected
+Exec=audio-connected "EPOS ADAPT 660"
+OnlyShowIn=XFCE;
+StartupNotify=false
+Terminal=false
+Hidden=false
