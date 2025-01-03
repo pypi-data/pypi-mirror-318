@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: polars_qf
+Version: 0.1.0
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Scientific/Engineering
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: polars >=1
+License-File: LICENSE
+Summary: A quant factor plugin for polars
+Author: cyber-zhs <cyber-zhs@tuta.io>
+Author-email: cyber-zhs <cyber_zhs@sohu.com>
+License: Apache-2.0
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Repository, https://github.com/cyber-zhs/polars-qf
+Project-URL: Changelog, https://github.com/cyber-zhs/polars-qf/releases
+
+# Quant Factor Plugin for Polars.
+
+Add technical analysis and quant factor to polars.
+
+## Quick Start
+
+### Python
+```python
+import polars as pl
+import polars_qf as qf
+# avoid `qf` unused warnings
+assert qf
+val = [2.222, 4.444, 5.555, 6.666, 7.777]
+df = pl.DataFrame([pl.Series("S", val)])
+expr = pl.col("S").qf.rd(1)
+df = df.select(expr)
+```
+
+### Rust & Js & R
+not support yet, but in planning.
+
+## Functions List
+TODO
