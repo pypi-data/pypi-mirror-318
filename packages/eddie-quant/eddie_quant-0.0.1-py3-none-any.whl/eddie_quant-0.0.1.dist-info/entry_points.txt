@@ -1,0 +1,4 @@
+[console_scripts]
+hello_world=quant.secipts.hello:main
+update_db=quant.scripts.update_db:main
+
