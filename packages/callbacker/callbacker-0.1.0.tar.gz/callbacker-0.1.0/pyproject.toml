@@ -1,0 +1,33 @@
+[project]
+name = "callbacker"
+version = "0.1.0"
+description = "Callback library for sync/async python"
+authors = [
+    { name = "ipfans", email = "363344+ipfans@users.noreply.github.com" },
+]
+dependencies = [
+    "frozenlist>=1.5.0",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.4",
+    "ruff>=0.8.4",
+    "flake8>=7.1.1",
+    "black>=24.10.0",
+    "mypy>=1.14.1",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
