@@ -1,0 +1,2 @@
+[console_scripts]
+homes = homes:main
