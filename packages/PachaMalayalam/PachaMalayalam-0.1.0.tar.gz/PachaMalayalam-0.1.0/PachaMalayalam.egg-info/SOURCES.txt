@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+PachaMalayalam.egg-info/PKG-INFO
+PachaMalayalam.egg-info/SOURCES.txt
+PachaMalayalam.egg-info/dependency_links.txt
+PachaMalayalam.egg-info/entry_points.txt
+PachaMalayalam.egg-info/top_level.txt
+pachamalayalam/__init__.py
+pachamalayalam/transpiler.py
