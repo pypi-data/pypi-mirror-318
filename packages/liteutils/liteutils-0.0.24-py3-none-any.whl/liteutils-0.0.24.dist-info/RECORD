@@ -1,0 +1,13 @@
+liteutils/__init__.py,sha256=BMNWmFH45SBp_5ncmk2Ksui4zbfpU_e2ylZ6mWQ6K6Q,124
+liteutils/_arxiv/__init__.py,sha256=iu1HygAD27Nf1xBv0w8FyuzwyKpSJFNYKnmES-_YdyM,77
+liteutils/_arxiv/_arxiv_latex.py,sha256=UU4rTDKSDhAtoFAVbfClA2vcGVS4rLe_RuxFcyer4x0,1436
+liteutils/_arxiv/_arxiv_read.py,sha256=pEo3edUza3jauRoW0Ftnz_txVnfABO-mjtc8eWOETYA,520
+liteutils/_pdf_to_image/__init__.py,sha256=PD6vlWwqM0qErFCjul0gx3tHezd5-8w1WNMXZcH8zUU,31
+liteutils/_pdf_to_image/main.py,sha256=hpnlaKWYYOg6MC10QK54Oe0MmH4dCgbQ2vJYGgqL_zw,2274
+liteutils/_pdf_to_image/outpu.png,sha256=STf7a98nB4iqE2xFC3veuVOCc_nx6NUhy7mn355Bfg4,223047
+liteutils/_pymupdf/__init__.py,sha256=ZHZk9jN3htLCYMMmeI1cfEy2WLvbIjv9sZD3CWUfs0Q,1903
+liteutils/_reader/__init__.py,sha256=JYFrsDtBIRXiMZNwCr6Pxv3f3os9OGkCyEGyzJJnu9M,68
+liteutils/_reader/all_files_reader.py,sha256=5IKDGeeA_3_jTbyUvLMWgwN2Ogva-KXimzhwkKliEuU,5358
+liteutils-0.0.24.dist-info/METADATA,sha256=fK-XVv6h57ciXBjaUt-wz2_MK1jJrwUp60DPXeRsb_U,747
+liteutils-0.0.24.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+liteutils-0.0.24.dist-info/RECORD,,
