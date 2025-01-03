@@ -1,0 +1,13 @@
+talk2data_sdk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+talk2data_sdk/connector/__init__.py,sha256=8FwAVjiIDyRM97bSSpwsHxlF4o2YOKJ8ol9cOhZiXaM,75
+talk2data_sdk/connector/talk2data_connector.py,sha256=Bbo7UJpddjO2k4JC2X5tywuW6BnO5Ccg2O-oK95Gb5Q,2766
+talk2data_sdk/constants.py,sha256=hKjuv5oYgtKOsNjueJfCEZZQWcrbAY9MV3IS3eRO40U,275
+talk2data_sdk/database/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+talk2data_sdk/database/database.py,sha256=41EcsP518sAUYrQstuIFP7ZCoQ1MRaOd_-98Ys-Pe20,6305
+talk2data_sdk/database/gene_annotation.py,sha256=0K_VI8LUKPCQR8k4Qcfnfij2UAv_t38XZpIKfElRYV4,1013
+talk2data_sdk/logging.py,sha256=DKJuaRfc-cVyXmqrplWUiP82EaUOmsTgwjNJ9jzhi2g,295
+talk2data_sdk/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+talk2data_sdk/utils/requests.py,sha256=SDS57RCXJnm6inOGfUXCnW27YMRmDQKPWRwb3Ceqo7w,917
+talk2data_sdk-0.1.0.dist-info/METADATA,sha256=mawwmX3_eYfmG4Ns2lD1Hf5-CizffHeAVHQra9kjL8A,1272
+talk2data_sdk-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+talk2data_sdk-0.1.0.dist-info/RECORD,,
