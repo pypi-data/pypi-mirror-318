@@ -1,0 +1,2 @@
+[console_scripts]
+jpl-labcas-downloader = jpl.labcas.downloader.main:main
