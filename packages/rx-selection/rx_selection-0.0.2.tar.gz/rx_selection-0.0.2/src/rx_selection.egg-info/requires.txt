@@ -1,0 +1,9 @@
+data-manipulation-utilities
+numpy
+jacobi
+pandas
+numpy
+matplotlib
+
+[dev]
+pytest
