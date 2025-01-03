@@ -1,0 +1,10 @@
+/build/
+/arfx.egg-info/
+/dist/
+/setuptools-*
+*.pyc
+*.so
+*.arf
+*.wav
+/examples/
+.DS_Store
