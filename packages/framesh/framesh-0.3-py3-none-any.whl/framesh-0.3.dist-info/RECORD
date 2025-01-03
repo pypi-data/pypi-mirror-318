@@ -1,0 +1,14 @@
+framesh/__init__.py,sha256=oFbhrT5D3EM6zezNnx0fO85_dsbZJYd7U_vDwWV5EtE,589
+framesh/board.py,sha256=0LdAGLA6h3v18GfipVGnXUSd1dZstz7bPTOR4G1auOg,8042
+framesh/flare.py,sha256=RrY5wSlJDksLVXpHUsiQuh2HPVHhShBIyusZvmUtaZo,8125
+framesh/gframes.py,sha256=Zd9YTgYpu8LeBs7yWxxjKRC2op3WBKIv2eeLYryZwP4,17677
+framesh/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+framesh/rops.py,sha256=fH_dcXNJJcbPK4vGFa_F42YBfqVK2x499e9dHqjC6O0,8583
+framesh/shot.py,sha256=vgCo1URvY7qGwXUzEl7ZSFen-Ll8fyWQv_nmZDCbaxI,7102
+framesh/toldi.py,sha256=8-v_V35eAOUKlJQw0ehlz5zDlOwzCa-Hkgkt6nBQEcE,7641
+framesh/util.py,sha256=IuWQhGozfMwwTMKh6KHUSUJ_pxuJy5BLGIGx2zqoqkM,11720
+framesh-0.3.dist-info/LICENSE,sha256=dXe2ZimvYLpI8sXghT_VRJTVEUgoo9ZqceQTSvP6NYA,1072
+framesh-0.3.dist-info/METADATA,sha256=ONgknFJht_2ndqZriI7IdShbwP22AV7U5D8fA6Da0s4,5279
+framesh-0.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+framesh-0.3.dist-info/top_level.txt,sha256=7ow0zAX9APVFSYsMvrVkoZa1ECEnI3ukRy8T1bCxfqs,8
+framesh-0.3.dist-info/RECORD,,
