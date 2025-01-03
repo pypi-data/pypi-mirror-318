@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: modulo_pablo
+Version: 0.1.1
+Summary: Esta es la descripcion de mi paquete
+Home-page: https://github.com/Duz-Dev/modulo-pablo
+Download-URL: https://github.com/Duz-Dev/modulo-pablo/tarball/0.1
+Author: Ruben Chavez
+Author-email: pablo.dev.academy@gmail.com
+License: MIT
+Keywords: testing,logging,example
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pillow
+Requires-Dist: requests
+
+# MÃ³dulo-Pablo
+
+**MÃ³dulo Pablo** es un paquete de Python que incluye funcionalidades de ejemplo para saludar, despedir, y mostrar imÃ¡genes aleatorias desde una URL en funciÃ³n del sistema operativo en el que se ejecute.
+
+## CaracterÃ­sticas
+
+- Saludos y despedidas personalizadas que incluyen el nombre del mÃ³dulo.
+- Descarga y visualizaciÃ³n automÃ¡tica de imÃ¡genes desde una URL proporcionada.
+- Compatible con sistemas operativos Windows, macOS y Linux para abrir la imagen descargada.
+
+## InstalaciÃ³n
+
+Para instalar el mÃ³dulo desde PyPI:
+
+```bash
+pip install modulo-pablo
+```
+
+### InstalaciÃ³n desde GitHub
+
+Si prefieres instalar el mÃ³dulo directamente desde el repositorio de GitHub:
+
+```bash
+pip install git+https://github.com/Duz-Dev/modulo-pablo.git
+```
+
+## Uso
+
+A continuaciÃ³n, se presentan algunos ejemplos de uso del mÃ³dulo `pablo`:
+
+### Saludo
+
+```python
+import modulo_pablo
+
+# Saludo personalizado
+nombre = "Juan"
+saludo = modulo_pablo.saludar(nombre)
+print(saludo)
+```
+
+### Despedida
+
+```python
+import modulo_pablo
+
+# Despedida personalizada
+nombre = "Juan"
+despedida = modulo_pablo.despedir(nombre)
+print(despedida)
+```
+
+### Mostrar Imagen Aleatoria
+
+```python
+import modulo_pablo
+
+# Mostrar una imagen desde una URL (se abrirÃ¡ automÃ¡ticamente con el visor por defecto)
+modulo_pablo.img_random("https://i.postimg.cc/YCWcC2zN/wallhaven-j5mj3w-1920x1080.png")
+```
+
+El mÃ©todo `img_random` descarga la imagen desde la URL proporcionada y la muestra con el visor predeterminado segÃºn el sistema operativo (Windows, macOS o Linux).
+
+## Contribuir
+
+Si deseas contribuir a este proyecto, por favor sigue estos pasos:
+
+1. Haz un fork del repositorio.
+2. Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`).
+3. Realiza los cambios en tu rama.
+4. Haz commit de tus cambios (`git commit -am 'AÃ±adir nueva funcionalidad'`).
+5. Sube los cambios a tu fork.
+6. EnvÃ­a un Pull Request detallando tus cambios.
+
+## Licencia
+
+Este proyecto estÃ¡ licenciado bajo la Licencia MIT - consulta el archivo [LICENSE](LICENSE) para mÃ¡s detalles.
+
+## Contacto
+
+- **Autor**: Ruben Chavez
+- **Correo**: <pablo.dev.academy@gmail.com>
+- **Repositorio en GitHub**: [https://github.com/Duz-Dev/modulo-pablo](https://github.com/Duz-Dev/modulo-pablo)
