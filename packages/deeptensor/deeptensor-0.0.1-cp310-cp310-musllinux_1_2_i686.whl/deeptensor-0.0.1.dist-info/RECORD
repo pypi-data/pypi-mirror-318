@@ -1,0 +1,8 @@
+deeptensor-0.0.1.dist-info/RECORD,,
+deeptensor-0.0.1.dist-info/METADATA,sha256=oHQ1EdqIcgPPLnjMsu2XqDVPzyuzLgQ9K7jlK3JYcps,835
+deeptensor-0.0.1.dist-info/WHEEL,sha256=gh0Ei1bx3bymnjO7gV5xPy_nSqUzogGpn4zjz-Ob03c,115
+deeptensor-0.0.1.dist-info/licenses/LICENSE,sha256=BqCyOvOaiwd1VlcW7kPGgr5KOm2-eviMMcVtf_SA9go,1065
+deeptensor/_core.cpython-310-i386-linux-gnu.so,sha256=8NHAjIxN7FnMZupKHhoa8ffJSKb0sYM8A_wOXaVqgKk,139753
+deeptensor/__init__.py,sha256=fgELgdtWcTLBMPBClOao4eWpcrCczxD18s6FFkS3dxI,98
+deeptensor.libs/libgcc_s-1257a076.so.1,sha256=wbXWo2Qh33OuE7spB8-mVbZoEiUkvZu6ZH78pUNr9X8,168321
+deeptensor.libs/libstdc++-0530927c.so.6.0.32,sha256=h2p2et0WB0CYcMcUEViWjYXOe8uir-_tHJJZui-6GRc,3537509
