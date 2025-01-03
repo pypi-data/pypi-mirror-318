@@ -1,0 +1,9 @@
+akima/__init__.py,sha256=c5XpyeSQSVlIeko0X7MNTiUkcr7AH0-qP2t8Z7DRCB0,95
+akima/_akima.cp310-win_amd64.pyd,sha256=i4rTp6mxoGK8Tu1U-e6YwBpgWeWo202JfDFpCBptwKM,16896
+akima/akima.py,sha256=akOG26GYOgVLZLQA7EKBNP9K2brIp8DzTcU81UQ6Y2g,7988
+akima/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+akima-2025.1.1.dist-info/LICENSE,sha256=gY5qX6ak1CQY_iNKWWwcZPJOtm9PRI-tlsv5HOTs99w,1559
+akima-2025.1.1.dist-info/METADATA,sha256=HUPl9i2h2pXOAikSCwYNwSefm3FpupajsHeQLgPU8YU,3412
+akima-2025.1.1.dist-info/WHEEL,sha256=tcd-HDpskugT8GYYKyyid0lOlzoZtZdWwcrj5ormtfo,101
+akima-2025.1.1.dist-info/top_level.txt,sha256=mJMD2es5Od5hOTE_v8TGYCUaqoPUSGKt5XOTaTvSBaA,6
+akima-2025.1.1.dist-info/RECORD,,
