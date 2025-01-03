@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: sallmon-core
+Version: 2.0.1
+Summary: Sallmon Core: A Bitcoin Clone
+Home-page: https://github.com/minakilabs/sallmon_core
+Author: c80129b (Andrew Polykandriotis)
+Author-email: andrew@example.com
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: websockets
+Requires-Dist: cryptography
