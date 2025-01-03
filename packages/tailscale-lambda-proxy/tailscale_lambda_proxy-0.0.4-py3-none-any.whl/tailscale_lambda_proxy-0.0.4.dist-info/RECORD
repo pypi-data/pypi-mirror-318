@@ -1,0 +1,9 @@
+tailscale_lambda_proxy/__init__.py,sha256=UgWnm3kYyb-Nl3533M6_1-fRPPF7Ma3GQGN6r9KCCW4,12357
+tailscale_lambda_proxy/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+tailscale_lambda_proxy/_jsii/__init__.py,sha256=G3fpSEVuqAqTqEDfMA4vPutc8Hy_JtaTXKWhdJb98jc,1508
+tailscale_lambda_proxy/_jsii/tailscale-lambda-proxy@0.0.4.jsii.tgz,sha256=EHoVDlY6GdeAIrxWrsW1nCEbP2czh_YY5ERYOAz4XLk,377946
+tailscale_lambda_proxy-0.0.4.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+tailscale_lambda_proxy-0.0.4.dist-info/METADATA,sha256=Ax4WENf4Oo557B3iZbgU3bDqK-WW4NqiYCbtX5J3qcU,1201
+tailscale_lambda_proxy-0.0.4.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+tailscale_lambda_proxy-0.0.4.dist-info/top_level.txt,sha256=UJFBit-ESRId59KIeT3Muyf4DI8vajhuY4t7PsWu0MI,23
+tailscale_lambda_proxy-0.0.4.dist-info/RECORD,,
