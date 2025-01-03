@@ -1,0 +1,14 @@
+certbot
+requests
+setuptools
+
+[dev]
+python-lsp-server
+pylsp-mypy
+
+[test]
+mypy
+pycodestyle
+pylint
+pytest
+types-requests

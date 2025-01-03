@@ -1,0 +1,73 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "certbot-dns-bookmyname"
+dynamic = ["version"]
+description = "BookMyName DNS Authenticator plugin for Certbot"
+dependencies = [
+    "certbot",
+    "requests",
+    "setuptools",
+]
+readme = "README.md"
+authors = [
+    { name = "Joffrey Darcq", email = "j-off@live.fr" }
+]
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Plugins",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Security",
+    "Topic :: System :: Installation/Setup",
+    "Topic :: System :: Networking",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Utilities",
+]
+
+[project.entry-points."certbot.plugins"]
+dns-bookmyname = "certbot_dns_bookmyname.dns_bookmyname:Authenticator"
+
+[project.optional-dependencies]
+dev = [
+    "python-lsp-server",
+    "pylsp-mypy",
+]
+test = [
+    "mypy",
+    "pycodestyle",
+    "pylint",
+    "pytest",
+    "types-requests",
+]
+
+[project.urls]
+Homepage = "https://github.com/Joffr3y/certbot-dns-bookmyname"
+Repository = "https://github.com/Joffr3y/certbot-dns-bookmyname.git"
+Issues = "https://github.com/Joffr3y/certbot-dns-bookmyname/issues"
+
+[tool.setuptools]
+packages = ["certbot_dns_bookmyname"]
+
+[tool.setuptools.dynamic]
+version = {attr = "certbot_dns_bookmyname.__version__"}
+
+[tool.pylint.BASIC]
+no-docstring-rgx = "(__.*__)|(test_[A-Za-z0-9_]*)|(_.*)|(.*Test$)"
+
+[tool.pytest.ini_options]
+pythonpath = "."

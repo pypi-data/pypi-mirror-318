@@ -1,0 +1,2 @@
+[certbot.plugins]
+dns-bookmyname = certbot_dns_bookmyname.dns_bookmyname:Authenticator
