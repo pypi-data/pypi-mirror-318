@@ -1,0 +1,10 @@
+gemgroq/__init__.py,sha256=uPi4fgdhcHx2X8wKU69q7wgiJ69zKZeoVHq5ugqFbrw,158
+gemgroq/api.py,sha256=pq1NzEeMj5SL_FRK9ZPE81vr6lZK8P3BYMpSz2PUuLs,4656
+gemgroq/cli.py,sha256=7_IssMjZgBKnEdSRwQwcMgz2QXIizw3y88WRYFRGOfg,581
+gemgroq/config.py,sha256=73pXRpLhCn49QV79pMqFqcjUxi9znaTM4YyllJZU9UI,2529
+gemgroq-0.1.1.dist-info/LICENSE,sha256=1jOEvrjon-qz_StzyTEVlgHcbNPjFalDhrYWHZkgnx8,1070
+gemgroq-0.1.1.dist-info/METADATA,sha256=EHmsslFgEMgnfgfupPoycXaHjA7GanU1a6tcevoPmUo,2439
+gemgroq-0.1.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+gemgroq-0.1.1.dist-info/entry_points.txt,sha256=ktKzHRM56ifYEi7ZwT3ygr4nWNiWdsilSJe9cX79DCM,45
+gemgroq-0.1.1.dist-info/top_level.txt,sha256=rrGk4bvFfrwXnLOjtIQOOL8xTXPwREhMTGVdA_Og4No,8
+gemgroq-0.1.1.dist-info/RECORD,,
