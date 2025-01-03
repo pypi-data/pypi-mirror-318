@@ -1,0 +1,103 @@
+# BalancedRoutePlanner
+
+BalancedRoutePlanner is a Python package designed for smart city management and other extended applications. It provides functionalities for balanced clustering and route planning to optimize intra-cluster paths efficiently.
+
+---
+
+## Features
+
+1. **Supports multiple data formats**: CSV, XLSX, and SHP point data.
+2. **Balanced clustering**: Uses balanced clustering methods to balance task allocation and route planning.
+3. **Structured data output**: Provides structured data for secondary analysis and generates visualizations of clustering results and routes for intuitive inspection.
+
+---
+
+## Installation
+
+BalancedRoutePlanner requires Python 3.6 or higher. You can install BalancedRoutePlanner from PyPI using the following command:
+
+```sh
+pip install BalancedRoutePlanner
+```
+
+Alternatively, you can install BalancedRoutePlanner using the following method:
+
+```sh
+# Install using Git
+git clone  https://github.com/SmartCitiesTransportationHub/BalancedRoutePlanner.git
+cd BalancedRoutePlanner
+pip install -e .
+```
+
+---
+
+## Usage
+
+You can run `test.py` to test the BalancedRoutePlanner using generated data.
+
+### Example Code
+
+Below is a simple usage example:
+
+```python
+import numpy as np
+from BalancedRoutePlanner import balanced_cluster, nearest_neighbor_2opt, visualize_clusters, visualize_paths
+
+# Generate test data
+def generate_data(n_samples, x_range, y_range):
+    x = np.random.uniform(x_range[0], x_range[1], n_samples)
+    y = np.random.uniform(y_range[0], y_range[1], n_samples)
+    return np.column_stack((x, y))
+
+# Test data and parameters
+coords = generate_data(50, [0, 10], [0, 10])
+num_clusters = 3
+center_point = np.array([5, 5])
+
+# Balanced clustering
+clusters, balanced_model, labels, cluster_sizes = balanced_cluster(coords, num_clusters)
+
+# Path planning
+paths = []
+for cluster_id, cluster_coords in clusters.items():
+    path = nearest_neighbor_2opt(coords[cluster_coords], center_point)
+    paths.append(path)
+
+# Visualization
+visualize_clusters(coords, labels, balanced_model.cluster_centers_)
+visualize_paths(paths, center_point)
+```
+
+### Parameter Descriptions
+
+- **`balanced_cluster`**:
+  - `data`: Array of data point coordinates.
+  - `num_clusters`: Number of clusters.
+  - `tolerance` (optional): Tolerance for initial assignment.
+  - `max_iterations` (optional): Maximum number of iterations.
+  - `optimize_geo` (optional): Whether to perform geographical optimization.
+
+- **`nearest_neighbor_2opt`**:
+  - `coords`: Array of data point coordinates.
+  - `start_point`: Starting and ending point of the path.
+
+- **`visualize_clusters`**:
+  - `coords`: Array of data point coordinates.
+  - `labels`: Cluster labels for each data point.
+  - `centers`: Coordinates of cluster centers.
+
+- **`visualize_paths`**:
+  - `paths`: List of optimized paths for each cluster.
+  - `center_point`: Starting and ending point of the paths.
+
+---
+
+## Support
+
+If you have any issues or if you want to contribute to BalancedRoutePlanner, please open an issue or submit a pull request on GitHub!
+
+---
+
+## License
+
+BalancedRoutePlanner is open source and licensed under the MIT license.
