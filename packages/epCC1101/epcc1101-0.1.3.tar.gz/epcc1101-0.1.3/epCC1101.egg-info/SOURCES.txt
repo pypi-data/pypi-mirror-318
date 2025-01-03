@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+epCC1101.egg-info/PKG-INFO
+epCC1101.egg-info/SOURCES.txt
+epCC1101.egg-info/dependency_links.txt
+epCC1101.egg-info/entry_points.txt
+epCC1101.egg-info/requires.txt
+epCC1101.egg-info/top_level.txt

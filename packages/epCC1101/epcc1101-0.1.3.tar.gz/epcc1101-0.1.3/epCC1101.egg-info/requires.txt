@@ -1,0 +1,4 @@
+lgpio==0.2.2.0
+rpi-lgpio==0.6
+spidev==3.6
+rust_rpi_cc1101_driver==0.1.0
