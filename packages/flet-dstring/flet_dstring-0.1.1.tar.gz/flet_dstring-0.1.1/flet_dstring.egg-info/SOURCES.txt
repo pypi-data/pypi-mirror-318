@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+flet_dstring/__init__.py
+flet_dstring/dstring.py
+flet_dstring.egg-info/PKG-INFO
+flet_dstring.egg-info/SOURCES.txt
+flet_dstring.egg-info/dependency_links.txt
+flet_dstring.egg-info/requires.txt
+flet_dstring.egg-info/top_level.txt
