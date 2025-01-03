@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: avici
+Version: 1.0.6
+Summary: Amortized Inference for Causal Structure Learning
+Home-page: https://github.com/larslorch/avici
+Author: Lars Lorch
+Author-email: lars.lorch@inf.ethz.ch
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10.0
+License-File: LICENSE
+Requires-Dist: jax>=0.3.17
+Requires-Dist: jaxlib>=0.3.14
+Requires-Dist: tensorflow
+Requires-Dist: imageio
+Requires-Dist: jupyter
+Requires-Dist: matplotlib
+Requires-Dist: numpy<2
+Requires-Dist: pandas
+Requires-Dist: igraph
+Requires-Dist: scikit-learn
+Requires-Dist: tqdm
+Requires-Dist: dm-haiku>=0.0.8
+Requires-Dist: psutil
+Requires-Dist: optax
+Requires-Dist: pyarrow==7.0.0
+Requires-Dist: tensorflow-datasets~=4.3.0
+Requires-Dist: deepdiff
+Requires-Dist: huggingface-hub
