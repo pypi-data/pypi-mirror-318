@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+kaia/__init__.py
+kaia_kaia.egg-info/PKG-INFO
+kaia_kaia.egg-info/SOURCES.txt
+kaia_kaia.egg-info/dependency_links.txt
+kaia_kaia.egg-info/top_level.txt
