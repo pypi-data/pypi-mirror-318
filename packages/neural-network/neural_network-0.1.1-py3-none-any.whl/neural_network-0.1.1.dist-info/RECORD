@@ -1,0 +1,10 @@
+neural_network/__init__.py,sha256=DLg7FAPVEMmwn7rniWJNC-uohnxR_Xv0jUmbpNjuKkA,247
+neural_network/activation.py,sha256=pczUE505juWNftlo9bJgjRK1x-5jSIfDHLRjVHsQVOg,1736
+neural_network/loss.py,sha256=dcThIzy0yk4tmPRu3Q5wYVps8PM26UjkoX09eXB0tgo,1774
+neural_network/neural_network.py,sha256=1oyYtRMXLbWg_wpUnSiMRjD_UUx_BmzjC-ieOeCDVgM,20006
+neural_network/utility.py,sha256=6_l0-5T3XFHiVkHHvtyYvJgkobj_48JyKJABkbP94MQ,813
+neural_network-0.1.1.dist-info/LICENSE,sha256=jtDDjioWk0EF6_t7HdMshtyA4KQfzVauHaLmFHIRJug,1078
+neural_network-0.1.1.dist-info/METADATA,sha256=aF-h7xsvRlvYMdLenT19Wv4E7_C8svhqUtFP5w8RnNU,6639
+neural_network-0.1.1.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+neural_network-0.1.1.dist-info/top_level.txt,sha256=3-TEq_MGWIbdqv5QkQiw1BXfUZzRhHjG6eEFm1C-6nM,15
+neural_network-0.1.1.dist-info/RECORD,,
