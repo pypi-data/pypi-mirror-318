@@ -1,0 +1,92 @@
+# 智游剪辑开放平台python sdk
+
+## 快速开始
+
+可以使用pip来快速安装
+
+```bash
+pip install zyjj-open-sdk
+```
+
+访问 [智游剪辑网页版](https://app.zyjj.cc/user) 获取你的秘钥信息
+
+这里以`文章框架分析`为例，使用方法如下
+
+```python
+from zyjj_open_sdk import Client, FileObject
+import os
+# 初始化全局客户端（只需要初始化一次）
+client = Client(os.getenv('sk'))
+
+# 直接调用文章框架分析功能并获取返回结果
+res = client.text.article_framework_analysis(user="爱，是人间最美好的字眼，它象征着浪漫，象征着温馨，象征着永恒……可是生活中，爱究竟在哪里呢？我一直苦苦寻觅着……\n\n电梯的一角，一对母女迎面而来，看起来只有五六岁的小女孩站在电梯前迟迟不敢向前迈一步。这时，母亲看着女儿笑了笑，说：“宝贝，别怕，向前迈。”小女孩紧皱着眉头，寒颤颤地迈上去了。\n\n电梯上的女孩还是颤抖得厉害，仿佛一只刚经历过风浪的胆怯的小燕子。电梯很快就到了，小女孩又是不敢迈，于是母亲面带微笑，温和地说：“宝贝，抬起脚，往前走，快！”小女孩抬头看了看母亲，这时的小女孩仿佛浑身充满了神奇的力量：一跨，下来了。\n\n“真勇敢！”母女俩相视而笑。\n\n——我的心一怔，原来爱是如此平凡的鼓励！\n\n拥挤的公交车上。衣着光鲜的年轻男女们正在津津有味地谈论着，车里一片喧哗。公交车的角落坐着一位长相平凡、衣着朴素的妇女。\n\n“吱”的一声，车子停了。一个拄着拐杖，头发花白的老婆婆提着一大袋的东西步履蹒跚地走上去，年轻男女们不俏一顾地瞥了一眼又继续着他们的“热门”话题。老婆婆缓缓地伸出青筋绽出的双手吃力地抓住车上的柱子，好像布满青苔的老藤，紧紧地缠在树上。瘦弱的身躯跟着车子有节奏地晃着。\n\n“大娘，来，您坐下吧！”妇女毅然站了起来，扶着老婆婆一步一步走向座位，“谢谢！”老婆婆欣慰地笑了。\n\n——我心弦一动，原来爱也是如此平淡的关怀。如果我是坐着的，我能做到吗？我问我自己。\n\n灯光柔和的餐厅。父亲煮了香喷喷的饭菜，红的是虾，绿的是菲菜，香的是汤，辣的萝卜丝，在我面前排成一排。满屋子洋溢着幸福的味道，又累又饿的我放下书包，立刻埋头狼吞虎咽起来。一碗汤下肚，整个人暖洋洋的，我这才端起父亲已盛的饭，慢慢享受。父亲在旁边看着我，微笑着。\n\n我由得停住了正要夹菜的筷子，在父亲面前一晃，“老爸，笑啥呢？”看你吃饭的馋样，也是种享受呀！“\n\n——我的心一暖，原来爱更是如此简单的守候。\n\n好像刹那间，我懂得了爱。\n\n哪怕是一句平凡的鼓励，一份平淡的关怀，一次简单的守候，只要发自内心的真情流露，就是一份珍贵的爱。\n").execute()
+print(res.text)
+```
+
+## 文件上传
+
+如果涉及到文件上传，需要使用`FileObject`对象，该对象支持三种初始化方式
+- 从本地路径初始化
+- 从bytes初始化
+- 从url初始化
+
+这里以`ncm转mp3`为例,我们可以这样使用
+
+```python
+from zyjj_open_sdk import Client, FileObject
+import os
+# 初始化全局客户端（只需要初始化一次）
+client = Client(os.getenv('sk'))
+
+# 下面三种方法选一种即可
+# 通过本地路径上传
+file = FileObject.from_path('xxx.ncm')
+# 通过bytes上传，注意需要带上文件名
+file = FileObject.from_bytes('tmp.ncm', b'')
+# 也可以通过url上传
+file = FileObject.from_url('https://xxx.com/xxx.ncm')
+res = client.tool.ncm_to_mp3(ncm=file).execute()
+print(res.mp3)
+```
+
+## 执行方式
+
+目前sdk支持4种调用方式
+> 部分任务不支持同步调用（所有任务均支持异步调用），请以文档说明为准
+- 同步调用
+- 异步等待模式
+- 异步回调模式
+- 异步查询模式
+
+```python
+import time
+from zyjj_open_sdk import Client, FileObject
+import os
+
+# 初始化全局客户端（只需要初始化一次）
+client = Client(os.getenv('sk'))
+# 使用时会返回一个可执行对象，此时支持初始化了任务数据，不会立即执行
+execute = client.text.article_translate("hello word", "中文")
+# 1.我们可以直接同步执行获取执行结果，使用最简单
+res = execute.execute()
+print(res.text)
+# 2.使用异步阻塞模式，异步阻塞等待任务完成，wait可以传入一个回调函数，用于进度监听
+res = execute.execute_async().wait(lambda i: print(i))
+print(res.text)
+# 3.使用异步监听模型，不会阻塞流程，需要通过回调的方式来获取结果
+execute.execute_async().listener(
+    on_progress=lambda i: print(i),  # 任务进度回调
+    on_success=lambda data: print(data.text),  # 任务执行成功回调
+    on_error=lambda e: print(e)  # 任务执行失败回调
+)
+# 4.我们可以异步查询模式
+task = execute.execute_async()
+while True:
+    if task.status == 3:  # 任务执行成功
+        print(task.output.text)  # 打印任务结果
+    elif task.status == 4:  # 任务执行失败
+        print(task.err)  # 打印错误信息
+    else: # 其他情况为正在执行，这里可以打印执行进度
+        print(task.progress) 
+    time.sleep(1) # 我们可以每秒轮询一次
+```
