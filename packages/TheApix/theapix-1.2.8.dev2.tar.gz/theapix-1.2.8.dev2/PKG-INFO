@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: TheApix
+Version: 1.2.8.dev2
+Summary: TheApix is a Python library for asynchronous interactions with various public APIs, enabling diverse functionalities and data retrieval.
+Author: Vivek Kumar
+License: MIT
+Project-URL: Issues, https://github.com/Vivekkumar-IN/TheApi/issues
+Project-URL: Source, https://github.com/Vivekkumar-IN/TheApi
+Project-URL: Community, https://t.me/TheTeamVivek
+Project-URL: Documentation, https://vivekkumar-in.github.io/TheApi/
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiofiles
+Requires-Dist: pillow
+Requires-Dist: httpx
+
+Welcome to the **TheApix!** This library allows you to easily interact with the API using asynchronous options.
+
+Installation
+
+```sh
+pip install TheApix
+```
+
+See the docs as [here](https://vivekkumar-in.github.io/TheApi/)
