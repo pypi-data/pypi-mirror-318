@@ -1,0 +1,23 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+Metamorphic/__init__.py
+Metamorphic.egg-info/PKG-INFO
+Metamorphic.egg-info/SOURCES.txt
+Metamorphic.egg-info/dependency_links.txt
+Metamorphic.egg-info/requires.txt
+Metamorphic.egg-info/top_level.txt
+Metamorphic/MorphAlyt/MorphAlyt.c
+Metamorphic/MorphSign/MorphSign.c
+Metamorphic/MorphAlyt/MorphAlyt.c
+Metamorphic/MorphAlyt/__init__.py
+Metamorphic/MorphSign/MorphSign.c
+Metamorphic/MorphSign/__init__.py
+Metamorphic/data/F분포표(0.01).csv
+Metamorphic/data/F분포표(0.1).csv
+Metamorphic/data/Studentized Range q Table(0.01).csv
+Metamorphic/data/Studentized Range q Table(0.05).csv
+Metamorphic/data/chi.csv
+Metamorphic/data/t분포표.csv
+Metamorphic/data/표준정규분포표.csv
