@@ -1,0 +1,11 @@
+wtpsplit_lite/__init__.py,sha256=qWwwEahwIx9BuFp05n1k_Sx76W1FGjjb91QMVemyqmY,76
+wtpsplit_lite/_config.py,sha256=YJ4Rx41tRhjRKVcpAPeOYtKnngE4c4KIm4PXmmsRBgI,1454
+wtpsplit_lite/_extract.py,sha256=Tlzf_h_3f1xzJvC0M5-7mXZKMPbpNzyfl2-FjO67N_s,9536
+wtpsplit_lite/_sat.py,sha256=D9qDO3hEgnenc1mbChXS0uzxWX2QYsUq8IbOu_eMVNw,16013
+wtpsplit_lite/_tokenizer.py,sha256=z1iD9_L_fpc8iOWUowVgUPJ3C_mv7DH_PMqHr_nrBww,2859
+wtpsplit_lite/_utils.py,sha256=y73wdayFuOD-G20A328gGy0HW1BMWy-DOZsvcMg_Urs,4732
+wtpsplit_lite/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wtpsplit_lite-0.1.0.dist-info/LICENSE,sha256=4jjJmM5xqTChJiGNceigWNdkdklOV7Dmz5RJ9LqY18w,1068
+wtpsplit_lite-0.1.0.dist-info/METADATA,sha256=xKo2HG699cUz3uHv0ei76jRYzHzX3saGCMB4pwC_pC4,7987
+wtpsplit_lite-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+wtpsplit_lite-0.1.0.dist-info/RECORD,,
