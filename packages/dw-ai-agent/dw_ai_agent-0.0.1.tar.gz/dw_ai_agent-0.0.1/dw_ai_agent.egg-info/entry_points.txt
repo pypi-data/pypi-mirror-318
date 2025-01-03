@@ -1,0 +1,2 @@
+[console_scripts]
+dw-ai-agent = main:main
