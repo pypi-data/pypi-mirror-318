@@ -1,0 +1,56 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Prietaisas jau sukonfig\u016bruotas"
+        },
+        "error": {
+            "cannot_connect": "Nepavyko prisijungti",
+            "invalid_host": "Neteisingas pagrindinio kompiuterio pavadinimas arba IP adresas"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "host": "Host",
+                    "port": "Prievadas"
+                },
+                "data_description": {
+                    "host": "\u201eSnapcast\u201c serverio pagrindinio kompiuterio pavadinimas arba IP adresas."
+                },
+                "description": "\u012eveskite savo serverio ry\u0161io duomenis",
+                "title": "Prisijungti"
+            }
+        }
+    },
+    "services": {
+        "join": {
+            "fields": {
+                "entity_id": {
+                    "description": "Grotuvai prisijungs prie \u201e\u0161eimininko\u201c.",
+                    "name": "Subjektas"
+                },
+                "master": {
+                    "description": "Grotuvo, su kuriuo norite sinchronizuoti, subjekto ID.",
+                    "name": "Meistras"
+                }
+            },
+            "name": "Prisijunk"
+        },
+        "restore": {
+            "name": "Atkurti"
+        },
+        "set_latency": {
+            "fields": {
+                "latency": {
+                    "name": "V\u0117lavimas"
+                }
+            },
+            "name": "Nustatyti dels\u0105"
+        },
+        "snapshot": {
+            "name": "Momentin\u0117 nuotrauka"
+        },
+        "unjoin": {
+            "name": "Atsijungti"
+        }
+    }
+}
