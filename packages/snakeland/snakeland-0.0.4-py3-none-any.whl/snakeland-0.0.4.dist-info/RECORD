@@ -1,0 +1,10 @@
+snakeland/CHECKSUM-SHA3-256.py,sha256=-QHji-FNgHg-sRV9OqGm58qbCLGD4j6AAuvwOkDzCLA,529
+snakeland/__init__.py,sha256=13ES6ySDN2LUjxtFFwQ8j3uHK6rQlgZUEbXYYwTOqws,2100
+snakeland/__main__.py,sha256=Zb5dlHE7mpOACjBDUG-5QIo57pesW5JAiHpXCrKd1zc,2069
+snakeland/snakeland.py,sha256=tu-eYSV1zDxso5TkVtiP_mltoVho32wP3Bi7vwpuiwM,70230
+snakeland-0.0.4.dist-info/LICENSE,sha256=qM_1q1NUJrb2p-ZmeV-NfNF1iljb14cI1jm0Pam-gSA,3432
+snakeland-0.0.4.dist-info/METADATA,sha256=UvC3X3_yeLq0ux7m5JgSmNthd4BbSYO9JuwixvkM_90,10060
+snakeland-0.0.4.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+snakeland-0.0.4.dist-info/entry_points.txt,sha256=qalkeT0N84AeEF2uzXKMC2KuU2L37l6ZwTJCDAh_LFQ,55
+snakeland-0.0.4.dist-info/top_level.txt,sha256=sgVhycw5lQIXDtKwwDnW7WaT3nmR0e2FlBMP3lEQ7as,10
+snakeland-0.0.4.dist-info/RECORD,,
