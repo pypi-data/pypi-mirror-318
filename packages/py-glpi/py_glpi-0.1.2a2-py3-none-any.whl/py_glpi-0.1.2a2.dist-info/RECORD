@@ -1,0 +1,13 @@
+py_glpi/__init__.py,sha256=7kZ1WakvAZcp3WYi_BzvhgiDldAizU_TztePuuaLYv8,52
+py_glpi/connection.py,sha256=HIGCuAwXyKYiGzN-6-WF_cy5yZ7JZb2TWEXn8QRKxK8,8396
+py_glpi/helpers.py,sha256=8Ldi6qVXQ1Wpw5pduFEbwnHMuMkdgJ6A8JEwicJ1uV0,235
+py_glpi/models.py,sha256=Y8o27kdpvapDhMTRU81wItiixFziehcEp0cqLuUL_JQ,13161
+py_glpi/resources/__init__.py,sha256=vBJmcIXeOZeRBDLFjuDRPmQOWrA2qbk3-M1Slz6N8z4,38
+py_glpi/resources/auth.py,sha256=dsq-x54TCO2nNvIo-qEOmLz7NfM1DRttYj-C0eSO3B4,1802
+py_glpi/resources/documents.py,sha256=loPtnUR4sPTSxfs_fyurInBsBjGhco6iovoAxHw3lzU,2537
+py_glpi/resources/tickets.py,sha256=prprbnJ0XguITAcBxbVP-teOffldowHZiw0-98dEtEc,7329
+py_glpi-0.1.2a2.dist-info/LICENSE,sha256=Laui7rG1UDL0lX0I0a3xlJ7MytDja9igsf7tvrwdByA,1070
+py_glpi-0.1.2a2.dist-info/METADATA,sha256=p1HHVKuW-cxk2-cDLFa6D4NXJhJaKrj1ZFTpCmjjaMo,10152
+py_glpi-0.1.2a2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+py_glpi-0.1.2a2.dist-info/top_level.txt,sha256=rHdlSzjirkNoNrFNKkbnFmqbelUvyeQ8gRS-uWEmj8E,8
+py_glpi-0.1.2a2.dist-info/RECORD,,
