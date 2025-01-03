@@ -1,0 +1,2 @@
+[console_scripts]
+pdfitdown = pdfitdown.pdfitdown_cli:main
