@@ -1,0 +1,16 @@
+whisply/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+whisply/cli.py,sha256=lF819OwYaq4LJ9c1R7r7Svpt61LNcfBdg6mN2g5TSuA,6990
+whisply/diarize_utils.py,sha256=vcZFOIzTzJ8YDjnzgZTc9DCZcrN0BPNkcf3ZL5p0H3g,6735
+whisply/download_utils.py,sha256=upKraT942zQNRXTDb5H-62tF4ojLZLGtANXXPDip0Io,3060
+whisply/enhance_annotations.py,sha256=DjH4zead8ydYzyivhIDHiWZcLaxlRYxg7FTunIez5d0,2664
+whisply/little_helper.py,sha256=u3SWYr2QlTeDA5a1mNCVd6e2d4vnfRnM_m79gF7rThc,13777
+whisply/models.py,sha256=DjzH298S9Nj4tdPCKarCgC_K2hfuLH5l77y8vZ--HpQ,3407
+whisply/output_utils.py,sha256=u28FiJDc3Vg_0z74utXEQDK0WBISz53YNCkVVy6stlY,17683
+whisply/post_correction.py,sha256=iuRNrwfAmHYnbsMWUgSpnEjPilWZeSmZl_E-1hSnNM0,1813
+whisply/transcription.py,sha256=xLExT_2bRdVFKrBo5sI6-lYk9Q3rLhwTMF5WI0eq4Rc,39356
+whisply-0.8.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+whisply-0.8.0.dist-info/METADATA,sha256=-ob87fjA4BDU-bOULGgpEYvlf9igM3V_8sXJDLcCPBU,15267
+whisply-0.8.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+whisply-0.8.0.dist-info/entry_points.txt,sha256=NFDHppr8O3lpGmLGuZzG2oheDwq74B0xPSC1NvsCdAQ,44
+whisply-0.8.0.dist-info/top_level.txt,sha256=P6a6yxAzwGsGg2kDrGpS6v5qlbU67DJfDOuzZqkHcy0,8
+whisply-0.8.0.dist-info/RECORD,,
