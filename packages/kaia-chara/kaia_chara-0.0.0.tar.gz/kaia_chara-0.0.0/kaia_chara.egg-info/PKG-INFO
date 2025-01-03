@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: kaia-chara
+Version: 0.0.0
+Summary: One of the modules for KAIA project
+Author-email: Yuri Okulovsky <yuri.okulovsky@gmail.com>
+License: GPLv3
+Requires-Python: <4.0,>=3.10

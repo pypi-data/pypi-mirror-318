@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+chara/__init__.py
+kaia_chara.egg-info/PKG-INFO
+kaia_chara.egg-info/SOURCES.txt
+kaia_chara.egg-info/dependency_links.txt
+kaia_chara.egg-info/top_level.txt
