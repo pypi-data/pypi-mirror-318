@@ -1,0 +1,4 @@
+del dist\*.gz
+del dist\*.whl
+uv build
+uv publish --token pypi-AgEIcHlwaS5vcmcCJDRjNWVmNDY2LTM4YzUtNDA4Yy1iMTU2LTdhMjVkMTM2Y2VjZgACKlszLCI0ZjIwMjZmNy0xMjFlLTRmZTQtYjVmZi03ZjAzMzJiMTE2NGYiXQAABiDkF9t8cnjicFvtkfg_b6e-Myj8wE9eSijE9vlo9bLu4A
