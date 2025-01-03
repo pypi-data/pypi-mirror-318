@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+assistant/__init__.py
+kaia_assistant.egg-info/PKG-INFO
+kaia_assistant.egg-info/SOURCES.txt
+kaia_assistant.egg-info/dependency_links.txt
+kaia_assistant.egg-info/top_level.txt
