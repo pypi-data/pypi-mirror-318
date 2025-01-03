@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: PokerBots
+Version: 1.0
+Summary: A Pure Python library to test your Poker Bots in a trivial and simple way.
+Home-page: https://www.youtube.com/@_NickTech
+Download-URL: 
+Author: Nikolay Skripko
+Author-email: nskripko@icloud.com
+License: MIT
+Requires-Dist: treys==0.1.8
