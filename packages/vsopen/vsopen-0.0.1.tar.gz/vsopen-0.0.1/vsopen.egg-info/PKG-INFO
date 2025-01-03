@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: vsopen
+Version: 0.0.1
+Summary: Open GitHub repositories directly in VS Code
+Home-page: https://github.com/frenzywall/vsopen
+Author: frenzywall
+Author-email: sreeramjvp.work@gmail.com
+Project-URL: Bug Tracker, https://github.com/frenzywall/vsopen/issues
+Project-URL: Source Code, https://github.com/frenzywall/vsopen
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: gitpython>=3.1.0
+
+# VSOpen
+
+A simple command-line tool to clone GitHub repositories and open them in VS Code.
+
+## Installation
+
+### From PyPI (recommended):
+```bash
+pip install vsopen
+```
+
+### From GitHub:
+```bash
+pip install git+https://github.com/frenzywall/vsopen.git
+
+git clone https://github.com/frenzywall/vsopen.git
+cd vsopen
+pip install .
+```
+
+## Usage
+
+```bash
+vsopen https://github.com/username/repository.git
+```
+
+Or simply run:
+
+```bash
+vsopen
+```
+
+And enter the GitHub URL when prompted.
+
+## Development
+To contribute:
+1. Fork the repository
+2. Clone your fork
+3. Install development dependencies:
+```bash
+pip install -e .
+```
+
+## License
+MIT License

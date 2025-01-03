@@ -1,0 +1,8 @@
+README.md
+setup.py
+vsopen.egg-info/PKG-INFO
+vsopen.egg-info/SOURCES.txt
+vsopen.egg-info/dependency_links.txt
+vsopen.egg-info/entry_points.txt
+vsopen.egg-info/requires.txt
+vsopen.egg-info/top_level.txt
