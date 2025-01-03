@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+cardquant/cardquant.egg-info/PKG-INFO
+cardquant/cardquant.egg-info/SOURCES.txt
+cardquant/cardquant.egg-info/dependency_links.txt
+cardquant/cardquant.egg-info/requires.txt
+cardquant/cardquant.egg-info/top_level.txt
