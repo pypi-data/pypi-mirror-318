@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+restoration/__init__.py
+restoration/cli.py
+restoration/parser.py
+restoration.egg-info/PKG-INFO
+restoration.egg-info/SOURCES.txt
+restoration.egg-info/dependency_links.txt
+restoration.egg-info/entry_points.txt
+restoration.egg-info/requires.txt
+restoration.egg-info/top_level.txt
+tests/test_parser.py

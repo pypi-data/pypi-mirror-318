@@ -1,0 +1,2 @@
+[console_scripts]
+restoration = restoration.cli:cli
