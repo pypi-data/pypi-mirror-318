@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: infolingo
+Version: 0.0.1
+Summary: Efficient Vocabulary Selection for Foreign-Language Learning.
+Author-email: Alice Heiman <kod@heiman.se>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pytest
+Requires-Dist: nltk
+
+# Infolingo – Efficient Vocabulary Selection for Foreign-Language Learning
+
+Infolingo uses cross-entropy and probability to optimize the next best words to learn to improve understanding of a foreign language text.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install infolingo.
+
+```bash
+pip install infolingo
+```
+
+## Usage
+
+```python
+from infolingo import pick_vocab
+
+# returns ["jumps", "fox"]
+pick_vocab("The quick brown fox jumps over the lazy dog", n=2)
+```
+
+## Roadmap
+
+- [x] Add entropy vocabulary picking functions
+- [ ] Add streamlit demo
+- [ ] Add media
+- [ ] Add baseline vocabulary picking functions
+- [ ] Multi-language Support
+    - [ ] Spanish
+    - [ ] French
+
+## Contributing
+
+Any contributions you make are **greatly appreciated**. 
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## Changelog
+
+### 0.1.0
+Initial PyPi submission.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)

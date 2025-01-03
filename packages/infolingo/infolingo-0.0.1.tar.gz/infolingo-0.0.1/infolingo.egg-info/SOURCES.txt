@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+infolingo/__init__.py
+infolingo/main.py
+infolingo/utils.py
+infolingo.egg-info/PKG-INFO
+infolingo.egg-info/SOURCES.txt
+infolingo.egg-info/dependency_links.txt
+infolingo.egg-info/requires.txt
+infolingo.egg-info/top_level.txt
+tests/test_main.py
