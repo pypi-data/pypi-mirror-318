@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: opsgeniecli
+Version: 0.2.12
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: coloredlogs~=15.0.1
+Requires-Dist: click~=8.1.7
+Requires-Dist: click-completion~=0.5.2
+Requires-Dist: pendulum==3.0.0
+Requires-Dist: prettytable~=3.2.0
+Requires-Dist: pytz
+Requires-Dist: requests
+Requires-Dist: setuptools
+Requires-Dist: opsgenielib
+Requires-Dist: setuptools-scm>=8.1.0
+
+# Opsgeniecli
+
+A cli for Opsgenie
+
+## TODO:
+- add python version - setuptools-scm
+- try uploading new package to pypi using uv
+- validate if `opsgeniecli alerts list --team-name saas --not-filtered --last 7d` still fails after
+- install opsgeniecli via uv?
+- add tests for alerts 
