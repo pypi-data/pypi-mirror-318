@@ -1,0 +1,12 @@
+keras_data_format_converter/__init__.py,sha256=-LNZuDzBHoRYeAAUQUGnujGMZit0Mklu-M_SZJ-3Yyk,85
+keras_data_format_converter/converterapi.py,sha256=vClsyzlZTyoWzcqCekWczKhz6G9VMQo2doBYYTYpWzs,5030
+keras_data_format_converter/layers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+keras_data_format_converter/layers/confighandlers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+keras_data_format_converter/layers/confighandlers/dataformat.py,sha256=asTEs8b7A83C1kGTn126MarLqE3T3BD-KgdyyFUp0vg,224
+keras_data_format_converter/layers/layer_utils.py,sha256=eaTkIbAM7WUrRFRn0lDxKP601g7V8ZCX7Kp0TEEr82M,2188
+keras_data_format_converter/modelconverter.py,sha256=KwIJZ7-b4EBxc8F4mJWMBnFOK2GT-qZ5SxrBcJhjrt8,10515
+keras_data_format_converter/utils.py,sha256=KS3FTU8BbuwfMNuZAQPg7U4sTl0mrPKNEM6jEtBShpE,289
+keras_data_format_converter-0.1.20.dev1.dist-info/LICENSE,sha256=JBEj9yDyBycIEun3sVG6h5HTvmEKX_UzUfEjUXJoX5E,1067
+keras_data_format_converter-0.1.20.dev1.dist-info/METADATA,sha256=UGT6qJsYgFHHDDO7qLMqBgN-MZubu4NOp4HX8i4zLN4,2621
+keras_data_format_converter-0.1.20.dev1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+keras_data_format_converter-0.1.20.dev1.dist-info/RECORD,,
