@@ -1,0 +1,17 @@
+FAIRLinked/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+FAIRLinked/__main__.py,sha256=qqivc5JHi0hcqSAdCQMDn-w2JBRQAt0eUGmlYVfxjsY,6874
+FAIRLinked/data_parser.py,sha256=noBB1WWLMh_npYOkurgCFuLBXW1V_IazdcpxUKTp9tk,5129
+FAIRLinked/data_template_generator.py,sha256=XWb1RLlWuhv5FixZTTYmTUzRPxbhReiaXBEC86MgbuY,8369
+FAIRLinked/input_handler.py,sha256=X_pfJrv5WCerEtxlD85hbwx3iq3M85PKlaHY5j4Swuc,15645
+FAIRLinked/mds_ontology_analyzer.py,sha256=KvJtGcLqQJ32qxwnX0falZgN-WXEiFZpgmVQwkt2mTM,12117
+FAIRLinked/namespace_parser.py,sha256=t-oHC4o_EZDM-EgUlj-ZAFl4hQVP0aEcHLPqv3F8aTE,2371
+FAIRLinked/namespace_template_generator.py,sha256=uW_l_0hV2qbgFKhUhgCRnD4c2TDXwnx5u015-hI_Sk4,3356
+FAIRLinked/rdf_to_df.py,sha256=3klyWskti2x4nuuS_xQ1J-cn8adrkrG8iFvCLzCEKO0,21287
+FAIRLinked/rdf_transformer.py,sha256=8s-Gzqv714QyVtyWBeezu69fFGOeUUM0L1-JhuEyGY8,43236
+FAIRLinked/utility.py,sha256=ogZgNjXULf3Ov57JWmakT8O3kAN4poj_qalThwiqckQ,3001
+FAIRLinked-0.2.0.0.dist-info/LICENSE.txt,sha256=NMQxTJv71Sg47w5NMI0HWy6Sd23ff3A30_Z2QqTrH5I,1264
+FAIRLinked-0.2.0.0.dist-info/METADATA,sha256=jEY9QYJ6a_6yyvFgvNlDbQ4yqYzEqX73_H2Z3HGe4hE,2137
+FAIRLinked-0.2.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+FAIRLinked-0.2.0.0.dist-info/entry_points.txt,sha256=zr3CgKlI7EcT6CR1H3I6RtGrWcmxBTm6DFwK5aBXf5I,56
+FAIRLinked-0.2.0.0.dist-info/top_level.txt,sha256=m8ohmizu_ABZArHQZUwoaEzu4sLi76W1TJqz9lU43LU,11
+FAIRLinked-0.2.0.0.dist-info/RECORD,,
