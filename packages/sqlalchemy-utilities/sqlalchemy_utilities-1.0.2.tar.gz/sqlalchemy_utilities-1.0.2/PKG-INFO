@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: sqlalchemy-utilities
+Version: 1.0.2
+Summary: Included sqlalchemy serializers
+Author: Vijay Tiwari
+Author-email: rsvijaytiwari@gmail.com
+Requires-Dist: sqlalchemy

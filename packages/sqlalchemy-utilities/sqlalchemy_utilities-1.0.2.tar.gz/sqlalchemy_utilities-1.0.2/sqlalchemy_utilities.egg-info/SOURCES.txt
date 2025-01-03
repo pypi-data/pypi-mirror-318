@@ -1,0 +1,8 @@
+setup.py
+sqlalchemy-utilities/__init__.py
+sqlalchemy-utilities/serilizers.py
+sqlalchemy_utilities.egg-info/PKG-INFO
+sqlalchemy_utilities.egg-info/SOURCES.txt
+sqlalchemy_utilities.egg-info/dependency_links.txt
+sqlalchemy_utilities.egg-info/requires.txt
+sqlalchemy_utilities.egg-info/top_level.txt
