@@ -1,0 +1,1 @@
+from talk2data_sdk.connector.talk2data_connector import Talk2DataConnector
