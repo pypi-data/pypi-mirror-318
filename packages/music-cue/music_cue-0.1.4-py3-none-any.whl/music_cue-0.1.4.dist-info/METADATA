@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: music-cue
+Version: 0.1.4
+Summary: A data entry application
+Home-page: https://github.com/hans-vvv/Music-Cue
+Author: Hans Verkerk
+Author-email: verkerk.hans@gmail.com
+License: MIT
+License-File: LICENCE
+Requires-Dist: openpyxl
+Requires-Dist: ttkbootstrap
