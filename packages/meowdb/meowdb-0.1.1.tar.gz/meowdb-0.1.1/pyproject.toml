@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "meowdb"
+version = "0.1.1"
+description = "A Python interface for the MeowDB in-memory database server."
+authors = [
+    { name = "FakeCoder01", email = "fakecoder@duck.com" }
+]
+readme = "README.md"
+requires-python = ">=3.6"
+license = { text = "MIT" }
+
+[project.urls]
+"Homepage" = "https://github.com/FakeCoder01/MeowDB"
