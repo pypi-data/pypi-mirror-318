@@ -1,0 +1,9 @@
+README.md
+setup.py
+session_converter/__init__.py
+session_converter/session.py
+telegram_session_converter.egg-info/PKG-INFO
+telegram_session_converter.egg-info/SOURCES.txt
+telegram_session_converter.egg-info/dependency_links.txt
+telegram_session_converter.egg-info/requires.txt
+telegram_session_converter.egg-info/top_level.txt

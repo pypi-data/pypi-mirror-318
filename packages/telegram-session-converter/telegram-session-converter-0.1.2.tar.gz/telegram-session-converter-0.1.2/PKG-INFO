@@ -1,0 +1,205 @@
+Metadata-Version: 2.1
+Name: telegram-session-converter
+Version: 0.1.2
+Summary: A simple library for converting .session files from/to telethon or pyrogram format
+Home-page: UNKNOWN
+Author: bundemshake
+Author-email: bundemshake@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+
+Here's a README.md for the "Session Converter" package based on the provided code:
+
+---
+
+# Session Converter
+
+The **Session Converter** package provides a straightforward way to convert sessions between Pyrogram and Telethon, two popular Telegram API wrappers. This package supports converting both session files and string sessions between the two libraries.
+
+## Features
+
+- Convert **Pyrogram session files** to Telethon sessions.
+- Convert **Pyrogram string sessions** to Telethon sessions.
+- Convert **Telethon string sessions** to Pyrogram sessions.
+- Convert **Telethon session files** to Pyrogram sessions.
+- Handles both **API ID** and **DC ID**.
+
+## Installation
+
+```bash
+pip install telegram-session-converter
+```
+
+## Usage
+
+### Converting from Pyrogram Session File to Telethon Session
+
+```python
+from session_converter import SessionManager
+
+# Convert to Telethon session
+session_manager = SessionManager.from_pyrogram_session_file("path/to/pyrogram_session_file.session")
+
+session_manager.telethon_file("path/to/telethon_session_file.session")
+```
+
+### Converting from Pyrogram String Session to Telethon Session
+
+```python
+from session_converter import SessionManager
+
+# Provide the Pyrogram session string
+pyrogram_session_string = "<your_pyrogram_session_string>"
+
+# Convert to Telethon session
+session_manager = SessionManager.from_pyrogram_string_session(pyrogram_session_string)
+
+session_manager.telethon_file("path/to/telethon_session_file.session")
+```
+
+### Converting from Telethon Session File to Pyrogram Session
+
+```python
+from session_converter import SessionManager
+
+# Provide the path to the Telethon session file
+telethon_session_file = "path/to/telethon_session_file.session"
+
+# Convert to Pyrogram session
+session_manager = SessionManager.from_telethon_file(telethon_session_file)
+
+# Access the converted session details
+print(session_manager.session)
+```
+
+### Converting from Telethon String Session to Pyrogram Session
+
+```python
+from session_converter import SessionManager
+
+# Provide the Telethon session string
+telethon_session_string = "<your_telethon_session_string>"
+
+# Convert to Pyrogram session
+session_manager = SessionManager.from_telethon_string_session(telethon_session_string)
+
+# Access the converted session details
+print(session_manager.session)
+```
+
+### Ready-to-use converter code
+
+```python
+import uuid
+from telethon import TelegramClient
+from telethon.sessions import StringSession
+from session_converter import SessionManager
+import asyncio
+import os
+
+API_ID = 
+API_HASH = 
+
+
+class SessionConverter:
+
+    @staticmethod
+    async def convert_to_pyrogram(session_file_path: str, save_path: str = "."):
+
+        try:
+            telethon_client = TelegramClient(session_file_path, API_ID, API_HASH)
+            await telethon_client.start()
+
+            session = telethon_client.session
+
+            user = await telethon_client.get_me()
+
+            user_id = user.id
+
+            session_string = StringSession.save(session)
+
+            await telethon_client.disconnect()
+
+            session = SessionManager.from_telethon_string_session(session_string)
+
+            session.pyrogram_file(
+                f"{save_path}/{str(uuid.uuid4())[:8]}_pyrogram.session",
+                api_id=API_ID,
+                user_id=user_id,
+            )
+        except Exception as e:
+            raise e
+
+    @staticmethod
+    async def convert_to_telethon(session_file_path: str, save_path: str = "."):
+
+        try:
+            session = SessionManager.from_pyrogram_session_file(session_file_path)
+
+            session.telethon_file(
+                f"{save_path}/{str(uuid.uuid4())[:8]}_telethon.session"
+            )
+
+        except Exception as e:
+            raise e
+
+
+async def main():
+    try:
+        await SessionConverter.convert_to_pyrogram(
+            "./session_files/sample.session", "./session_files"
+        )
+        print("Successfully converted")
+
+        # await SessionConverter.convert_to_telethon(
+        #     "./session_files/sample.session", "./session_files"
+        # )
+        # print("Successfully converted")
+    except Exception as e:
+        print(e)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
+
+```
+
+
+## Classes
+
+### `SessionManager`
+
+The main class for managing session conversions. Provides methods to convert between Pyrogram and Telethon sessions.
+
+#### Methods:
+- `from_pyrogram_session_file(file: str)`: Converts a Pyrogram session file to a Telethon session.
+- `from_pyrogram_string_session(session_string: str)`: Converts a Pyrogram session string to a Telethon session.
+- `from_telethon_string_session(session_string: str, do_login: bool = False)`: Converts a Telethon session string to a Pyrogram session.
+- `from_telethon_file(file: str, do_login: bool = False)`: Converts a Telethon session file to a Pyrogram session.
+- `pyrogram_file(file: str, **kwargs)`: Exports the session to a Pyrogram session file.
+- `telethon_file(file: str)`: Exports the session to a Telethon session file.
+- `pyrogram_string_session(version: int = 3, api_id: int = 0)`: Exports the session as a Pyrogram string.
+- `telethon_string_session()`: Exports the session as a Telethon string.
+
+### `TDSession`
+
+A data model class for representing Telegram session details, including `dc_id`, `api_id`, `auth_key`, and other properties.
+
+## Requirements
+
+- Python 3.6+
+- Pyrogram
+- Telethon
+- Pydantic
+
+## License
+
+This package is licensed under the MIT License.
+
+---
+
+Let me know if you'd like any changes or additions to this README!
+
