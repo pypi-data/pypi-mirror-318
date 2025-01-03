@@ -1,0 +1,9 @@
+amwater_api/__init__.py,sha256=2xfPrDOwVo0Al_09WZcZvWEwqE5lHRJ-bTc5HaBsFVY,97
+amwater_api/amwater.py,sha256=n_IwCqyv0owRlIKYTuU4elgEq623FjXD8FkM10wa4XM,1165
+amwater_api/amwater_client.py,sha256=Q7_-rNsgij-4TWsm348J8OZ2xFtEbjhz9XwY0JeyJG8,7666
+amwater_api/errors/__init__.py,sha256=DmD22VcAzzFDp3FTRYnwXWqANoF9X85JFyDcBgXeYYg,39
+amwater_api/errors/amwater_error.py,sha256=v4q1TGvn-MNdsF3S40nHhxPfQqDk64vCAekDDtSm07A,679
+amwater_api-0.0.1.dist-info/METADATA,sha256=kNCwWMxRMNwSa0DUMoLPAgiOO2CpeYzvUSmLskssyD0,691
+amwater_api-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+amwater_api-0.0.1.dist-info/top_level.txt,sha256=wkAiUF0nPE5nhC4oy_xJFQ8T6zUikyQll_quaM3Ktek,12
+amwater_api-0.0.1.dist-info/RECORD,,
