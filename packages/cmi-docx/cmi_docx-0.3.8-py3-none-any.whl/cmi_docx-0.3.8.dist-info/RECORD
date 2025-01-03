@@ -1,0 +1,11 @@
+cmi_docx/__init__.py,sha256=q9YWIwTPLkYUidTXosO3OwpYB94nuG_BATLIXJnangk,429
+cmi_docx/comment.py,sha256=vSODaNKxQyijN1ujuQwBgGNyp8l6N7hMkzttbRReW_g,5830
+cmi_docx/document.py,sha256=xWVQF63cWaLBgp8llgkxn43-yzypdGbiU1khKXHBCpw,5046
+cmi_docx/paragraph.py,sha256=GvPWGLuw3l9Yv4Lx7P3ZTgEyhbEQzAU-Rv6Jc06f8fQ,7369
+cmi_docx/run.py,sha256=qZLDlqY-w0LYuBoB0wJGaOmAODHAtQdNPoX16X5i-CY,6671
+cmi_docx/styles.py,sha256=IWTgX_2zg87aJOtCYatwCOgGwaBgwA7sl2vlqh2FuIE,1105
+cmi_docx/table.py,sha256=9T4_AyTT6s-8_9c8K9VRQnq4UyOkHYgW9IVAjK5VAks,1599
+cmi_docx-0.3.8.dist-info/METADATA,sha256=9OblGkw4owxxVOBp0Gi6DG7k5w-hiENTrsfoPSrjNzY,2117
+cmi_docx-0.3.8.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+cmi_docx-0.3.8.dist-info/licenses/LICENSE,sha256=IMF9i4xIpgCADf0U-V1cuf9HBmqWQd3qtI3FSuyW4zE,26526
+cmi_docx-0.3.8.dist-info/RECORD,,
