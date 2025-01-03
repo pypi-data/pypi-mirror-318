@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: cs-semantics
+Version: 20250103
+Summary: Some basic functions and exceptions for various semantics shared by modules.
+Author-email: Cameron Simpson <cs@cskk.id.au>
+License: GNU General Public License v3 or later (GPLv3+)
+Project-URL: Monorepo Hg/Mercurial Mirror, https://hg.sr.ht/~cameron-simpson/css
+Project-URL: Monorepo Git Mirror, https://github.com/cameron-simpson/css
+Project-URL: MonoRepo Commits, https://bitbucket.org/cameron_simpson/css/commits/branch/main
+Project-URL: Source, https://github.com/cameron-simpson/css/blob/main/lib/python/cs/semantics.py
+Keywords: python3
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Description-Content-Type: text/markdown
+Requires-Dist: cs.deco>=20241206
+
+Some basic functions and exceptions for various semantics shared by modules.
+
+*Latest release 20250103*:
+Initial PyPI release: ClosedError and @not_closed.
+
+## <a name="ClosedError"></a>Class `ClosedError(builtins.Exception)`
+
+Exception for operations which are invalid when something is closed.
+
+## <a name="not_closed"></a>`not_closed(*da, **dkw)`
+
+A decorator to wrap methods of objects with a `.closed` property
+which should raise when `self.closed`.
+This raised `ClosedError` if the object is closed.
+
+Excample:
+
+    @not_closed
+    def doit(self):
+        ... proceed know we were not closed ...
+
+# Release Log
+
+
+
+*Release 20250103*:
+Initial PyPI release: ClosedError and @not_closed.
