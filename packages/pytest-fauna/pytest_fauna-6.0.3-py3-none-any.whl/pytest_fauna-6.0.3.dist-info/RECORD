@@ -1,0 +1,7 @@
+pytest_fauna/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_fauna/plugin.py,sha256=T5CxdEuL9hI3g2ReVKz9rFqy3-nsoS7ePllhQx1fzeM,11018
+pytest_fauna-6.0.3.dist-info/LICENSE,sha256=GTK-ackPw3V7mRL_XlCzYpadd2A6ifaIzfBvmn27O3o,1064
+pytest_fauna-6.0.3.dist-info/METADATA,sha256=0yTni81L2BgYnbki7K170KwQyGivwCuB2LymoOoKbRk,2171
+pytest_fauna-6.0.3.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+pytest_fauna-6.0.3.dist-info/entry_points.txt,sha256=haPefpC3LNF_0ebLtVALOL29kU4T86xLKMYWFV1l1nA,38
+pytest_fauna-6.0.3.dist-info/RECORD,,
