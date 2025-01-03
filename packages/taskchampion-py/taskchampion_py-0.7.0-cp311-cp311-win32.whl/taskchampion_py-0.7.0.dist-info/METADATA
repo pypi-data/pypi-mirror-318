@@ -1,0 +1,70 @@
+Metadata-Version: 2.4
+Name: taskchampion-py
+Version: 0.7.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+License-File: LICENSE
+Author-email: Illya Laifu <illyalaifu@gmail.com>, "Dustin J. Mitchell" <dustin@v.igoro.us>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: homepage, https://gothenburgbitfactory.org/taskchampion
+Project-URL: repository, https://github.com/GothenburgBitFactory/taskchampion-py
+Project-URL: changelog, https://github.com/GothenburgBitFactory/taskchampion-py/releases
+
+# Python Taskchampion Bindings
+
+This package contains Python bindings for [TaskChampion](https://github.com/GothenburgBitFactory/taskchampion).
+It follows the TaskChampion API closely, with minimal adaptation for Python.
+
+## Versioning
+
+The `taskchampion-py` package version matches the Rust crate's version.
+When an additional package release is required for the same Rust crate, a fourth version component is used; for example `1.2.0.1` for the second release of `taskchampion-py` containing TaskChampion version `1.2.0`.
+
+## Usage
+
+```py
+from taskchampion import Replica
+
+# Set up a replica.
+r = Replica.new_on_disk("/some/path", true)
+
+# (more TBD)
+```
+
+## Development
+
+This project is built using [maturin](https://github.com/PyO3/maturin).
+
+To install:
+
+```shell
+pipx install maturin
+```
+
+To build wheels:
+```shell
+maturin build
+```
+This stores wheels in the `target/wheels` folder by default.
+
+### Testing
+
+Extra testing dependencies are installed via `poetry`:
+```shell
+poetry install
+```
+
+To run tests:
+```shell
+poetry shell
+maturin develop
+pytest
+```
+or
+```shell
+poetry run maturin develop
+poetry run pytest
+```
+
