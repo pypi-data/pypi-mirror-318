@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: zyt_auto_tools
+Version: 0.1.4
+Summary: A collection of automation tools for Python projects
+Home-page: https://github.com/VerySeriousMan
+Author: ZhangYuetao
+Author-email: zhang894171707@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# My Automation Tools
+
+[![PyPI Version](https://img.shields.io/pypi/v/zyt_auto_tools.svg)](https://pypi.org/project/zyt_auto_tools/)
+[![License](https://img.shields.io/pypi/l/zyt_auto_tools.svg)](https://opensource.org/licenses/MIT)
+[![Python Version](https://img.shields.io/pypi/pyversions/zyt_auto_tools.svg)](https://www.python.org/downloads/)
+
+**My Automation Tools** 是一个 Python 工具集，旨在帮助开发者自动化常见的项目任务。它包含以下工具：
+
+1. **自动生成 `__init__.py` 文件**：根据 `utils` 目录下的 `_utils.py` 文件，自动生成 `__init__.py` 文件。
+2. **自动创建 Python 文件**：快速生成带有标准模板的 Python 文件。
+3. **自动更新文件修改时间**：更新项目中今天修改过的 `.py` 文件的 `Update` 日期。
+
+## 安装
+
+你可以通过 `pip` 安装这个工具集：
+
+```bash
+pip install zyt_auto_tools
+```
+
+## 使用方法
+
+### 1. 自动生成 `__init__.py` 文件
+
+在项目根目录下运行以下命令，自动生成 `utils` 目录下的 `__init__.py` 文件：
+
+```bash
+auto-generate-all-utils
+```
+
+### 2. 自动创建 Python 文件
+
+使用以下命令快速创建一个带有标准模板的 Python 文件：
+
+```bash
+auto-init-python-file my_script.py
+```
+
+你还可以指定目标目录：
+
+```bash
+auto-init-python-file my_script.py --dir ./my_project
+```
+
+### 3. 自动更新文件修改时间
+
+在项目根目录下运行以下命令，更新今天修改过的 `.py` 文件的 `Update` 日期：
+
+```bash
+auto-update-ctime
+```
+
+## 贡献
+
+欢迎贡献代码！
+
+## 许可证
+
+本项目基于 [MIT 许可证](LICENSE) 开源。
+
+## 作者
+
+- **ZhangYuetao** - 项目开发者
+- 邮箱: zhang894171707@gmail.com
+- GitHub: [https://github.com/VerySeriousMan](https://github.com/VerySeriousMan)
+
+## 致谢
+
+感谢所有为这个项目做出贡献的人！
+
