@@ -1,0 +1,7 @@
+README.md
+hello.py
+pyproject.toml
+barascript.egg-info/PKG-INFO
+barascript.egg-info/SOURCES.txt
+barascript.egg-info/dependency_links.txt
+barascript.egg-info/top_level.txt
