@@ -1,0 +1,5 @@
+mapyreduce/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mapyreduce/mapyreduce.py,sha256=gOziEK0KN__6GDcDpW706QE-5l564SE9f22aR-jJjKY,9816
+mapyreduce-0.1.0.dist-info/METADATA,sha256=bVTkLh0rvs9sQBVts00XAsEL1hfX7-S38LBiDyYDHpY,5884
+mapyreduce-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+mapyreduce-0.1.0.dist-info/RECORD,,
