@@ -1,0 +1,15 @@
+adopt/__init__.py,sha256=-LGgpVzBvQsNFEbahLrAD1u9e1Ur3koil2eg54r1t7Y,23
+adopt/__main__.py,sha256=a8xZqgScwuZsRsO-YZtWcrTd5WVPgV_0QWsBzuti5pw,351
+adopt/connect.py,sha256=p28niBaAaRB9JP7Widtn5n2y9sdNBqwLOXAoZfKr0jk,844
+adopt/exceptions.py,sha256=5M1P-m9g32G_ZkeEQQ6XY1QPKdgUAjLSCKb2FDzOxDk,376
+adopt/logging.py,sha256=qg0CBZfxm0MaJmJ21LMnIOnvyHr7Rhr13UikytGJzG0,1353
+adopt/utils.py,sha256=j0xmTNQQ4Svv3Elgf0m0-J5pbY45eLPVluBiex-ajVU,8421
+adopt/backlog/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+adopt/backlog/sort.py,sha256=cADyN4a_S1Rs424KJmd2EJt381AaOfiYxt6iciKaYlw,4736
+adopt/cli/__init__.py,sha256=MDkP0mCd7aat17QDqzXqE0Z-2tfptI0GixLr7JYBF4I,794
+adopt/cli/backlog.py,sha256=S2d9xvpZSApj--M4rCOmeAI-NHV95ZBKScfBnJGcxlE,1572
+adopt-0.0.1.dist-info/METADATA,sha256=V222tTIE278IA4jZ-EFF2Ssu9UDASEANENZVqKQ2EZI,1336
+adopt-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+adopt-0.0.1.dist-info/entry_points.txt,sha256=pTGHJ2WL4QT51kQhQgjswqSrNj-2ut9WvrBpztmE_ww,46
+adopt-0.0.1.dist-info/top_level.txt,sha256=ughbFRzxmR5ALj9d_dOkGLiwkNPUvLv0U57wROVohXo,6
+adopt-0.0.1.dist-info/RECORD,,
