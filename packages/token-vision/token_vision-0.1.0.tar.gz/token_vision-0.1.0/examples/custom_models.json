@@ -1,0 +1,26 @@
+{
+    "custom": {
+        "name": "Custom Provider",
+        "max_images": 5000,
+        "models": {
+            "custom-gpt-4": {
+                "name": "Custom GPT-4",
+                "input_rate": 12000,
+                "output_rate": 0,
+                "batch_input_rate": 10000,
+                "cached_input_rate": 8000
+            },
+            "custom-claude": {
+                "name": "Custom Claude",
+                "input_rate": 15000,
+                "output_rate": 0,
+                "batch_input_rate": 12000
+            },
+            "custom-gemini": {
+                "name": "Custom Gemini",
+                "input_rate": 8000,
+                "output_rate": 0
+            }
+        }
+    }
+} 
