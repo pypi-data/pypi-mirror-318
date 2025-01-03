@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pynanoinstantmeshes
+Version: 0.0.3
+Summary: Python nano binding for instant meshes
+Author-Email: Mark Boss <hello@markboss.me>
+Classifier: License :: OSI Approved :: BSD License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# PyNanoInstantMeshes
+
+Python binding for instant meshes. See [tests/test_remeshing.py](tests/test_remeshing.py) for example usage.
