@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: scav
+Version: 1.1
+Summary: SCAV: Safety Concept Activation Vector Jailbreak Framework
+Home-page: https://github.com/SproutNan/AI-Safety_SCAV
+Author: SCAV Team
+Author-email: rhuangbi@connect.ust.hk
+License: MIT
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE
+Requires-Dist: transformers
+Requires-Dist: torch
+Requires-Dist: numpy
+
+This is the code for our NeurIPS 2024 paper *<strong>Uncovering Safety Risks of Large Language Models through Concept Activation Vector</strong>*.
+
+## Disclaimer
+
+This project may lead to attacks on LLMs and is intended for academic research use only. It is prohibited for illegal purposes. The authors have shared the vulnerabilities with OpenAI and Microsoft.
