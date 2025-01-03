@@ -1,0 +1,15 @@
+utils_cws_web/__init__.py,sha256=7Lmxi9egI9l1pTcRKHzNHQYPkkQXmfN4Zx6swowW_iE,201
+utils_cws_web/integration.py,sha256=jKJIZvMTHwRbmP8whaU_dOpiBtHR4OMzNZKi-Zy_ENo,3706
+utils_cws_web/middleware.py,sha256=VlEYIfMdiIWLr7H4NdSBfeRdeD133P5nXWG45Qj4o2o,3403
+utils_cws_web/dto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+utils_cws_web/dto/dto_data.py,sha256=aeDhzUzPqNcsexKNGOi_zdShQ0JFcPnyKhsr0y16lyc,6616
+utils_cws_web/dto/schema_error.py,sha256=y9teuWZjdEw_tZ691-FOKeqkL1yG0Hf3lFQd5oS0J78,319
+utils_cws_web/dto/schema_registry.py,sha256=anix3c0rzZUuutObRWIdx0DkMt9XmnadqZ5A9qKqUeA,1014
+utils_cws_web/exception/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+utils_cws_web/exception/integration_error.py,sha256=cv8TmBftadWmR3ZK2q999DJphQ2lGzcN8nRsjMupeIs,423
+utils_cws_web/exception/schema_exception.py,sha256=IRNA2u2cXPFfQ-g5o3IOag1ADAaJoNjhcmpcGMHC1_E,720
+Utils_cws_web-1.0.3.dist-info/LICENCE,sha256=DjPYq1-wW6u-C6e0MHoLzAA-srQsv70hF8iWiFTEeNI,1136
+Utils_cws_web-1.0.3.dist-info/METADATA,sha256=KyHv4SSbFsd8aUqhFS_MB3dCxyrER8WFLmy7oty1eVo,483
+Utils_cws_web-1.0.3.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+Utils_cws_web-1.0.3.dist-info/top_level.txt,sha256=xmaQ9UAG_fPQ6r9FgYaY6jn_0X5nY2waJoUs12mJZmE,14
+Utils_cws_web-1.0.3.dist-info/RECORD,,
