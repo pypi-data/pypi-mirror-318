@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: KillPy
+Version: 0.1.4
+Summary: Clean your .venv and __pycache__ directories
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: click>=8.1.8
+Requires-Dist: textual>=1.0.0

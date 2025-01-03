@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+KillPy.egg-info/PKG-INFO
+KillPy.egg-info/SOURCES.txt
+KillPy.egg-info/dependency_links.txt
+KillPy.egg-info/entry_points.txt
+KillPy.egg-info/requires.txt
+KillPy.egg-info/top_level.txt
+killpy/__main__.py
