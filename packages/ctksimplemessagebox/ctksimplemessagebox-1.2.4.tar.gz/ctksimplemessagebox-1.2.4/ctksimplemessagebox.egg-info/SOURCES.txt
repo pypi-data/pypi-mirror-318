@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+CTkSimpleMessagebox/Messageboxclass.py
+CTkSimpleMessagebox/__init__.py
+ctksimplemessagebox.egg-info/PKG-INFO
+ctksimplemessagebox.egg-info/SOURCES.txt
+ctksimplemessagebox.egg-info/dependency_links.txt
+ctksimplemessagebox.egg-info/top_level.txt
