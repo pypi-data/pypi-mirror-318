@@ -1,0 +1,9 @@
+/build/
+/dist/
+/venv/
+/docs/_autosummary
+/docs/_build
+.*
+!/.gitignore
+!/README.md.previous
+!.coverage
