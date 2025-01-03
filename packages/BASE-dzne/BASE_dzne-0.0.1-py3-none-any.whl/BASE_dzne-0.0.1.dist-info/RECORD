@@ -1,0 +1,9 @@
+BASE_dzne/__init__.py,sha256=dMQ2ZqHw6vaJ0baXrtLVZx-Za6XmRJgRwBDbwAZcSYM,87
+BASE_dzne/__main__.py,sha256=zPSMyRcvpWoqIBUAYlT6T7DgYOeJ8oOTN6wwfmcfwnM,66
+BASE_dzne/tests/__init__.py,sha256=NsBQ80GfVkIi4m0MwmiEKnLEbKE0g8JM-q3LoH7lhA8,230
+BASE_dzne/tests/test_1984.py,sha256=GPfy8FPaGbj-w9uGHkJYSjmlSReVAXwiHS8JydJaERw,187
+BASE_dzne-0.0.1.dist-info/LICENSE.txt,sha256=yMN8jMkLx4Uow8ugEW46C7v_C8-HHCkF-A_PhSTr0kE,1075
+BASE_dzne-0.0.1.dist-info/METADATA,sha256=T80H6YpMPRpHdyA2tITvofnTJb5VUsP-r8ItiQ80UqM,2529
+BASE_dzne-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+BASE_dzne-0.0.1.dist-info/top_level.txt,sha256=rgtFlB-iXh3fjAbvfSw5PTeVxmaR2ZApwILTsgLDIB0,10
+BASE_dzne-0.0.1.dist-info/RECORD,,
