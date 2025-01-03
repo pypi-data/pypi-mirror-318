@@ -1,0 +1,7 @@
+README.md
+setup.py
+gepeto_core.egg-info/PKG-INFO
+gepeto_core.egg-info/SOURCES.txt
+gepeto_core.egg-info/dependency_links.txt
+gepeto_core.egg-info/requires.txt
+gepeto_core.egg-info/top_level.txt
