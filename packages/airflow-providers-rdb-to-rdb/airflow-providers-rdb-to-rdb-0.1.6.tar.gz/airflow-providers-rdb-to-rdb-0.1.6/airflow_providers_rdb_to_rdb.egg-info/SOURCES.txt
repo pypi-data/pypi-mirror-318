@@ -1,0 +1,7 @@
+setup.py
+airflow_providers_rdb_to_rdb/PostgresToTiDBOperator.py
+airflow_providers_rdb_to_rdb/__init__.py
+airflow_providers_rdb_to_rdb.egg-info/PKG-INFO
+airflow_providers_rdb_to_rdb.egg-info/SOURCES.txt
+airflow_providers_rdb_to_rdb.egg-info/dependency_links.txt
+airflow_providers_rdb_to_rdb.egg-info/top_level.txt

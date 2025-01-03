@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: airflow-providers-rdb-to-rdb
+Version: 0.1.6
+Summary: A custom Airflow operator to upsert data from PostgreSQL to TiDB.
+Author: Aiden Wu
+Author-email: aiden.wu@crypto.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: Apache Airflow
+Classifier: License :: OSI Approved :: MIT License
