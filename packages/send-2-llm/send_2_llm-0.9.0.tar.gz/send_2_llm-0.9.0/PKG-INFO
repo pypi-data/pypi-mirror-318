@@ -1,0 +1,160 @@
+Metadata-Version: 2.1
+Name: send_2_llm
+Version: 0.9.0
+Summary: A flexible LLM provider switching library with multiple strategies
+Home-page: https://github.com/ai-tools-team/send_2_llm
+Author: AI Tools Team
+Author-email: AI Tools Team <ai.tools.team@example.com>
+License: MIT License
+        
+        Copyright (c) 2024 AI Tools Team
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE. 
+Project-URL: Homepage, https://github.com/ai-tools-team/send_2_llm
+Project-URL: Repository, https://github.com/ai-tools-team/send_2_llm.git
+Project-URL: Documentation, https://github.com/ai-tools-team/send_2_llm/docs
+Project-URL: Bug Tracker, https://github.com/ai-tools-team/send_2_llm/issues
+Keywords: llm,ai,openai,anthropic,gemini,together,deepseek,perplexity
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: aiohttp>=3.9.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: click>=8.1.0
+Requires-Dist: rich>=13.0.0
+Requires-Dist: tenacity>=8.2.0
+Provides-Extra: together
+Requires-Dist: together>=0.2.0; extra == "together"
+Provides-Extra: openai
+Requires-Dist: openai>=1.12.0; extra == "openai"
+Provides-Extra: anthropic
+Requires-Dist: anthropic>=0.9.0; extra == "anthropic"
+Provides-Extra: perplexity
+Requires-Dist: perplexity-ai>=0.3.0; extra == "perplexity"
+Provides-Extra: deepseek
+Requires-Dist: deepseek>=0.1.0; extra == "deepseek"
+Provides-Extra: gemini
+Requires-Dist: google-generativeai>=0.3.0; extra == "gemini"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.23.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.1.0; extra == "dev"
+Requires-Dist: black>=24.0.0; extra == "dev"
+Requires-Dist: isort>=5.13.0; extra == "dev"
+Requires-Dist: mypy>=1.8.0; extra == "dev"
+Requires-Dist: pylint>=3.0.0; extra == "dev"
+Requires-Dist: pre-commit>=3.6.0; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: mkdocs>=1.5.0; extra == "docs"
+Requires-Dist: mkdocs-material>=9.5.0; extra == "docs"
+Requires-Dist: mkdocstrings>=0.24.0; extra == "docs"
+Provides-Extra: all
+Requires-Dist: together>=0.2.0; extra == "all"
+Requires-Dist: openai>=1.12.0; extra == "all"
+Requires-Dist: anthropic>=0.9.0; extra == "all"
+Requires-Dist: perplexity-ai>=0.3.0; extra == "all"
+Requires-Dist: deepseek>=0.1.0; extra == "all"
+Requires-Dist: google-generativeai>=0.3.0; extra == "all"
+
+# send_2_llm
+
+Гибкая Python библиотека для работы с различными LLM провайдерами.
+
+## Установка
+
+```bash
+pip install send_2_llm  # Базовая установка
+pip install send_2_llm[openai]  # С конкретным провайдером
+pip install send_2_llm[all]  # Со всеми провайдерами
+```
+
+## Простое использование
+
+```python
+from send_2_llm import send_2_llm_sync
+
+# Простой вызов
+response = send_2_llm_sync("Привет!")
+print(response.text)
+
+# С параметрами
+response = send_2_llm_sync(
+    "Напиши креативное хайку",
+    temperature=0.9,
+    output_format="markdown"
+)
+print(response.text)
+```
+
+## Асинхронное использование
+
+```python
+from send_2_llm import send_2_llm
+
+async def main():
+    response = await send_2_llm("Привет!")
+    print(response.text)
+```
+
+## Основные возможности
+
+- Поддержка множества провайдеров:
+  - OpenAI
+  - Together AI
+  - Anthropic
+  - Perplexity
+  - DeepSeek
+  - Gemini
+- Простое переключение между провайдерами
+- Стратегии использования:
+  - Single: один провайдер
+  - Fallback: автоматическое переключение при ошибках
+  - Parallel: параллельные запросы
+  - Cost-optimized: оптимизация по стоимости
+- Форматирование ответов (markdown, html, json)
+- Генерация связанных вопросов
+- Кэширование
+- Поддержка прокси
+- Подробное логирование
+- Типизация
+- Асинхронность
+
+## Документация
+
+Полная документация доступна в директории `/docs`:
+- [API Reference](docs/API.md)
+- [Стратегии](docs/STRATEGIES.md)
+- [Архитектура](docs/ARCHITECTURE.md)
+- [Развертывание](docs/DEPLOYMENT.md)
+
+## Лицензия
+
+MIT 

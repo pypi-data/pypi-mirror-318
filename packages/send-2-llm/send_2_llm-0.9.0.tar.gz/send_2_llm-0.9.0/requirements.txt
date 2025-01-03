@@ -1,0 +1,62 @@
+# !!! WARNING !!!
+# CRITICAL DEPENDENCIES - DO NOT MODIFY WITHOUT EXPLICIT PERMISSION
+# THESE VERSIONS ARE REQUIRED FOR STABLE OPENAI INTEGRATION
+# COMMIT: b25d24a TAG: stable_openai_v1
+# !!! WARNING !!!
+
+# Core dependencies
+pydantic>=2.0.0
+aiohttp>=3.9.0
+python-dotenv>=1.0.0
+click>=8.0.0
+rich>=13.0.0
+tenacity>=8.0.0
+
+# !!! PROTECTED DEPENDENCIES - DO NOT MODIFY !!!
+# These versions are tested and stable
+openai==1.58.1        # OpenAI SDK - Used for OpenAI and Together AI
+pytest>=7.0.0          # Testing - STABLE VERSION
+pytest-asyncio>=0.20.0 # Async testing - STABLE VERSION
+
+# Additional core dependencies
+annotated-types==0.7.0
+anyio==4.7.0
+certifi==2024.12.14
+distro==1.9.0
+httpcore==1.0.7
+httpx==0.28.1
+idna==3.10
+jiter==0.8.2
+pydantic-core==2.27.2
+sniffio==1.3.1
+tqdm==4.67.1
+typing-extensions==4.12.2
+
+# LLM Providers
+# Together AI uses OpenAI's client library (no additional dependencies needed)
+anthropic>=0.3.0      # Anthropic
+# perplexity-ai>=0.1.0  # Perplexity - Not yet available on PyPI
+# deepseek>=0.1.0       # DeepSeek - Not yet available on PyPI
+google-genai>=0.3.0   # New Gemini SDK
+
+# Development dependencies
+pytest>=7.0.0
+pytest-asyncio>=0.20.0
+pytest-cov>=4.0.0
+black>=22.0.0
+isort>=5.0.0
+mypy>=1.0.0
+pylint>=2.0.0
+pre-commit>=3.0.0
+
+# Documentation
+mkdocs>=1.4.0
+mkdocs-material>=9.0.0
+mkdocstrings>=0.20.0
+
+# Added dependencies
+tiktoken>=0.6.0
+together>=0.2.11
+perplexity-python>=0.1.6
+deepseek-ai>=0.1.0
+rich>=13.7.0 
