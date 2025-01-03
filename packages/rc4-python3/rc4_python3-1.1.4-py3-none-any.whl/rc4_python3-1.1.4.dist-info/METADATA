@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: rc4-python3
+Version: 1.1.4
+Home-page: https://github.com/RyanKung/rc4-python3
+Author: Ryan Kung
+Author-email: ryankung@ieee.org
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: pypng==0.0.20
+Requires-Dist: pyqrcode==1.2.1
+
