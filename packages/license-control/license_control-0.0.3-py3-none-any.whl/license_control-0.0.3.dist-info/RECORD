@@ -1,0 +1,11 @@
+license_control/1.py,sha256=d0xn8J2p-1oUdZDrtgNSW1v8f7svlYG8qT9uPYTClkc,8927
+license_control/__init__.py,sha256=WpJ2hWrAGSSs0J1ea0wptBn6OOCWPvNy47RgNRPBWhA,67
+license_control/core.py,sha256=uKzdWeBr1vcGdqCsoBlwpfJF97-I3mZsL_6kZytFnAY,6306
+license_control/license_control.py,sha256=iaCYfbvH56ladTIIjEnI1OdfDTG8fvVifxPvwjeS56U,4652
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_core.py,sha256=BYEYYCjN0DjZuieUD2K5nLr9xXk0aKBF-lhO4K4ApLw,6491
+license_control-0.0.3.dist-info/LICENSE,sha256=sLsuJVeKRhFhYtApV40X_toVWSUpOovP1bjVfp1ldHg,120
+license_control-0.0.3.dist-info/METADATA,sha256=zfnfVuGiIPDEYYu7sRdxgX6HSoS0B0aLWnQp3ZC2DIA,1405
+license_control-0.0.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+license_control-0.0.3.dist-info/top_level.txt,sha256=sUtDFLF3JlfvryDmMmCyObSZ96OK9RXrlSdRLNTbFHA,22
+license_control-0.0.3.dist-info/RECORD,,
