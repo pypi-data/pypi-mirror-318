@@ -1,0 +1,13 @@
+ads_placement_guardian/__init__.py,sha256=wBnB3yPO7576GrSUojS6iROHcPsLswVEQdzrMpwOIBY,642
+ads_placement_guardian/server.py,sha256=wDIAYUUlxYxGkKdMz_ewDgMA2v47Imcs9dSFugrc-S8,10027
+ads_placement_guardian/img/gtechlogo.png,sha256=m0pZVSlLitXBcvLXMgabR62e0Etr272WdPUpp9vu__M,7684
+ads_placement_guardian/static/favicon.ico,sha256=WtWsLJNZTYuyvysXJBZkCPZS2WOiuoO49K-dMmTzRek,4286
+ads_placement_guardian/static/index.html,sha256=R2GF42YUgTZ-vF_BE3-xHfldA25HCW7Awp5z-stDNLw,7882
+ads_placement_guardian/static/main.744fbb8c61721083.js,sha256=84j_VpeIICjIDV1wi5LNC5qpAAq1Nx10FBSmRxK_1tI,791641
+ads_placement_guardian/static/polyfills.1a4a779d95e3f377.js,sha256=eiZju5eeE1aLYDxMDI4H1mUiAGoDqaQ8algQq5tu_CA,33863
+ads_placement_guardian/static/runtime.1eef65174679b3b8.js,sha256=rk-ti-7UC9NuYG8u3lvG1G535mTZa5oUb1246pITWIE,1081
+ads_placement_guardian/static/styles.9b68e15c04d9fa61.css,sha256=YzCp6ov4v6J1Ix5X0eJoEP9eL0vtdPNitjBAFM1rb2k,164820
+ads_placement_guardian-0.1.2.dist-info/METADATA,sha256=8wavgmkaSexo1CYwR_qSu4yOvjxmJ1WRP8fJ4iBCxKA,519
+ads_placement_guardian-0.1.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+ads_placement_guardian-0.1.2.dist-info/top_level.txt,sha256=etp3g4vvXpIRlIaCUSxgB_YZJoAmPKrdsGPYGvTxqvA,23
+ads_placement_guardian-0.1.2.dist-info/RECORD,,
