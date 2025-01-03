@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: mymra
+Version: 1.4.9.0
+Summary: A tool for embedding and extracting files and strings with AES encryption.
+Home-page: https://github.com/moshiax/mymra
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: pycryptodome
+Requires-Dist: argparse
