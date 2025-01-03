@@ -1,0 +1,10 @@
+peor/__init__.py,sha256=SCIcTdOvfEkrZd1doOtOnvCj8PmdRuXu18YYJQxfFrs,24
+peor/android_manifest_util.py,sha256=htwyHXjYMC2H1x7j-n724FBhG1giBRgLHSyacMCVjII,3221
+peor/frida_gadget_util.py,sha256=Hp-XDmTVvCGHOLuXuWq2AldExdEfcRQjA5mY0oHkweY,3920
+peor/main.py,sha256=BS-_YiDrHzo0pnRnOEzfxIDiKI91uZXmmdh_vsZLevI,2537
+peor/smali_injector_util.py,sha256=uoUScAEVTq2UpqAglwuNWLllJzq9i4sg_m169wir1TM,5529
+peor-0.0.1.dist-info/METADATA,sha256=aNeCyHxWPlT_-RSe6_sNQrb4jYMUgjSFuDPyY6nKvmg,2286
+peor-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+peor-0.0.1.dist-info/entry_points.txt,sha256=MtK-N0fVkXp5l4Kcpzdgl6xn7RHPENTYZhlTfyNDfro,40
+peor-0.0.1.dist-info/top_level.txt,sha256=NisVW5N7KvwgwrSabG94nwe_k04fWduOm9LcHPUazks,5
+peor-0.0.1.dist-info/RECORD,,
