@@ -1,0 +1,75 @@
+Metadata-Version: 2.4
+Name: python_sip_client
+Version: 0.0.3
+Summary: A baresip-based, multithreaded, event handling SIP client written in Python
+Project-URL: Homepage, https://github.com/mschleid/python_sip_client
+Project-URL: Issues, https://github.com/mschleid/python_sip_client/issues
+Project-URL: Documentation, https://github.com/mschleid/python_sip_client/wiki
+Author-email: Michael Schleider <maschleider@yahoo.com>
+License-File: LICENSE
+Keywords: baresip,communications,sip,telephony,voip
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Communications :: Internet Phone
+Requires-Python: >=3.8
+Provides-Extra: tests
+Requires-Dist: pytest>=6.2.4; extra == 'tests'
+Description-Content-Type: text/markdown
+
+# python_sip_client - A baresip-based, multithreaded, event handling SIP client written in Python
+
+### Requirements
+
+This package acts as a wrapper for [BareSIP](https://github.com/baresip/baresip), which is required for this package to function. For installation instructions, see the [BareSIP Repository](https://github.com/baresip/baresip). Typically, it can be installed using your favorite linux/macos package manager.
+
+## Installation
+`pip3 install python-sip-client`
+
+## Example Usage
+    from python_sip_client import BareSIP
+    import time
+
+    if __name__ == "__main__":
+        # Create BareSIP instance
+        bs = BareSIP(debug=False)
+
+        # Define event handlers
+        def handle_incoming_call(from_uri):
+            print("Incoming call from", from_uri)
+            
+            x = None
+            while x.lower() not in ["a", "h"]:
+                x = input("Answer or hangup? (a/h): ")
+            
+            if x == "a":
+                bs.answer()
+            else:
+                bs.hangup()
+
+        # Set event handlers
+        bs.on(BareSIP.Event.INCOMING_CALL, handle_incoming_call)
+
+        try:
+            # Start BareSIP
+            bs.start()
+            
+            # Create a user agent
+            bs.create_user_agent("user", "password", "domain")
+
+            # Wait for registration
+            while not bs.user_agents()[0].registered:
+                pass
+
+            bs.dial("user@domain / phone number")
+
+            time.sleep(10)
+
+            bs.hangup()
+
+            while True:
+                pass
+        finally:
+            # Stop BareSIP
+            bs.stop()
