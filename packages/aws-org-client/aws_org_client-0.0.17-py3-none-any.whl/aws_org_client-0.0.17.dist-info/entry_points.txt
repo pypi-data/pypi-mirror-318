@@ -1,0 +1,3 @@
+[console_scripts]
+aoc=aws_org_client.cli:cli
+
