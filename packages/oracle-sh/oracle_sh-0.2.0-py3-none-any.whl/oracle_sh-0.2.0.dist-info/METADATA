@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: oracle-sh
+Version: 0.2.0
+Summary: A pairwise comparer to discover your truth
+Author-email: Mike Moran <mike@mkmrn.dev>
+Project-URL: GitLab, https://gitlab.com/mmoran0032/oracle-sh
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typer~=0.13
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: pytest-mock; extra == "dev"
+Requires-Dist: pip-tools>=6.0.0; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+
+# oracle-sh
+
+A pairwise comparer to discover your truth
+
+Oracle tracks trials and successes for prompted options. Over time and with enough prompting, the results will show what you actually want between the available choices. If you want, you can also run a single trial, and take that as a final decision.
+
+Oracle uses a random weighted sampling method to determine the final fate. This will be updated in the future, including to automatically tell you when Oracle has enough information to make a firm decision.
