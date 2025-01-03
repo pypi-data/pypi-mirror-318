@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: naturalcolors
+Version: 1.0.4
+Summary: Create custom colormaps from discrete lists of colors
+Author-email: "Fabio D. Steffen" <35061965+fdsteffen@users.noreply.github.com>
+License: MIT
+Project-URL: Repository, https://github.com/fdsteffen/naturalcolors.git
+Project-URL: Issues, https://github.com/fdsteffen/naturalcolors/iisues
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Provides-Extra: dev
+Requires-Dist: devtools; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: bumpver; extra == "dev"
+Requires-Dist: mkdocs; extra == "dev"
+Requires-Dist: mkdocs-material; extra == "dev"
+Requires-Dist: mkdocs-jupyter; extra == "dev"
+Requires-Dist: mkdocstrings-python; extra == "dev"

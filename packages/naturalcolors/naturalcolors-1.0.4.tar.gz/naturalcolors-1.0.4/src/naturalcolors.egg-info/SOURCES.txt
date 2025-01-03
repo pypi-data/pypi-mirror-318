@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/naturalcolors/__init__.py
+src/naturalcolors/colormaps.json
+src/naturalcolors/colorpalette.py
+src/naturalcolors.egg-info/PKG-INFO
+src/naturalcolors.egg-info/SOURCES.txt
+src/naturalcolors.egg-info/dependency_links.txt
+src/naturalcolors.egg-info/requires.txt
+src/naturalcolors.egg-info/top_level.txt
+tests/test_colorpalette.py
