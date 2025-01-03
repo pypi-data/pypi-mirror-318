@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: MParkerO
+Version: 0.0.1
+Summary: A Python-Based Implementation of the Extended Parker-Oldenburg Algorithm                  for Inverting Multilayer Density Interfacesfrom Gravity Anomalies
+Author: ZengJH
+Author-email: z1714833751@163.com
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# MParkerO
+`MParkerO` is a Python-Based Implementation of the Extended Parker-Oldenburg Algorithm for Inverting Multilayer 
+           Density Interfacesfrom Gravity Anomalies
+
+A Multilayer Density Interface Inversion toolkit (MParkerO) is introduced to compute the
+3-D geometries of multilayer density interfaces from gridded gravity anomalies. We extend
+Parker-Oldenburg’s iterative method to handle multilayer density interface scenarios and
+implement it within this M-ParkerO toolkit. The method utilizes the relationship between
+gravity anomalies and multilayer density interfaces in the frequency domain. Given gravity
+anomalies, density contrasts,reference depth and the non-target density interfaces, the target
+density interface can be calculated.
