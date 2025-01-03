@@ -1,0 +1,16 @@
+papers_feed/arxiv_client.py,sha256=ah5F-nw1_z3ncQCcfxnj3aVmqm3PiILW3LLUW2hnAIQ,11405
+papers_feed/asset_manager.py,sha256=EtR2-C_E3YKL0nlIjcq3hUzOscOYTbtA_h2rI3nI1Dg,6446
+papers_feed/github_client.py,sha256=aLUa3qmPXdQcjOhVd1dJZ1bKPKJwCoGG64Hg2xI5kPE,2248
+papers_feed/markdown_service.py,sha256=wqPFth70wKzDA994jlt-dbVX2dTzDIzwab7WSaw02zg,8130
+papers_feed/models.py,sha256=6_v_P7FINNTkmd_oRw3SIkZkoLtAL_FxR1PcdvyJkns,1327
+papers_feed/pandoc_utils.py,sha256=Qu3qgTdAtXm-32JdjMd5vWLzyEXgl34fjo-HCUhuDOk,9502
+papers_feed/paper_manager.py,sha256=hPod6-G4GpGotColJL99_A59K75uPynD3G_SX0rZk2s,8057
+papers_feed/process_events.py,sha256=BgL5JC1QiLtRTVzMb9hEKjCZvrHO4kpnNlqof41KKVI,6859
+papers_feed/tex_utils.py,sha256=cTLY3cgzZLBhUHxxpaoUsbxO7An9v6E-VGDwUV8lMa4,5066
+papers_feed/frontend/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+papers_feed/frontend/generate_html.py,sha256=vuqnenqbUXyr8Ph93qEcclaI3Ia3XvUy8HAXBxbIUJw,4205
+papers_feed-0.1.0.dist-info/LICENSE,sha256=tOBU-4eEmm43rbjtI9Cutl0xcsgNjIxONLSaZ664zP8,1067
+papers_feed-0.1.0.dist-info/METADATA,sha256=Axh5fKVWsNe-gChIyf0Dn03N6vHininIwHfuEezjNE0,4697
+papers_feed-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+papers_feed-0.1.0.dist-info/top_level.txt,sha256=bpDa3JoUpIcvStQDYeAAIlrEEMjAltPDiWcdbPRLYzc,12
+papers_feed-0.1.0.dist-info/RECORD,,
