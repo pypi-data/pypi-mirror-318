@@ -1,0 +1,29 @@
+[project]
+name = "aladeen-media-indexer"
+description = "A package for indexing news media articles"
+version = "0.3.0"
+authors = [
+    {name = "Irakli Janiashvili", email = "irakli.janiashvili@gmail.com"},
+]
+requires-python = "<4.0,>=3.12"
+dependencies = [
+    "pandas==2.1.4",
+    "scikit-learn<2.0.0,>=1.6.0",
+    "umap-learn<1.0.0,>=0.5.7",
+    "requests<3.0.0,>=2.32.3",
+]
+
+[dependency-groups]
+dev = [
+    "streamlit<2.0.0,>=1.41.0",
+    "psycopg2<3.0.0,>=2.9.10",
+    "sqlalchemy<3.0.0,>=2.0.36",
+    "streamlit-echarts<1.0.0,>=0.4.0",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["aladeen_media_indexer"]

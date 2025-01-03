@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: aladeen-media-indexer
+Version: 0.3.0
+Summary: A package for indexing news media articles
+Author-email: Irakli Janiashvili <irakli.janiashvili@gmail.com>
+Requires-Python: <4.0,>=3.12
+Requires-Dist: pandas==2.1.4
+Requires-Dist: scikit-learn<2.0.0,>=1.6.0
+Requires-Dist: umap-learn<1.0.0,>=0.5.7
+Requires-Dist: requests<3.0.0,>=2.32.3
