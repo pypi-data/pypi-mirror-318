@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "httpie-hush"
+version = "1.0"
+description = "Hush OAuth 2 plugin for the HTTPie command line HTTP client"
+authors = ["Gilad Sever <gilad9366@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+httpie = "^3.2.4"
+
+[tool.poetry.group.ci]
+optional = true
+
+[tool.poetry.group.ci.dependencies]
+pylint = "^3.2.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.plugins."httpie.plugins.auth.v1"]
+httpie_hush = "httpie_hush:HushAuthPlugin"
