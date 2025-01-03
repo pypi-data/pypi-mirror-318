@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: bq_nb_lib
+Version: 0.1.3
+Summary: A utility package for managing S3, Slack, and AlertOps integrations.
+Author: Rashed
+Author-email: Rashed@terdac.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: google-cloud-secret-manager
+Requires-Dist: boto3
+
+# bq_nb_lib
+
+A utility package for managing AWS S3, Slack notifications, and AlertOps integrations.
+
+## Installation
+
+```bash
+pip install bq_nb_lib
