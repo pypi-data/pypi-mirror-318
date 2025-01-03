@@ -1,0 +1,7 @@
+pip_depender/__init__.py,sha256=YqesGbjyTkVMIB_W6Agbs2AdNMz5-HzKbNGMqyFFl4g,3869
+pip_depender/cli.py,sha256=0kJBGJed_yTkk5G2kBolHTZTrv_cXPMZVfmIO4XVORA,2976
+pip_depender-0.1.1.dist-info/LICENSE,sha256=DebWGpzNCYWtNvpwmelTZWfiinTJ6FMEUrtLLuXxvNg,1063
+pip_depender-0.1.1.dist-info/METADATA,sha256=ZynuHyVCs7eeoCTLLk7uf6Jso9fV2kjd2XIysOu1me8,1753
+pip_depender-0.1.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+pip_depender-0.1.1.dist-info/entry_points.txt,sha256=SkI_VSo4Sj3s0q-oThMzeL352CrQkaIzGStKj8jRjV0,54
+pip_depender-0.1.1.dist-info/RECORD,,

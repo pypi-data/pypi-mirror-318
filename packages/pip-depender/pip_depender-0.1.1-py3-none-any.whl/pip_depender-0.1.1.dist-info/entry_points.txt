@@ -1,0 +1,3 @@
+[console_scripts]
+pip-depender=pip_depender.cli:main
+

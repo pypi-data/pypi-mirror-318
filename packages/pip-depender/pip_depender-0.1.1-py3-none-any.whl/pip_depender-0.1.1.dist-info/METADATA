@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: pip-depender
+Version: 0.1.1
+Summary: Depender: Streamline your Python project dependencies with intelligent version management
+Author: chyroc
+Author-email: chyroc@qq.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: httpx (>=0.25.0,<0.26.0)
+Requires-Dist: packaging (>=23.2,<24.0)
+Description-Content-Type: text/markdown
+
+# pip_depender
+
+[![PyPI version](https://img.shields.io/pypi/v/pip-depender.svg)](https://pypi.org/project/pip-depender/)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/pip-depender)
+
+Depender: Streamline your Python project dependencies with intelligent version management
+
+## Install
+
+```bash
+pip install pip-depender
+```
+
+## Usage
+
+```bash
+pip-depender <package_name>
+```
+
+## Example
+
+```bash
+pip-depender httpx
+
+Fetching package info...  [██████████░░░░░░░░░░░░░░░░░░░░░░░░░░]   30%
+📦 Package Info:
+  • Name: httpx
+  • Description: The next generation HTTP client.
+  • Total Versions: 72
+
+Analyzing version compatibility...  [████████████████████████████████████]  100%
+
+🎯 Recommended Version(s):
+httpx = [
+    { version = "^0.28.1", python = ">=3.8" },
+    { version = "^0.24.1", python = ">=3.7" },
+    { version = "^0.22.0", python = ">=3.6" },
+    { version = "^0.0.1", python = ">= 2.7" },
+]
+```
+
