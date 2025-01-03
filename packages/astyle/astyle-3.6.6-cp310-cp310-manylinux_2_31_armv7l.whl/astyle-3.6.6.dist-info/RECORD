@@ -1,0 +1,8 @@
+astyle/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+astyle/__init__.py,sha256=8Mv4RYvZ6L3SQ74qv0ZjsH8FARLjS1YMV4AuI5gjDHw,646
+astyle/__main__.py,sha256=zBFKncTynP-BbFChmk61qYbdSJYxmVeb_qef4pEWvio,856
+astyle/__init__.cpython-310-arm-linux-gnueabihf.so,sha256=Iz8r3_JDNqTp7FRL78Yi31WISA9NPsLdqtJCuFWBr68,250748
+astyle-3.6.6.dist-info/METADATA,sha256=vcUu_kQ8xVK4-qacJT22LLnh-QDD9sj2cOiND71-enE,2040
+astyle-3.6.6.dist-info/RECORD,,
+astyle-3.6.6.dist-info/WHEEL,sha256=EO9CCpbIT9c7krgdjUuWv6TnrPirjJMKqPk9RqSm4IQ,118
+astyle-3.6.6.data/scripts/astyle,sha256=t_h6A3UeNo6mTkUfHJORHlGzXHQUAQWYQ8Jvx9ZKwjw,370128
