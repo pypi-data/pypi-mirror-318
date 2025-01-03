@@ -1,0 +1,55 @@
+name: docs
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+# security: restrict permissions for CI jobs.
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # Build the documentation and upload the static HTML files as an artifact.
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # TODO: This should ideally just reuse the main CI artifacts.
+      - uses: mhils/workflows/checkout@v12
+      - uses: ./.github/actions/setup
+      - uses: install-pinned/maturin-with-zig@68c027568b7d08df7bc3c52476ae28d1d2d787f5
+      - uses: install-pinned/mypy@2b552bed479e3f7065314667b670f7303619e989
+      - uses: install-pinned/pdoc@fd9469ecb06f32b7012e07e449ce98b217bf1189
+
+      - run: maturin build --features docs,pyo3/extension-module
+        working-directory: ./mitmproxy-rs
+      - run: pip install --no-index --no-dependencies --find-links target/wheels/ mitmproxy_rs
+
+      - run: stubtest --allowlist mitmproxy-rs/stubtest-allowlist.txt --mypy-config-file mitmproxy-rs/pyproject.toml mitmproxy_rs
+
+      - run: pdoc -o docs/ mitmproxy_rs
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/
+
+  # Deploy the artifact to GitHub pages.
+  # This is a separate job so that only actions/deploy-pages has the necessary permissions.
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
