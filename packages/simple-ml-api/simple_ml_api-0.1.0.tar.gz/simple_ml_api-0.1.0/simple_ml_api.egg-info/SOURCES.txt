@@ -1,0 +1,8 @@
+setup.py
+ml_package/__init__.py
+simple_ml_api.egg-info/PKG-INFO
+simple_ml_api.egg-info/SOURCES.txt
+simple_ml_api.egg-info/dependency_links.txt
+simple_ml_api.egg-info/entry_points.txt
+simple_ml_api.egg-info/requires.txt
+simple_ml_api.egg-info/top_level.txt
