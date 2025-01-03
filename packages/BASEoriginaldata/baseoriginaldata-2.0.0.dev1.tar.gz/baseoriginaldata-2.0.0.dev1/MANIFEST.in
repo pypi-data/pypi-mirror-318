@@ -1,0 +1,3 @@
+recursive-include src *.xlsx *.ab1
+recursive-include src D_without_orphon* J_without_orphon* V_without_orphon* human_gl_C.fasta.*
+recursive-include src README LICENSE
