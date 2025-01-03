@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: lightweight-chess-engine
+Version: 0.1.0
+Summary: A lightweight chess engine library for Linux.
+Author: Lecheheb djaafar
+Author-email: djaafardjaafarlolo@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Lightweight Chess Engine
+
+This library provides a lightweight chess engine for Linux environments. 
+
+## Installation
+
+```bash
+pip install lightweight_chess_engine
