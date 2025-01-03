@@ -1,0 +1,14 @@
+DataComparerLibrary/__init__.py,sha256=p7KMFEc8I5Pg-YMcZTpE9_9AORb3dwTzutEDGBsXEt0,258
+DataComparerLibrary/arraycomparer.py,sha256=mvRcYlPjcXqV2dZx9LCV5FWhKZq21l92E00vcCKW7cM,20850
+DataComparerLibrary/datacomparer.py,sha256=L5d7dz2I1dFsidyzWAv8w9a23vxsKPBj5d3DgkLKLyA,6236
+DataComparerLibrary/datasorter.py,sha256=iBRD2ZpwZ7-YfPCMQ6WDNYtuK8mCjhha94aPuYAeJZY,8612
+DataComparerLibrary/delimitertranslator.py,sha256=4fyuqw7_kBg_5jhCBbDnmsVEnjBNWtgEtDs0jFLV6Tw,336
+DataComparerLibrary/fileconverter.py,sha256=6QEk8GIO5a3COTCtCoDsgTlGp6eh3giwrA41v9zkPo4,2694
+DataComparerLibrary/report.py,sha256=vHSCWHDIpnqmA0TRNNGpnw2BFt5zAWjCpVUpMg3U8j8,1139
+DataComparerLibrary/tools.py,sha256=c-zH7KaGbDdcsGq-RlwefnJ2Gc6V6Vk3rT2akKem0Lk,208
+DataComparerLibrary/version.py,sha256=uVb4ihM73KUk1vlRJSzdl_dgcDAPFMhhe4iokIykscg,39
+DataComparerLibrary-0.844.dist-info/LICENSE.txt,sha256=AS_6qK6QJNUIGTkCBPMgi_2Hdf17QvWUv6SItaEW_DQ,11559
+DataComparerLibrary-0.844.dist-info/METADATA,sha256=sUnCuSlaUL0BZiF0AjTTDDocgQfWMORscdxvCcVaoeY,16649
+DataComparerLibrary-0.844.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+DataComparerLibrary-0.844.dist-info/top_level.txt,sha256=xqVA6MQAkU8bV61QmrqOAKExnBNigJFSbo-E7P2KyG8,20
+DataComparerLibrary-0.844.dist-info/RECORD,,
