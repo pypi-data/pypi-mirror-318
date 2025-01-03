@@ -1,0 +1,98 @@
+Metadata-Version: 2.1
+Name: naverdict
+Version: 1.0.0
+Summary: Access Naver dictionary using Python
+Author-email: Reinier Koops <reinier.koops@outlook.com>
+License: The MIT License (MIT)
+        
+        Copyright (c) 2025 ReinierKoops
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Documentation, https://reinierkoops.github.io/naverdict/
+Project-URL: Repository, https://github.com/ReinierKoops/naverdict.git
+Project-URL: Changelog, https://github.com/ReinierKoops/naverdict/releases
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: beautifulsoup4>=4.0.0
+Requires-Dist: selenium>=4.0.0
+Requires-Dist: webdriver_manager>=4.0.0
+Requires-Dist: requests>=2.0.0
+Requires-Dist: click>=8.0.0
+Provides-Extra: dev
+Requires-Dist: black>=24.0.0; extra == "dev"
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+Requires-Dist: isort>=5.0.0; extra == "dev"
+Requires-Dist: pre-commit>=4.0.0; extra == "dev"
+Requires-Dist: ruff>=0.8.0; extra == "dev"
+Requires-Dist: mkdocs>=1.6.0; extra == "dev"
+Requires-Dist: mkdocs-material>=9.0.0; extra == "dev"
+
+# Naverdict
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/naverdict)
+![PyPI](https://img.shields.io/pypi/v/naverdict)
+![PyPI - License](https://img.shields.io/pypi/l/naverdict)
+
+## Introduction
+
+Search of both English-Korean and Korean-English dictionaries of endic.naver.com
+
+Based on the [NDic](https://github.com/jupiny/ndic) repository by [SeunghwanJoo](https://github.com/jupiny). However, this library was outdated, so this is a "updated" version of it.
+
+## Installation
+
+Install via pip:
+
+```cmd
+pip install naverdict
+```
+
+## How to use
+
+Using this as a Python package you can use:
+
+```python
+>>> from naverdict.search import search
+
+>>> search("하다")
+```
+```
+["do", "have", "give", "make", "play"]
+```
+
+Using this as a CMD/CLI you can use:
+
+```bash
+$ naverdict 하다
+```
+```
+do
+have
+give
+make
+play
+```
