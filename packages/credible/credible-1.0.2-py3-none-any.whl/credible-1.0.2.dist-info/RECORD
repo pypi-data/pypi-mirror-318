@@ -1,0 +1,13 @@
+credible/__init__.py,sha256=AK9FD0NPoZH4dODpt7NeE2IlOs_o6lKGngkgvtLT1Lw,570
+credible/curves.py,sha256=8P92dL1Z0D1w8cFeqZ3WGJhUW3AJTbVusMX5JtNdf6E,20342
+credible/plot.py,sha256=I9E5aqH5u2TMgD5aiGysWcTUneXtnkxEzJT0k02Vpx8,7465
+credible/utils.py,sha256=ijKFmLmJ9p1W3YE_D4WjCRVUfcuxFLQovW1GSnGY43A,2856
+credible/bayesian/functors.py,sha256=GRQ-CDxFoI6etjJ72_nPewUGgowlBRq-q604rXTjWc8,2829
+credible/bayesian/kfold.py,sha256=rTKiOKsx34O6F_30wPrB1u9HbO-91aVlgCVaqU6AO9M,14898
+credible/bayesian/metrics.py,sha256=hDyCwc6hKj2zldcjOB5WTTQ82K5kJZDfUy8x1k0B0IM,25242
+credible/bayesian/utils.py,sha256=BU74Hk0pj-ozDc3wfT3si2C4JdSStShDGc3OIoVqbvE,29674
+credible/frequentist/functors.py,sha256=44xw_bU1AwDEJD6pJ-IBqGwOoAoE2d3jkW8aGaGb4gE,830
+credible/frequentist/utils.py,sha256=wJ0LSRmjckuiHhKe5YeaT8a3Y5UnPJVl57qP6b2cvKM,12974
+credible-1.0.2.dist-info/METADATA,sha256=FUQXtounTWIfZ52e-EuOMrmOzeJIRwdzJyGLtWYpO8M,2447
+credible-1.0.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+credible-1.0.2.dist-info/RECORD,,
