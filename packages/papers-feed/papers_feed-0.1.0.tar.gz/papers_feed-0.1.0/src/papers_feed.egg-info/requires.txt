@@ -1,0 +1,10 @@
+pyyaml
+llamero>=0.2.5
+aiohttp
+pydantic
+requests
+
+[test]
+pytest>=7.0
+pytest-cov>=4.0
+pytest-asyncio
