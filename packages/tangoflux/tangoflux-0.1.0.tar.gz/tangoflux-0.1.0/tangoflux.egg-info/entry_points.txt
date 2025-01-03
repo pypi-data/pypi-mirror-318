@@ -1,0 +1,3 @@
+[console_scripts]
+tangoflux = tangoflux.cli:main
+tangoflux-demo = tangoflux.demo:main
