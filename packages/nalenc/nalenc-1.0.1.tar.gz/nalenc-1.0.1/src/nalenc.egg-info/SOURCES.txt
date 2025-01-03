@@ -1,0 +1,11 @@
+COPYING
+COPYING.LESSER
+LICENSE
+README.md
+pyproject.toml
+src/nalenc/__init__.py
+src/nalenc/nalenc.py
+src/nalenc.egg-info/PKG-INFO
+src/nalenc.egg-info/SOURCES.txt
+src/nalenc.egg-info/dependency_links.txt
+src/nalenc.egg-info/top_level.txt
