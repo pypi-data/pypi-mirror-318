@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "resource-generator"
+version = "0.1.0"
+description = ""
+authors = ["Ratana Khun <khunratana168.edu@gmail.com>"]
+readme = "README.md"
+packages = [
+    {include = "resource_generator"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = "^0.15.1"
+rich = "^13.9.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.3.4"
+setuptools = "^75.6.0"
+build = "^1.2.2.post1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
