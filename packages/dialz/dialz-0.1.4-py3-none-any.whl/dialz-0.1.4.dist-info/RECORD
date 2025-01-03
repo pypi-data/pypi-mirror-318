@@ -1,0 +1,13 @@
+dialz/__init__.py,sha256=4cR1Bk7D3U1YsyIro9hqwcxgoLc7KBGutq29atyWNu4,132
+dialz/corpus/all_truncated_outputs.json,sha256=yHmQkTuDn6eSt1G1Mqj5q8Nydwv000od41ijojPttuU,9824
+dialz/corpus/data.json,sha256=Ed9brV5DWM30F4uo101oyXEAJ9dxz5A0JlyOWkpaAXo,245615
+dialz/corpus/instructions.json,sha256=pNPDjwXueBFb8cwQDxdCbJKzSnFk_Grp8thIHB9-j7w,6336
+dialz/corpus/prompt_variations.json,sha256=LbzSrkOLHASG0_kjjedU_5liZM6G7ZE_Vh7TN9PfOJ8,1359
+dialz/dataset.py,sha256=_nJJrvciv3WF8llP5OMsW5ioogc3lSWtJSDAKu03Z74,5206
+dialz/evaluate.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dialz/main.py,sha256=MRMD9DSRGcOuJA4Js3gmGRD7KwAl06YNoR6_j-UaY5A,1931
+dialz/model.py,sha256=dx3aRVBFuDV4f7lRIj878uNKcmDQ4R2RJ2oQ5B7nkZI,7718
+dialz/vector.py,sha256=38LHDfpmjT6om3AA5hbacoulBdPQQFQINsrUQBC2dXg,11605
+dialz-0.1.4.dist-info/METADATA,sha256=FEsA525fVIepuOzjJVjSK6gSQ49zlz59DIuZyu5z_GI,712
+dialz-0.1.4.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+dialz-0.1.4.dist-info/RECORD,,
