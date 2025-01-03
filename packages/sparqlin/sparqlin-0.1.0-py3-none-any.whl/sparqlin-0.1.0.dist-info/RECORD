@@ -1,0 +1,12 @@
+sparqlin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sparqlin/common/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sparqlin/testing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sparqlin/testing/base_test_config.py,sha256=u7oGrzmnn2iN611p4teIWpQTTNeZJJjl5cuKiXQ6ixk,1653
+sparqlin/testing/fixtures.py,sha256=Qh_raGXUlKHhhBqu4pPJr3dMouNOebZbh4LThSzJ7DU,895
+sparqlin/testing/helpers.py,sha256=o_0-qvTQda0NGOk1gjiajeTYSv5Ua55HjqBsFk9PqOA,8014
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sparqlin-0.1.0.dist-info/LICENSE,sha256=DMrg4Bgr8uESRqlZfSlr_GWAwMySjMrTg850SsYxjpc,1070
+sparqlin-0.1.0.dist-info/METADATA,sha256=WE3OHG7KgGMY8J2oaRca9bdXt46qp4Dcg2RjLWLHtiA,6936
+sparqlin-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+sparqlin-0.1.0.dist-info/top_level.txt,sha256=1kEvNpcpTXJuascmVleJHhriJlgJaLElP9ZdPnDETok,15
+sparqlin-0.1.0.dist-info/RECORD,,
