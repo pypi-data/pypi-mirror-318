@@ -1,0 +1,6 @@
+deeptensor/__init__.py,sha256=fgELgdtWcTLBMPBClOao4eWpcrCczxD18s6FFkS3dxI,98
+deeptensor/_core.cpython-311-darwin.so,sha256=HzBfQVJaahlnFHrZrE-TazGdhJhgwVmWbiQsHD6BvJM,115192
+deeptensor-0.0.1.dist-info/RECORD,,
+deeptensor-0.0.1.dist-info/WHEEL,sha256=KlDzho6BlWrRcHlQpsRrM7w3CU7a3W2hpn5UPwr_hzM,115
+deeptensor-0.0.1.dist-info/METADATA,sha256=oHQ1EdqIcgPPLnjMsu2XqDVPzyuzLgQ9K7jlK3JYcps,835
+deeptensor-0.0.1.dist-info/licenses/LICENSE,sha256=BqCyOvOaiwd1VlcW7kPGgr5KOm2-eviMMcVtf_SA9go,1065
