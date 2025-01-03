@@ -1,0 +1,13 @@
+godot_asset_library_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+godot_asset_library_client/__main__.py,sha256=FjL1KDjgcq3lOz0fTrCBJgKIzRz_CAUEsLxaz_wXk2g,27
+godot_asset_library_client/cli.py,sha256=731HuYlx4xYNrdKfx_WzVxdg5oKKtbyE9zW3W1JhNco,9245
+godot_asset_library_client/git.py,sha256=23rMwB99QNB6VPbz_eeRNb8rKcxiwCHJnGMJGEiF5Gw,3554
+godot_asset_library_client/git_test.py,sha256=qHk63b0YNSaUgTvASMmoyW-6M1wHK9SHCCPfr_MD2I0,4383
+godot_asset_library_client/godot_project_reader.py,sha256=mn2MB4RGiKcY20GA-ozfmHm_4pn3RyN8bc_c5B98gl4,897
+godot_asset_library_client/testutils.py,sha256=yDswyKFul3eUqgRr8zrQOTblVqZCbH53h8ua3G7uztM,3170
+godot_asset_library_client-0.3.0.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+godot_asset_library_client-0.3.0.dist-info/METADATA,sha256=YBPTq22Tnk9DSDJz5gTt2peJZlimpcvR4LR3V9XEW5A,46919
+godot_asset_library_client-0.3.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+godot_asset_library_client-0.3.0.dist-info/entry_points.txt,sha256=4ZnDCKKiZZrZJv7-ijNxfbZ_2HKPqXLeZ256h_9tIT4,82
+godot_asset_library_client-0.3.0.dist-info/top_level.txt,sha256=uVVDy6ncJPk3umeAku4xo5VdTRcHH96DjNGjU3fbOpU,27
+godot_asset_library_client-0.3.0.dist-info/RECORD,,
