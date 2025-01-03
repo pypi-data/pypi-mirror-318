@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: vunghixuan_package
+Version: 0.1.0
+Summary: API, OTP, Create Project
+Author: Đăng Thanh Vũ
+Author-email: vunghixuan@gmail.com
+Requires-Dist: python-dotenv
+Requires-Dist: requests
