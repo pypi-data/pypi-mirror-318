@@ -1,0 +1,11 @@
+psf/__init__.py,sha256=dzMxYcvOWwrR4LWT4tFQRE31NsV90ZEEFB8Ff9p-mVk,89
+psf/_psf.cp312-win_arm64.pyd,sha256=w99adMwJ41k4gC9h1ObJIZOmD9sgIxCuSlXJi3BmAnw,26624
+psf/conftest.py,sha256=tzffeGLjIUiVIKlnl9UzJw6MUMm_UJ6ty5sBI9El4Xw,274
+psf/psf.py,sha256=wepxFRD2ujwiN-Se5Y1dzZHfhl_P2ch9plVCYBTGMpM,34095
+psf/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+psf/examples/psf_example.py,sha256=vQzaCAuwUmFWUOb31kLb2TtNkkn-z-oVLsBFZ69xAEg,4464
+psf-2025.1.1.dist-info/LICENSE,sha256=5BPRtSmsZw9QxDlMgCRbB0MmsW3JHWlPZCOExX1YiTI,1576
+psf-2025.1.1.dist-info/METADATA,sha256=5TPN8d5dufEpqaigmagFTNNRIfS7_8G-g5h2N6a8yG8,5135
+psf-2025.1.1.dist-info/WHEEL,sha256=iRw2vxw158igXp4LibBMxhe4uGdsdoqHWQXDw4Satr4,101
+psf-2025.1.1.dist-info/top_level.txt,sha256=hl58iBs6un3SxETzKo6Ms6vdkMftKZwQ6FaNJhCbiJU,4
+psf-2025.1.1.dist-info/RECORD,,
