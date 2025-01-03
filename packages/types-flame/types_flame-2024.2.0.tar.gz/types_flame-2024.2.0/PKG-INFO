@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: types-flame
+Version: 2024.2.0
+Summary: Python stubs for the Autodesk Flame Python API
+Author-email: Beat Reichenbach <beatreichenbach@users.noreply.github.com>
+Keywords: types,graphics,VFX
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Typing :: Stubs Only
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: black>=24.0; extra == "dev"
+
+# Types Flame
+
+This package provides stubs for Autodesk Flame.
+The major and minor version number of this package corresponds to the Flame version.
+However the patch version might change to account for fixes in the stubs.
+
+## Installation
+
+```
+pip install types-flame
+```
+
+## Generation
+
+Append the hook dir to the `DL_PYTHON_HOOK_PATH`.

@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+flame-stubs/__init__.pyi
+flame-stubs/py.typed
+types_flame.egg-info/PKG-INFO
+types_flame.egg-info/SOURCES.txt
+types_flame.egg-info/dependency_links.txt
+types_flame.egg-info/requires.txt
+types_flame.egg-info/top_level.txt
