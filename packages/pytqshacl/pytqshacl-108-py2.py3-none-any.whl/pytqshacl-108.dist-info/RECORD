@@ -1,0 +1,10 @@
+pytqshacl/__init__.py,sha256=94KEZownFkjkFQtmBdrii1mAQF3yC4wRhxz3hQd0-5k,181
+pytqshacl/cli.py,sha256=4aBwmomLJZr4i7S9c1FvQ3ctM2h7DCkCSFfpbq6hvfo,1383
+pytqshacl/config.py,sha256=RwE8TRTDYTc6R3GAUZI1LLtRHAJrpliTRNU7oJ_KshI,420
+pytqshacl/run.py,sha256=iB4fpAf7ACpZi1FlPjLqSs1XX3MGWHfwbDpv_jHCv0c,2546
+pytqshacl/topquadrant/__init__.py,sha256=pzsYxx2Y9G-KyTvq1usBzz3UirY0uXreQ7hNiNkpgiw,40
+pytqshacl/topquadrant/install.py,sha256=uY1_VeJ3PFHMzpV2JmnYE4b2NBEdH89-34Hha_K6dt4,2775
+pytqshacl-108.dist-info/METADATA,sha256=2QsRCKBGndIvuQV0CFE79dS3s5fxAZYdP2yOnU37O6Y,833
+pytqshacl-108.dist-info/WHEEL,sha256=tkmg4JIqwd9H8mL30xA7crRmoStyCtGp0VWshokd1Jc,105
+pytqshacl-108.dist-info/entry_points.txt,sha256=KBW-k4eOKXDYW2QxzG0Xe5WKcIW9GHOXtyWy90XOyOk,44
+pytqshacl-108.dist-info/RECORD,,
