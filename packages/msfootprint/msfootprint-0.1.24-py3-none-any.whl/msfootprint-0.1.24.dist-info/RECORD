@@ -1,0 +1,9 @@
+msfootprint/.DS_Store,sha256=uirRbtAU1BjteygZZ6BEtjlIBGeK3LZyfp1KETbXkEE,8196
+msfootprint/__init__.py,sha256=fXc07Lig0Mk8sAKSzZYH6brwDIecaVlzjsAJ3RYMEP8,198
+msfootprint/buildingfootprint.py,sha256=dTtGPt7DDtbNtiE0GNOOoTOZcRgb3-N6pbUN1q0Wa3o,3943
+msfootprint/data/us_boundary.gpkg,sha256=Lsja-7Pp-H1-gjGLpUwE9Y8hw3eWvO5jugpgDWm947s,16928768
+msfootprint/find_footprinttable.py,sha256=BBWlU-CjFLi6tZgy2RguzSnFTVizZNNUdm3uZTYfh0c,1466
+msfootprint/utils.py,sha256=zJmPMnoKg-XDWsBWDgk-52BCAj7lC3mJobVmsRTMis8,162
+msfootprint-0.1.24.dist-info/METADATA,sha256=Mya0dr9LgKZ723NOSjkFzax9QVtCeUlykwt_KllTufU,4313
+msfootprint-0.1.24.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+msfootprint-0.1.24.dist-info/RECORD,,
