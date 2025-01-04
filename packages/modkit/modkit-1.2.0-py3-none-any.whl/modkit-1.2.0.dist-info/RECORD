@@ -1,0 +1,16 @@
+modkit/__init__.py,sha256=yyP5sabm7NxIdB37hCEKwU2J0yZUXSpg54PU_Blkuao,139
+modkit/classtools/__init__.py,sha256=_rkDApEEL7CQs4O-WeaM10iUWGf04vez9paDoQ4qO34,119
+modkit/classtools/_possibility.py,sha256=oLSFmEUhGbO1JI-rmejnoH3XB8qcBt9SWeBersnGyVw,1290
+modkit/classtools/_possibility.pyi,sha256=4FSJuUpICP0TOmFrmWUPjCVp22s-114JFMa9u8XIBi0,3611
+modkit/classtools/_property.py,sha256=SphKXJZyM4XiwKsX-3diySrYSgTKMaUQNGWQGQd2wro,4283
+modkit/classtools/_property.pyi,sha256=GxtmRicEeLGJkltlSmNCN_uT_i6PNyslEIfSHOYHzvw,5246
+modkit/classtools/exceptions.py,sha256=HvYemD12nNMBKpVxpe7hyA9jlxkpO_GK6rHhMOSK2DM,99
+modkit/typing/__init__.py,sha256=O8crsTFeuqhe7_6fmMquvsmA2VlJDp_D9jfkEpShoJw,63
+modkit/typing/_override.py,sha256=tAsYekTGYm54GhhoMp2um4NPDy1-37X-8NnTXFIb4xY,5808
+modkit/typing/_override.pyi,sha256=ATuZ_8zhcSbVcjA3m5e03vL7FSiMjwVJvCyyjCqGqMY,8655
+modkit/typing/exceptions.py,sha256=CPNdaRPryuwDJbdsirOYWyNrSyayrn6e0nWcVAS1WJo,55
+modkit-1.2.0.dist-info/LICENSE,sha256=t_UmIiQi5HxzkoICJVHEU_fHLXRad7OJnPYM78seIx0,1074
+modkit-1.2.0.dist-info/METADATA,sha256=V5awfhoGn9H0-4N1GEQfTawltGcSYz8HXHauFijwRXY,13624
+modkit-1.2.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+modkit-1.2.0.dist-info/top_level.txt,sha256=iQyUFANCPSHYNN7vXPDFTR3iL_eUKSvJklGAtfEkYXo,7
+modkit-1.2.0.dist-info/RECORD,,
