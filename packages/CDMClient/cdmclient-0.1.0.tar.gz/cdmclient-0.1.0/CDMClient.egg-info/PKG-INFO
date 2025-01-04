@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: CDMClient
+Version: 0.1.0
+Summary: CDMClient
+Author-email: Aron Radics <radics.aron.jozsef@gmail.com>
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: transmission_rpc
+Requires-Dist: cryptography
+Provides-Extra: dev
+Requires-Dist: types-requests; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: pylint; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
