@@ -1,0 +1,15 @@
+eloy/__init__.py,sha256=NZaRiHL1BVSvk1Yo35GOOWmN1p0K8EHXcrcJcVfUEyA,200
+eloy/alignment.py,sha256=ytv77Xas3ljj4PkOG7Pz49qQ_DF4aZOjRINGFDLpsGU,2515
+eloy/calibration.py,sha256=ss-f27tFxgVW1iArIdN9NKZoX6IvXaaIB6hx2NTeXh8,2654
+eloy/centroid.py,sha256=GoMFZSKuLAVDEdvoWBaza-d_F0mpGAXc-ld5KQlhQwo,755
+eloy/detection.py,sha256=hwZ77gtA2v2VK30PntFFxqeJYPQZ6Dxv7RKrhP_J7YE,1180
+eloy/eloy_version.py,sha256=OHlALrLh9XyusWdKJNqLD04_AcF2LeoLqeKz0uphHXQ,413
+eloy/flux.py,sha256=4KInbGFbmpsDusM4pOjxFekzCAVAYG-6aoJqJdY2gjQ,4842
+eloy/photometry.py,sha256=Q1JtwdDF9cxvkmVHtuTHWwA__TiXHWOvh0SAWwlxQ5E,1063
+eloy/psf.py,sha256=WhHt2ffXm-rq3h6S59IHjRyjBdXbyTiauce1QtTcdVc,1902
+eloy/utils.py,sha256=p3gDw3nwxWfFa42qH7BoIyD4hHCXpBakGNLEdJ2iT2c,1650
+eloy/viz.py,sha256=k-BxtqwUfujddacsc40XmFvMv30so_P453r4OaZoyQA,2051
+eloy-0.0.4b0.dist-info/METADATA,sha256=lx6gXN-jfrLb8MvubW2aoW7I1yI7HlWqhTYDS_Qx_E0,2002
+eloy-0.0.4b0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+eloy-0.0.4b0.dist-info/licenses/LICENSE,sha256=b-q5kCH2roKxbHS2_9GM5uEtiVsnbNItn4fNI4AKxJc,1081
+eloy-0.0.4b0.dist-info/RECORD,,
