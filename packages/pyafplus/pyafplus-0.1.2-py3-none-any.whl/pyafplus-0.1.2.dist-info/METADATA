@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: pyafplus
+Version: 0.1.2
+Summary: A collection of Python utility functions and extensions
+Home-page: https://github.com/dhjs0000/PyPlus
+Author: dhjs0000
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# PyPlus
+
+PyPlus 是一个 Python 工具集合，提供了多种实用的扩展功能。
+
+## 功能特性
+
+- dictplus: 字典扩展功能
+- strplus: 字符串扩展功能
+- listplus: 列表扩展功能
+- bccmaths: 数学计算功能
+- strmaths: 字符串数学计算功能
+
+## 安装
+
+```bash
+pip install pyplus
+```
+
+## 使用示例
+
+```python
+from dictplus import DictPlus
+from strplus import StrPlus
+from listplus import ListPlus
+
+# 在这里添加使用示例
+```
+
+## 许可证
+
+本项目采用 MIT 许可证。 
