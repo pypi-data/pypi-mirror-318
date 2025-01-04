@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/goodcommits/__init__.py
+src/goodcommits.egg-info/PKG-INFO
+src/goodcommits.egg-info/SOURCES.txt
+src/goodcommits.egg-info/dependency_links.txt
+src/goodcommits.egg-info/top_level.txt
