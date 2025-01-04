@@ -1,0 +1,13 @@
+README.md
+setup.py
+hawkpy/__init__.py
+hawkpy/crypto.py
+hawkpy/exploit.py
+hawkpy/password_cracker.py
+hawkpy/scanner.py
+hawkpy/utils.py
+hawkpy.egg-info/PKG-INFO
+hawkpy.egg-info/SOURCES.txt
+hawkpy.egg-info/dependency_links.txt
+hawkpy.egg-info/requires.txt
+hawkpy.egg-info/top_level.txt
