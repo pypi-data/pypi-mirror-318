@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: hawkpy
+Version: 1.0.0
+Summary: Advanced Python Security & Analysis Framework
+Home-page: https://github.com/harimtim/hawkpy
+Author: harimtim
+Author-email: harimtim@icloud.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: cryptography>=3.4.7
+Requires-Dist: ipaddress>=1.0.23
+
+# HawkPy
+
+Ein Python-basiertes Security-Tool fÃ¼r Netzwerk-Scanning, Penetration Testing und Sicherheitsanalyse.
+
+## Features
+
+- Netzwerk-Scanner
+- Port-Scanner
+- Vulnerability Scanner
+- Password Cracker
+- Crypto-Tools
+- Exploit-Checker
+
+## Installation
+
+```
+bash
+pip install hawkpy
+```
+
+## Schnellstart
+
+```
+python
+from hawkpy import Scanner, PasswordCracker, Crypto
+```
+
+## Documentation
+
+Read the Docs at: [Hawkpy Official Site](https://hawkpy.hrmtm.me/)
