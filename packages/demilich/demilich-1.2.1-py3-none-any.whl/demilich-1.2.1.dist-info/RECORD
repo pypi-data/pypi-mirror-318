@@ -1,0 +1,15 @@
+demilich/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+demilich/__main__.py,sha256=3rXFxpV5T9xlbpfMing8fkfqE1HcE8fhfmB8tqyJTMA,47
+demilich/cli.py,sha256=V_lsSsbe6fF-0t4cEJOhHk4UuF6A-RqqIVCp2NafZNw,4197
+demilich/data/demilich.schema.json,sha256=Pw7zCgZafxfhig_fGv4xn7KX8Ai7iUBF6BQZuCkbLfE,7649
+demilich/data/pb2024.toml,sha256=0x-YlnyuVq9lclHp_nVoKDTjVqgOQa0_ymgM7HhVVe0,40000
+demilich/examples/dev.py,sha256=pQvWgYVNKM6Yrifugq-zEDgdS-XACef2dX54WHhCEYY,2738
+demilich/examples/play_booster_2024.py,sha256=Ph_QVqXxj4x3-cee94_0Hcn-pEKlrZ0RrsBBwj_IQe0,10160
+demilich/output.py,sha256=QHTH4Oo4mHvDx5BwiRMlZT0dVEsXfNYLQ46vyk3XBJI,621
+demilich/reader.py,sha256=RgWrCCzily-PW7cnapwjFkzwnRQBYxsHSQg36TMf2wE,2496
+demilich/skeleton.py,sha256=BEL_PyW9eg-XjLFg-lSRsbw3oCeG6tckJl68M6tTyq0,15938
+demilich-1.2.1.dist-info/LICENSE,sha256=cyFh40f-lZoyx8aVljBG-hHEPqjoXMrH9SKGCAepO5s,1085
+demilich-1.2.1.dist-info/METADATA,sha256=7mepRFBb48zXkO5h6STEgl_eFjMATZjXJY65CdmMkh8,5153
+demilich-1.2.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+demilich-1.2.1.dist-info/entry_points.txt,sha256=n3FRTxvhYVhEKl-_rNSlmY2Kn5O_T7w6tpoHK8tTO7E,45
+demilich-1.2.1.dist-info/RECORD,,
