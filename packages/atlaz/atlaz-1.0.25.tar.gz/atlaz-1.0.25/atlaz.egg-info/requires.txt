@@ -1,0 +1,8 @@
+requests
+tiktoken
+graphviz
+pydantic
+pathspec
+python-dotenv
+livereload
+flask
