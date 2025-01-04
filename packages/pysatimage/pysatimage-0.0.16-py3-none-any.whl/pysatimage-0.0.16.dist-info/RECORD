@@ -1,0 +1,12 @@
+SID/__init__.py,sha256=Cw6UtniwD_N2ZKhLEl5-U11RC1ffL9AOEvh4Uvw1YKE,36
+SID/adjust_resolution.py,sha256=SAQp9n6bxLeTkZqym_tzriK_lCfHETMahw1-zBYxnXE,4662
+SID/fetch_image.py,sha256=UDJZ94FoVHaoXgHNgoFevnJMdcpg-oq485ROxxPvPfQ,1779
+SID/image_downloading.py,sha256=tX0-d4Osmk_NS_0a_d75cPzmboksOo6MtiOjAO2LdGE,4279
+SID/logger.py,sha256=jd3uTLLIrmeoccmx4-L-0KMmFG9Kn7j1SyM8gxxLB8A,612
+SID/multidownload.py,sha256=m5M3hAq6fiG2LHtEB04kxmLm4OKuiLQ0eLGNgzgwNpQ,3492
+SID/prefs.py,sha256=m-hrozIXn4rmH9UGAnUuGqFkCxczAb4yt7F6vaKMux8,3196
+pysatimage-0.0.16.dist-info/LICENCE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pysatimage-0.0.16.dist-info/METADATA,sha256=-ejhaJO9T7suQQSIw_9t0QI3Pkv4fzsee1EMdazwCc4,1398
+pysatimage-0.0.16.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pysatimage-0.0.16.dist-info/top_level.txt,sha256=1Zlapd2KRnYAjWXtqZPiPMOS8Ej2F3ERj0GCCkpCjW8,4
+pysatimage-0.0.16.dist-info/RECORD,,
