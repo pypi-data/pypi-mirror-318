@@ -1,0 +1,6 @@
+[theme]
+inherit = "sphinx_rtd_theme"
+pygments_style = { default = "monokai" }
+
+[options]
+logo_only = true
