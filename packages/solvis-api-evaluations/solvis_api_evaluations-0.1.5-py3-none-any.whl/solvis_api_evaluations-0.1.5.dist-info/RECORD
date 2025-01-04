@@ -1,0 +1,11 @@
+solvis_api_evaluations/__init__.py,sha256=fofYvPSCVvONHFqkCAuC5dc2l6v-M0ppeL1aONJpiOQ,456
+solvis_api_evaluations/get_devices.py,sha256=kI2_qsrVsTEd-FnKmSpV5sctbVvaUPDLybYchw643z4,4017
+solvis_api_evaluations/get_evaluations.py,sha256=06FEuelj93NGWswAiN2J6bvU3nV4xzzo8PAK-tJIeu4,4942
+solvis_api_evaluations/get_questionnaire.py,sha256=IPL6iWFkWZXAq5qlpBwGAj3jprYt0XOz4ZwzG3rIvY4,7291
+solvis_api_evaluations/get_surveyed_units.py,sha256=yMC88BBQCAxHoMK2_3H2_d7Mx-V0fl4yB8wiJT6ws50,6282
+solvis_api_evaluations/get_suspicious_occurrences.py,sha256=BKSbh2FtRw8nNukFNZe_ozzA76fauss9Tpk1Jx6qdHg,4276
+solvis_api_evaluations/process_evaluations.py,sha256=vV-nyZDDmnqqvi604fY-7G7OWwuRln8Oq3bM6x9AbGk,4430
+solvis_api_evaluations-0.1.5.dist-info/METADATA,sha256=kQ7X1czppEk2e1Hk0KnJJgk3Lejdsb0SE8o8_TivvYk,1834
+solvis_api_evaluations-0.1.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+solvis_api_evaluations-0.1.5.dist-info/licenses/LICENSE,sha256=ECW7oVxPs08dy25xg9-dpnHwy4Wt07IvMvkkbhwHLms,44
+solvis_api_evaluations-0.1.5.dist-info/RECORD,,
