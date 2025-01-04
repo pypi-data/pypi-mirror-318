@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: kreuzbergml
+Version: 0.1.3
+Summary: Toolbox for faster ML prototypes construction and demonstration.
+Home-page: https://github.com/LEAD-Machine-Learning/kreuzberg-ml
+Download-URL: https://github.com/LEAD-Machine-Learning/kreuzberg-ml/releases
+License: MIT
+Project-URL: Bug Tracker, https://github.com/LEAD-Machine-Learning/kreuzberg-ml/issues
+Project-URL: Source Code, https://github.com/LEAD-Machine-Learning/kreuzberg-ml
+Keywords: leadml,framework,toolbox,ml
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Pytest
+Classifier: Framework :: tox
+Classifier: Framework :: Sphinx
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: gin-config
+Requires-Dist: scikit-learn
+Requires-Dist: sqlalchemy
+Requires-Dist: psycopg2-binary
+Provides-Extra: azure
+Requires-Dist: azureml-core >=1.49.0 ; extra == 'azure'
+Requires-Dist: azureml-mlflow >=1.49.0 ; extra == 'azure'
+Requires-Dist: azureml-train-core >=1.49.0 ; extra == 'azure'
+Requires-Dist: azureml-train-automl-client >=1.49.0 ; extra == 'azure'
+Requires-Dist: azureml-telemetry >=1.49.0 ; extra == 'azure'
+Requires-Dist: azureml-pipeline >=1.49.0 ; extra == 'azure'
+Requires-Dist: azureml-pipeline-core >=1.49.0 ; extra == 'azure'
+Requires-Dist: azureml-pipeline-steps >=1.49.0 ; extra == 'azure'
+Provides-Extra: dev
+Requires-Dist: tox ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Provides-Extra: github
+Requires-Dist: tox ; extra == 'github'
+Requires-Dist: tox-gh-actions ; extra == 'github'
+Provides-Extra: pypi
+Requires-Dist: wheel ; extra == 'pypi'
+Requires-Dist: twine ; extra == 'pypi'
+
+# kreuzberg-ml
+Toolbox for faster ML prototypes construction and demonstration
+
+To install the toolbox use the following command: 
+
+```bash
+pip install git+https://github.com/LEAD-Machine-Learning/kreuzberg-ml.git
+```
