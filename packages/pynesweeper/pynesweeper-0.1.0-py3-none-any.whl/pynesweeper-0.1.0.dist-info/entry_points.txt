@@ -1,0 +1,2 @@
+[console_scripts]
+pynesweeper = pynesweeper.__main__:main

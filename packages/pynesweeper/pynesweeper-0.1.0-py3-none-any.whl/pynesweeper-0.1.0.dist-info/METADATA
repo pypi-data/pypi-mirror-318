@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: pynesweeper
+Version: 0.1.0
+Summary: a minesweeper game in Python that runs in your terminal
+Project-URL: Documentation, https://github.com/pierrenodet/pynesweeper#readme
+Project-URL: Issues, https://github.com/pierrenodet/pynesweeper/issues
+Project-URL: Source, https://github.com/pierrenodet/pynesweeper
+Author-email: Pierre Nodet <nodet.pierre@gmail.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.12
+Requires-Dist: numpy
+Requires-Dist: scipy
+Description-Content-Type: text/markdown
+
+# pynesweeper
+
+A minesweeper game in Python that runs in your terminal.
+
+<img src="screenshot.png" alt="screenshot" width="200"/>
+
+## Install
+
+```console
+pipx install git+https://github.com/pierrenodet/pynesweeper.git
+```
+
+## Run
+
+```console
+pynesweeper --help
+```
+
+## Commands
+
+Left click to detonate (or [chord](https://minesweepergame.com/strategy/efficiency.php)), right click to flag, good luck !
