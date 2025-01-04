@@ -1,0 +1,43 @@
+[build-system]
+requires = ["flit_core>=3.4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "sphinx_godot"
+authors = [{ name = "opsocket", email = "opsocket@pm.me" }]
+readme = "README.md"
+license = { file = "LICENSE.md" }
+dynamic = [ "version", "description" ]
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "sphinx",
+    "sphinx_rtd_theme",
+    "sphinx-autobuild",
+    "pygments",
+    # sphinx extensions
+    "sphinx-tabs",
+    "sphinx-copybutton",
+    "sphinx-notfound-page",
+    "sphinxext-opengraph",
+    "sphinxcontrib-video"
+]
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "black",
+    "flake8",
+    "flit"
+]
+
+[project.entry-points."sphinx.html_themes"]
+godot = "sphinx_godot"
+
+[project.urls]
+Homepage = "https://gitlab.com/opsocket/sphinx_godot.git"
+Issues = "https://gitlab.com/opsocket/sphinx_godot/-/issues"
