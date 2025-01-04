@@ -1,0 +1,272 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #005a9c;
+    margin-bottom: 20px;
+}
+
+/* User input styles */
+.user-input-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#api-key-input, #llm-provider-dropdown {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#llm-provider-dropdown {
+    margin-left: 10px;
+}
+
+/* Directory Tree Styles */
+#directory-tree {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#directory-tree ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+#directory-tree li {
+    margin: 5px 0;
+}
+
+#directory-tree input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Message section styles */
+#message-section {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+#message-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#message-input {
+    flex: 1;
+    padding: 5px;
+    font-size: 16px;
+    resize: vertical;
+    min-height: 100px;
+    margin-bottom: 10px;
+}
+
+#message-form button {
+    padding: 5px 10px;
+    font-size: 16px;
+    align-self: flex-end;
+}
+
+/* Files container styles */
+#files-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Created files */
+#created-files {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#created-files .file-block {
+    flex: 1 1 calc(33.333% - 40px);
+    box-sizing: border-box;
+    max-width: calc(33.333% - 40px);
+}
+
+@media (max-width: 1024px) {
+    #created-files .file-block {
+        flex: 1 1 calc(50% - 40px);
+        max-width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    #created-files .file-block {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* File pairs */
+#file-pairs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.file-pair {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.file-pair .file-block {
+    flex: 1 1 calc(50% - 40px);
+    box-sizing: border-box;
+    max-width: calc(50% - 40px);
+}
+
+@media (max-width: 1024px) {
+    .file-pair .file-block {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* General file block styles */
+.file-block {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.file-name {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.file-type {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.code-block {
+    background-color: #282c34;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 80vh; /* Set max-height to 80% of viewport height */
+    max-width: 100%;
+}
+
+.code-block code {
+    display: block;
+    white-space: pre;
+    color: #abb2bf;
+    font-size: 14px; /* Base font size */
+}
+
+/* Actions styles */
+.actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.nice-button {
+    background-color: #007bff; /* Blue color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nice-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.diff-added {
+    background-color: #c8e6c9; /* light green */
+    color: #256029;           /* darker green text */
+    padding: 2px 0;
+    display: block;
+}
+
+.diff-removed {
+    background-color: #ffcdd2; /* light red */
+    color: #b71c1c;            /* dark red text */
+    padding: 2px 0;
+    display: block;
+}
+
+/* Responsive adjustments */
+
+/* Decrease max-height for code blocks on shorter screens */
+@media (max-height: 800px) {
+    .code-block {
+        max-height: 70vh; /* Adjust max-height to 70% of viewport height */
+    }
+}
+
+@media (max-height: 600px) {
+    .code-block {
+        max-height: 60vh; /* Adjust max-height to 60% of viewport height */
+    }
+}
+
+/* Adjust font sizes and max-height on smaller screens */
+@media (max-width: 1024px) {
+    .code-block code {
+        font-size: 12px;
+    }
+    .code-block {
+        max-height: 70vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .code-block code {
+        font-size: 11px;
+    }
+    .code-block {
+        max-height: 60vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .code-block code {
+        font-size: 10px;
+    }
+    .code-block {
+        max-height: 50vh;
+    }
+}
