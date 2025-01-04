@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = 'modkit'
+version = "1.2.0"
+description = "A kit containing tools for better programming."
+requires-python = ">=3.8"
+dependencies = []
+readme = {file = "README.md", content-type = "text/markdown"}
+license = { file = "LICENSE" }
+authors = [
+    {name = "Soumyo Deep Gupta", email = "deep.main.ac@gmail.com"}
+]
+maintainers = [
+    {name = "Soumyo Deep Gupta", email = "deep.main.ac@gmail.com"}
+]
+keywords = ['d33p0st','modkit', 'modstore', 'module', 'kit']
+
+[tool.setuptools.package-data]
+"modkit" = ["*.pyi"]
+
+[project.urls]
+GitHub = "https://github.com/d33p0st/modkit"
+Issues = "https://github.com/d33p0st/modkit/issues"
+Pull-Request = "https://github.com/d33p0st/modkit/pulls"
