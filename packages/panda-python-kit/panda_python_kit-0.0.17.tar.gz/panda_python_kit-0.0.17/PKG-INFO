@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: panda-python-kit
+Version: 0.0.17
+Summary: panda python kit
+Home-page: https://github.com/zhaojiedi1992/panda_python_kit
+Author: zhaojiedi
+Author-email: 1072892917@qq.com
+License: MIT
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: python-dateutil
+Requires-Dist: pandas
+Requires-Dist: build
+Requires-Dist: fake_useragent
+
+# panda_python_kit
+个人的python工具集
