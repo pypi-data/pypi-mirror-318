@@ -1,0 +1,7 @@
+diffusers
+transformers
+torch
+datasets
+accelerate
+protobuf
+sentencepiece

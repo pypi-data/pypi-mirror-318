@@ -1,0 +1,14 @@
+.gitignore
+LICENSE
+README.md
+example.ipynb
+pyproject.toml
+.github/workflows/python-publish.yml
+sdhelper/__init__.py
+sdhelper/_version.py
+sdhelper/sdhelper.py
+sdhelper.egg-info/PKG-INFO
+sdhelper.egg-info/SOURCES.txt
+sdhelper.egg-info/dependency_links.txt
+sdhelper.egg-info/requires.txt
+sdhelper.egg-info/top_level.txt
