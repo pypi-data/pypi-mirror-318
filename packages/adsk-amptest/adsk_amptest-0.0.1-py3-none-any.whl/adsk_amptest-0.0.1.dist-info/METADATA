@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: adsk-amptest
+Version: 0.0.1
+Summary: adsk package
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# adsk
+
+# publish
+```
+uv build
+uv publish
+```
