@@ -1,0 +1,11 @@
+pytest_report_extras/__init__.py,sha256=Ngf1sfQxuqlv6mSp469ab4YwzmewMLP7hR5ceFyw4ws,55
+pytest_report_extras/attachment.py,sha256=hfsRMCDwd_pYSrGw780fgvZyMCOh8SKyPy-sUsU6RYY,4670
+pytest_report_extras/extras.py,sha256=I5RDl-As9h6uaOBmbFkRip4LoPhIQZupF3oq4S4yH7c,15177
+pytest_report_extras/plugin.py,sha256=gsmoQ-SHSGGGHDvD-qD10XZB0fRJZlbXnyqzcGNQPNo,13189
+pytest_report_extras/utils.py,sha256=AmI6kjfWyZtcEyZlN_asWqjeoV1UFotrfM4a4r8OE_s,15513
+pytest_report_extras/resources/error.png,sha256=s8vvG59fOChrOaA-2oSR1oGmU8j0nevMSecCyrJzydk,33002
+pytest_report_extras/resources/style.css,sha256=S42GhSfpBjUCr-PdD5mlXrA0wrwW3Z9IOYlRir2oAlk,938
+pytest_report_extras-1.2.0.dist-info/entry_points.txt,sha256=FeoWl5TSxNCOVeGZFcMhAAuH_F2UL4IAH_bQN__2JdY,61
+pytest_report_extras-1.2.0.dist-info/WHEEL,sha256=CpUCUxeHQbRN5UGRQHYRJorO5Af-Qy_fHMctcQ8DSGI,82
+pytest_report_extras-1.2.0.dist-info/METADATA,sha256=sxuXf2XcC2VfN-cWE97GH5jjbOPkaijJ7CXDmsRS_bA,1276
+pytest_report_extras-1.2.0.dist-info/RECORD,,
