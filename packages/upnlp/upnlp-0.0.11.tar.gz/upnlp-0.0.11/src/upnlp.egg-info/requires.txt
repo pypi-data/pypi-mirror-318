@@ -1,0 +1,9 @@
+inflect
+optuna
+PyYAML
+Requests
+torch
+tqdm
+wn
+pandas
+umap-learn
