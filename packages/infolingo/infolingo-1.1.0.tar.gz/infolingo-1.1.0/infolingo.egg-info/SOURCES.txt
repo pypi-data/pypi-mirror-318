@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+infolingo/Infolingo.py
+infolingo/__init__.py
+infolingo/infolingo.py
+infolingo/main.py
+infolingo.egg-info/PKG-INFO
+infolingo.egg-info/SOURCES.txt
+infolingo.egg-info/dependency_links.txt
+infolingo.egg-info/requires.txt
+infolingo.egg-info/top_level.txt
+infolingo/data/fra_news_2023_300K-words.csv
+infolingo/data/sample1.csv
+infolingo/data/sample2.csv
+tests/test_Infolingo.py
+tests/test_main.py
