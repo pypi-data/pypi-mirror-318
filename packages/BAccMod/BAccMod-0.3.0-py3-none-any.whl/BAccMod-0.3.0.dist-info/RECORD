@@ -1,0 +1,13 @@
+baccmod/__init__.py,sha256=_egRYd5eWqrWPcxMZR1WWxTxk4sTY7DHYstD2udSZ24,983
+baccmod/base_acceptance_map_creator.py,sha256=gDkam3grZubJEEsGl4GGjEpVj1YM5rr-9K_Q-_53X08,52016
+baccmod/bkg_collection.py,sha256=xnqwOL3zUesCXg2iGsItZI4Y9Lj4_4w3jVgKf-1Xxuo,3269
+baccmod/exception.py,sha256=sMw0RRLkoqXs0lNr-Dhcq3vUYixHfbob9uFjGz4wkoM,864
+baccmod/grid3d_acceptance_map_creator.py,sha256=t0YSDGg_2LCw7Ks5PgS-yd0iRsFK3yWTvTB5UyiFc_s,20118
+baccmod/modeling.py,sha256=yogM6Pe9AP29WhAhMmWQQDE2bq2nvdB4lc3IS5jz7Yo,3890
+baccmod/radial_acceptance_map_creator.py,sha256=NZ07aS-NXaxjfI_lIHMI82uDQ8BDw06_-obS2LCAbt8,11770
+baccmod/toolbox.py,sha256=ZwDtekDY8TR-gEMfHFVho5Pe221old301Ht-zf98CYE,8701
+BAccMod-0.3.0.dist-info/LICENCE.txt,sha256=pmzAgPC73yxHw1a3sLT5NQLVSTSDdNeuRQOiJsw_8po,42803
+BAccMod-0.3.0.dist-info/METADATA,sha256=sW1nMr2YySCSRFrtAp_dnjPFzfvOaEAGd2B13XNTAQ0,15154
+BAccMod-0.3.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+BAccMod-0.3.0.dist-info/top_level.txt,sha256=UigQ_V6MZPlcaEtx8CGAJwVpCe4Ul4gzNGkkSKez6IA,8
+BAccMod-0.3.0.dist-info/RECORD,,
