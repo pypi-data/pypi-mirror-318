@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: wallctl
+Version: 0.1.0
+Summary: Wallpaper downloader
+Home-page: https://github.com/JoshAU-04/wallctl/
+Author: JoshAU-04
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: beautifulsoup4==4.12.3
+Requires-Dist: bs4==0.0.2
+Requires-Dist: certifi==2024.12.14
+Requires-Dist: charset-normalizer==3.4.0
+Requires-Dist: idna==3.10
+Requires-Dist: lxml==5.3.0
+Requires-Dist: requests==2.32.3
+Requires-Dist: soupsieve==2.6
+Requires-Dist: tqdm==4.67.1
+Requires-Dist: urllib3==2.2.3
+Provides-Extra: dev
+Requires-Dist: mypy==1.13.0; extra == "dev"
+Requires-Dist: mypy-extensions==1.0.0; extra == "dev"
+Requires-Dist: black==24.10.0; extra == "dev"
+Requires-Dist: isort==5.13.2; extra == "dev"
+Requires-Dist: types-beautifulsoup4==4.12.0.20241020; extra == "dev"
+Requires-Dist: types-html5lib==1.1.11.20241018; extra == "dev"
+Requires-Dist: types-requests==2.32.0.20241016; extra == "dev"
+Requires-Dist: types-tqdm==4.67.0.20241119; extra == "dev"
+Requires-Dist: pycodestyle==2.12.1; extra == "dev"
+Requires-Dist: setuptools==75.6.0; extra == "dev"
+
+# wallctl
+
+## About
+
+Wallctl is a program that is originally inspired by [4k-wallpaper-downloader](https://github.com/hosseinmirhosseini76/random-4k-image-downloader).
+The project is also available on [pypi](https://pypi.org/project/wallctl).
+
+## Installation
+
+1. Clone the repository
+```bash
+git clone --depth 1 https://github.com/JoshAU-04/wallctl
+cd wallctl
+```
+
+2. Install locally
+```bash
+pip install .
+```
+
+Alternatively, for development purposes:
+```bash
+pip install -e .
+```
+
+### Pipx
+
+For MacOS and Linux users, install the project directly with pipx:
+```bash
+pipx install wallctl
+```
+
+## Usage
+
+
+### Show available commands
+
+```bash
+wallctl --help
+```
+
+### Download a random wallpaper
+
+```bash
+wallctl random
+```
+
+### Download a wallpaper by category
+
+```bash
+wallctl category --category <category>
+```
+
+### Download a wallpaper to a specific directory
+
+```bash
+wallctl random --path <directory>
+```
+
+## License
+
+This project is licensed under the GNU GPL (v2). Refer to the `LICENSE` file
+for the full license.
