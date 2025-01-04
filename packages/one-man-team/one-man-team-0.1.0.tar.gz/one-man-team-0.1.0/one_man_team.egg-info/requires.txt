@@ -1,0 +1,10 @@
+Click
+python-dotenv
+lark-oapi
+
+[completion]
+click-completion
+
+[test]
+pytest>=6.0
+pytest-cov
