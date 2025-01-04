@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "modulo_pablo"
+version = "0.1.4"
+description = "Paquete creado con fines educativos. Mas informacion: github.com/Duz-Dev"
+readme = "README.md"
+authors = [
+    { name = "Ruben Chavez", email = "pablo.dev.academy@gmail.com" }
+]
+license = { file  = "LICENSE" }
+keywords = ["testing", "logging", "example"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "pillow",
+    "requests"
+]
+
+[project.urls]
+Homepage = "https://github.com/Duz-Dev/modulo-pablo"
+Download = "https://github.com/Duz-Dev/modulo-pablo/tarball/0.1.3"
