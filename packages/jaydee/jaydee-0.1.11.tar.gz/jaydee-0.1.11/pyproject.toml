@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "jaydee"
+version = "0.1.11"
+description = "Crawl and scrape websites with a given .json schema."
+authors = ["Anttoni Koivu"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+beautifulsoup4 = "4.12.3"
+playwright = "^1.49.0"
+html5lib = "^1.1"
+
+[tool.poetry.scripts]
+scraper = "examples.scraper:start"
+crawler = "examples.crawler:start"
+crawlermt = "examples.crawler_mt:start"
+webscraper = "examples.webscraper:start"
+detection = "examples.detection_test:start"
+github = "examples.github:start"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+coverage = "^7.6.8"
+pytest-asyncio = "^0.24.0"
+pytest-mock = "^3.14.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = ["-v"]
+testpaths = ["tests"]
+pythonpath = "src"
