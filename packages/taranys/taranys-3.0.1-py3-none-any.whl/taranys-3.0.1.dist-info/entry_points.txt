@@ -1,0 +1,2 @@
+[console_scripts]
+taranys = taranys.__main__:run_taranys
