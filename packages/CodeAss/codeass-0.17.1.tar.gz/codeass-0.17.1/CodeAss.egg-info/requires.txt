@@ -1,0 +1,11 @@
+click>=7.1.2
+virtualenv
+rich
+typeguard
+pytest
+shell-gpt
+tqdm
+twine
+build
+pathspec
+mypy
