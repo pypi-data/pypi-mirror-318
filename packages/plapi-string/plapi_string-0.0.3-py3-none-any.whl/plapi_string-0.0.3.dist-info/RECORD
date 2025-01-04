@@ -1,0 +1,8 @@
+plapi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+plapi/string/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+plapi/string/similarity.py,sha256=13RLxf4A223pXL68a8pCnHZ-yRldH2n5OQB211fUPe8,1309
+plapi_string-0.0.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+plapi_string-0.0.3.dist-info/METADATA,sha256=F4dlxIBTh1MLj564kfYxNS4KleMg_0c_Y0zk613HDdk,1714
+plapi_string-0.0.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+plapi_string-0.0.3.dist-info/top_level.txt,sha256=lUFTzQtWKArUTbG3-2mUsyIWVkjZTwJV1amHihTM89U,6
+plapi_string-0.0.3.dist-info/RECORD,,
