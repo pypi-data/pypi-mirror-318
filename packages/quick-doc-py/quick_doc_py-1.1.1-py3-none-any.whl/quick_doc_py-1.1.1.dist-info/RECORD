@@ -1,0 +1,11 @@
+quick_doc_py/__init__.py,sha256=1H-ZInLa2pRcXm08GdI1Q1FruurmxAF8EmXy0DlG1pw,528
+quick_doc_py/config.py,sha256=vMlJWS7XWzArTCOl22ImpspoYINAQ9Mfz3W9aYlwKXo,1616
+quick_doc_py/log_logic/req.py,sha256=F3geSwk7JDX3FDD66KM0Dr9wLZem_twvd5xcW5vC83k,824
+quick_doc_py/main.py,sha256=o7vIPL4c94UXF8C3BoodazJpJ4AGTLd-o_Kea4PNOn8,10318
+quick_doc_py/providers_test.py,sha256=xv-4M2gJIpX79Y-PTTGRyr1uYZxaoYpRMVbfWKsias0,3690
+quick_doc_py/utilities.py,sha256=uD5IW8N11fP2R0MRr2f1BO1cYyhm4Qh8eexVysDvN04,1536
+quick_doc_py-1.1.1.dist-info/entry_points.txt,sha256=Nsfiuk-yjWi0PjDeJ7YX7qwn5lY7TA9DcrwVEeRL8Tc,98
+quick_doc_py-1.1.1.dist-info/LICENSE,sha256=Y13Z6SZoMwaSjO-SyrI1LLMpW4anVBIxAWOGOkNjJR4,864
+quick_doc_py-1.1.1.dist-info/METADATA,sha256=qAUTkq8Tvy_51fpC3fsy2TuVL6XmEwQn86jjk1-wD1g,17284
+quick_doc_py-1.1.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+quick_doc_py-1.1.1.dist-info/RECORD,,
