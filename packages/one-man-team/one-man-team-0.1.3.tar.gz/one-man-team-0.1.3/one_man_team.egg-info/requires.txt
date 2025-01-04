@@ -1,0 +1,12 @@
+Click
+python-dotenv
+lark-oapi
+tabulate
+PyYAML
+
+[completion]
+click-completion
+
+[test]
+pytest>=6.0
+pytest-cov
