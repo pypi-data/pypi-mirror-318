@@ -1,0 +1,11 @@
+plapi/__init__.py,sha256=Yzo-xv285Be-a233M4duDdYtscuHiuBbPSX_C8yViJI,20
+plapi/string/__init__.py,sha256=OHhhAHbmYYasq1weEpzcOpOKX0Lp2PVoyJlf7O4z-pg,24
+plapi/string/compression/__init__.py,sha256=F_ooWbURtdqEPB5pRu-Qkb1InGpehs2CSnnAJ10yBSg,40
+plapi/string/compression/compression.py,sha256=PDKZZhhqlUo9Z2CjwX91Xck8UM48vDhrLELaQWjW4Cs,337
+plapi/string/similarity/__init__.py,sha256=om7w2_gtY7LJ3w-OcoZjS-ZBjdTrb3Xv3EluL2EmRD4,79
+plapi/string/similarity/basics.py,sha256=13RLxf4A223pXL68a8pCnHZ-yRldH2n5OQB211fUPe8,1309
+plapi_string-0.0.11.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+plapi_string-0.0.11.dist-info/METADATA,sha256=gYHCkcSTYgCmxlo8vHRvsuTjrsftfO4c4u7dVyx_35o,1715
+plapi_string-0.0.11.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+plapi_string-0.0.11.dist-info/top_level.txt,sha256=lUFTzQtWKArUTbG3-2mUsyIWVkjZTwJV1amHihTM89U,6
+plapi_string-0.0.11.dist-info/RECORD,,
