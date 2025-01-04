@@ -1,0 +1,12 @@
+README.md
+setup.py
+.github/workflows/python-publish.yml
+docs/uuid_filelock.drawio
+docs/uuid_filelock.png
+tests/test_lock.py
+uuid_filelock/__init__.py
+uuid_filelock.egg-info/PKG-INFO
+uuid_filelock.egg-info/SOURCES.txt
+uuid_filelock.egg-info/dependency_links.txt
+uuid_filelock.egg-info/requires.txt
+uuid_filelock.egg-info/top_level.txt
