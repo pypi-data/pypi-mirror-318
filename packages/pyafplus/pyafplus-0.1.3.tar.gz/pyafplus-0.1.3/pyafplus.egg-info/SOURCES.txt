@@ -1,0 +1,16 @@
+README.md
+setup.py
+bccmaths/__init__.py
+dictplus/__init__.py
+listplus/__init__.py
+pyafplus.egg-info/PKG-INFO
+pyafplus.egg-info/SOURCES.txt
+pyafplus.egg-info/dependency_links.txt
+pyafplus.egg-info/top_level.txt
+strmaths/__init__.py
+strmaths/basicSM.py
+strplus/__init__.py
+tests/test_dictplus.py
+tests/test_listplus.py
+tests/test_strmaths.py
+tests/test_strplus.py
