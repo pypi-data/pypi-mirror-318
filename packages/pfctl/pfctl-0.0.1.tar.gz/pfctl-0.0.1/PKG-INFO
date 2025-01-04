@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: pfctl
+Version: 0.0.1
+Summary: Python framework for creating third-party libraries
+Home-page: https://github.com/vtongxue/pfctl
+Author: student_v
+Author-email: 13974164156@163.com
+Project-URL: Bug tracker, https://github.com/vtongxue/pfctl/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: setuptools
+
+# pfctl
+
+Python framework for creating third-party libraries
+
+## Usage
+
+install:
+
+```bash
+    pip install pfctl
+```
+use:
+create a a.py file and write some code like this:
+```python
+    import pfctl
+    pfctl.create(
+        name="",
+        version="0.0.1",
+        author="",
+        author_email="",
+        description="",
+        long_description_content_type="text/markdown",
+        url="",
+        project_urls={'Bug tracker': ''},
+        classifiers=['Development Status :: 3 - Alpha', 'Programming Language :: Python :: 3', 'License :: OSI Approved :: MIT License', 'Operating System :: OS Independent'],
+        packages=[""],
+        python_requires=">=3.6",
+        install_requires = [],
+        entry_points=""
+    )
+```
