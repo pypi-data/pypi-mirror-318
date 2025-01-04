@@ -1,0 +1,2 @@
+[console_scripts]
+create_env = scripts.env_manager:main
