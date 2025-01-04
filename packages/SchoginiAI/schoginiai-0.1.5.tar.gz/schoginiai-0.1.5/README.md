@@ -1,0 +1,372 @@
+# SchoginiAI
+
+SchoginiAI is a sample AI toolkit developed by Schogini Systems that provides **Retrieval-Augmented Generation (RAG)** capabilities using [LangChain](https://langchain.com/) and [OpenAI](https://openai.com/). It leverages FAISS for efficient vector storage and retrieval, enabling advanced AI-driven solutions for small businesses and beyond.
+
+## 🚀 Features
+
+- **Recursive Text Chunking**: Efficiently splits large text corpora into manageable chunks.
+- **OpenAI Embeddings**: Utilizes OpenAI's embedding models for high-quality vector representations.
+- **FAISS Vector Store**: Implements FAISS for fast similarity search and vector storage.
+- **Retrieval-Augmented Generation (RAG)**: Combines retrieval mechanisms with language models to generate informed responses.
+- **Dockerized Environment**: Easily build and run in isolated Docker containers for consistency across environments.
+- **Environment Variable Management**: Securely handles API keys and sensitive information using `.env` files.
+
+## 🛠 Installation
+
+### 📦 From PyPI
+
+Install the latest version of SchoginiAI directly from PyPI:
+
+```bash
+pip install SchoginiAI
+```
+
+### 🧑‍💻 From Source
+
+Clone the repository and install the package manually:
+
+```bash
+git clone https://github.com/yourusername/SchoginiAI.git
+cd SchoginiAI
+pip install .
+```
+
+*Replace `yourusername` with your actual GitHub username.*
+
+## 🔧 Usage
+
+### 📝 Environment Setup
+
+Create a `.env` file in the `examples02/` directory to store your OpenAI API key securely:
+
+```dotenv
+OPENAI_API_KEY=your_openai_api_key_here
+```
+
+> **⚠️ Important:** Do **not** commit the `.env` file to version control. Ensure it's listed in your `.gitignore`.
+
+### 📚 Knowledge Creation
+
+Build and save the vector store from your text corpus using the `knowledge_creation.py` script.
+
+#### 🐍 Python Script
+
+```bash
+cd examples02
+python knowledge_creation.py
+```
+
+#### 📦 Using Docker
+
+Build the Docker image and run the container with the `create` argument to generate the vector store:
+
+```bash
+docker build --no-cache -t schogini-examples .
+docker run --rm -e OPENAI_API_KEY="your_openai_api_key_here" schogini-examples create
+```
+
+**Expected Output:**
+
+```
+Running knowledge_creation.py...
+Vector store saved to vector_store
+```
+
+### ❓ Querying the Knowledge Base
+
+Load the pre-built vector store and perform a query using the `usage_example.py` script.
+
+#### 🐍 Python Script
+
+```bash
+cd examples02
+python usage_example.py
+```
+
+#### 📦 Using Docker
+
+Run the container with the `query` argument to perform the query:
+
+```bash
+docker run --rm -e OPENAI_API_KEY="your_openai_api_key_here" schogini-examples query
+```
+
+**Expected Output:**
+
+```
+Running usage_example.py...
+Answer: Schogini Systems is a pioneer in AI Chatbots.
+We specialize in automation solutions for small businesses.
+```
+
+## 🐳 Docker Usage
+
+### 🛠 Build the Docker Image
+
+Navigate to the project root directory (where the `Dockerfile` is located) and build the Docker image:
+
+```bash
+docker build --no-cache -t schogini-examples .
+```
+
+### 🚀 Run the Docker Container
+
+#### 1. **Create Vector Store**
+
+```bash
+docker run --rm -e OPENAI_API_KEY="your_openai_api_key_here" schogini-examples create
+```
+
+#### 2. **Query Vector Store**
+
+```bash
+docker run --rm -e OPENAI_API_KEY="your_openai_api_key_here" schogini-examples query
+```
+
+> **Note:** Replace `"your_openai_api_key_here"` with your actual OpenAI API key.
+
+## 📋 Scripts Overview
+
+### 🗂 `knowledge_creation.py`
+
+Handles the creation and saving of the vector store from the provided text corpus.
+
+```python
+from SchoginiAI import SchoginiAIRAG
+import os
+from dotenv import load_dotenv
+
+# Load .env contents
+load_dotenv()
+
+api_key = os.getenv("OPENAI_API_KEY", "fallback_value")
+
+# Your text corpus
+sample_text = """
+Schogini Systems is a pioneer in AI Chatbots.
+We specialize in automation solutions for small businesses.
+"""
+
+# Directory to save the vector store
+vector_store_dir = "vector_store"
+
+# Create RAG instance
+rag_ai = SchoginiAIRAG(openai_api_key=api_key)
+
+# Build the vector store from text
+rag_ai.build_vector_store(sample_text)
+
+# Save the vector store to disk
+rag_ai.save_vector_store(vector_store_dir)
+```
+
+### 🗂 `usage_example.py`
+
+Loads the pre-built vector store and performs a query.
+
+```python
+from SchoginiAI import SchoginiAIRAG
+import os
+from dotenv import load_dotenv
+
+# Load .env contents
+load_dotenv()
+
+api_key = os.getenv("OPENAI_API_KEY", "fallback_value")
+
+# Directory where the vector store is saved
+vector_store_dir = "vector_store"
+
+# Create RAG instance
+rag_ai = SchoginiAIRAG(openai_api_key=api_key)
+
+# Load the vector store from disk
+rag_ai.load_vector_store(vector_store_dir)
+
+# Ask a question
+answer = rag_ai.ask_question("What does Schogini Systems do?")
+print("Answer:", answer)
+```
+
+## 📦 Dependencies
+
+SchoginiAI relies on the following Python packages:
+
+- [`langchain`](https://pypi.org/project/langchain/) `>=0.0.200,<0.1.0`
+- [`langchain-community`](https://pypi.org/project/langchain-community/) `>=0.0.20,<0.1.0`
+- [`openai`](https://pypi.org/project/openai/) `>=0.28.1,<0.29.0`
+- [`tiktoken`](https://pypi.org/project/tiktoken/) `>=0.4.0,<0.5.0`
+- [`faiss-cpu`](https://pypi.org/project/faiss-cpu/) `>=1.7.6,<1.8.0`
+- [`python-dotenv`](https://pypi.org/project/python-dotenv/) `>=0.21.0,<0.22.0`
+
+These dependencies are automatically installed when you install SchoginiAI via `pip` or using `requirements.txt` in Docker.
+
+### 📄 `requirements.txt`
+
+```plaintext
+langchain>=0.0.200,<0.1.0
+langchain-community>=0.0.20,<0.1.0
+openai>=0.28.1,<0.29.0
+tiktoken>=0.4.0,<0.5.0
+faiss-cpu>=1.7.6,<1.8.0
+python-dotenv>=0.21.0,<0.22.0
+```
+
+## 🐳 Docker Configuration
+
+### 📄 `Dockerfile`
+
+```dockerfile
+# Use a lightweight Python base image
+FROM python:3.11-slim
+
+# Install bash (required for your script)
+RUN apt-get update && apt-get install -y bash && rm -rf /var/lib/apt/lists/*
+
+# Set environment variables for Python
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+# Create and set the working directory
+WORKDIR /app/examples02
+
+# Copy requirements first for better Docker caching
+COPY requirements.txt .
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the rest of the project into the container
+COPY . /app
+
+# Install the local SchoginiAI package
+RUN pip install ..
+
+# Make sure the scripts are executable
+RUN chmod +x doit.sh
+
+# Use bash as the entrypoint
+ENTRYPOINT ["/bin/bash"]
+# Default command: run doit.sh without arguments
+CMD ["./doit.sh"]
+```
+
+### 📄 `doit.sh`
+
+Handles the execution of either the knowledge creation or querying scripts based on input arguments.
+
+```bash
+#!/bin/bash
+set -e  # Exit immediately if a command exits with a non-zero status
+
+# Check if a script name is provided
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 {create|query}"
+    exit 1
+fi
+
+SCRIPT=$1
+
+if [ "$SCRIPT" == "create" ]; then
+    echo "Running knowledge_creation.py..."
+    python knowledge_creation.py
+elif [ "$SCRIPT" == "query" ]; then
+    echo "Running usage_example.py..."
+    python usage_example.py
+else
+    echo "Invalid argument. Use 'create' or 'query'."
+    exit 1
+fi
+```
+
+> **Usage Examples:**
+>
+> - **Create Vector Store:**
+>   ```bash
+>   docker run --rm -e OPENAI_API_KEY="your_openai_api_key_here" schogini-examples create
+>   ```
+>
+> - **Query Vector Store:**
+>   ```bash
+>   docker run --rm -e OPENAI_API_KEY="your_openai_api_key_here" schogini-examples query
+>   ```
+
+## 🗃 Project Structure
+
+```
+SchoginiAI/
+├── SchoginiAI/
+│   ├── __init__.py
+│   ├── main.py
+├── examples02/
+│   ├── usage_example.py
+│   ├── knowledge_creation.py
+│   └── .env
+├── tests/
+│   └── test_main.py
+├── .gitignore
+├── LICENSE
+├── README.md
+├── requirements.txt
+├── setup.py
+├── Dockerfile
+├── doit.sh
+└── build.sh
+```
+
+## 🛡 License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+## 📝 Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+1. Fork the repository.
+2. Create your feature branch: `git checkout -b feature/YourFeature`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature/YourFeature`
+5. Open a pull request.
+
+## 📄 `.gitignore`
+
+Ensure you have a `.gitignore` file to exclude unnecessary or sensitive files from your GitHub repository.
+
+```gitignore
+# Python
+__pycache__/
+*.py[cod]
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Environment
+venv/
+.env/
+
+# OS generated files
+.DS_Store
+
+# IDE configs
+.vscode/
+.idea/
+
+# Secrets
+.pypirc
+.env
+```
+
+## 📚 Additional Resources
+
+- [LangChain Documentation](https://langchain.com/docs/)
+- [OpenAI API Documentation](https://beta.openai.com/docs/)
+- [FAISS Documentation](https://github.com/facebookresearch/faiss)
+
+---
+
+By following this guide, you can efficiently set up, develop, and deploy the SchoginiAI toolkit, leveraging the power of LangChain, OpenAI, and FAISS for advanced AI-driven solutions.
+
+Feel free to reach out if you encounter any issues or need further assistance!
+
