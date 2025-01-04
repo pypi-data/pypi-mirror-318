@@ -1,0 +1,8 @@
+pyproject.toml
+readme.md
+src/ascend/__init__.py
+src/ascend.egg-info/PKG-INFO
+src/ascend.egg-info/SOURCES.txt
+src/ascend.egg-info/dependency_links.txt
+src/ascend.egg-info/requires.txt
+src/ascend.egg-info/top_level.txt
