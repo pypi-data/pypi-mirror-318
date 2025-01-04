@@ -1,0 +1,79 @@
+Screen {
+    align: center middle;
+}
+#main_container {
+    layout: grid;
+    grid-size: 2 3;
+    grid-columns: 1fr 5fr;
+    grid-rows: 4 5fr 5;
+    width: 100%;
+    height: 100%;
+}
+#top_container {
+    column-span: 2;
+    background: $secondary;
+    height: 100%;
+}
+#left_container {
+    background: $boost;
+    height: 100%;
+}
+#main_table_container {
+    layout: grid;
+    grid-size: 1 2;
+    grid-rows: 1fr 1;
+}
+#main_table {
+}
+#main_table_status {
+    width: 100%;
+    background: $secondary;
+}
+#bottom_left_status {
+    background: $secondary;
+    height: 100%;
+}
+#bottom_mid_status {
+    background: $boost;
+    height: 100%;
+}
+#bottom_right_status {
+    background: $secondary;
+    height: 100%;
+}
+
+BusyScreen {
+    align: center middle;
+    background: rgba(0,0,0,0.5);
+}
+#busy_dialog {
+    background: $secondary;
+    height: 7;
+    width: 30;
+    align: center middle;
+}
+#busy_label {
+    align: center middle;
+}
+
+OptionsScreen {
+    align: center middle;
+    background: rgba(0,0,0,0.5);
+}
+#options_header {
+    text-align: center;
+    background: $boost;
+    width: 100%;
+    height: 1;
+}
+#options_container {
+    background: $secondary;
+    align: center top;
+    width: 70;
+    height: 19;
+}
+#options_buttons_container {
+    background: $secondary;
+    align: center bottom;
+    height: 3
+}
