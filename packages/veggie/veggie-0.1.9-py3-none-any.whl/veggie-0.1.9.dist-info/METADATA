@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: veggie
+Version: 0.1.9
+Summary: A tool to monitor and execute Celery tasks
+Author: Theodore Tsitsimis
+License-File: LICENSE
+Requires-Dist: dash>=2.5.1
+Requires-Dist: dash-extensions>=1.0.19
+Requires-Dist: dash-mantine-components>=0.15.1
+Requires-Dist: dash-iconify
+Requires-Dist: loguru
+Requires-Dist: celery[redis]
+Requires-Dist: humanize
+
