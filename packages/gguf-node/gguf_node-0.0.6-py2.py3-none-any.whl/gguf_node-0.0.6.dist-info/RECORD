@@ -1,0 +1,6 @@
+gguf_node/__init__.py,sha256=ZBXzmqiTOJXmy8ydRYWdGWZxBEmmRCCDu-z_h5374fw,19
+gguf_node/__main__.py,sha256=X6MsSJiMWPEzjE69_3btaDKxi4mggWQrTdMQfCKewSI,2679
+gguf_node-0.0.6.dist-info/LICENSE,sha256=-kdnaW6XOyAtvXrlkbagugCQdt61KjmDSg-lJJarbKg,1093
+gguf_node-0.0.6.dist-info/WHEEL,sha256=Sgu64hAMa6g5FdzHxXv9Xdse9yxpGGMeagVtPMWpJQY,99
+gguf_node-0.0.6.dist-info/METADATA,sha256=08UkwjekOC8rlaUXWJT2NxM4_SUHhCRM7rrKTS8jy6c,3326
+gguf_node-0.0.6.dist-info/RECORD,,
