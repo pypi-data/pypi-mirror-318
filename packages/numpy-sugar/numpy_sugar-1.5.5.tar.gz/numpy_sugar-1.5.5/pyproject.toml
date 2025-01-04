@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "numpy-sugar"
+version = "1.5.5"
+description = "Missing NumPy functionalities"
+authors = ["Danilo Horta <danilo.horta@pm.me>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/limix/numpy-sugar"
+homepage = "https://github.com/limix/numpy-sugar"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^2.2.1"
+scipy = "^1.15.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
