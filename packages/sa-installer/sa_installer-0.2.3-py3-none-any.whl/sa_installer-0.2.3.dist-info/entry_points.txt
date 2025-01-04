@@ -1,0 +1,2 @@
+[console_scripts]
+pip_sa = sa_installer:main
