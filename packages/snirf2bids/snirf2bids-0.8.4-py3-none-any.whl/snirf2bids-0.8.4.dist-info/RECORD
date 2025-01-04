@@ -1,0 +1,13 @@
+schema/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+schema/channel_types.json,sha256=PWCLkf0a-NUqllfvw3Q3Ra7BUwZmNkIEmRiKXHMJjac,178
+schema/schema.json,sha256=vAsfUKRqJXv3D9FkGRbZ9fRK4YeOhX9rY_HKXAFDueU,21663
+schema/time_units.json,sha256=D8FS6zzrm2Q0G3KEpm7zlSWNzUOlBZTc6t-Q_ZxzU9s,146
+schema/__pycache__/__init__.cpython-37.pyc,sha256=FeBnGJD_h5FeUuPAdlGUJoNLBz8K63LWwT3otLmtVms,145
+snirf2bids/__init__.py,sha256=bLWz0XRip9aC4yQtU_Yef0FbwDBBGrrrwAn7XsrVPRc,91
+snirf2bids/__version__.py,sha256=PXq0zB6wbs5C1fd-CG_vFFPBEJU-6ijm2SMlXDz6-0A,87
+snirf2bids/snirf2bids.py,sha256=DQG-p2v0QExHgoqVrFaObBODYZpmUR4TpZwDzEMqNfw,50046
+snirf2bids-0.8.4.dist-info/LICENSE,sha256=x1uP_mfSqj7j4It0CMsNqVq0JYc63PYVC9bI-NpcLFY,1064
+snirf2bids-0.8.4.dist-info/METADATA,sha256=856aZ16n-76T2CwRRS34c9Ib7ArKmN0jLOKX4QmIjp4,4169
+snirf2bids-0.8.4.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+snirf2bids-0.8.4.dist-info/top_level.txt,sha256=N2gLcHUspMnEnl4l2Gu6QR26wcEZARoUTv0Tbif2AFE,18
+snirf2bids-0.8.4.dist-info/RECORD,,
