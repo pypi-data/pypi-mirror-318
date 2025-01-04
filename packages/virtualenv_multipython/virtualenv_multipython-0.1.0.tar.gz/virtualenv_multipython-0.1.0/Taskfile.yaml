@@ -1,0 +1,27 @@
+version: '3'
+
+tasks:
+
+  init:
+    desc: Init local dev environment.
+    cmds:
+      - uv sync
+
+  build:
+    desc: Build package.
+    cmds:
+      - uv lock
+      - rm -rf dist
+      - uv build
+
+  release:version:
+    desc: Bump release version.
+    cmds:
+      - uvx bump-my-version bump -- {{.CLI_ARGS}}
+      - uv lock
+
+  release:publish:
+    desc: Publish package on PyPI.
+    cmds:
+      - task: build
+      - uv publish
