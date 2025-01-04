@@ -1,0 +1,4 @@
+nxelf
+nxgdb
+nxstub
+nxtrace
