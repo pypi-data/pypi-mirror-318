@@ -1,0 +1,6 @@
+gammapy<1.4,>=1.1
+numpy<2.3
+scipy<1.15
+iminuit<3.0,>=2.0
+astropy<8.0,>=4.0
+regions<0.11,>=0.7
