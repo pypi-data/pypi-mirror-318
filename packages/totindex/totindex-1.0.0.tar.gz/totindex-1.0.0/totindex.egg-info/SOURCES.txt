@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+tests/test_main.py
+totindex/__init__.py
+totindex/main.py
+totindex.egg-info/PKG-INFO
+totindex.egg-info/SOURCES.txt
+totindex.egg-info/dependency_links.txt
+totindex.egg-info/entry_points.txt
+totindex.egg-info/top_level.txt
