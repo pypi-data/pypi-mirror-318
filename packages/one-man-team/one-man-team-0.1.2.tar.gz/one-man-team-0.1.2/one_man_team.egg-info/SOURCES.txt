@@ -1,0 +1,8 @@
+README.md
+setup.py
+one_man_team.egg-info/PKG-INFO
+one_man_team.egg-info/SOURCES.txt
+one_man_team.egg-info/dependency_links.txt
+one_man_team.egg-info/entry_points.txt
+one_man_team.egg-info/requires.txt
+one_man_team.egg-info/top_level.txt
