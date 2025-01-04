@@ -1,0 +1,8 @@
+License.txt
+README.md
+setup.py
+code/__init__.py
+flexibletitle.egg-info/PKG-INFO
+flexibletitle.egg-info/SOURCES.txt
+flexibletitle.egg-info/dependency_links.txt
+flexibletitle.egg-info/top_level.txt
