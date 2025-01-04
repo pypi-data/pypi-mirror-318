@@ -1,0 +1,12 @@
+VideoService/__errors__.py,sha256=7rIqnFeb1Fa3BC1SXxA0alKKy6_BslpNXqH6cMaQhdk,3254
+VideoService/__init__.py,sha256=5hKhAJIs17Rzr5i9HD7Lm6Fz5hIhfX0NYzY8y3_jAsg,686
+VideoService/__main__.py,sha256=PenbN5pJiM3Mm9OIlmHleuFUdaIYLqOpUSuD8bAGjgM,12670
+VideoService/database.py,sha256=bRtWIUuHCWtUCvUdH_eJ9AqETB5JKgT1Ij4eQtZ1cyw,15226
+VideoService/files_manager.py,sha256=Y4EQW3T5BuF2Hf5OhRycI7FWuf9jROwXmd_RhMGjtxE,10206
+VideoService/playlist.py,sha256=YI4iWzUpWHyhHig3L8C9W5dRVdKkjWzdzocSUbXcSio,4192
+VideoService/video.py,sha256=D6odlFazOniWg4uxr_qFgWci5xPOVy4pLxyAvd0rfTo,3927
+VideoService-0.2.0.dist-info/LICENSE,sha256=ksB54jI1tDMLAvixPHW2vsjnorIkY4xjOD_UH6aljSg,1057
+VideoService-0.2.0.dist-info/METADATA,sha256=UEdlLeBW8VTWxRJylz7DK7sCMu_duW4ATgoF0tZyP9c,5797
+VideoService-0.2.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+VideoService-0.2.0.dist-info/top_level.txt,sha256=bUgQn9OW-gfapEuBeyhCcDYUhuMs_w7fp6oCNUZed_c,13
+VideoService-0.2.0.dist-info/RECORD,,
