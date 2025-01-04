@@ -1,0 +1,15 @@
+ppgee/__init__.py,sha256=Z3qQI0SKGmgv3JCVyoEH4KbKf_v-RAmqKDIBnBUrDWw,77
+ppgee/__main__.py,sha256=N4tFgXnLYmOeds7VEeXNP93vFxyGlWxihDmp95v9E5s,1210
+ppgee/client.py,sha256=gYE6avYbF_d27LiKpMKQz5YF8ammSKGNmqGU3l8Qads,2130
+ppgee/errors.py,sha256=aoO7g_dx1vU0zVyMEbS8CaPNvrfXC2iN7fGcJmFlFbE,91
+ppgee/http.py,sha256=PGqnqGe720T7uSNgwT-sowtBOqfelLT_OZdkZdFhhBY,1504
+ppgee/pages/__init__.py,sha256=ilAYa3nJytJT6QSQHocluXjRKUkJ_eIeraSOTcZpL3Y,176
+ppgee/pages/attendency.py,sha256=gkHOPFu37QIM1RAfpG7jt66V0zyuVCGGYKK1ouPygHs,1206
+ppgee/parsers/__init__.py,sha256=jnsTw3rkBQP1v_mPSIBPOgJL109BNoBht1pBIu7UF6c,80
+ppgee/parsers/attendency.py,sha256=QMt3uT4kv4KdkeFKBtNnEPUah510LNRNv63JW4FltU4,1472
+ppgee/permissions.py,sha256=5Jp-nGt3c5eOUO4-wIL4iToOeBQHyT0hMLupoJAFRGg,326
+ppgee-0.2.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+ppgee-0.2.1.dist-info/METADATA,sha256=NCHf9Rs-YDFlGPb7d2ymWN3z8WVvQmXeCC23Z879LVY,427
+ppgee-0.2.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+ppgee-0.2.1.dist-info/entry_points.txt,sha256=LtlrY8ti4_RC8COZZnaRjwfc56c-W4eHBdSJMEYXnqw,45
+ppgee-0.2.1.dist-info/RECORD,,
