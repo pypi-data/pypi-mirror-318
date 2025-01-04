@@ -1,0 +1,41 @@
+[project]
+name = "chainstream"
+version = "1.0.2"
+description = "Chain I/O streams together"
+license = {text = "CC-BY-SA 4.0"}
+authors = [
+    {name = "Reuben Thomas", email = "rrt@c3d.org"},
+]
+readme = "README.md"
+urls = {Homepage = "https://github.com/rrthomas/chainstream"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.9"
+
+[tool.setuptools.package-data]
+"*" = ["py.typed"]
+
+[tool.pylint.MASTER]
+init-import = "yes"
+
+[tool.pylint.main]
+# Use multiple processes to speed up Pylint: 0 = auto-detect.
+jobs = 0
+
+[tool.pylint.format]
+disable = [
+    "fixme",
+    "consider-using-f-string",
+    "missing-function-docstring",
+    "missing-module-docstring",
+    "too-many-arguments",
+    "too-many-locals",
+    "too-many-branches",
+    "too-many-positional-arguments",
+    "too-many-statements",
+    "global-statement",
+]
+enable = [
+    "useless-suppression",
+]
