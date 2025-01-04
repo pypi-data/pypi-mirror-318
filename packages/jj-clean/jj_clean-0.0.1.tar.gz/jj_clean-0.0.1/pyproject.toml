@@ -1,0 +1,17 @@
+[project]
+name = "jj-clean"
+version = "0.0.1"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "CD Clark III", email = "clifton.clark@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+jj-clean = "jj_clean:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
