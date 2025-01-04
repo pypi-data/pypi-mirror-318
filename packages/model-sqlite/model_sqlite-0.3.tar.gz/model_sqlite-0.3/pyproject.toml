@@ -1,0 +1,28 @@
+[project]
+name = "model-sqlite"
+version = "0.3"
+description = "A model/class based system for interacting with an using SQLite"
+readme = "README.md"
+requires-python = ">=3.13"
+authors = [{name = "Dominic Coletti"}]
+license = {text = "Apache-2.0"}
+classifiers = [
+    "License :: OSI Approved :: Apache Software License"
+]
+dependencies = [
+
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://github.com/DominicDJC/model-sqlite"
+Changelog = "https://github.com/DominicDJC/model-sqlite/releases"
+Issues = "https://github.com/DominicDJC/model-sqlite/issues"
+CI = "https://github.com/DominicDJC/model-sqlite/actions"
+
+
+[project.optional-dependencies]
+test = ["pytest"]
