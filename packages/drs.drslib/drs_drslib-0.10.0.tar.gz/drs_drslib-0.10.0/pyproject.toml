@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drs.drslib"
+version = "0.10.0"
+authors = [
+  { name="DavidRodriguezSoaresCUI", email="fireblaze904+drscui@gmail.com" },
+]
+description = "a set of libraries by DavidRodriguezSoaresCUI"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+    "Intended Audience :: Developers",
+    "License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "beautifulsoup4",
+    "numpy",
+    "psutil",
+    "send2trash",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/DavidRodriguezSoaresCUI/DRSlib"
+"Bug Tracker" = "https://github.com/DavidRodriguezSoaresCUI/DRSlib/issues"
+
+[project.optional-dependencies]
+analyse = [
+  "mypy",
+  "bandit",
+  "pylint",
+  "flake8",
+]
+doc = [
+  "furo>=2023",
+  "Sphinx>=6.1.3",
+]
+test = [
+  "pytest>=8.0.0",
+  "pytest-cov>=4.0.0",
+]
+
+[tool.setuptools.package-data]
+drslib = ["py.typed"]
