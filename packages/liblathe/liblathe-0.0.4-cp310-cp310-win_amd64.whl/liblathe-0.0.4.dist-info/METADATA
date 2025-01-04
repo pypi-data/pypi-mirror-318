@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: liblathe
+Version: 0.0.4
+Summary: Python library for generating lathe paths and gcode 
+Home-page: https://github.com/dubstar-04/LibLathe
+Author: Daniel Wood
+Author-email: s.d.wood.82@googlemail.com
+License: GPL2
+Keywords: lathe turning CAD CAM CNC
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pillow
+
+# LibLathe [![Python package](https://github.com/dubstar-04/LibLathe/workflows/Python%20package/badge.svg?branch=master)](https://github.com/dubstar-04/LibLathe/actions) [![codecov](https://codecov.io/gh/dubstar-04/LibLathe/branch/master/graph/badge.svg?token=08V04GX1FK)](https://codecov.io/gh/dubstar-04/LibLathe/branch/master/)
+
+LibLathe is an opensource standalone python library for generating turning paths and gcode for use with cnc lathes.
+
+| :warning: WARNING: LibLathe is currently experimental / Proof of concept and only suitable for testing. |
+
+## Build
+Liblathe is a python library with a C++ core. Liblathe core can be compiled and tested inplace using the following steps:
+
+* cd Liblathe
+* cmake .
+* make 
+
+### Local testing
+* python3 ./examples/defeature_example.py 
+
+## Instalation
+* python3 setup.py bdist_wheel
+* pip3 install <dist/*liblathe.whl>
+
+## Examples 
+### Facing:
+![Facing Example](https://github.com/dubstar-04/LibLathe/blob/master/docs/source/LL_static/images/FacingOp.jpeg)
+
+### Roughing:
+![Roughing Example](https://github.com/dubstar-04/LibLathe/blob/master/docs/source/LL_static/images/RoughingOp.jpeg)
+
+### Profiling:
+![Profiling Example](https://github.com/dubstar-04/LibLathe/blob/master/docs/source/LL_static/images/ProfilingOp.jpeg)
+
+### Parting:
+![Parting Example](https://github.com/dubstar-04/LibLathe/blob/master/docs/source/LL_static/images/PartingOp.jpeg)
+
+## Links
+* Docs: https://liblathe.readthedocs.io/en/latest
+* FreeCAD discussion: https://forum.freecadweb.org/viewtopic.php?f=15&t=30563&p=253115#p253115
+* CNC: https://en.wikipedia.org/wiki/Numerical_control
+* GCode: https://en.wikipedia.org/wiki/G-code
+
