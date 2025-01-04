@@ -1,0 +1,8 @@
+spacetrace/__init__.py,sha256=zDr350exO14Ii8Pj3TXwPuRxIDrEjrg43CpjYABDqh4,19
+spacetrace/_shaders.py,sha256=IvBH5D8ojymzMVI1eenFtHrKDxsVZ8GrBAXlERj0Fxk,1290
+spacetrace/main.py,sha256=n9Ms5bAab5VoZpo4JcXeHilyBVFReskuFZVLhDuq2FU,11914
+spacetrace/scene.py,sha256=Rv3RL2x7EwIAxqv6ZX9Qj0QZnvOPaIRGPYa0cTztpGk,8044
+spacetrace-0.1.0.dist-info/METADATA,sha256=z7GNpK9n7osExlcYjNFL0DrcZbe2m8w-fCa8M0LiqJU,1277
+spacetrace-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+spacetrace-0.1.0.dist-info/licenses/LICENSE,sha256=Bv4N6eiAYvBVdyN6FYDv6mjeQ_9vR5C_jhjCoFfBPCY,1067
+spacetrace-0.1.0.dist-info/RECORD,,
