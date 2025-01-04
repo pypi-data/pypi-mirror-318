@@ -1,0 +1,33 @@
+services:
+  app:
+    build: .
+    container_name: python_app
+    stdin_open: true # pour tapper des commande dans le container
+    tty: true
+    environment:
+      - PYTHONPATH=/app/src
+    command: python src/app/main.py #on pourrais logs le container ici mais pas besoinc car on a un websocket bien logger
+    ports:
+      - "5000:5000"
+      - "8765:8765" #notre application websocket (172.18.0.3:8765)
+    volumes:
+      - ./src/logs:/app/src/logs
+      - ./src:/app/src
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: jeu_scores
+    ports:
+      - "5432:5432"
+    volumes: #initialize_db.sql contien le script de creation de table dans la db
+      - postgres_data:/var/lib/postgresql/data
+      - ./initialize_db.sql:/docker-entrypoint-initdb.d/initialize_db.sql:ro
+
+volumes:
+  postgres_data: #pour eviter les erreur , l'application envoie des query des le debut donc on attend
