@@ -1,0 +1,60 @@
+site_name: XMRig-API
+site_url: https://hreikin.github.io/xmrig-api
+repo_name: hreikin/xmrig-api
+repo_url: https://github.com/hreikin/xmrig-api
+copyright: MIT License
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      primary: black
+      accent: deep orange
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: black
+      accent: deep orange
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - content.code.copy
+nav:
+  - "Home": "README.md"
+  - "Usage": "usage.md"
+  - "Examples": "examples.md"
+  - "Logging": "logger.md"
+  - "Reference":
+    - "Classes":
+      - "XMRigManager": "reference/manager.md"
+      - "XMRigAPI": "reference/api.md"
+      - "XMRigProperties": "reference/properties.md"
+      - "XMRigDatabase": "reference/db.md"
+    - "Exceptions":
+      - "XMRigAPIError": "reference/exceptions/xmrigapierror.md"
+      - "XMRigAuthorizationError": "reference/exceptions/xmrigauthorizationerror.md"
+      - "XMRigConnectionError": "reference/exceptions/xmrigconnectionerror.md"
+      - "XMRigDatabaseError": "reference/exceptions/xmrigdatabaseerror.md"
+      - "XMRigManagerError": "reference/exceptions/xmrigmanagererror.md"
+      - "XMRigPropertiesError": "reference/exceptions/xmrigpropertieserror.md"
+  - "Contributing": "CONTRIBUTING.md"
+
+plugins:
+  - search
+  - mkdocstrings
+  - include-markdown
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
