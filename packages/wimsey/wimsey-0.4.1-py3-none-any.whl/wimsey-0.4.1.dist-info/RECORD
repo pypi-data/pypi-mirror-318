@@ -1,0 +1,11 @@
+wimsey/__init__.py,sha256=EnT3YOmjwlXOGfyaX4tJuzW0COyrAlqXOKnlCo39v0I,125
+wimsey/_version.py,sha256=pMtTmSUht-XtbR_7Doz6bsQqopJJd8rZ8I8zy2HwwoA,22
+wimsey/config.py,sha256=HLnoezbJIJvcvv8nsIlMw_bpenlTgTfhMyLbsEF_dGA,2609
+wimsey/dataframe.py,sha256=LsXL40fxpeFLLcbV38O4HtfQfBA8jNtrFfVP1SYcgys,3519
+wimsey/execution.py,sha256=AbbCUEy7oZvRbCQJG8J637xAJErcG22lQdl9boFCG08,2903
+wimsey/profile.py,sha256=iLqI9YHBsOsJD4dkRxrpecSDhc3nfeOt8LWY3MBVC-E,7697
+wimsey/tests.py,sha256=vdytMY6epo2CkZ9J-sfvgyk2-s7xZEPP41uIKnf9lDU,13164
+wimsey-0.4.1.dist-info/METADATA,sha256=ZZsNez1SGDMa1-LQx2HFLRFjoKQvwTzi-bSv69BgsEQ,4051
+wimsey-0.4.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+wimsey-0.4.1.dist-info/licenses/LICENSE,sha256=E2SZQ-S4Rzwhj-mjzNTsnEuuvFQl3McLN-TDTdAfzp0,1060
+wimsey-0.4.1.dist-info/RECORD,,
