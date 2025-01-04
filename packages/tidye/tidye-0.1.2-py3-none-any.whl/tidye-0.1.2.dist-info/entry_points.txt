@@ -1,0 +1,3 @@
+[console_scripts]
+tidye=tidye.__main__:main
+
