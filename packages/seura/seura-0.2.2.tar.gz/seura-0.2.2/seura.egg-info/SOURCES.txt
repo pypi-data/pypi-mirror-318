@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+seura/__init__.py
+seura/client.py
+seura/config.py
+seura/exceptions.py
+seura.egg-info/PKG-INFO
+seura.egg-info/SOURCES.txt
+seura.egg-info/dependency_links.txt
+seura.egg-info/requires.txt
+seura.egg-info/top_level.txt
+tests/test_seura.py

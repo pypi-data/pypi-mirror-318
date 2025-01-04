@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: seura
+Version: 0.2.2
+Summary: Python client for Seura TV IP Control
+Author-email: Mickey Schwab <mickeyschwab@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 Mickey Schwab
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE. 
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0; extra == "dev"
+Requires-Dist: pytest-mock>=3.0; extra == "dev"
+
+# Seura Python Client
+
+A Python client for controlling Séura Shade Series 1 outdoor TVs.
+Commands come from [Séura IP Control documents](https://storage.googleapis.com/wp-stateless/2019/10/ip-control-for-shd1-outdoor-displays.pdf).
+
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install .
+```
+
+## Usage
+
+Here's a basic example of how to use the Seura Python Client:
+
+```python
+from seura import SeuraClient
+
+# Initialize the client
+client = SeuraClient(ip_address='192.168.1.100')
+
+# Turn on the TV
+client.power_on()
+
+# Set the volume to 20
+client.set_volume(20)
+
+# Turn off the TV
+client.power_off()
+```
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Discussion and Support
+
+For any questions, discussions, or support, please open an issue on our [GitHub Issues page](https://github.com/mickeyschwab/seura/issues).
+
