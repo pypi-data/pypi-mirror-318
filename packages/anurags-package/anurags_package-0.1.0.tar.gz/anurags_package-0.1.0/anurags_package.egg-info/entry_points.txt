@@ -1,0 +1,2 @@
+[console_scripts]
+anurags_package = game_package.main:play

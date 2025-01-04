@@ -1,0 +1,10 @@
+README.md
+setup.py
+anurags_package.egg-info/PKG-INFO
+anurags_package.egg-info/SOURCES.txt
+anurags_package.egg-info/dependency_links.txt
+anurags_package.egg-info/entry_points.txt
+anurags_package.egg-info/top_level.txt
+game_package/__init__.py
+game_package/main.py
+game_package/other.modules.py
