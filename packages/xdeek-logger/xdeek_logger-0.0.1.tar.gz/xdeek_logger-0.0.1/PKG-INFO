@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: xdeek_logger
+Version: 0.0.1
+Summary: An enhanced logger based on Loguru
+Home-page: https://github.com/wang-zhibo/xdeek-logger
+Author: gm.zhibo.wang
+Author-email: gm.zhibo.wang@gmail.com
+Project-URL: Bug Reports, https://github.com/wang-zhibo/xdeek-logger/issues
+Project-URL: Source, https://github.com/wang-zhibo/xdeek-logger
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: loguru
+Requires-Dist: requests
+
+
+
+# Enhanced Logger
+
+这是一个基于 [Loguru](https://github.com/Delgan/loguru) 的增强日志工具包，支持：
+
+- 自定义日志格式
+- 日志轮转及保留策略
+- 上下文信息管理（如 `request_id`）
+- 远程日志收集
+- 统一异常处理
+- 以及更多定制化功能
+
+## 安装
+
+```bash
+pip install xdeek_logger
+
+
+
