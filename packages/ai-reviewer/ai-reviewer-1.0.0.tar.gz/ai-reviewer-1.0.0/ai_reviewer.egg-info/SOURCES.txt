@@ -1,0 +1,11 @@
+LICENCE
+README.md
+setup.py
+ai_reviewer.egg-info/PKG-INFO
+ai_reviewer.egg-info/SOURCES.txt
+ai_reviewer.egg-info/dependency_links.txt
+ai_reviewer.egg-info/entry_points.txt
+ai_reviewer.egg-info/requires.txt
+ai_reviewer.egg-info/top_level.txt
+aiview/__init__.py
+aiview/main.py
