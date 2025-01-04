@@ -1,0 +1,2 @@
+[console_scripts]
+email_safeguard = email_safeguard.validator
