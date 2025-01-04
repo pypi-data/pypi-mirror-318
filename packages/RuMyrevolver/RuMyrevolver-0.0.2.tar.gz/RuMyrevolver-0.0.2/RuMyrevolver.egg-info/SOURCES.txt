@@ -1,0 +1,8 @@
+README
+setup.py
+RuMyrevolver.egg-info/PKG-INFO
+RuMyrevolver.egg-info/SOURCES.txt
+RuMyrevolver.egg-info/dependency_links.txt
+RuMyrevolver.egg-info/top_level.txt
+Rurevolver/__init__.py
+Rurevolver/main.py
