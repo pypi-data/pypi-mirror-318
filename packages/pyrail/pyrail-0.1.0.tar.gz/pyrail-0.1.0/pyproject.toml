@@ -1,0 +1,59 @@
+[tool.poetry]
+name = "pyrail"
+version = "0.1.0"
+description = "A Python wrapper for the iRail API"
+authors = ["Jorim Tielemans <tielemans.jorim@gmail.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+homepage = "https://github.com/tjorim/pyrail"
+repository = "https://github.com/tjorim/pyrail"
+documentation = "https://github.com/tjorim/pyrail"
+keywords = ["irail", "nmbs"]
+classifiers = [
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+packages = [
+    { include = "pyrail" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+aiohttp = "^3.11.11"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.4"
+pytest-mock = "^3.14.0"
+pytest-asyncio = "^0.25.1"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.8.4"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "C",  # complexity
+    "D",  # docstrings
+    "E",  # pycodestyle
+    "F",  # pyflakes
+    "G",  # flake8-logging-format
+    "I",  # isort
+    "W",  # pycodestyle warnings
+]
+ignore = [
+    "E501", # line too long
+    "W191",  # indentation contains tabs
+]
+
+[tool.ruff.lint.isort]
+force-sort-within-sections = true
+combine-as-imports = true
+split-on-trailing-comma = false
+
+[tool.ruff.lint.pydocstyle]
+property-decorators = ["propcache.cached_property"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
