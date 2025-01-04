@@ -1,0 +1,2 @@
+[console_scripts]
+lorax = lorax.__main__:main
