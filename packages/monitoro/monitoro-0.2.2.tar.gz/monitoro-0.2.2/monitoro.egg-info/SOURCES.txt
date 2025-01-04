@@ -1,0 +1,11 @@
+README.md
+setup.py
+monitoro/__init__.py
+monitoro/client.py
+monitoro/exceptions.py
+monitoro.egg-info/PKG-INFO
+monitoro.egg-info/SOURCES.txt
+monitoro.egg-info/dependency_links.txt
+monitoro.egg-info/requires.txt
+monitoro.egg-info/top_level.txt
+tests/test_client.py
