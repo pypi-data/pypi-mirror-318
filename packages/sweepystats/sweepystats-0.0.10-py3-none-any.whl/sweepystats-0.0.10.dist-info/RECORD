@@ -1,0 +1,11 @@
+sweepystats/__init__.py,sha256=ILZ9MZ5XH6E3cIGQhs_k6HmUOoaycRJ1llX68erw7q4,219
+sweepystats/anova.py,sha256=9j8yIVpbBm67x2PhBwEMtTxFkQR2gZkqRenheEIFj9Q,2508
+sweepystats/gaussian.py,sha256=Jmf8OJ7dKq4jHCbvQCMT6V31W8qLTj--tYUvaAQlZEw,3110
+sweepystats/linreg.py,sha256=5ajM47rAXW0RcJoH2LCNvvpriohHhv2ElQsOLIdQOU4,4598
+sweepystats/sweep_matrix.py,sha256=nuuxJx8U_kbxW6dICWr87l7wJGoS7T1RbKGoVn7tZPE,5738
+sweepystats/util.py,sha256=4fOQUG0eE6m2RBNxOQxNncbKtPU5IVM8tiMQTjEWEkE,909
+sweepystats-0.0.10.dist-info/LICENSE,sha256=QaYcdcaoKgzRyAutcSOA-8F5w-xdXRUzBRVgZuH9hrI,1108
+sweepystats-0.0.10.dist-info/METADATA,sha256=ZqpdYh6r-nO_BU6WtMUgP3blGpsR5Ty7AtzEPIk_LlE,5528
+sweepystats-0.0.10.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+sweepystats-0.0.10.dist-info/top_level.txt,sha256=lduwwLJ3tgMUviV0tE0z8I_j6Py-Bj70rKCnRy6zNWQ,12
+sweepystats-0.0.10.dist-info/RECORD,,
