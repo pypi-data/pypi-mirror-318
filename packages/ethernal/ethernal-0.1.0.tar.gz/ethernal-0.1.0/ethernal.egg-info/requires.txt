@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pydantic
+motor
+solana
+solders
+openai
+docker
+kubernetes
+passlib
+PyJWT

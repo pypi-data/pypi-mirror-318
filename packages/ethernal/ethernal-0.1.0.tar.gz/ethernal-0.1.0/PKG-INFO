@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: ethernal
+Version: 0.1.0
+Summary: Ethernal - Enterprise AI Agent Cloud Platform
+Home-page: https://github.com/ethernalcloud/ethernal
+Author: ethernal
+Author-email: ethernal@github.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: FastAPI
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.1
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: pydantic
+Requires-Dist: motor
+Requires-Dist: solana
+Requires-Dist: solders
+Requires-Dist: openai
+Requires-Dist: docker
+Requires-Dist: kubernetes
+Requires-Dist: passlib
+Requires-Dist: PyJWT
+
+# Ethernal - Enterprise AI Agent Cloud Platform
+
+## Overview
+Ethernal is an enterprise-grade cloud platform enabling organizations to create, deploy, and manage AI agents integrated with Solana blockchain technology. The platform provides seamless token creation, custom domain integration, and scalable infrastructure for AI-powered conversational agents.
+
+## Key Features
+- Custom AI agent creation with configurable personalities and knowledge bases
+- Automated Solana token generation and management for each agent
+- Kubernetes-based cloud deployment with auto-scaling
+- Custom domain integration with SSL/TLS support
+- Enterprise-grade security and authentication
+- RESTful API for seamless integration
+
+## Technical Architecture
+- Backend: Python/FastAPI
+- Database: MongoDB
+- Blockchain: Solana
+- Infrastructure: Kubernetes
+- Authentication: JWT
+- AI: OpenAI GPT Models
+
+## Quick Start
+```bash
+# Clone repository
+git clone https://github.com/your-org/ethernal.git
+
+# Environment setup
+cp .env.example .env
+# Configure your environment variables
+
+# Deploy with Docker
+docker-compose up -d
+```
+
+### Authentication
+```bash
+curl -X POST \
+  https://api.ethernal.ai/v1/auth/token \
+  -H 'Content-Type: application/json' \
+  -d '{"email":"user@example.com","password":"password"}'
+```
+
+### Create AI Agent
+```bash
+curl -X POST \
+  https://api.ethernal.ai/v1/agents \
+  -H 'Authorization: Bearer {token}' \
+  -d '{
+    "name": "Assistant",
+    "description": "Enterprise AI Assistant",
+    "model_configuration": {
+      "model": "gpt-4",
+      "personality": "professional"
+    }
+  }'
+```
+
+## Deployment
+The platform leverages Kubernetes for container orchestration:
+```bash
+kubectl apply -f k8s/
+```
+
+## Security Features
+- End-to-end encryption
+- Role-based access control
+- Regular security audits
+- Multi-factor authentication
+- Rate limiting
+
+## Monitoring & Analytics
+- Prometheus integration
+- Grafana dashboards
+- Request tracking
+- Performance metrics
+- Cost analytics
+
+
+## License
+Enterprise Edition - Contact sales for licensing information
