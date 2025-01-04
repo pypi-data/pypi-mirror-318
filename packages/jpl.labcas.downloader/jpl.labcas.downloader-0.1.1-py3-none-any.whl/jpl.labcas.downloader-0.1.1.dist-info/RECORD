@@ -1,0 +1,14 @@
+jpl.labcas.downloader-0.1.1-py3.11-nspkg.pth,sha256=_f6LqFybCjfrOSHlxuc9OAxLAccV6Oyeslk3gHGLJDY,988
+jpl/labcas/downloader/VERSION.txt,sha256=gERzFlKfxiAU-6oEf7Z8Uaww4ygwzaNwQFNJ2NZtGWw,6
+jpl/labcas/downloader/__init__.py,sha256=aqilBiA5-c2E57DDdIDMW8TfBieF7vzw_jtBWU_g1LA,182
+jpl/labcas/downloader/_download.py,sha256=4Ic6WoDL_3-1i6bBhOtOAe-Lp_O8jxfWKFvVHQpmvX8,6749
+jpl/labcas/downloader/main.py,sha256=KEd0mVo4atShlZaz6Vmepmz0CtpgusWgB1t59iTV8S0,2857
+jpl.labcas.downloader-0.1.1.dist-info/LICENSE.md,sha256=Lh-qBbuRV0-jiCIBhfV7NgdwFxQFOXH3BKOzK865hRs,10480
+jpl.labcas.downloader-0.1.1.dist-info/METADATA,sha256=r05xxJO3fsd1cW3M1x4g37mqeu4fTYx0LeiZ0bDayk8,5983
+jpl.labcas.downloader-0.1.1.dist-info/NOTICE.txt,sha256=qHgji9M-7jCwxZh8CCH7FY40zpMjBeHJ5liBi3mNZII,1609
+jpl.labcas.downloader-0.1.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+jpl.labcas.downloader-0.1.1.dist-info/entry_points.txt,sha256=18JnXLRugh4GQJSQxoPYD3f1FTEjBEZf91Y5qz6JudI,74
+jpl.labcas.downloader-0.1.1.dist-info/namespace_packages.txt,sha256=vOSixDcubE0Rsk4vIouEH6FcCQurzfSZP6n8YKB7L1g,15
+jpl.labcas.downloader-0.1.1.dist-info/top_level.txt,sha256=KN9Ibet7qP2OqsRtyrgT9MaAv9E5ReIRj_8l7Awd3WI,4
+jpl.labcas.downloader-0.1.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+jpl.labcas.downloader-0.1.1.dist-info/RECORD,,
