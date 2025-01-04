@@ -1,0 +1,2 @@
+[sopel.plugins]
+catfact = sopel_catfact.plugin

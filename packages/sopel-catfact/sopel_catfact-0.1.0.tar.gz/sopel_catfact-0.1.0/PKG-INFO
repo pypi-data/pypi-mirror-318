@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: sopel-catfact
+Version: 0.1.0
+Summary: Fetch a random cat fact right in your IRC!
+Author-email: dgw <dgw@technobabbl.es>
+License: EFL-2.0
+Project-URL: Homepage, https://github.com/dgw/sopel-catfact
+Project-URL: Bug Tracker, https://github.com/dgw/sopel-catfact/issues
+Keywords: sopel,plugin,bot,irc
+Platform: Linux x86, x86-64
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: Eiffel Forum License (EFL)
+Classifier: License :: OSI Approved :: Eiffel Forum License
+Classifier: Topic :: Communications :: Chat :: Internet Relay Chat
+Requires-Python: <4,>=3.8
+Description-Content-Type: text/markdown
+License-File: COPYING
+Requires-Dist: sopel>=8.0
+Requires-Dist: requests
+
+# sopel-catfact
+
+Fetch a random cat fact right in your IRC!
+
+## Installing
+
+Releases are hosted on PyPI, so after installing Sopel, all you need is `pip`:
+
+```shell
+$ pip install sopel-catfact
+```
+
+## Using
+
+This plugin provides one command, `.catfact`. It takes no arguments, and does
+exactly what it says on the tin:
+
+```
+<dgw> .catfact
+<Sopel> A cat will tremble or shiver when it is in extreme pain.
+```
+
+_This example uses Sopel's default `.` prefix. Your bot's setting might differ._
+
+## Changelog
+
+### 0.1.0
+
+First actual release of `sopel-catfact`, a mere six years after its creation…

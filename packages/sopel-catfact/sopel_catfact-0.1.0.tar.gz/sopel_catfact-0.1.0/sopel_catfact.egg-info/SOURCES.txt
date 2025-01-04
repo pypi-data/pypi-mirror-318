@@ -1,0 +1,13 @@
+COPYING
+MANIFEST.in
+NEWS
+README.md
+pyproject.toml
+sopel_catfact/__init__.py
+sopel_catfact/plugin.py
+sopel_catfact.egg-info/PKG-INFO
+sopel_catfact.egg-info/SOURCES.txt
+sopel_catfact.egg-info/dependency_links.txt
+sopel_catfact.egg-info/entry_points.txt
+sopel_catfact.egg-info/requires.txt
+sopel_catfact.egg-info/top_level.txt
