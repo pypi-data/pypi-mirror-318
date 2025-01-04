@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: ggrep
+Version: 0.2.0
+Summary: Grid grep - search rectangular 'gridded' files, such as Excel, TSV, and CSV.
+Project-URL: Homepage, https://github.com/terrycojones/ggrep
+Project-URL: Issues, https://github.com/terrycojones/ggrep/issues
+Author-email: terrycojones <tcj25@cam.ac.uk>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: click-option-group>=0.5.6
+Requires-Dist: click>=8.1.8
+Requires-Dist: fastexcel>=0.12.0
+Requires-Dist: polars>=1.18.0
+Requires-Dist: rich>=13.9.4
+Requires-Dist: xlsxwriter>=3.2.0
