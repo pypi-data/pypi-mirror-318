@@ -1,0 +1,7 @@
+django_sivumedia.py
+pyproject.toml
+django_sivumedia.egg-info/PKG-INFO
+django_sivumedia.egg-info/SOURCES.txt
+django_sivumedia.egg-info/dependency_links.txt
+django_sivumedia.egg-info/historia.json
+django_sivumedia.egg-info/top_level.txt

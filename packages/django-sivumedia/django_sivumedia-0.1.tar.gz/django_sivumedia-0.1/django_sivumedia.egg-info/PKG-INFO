@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: django-sivumedia
+Version: 0.1
+Summary: Django-sivumediatoteutus
+Author-email: Antti Hautaniemi <antti.hautaniemi@pispalanit.fi>
+Project-URL: Repository, https://github.com/an7oine/django-sivumedia.git
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
