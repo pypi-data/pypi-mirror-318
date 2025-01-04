@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pynesweeper"
+dynamic = ["version"]
+description = 'a minesweeper game in Python that runs in your terminal'
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Pierre Nodet", email = "nodet.pierre@gmail.com" },
+]
+classifiers = [
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "numpy",
+  "scipy",
+]
+
+[project.urls]
+Documentation = "https://github.com/pierrenodet/pynesweeper#readme"
+Issues = "https://github.com/pierrenodet/pynesweeper/issues"
+Source = "https://github.com/pierrenodet/pynesweeper"
+
+[project.scripts]
+pynesweeper = "pynesweeper.__main__:main"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.ruff.lint]
+ignore = ["T201"]
