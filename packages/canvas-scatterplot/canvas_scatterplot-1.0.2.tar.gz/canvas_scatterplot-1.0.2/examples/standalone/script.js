@@ -1,0 +1,1 @@
+import {StandaloneApp} from "./widgets/StandaloneApp.js";import {CanvasScatterplot} from "./widgets/CanvasScatterplot.js";const components = {CanvasScatterplot: CanvasScatterplot,};const app = new StandaloneApp({target: document.body,props: {components: components,},});export default app;
