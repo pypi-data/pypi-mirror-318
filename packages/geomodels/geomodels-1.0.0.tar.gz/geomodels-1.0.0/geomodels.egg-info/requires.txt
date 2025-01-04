@@ -1,0 +1,15 @@
+numpy
+
+[all]
+geomodels[cli]
+geomodels[download]
+geomodels[test]
+
+[cli]
+argcomplete
+
+[download]
+tqdm
+
+[test]
+pytest

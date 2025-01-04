@@ -1,0 +1,98 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "cython"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "geomodels"
+authors = [
+    {name = "Antonio Valentino", email = "antonio.valentino@tiscali.it"},
+]
+description = "Python package for Earth data models management"
+# readme = {file = "README.rst", content-type = "text/x-rst"}
+requires-python = ">= 3.10"
+keywords = [
+    "geoid",
+    "gravity",
+    "magnetic",
+]
+license = {file = "LICENSE"}
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: GIS",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "numpy",
+]
+dynamic = ["version", "readme"]
+
+
+[project.optional-dependencies]
+cli = ["argcomplete"]
+download = ["tqdm"]
+test = ["pytest"]
+all = ["geomodels[cli]", "geomodels[download]", "geomodels[test]"]
+
+
+[project.scripts]
+geomodels-cli = "geomodels.cli:main"
+
+
+[project.urls]
+Homepage = "https://github.com/avalentino/geomodels"
+Documentation = "https://geomodels.readthedocs.io"
+Repository = "https://github.com/avalentino/geomodels.git"
+Changelog = "https://github.com/avalentino/geomodels/blob/main/docs/NEWS.rst"
+Issues = "https://github.com/avalentino/geomodels/issues"
+
+
+[tool.setuptools]
+packages = ["geomodels", "geomodels.tests", "geomodels.tests.data"]
+
+
+[tool.setuptools.dynamic]
+version = {attr = "geomodels._version.__version__"}
+
+
+[tool.setuptools.package-data]
+"geomodels.tests.data" = ["*.txt"]
+
+
+[tool.cibuildwheel]
+test-requires = "pytest"
+skip = "pp* cp38-* cp39-* cp310-musllinux_i686"
+
+
+[tool.black]
+line-length = 79
+# target-version = ['py310']
+
+
+[tool.isort]
+profile = "black"
+length_sort = true
+no_inline_sort = true
+include_trailing_comma = true
+use_parentheses = true
+line_length = 79
+
+
+[tool.pydocstyle]
+add-ignore = "D105"
+
+
+[tool.mypy]
+plugins = "numpy.typing.mypy_plugin"
+
+
+[tool.ruff]
+line-length = 79
