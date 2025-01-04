@@ -1,0 +1,17 @@
+nostrclient/__init__.py,sha256=M0aUK97R7md360u7UN0ougJ5sAYWCVVnpjen3KPtLvc,231
+nostrclient/__version__.py,sha256=Y3LSfRioSl2xch70pq_ULlvyECXyEtN3krVaWeGyaxk,22
+nostrclient/actions.py,sha256=jv1-8tgmC2q4gsrZ2KNKzkYILuosio6yArHU1lpYPQ4,948
+nostrclient/bech32.py,sha256=KITOBKNsg3TEJJF3zZDpHlRaxztckmAwe763SuLp3g8,5022
+nostrclient/event.py,sha256=fhzRJ1nuT6x4JsWgQIc4cVTbSzqOOjP-p3zt-WEAKG8,3969
+nostrclient/key.py,sha256=7TO_wqytPUQo_XHctkgZv01xZwpHUK6z7nuCVjKJzhI,6531
+nostrclient/localStorage.py,sha256=4eoXMIK3XE4-uYdlqhSpF4VXKOgOweJ5MnorMSutW5Q,1365
+nostrclient/log.py,sha256=-ZFC9p09CCiZSbtZMjIz3jDawCiWMLbFJy3Yz6NTTzk,1350
+nostrclient/relay.py,sha256=4Yzix0_kLgJaMnv3fjVujeMpKKAwrR8cFNjYBr6fxek,8298
+nostrclient/relay_pool.py,sha256=zz6T4Tnvjg8gmFsGgGSXZlUiP_oyW7YYiyTYj1EaA6I,3653
+nostrclient/subscription.py,sha256=vBS6R8P5tmGSSKBG4SETE1rhVckQ92V1stfLwTk7dm8,882
+nostrclient/user.py,sha256=VZKq5DAiHdhRVafZ3-vUj41OVpKegSCRFWOdeJY_4pQ,1448
+nostrclient-1.0.2.dist-info/LICENSE,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+nostrclient-1.0.2.dist-info/METADATA,sha256=jj4c4ngsvQuNWQOdaj1Z3bQSFdZjfIemVjN9G6MeLCA,265
+nostrclient-1.0.2.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+nostrclient-1.0.2.dist-info/top_level.txt,sha256=WB1Lw5cme6au4959cvQXkB_sHJee-YqOk8VQpiCHWOE,12
+nostrclient-1.0.2.dist-info/RECORD,,
