@@ -1,0 +1,36 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "streamsnapper"
+version = "0.2.8"
+description = "StreamSnapper is an intuitive library designed to simplify, improve, and organize YouTube and Youtube Music media streams. It offers scraping functions with higher speed extraction and efficiency with the latest tools to perform such processes."
+authors = ["henrique-coder <hjyz6rqyb@mozmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/henrique-coder/streamsnapper"
+documentation = "https://github.com/henrique-coder/streamsnapper"
+repository = "https://github.com/henrique-coder/streamsnapper"
+keywords = ["stream", "snapper", "scraper", "downloader", "merger", "youtube"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+httpx = { version = "0.28.1", optional = false }
+scrapetube = { version = "2.5.1", optional = false }
+turbodl = { version = "0.1.5", optional = false }
+yt-dlp = { version = "2024.12.23", optional = false }
