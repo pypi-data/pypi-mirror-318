@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: vault-secret-manager
+Version: 0.5.0
+Summary: 
+Author: Mike Mackenna
+Author-email: mmackenna@unitedfiregroup.com
+Requires-Python: >=3.13,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: hvac (>=2.3.0,<3.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: pytz (>=2024.2,<2025.0)
+Requires-Dist: typer (>=0.15.1,<0.16.0)
+Description-Content-Type: text/markdown
+
+
