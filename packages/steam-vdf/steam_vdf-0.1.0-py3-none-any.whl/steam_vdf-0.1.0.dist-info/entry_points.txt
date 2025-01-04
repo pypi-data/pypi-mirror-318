@@ -1,0 +1,2 @@
+[console_scripts]
+steam-vdf = steam_vdf.cli:main
