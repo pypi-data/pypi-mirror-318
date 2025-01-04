@@ -1,0 +1,7 @@
+vllm_allocator_adaptor_c.abi3.so,sha256=2vdgIH292JekbCH98epluQ2wR-8jsaUT5gpsCvbkSDI,27208
+vllm_allocator_adaptor/__init__.py,sha256=9gV9ftp9UVoVMtURIj2rlloyLg-rqqVh0CW6mI_a0iM,2377
+vllm_allocator_adaptor-0.4.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+vllm_allocator_adaptor-0.4.0.dist-info/METADATA,sha256=FmOdom8LrLV_2rQV2-AzN43Cg5CccKeJJUijOV4-BiE,180
+vllm_allocator_adaptor-0.4.0.dist-info/WHEEL,sha256=1_iziCK8G-o6_1Dy5WMK3-BoNHdyHPM_ePWNHaOipUs,102
+vllm_allocator_adaptor-0.4.0.dist-info/top_level.txt,sha256=WW2muPi4VK8x4v9Czv5kpaPzyZ8Rc2zNmsL-o4vcUuI,48
+vllm_allocator_adaptor-0.4.0.dist-info/RECORD,,
