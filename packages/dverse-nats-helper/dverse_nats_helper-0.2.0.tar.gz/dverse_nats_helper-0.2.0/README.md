@@ -1,0 +1,62 @@
+# dverse-nats-helper
+
+dverse-nats-helper is a Python library for dealing nats server connection, publishng, creation and validation of the events
+
+## Installation
+
+Use the package manager [pip](https://pypi.org/project/dverse-nats-helper/0.1.0/) to install dverse-nats-helper.
+
+```bash
+pip install dverse-nats-helper
+```
+
+## Usage
+
+```python
+from dverse_nats_helper.event_builder import build_event
+from dverse_nats_helper.nats_connection import publish_event, connect_nats
+
+# Establishes a connection to the NATS server.
+await connect_nats("nats://nats:4222")
+
+# Constructs an event message conforming to a predefined schema.
+# The object must implement a to_event_object() method.
+system = { "platform": "example", "service": "example_svc", "event_type": "created"},
+new_event = build_event(product,actor={"actor_id": str(seller.id), "username": seller.username}, system)
+
+# Publishes an event to the specified NATS subject
+# after validating the data against a predefined schema.
+await publish_event("example.subject", new_event)
+
+```
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+MIT License
+
+Copyright (c) 2024 fuas-dverse
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
