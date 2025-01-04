@@ -1,0 +1,5 @@
+pytest>=3.9
+pytest-reraise
+pint>=0.24.4
+wpilib<2026,>=2025.1.1
+robotpy-cli~=2024.0
