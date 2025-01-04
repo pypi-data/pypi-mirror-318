@@ -1,0 +1,3 @@
+[console_scripts]
+ly = ly.cli.main:main
+ly-server = ly.server.main:main
