@@ -1,0 +1,56 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Cihaz zaten yap\u0131land\u0131r\u0131lm\u0131\u015f"
+        },
+        "error": {
+            "cannot_connect": "Ba\u011flanma hatas\u0131",
+            "invalid_host": "Ge\u00e7ersiz ana bilgisayar ad\u0131 veya IP adresi"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "host": "Sunucu",
+                    "port": "Port"
+                },
+                "data_description": {
+                    "host": "Snapcast sunucunuzun ana bilgisayar ad\u0131 veya IP adresi."
+                },
+                "description": "L\u00fctfen sunucu ba\u011flant\u0131 detaylar\u0131n\u0131z\u0131 giriniz",
+                "title": "Ba\u011flan"
+            }
+        }
+    },
+    "services": {
+        "join": {
+            "fields": {
+                "entity_id": {
+                    "description": "Oyuncular \"ana \"ya kat\u0131lacak.",
+                    "name": "Varl\u0131k"
+                },
+                "master": {
+                    "description": "Senkronize edilecek oyuncunun varl\u0131k kimli\u011fi.",
+                    "name": "Ana"
+                }
+            },
+            "name": "Kat\u0131l\u0131n"
+        },
+        "restore": {
+            "name": "Geri Y\u00fckleme"
+        },
+        "set_latency": {
+            "fields": {
+                "latency": {
+                    "name": "Gecikme"
+                }
+            },
+            "name": "Gecikme s\u00fcresini ayarlay\u0131n"
+        },
+        "snapshot": {
+            "name": "Anl\u0131k g\u00f6r\u00fcnt\u00fc"
+        },
+        "unjoin": {
+            "name": "Ayr\u0131l"
+        }
+    }
+}

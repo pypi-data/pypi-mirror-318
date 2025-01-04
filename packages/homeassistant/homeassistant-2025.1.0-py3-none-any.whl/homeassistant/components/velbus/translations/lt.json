@@ -1,0 +1,74 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Prietaisas jau sukonfig\u016bruotas"
+        },
+        "error": {
+            "already_configured": "Prietaisas jau sukonfig\u016bruotas",
+            "cannot_connect": "Nepavyko prisijungti"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "name": "\u0160ios Velbus jungties pavadinimas",
+                    "port": "Ry\u0161io eilut\u0117"
+                },
+                "title": "Apibr\u0117\u017ekite Velbus ry\u0161io tip\u0105"
+            }
+        }
+    },
+    "exceptions": {
+        "invalid_hvac_mode": {
+            "message": "Klimato re\u017eimas {hvac_mode} nepalaikomas."
+        }
+    },
+    "services": {
+        "clear_cache": {
+            "description": "I\u0161valo velbuscache ir pradeda nauj\u0105 nuskaitym\u0105.",
+            "fields": {
+                "address": {
+                    "name": "Adresas"
+                },
+                "interface": {
+                    "description": "\u201eVelbus\u201c s\u0105saja, \u012f kuri\u0105 reikia si\u0173sti komand\u0105, bus tokia pati reik\u0161m\u0117, kaip ir konfig\u016bravimo metu.",
+                    "name": "S\u0105saja"
+                }
+            },
+            "name": "I\u0161valyti talpykl\u0105"
+        },
+        "scan": {
+            "fields": {
+                "interface": {
+                    "description": "\u201eVelbus\u201c s\u0105saja, \u012f kuri\u0105 reikia si\u0173sti komand\u0105, bus tokia pati reik\u0161m\u0117, kaip ir konfig\u016bravimo metu.",
+                    "name": "S\u0105saja"
+                }
+            },
+            "name": "Nuskaityti"
+        },
+        "set_memo_text": {
+            "fields": {
+                "address": {
+                    "name": "Adresas"
+                },
+                "interface": {
+                    "description": "\u201eVelbus\u201c s\u0105saja, \u012f kuri\u0105 reikia si\u0173sti komand\u0105, bus tokia pati reik\u0161m\u0117, kaip ir konfig\u016bravimo metu.",
+                    "name": "S\u0105saja"
+                },
+                "memo_text": {
+                    "name": "Atmintin\u0117s tekstas"
+                }
+            },
+            "name": "Nustatyti atmintin\u0117s tekst\u0105"
+        },
+        "sync_clock": {
+            "description": "Sinchronizuoja \u201eVelbus\u201c moduli\u0173 laikrod\u012f su \u201eHome Assistant\u201c laikrod\u017eiu, tai yra tas pats, kas \u201esinchronizuojamas laikrodis\u201c i\u0161 \u201eVelbusLink\u201c.",
+            "fields": {
+                "interface": {
+                    "description": "\u201eVelbus\u201c s\u0105saja, \u012f kuri\u0105 reikia si\u0173sti komand\u0105, bus tokia pati reik\u0161m\u0117, kaip ir konfig\u016bravimo metu.",
+                    "name": "S\u0105saja"
+                }
+            },
+            "name": "Sinchronizuoti laikrod\u012f"
+        }
+    }
+}

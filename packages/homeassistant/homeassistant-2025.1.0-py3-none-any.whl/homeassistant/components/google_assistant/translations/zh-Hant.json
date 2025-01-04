@@ -1,0 +1,20 @@
+{
+    "entity": {
+        "button": {
+            "sync_devices": {
+                "name": "\u540c\u6b65\u88dd\u7f6e"
+            }
+        }
+    },
+    "services": {
+        "request_sync": {
+            "description": "\u50b3\u9001 request_sync \u547d\u4ee4\u81f3 Google\u3002",
+            "fields": {
+                "agent_user_id": {
+                    "name": "Agent \u4f7f\u7528\u8005 ID"
+                }
+            },
+            "name": "\u8acb\u6c42\u540c\u6b65"
+        }
+    }
+}
