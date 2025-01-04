@@ -1,0 +1,82 @@
+[project]
+name = "x_segment_anything"
+version = "0.0.8"
+dynamic = [
+    "dependencies",
+]
+description = "Segment Anything Model (SAM) modules combined in the same API (to make life easier)."
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = [
+    "xSAM",
+]
+license = {text = "MIT License"}
+authors = [
+  {name = "Jordan Pierce", email = "jordan.pierce@noaa.gov"},
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.optional-dependencies]
+all = [
+    "matplotlib",
+    "pycocotools",
+    "opencv-python",
+    "onnx",
+    "onnxruntime"
+]
+dev = [
+    "flake8",
+    "isort",
+    "black",
+    "mypy"
+]
+
+[tool]
+[tool.setuptools.packages.find]
+include = ["x_segment_anything*"]
+exclude = ["checkpoints", "docs*"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+
+[tool.distutils.bdist_wheel]
+universal = true
+
+[tool.bumpversion]
+current_version = "0.0.8"
+commit = true
+tag = true
+
+[[tool.bumpversion.files]]
+filename = "pyproject.toml"
+search = 'version = "{current_version}"'
+replace = 'version = "{new_version}"'
+
+[[tool.bumpversion.files]]
+filename = "x_segment_anything/__init__.py"
+search = '__version__ = "{current_version}"'
+replace = '__version__ = "{new_version}"'
+
+
+[tool.flake8]
+exclude = [
+    "docs",
+]
+max-line-length = 88
+
+[project.urls]
+Homepage = "https://github.com/Jordan-Pierce/xSAM"
+
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
