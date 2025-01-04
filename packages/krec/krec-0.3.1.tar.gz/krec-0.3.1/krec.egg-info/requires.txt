@@ -1,0 +1,8 @@
+colorlogging
+
+[dev]
+black
+isort
+ruff
+mypy
+pytest
