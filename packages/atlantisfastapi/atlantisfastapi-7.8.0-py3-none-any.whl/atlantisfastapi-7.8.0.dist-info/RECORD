@@ -1,0 +1,8 @@
+atlantisfastapi/__init__.py,sha256=110EIcByTbUAyBhXl9Iqlri6tOWRNPFg345gQyGqCy8,1541
+atlantisfastapi/lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+atlantisfastapi/lib/security/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+atlantisfastapi/lib/security/http.py,sha256=EUTHpZs6AT37AdcD9u4-UDjvXS8Gz9burtrnlhNxRX4,2915
+atlantisfastapi-7.8.0.dist-info/METADATA,sha256=cuJnCpTR6ml8KEiRJ8Go8zehF3DQW8Dj_lfNDn53d7A,610
+atlantisfastapi-7.8.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+atlantisfastapi-7.8.0.dist-info/top_level.txt,sha256=Kgy8LLPahBjK6XI5VkTEuD7jIDH_xHKMeOJnJ2dbiaE,16
+atlantisfastapi-7.8.0.dist-info/RECORD,,
