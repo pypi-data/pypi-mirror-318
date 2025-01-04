@@ -1,0 +1,11 @@
+optimix/__init__.py,sha256=Pvm-vBMpl27kE_r5oGbksHQWRI33YUHIvMBSIlL5a9w,325
+optimix/_check_grad.py,sha256=JG1e8HGBbJ9a08WRHJ6wHFjweZiltpHHGOtgLm82n0U,953
+optimix/_exception.py,sha256=CHxtqiwiJhTJmMq6Ve5qj8gEFkyZThkwjImo_oiC9Tk,69
+optimix/_function.py,sha256=ow4Q4CUQSIZfnBLro9TpB0q7x9HbZr1i006B-jy7S0k,8227
+optimix/_testit.py,sha256=qh0XnwWzzZ7WuPuKyckSWYZu9tMZsyYLH2frAGrjxeM,305
+optimix/_types.py,sha256=binwEQFEPUQLHciCLUxM-n4rET1vECoEvwktmSmkd50,7289
+optimix/_variables.py,sha256=n2BhExNCJEQIyHExNJYlXifwCorZu7NpFa6217hDoUM,1840
+optimix-3.0.5.dist-info/LICENSE.md,sha256=EuDVd4CN58eBkX7nuSLxxOETpj1CHjr3FQCUhYN_hI8,1105
+optimix-3.0.5.dist-info/METADATA,sha256=RPOSChI-8RxCAM_ZQStGIgd3flB8jBoIP0yVg1Yp4rM,1046
+optimix-3.0.5.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+optimix-3.0.5.dist-info/RECORD,,
