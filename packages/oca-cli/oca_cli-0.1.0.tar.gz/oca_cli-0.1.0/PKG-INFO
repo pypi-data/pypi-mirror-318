@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: oca-cli
+Version: 0.1.0
+Summary: OCA Bundle management simplified.
+Author: pstlouis
+Author-email: patrick.st-louis@opsecid.ca
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: blake3 (>=1.0.1,<2.0.0)
+Requires-Dist: jcs (>=0.2.1,<0.3.0)
+Requires-Dist: pytest (>=8.3.4,<9.0.0)
+Requires-Dist: typer (>=0.15.1,<0.16.0)
+Description-Content-Type: text/markdown
+
+# oca-cli
+
+## Quickstart
+
+```bash
+# install the package
+pip install oca-cli
+
+# Create a sample schema file
+SAMPLE_BUNDLE=$(cat <<EOF
+{
+    "name": "Sample",
+    "description": "A sample bundle",
+    "issuer": "Demo issuer",
+    "attributes": [
+        "first_name",
+        "last_name"
+    ]
+}
+EOF
+)
+echo $SAMPLE_BUNDLE > sample_schema.json
+
+# Draft an OCA Bundle
+oca draft -f sample_schema.json > sample_draft.json
+
+# Edit the bundle then secure it
+oca secure -f sample_draft.json > sample_bundle.json
+
+```
