@@ -1,0 +1,11 @@
+bw_save_game/__init__.py,sha256=tCSGx6OtApF7QSrkZzxbodhDoV537IJHYZAzvohoMGs,804
+bw_save_game/container.py,sha256=oYxBs1T0gLj31pdgOzVF9xCgzpZNy4iOvNFJR2VLzZE,2998
+bw_save_game/convert.py,sha256=vR2NBw-dWltlGGPGJYz6l665hxEZFEO-fUSb16w0r10,4219
+bw_save_game/db_object.py,sha256=CiMwuKa2G_2o9u79eyBQINJ14BzC_4lxPyBj0QqwvGc,3763
+bw_save_game/db_object_codec.py,sha256=gjxK1bdB_-kH1M5m49HOL6_DTZITdmW169rMZ4AHqdY,12132
+bw_save_game-0.0.2.dist-info/LICENSE.txt,sha256=MjdpnZ5ngchYdzZavZSTyhMqD9MfQ-GjJ4uOdfNlSvQ,33094
+bw_save_game-0.0.2.dist-info/METADATA,sha256=wzoIsSLzKJeWHv5qFp_qmalw8is8TlEEOY3hrPkfLh4,2857
+bw_save_game-0.0.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+bw_save_game-0.0.2.dist-info/entry_points.txt,sha256=wJDGzFni2hXAcux19b7fzBi1pHs23ISGvRsNyxIBiXQ,107
+bw_save_game-0.0.2.dist-info/top_level.txt,sha256=DmJ2C7Bi_x58nTW6F9nJ9CzZK4MueXH2fABJIByFg5c,13
+bw_save_game-0.0.2.dist-info/RECORD,,
