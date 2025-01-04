@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+version
+plapi/__init__.py
+plapi/string/__init__.py
+plapi/string/compression/__init__.py
+plapi/string/compression/compression.py
+plapi/string/similarity/__init__.py
+plapi/string/similarity/basics.py
+plapi_string.egg-info/PKG-INFO
+plapi_string.egg-info/SOURCES.txt
+plapi_string.egg-info/dependency_links.txt
+plapi_string.egg-info/top_level.txt
+tests/test_compression.py
+tests/test_similarity.py
