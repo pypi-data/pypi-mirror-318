@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: metasbooks
+Version: 0.0.1
+Summary: Python client for MetasBooks API https://metasbooks.fr
+Author-email: Julien Mercier-Rojas <julien@jeckel-lab.fr>
+Project-URL: Homepage, https://github.com/jeckel/metasbooks-client
+Project-URL: Issues, https://github.com/jeckel/metasbooks-client/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic>=2.8.2
+Requires-Dist: requests>=2.32.3
+
+# metasbooks-client
+Python client librairie for the MetasBooks api https://metasbooks.fr/
+
+# Requirements
+
+You need a valid account on [MetasBooks](https://metasbooks.fr) with a valid API Key.
+
+# Installation
+
+```bash
+pip install metasbooks
+```
+
+# Usage
+
+```python
+from metasbooks import Book, MetasBooks
+
+client = MetasBooks(api_key="My API Key")
+book: Book = client.get_book(ean='9791032925430')
+print(book)
+```

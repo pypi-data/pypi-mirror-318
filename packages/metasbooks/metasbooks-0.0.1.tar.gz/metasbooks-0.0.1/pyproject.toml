@@ -1,0 +1,27 @@
+[project]
+name = "metasbooks"
+version = "0.0.1"
+authors = [
+  { name="Julien Mercier-Rojas", email="julien@jeckel-lab.fr" },
+]
+description = "Python client for MetasBooks API https://metasbooks.fr"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pydantic>=2.8.2",
+    "requests>=2.32.3",
+]
+
+[dependency-groups]
+dev = [
+    "types-requests>=2.32.0.20241016",
+]
+
+[project.urls]
+Homepage = "https://github.com/jeckel/metasbooks-client"
+Issues = "https://github.com/jeckel/metasbooks-client/issues"

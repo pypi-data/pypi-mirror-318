@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/metasbooks/__init__.py
+src/metasbooks/book.py
+src/metasbooks/metasbooks.py
+src/metasbooks.egg-info/PKG-INFO
+src/metasbooks.egg-info/SOURCES.txt
+src/metasbooks.egg-info/dependency_links.txt
+src/metasbooks.egg-info/requires.txt
+src/metasbooks.egg-info/top_level.txt
