@@ -1,0 +1,16 @@
+OptimaLab35/gui.py,sha256=kNM-9eINdrr2tUH3BTbSXsYlmt36X8OgVOT3094VxQs,12592
+OptimaLab35/main.py,sha256=iS_fB9heBtm83DMkBwlcBQIQAS8NeDBA9B4Pfn1iNIE,1097
+OptimaLab35/tui.py,sha256=N1lJXYSz03RT3clDjWLiCwnHGcSbtL_kTGHwIAbfEM4,14627
+OptimaLab35/ui/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+OptimaLab35/ui/exif_handler_window.py,sha256=vZ3iR8KgkW9JuokO0HbokwUfrnPStGoQYu39DWOBS_M,3183
+OptimaLab35/ui/main_window.py,sha256=K-GccnLKEAfhyXhrfnND5yfiV4imNS_nopjRaW3VTkk,25476
+OptimaLab35/ui/main_window.ui,sha256=gfml15QleoLVdVdcmko8s1gudYt0Gp_vyMyWHrxhZX0,27113
+OptimaLab35/ui/simple_dialog.py,sha256=paIBcyl-CAFcUVtoFgY2LI_rgw8qzevscJSt0-f4-N4,969
+OptimaLab35/ui/simple_tui.py,sha256=wiYKm75hj8HA5wAeg2d811Oi2JR7jKSORojv8hPelZo,2090
+OptimaLab35/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+OptimaLab35/utils/utility.py,sha256=InVyhFSZLnLZk7Ic_Gfk7mKalcV0J3kipR_VUonAOq8,3882
+optimalab35-0.0.4a1.dist-info/METADATA,sha256=c5gqMR2K6dcy6Dblw2tKf8ueQa3R-nVk7IElmDkTxtE,4304
+optimalab35-0.0.4a1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+optimalab35-0.0.4a1.dist-info/entry_points.txt,sha256=3LIPiz8elze8CUZw5X-HMoEO__s-vSL-JbLIB_rbaPs,54
+optimalab35-0.0.4a1.dist-info/licenses/LICENSE.md,sha256=MFhIrSiAZkeilLX0yySBK55GCTqmEon6P8jc_zEsdNs,870
+optimalab35-0.0.4a1.dist-info/RECORD,,
