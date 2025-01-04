@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: textToKnowledgeGraph
+Version: 0.1.1
+Summary: A Python package to generate BEL statements and CX2 networks.
+Home-page: https://github.com/ndexbio/llm-text-to-knowledge-graph
+Author: Favour James
+Author-email: favour.ujames196@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: langchain==0.3.13
+Requires-Dist: langchain_core==0.3.27
+Requires-Dist: langchain_openai==0.2.13
+Requires-Dist: lxml==5.2.1
+Requires-Dist: ndex2<4.0.0,>=3.8.0
+Requires-Dist: pandas
+Requires-Dist: pydantic==2.10.4
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: Requests==2.32.3
+
+# LLM Text to Knowledge Graph
+
+This project aims to convert natural language text into a structured knowledge graph using advanced language models (LLMs). The knowledge graph can be used for various applications such as information retrieval, question answering, and data analysis.
+
+## Features
+
+- Convert natural language text to a knowledge graph
+- Extract entities and relationships from text
+- Visualize the generated knowledge graph
+- Support for multiple languages
+
+## Installation
+
+To install the required dependencies, run:
+
+```bash
+pip install textToKnowledgeGraph
