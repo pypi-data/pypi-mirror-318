@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: customaiagent
+Version: 0.1.2
+Summary: SDK for deploying custom AI agents
+Author: Your Name
+Requires-Dist: cryptography
+Requires-Dist: huggingface-hub
+Requires-Dist: openai
+Requires-Dist: streamlit
