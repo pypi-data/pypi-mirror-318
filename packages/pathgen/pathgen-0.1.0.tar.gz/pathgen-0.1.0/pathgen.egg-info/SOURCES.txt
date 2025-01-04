@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+pathgen/__init__.py
+pathgen/main.py
+pathgen.egg-info/PKG-INFO
+pathgen.egg-info/SOURCES.txt
+pathgen.egg-info/dependency_links.txt
+pathgen.egg-info/entry_points.txt
+pathgen.egg-info/top_level.txt
