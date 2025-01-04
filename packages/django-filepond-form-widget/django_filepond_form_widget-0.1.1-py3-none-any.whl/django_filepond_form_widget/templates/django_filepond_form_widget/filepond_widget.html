@@ -1,0 +1,9 @@
+<div class="filepond-wrapper">
+    {{ widget.filepond_config|json_script:widget.filepond_config_id }}
+    <input type="file"
+           name="{{ widget.name }}"
+           id="{{ widget.attrs.id }}"
+           aria-describedby="{{ widget.attrs.aria_describedby }}"
+           class="filepond-input"
+           data-filepond-config-id="{{ widget.filepond_config_id }}" />
+</div>
