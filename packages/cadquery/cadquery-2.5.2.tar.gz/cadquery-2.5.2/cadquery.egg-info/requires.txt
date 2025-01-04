@@ -1,0 +1,15 @@
+cadquery-ocp<7.8,>=7.7.0
+ezdxf
+multimethod<2.0,>=1.11
+nlopt<3.0,>=2.9.0
+typish
+casadi
+path
+
+[dev]
+docutils
+ipython
+pytest
+
+[ipython]
+ipython
