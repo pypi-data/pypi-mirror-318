@@ -1,0 +1,9 @@
+LICENCE
+README.md
+setup.py
+tests/test_main.py
+zenopay/Zenopay.egg-info/PKG-INFO
+zenopay/Zenopay.egg-info/SOURCES.txt
+zenopay/Zenopay.egg-info/dependency_links.txt
+zenopay/Zenopay.egg-info/requires.txt
+zenopay/Zenopay.egg-info/top_level.txt
