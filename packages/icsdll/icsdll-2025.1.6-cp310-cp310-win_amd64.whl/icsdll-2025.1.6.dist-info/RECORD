@@ -1,0 +1,11 @@
+icsdll-2025.1.6.data/purelib/icsdll/ICSx64.dll,sha256=cc9GbV-w8AJMmvZfp9RoM8SfRN9b755Z08sYbZS1mak,30866432
+icsdll-2025.1.6.data/purelib/icsdll/__init__.py,sha256=zUDMPDSUFUKHMXJQUpA_o7vlo2stG2nxInmw5iM2JBo,98
+icsdll-2025.1.6.data/purelib/icsdll/icsdll.py,sha256=Va6t9riDquSRQL8UtO128BTR9VqjS8ehEVkcGlDAJUg,44278
+icsdll-2025.1.6.data/purelib/icsdll/vcomp140.dll,sha256=A2ubP37Ojf1IrszXcRNyHFMFBDqqnGTR5ygSJScnqnw,192104
+icsdll-2025.1.6.data/purelib/icsdll/vcruntime140.dll,sha256=2nLmZ3vRvNAcRTwZmKqhmur2ZZ9HdM9oSECdqCMqlbI,120432
+icsdll-2025.1.6.data/purelib/icsdll/vcruntime140_1.dll,sha256=JuRwspvtPYc-DDKBhuU_lentv-Cw_QzaRHQ6CxoEqCg,49744
+icsdll-2025.1.6.dist-info/LICENSE,sha256=Q_nWHBdLlscqgkg-LAHfSA7lkvBZgHHAVapwnUP-_-s,1559
+icsdll-2025.1.6.dist-info/METADATA,sha256=PyDfJw5arw5YrREM8qnqpZsbD4Qyg8k7GsidWezaf-8,3879
+icsdll-2025.1.6.dist-info/WHEEL,sha256=tcd-HDpskugT8GYYKyyid0lOlzoZtZdWwcrj5ormtfo,101
+icsdll-2025.1.6.dist-info/top_level.txt,sha256=3YIZRiaGh-S7w8eUo9ekF94goryR0_Fm80Owf1-RE0o,7
+icsdll-2025.1.6.dist-info/RECORD,,
