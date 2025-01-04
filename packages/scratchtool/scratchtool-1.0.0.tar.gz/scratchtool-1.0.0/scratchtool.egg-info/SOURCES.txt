@@ -1,0 +1,9 @@
+setup.py
+scratchtool/__init__.py
+scratchtool/main.py
+scratchtool.egg-info/PKG-INFO
+scratchtool.egg-info/SOURCES.txt
+scratchtool.egg-info/dependency_links.txt
+scratchtool.egg-info/entry_points.txt
+scratchtool.egg-info/requires.txt
+scratchtool.egg-info/top_level.txt
