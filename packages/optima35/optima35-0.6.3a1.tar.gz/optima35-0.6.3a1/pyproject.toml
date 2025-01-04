@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "optima35"
+version = "0.6.3-a1"
+authors = [{ name = "Mr. Finchum" }]
+description = "OPTIMA35 is a package to modify images with pillow and piexif."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["piexif", "pillow"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://gitlab.com/CodeByMrFinchum/optima35"
