@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: lifeweeks
+Version: 0.1.2
+Summary: Creates a plot showing your life in weeks
+Author: Stephen Turner
+License: GPL-3.0-or-later
+Requires-Python: >=3.8
+Requires-Dist: click>=8.1
+Requires-Dist: matplotlib>=3.8
+Description-Content-Type: text/markdown
+
+# lifeweeks
+
+Shows a plot of your life in weeks.
