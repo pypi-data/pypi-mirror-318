@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pywebuikit
+Version: 0
+Summary: A Python package for creating web applications with a simple and easy-to-use API.
+Home-page: https://github.com/qaqFei/pywebuikit
+Author: qaqFei
+Author-email: qaq_fei@163.com
+License: MIT License
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.12.0
+License-File: LICENSE
+Requires-Dist: pywebview==5.2
+
+# pywebuikit
+
+This is a python package for creating web applications with a simple and easy-to-use API.
