@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: plapi-example-api
+Version: 0.0.1
+Summary: A simple example package that prints Hello, World!
+Home-page: https://github.com/plapi-org/example-api
+Author: Jakub Pawłowski
+Author-email: plapi.org@gmail.com
+Project-URL: Bug Tracker, https://github.com/plapi-org/example-api/issues
+Keywords: example hello world package
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# plapi-example
+
+## Description
+`plapi-example` is a simple Python package that provides a function to print "Hello, World!". 
+
+## Installation
+You can install the package using pip. Run the following command:
+
+```
+pip install plapi-example
+```
+
+## Usage
+To use the package, you can import it in your Python code:
+
+```python
+import plapi.hello_world
+
+plapi.hello_world.hello_world()
+```
+
+This will print:
+
+```
+Hello, World!
+```
+
+## Running Tests
+To run the tests for this package, navigate to the `tests` directory and run:
+
+```
+pytest test_hello_world.py
+```
+
+## Contributing
+Feel free to submit issues and pull requests to improve the package.
