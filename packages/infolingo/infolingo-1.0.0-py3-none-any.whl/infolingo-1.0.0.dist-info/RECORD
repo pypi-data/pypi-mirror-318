@@ -1,0 +1,11 @@
+infolingo/__init__.py,sha256=AhmrQArkfbRidSrw1JgXAd5ADAk-kRaHrZ5h0NG0vTo,177
+infolingo/infolingo.py,sha256=JWgVz0igKi6nnoDNjMY6hfDz0bBcqZMloJ95jWrw5M4,5134
+infolingo/main.py,sha256=1b-_8-2HXrth0Uh3cnn-8aIQiuzMnOvdcP-aNWvMzmM,3194
+infolingo/data/fra_news_2023_300K-words.csv,sha256=2XopNSqZRfVZU1HOJxuKZm_awJbp5prMWwvS-IbdQYw,3134120
+infolingo/data/sample1.csv,sha256=19ayPyKntJ9PQI39U5o4AeClLz1fRbQrSP3rj4Y09-M,11
+infolingo/data/sample2.csv,sha256=IS-sXFnnpRggZgs_yMYNkiDJHGMKFM6aseK1ENp0uAw,26
+infolingo-1.0.0.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+infolingo-1.0.0.dist-info/METADATA,sha256=pyH7pdiZ-47SxD512aqSc-9urwqi-UdzXDNxpX-47vo,4438
+infolingo-1.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+infolingo-1.0.0.dist-info/top_level.txt,sha256=pLZdIPzp4VXuLSapsieZgTEj79ol3SsfBUwiVw-hgpc,10
+infolingo-1.0.0.dist-info/RECORD,,
