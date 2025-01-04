@@ -1,0 +1,11 @@
+monday_helper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+monday_helper/graphql_queries.py,sha256=gw6NfcM3bGQiPlZbmghusn66oB4glfSsIUemIO1mK5M,566
+monday_helper/monday_api_client.py,sha256=iNo4dzO3ak_ddH_nr-_eGJfv6D28utlk4iIdj-0wc34,1416
+monday_helpers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+monday_helpers/graphql_queries.py,sha256=gw6NfcM3bGQiPlZbmghusn66oB4glfSsIUemIO1mK5M,566
+monday_helpers/monday_api_client.py,sha256=Pz6cG5BhCYBFLNjF2uUfouzLaJS_O8_aQSZgAx72lPM,1417
+monday_helper-1.1.1.dist-info/LICENSE.TXT,sha256=K2akx4C0Tur5VvOxslX2wrnqF1RCNbxRlcjZpxxFRa4,1066
+monday_helper-1.1.1.dist-info/METADATA,sha256=wPedlghP1M_KtX26463OPvpDP6B2Uf_T384-lQTe39s,1058
+monday_helper-1.1.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+monday_helper-1.1.1.dist-info/top_level.txt,sha256=jeSW-qwRBXUmvu3bYWLBEp9mhD1bL_4U0G_NJE7eJH0,14
+monday_helper-1.1.1.dist-info/RECORD,,
