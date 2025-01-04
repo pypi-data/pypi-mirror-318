@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: JynAi
+Version: 1
+Summary: JynAi Python Ai Module
+Home-page: https://github.com/Jynoqtra/JynPopMod
+Author: Jynoqtra
+Author-email: Jynoqtra@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Intended Audience :: Developers
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: transformers
+Requires-Dist: torch
+
+1. **`JynAi(question)`**
+   - **`question`**: Input question to `JynAi`.
+   - **What it does**: Outputs an answer if possible due to input.
