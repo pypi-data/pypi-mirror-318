@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "ppgee"
+version = "0.2.1"
+description = ""
+authors = ["tiagovla <tiagovla@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+aiohttp = "^3.8.1"
+beautifulsoup4 = "^4.11.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[tool.poetry.scripts]
+ppgee = "ppgee.__main__:main"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.0.1"
+black = "^24.10.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
