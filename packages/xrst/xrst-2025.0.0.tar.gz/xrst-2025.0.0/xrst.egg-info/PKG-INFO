@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: xrst
+Version: 2025.0.0
+Summary: Extract RST files from source code and run Sphinx
+Home-page: https://github.com/bradbell/xrst
+License: GPL-3.0-or-later
+Project-URL: Homepage, https://github.com/bradbell/xrst
+Project-URL: Bug Tracker, https://github.com/bradbell/xrst/issues
+Keywords: sphinx,rst,documentation,source
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+Requires-Dist: sphinx
+Requires-Dist: toml
+Requires-Dist: sphinx-copybutton
+Requires-Dist: pytest
+Requires-Dist: pyspellchecker
+Requires-Dist: pyenchant
+Requires-Dist: furo
+Requires-Dist: sphinx-rtd-theme
+Requires-Dist: sphinx-book-theme
+
+# Extract Sphinx RST Files
+
+## Install
+This installs the current stable version of xrst:
+
+    pip install xrst
+
+This installs the most recent verion of xrst:
+
+    pip install xrst
+    pip uninstall -y xrst
+    pip install --index-url https://test.pypi.org/simple/ xrst
+
+## Purpose
+https://xrst.readthedocs.io/latest/purpose.html
+
+## Get Started
+https://xrst.readthedocs.io/latest/get_started.html
+
+## Git Repository
+https://github.com/bradbell/xrst
