@@ -1,0 +1,12 @@
+email_safeguard/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+email_safeguard/validator.py,sha256=jBVKVUMYXWCKcKyxXs2CNizQxZyIeh-8xBm9CW8Z-gk,8217
+email_safeguard/data/disposable_domains.txt,sha256=1JH1i5VPv2WfKQRlYVefwO-Z_4QwfBtzXJKwjt597tU,2755265
+email_safeguard/data/popular_domains.txt,sha256=oYJ-WwRi8gqMyf62SD8zjVVofSuVTol4n7Q24nj5j10,92
+email_safeguard/data/popular_tlds.txt,sha256=FTQMkepbckubESuDEm6QnOnuIWkJGonOq1u9fc_f2Fs,18
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_validator.py,sha256=fYtMMxHQbqbmkCtSwEPcl10qNxd5fOVUEbG27Zkmj_4,5242
+email_safeguard-0.1.7.dist-info/LICENSE,sha256=dv-PLZDHEbCNFsGPQR9gdGhK4iJ8MIgcYgzXDThup-o,1130
+email_safeguard-0.1.7.dist-info/METADATA,sha256=ZJo7A7jzd-aapt5gk_X3ho7ClwoS9KVmoXqndmjzN7Q,6615
+email_safeguard-0.1.7.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+email_safeguard-0.1.7.dist-info/top_level.txt,sha256=-0TLw-Hw_iGZzGlk5JI9yW2vmtOY6SQaYsAMgZqCdjU,22
+email_safeguard-0.1.7.dist-info/RECORD,,
