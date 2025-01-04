@@ -1,0 +1,9 @@
+iodproxy/__init__.py,sha256=rnObPjuBcEStqSO0S6gsdS_ot8ITOQjVj_-P1LUUYpg,22
+iodproxy/cli.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+iodproxy/logger.py,sha256=3RWkZNfUm-2AgX8CVvaPDg2mUTaT3zDaLCZWxd_UdO8,2486
+iodproxy/proxy.py,sha256=ciip_e4DZM2s96PtYNgdHWUqTJC-c7iTN03ISEdk8II,1712
+iodproxy-0.1.1.dist-info/METADATA,sha256=T40KI__jy75mw0ENuk9Eiu02JwsR78EpJNFmlOF-G8k,479
+iodproxy-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+iodproxy-0.1.1.dist-info/entry_points.txt,sha256=YGXJYWRPzaVCp00EwaBWbCgJ9zyVIFVXB-_19u0WfFU,47
+iodproxy-0.1.1.dist-info/licenses/LICENSE,sha256=5adbLHoJYnsGcl3ganOwDhtee8xmKpbWxwrH24z7aTw,1073
+iodproxy-0.1.1.dist-info/RECORD,,
