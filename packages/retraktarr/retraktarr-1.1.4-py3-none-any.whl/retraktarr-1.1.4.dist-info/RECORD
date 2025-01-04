@@ -1,0 +1,13 @@
+retraktarr/VERSION,sha256=s4n9aV0PFyXVJPIoNMaqvv68dMsxTpUy9-iiXCnuR9I,5
+retraktarr/__init__.py,sha256=FXOiobt7nkrcBes0Qv6_d_XkEP7_dFq6tdcESyO3BPs,29
+retraktarr/config.py,sha256=36WIrZq47e6tj9r37fbME4_bIKnzy8gFtzt4gA-7ih0,8375
+retraktarr/retraktarr.py,sha256=jyPBIcDnsEc0FHYie9g1-uDMmwySFpol7kOI5KrKKA4,6197
+retraktarr/api/__init__.py,sha256=I94eDqjHAKW1bKB3RjLDPOGIWn2vavZQEe_LoR5oxmw,52
+retraktarr/api/arr.py,sha256=SisQRIRyN8zHulFc4T-RUAPdOjxX1W1l8SjMTxIq0P0,5568
+retraktarr/api/trakt.py,sha256=UkVNf5KKHkOn8iX_iHjsFxRLRWa9j6DfvYt7mjhIkI4,23494
+retraktarr-1.1.4.dist-info/LICENSE,sha256=AwXVY9h1y6gKWTJg8Zswfay5cpHz43rS40kqgMIDnJY,1063
+retraktarr-1.1.4.dist-info/METADATA,sha256=lEGA6KhpEy809sstNAUv7OpIXXvHAIrf6CKMegTXeCs,8837
+retraktarr-1.1.4.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+retraktarr-1.1.4.dist-info/entry_points.txt,sha256=loZruJVYSJTk7iXNDU2_IgUS1Gb1WTB8eOi6sTYJA24,47
+retraktarr-1.1.4.dist-info/top_level.txt,sha256=aSmSN0yfoCk1I6jpUIqFyx61lJZYfVFQY_dEDyz2zDo,11
+retraktarr-1.1.4.dist-info/RECORD,,
