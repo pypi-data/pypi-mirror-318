@@ -1,0 +1,10 @@
+mysqlclient
+requests
+
+[dev]
+coverage
+pip-tools
+pytest-cov
+pytest-mock
+pytest
+ruff
