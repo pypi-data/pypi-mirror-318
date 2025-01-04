@@ -1,0 +1,6 @@
+sig_rnn/__init__.py,sha256=OFHQgfxDY6CT_OWRS2I2yAxNrRWCFYPv5O9EoHFtIfk,84
+sig_rnn/sig_gru.py,sha256=xQ1U8wJRHdLBoKj27HqF4xKl1FVkzw9nelsRNkC4urM,11275
+sig_rnn/sig_lstm.py,sha256=42yR7nsRYdJpSLvLYKy1cgfmhD_Tw4lKRxDUjOplFw8,11379
+sig_rnn-0.0.1.dist-info/METADATA,sha256=MjUrRm9lasbBcW-bgMo58OHElJ5wx4Omi9toD7PTBgY,1032
+sig_rnn-0.0.1.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+sig_rnn-0.0.1.dist-info/RECORD,,
