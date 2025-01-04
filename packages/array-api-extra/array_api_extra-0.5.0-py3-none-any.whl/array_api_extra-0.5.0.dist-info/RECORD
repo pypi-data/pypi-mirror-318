@@ -1,0 +1,12 @@
+array_api_extra/__init__.py,sha256=SraatgC1nhE4W6jLoHPqillDcbeF1XixxZwrA01t6CE,431
+array_api_extra/_funcs.py,sha256=ZJGntXy1OazZJXfUqTQfzOFAvESO7YggCeinja_uJ2Q,28220
+array_api_extra/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+array_api_extra/_lib/__init__.py,sha256=URPJAgzmDdWZxKbgitkwTDZ8Fe2fFy0jbLMIL1fTmAc,41
+array_api_extra/_lib/_compat.py,sha256=vdaxY-REncKLZBgDs2Z5zYaoirzVVIn1aEhU7YkYgeI,637
+array_api_extra/_lib/_compat.pyi,sha256=bi5ulRTQ4ySAYmQPfsuKC73oyrN0fKP6jZunTsiAWic,631
+array_api_extra/_lib/_typing.py,sha256=rWYBfPGpHF_wbY3FMXal5qJULO3Em4xE7k7OhVwH6Fs,339
+array_api_extra/_lib/_utils.py,sha256=tEWerndG-x4pSANYMhWz0Az01PlTPRvPjKF0Fe3kM7k,2809
+array_api_extra-0.5.0.dist-info/METADATA,sha256=o7Z5AyHxSEY7jwweAsf7kbA5YV26Jgn7FwvvIkEb3RA,13621
+array_api_extra-0.5.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+array_api_extra-0.5.0.dist-info/licenses/LICENSE,sha256=WElDmP4Uf9znamiy3s1MCM46HqI3ttZ4UAHBX4IsbtY,1097
+array_api_extra-0.5.0.dist-info/RECORD,,
