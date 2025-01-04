@@ -1,0 +1,10 @@
+pinginstaller/Install_Update_PINGMapper.py,sha256=chEM62G6d7WErpKleoaeKZ1AZxEUtzK1vA76mh1CsPw,1969
+pinginstaller/__init__.py,sha256=wuqEjQxl8rIzh_vwnDN5zNfos1TWhgtg1kEeNXKv1ww,34
+pinginstaller/__main__.py,sha256=Pw3G1o8C2lZ29Rco0CY0xhxw5AimhyZfoRJodWxVg2o,543
+pinginstaller/version.py,sha256=EpCsbnMOLIui1pIO-QGlbsHPk_-yz6C22L3wZWyWNy8,29
+pinginstaller-1.0.0a7.data/data/pingmapper_config/PINGMapper.yml,sha256=e1D96HXHwqMgPuBd6krbwnH13uy1iBeFOnTwwD_Tvlo,468
+pinginstaller-1.0.0a7.dist-info/LICENSE,sha256=e1msmChkqLNv3MljTU25M3MRnJp8HWLl4zUjI0IrvAg,1092
+pinginstaller-1.0.0a7.dist-info/METADATA,sha256=miHUQBlQiHlFRWH8VzG84-1KSGmlIieX5BoC4INDZJw,1172
+pinginstaller-1.0.0a7.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pinginstaller-1.0.0a7.dist-info/top_level.txt,sha256=ZB64i0OZzlnBJPf-5v7Wm-NGBowAlsiR0vg8AvUgJ7s,14
+pinginstaller-1.0.0a7.dist-info/RECORD,,
