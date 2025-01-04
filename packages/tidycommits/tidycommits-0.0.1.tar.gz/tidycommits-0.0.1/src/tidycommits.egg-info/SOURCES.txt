@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/tidycommits/__init__.py
+src/tidycommits.egg-info/PKG-INFO
+src/tidycommits.egg-info/SOURCES.txt
+src/tidycommits.egg-info/dependency_links.txt
+src/tidycommits.egg-info/top_level.txt
