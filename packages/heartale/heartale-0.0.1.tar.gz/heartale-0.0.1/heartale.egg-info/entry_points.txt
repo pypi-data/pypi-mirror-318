@@ -1,0 +1,3 @@
+[console_scripts]
+heartale = heartale:run_play
+heartale_count = heartale.tools.count:count_read_time
