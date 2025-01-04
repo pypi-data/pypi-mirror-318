@@ -1,0 +1,8 @@
+setup.py
+src/models_manager.py
+src/ollamamia.py
+src/ollamamia.egg-info/PKG-INFO
+src/ollamamia.egg-info/SOURCES.txt
+src/ollamamia.egg-info/dependency_links.txt
+src/ollamamia.egg-info/requires.txt
+src/ollamamia.egg-info/top_level.txt
