@@ -1,0 +1,10 @@
+nonebot_plugin_qbittorrent_manager/__init__.py,sha256=JjqcKUvqJLHWgoADTVstxkhDowS7r7RB9Bf4W-dwqzg,5184
+nonebot_plugin_qbittorrent_manager/command.py,sha256=Yrh4PujNoPXzb-aBPQ0pk1-yt7h1Ucn0N91CvKiCiyg,11874
+nonebot_plugin_qbittorrent_manager/config.py,sha256=CYu5RKFXIQ99jyETPabJCpSxmEkARlHHMEraEq4Xto0,3336
+nonebot_plugin_qbittorrent_manager/draw.py,sha256=C7X4tqWWV2-vjPNmpMEtMrBXWe-6hstNIIJiHqJxp1E,2715
+nonebot_plugin_qbittorrent_manager/qb_api.py,sha256=oZlj6VsvNCR3EqPWkUbd9j6RU4DXOfzF33K0fyTHAZA,4352
+nonebot_plugin_qbittorrent_manager/tools.py,sha256=JAv4cfTsqP1Svn5ZsbRk2Uw4VlEdBn3wF7ONNYEe-jA,24288
+nonebot_plugin_qbittorrent_manager-1.0.0.dist-info/LICENSE,sha256=4QwosCUBWhxPzvBqBKkegYlm-APuqbMaNBTOAYjrt7E,1068
+nonebot_plugin_qbittorrent_manager-1.0.0.dist-info/METADATA,sha256=eGAuscgIuQ0OljGyW7qYIOJ9Va76KAshW0Qt5_wlJM0,4820
+nonebot_plugin_qbittorrent_manager-1.0.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+nonebot_plugin_qbittorrent_manager-1.0.0.dist-info/RECORD,,
