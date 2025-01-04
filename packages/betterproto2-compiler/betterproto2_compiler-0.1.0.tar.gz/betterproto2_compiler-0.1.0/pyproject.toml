@@ -1,0 +1,117 @@
+[tool.poetry]
+name = "betterproto2_compiler"
+version = "0.1.0"
+description = "Compiler for betterproto2"
+authors = ["Adrien Vannson <adrien.vannson@protonmail.com>", "Daniel G. Taylor <danielgtaylor@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/betterproto/python-betterproto2-compiler"
+keywords = ["protobuf", "gRPC", "compiler"]
+license = "MIT"
+packages = [
+    { include = "betterproto2_compiler", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+betterproto2 = "0.0.2"
+# The Ruff version is pinned. To update it, also update it in .pre-commit-config.yaml
+ruff = "~0.7.4"
+grpclib = "^0.4.1"
+jinja2 = ">=3.0.3"
+typing-extensions = "^4.7.1"
+
+[tool.poetry.group.dev.dependencies]
+jinja2 = ">=3.0.3"
+mypy = "^1.11.2"
+pre-commit = "^2.17.0"
+grpcio-tools = "^1.54.2"
+mkdocs-material = {version = "^9.5.49", python = ">=3.10"}
+mkdocstrings = {version = "^0.27.0", python = ">=3.10", extras = ["python"]}
+
+[tool.poetry.group.test.dependencies]
+poethepoet = ">=0.9.0"
+pytest = "^6.2.5"
+protobuf = "^4"
+
+[tool.poetry.scripts]
+protoc-gen-python_betterproto2 = "betterproto2_compiler.plugin:main"
+
+[tool.ruff]
+extend-exclude = ["tests/output_*", "src/betterproto2_compiler/lib"]
+target-version = "py310"
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "F401",  # Unused imports
+    "F841",  # Unused local variables
+    "F821",  # Undefined names
+    "E501",  # Line length violations
+
+    "SIM101", # Simplify unnecessary if-else blocks
+    "SIM102", # Simplify return or yield statements
+    "SIM103", # Simplify list/set/dict comprehensions
+
+    "UP",
+
+    "I",
+
+    "COM812", # Trailing commas
+]
+
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+
+# Dev workflow tasks
+
+[tool.poe.tasks.test]
+cmd = "pytest"
+help = "Run tests"
+
+[tool.poe.tasks.generate]
+script = "tests.generate:main"
+help = "Generate test cases"
+
+[tool.poe.tasks.types]
+cmd  = "mypy src --ignore-missing-imports"
+help = "Check types with mypy"
+
+[tool.poe.tasks.format]
+sequence = ["_format", "_sort-imports"]
+help = "Format the source code, and sort the imports"
+
+[tool.poe.tasks.check]
+sequence = ["_check-format", "_check-ruff-lint"]
+help = "Check that the source code is formatted and the code passes the linter"
+
+[tool.poe.tasks._format]
+cmd = "ruff format src tests"
+help = "Format the source code without sorting the imports"
+
+[tool.poe.tasks._sort-imports]
+cmd = "ruff check --select I --fix src tests"
+help = "Sort the imports"
+
+[tool.poe.tasks._check-format]
+cmd = "ruff format --diff src tests"
+help = "Check that the source code is formatted"
+
+[tool.poe.tasks._check-ruff-lint]
+cmd = "ruff check src tests"
+help = "Check the code with the Ruff linter"
+
+[tool.poe.tasks.generate_lib]
+cmd = """
+protoc
+    --plugin=protoc-gen-custom=src/betterproto2_compiler/plugin/main.py
+    --custom_opt=INCLUDE_GOOGLE
+    --custom_out=src/betterproto/lib/std
+    -I /usr/local/include/
+    /usr/local/include/google/protobuf/**/*.proto
+"""
+help = "Regenerate the types in betterproto.lib.std.google"
+
+[build-system]
+requires = ["poetry-core>=1.0.0,<2"]
+build-backend = "poetry.core.masonry.api"
