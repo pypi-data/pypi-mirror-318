@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deltamesh-core"
+version = "0.1.1"
+description = "A Python library designed to assist with implementing the Delta Mesh architecture, providing tools and patterns for modern data engineering workflows."
+authors = [
+    {name = "Steve Kerr", email = "dev@deltaflame.net"}
+]
+license = {text = "MIT"}
+dependencies = ["pyspark"]
+requires-python = ">=3.11"
+
+[tool.setuptools.packages.find]
+where = ["src"]
