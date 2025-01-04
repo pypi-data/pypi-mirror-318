@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: mathspell
+Version: 0.0.1
+Summary: A library for converting numbers to words contextually.
+Home-page: https://github.com/ShaliniR8/mathspell
+Author: ShaliniR8
+Author-email: shaliniroy1008@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: spacy
+Requires-Dist: num2words
+
+# Number to Words Contextual Library
+
+This library converts numbers to words based on their context. For example:
+- For years: "2015" -> "twenty fifteen"
+- For quantities: "2015" -> "two thousand and fifteen"
