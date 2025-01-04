@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: databricks_uniform_sync
+Version: 0.1.0
+Summary: A SDK for cloud compute pricing
+Home-page: https://github.com/guanjieshen/databricks-uniform-sync
+Author: Guanjie Shen
+License: MIT License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests<3.0.0,>=2.5.0
