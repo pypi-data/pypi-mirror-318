@@ -1,0 +1,2 @@
+[console_scripts]
+ruby-commit-helper = ruby_commit_helper.main:main
