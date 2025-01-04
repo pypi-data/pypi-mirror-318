@@ -1,0 +1,6 @@
+include README.md
+include LICENSE
+recursive-include mu/algorithms/*/configs *.yaml
+recursive-include mu/algorithms/*/*.yaml
+recursive-include mu/algorithms/*/scripts *.py
+recursive-include mu/algorithms/*/environment.yaml
