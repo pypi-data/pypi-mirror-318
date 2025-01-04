@@ -1,0 +1,15 @@
+aiohttp
+asyncio
+argparse
+python-dotenv
+requests
+
+[dev]
+aiohttp
+asyncio
+argparse
+python-dotenv
+requests
+wheel
+build
+twine
