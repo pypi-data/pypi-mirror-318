@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: NeuroVisKit
+Version: 0.0.2
+Summary: NeuroVisKit
+Author: Dekel Galor
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: tqdm
+Requires-Dist: lab
+Requires-Dist: ipykernel
+Requires-Dist: dill
+Requires-Dist: wandb
+Requires-Dist: imageio
+Requires-Dist: lightning
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: scikit-image
+Requires-Dist: IPython

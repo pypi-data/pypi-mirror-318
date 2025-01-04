@@ -1,0 +1,12 @@
+numpy
+tqdm
+lab
+ipykernel
+dill
+wandb
+imageio
+lightning
+matplotlib
+scipy
+scikit-image
+IPython
