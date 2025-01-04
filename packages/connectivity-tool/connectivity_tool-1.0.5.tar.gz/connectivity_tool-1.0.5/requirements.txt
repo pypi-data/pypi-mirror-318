@@ -1,0 +1,5 @@
+PyYAML==6.0.2
+unitsnet-py==0.1.140
+requests~=2.32.3
+setuptools~=70.0.0
+validators~=0.34.0
