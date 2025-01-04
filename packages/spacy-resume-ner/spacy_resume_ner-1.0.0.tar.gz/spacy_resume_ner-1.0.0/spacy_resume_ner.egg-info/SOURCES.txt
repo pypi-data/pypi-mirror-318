@@ -1,0 +1,6 @@
+setup.py
+spacy_resume_ner.egg-info/PKG-INFO
+spacy_resume_ner.egg-info/SOURCES.txt
+spacy_resume_ner.egg-info/dependency_links.txt
+spacy_resume_ner.egg-info/requires.txt
+spacy_resume_ner.egg-info/top_level.txt
