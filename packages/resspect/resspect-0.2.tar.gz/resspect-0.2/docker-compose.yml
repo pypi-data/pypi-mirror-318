@@ -1,0 +1,29 @@
+services:
+  resspect:
+    tty: true
+    container_name: resspect
+    build: ./
+    ports:
+      - "8081:8081"
+    volumes:
+      - type: bind
+        source: ./
+        target: /resspect/resspect-src
+      - type: bind
+        source: ./secrets
+        target: /secrets
+        bind:
+          create_host_path: true
+    environment:
+      - DB_USER=admin
+      - DB_PASS=verysecurepassword
+      - DB_HOST=resspectdb
+      - DB_PORT=5432
+      - DB_NAME=resspectdb
+    networks:
+      - tom_desc_default
+
+networks:
+  tom_desc_default:
+    external: true
+
