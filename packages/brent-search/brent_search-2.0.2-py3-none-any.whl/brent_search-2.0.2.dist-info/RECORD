@@ -1,0 +1,9 @@
+brent_search/__init__.py,sha256=2-hUJVr7uH-nesPj3iT3tMep4eZ0ldG8H6vDsoeoIHI,498
+brent_search/_bracket.py,sha256=MnIbT8IQkMjZ_xOc8Vz4idxJyQQl_5gd3YlTTAZ0QAM,4282
+brent_search/_brent.py,sha256=0R90kCQ6NcVEFtUHOVg3mtWIEAJ59aL1kKgXQmRgI_g,6453
+brent_search/_optimize.py,sha256=MIckpkHZfmwiX0z1oJsOtATyDY1R-ZKBSfU1iXoePjM,1657
+brent_search/_testit.py,sha256=XLFClzSIkrtIIjzcpFx0T-W56A01fxudFF4_GdF4bnQ,293
+brent_search-2.0.2.dist-info/LICENSE.md,sha256=EuDVd4CN58eBkX7nuSLxxOETpj1CHjr3FQCUhYN_hI8,1105
+brent_search-2.0.2.dist-info/METADATA,sha256=H3Fl7SA1VBe9toXCUgrDIVpRjY_TePFWL9x4iXzLibI,1331
+brent_search-2.0.2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+brent_search-2.0.2.dist-info/RECORD,,
