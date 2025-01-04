@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="text-3xl font-bold mb-6">Wallet Details</h1>
+<p><strong>Address:</strong> {{ wallet.address }}</p>
+<p><strong>Balance:</strong> {{ wallet.balance }}</p>
+<p><strong>Public Key:</strong></p>
+<pre>{{ wallet.public_key }}</pre>
+<p><strong>Private Key:</strong></p>
+<pre>{{ wallet.private_key }}</pre>
+<a href="/wallets" class="bg-gray-500 px-4 py-2 rounded">Back</a>
+{% endblock %}
