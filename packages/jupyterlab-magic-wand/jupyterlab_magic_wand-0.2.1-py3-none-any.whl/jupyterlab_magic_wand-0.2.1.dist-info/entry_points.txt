@@ -1,0 +1,2 @@
+[jupyter_ai.agents]
+magic-button-agent = jupyterlab_magic_wand.agents.magic_agent:agent
