@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: yostlabs
+Version: 2025.1.3.4
+Summary: Python resources and API for 3Space sensors from Yost Labs Inc.
+Project-URL: Homepage, https://yostlabs.com/
+Author-email: "Yost Labs Inc." <techsupport@yostlabs.com>, Andy Riedlinger <techsupport@yostlabs.com>
+License-File: LICENSE
+Keywords: 3space,threespace,yost
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: numpy
+Requires-Dist: pyserial
+Description-Content-Type: text/markdown
+
+Work In Progress
