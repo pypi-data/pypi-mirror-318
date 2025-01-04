@@ -1,0 +1,7 @@
+README.md
+hello.py
+pyproject.toml
+adsk_amptest.egg-info/PKG-INFO
+adsk_amptest.egg-info/SOURCES.txt
+adsk_amptest.egg-info/dependency_links.txt
+adsk_amptest.egg-info/top_level.txt
