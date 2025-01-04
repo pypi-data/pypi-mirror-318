@@ -1,0 +1,20 @@
+{
+    "devs": [
+        {
+            "devType": "Manager",
+            "name": "Daniele"
+        },
+        {
+            "devType": "Dev",
+            "name": "Charles"
+        },
+        {
+            "devType": "Dev",
+            "name": "Selene"
+        },
+        {
+            "devType": "Dev",
+            "name": "Thibaud"
+        }
+    ]
+}
