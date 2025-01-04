@@ -1,0 +1,10 @@
+frameAPI/__init__.py,sha256=aYfzSYMZCrg1OQ-o0Wug2zubiwn4Q52BgEtrmm2gfdM,110
+frameAPI/core.py,sha256=0TLGMUf4CRll45S5808-ednN-H02xcTaeX_CdDN0p6c,4061
+frameAPI/example.py,sha256=3jtagpjwLcZTIraE74IputleiQw6Mm3usgyR0BRVhYc,722
+frameAPI/request.py,sha256=lW-XZSTQd8eabiIV0EbDjpNAJHSZuflsXS-AJfP6jW4,474
+frameAPI/response.py,sha256=F1nd28P5eDExSzlNlXOatu8SYgs1FW9fGTqR8Vy4C7Q,1304
+frame_API-0.1.2.dist-info/LICENSE,sha256=W7VqZbSnk44OVo19NOF7hQ_5WWm521SyVEj1W5QPhrc,1071
+frame_API-0.1.2.dist-info/METADATA,sha256=h5SlF1HmsuWz_C5gDIFnUX9fu1vWVToK4MGhkGdBcqc,564
+frame_API-0.1.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+frame_API-0.1.2.dist-info/top_level.txt,sha256=PredUc8E_sQ-lMumUSAGRFk5C2we2q_G3piGR_YvfTg,9
+frame_API-0.1.2.dist-info/RECORD,,
