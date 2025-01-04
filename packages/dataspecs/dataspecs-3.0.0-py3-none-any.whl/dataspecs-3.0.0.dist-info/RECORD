@@ -1,0 +1,13 @@
+dataspecs/__init__.py,sha256=hVQTbdCA-Abpi4t9oI_8YxZVE9H5opaU4Qr3Gw9v4GI,525
+dataspecs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dataspecs/core/__init__.py,sha256=MTyb1uoCATEZdVoJBsjcVOHiwVv3q0AH0BGn_vxqBzE,111
+dataspecs/core/api.py,sha256=efDRUexA0h5c517MlA5vJTi8t2EYD7mJ46Qk0wGTHXY,5759
+dataspecs/core/specs.py,sha256=zMvXEYRAHNY9gYGIH8QNKUC5_bNfWFWAe8ru4L8rPFo,7326
+dataspecs/core/typing.py,sha256=V4sMQdNAYDLNhsDtUQstO6xl4jw6ive-Hy8zsH5ATvU,3610
+dataspecs/extras/__init__.py,sha256=YJTTaofti1PG3Di9_tQ5gWAoLtwHVuelaJ512idyBqI,102
+dataspecs/extras/formatting.py,sha256=xhiLAmqlnbAAEFVnQGFyo43EhrMCUnQ7tSb5Rgj3kWY,4230
+dataspecs/extras/replacing.py,sha256=ZM-wvcsUPBWW7K2VQ_uBJiU9rAKh20lEK3FC0MjhtNI,4208
+dataspecs-3.0.0.dist-info/METADATA,sha256=a7u3oTgxyHMvFPd05eyh8EPgePhl3006T0wZ4KHhVZA,10757
+dataspecs-3.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dataspecs-3.0.0.dist-info/licenses/LICENSE,sha256=fC-w1_YSZdMxe4NTzibvVmsoYkzQ_DlJmQa5Xm6q2jw,1076
+dataspecs-3.0.0.dist-info/RECORD,,
