@@ -1,0 +1,13 @@
+codeassistant/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+codeassistant/click_args.py,sha256=i7vM0-ySuF7SdPio57pvZyoqXG9HwQBUCOP2drhVe2g,307
+codeassistant/click_kwargs.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+codeassistant/functions_cmds.py,sha256=dlc7tiiOe3dbfbtmKqnoszaJwrF_8cHz1dDPBGHEWng,731
+codeassistant/functions_core.py,sha256=m3otGnztlwSjDFuvtlAJgoLJZc8nuOjJj7l5bERBEQU,2221
+codeassistant/functions_git.py,sha256=8oIVNDTpTOFVeNPLiCHm2khSs4tBZI5cvyly1z4_rnI,3413
+codeassistant/main.py,sha256=8DHrJL3Y66HZlDV3QtOMVdxglNT_XSxhb2DXIdm3IHc,9055
+codeassistant/variables.py,sha256=Hb3IjS0PIQXM1IJY5KvbvFaQNqJfNvZMFNsdH-ZQkAE,2648
+CodeAss-0.17.1.dist-info/METADATA,sha256=RonMjWFOE4UOCP1Rui8d3EklSxNrF5Xqde0PwtHzhho,2307
+CodeAss-0.17.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+CodeAss-0.17.1.dist-info/entry_points.txt,sha256=FYrj59JJZXN4wfLfp3N9gH3blLxe00nBZQ5q8XrmZXo,46
+CodeAss-0.17.1.dist-info/top_level.txt,sha256=Yn9krlkcFqnMDIVpnbq2gfpuYTYE6H6BR5O2p9Siq24,14
+CodeAss-0.17.1.dist-info/RECORD,,
