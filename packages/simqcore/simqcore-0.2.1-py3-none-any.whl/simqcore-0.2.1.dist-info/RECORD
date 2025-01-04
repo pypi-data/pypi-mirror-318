@@ -1,0 +1,8 @@
+simqcore/__init__.py,sha256=ERmmOxz_9mUkIuccNbzUa5Y6gVLLVDdyc4cCxbCCUbY,20
+simqcore/asyncio.py,sha256=aCgPeyiNRG0ULHktH-nlMJ_eYpsYfwzktaIdKl_fHkQ,23997
+simqcore/base.py,sha256=0v6UNlMPL4O0NdFg0xG1sgTP249YXrHulDGvbKvvb40,23536
+simqcore-0.2.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+simqcore-0.2.1.dist-info/METADATA,sha256=v3h2nw-AHe0qj6Ql_J7rkdXFMY5_YA1sga3gavpT2Ck,1573
+simqcore-0.2.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+simqcore-0.2.1.dist-info/top_level.txt,sha256=n4-htxnDIA6Txr5n93QDQuR_hdnOYLHuK7sUSe4-d9U,9
+simqcore-0.2.1.dist-info/RECORD,,
