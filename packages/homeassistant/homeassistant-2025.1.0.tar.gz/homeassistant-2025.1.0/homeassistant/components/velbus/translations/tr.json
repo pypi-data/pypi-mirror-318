@@ -1,0 +1,74 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Cihaz zaten yap\u0131land\u0131r\u0131lm\u0131\u015f"
+        },
+        "error": {
+            "already_configured": "Cihaz zaten yap\u0131land\u0131r\u0131lm\u0131\u015f",
+            "cannot_connect": "Ba\u011flanma hatas\u0131"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "name": "Bu velbus ba\u011flant\u0131s\u0131n\u0131n ad\u0131",
+                    "port": "Ba\u011flant\u0131 dizesi"
+                },
+                "title": "Velbus ba\u011flant\u0131 t\u00fcr\u00fcn\u00fc tan\u0131mlay\u0131n"
+            }
+        }
+    },
+    "exceptions": {
+        "invalid_hvac_mode": {
+            "message": "\u0130klim modu {hvac_mode} desteklenmiyor."
+        }
+    },
+    "services": {
+        "clear_cache": {
+            "description": "Velbus \u00f6nbelle\u011fini temizler ve ard\u0131ndan yeni bir tarama ba\u015flat\u0131r.",
+            "fields": {
+                "address": {
+                    "name": "Adres"
+                },
+                "interface": {
+                    "description": "Komutun g\u00f6nderilece\u011fi velbus aray\u00fcz\u00fc, bu yap\u0131land\u0131rma s\u0131ras\u0131nda kullan\u0131lan de\u011ferle ayn\u0131 olacakt\u0131r.",
+                    "name": "Aray\u00fcz"
+                }
+            },
+            "name": "\u00d6nbelle\u011fi temizle"
+        },
+        "scan": {
+            "fields": {
+                "interface": {
+                    "description": "Komutun g\u00f6nderilece\u011fi velbus aray\u00fcz\u00fc, bu yap\u0131land\u0131rma s\u0131ras\u0131nda kullan\u0131lan de\u011ferle ayn\u0131 olacakt\u0131r.",
+                    "name": "Aray\u00fcz"
+                }
+            },
+            "name": "Tarama"
+        },
+        "set_memo_text": {
+            "fields": {
+                "address": {
+                    "name": "Adres"
+                },
+                "interface": {
+                    "description": "Komutun g\u00f6nderilece\u011fi velbus aray\u00fcz\u00fc, bu yap\u0131land\u0131rma s\u0131ras\u0131nda kullan\u0131lan de\u011ferle ayn\u0131 olacakt\u0131r.",
+                    "name": "Aray\u00fcz"
+                },
+                "memo_text": {
+                    "name": "Not metni"
+                }
+            },
+            "name": "Not metnini ayarla"
+        },
+        "sync_clock": {
+            "description": "Velbus mod\u00fcllerinin saatini Home Assistant saatiyle senkronize eder, bu VelbusLink'teki 'sync clock' ile ayn\u0131d\u0131r.",
+            "fields": {
+                "interface": {
+                    "description": "Komutun g\u00f6nderilece\u011fi velbus aray\u00fcz\u00fc, bu yap\u0131land\u0131rma s\u0131ras\u0131nda kullan\u0131lan de\u011ferle ayn\u0131 olacakt\u0131r.",
+                    "name": "Aray\u00fcz"
+                }
+            },
+            "name": "Saati senkronize et"
+        }
+    }
+}
