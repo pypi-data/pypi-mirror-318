@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: cyberrangecz-python-commons
+Version: 0.1.16
+Summary: Python Commons
+Home-page: UNKNOWN
+Author: cybersecurityhub.cz
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3
+Requires-Dist: cyberrangecz-topology-definition~=0.5.0
+
+# Сyberrangecz Python Commons
+The repository for common classes of Python-base cyberrangecz projects.
+
+## Common classes
+ * **cloud_commons** -- classes used by cyberrangecz cloud clients and [terraform-client](https://github.com/cyberrangecz/backend-terraform-client)
+
+
