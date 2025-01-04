@@ -1,0 +1,4 @@
+include README.md
+include version
+include plapi/string/similarity.py
+recursive-include plapi *
