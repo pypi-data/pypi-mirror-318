@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: django-synkroni
+Version: 0.6rc3
+Summary: Django/Javascript-synkronointirajapinta
+Author-email: Antti Hautaniemi <antti.hautaniemi@me.com>
+License: MIT
+Project-URL: Repository, https://github.com/an7oine/django-synkroni.git
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: django>=4.2
+Requires-Dist: django-media
+Requires-Dist: django-pistoke>=0.8
+Requires-Dist: jsonpatch
