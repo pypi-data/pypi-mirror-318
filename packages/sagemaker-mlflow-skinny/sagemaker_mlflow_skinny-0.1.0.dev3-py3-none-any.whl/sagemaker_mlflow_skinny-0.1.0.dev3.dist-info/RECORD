@@ -1,0 +1,16 @@
+sagemaker_mlflow_skinny/__init__.py,sha256=XzjtWfthVyiDtNNhjp6MzzIx5JQekhS9DZvITA4sW5M,656
+sagemaker_mlflow_skinny/auth.py,sha256=6g-vrJbb6U2LCkCmDPsg66akTsQIGoIEw63msgQy-jU,3636
+sagemaker_mlflow_skinny/auth_provider.py,sha256=-E2K39yHWI7ctBh7HF_DtFDfaZMsYrziUl06pQhWnWo,1486
+sagemaker_mlflow_skinny/exceptions.py,sha256=II_Oshi6kYPqtZ482d5DrguKof99WU1nlzkEGr3hF-4,614
+sagemaker_mlflow_skinny/mlflow_sagemaker_helpers.py,sha256=ugkr-PR9L-1ZYCJCP84n_ndN0iM6OgKPIm4OY_T0EEc,2601
+sagemaker_mlflow_skinny/mlflow_sagemaker_registry_store.py,sha256=6fmW5TWIfFA2p4cqySY8BfnoIYHzIclKjRw8R1_XozY,1838
+sagemaker_mlflow_skinny/mlflow_sagemaker_request_header_provider.py,sha256=j0fMoHrvD2S-EOBVFPTJ3dSjOy4btU3b-Sbr8Kgk8ZE,1184
+sagemaker_mlflow_skinny/mlflow_sagemaker_store.py,sha256=VXjXF652Mhvxys7sTkcFyJEKsxUSt2bDQ9L2A9jbPmY,2428
+sagemaker_mlflow_skinny/presigned_url.py,sha256=JAXsoykqWKGXZnPn3RMInWOBH99jQfwiHfNP12FN6yA,1615
+sagemaker_mlflow_skinny-0.1.0.dev3.dist-info/LICENSE,sha256=DVQuDIgE45qn836wDaWnYhSdxoLXgpRRKH4RuTjpRZQ,10174
+sagemaker_mlflow_skinny-0.1.0.dev3.dist-info/METADATA,sha256=e2fWJVQTdx5DKDiyFvgPYuhny87cKTykI2VJb9zYEso,3497
+sagemaker_mlflow_skinny-0.1.0.dev3.dist-info/NOTICE,sha256=aZoHfsDLcs4K7E2wI7FJbGa_3JqRD826EyhtZBalytY,84
+sagemaker_mlflow_skinny-0.1.0.dev3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+sagemaker_mlflow_skinny-0.1.0.dev3.dist-info/entry_points.txt,sha256=BFDGNe1i12tibIIQ_wFgMO8yMT2FS1VgLmLE4DpxgaU,451
+sagemaker_mlflow_skinny-0.1.0.dev3.dist-info/top_level.txt,sha256=Y9_dyWDpOTCJysuOMEVjuhRf4iHqCPHKauu_oRvzKRM,24
+sagemaker_mlflow_skinny-0.1.0.dev3.dist-info/RECORD,,
