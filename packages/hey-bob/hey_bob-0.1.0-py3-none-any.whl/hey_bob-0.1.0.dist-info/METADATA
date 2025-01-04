@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: hey-bob
+Version: 0.1.0
+Summary: Get extra inspiration by invoking random Bob Dylan lyrics.
+Author-email: rafasacaan <rafasacaan@gmail.com>
+Requires-Python: >=3.8
+Requires-Dist: pandas>=2.0.3
+Description-Content-Type: text/markdown
+
+# hey-bob
+
+A python package that serves as the perfect companion when you need to find extra inspiration, delivering random Bob Dylan song lyrics whenever you need them right at your CLI.
+
+Install it by typing:
+```bash
+pip install hey-bob
+```
+
+Then, any time you need Bob´s wise words just type in your terminal
+```bash
+hey-bob
+```

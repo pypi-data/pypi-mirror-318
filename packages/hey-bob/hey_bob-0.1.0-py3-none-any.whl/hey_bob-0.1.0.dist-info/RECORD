@@ -1,0 +1,10 @@
+hey_bob/__init__.py,sha256=0SMEj8xuem5O5gvTCLd9ZX87J8AipyEg75oKF60FpAY,127
+hey_bob/__main__.py,sha256=ht5NPYrYLT7jF8d5sxtASkXY7Rv6cIbhwBdqiXxpI-w,933
+hey_bob/services.py,sha256=koZl-JzIizTcGvsCevihZy_up0XmW67qk1EfQV-qKNk,1398
+hey_bob/test.ipynb,sha256=s0zTpO8xfuiG6zcF-x9eZdskntxakZILnz5HE5NCPqI,11554
+hey_bob/data/lyrics.csv,sha256=br_62JvWabiBqUSO95KhAmuAcefqewIfMiBYgDevKyk,581928
+hey_bob/data/lyrics.pickle,sha256=nYrrUWuk3MdBStBNj3Ib0R6pX_2Xi7iCiPBtjg56PL4,578670
+hey_bob-0.1.0.dist-info/METADATA,sha256=QUksB0DBoPycrpIZF9UGIb51P8bQIbP2MnuJe3gpnQU,592
+hey_bob-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hey_bob-0.1.0.dist-info/entry_points.txt,sha256=oqrg5mEwXItjCakDXI7DTEivm3wn5JlSR3c7qhn23WE,41
+hey_bob-0.1.0.dist-info/RECORD,,

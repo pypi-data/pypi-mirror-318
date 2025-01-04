@@ -1,0 +1,2 @@
+[console_scripts]
+hey-bob = hey_bob:main
