@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+cipherbyte.egg-info/PKG-INFO
+cipherbyte.egg-info/SOURCES.txt
+cipherbyte.egg-info/dependency_links.txt
+cipherbyte.egg-info/top_level.txt
+cipherbyte_project/__init__.py
+cipherbyte_project/cipherbyte.py
