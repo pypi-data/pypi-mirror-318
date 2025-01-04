@@ -1,0 +1,53 @@
+{% extends "!layout.html" -%}
+{# Refer to https://github.com/readthedocs/sphinx_rtd_theme/blob/master/sphinx_rtd_theme/layout.html #}
+
+{% block htmltitle -%}
+<title>{{ title|striptags|e }}{{ titlesuffix }}</title>
+{% endblock -%}
+
+{% block extrahead -%}
+<meta name="doc_version" content="{{ version }}" />
+<meta name="doc_is_latest" content="{{ version_is_latest }}" />
+<meta name="doc_pagename" content="{{ pagename }}" />
+{% endblock -%}
+
+{% block linktags -%}
+  <meta name="theme-color" content="#3d8fcc" />
+  {{ super() }}
+{% endblock -%}
+
+{%- block document %}
+<div itemprop="articleBody">
+  {% if version_is_latest or show_article_status %}
+  <div class="admonition-grid">
+    {% if version_is_latest %}
+    <div class="admonition attention latest-notice">
+      <p class="first admonition-title">Attention: Here be dragons</p>
+      <p>
+        This is the <code class="docutils literal notranslate"><span class="pre">latest</span></code>
+        (unstable) version of this documentation, which may document features
+        not available in or compatible with released stable versions.
+      </p>
+      <p class="last latest-notice-link">
+        Checking the stable version of the documentation...
+      </p>
+    </div>
+    {% endif %}
+
+    {% if show_article_status and not version_is_latest and meta and meta.get('article_outdated') == 'True' %}
+    <div class="admonition attention article-status">
+      <p class="first admonition-title">Work in progress</p>
+      <p>
+        The content of this page was not yet updated for 
+        <code class="docutils literal notranslate"> {{ version }}</code>
+        and may be <strong>outdated</strong>. If you know how to improve this page or you can confirm
+        that it's up to date, feel free to <a href="{{ docs_edit_guidelines }}">open a pull request</a>.
+      </p>
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% block body %}{% endblock %}
+
+{%- endblock %}
