@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: BingoRun
+Version: 0.1
+Summary: A toolbox for Bingo.
+Home-page: https://github.com/EndlessBingo/BingoRun
+Author: gaomany
+Author-email: 18580766357@163.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+
