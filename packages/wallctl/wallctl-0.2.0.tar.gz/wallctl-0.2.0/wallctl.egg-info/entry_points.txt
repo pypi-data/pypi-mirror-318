@@ -1,0 +1,2 @@
+[console_scripts]
+wallctl = wallctl.__main__:main
