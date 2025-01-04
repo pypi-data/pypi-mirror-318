@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+PausingIndex/PausingIndex.py
+PausingIndex/__init__.py
+PausingIndex/__main__.py
+PausingIndex/_version.py
+PausingIndex.egg-info/PKG-INFO
+PausingIndex.egg-info/SOURCES.txt
+PausingIndex.egg-info/dependency_links.txt
+PausingIndex.egg-info/entry_points.txt
+PausingIndex.egg-info/not-zip-safe
+PausingIndex.egg-info/requires.txt
+PausingIndex.egg-info/top_level.txt
