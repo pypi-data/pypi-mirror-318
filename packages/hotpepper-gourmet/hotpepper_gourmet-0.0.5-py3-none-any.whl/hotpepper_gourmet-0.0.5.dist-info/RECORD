@@ -1,0 +1,11 @@
+pygourmet/__init__.py,sha256=4Dnf5YBHZZzz0WgH2jAQIx5t5N9M6g8emcmClkeN5U8,166
+pygourmet/client.py,sha256=NrwebiDXr1bBxTepqrQBWIDusTgGzYCbegkbQ8Orarc,3068
+pygourmet/errors.py,sha256=GyYTam-iucghXNaTo6FgA_J0lqM4aaSddHGQaYPKdYI,188
+pygourmet/option.py,sha256=6pWBIMqb_qVCsfca-Zea4_guSn4Fldrf8Gtc9GzbStM,3363
+pygourmet/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pygourmet/shop.py,sha256=DEPaJGxsdO-qmIn13RVMKS_FZHIHQd9vVzH3-Fq5NzQ,5588
+hotpepper_gourmet-0.0.5.dist-info/LICENSE.txt,sha256=-3qJhhsO5wQfiuKZ6lHo_ySXijwIJFUJ4zt33Ne5HPk,1090
+hotpepper_gourmet-0.0.5.dist-info/METADATA,sha256=_rGLft3rpwQcXaeV4NsqoDihLV5vgxTR66nRSrJ4HJQ,3115
+hotpepper_gourmet-0.0.5.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+hotpepper_gourmet-0.0.5.dist-info/top_level.txt,sha256=kWZFryE30gUW-EnXXDkWzDx9W8fHKwIKAPDOi2sZaBk,10
+hotpepper_gourmet-0.0.5.dist-info/RECORD,,
