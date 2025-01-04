@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: bio-tfcomb
+Version: 1.0
+Summary: TFcomb is a python library to identify reprogramming TFs and TF combinations using scRNA-seq and scATAC-seq data.
+Home-page: https://github.com/Chen-Li-17/TFcomb
+Author: Chen Li
+Author-email: chen-li21@qq.com
+License: MIT License
+Keywords: pip,tfcomb
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >3.8.0
+License-File: LICENSE
+Requires-Dist: adjustText>=1.3.0
+Requires-Dist: auto_mix_prep>=0.2.0
+Requires-Dist: celloracle==0.12.0
+Requires-Dist: dgl>=1.1.1
+Requires-Dist: gseapy==1.1.4
+Requires-Dist: matplotlib>=3.6.3
+Requires-Dist: networkx>=3.2.1
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: pandas>=1.5.3
+Requires-Dist: scanpy>=1.10.3
+Requires-Dist: scikit_learn>=1.2.2
+Requires-Dist: scipy>=1.13.1
+Requires-Dist: seaborn>=0.13.2
+Requires-Dist: torch>=1.12.1
+Requires-Dist: tqdm>=4.67.1
+Requires-Dist: umap_learn>=0.5.7
+
+TFcomb is a python library to identify reprogramming TFs and TF combinations using scRNA-seq and scATAC-seq data.
