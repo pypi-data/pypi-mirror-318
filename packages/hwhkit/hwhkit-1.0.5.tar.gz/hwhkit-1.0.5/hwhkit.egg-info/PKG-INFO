@@ -1,0 +1,141 @@
+Metadata-Version: 2.1
+Name: hwhkit
+Version: 1.0.5
+Summary: Packaging tools for own use
+Home-page: 
+Author: louishwh
+Author-email: louishwh@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: paho-mqtt>=2.1.0
+Requires-Dist: loguru==0.6.0
+Requires-Dist: openai~=1.58.1
+Requires-Dist: anthropic~=0.42.0
+Requires-Dist: pyyaml~=6.0.2
+
+
+# hwhkit
+
+## Main function
++ Connection
+  + mqtt
++ llm
+  
+### Connection
+
+#### Mqtt
+
+``` python
+from hwhkit import MQTTAsyncClient, mqtt_subscribe
+import asyncio
+
+# Config MQTT Client
+client = MQTTAsyncClient(broker="broker.hivemq.com", port=1883, client_id="my_client")
+client.start()
+
+
+@mqtt_subscribe("topic/test1")
+async def handle_message_1(message: str):
+    print(f"Received message from topic 1: {message}")
+
+@mqtt_subscribe("topic/test2")
+async def handle_message_2(message: str):
+    print(f"Received message from topic 2: {message}")
+
+async def send_messages():
+    while True:
+        await asyncio.sleep(2)
+        client.publish("topic/test1", "Hello from topic 1!")
+        client.publish("topic/test2", "Hello from topic 2!")
+
+async def main():
+    await asyncio.gather(
+        send_messages(),
+        asyncio.sleep(3600) 
+    )
+
+if __name__ == '__main__':
+    asyncio.run(main())
+
+```
+
+### LLM
+
+#### Three steps to use models
+
+##### Step1, llm_config.yaml
+
+matter that needs attention
+1. A_custom_model_name used for models.get_model_instance()
+2. A_custom_model_name.name should specify the name of the model supported by the current company
+
+```yaml
+models:
+  openai:
+    A_custom_model_name:
+      name: "gpt-4o"
+      short_name: "OIG4"
+      company: "openai"
+      max_input_token: 8100
+      max_output_token: 2048
+      top_p: 0.5
+      top_k: 1
+      temperature: 0.5
+      input_token_fee_pm: 30.0
+      output_token_fee_pm: 60.0
+      train_token_fee_pm: 0.0
+      keys:
+        - name: "openai_key1"
+        - name: "openai_key2"
+
+  siliconflow:
+    qw-72b-p:
+      name: "Qwen/QVQ-72B-Preview"
+      short_name: "QW-72B-P"
+      company: "siliconflow"
+      max_input_token: 8100
+      max_output_token: 2048
+      top_p: 0.5
+      top_k: 1
+      temperature: 0.5
+      input_token_fee_pm: 30.0
+      output_token_fee_pm: 60.0
+      train_token_fee_pm: 0.0
+      keys:
+        - name: "siliconflow_1"
+
+```
+
+##### Step2, llm_keys.yaml
+
+1. The keys name of the model in llm_config.yaml corresponds to llm_keys.yaml one by one
+
+```yaml
+keys:
+  openai_key1: "xx"
+  openai_key2: "xx"
+  anthropic_key1: "your_anthropic_api_key_1"
+  anthropic_key2: "your_anthropic_api_key_2"
+```
+
+##### Step3, load models
+```python
+from hwhkit.llm.config import load_models_from_yaml
+
+
+async def main():
+    models = load_models_from_yaml(config_file="llm_config.yaml", keys_file="llm_keys.yaml")
+    print(models.list_models())
+
+    resp = await models.get_model_instance("gpt-4o").chat("who r u?")
+    print(resp)
+
+
+if __name__ == '__main__':
+    import asyncio
+    asyncio.run(main())
+```
