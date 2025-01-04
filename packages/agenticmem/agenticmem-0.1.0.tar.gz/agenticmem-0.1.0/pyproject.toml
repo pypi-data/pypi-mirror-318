@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "agenticmem"
+version = "0.1.0"
+description = "A Python client for the AgenticMem API"
+authors = ["AgenticMem Team"]
+readme = "README.md"
+packages = [{include = "agenticmem"}]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+requests = "^2.25.0"
+pydantic = "^2.0.0"
+python-dateutil = "^2.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api" 
