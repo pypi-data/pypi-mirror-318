@@ -1,0 +1,48 @@
+version: '3'
+
+tasks:
+
+  init:
+    desc: Init local dev environment.
+    cmds:
+      - cmd: uv tool install "{{.ITEM}}"
+        for:
+          - bump-my-version
+          - mypy
+          - ruff
+          - towncrier
+      - uv sync
+
+  build:
+    desc: Build package.
+    cmds:
+      - uv lock
+      - rm -rf dist
+      - uv build
+
+  changelog:*:
+    desc: Create news item {added|breaking|changed|deprecated|docs|fixed|misc|removed|security}.
+    vars:
+      ISSUE: {sh: git rev-parse --abbrev-ref HEAD | cut -d- -f1}
+      SECTION: '{{index .MATCH 0}}'
+    cmds:
+      - uvx towncrier create -c "{{.CLI_ARGS}}" "{{.ISSUE}}.{{.SECTION}}.md"
+
+  release:changelog:
+    desc: Collect changelog entries.
+    vars:
+      VERSION: {sh: uvx bump-my-version show current_version 2>/dev/null}
+    cmds:
+      - towncrier build --yes --version "{{.VERSION}}"
+
+  release:version:
+    desc: Bump release version.
+    cmds:
+      - uvx bump-my-version bump -- {{.CLI_ARGS}}
+      - uv lock
+
+  release:publish:
+    desc: Publish package on PyPI.
+    cmds:
+      - task: build
+      - uv publish
