@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: bisos.graphviz
+Version: 0.11
+Summary: bisos.graphviz: Seeded-PyCS Graphviz
+Home-page: http://www.by-star.net/PLPC/180047
+Download-URL: http://www.by-star.net/PLPC/180047
+Author: Mohsen Banan
+Author-email: libre@mohsen.1.banan.byname.net
+Maintainer: Mohsen Banan
+Maintainer-email: libre@mohsen.1.banan.byname.net
+License: AGPL
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: blee
+Requires-Dist: blee.icmPlayer
+Requires-Dist: bisos
+Requires-Dist: bisos.b
+Requires-Dist: bisos.common
+
+Overview
+========
+
+bisos.graphviz (Seeded-PyCS Graphviz) is Python graphviz wrapped into
+BISOS Command-Services and Seed Machinaries.
+
+bisos.graphviz is a python package that uses the PyCS-Framework
+(`bisos.PyCS <https://github.com/bisos-pip/pycs>`__) for processing
+graphviz specifications. It is a layer on top of Python Graphviz —
+https://github.com/xflr6/graphviz — which provides a python interface to
+the DOT language of the Graphviz graph drawing software. It is a
+BISOS-Capability and a Standalone-BISOS-Package.
+
+Support
+=======
+
+| For support, criticism, comments and questions; please contact the
+  author/maintainer
+| `Mohsen Banan <http://mohsen.1.banan.byname.net>`__ at:
+  http://mohsen.1.banan.byname.net/contact
