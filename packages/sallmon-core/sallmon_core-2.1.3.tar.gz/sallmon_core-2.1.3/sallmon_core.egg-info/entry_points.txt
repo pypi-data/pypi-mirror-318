@@ -1,0 +1,5 @@
+[console_scripts]
+sallmon-cli = sallmon.cli.main:cli
+sallmon-flask = sallmon.frontend.server:start_node
+sallmon-server = sallmon.sallmon_core.server:start_server
+sallmon-start = sallmon.frontend.start:main
