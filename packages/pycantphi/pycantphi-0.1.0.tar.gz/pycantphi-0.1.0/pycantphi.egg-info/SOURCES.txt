@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+pycantphi/__init__.py
+pycantphi.egg-info/PKG-INFO
+pycantphi.egg-info/SOURCES.txt
+pycantphi.egg-info/dependency_links.txt
+pycantphi.egg-info/requires.txt
+pycantphi.egg-info/top_level.txt
