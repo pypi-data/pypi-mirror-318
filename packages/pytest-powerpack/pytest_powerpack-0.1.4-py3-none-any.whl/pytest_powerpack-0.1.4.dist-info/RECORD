@@ -1,0 +1,7 @@
+pytest_powerpack/__init__.py,sha256=Ai-fH0n4v36QxvJCgmb12AafXACnbmfWMIjPRltio4c,1001
+pytest_powerpack/comparison.py,sha256=bw8Lhycixf_s9kShDz7cKWb7ysnfnxqz8VDyya9TqVA,4118
+pytest_powerpack/utils.py,sha256=0T5Y3X2Mbh5c5CITkcbNg1JhvIGEGuydXyJJbCOscYg,384
+pytest_powerpack-0.1.4.dist-info/LICENSE,sha256=dYOnVlGLQifVo5n-SitSN9BY_2v1xP504bd4nAMEgqw,1061
+pytest_powerpack-0.1.4.dist-info/METADATA,sha256=i1OuiO8UrKPt6qp7PWIWqZ3z-1IR1MUk03jkO9RRmU4,639
+pytest_powerpack-0.1.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pytest_powerpack-0.1.4.dist-info/RECORD,,
