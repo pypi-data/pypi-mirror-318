@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+hospice.egg-info/PKG-INFO
+hospice.egg-info/SOURCES.txt
+hospice.egg-info/dependency_links.txt
+hospice.egg-info/top_level.txt
