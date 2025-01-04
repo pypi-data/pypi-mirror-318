@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}🚀 Metrics Dashboard{% endblock %}
+
+{% block content %}
+<div class="container mx-auto p-6">
+    <h1 class="text-5xl font-bold mb-6 text-center text-yellow-400">
+        📊 Meme-tastic Metrics Dashboard 📊
+    </h1>
+    <p class="text-center text-gray-600 mb-8">
+        Track your node's performance while enjoying the <span class="font-bold text-green-500">meme vibes</span>!
+    </p>
+
+    <!-- Buttons for Metrics -->
+    <div class="flex flex-col items-center gap-4">
+        <button
+            id="fetchChainBtn"
+            class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-bold py-3 px-6 rounded-full hover:shadow-lg"
+        >
+            🔗 View Blockchain
+        </button>
+        <button
+            id="syncStatusBtn"
+            class="bg-gradient-to-r from-green-400 to-blue-500 text-white font-bold py-3 px-6 rounded-full hover:shadow-lg"
+        >
+            🔄 Check Sync Status
+        </button>
+        <button
+            id="nodeStatsBtn"
+            class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white font-bold py-3 px-6 rounded-full hover:shadow-lg"
+        >
+            📈 Get Node Stats
+        </button>
+    </div>
+
+    <!-- Output Section -->
+    <div id="output" class="mt-8 bg-gray-800 p-6 rounded shadow-md text-center text-white">
+        <p class="text-gray-400">📡 Output will be displayed here... </p>
+    </div>
+
+    <!-- Meme Section -->
+    <div class="mt-8 text-center">
+        <img src="{{ url_for('static', filename='assets/metrics-meme.gif') }}" alt="Metrics Meme" class="mx-auto w-64 h-64">
+        <p class="text-gray-500 mt-4">"Because stats are better with memes!"</p>
+    </div>
+</div>
+
+<script>
+    async function fetchMetrics(endpoint, buttonId) {
+        const button = document.getElementById(buttonId);
+        const outputDiv = document.getElementById("output");
+        outputDiv.textContent = "Loading...";
+
+        try {
+            const response = await fetch(endpoint);
+            const data = await response.json();
+
+            if (response.ok) {
+                outputDiv.textContent = JSON.stringify(data, null, 2);
+                outputDiv.className = "mt-8 bg-gray-800 p-6 rounded shadow-md text-green-400";
+            } else {
+                outputDiv.textContent = data.error || "Error fetching data.";
+                outputDiv.className = "mt-8 bg-gray-800 p-6 rounded shadow-md text-red-400";
+            }
+        } catch (error) {
+            outputDiv.textContent = `Error: ${error.message}`;
+            outputDiv.className = "mt-8 bg-gray-800 p-6 rounded shadow-md text-red-400";
+        }
+    }
+
+    document.getElementById("fetchChainBtn").addEventListener("click", () => fetchMetrics("/metrics/blockchain", "fetchChainBtn"));
+    document.getElementById("syncStatusBtn").addEventListener("click", () => fetchMetrics("/metrics/sync-status", "syncStatusBtn"));
+    document.getElementById("nodeStatsBtn").addEventListener("click", () => fetchMetrics("/metrics/node-stats", "nodeStatsBtn"));
+</script>
+{% endblock %}

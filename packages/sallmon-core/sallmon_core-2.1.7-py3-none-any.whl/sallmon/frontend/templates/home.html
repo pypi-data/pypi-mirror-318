@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="text-2xl font-bold mb-4">Sallmon Node Control</h2>
+<p>Manage your node easily from this dashboard.</p>
+<div class="mt-4">
+    <button id="start-node" class="bg-green-500 text-white px-4 py-2 rounded">Start Node</button>
+    <button id="stop-node" class="bg-red-500 text-white px-4 py-2 rounded">Stop Node</button>
+</div>
+<script>
+    document.getElementById('start-node').addEventListener('click', () => {
+        fetch('/node/start', { method: 'POST' }).then(response => response.json()).then(data => alert(data.message || data.error));
+    });
+    document.getElementById('stop-node').addEventListener('click', () => {
+        fetch('/node/stop', { method: 'POST' }).then(response => response.json()).then(data => alert(data.message || data.error));
+    });
+</script>
+{% endblock %}
