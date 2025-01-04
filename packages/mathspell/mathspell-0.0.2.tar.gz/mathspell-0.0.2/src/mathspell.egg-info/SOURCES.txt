@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/mathspell/__init__.py
+src/mathspell/main.py
+src/mathspell.egg-info/PKG-INFO
+src/mathspell.egg-info/SOURCES.txt
+src/mathspell.egg-info/dependency_links.txt
+src/mathspell.egg-info/requires.txt
+src/mathspell.egg-info/top_level.txt
