@@ -1,0 +1,10 @@
+dataset_bias_metrics/__init__.py,sha256=zRWbgV4jMFwMSeVam1qd6faTgWiQckDoLDiVSOdg4bI,264
+dataset_bias_metrics/local_stereotypical.py,sha256=_CIEW3U_2Yc4Xr6BvnrjXf-D1-zcy_TUYDbc-dTFH8w,4654
+dataset_bias_metrics/representational.py,sha256=xOOOuSIR9sWrwmX6OBQaTdF1j5_3OzDkHmsknBz2J2c,8847
+dataset_bias_metrics/stereotypical.py,sha256=07mU--79KQCa1x8_jCttnzf2E2bSxIBQwjMFhiqVXfM,6176
+dataset_bias_metrics/visualization.py,sha256=n2oxuAegoAwr18UXUaEU26ecUb-T_4E5Dq16C15-YKI,4783
+dataset_bias_metrics-0.1.1.dist-info/LICENSE.txt,sha256=8eC4LCHzF0rZbwsBiZ64HU4cDh6Y5agnvU0rbUhPEJY,1064
+dataset_bias_metrics-0.1.1.dist-info/METADATA,sha256=CtWBVgG9SmeKOKzmYefX24yRDmzZFFfcOJ2HZLNE_Jk,794
+dataset_bias_metrics-0.1.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+dataset_bias_metrics-0.1.1.dist-info/top_level.txt,sha256=G1KdkQF82wmHFKIoIsoEmGL374fsMBIvcfwetacWHhc,21
+dataset_bias_metrics-0.1.1.dist-info/RECORD,,
