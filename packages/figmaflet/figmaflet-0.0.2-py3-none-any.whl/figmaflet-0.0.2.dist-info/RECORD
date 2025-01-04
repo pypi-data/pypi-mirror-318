@@ -1,0 +1,16 @@
+figmaflet/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+figmaflet/cli.py,sha256=f1Yn94VB_sqhy1Nff25A061-3w3JIQRcNq5LyvX93LM,953
+figmaflet/generateUI.py,sha256=zz0pwqBJWwHsnnzk6Njqvj4PcxdFYs9_ii39brqVmts,956
+figmaflet/template.py,sha256=-HN0dYIC5S2tSzOIaRkeXabRTRpishdswOnTl41J9Pk,292
+figmaflet/figma/endpoints.py,sha256=GLN9dpDZXPrCijJ5_2eNQmQx3WPng4GZs52dlVx6lDY,1245
+figmaflet/figma/frame.py,sha256=INAG0eDI3j7HoAYqjxNTTW1smn61ftjBaVe9UqqUzUQ,5476
+figmaflet/figma/node.py,sha256=B-mF0zp8H3dgBIIQzjuDLh5yToU9_Jr8yQXw6gzJWl4,90327
+figmaflet/figma/vector_elements.py,sha256=qEABp0siJkz88Uc8QkyCRxrBN9wvaqckvQJywPHaJag,4125
+figmaflet/gui/__main__.py,sha256=g4l4IjmacJ-nvl1c0YN74REJcAg6tsiX4C-kAzLBYhs,2758
+generated_ui/main.py,sha256=q4QdAOpWqDPHySqL_Y_b0BODlL6TJXJVDEt42LN3jjg,5566
+figmaflet-0.0.2.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+figmaflet-0.0.2.dist-info/METADATA,sha256=oWk4U5BFe0RSWLaTOYYf1iRABBSjK0_3kDbVgmksrJM,3613
+figmaflet-0.0.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+figmaflet-0.0.2.dist-info/entry_points.txt,sha256=R2gopOtWZ0jf1W2ro3TevzV03bU2Hr1YDxOntht0YMA,49
+figmaflet-0.0.2.dist-info/top_level.txt,sha256=bSMuDrcPWlQm7PBLPFd7VDqZuHAQs9PMZUl81hH4jEQ,23
+figmaflet-0.0.2.dist-info/RECORD,,
