@@ -1,0 +1,8 @@
+click
+fastapi
+uvicorn
+websockets
+cryptography
+flask
+Pillow
+httpx
