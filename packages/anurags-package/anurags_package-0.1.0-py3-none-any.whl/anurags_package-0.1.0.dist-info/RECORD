@@ -1,0 +1,8 @@
+game_package/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+game_package/main.py,sha256=zV3fwVB7VJfAsm9SmpPhVAqGSp8noFqXj9j1ReZzrYM,266
+game_package/other.modules.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+anurags_package-0.1.0.dist-info/METADATA,sha256=ol1iFnVHHLBkhm7mNR7Z-iRb1FUYcJ4TQ3JOUXwh1X8,497
+anurags_package-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+anurags_package-0.1.0.dist-info/entry_points.txt,sha256=GMnLEupctCemhuVyzFk7oAxgKzoKnNjgQQn7cfB-S4A,59
+anurags_package-0.1.0.dist-info/top_level.txt,sha256=jkvHDUsHiczJwyCscR_WBGBGCF1UGhyOhfdENSETnqg,13
+anurags_package-0.1.0.dist-info/RECORD,,
