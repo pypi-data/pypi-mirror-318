@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/steam_vdf/__init__.py
+src/steam_vdf/cli.py
+src/steam_vdf/storage.py
+src/steam_vdf/users.py
+src/steam_vdf/utils.py
+src/steam_vdf.egg-info/PKG-INFO
+src/steam_vdf.egg-info/SOURCES.txt
+src/steam_vdf.egg-info/dependency_links.txt
+src/steam_vdf.egg-info/entry_points.txt
+src/steam_vdf.egg-info/requires.txt
+src/steam_vdf.egg-info/top_level.txt

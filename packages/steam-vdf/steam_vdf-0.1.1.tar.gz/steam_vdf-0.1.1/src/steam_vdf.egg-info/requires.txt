@@ -1,0 +1,6 @@
+vdf
+psutil
+humanize
+
+[docs]
+sphinx==7.1.2
