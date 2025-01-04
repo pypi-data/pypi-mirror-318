@@ -1,0 +1,15 @@
+docitup/__init__.py,sha256=IRQtERzFeLyMQBxTGOAznTZL4SNnvo3Au_CP2IEEsQs,587
+docitup/base_loaders.py,sha256=2hKruSCE4GG6Cio8_OOYDC7UXsknPw3G2yEuSB1cngY,1269
+docitup/docling_loaders.py,sha256=7Je0-xxJzTeL-sv0QEG5AdyxwihSTEuTWpf1qhdq5Co,2103
+docitup/fitz_loaders.py,sha256=9dKmLCKmJqrHA_cBwQJtE6QlkN91s71_BhVcMWwcVFs,2085
+docitup/llamaparse_loaders.py,sha256=Jn138IDwnXCr13pPqEtj2GljYjZUZQ-C1M9--BGSnlo,2217
+docitup/markitdown_loaders.py,sha256=KjGSRa4UeCTsImqAtbPLewJOIKNkut9fbc68QiexL4s,2052
+docitup/pymupdf4llm_loaders.py,sha256=rnKg0W9k853-sDmV8T2kHPgIMF-aRwdrnbDJq9QzaO0,1997
+docitup/pypdf2_loaders.py,sha256=MoHRKZi7-s0l9LHYu-V71IIrX0XxApNd5g4dS3PNKzM,2211
+docitup/pypdf_loaders.py,sha256=joZTLHtitZHdeT5mmE4JQUr6gbOijW-wK_IR9gdgjkA,2209
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+docitup-0.1.3.dist-info/LICENSE,sha256=IYdWIkCLyyB4Wvm_7_lvbt55OZNaKOSmFb4ZJ8wPug8,1087
+docitup-0.1.3.dist-info/METADATA,sha256=LB3azwspvR5r7mlMMrLEihA8TXngKd5JkqkVmz0NxXM,4694
+docitup-0.1.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+docitup-0.1.3.dist-info/top_level.txt,sha256=NHfGMh2guXR9jHqAYdl49vGU8AILUVjW54k3gSrsQB4,14
+docitup-0.1.3.dist-info/RECORD,,
