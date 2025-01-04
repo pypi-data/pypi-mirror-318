@@ -1,0 +1,10 @@
+ai_character/__init__.py,sha256=3x7x6C-7LAZox6IPhCoYzTBsMhHIDGW4fjmWB8zEYrE,212
+ai_character/ai_character.py,sha256=mE05PfBosbESAmiy-AJzYTfHJLCnXfrBEgd__b0IuBU,19914
+ai_character/ai_character_agent.py,sha256=AEPn19bu7OOJN562jMkUBRzrVpyVgIwsrlnEs19a-3I,2577
+ai_character/audio_processor.py,sha256=-hoDLya8YyjiSLa-10AUT7qP5uVab_CvSWo1mrhCgaQ,5560
+ai_character/model_handlers.py,sha256=EHlZSd6Go_6YrjRYxTIrE5yuj2PKxhtAc61SU9xQ2Pk,2198
+ai_character-0.1.3.dist-info/LICENSE,sha256=zehFFKpHGVXopex1EvdHvvdsyu6xgFueZLl-4KVsO48,1066
+ai_character-0.1.3.dist-info/METADATA,sha256=Gme3D0032-rNNDQQ5uYefNUMA5yKXV3XVPdqRexpnsw,14592
+ai_character-0.1.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+ai_character-0.1.3.dist-info/top_level.txt,sha256=7j73Bx3vwLW47_uxx8WGNBKr1MGi2MSzkP9bylIgIFI,13
+ai_character-0.1.3.dist-info/RECORD,,
