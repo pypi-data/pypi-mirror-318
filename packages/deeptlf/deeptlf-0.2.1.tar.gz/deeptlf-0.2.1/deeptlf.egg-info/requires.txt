@@ -1,0 +1,9 @@
+numpy
+torch
+scikit-learn
+xgboost
+tqdm
+
+[test]
+pytest>=7.0
+pytest-cov>=4.0
