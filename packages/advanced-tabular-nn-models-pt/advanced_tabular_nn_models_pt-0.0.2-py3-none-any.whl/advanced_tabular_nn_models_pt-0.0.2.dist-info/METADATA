@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: advanced_tabular_nn_models_pt
+Version: 0.0.2
+Summary: Deep learning for tabular data
+Author-email: Ali Haidar Ahmad <ali.h.ahmad001@gmail.com>
+Project-URL: Homepage, https://github.com/AliHaiderAhmad001/advanced_tabular_nn_models_pt/tree/main
+Project-URL: Issues, https://github.com/AliHaiderAhmad001/advanced_tabular_nn_models_pt/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# deep-tabular
+Deep learning for tabular data
