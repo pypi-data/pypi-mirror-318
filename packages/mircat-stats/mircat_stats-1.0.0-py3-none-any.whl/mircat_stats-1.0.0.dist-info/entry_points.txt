@@ -1,0 +1,3 @@
+[console_scripts]
+log-test = mircat_stats.configs.logging:log_test
+mircat-stats = mircat_stats:mircat_stats
