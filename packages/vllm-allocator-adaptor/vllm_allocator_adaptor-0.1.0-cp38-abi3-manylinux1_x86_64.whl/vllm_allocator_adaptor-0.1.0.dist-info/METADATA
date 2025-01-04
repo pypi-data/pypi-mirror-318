@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: vllm_allocator_adaptor
+Version: 0.1.0
+Summary: vLLM Allocator Adaptor (C/CUDA/Python) using callback shims
+Requires-Python: >=3.8
+License-File: LICENSE
