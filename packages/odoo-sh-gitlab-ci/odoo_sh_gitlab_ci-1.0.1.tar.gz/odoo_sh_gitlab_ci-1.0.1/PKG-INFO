@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: odoo_sh_gitlab_ci
+Version: 1.0.1
+Summary: Simplify and automate Odoo.sh deployment using GitLab and GitHub.
+Home-page: https://git.jarsa.com.com/Jarsa/odoo-sh-gitlab-ci
+Author: Jarsa
+Author-email: info@jarsa.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# odoo-sh-gitlab-ci
+
+This package simplifies and automates the process of updating Odoo.sh branches by interacting with a GitLab repository while using a GitHub repository as a container for multiple repositories. It ensures seamless management of submodules and branch synchronization, making the deployment process more efficient and maintainable.
+
+## Installation
+
+Install the package using pip:
+
+```bash
+pip install odoo-sh-gitlab-ci
+```
+
+## Usage
+
+To deploy, simply execute the following command:
+
+```bash
+odoo-sh-deploy
+```
+
+Ensure the required environment variables are defined before running the command.
+
+## License
+
+This project is licensed under the AGPL-3.0 License.
