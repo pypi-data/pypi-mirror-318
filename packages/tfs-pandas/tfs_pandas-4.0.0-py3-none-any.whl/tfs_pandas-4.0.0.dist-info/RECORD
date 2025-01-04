@@ -1,0 +1,14 @@
+tfs/__init__.py,sha256=JjnmFBqvjR39w6b4Ezcwpudv8z6ptuB9hE-vGbK0K9M,731
+tfs/collection.py,sha256=ikTenZunnB92qEuYFx0Fmt04ONahu3HkarLsAfVO-Qc,13754
+tfs/constants.py,sha256=TxTZu0lWXv7MHhhAKImPl685txzYgrrke2qwgcGyMU8,1075
+tfs/errors.py,sha256=O5SOdKUgEWRhEwScNuNVLeBjrxoRQzlTLnDhbtYYsXU,3159
+tfs/frame.py,sha256=W-fC3nNpqEKHNIrRC1HgWcrgYqQ0RIjWgrkdp_7xP5w,19089
+tfs/hdf.py,sha256=RZUEmzT6mj5lWDNGoo7x2QM6Ump0BPGKI8f3qgjBgZ4,3876
+tfs/reader.py,sha256=WskPCalIMT3j6CH32RjA9M5Hoa0GsuEFgB_yrLwxXtE,18792
+tfs/testing.py,sha256=vJ3JPs0bqqCI7jZo0NImpsdPaJ4-olm18vaFntsIBV8,2231
+tfs/tools.py,sha256=t0S83OZl-znDODy4Q2X0Gz5ucsRrn1Osmpy_kI8BKXw,3639
+tfs/writer.py,sha256=OAejXfwzRCiV1CCekYOy3FBX9fohE9nKREpsyDvI1v0,19828
+tfs_pandas-4.0.0.dist-info/METADATA,sha256=Ry_-Xz65EVrxSAeZTyJgY1MSE0jn5TZTeTBmHj2_OA4,6032
+tfs_pandas-4.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+tfs_pandas-4.0.0.dist-info/licenses/LICENSE,sha256=xJZkGP_shF9nefHrx6CSTxJXpGEZ9FoEKzCzFcdIOIA,1075
+tfs_pandas-4.0.0.dist-info/RECORD,,
