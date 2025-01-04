@@ -1,0 +1,9 @@
+aiofiles
+rjsmin
+fastapi
+uvicorn
+typing_extensions
+markdown
+pyinstaller
+httpx
+pygments
