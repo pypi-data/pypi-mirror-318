@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+remember_me/__init__.py
+remember_me/starlist_manager.py
+remember_me/vocab_loader.py
+remember_me/vocab_practice.py
+remember_me_gre.egg-info/PKG-INFO
+remember_me_gre.egg-info/SOURCES.txt
+remember_me_gre.egg-info/dependency_links.txt
+remember_me_gre.egg-info/entry_points.txt
+remember_me_gre.egg-info/requires.txt
+remember_me_gre.egg-info/top_level.txt

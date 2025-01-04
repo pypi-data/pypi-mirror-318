@@ -1,0 +1,2 @@
+[console_scripts]
+remember_me = remember_me.vocab_practice:main
