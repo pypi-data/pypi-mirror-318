@@ -1,0 +1,260 @@
+## VLM Run Hub
+
+Welcome to **VLM Run Hub**, the ultimate repository of pre-defined [Pydantic](https://docs.pydantic.dev/latest/) schemas for extracting structured data from unstructured visual domains such as images, videos, and documents. Designed for [Vision Language Models (VLMs)](https://huggingface.co/blog/vlms) and optimized for real-world use cases, VLM Run Hub simplifies the integration of visual ETL into your workflows.
+
+
+<p align="center">
+<a href="https://vlm.run"><b>Website</b></a> | <a href="https://docs.vlm.run/"><b>Docs</b></a> | <a href="https://docs.vlm.run/blog"><b>Blog</b></a> | <a href="https://discord.gg/CCY8cYNC"><b>Discord</b></a>
+</p>
+<p align="center">
+<a href="https://pypi.org/project/vlmrun-hub/"><img alt="PyPI Version" src="https://badge.fury.io/py/vlmrun-hub.svg"></a>
+<a href="https://pypi.org/project/vlmrun-hub/"><img alt="PyPI Version" src="https://img.shields.io/pypi/pyversions/vlmrun-hub"></a>
+<a href="https://www.pepy.tech/projects/vlmrun-hub"><img alt="PyPI Downloads" src="https://img.shields.io/pypi/dm/vlmrun-hub"></a><br>
+<a href="https://github.com/vlm-run/vlmrun-hub/blob/main/LICENSE"><img alt="PyPi Downloads" src="https://img.shields.io/github/license/vlm-run/hub.svg"></a>
+<a href="https://discord.gg/4jgyECY4rq"><img alt="Discord" src="https://img.shields.io/badge/discord-chat-purple?color=%235765F2&label=discord&logo=discord"></a>
+<a href="https://twitter.com/vlmrun"><img alt="PyPi Version" src="https://img.shields.io/twitter/follow/vlmrun.svg?style=social&logo=twitter"></a>
+</p>
+
+## 💡 Motivation
+
+While vision models like OpenAI’s [GPT-4o](https://openai.com/index/hello-gpt-4o/) and Anthropic’s [Claude Vision](https://www.anthropic.com/claude) excel in exploratory tasks like "chat with images," they often lack practicality for automation and integration, where **strongly-typed**, **validated outputs** are crucial.
+
+The **Structured Outputs API** (popularized by [GPT-4o](https://openai.com/index/introducing-structured-outputs-in-the-api/), [Gemini](https://ai.google.dev/gemini-api/docs/structured-output)) addresses this by constraining LLMs to return data in precise, strongly-typed formats such as Pydantic models. This eliminates complex parsing and validation, ensuring outputs conform to expected types and structures. These schemas can be nested and include complex types like lists and dictionaries, enabling seamless integration with existing systems while leveraging the full capabilities of the model.
+
+### Why use this repo / pre-defined Pydantic schemas?
+
+- 📚 **Easy to use:** Pydantic is a well-understood and battle-tested data model for structured data.
+- 🔋 **Batteries included:**  Each schema in this repo has been validated across real-world industry use cases—from healthcare to finance to media—saving you weeks of development effort.
+- 🔍 **Automatic Data-validation:** Built-in [Pydantic](https://docs.pydantic.dev/latest/) validation ensures your extracted data is clean, accurate, and reliable, reducing errors and simplifying downstream workflows.
+- 🔌 **Type-safety:** With [Pydantic’s](https://docs.pydantic.dev/latest/) type-safety and compatibility with tools like `mypy` and `pyright`, you can build composable, modular systems that are robust and maintainable.
+- 🧰 **Model-agnostic:** Use the same schema with multiple VLM providers, no need to rewrite prompts for different VLMs.
+- 🚀 **Optimized for Visual ETL:** Purpose-built for extracting structured data from images, videos, and documents, this repo bridges the gap between unstructured data and actionable insights.
+
+
+## 🚀 Getting Started
+
+Let's say we want to extract invoice metadata from an [invoice image](https://storage.googleapis.com/vlm-data-public-prod/hub/examples/document.invoice-extraction/invoice_1.jpg). You can readily use our [`Invoice`](vlmrun/hub/schemas/document/invoice.py) schema we have defined under `vlmrun.hub.schemas.document.invoice` and use it with any VLM of your choosing.
+
+### With [Instructor](https://github.com/jxnl/instructor) / OpenAI
+
+```python
+import instructor
+from openai import OpenAI
+
+from vlmrun.hub.schemas.document.invoice import Invoice
+
+IMAGE_URL = "https://storage.googleapis.com/vlm-data-public-prod/hub/examples/document.invoice-extraction/invoice_1.jpg"
+
+client = instructor.from_openai(
+    OpenAI(), mode=instructor.Mode.MD_JSON
+)
+response = client.chat.completions.create(
+    model="gpt-4o-mini",
+    messages=[
+        { "role": "user", "content": [
+            {"type": "text", "text": "Extract the invoice in JSON."},
+            {"type": "image_url", "image_url": {"url": IMAGE_URL}, "detail": "auto"}
+        ]}
+    ],
+    response_model=Invoice,
+    temperature=0,
+)
+```
+
+<details>
+<summary>JSON Response:</summary>
+
+<table>
+<tr>
+<td style="width: 40%;"> Image </td>
+<td> JSON Output 🔐 </td>
+</tr>
+
+<tr>
+<td style="width: 40%;">
+<img src="https://storage.googleapis.com/vlm-data-public-prod/hub/examples/document.invoice-extraction/invoice_1.jpg">
+</td>
+<td>
+
+```json
+{
+  "invoice_id": "9999999",
+  "period_start": null,
+  "period_end": null,
+  "invoice_issue_date": "2023-11-11",
+  "invoice_due_date": null,
+  "order_id": null,
+  "customer_id": null,
+  "issuer": "Anytown, USA",
+  "issuer_address": {
+    "street": "123 Main Street",
+    "city": "Anytown",
+    "state": "USA",
+    "postal_code": "01234",
+    "country": null
+  },
+  "customer": "Fred Davis",
+  "customer_email": "email@invoice.com",
+  "customer_phone": "(800) 123-4567",
+  "customer_billing_address": {
+    "street": "1335 Martin Luther King Jr Ave",
+    "city": "Dunedin",
+    "state": "FL",
+    "postal_code": "34698",
+    "country": null
+  },
+  "customer_shipping_address": {
+    "street": "249 Windward Passage",
+    "city": "Clearwater",
+    "state": "FL",
+    "postal_code": "33767",
+    "country": null
+  },
+  "items": [
+    {
+      "description": "Service",
+      "quantity": 1,
+      "currency": null,
+      "unit_price": 200.0,
+      "total_price": 200.0
+    },
+    {
+      "description": "Parts AAA",
+      "quantity": 1,
+      "currency": null,
+      "unit_price": 100.0,
+      "total_price": 100.0
+    },
+    {
+      "description": "Parts BBB",
+      "quantity": 2,
+      "currency": null,
+      "unit_price": 50.0,
+      "total_price": 100.0
+    }
+  ],
+  "subtotal": 400.0,
+  "tax": null,
+  "total": 400.0,
+  "currency": null,
+  "notes": "",
+  "others": null
+}
+```
+
+</td>
+</tr>
+</table>
+
+</details>
+
+### With [VLM Run](https://vlm.run)
+
+```python
+import requests
+
+from vlmrun.hub.schemas.document.invoice import Invoice
+
+
+IMAGE_URL = "https://storage.googleapis.com/vlm-data-public-prod/hub/examples/document.invoice-extraction/invoice_1.jpg"
+
+json_data = {
+    "image": IMAGE_URL,
+    "model": "vlm-1",
+    "domain": "document.invoice",
+    "json_schema": Invoice.model_json_schema(),
+}
+response = requests.post(
+    f"https://api.vlm.run/v1/image/generate",
+    headers={"Authorization": f"Bearer <your-api-key>"},
+    json=json_data,
+)
+```
+
+### With [OpenAI Structured Outputs API](https://platform.openai.com/docs/guides/structured-outputs)
+
+```python
+import instructor
+from openai import OpenAI
+
+from vlmrun.hub.schemas.document.invoice import Invoice
+
+IMAGE_URL = "https://storage.googleapis.com/vlm-data-public-prod/hub/examples/document.invoice-extraction/invoice_1.jpg"
+
+client = OpenAI()
+completion = client.beta.chat.completions.parse(
+    model="gpt-4o-mini",
+    messages=[
+        {"role": "user", "content": [
+            {"type": "text", "text": "Extract the invoice in JSON."},
+            {"type": "image_url", "image_url": {"url": IMAGE_URL}, "detail": "auto"}
+        ]},
+    ],
+    response_format=Invoice,
+    temperature=0,
+)
+```
+
+> When working with the OpenAI Structured Outputs API, you need to ensure that the `response_format` is a valid Pydantic model with the [supported types](https://platform.openai.com/docs/guides/structured-outputs#supported-schemas).
+
+### Locally with [Ollama](https://ollama.com)
+
+```python
+from ollama import chat
+
+from vlmrun.hub.schemas.document.invoice import Invoice
+from vlmrun.hub.utils import encode_image, remote_image
+
+IMAGE_URL = "https://storage.googleapis.com/vlm-data-public-prod/hub/examples/document.invoice-extraction/invoice_1.jpg"
+
+img = remote_image(IMAGE_URL)
+chat_response = chat(
+    model="llama3.2-vision:11b",
+    format=Invoice.model_json_schema(),
+    messages=[
+        {
+            "role": "user",
+            "content": "Extract the invoice in JSON.",
+            "images": [encode_image(img, format="JPEG").split(",")[1]],
+        },
+    ],
+    options={
+        "temperature": 0
+    },
+)
+response = Invoice.model_validate_json(
+    chat_response.message.content
+)
+```
+
+## 📂 Directory Structure
+
+Schemas are organized by industry for easy navigation:
+
+```bash
+vlmrun
+└── hub
+    ├── schemas
+    |   ├── <industry>
+    |   |   ├── <use-case-1>.py
+    |   |   ├── <use-case-2>.py
+    |   |   └── ...
+    │   ├── aerospace
+    │   │   └── remote_sensing.py
+    │   ├── document
+    │   │   └── invoice.py
+    │   ├── healthcare
+    │   │   └── medical_insurance_card.py
+    │   └── retail
+    │       └── ecommerce_product_caption.py
+    └── version.py
+```
+
+## ✨ How to Contribute
+
+We’re building this hub for the community, and contributions are always welcome! Follow the [SCHEMA-GUIDELINES.md](docs/SCHEMA-GUIDELINES.md) to get started.
+
+## 🔗  Quick Links
+
+* 💬 Send us an email at [support@vlm.run](mailto:support@vlm.run) or join our [Discord](https://discord.gg/CCY8cYNC) for help.
+* 📣 Follow us on [Twitter](https://x.com/vlmrun), and [LinkedIn](https://www.linkedin.com/company/vlm-run) to keep up-to-date on our products.
