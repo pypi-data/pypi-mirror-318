@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+      - name: Create virtual environment
+        run: uv venv
+
+      - name: Install dependencies
+        run: uv pip install .[dev]
+
+      - name: Install playwrite deps
+        run: uv run playwright install-deps
+
+      - name: Install playwright
+        run: uv run playwright install chromium
+
+      - name: Run tests
+        run: |
+          uv run pytest
+
+      - name: Upload test artifacts
+        if: failure() &&hashFiles('test-output/*') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-artifacts
+          path: |
+            test-output/
+          retention-days: 1
