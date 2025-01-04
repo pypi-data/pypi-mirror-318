@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: efftime
+Version: 1.0.9
+Summary: A check Program run efficiency.
+Author: BreezeSun
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# efftime
+A check Program run efficiency.
+
+## Installation
+```console
+pip install efftime
+```
+
+## Usage
+```python
+import efftime
+
+
+efftime.start()
+
+# executable code
+
+efftime.end()
+```
