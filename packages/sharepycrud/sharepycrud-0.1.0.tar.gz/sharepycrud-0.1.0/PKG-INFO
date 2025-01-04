@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: sharepycrud
+Version: 0.1.0
+Summary: Python library for CRUD operations on SharePoint
+Author: Willem Seethaler
+Author-email: Willem Seethaler <wcs@bu.edu>
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+License-File: LICENSE
+Requires-Dist: dataclasses-json==0.6.7
+Requires-Dist: requests==2.32.3
+Requires-Dist: python-dotenv==1.0.1
+Provides-Extra: dev
+Requires-Dist: black>=24.8.0; extra == "dev"
+Requires-Dist: mypy==1.11.2; extra == "dev"
+Requires-Dist: pydantic==2.8.2; extra == "dev"
+Requires-Dist: types-requests==2.31.0; extra == "dev"
+Requires-Dist: types-setuptools==75.6.0.20241223; extra == "dev"
+Requires-Dist: pre-commit==4.0.1; extra == "dev"
+Provides-Extra: test
+Requires-Dist: pytest==8.3.2; extra == "test"
+Requires-Dist: pytest-mock==3.14.0; extra == "test"
+Provides-Extra: all
+Requires-Dist: black>=24.8.0; extra == "all"
+Requires-Dist: mypy==1.11.2; extra == "all"
+Requires-Dist: pydantic==2.8.2; extra == "all"
+Requires-Dist: pytest==8.3.2; extra == "all"
+Requires-Dist: pytest-mock==3.14.0; extra == "all"
+Requires-Dist: types-requests==2.31.0; extra == "all"
+Requires-Dist: types-setuptools==75.6.0.20241223; extra == "all"

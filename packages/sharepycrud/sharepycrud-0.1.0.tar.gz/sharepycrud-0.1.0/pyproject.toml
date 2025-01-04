@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sharepycrud"
+version = "0.1.0"
+description = "Python library for CRUD operations on SharePoint"
+authors = [
+    {name = "Willem Seethaler", email = "wcs@bu.edu"}
+]
+requires-python = ">=3.11"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "dataclasses-json==0.6.7",
+    "requests==2.32.3",
+    "python-dotenv==1.0.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=24.8.0",
+    "mypy==1.11.2",
+    "pydantic==2.8.2",
+    "types-requests==2.31.0",
+    "types-setuptools==75.6.0.20241223",
+    "pre-commit==4.0.1"
+]
+test = [
+    "pytest==8.3.2",
+    "pytest-mock==3.14.0",
+]
+all = [
+    "black>=24.8.0",
+    "mypy==1.11.2",
+    "pydantic==2.8.2",
+    "pytest==8.3.2",
+    "pytest-mock==3.14.0",
+    "types-requests==2.31.0",
+    "types-setuptools==75.6.0.20241223",
+]
+
+[tool.setuptools]
+packages = ["sharepycrud"]
+package-dir = {"" = "src"}
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+include = '\.pyi?$'
+
+[tool.pyright]
+extraPaths = ["./src"]
