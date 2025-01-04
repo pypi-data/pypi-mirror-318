@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: jetstreamcli
+Version: 0.1.0
+Summary: Roblox utility tool for converting videos/gifs into frames for importing into Roblox
+Author: Sam Perillo
+Author-email: sam@perillo.dev
+Requires-Python: >=3.13,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: click (>=8.1.8,<9.0.0)
+Requires-Dist: colorama (>=0.4.6,<0.5.0)
+Requires-Dist: ffmpeg-python (>=0.2.0,<0.3.0)
+Requires-Dist: inquirer (>=3.4.0,<4.0.0)
+Requires-Dist: jsonmerge (>=1.9.2,<2.0.0)
+Requires-Dist: rblx-open-cloud (>=2.1.4,<3.0.0)
+Requires-Dist: replicate (>=1.0.4,<2.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: show-in-file-manager (>=1.1.5,<2.0.0)
+Requires-Dist: termcolor (>=2.5.0,<3.0.0)
+Requires-Dist: xmltodict (>=0.14.2,<0.15.0)
+Description-Content-Type: text/markdown
+
+[![Frame 594|690x215](https://raw.githubusercontent.com/imacodr/Jetstream/main/assets/banner.png)](https://imacodr.github.io/Jetstream)
+
+<div align="center">
+
+[[📘Documentation]](https://imacodr.github.io/Jetstream) | [[📁 Source Code]](https://github.com/imacodr/Jetstream)
+
+Jetstream is a CLI tool to simplify the process of importing short videos as image frames into Roblox.
+
+<hr />
+
+[**Why Jetstream?**](https://imacodr.github.io/Jetstream/)
+
+Videos on Roblox are currently way too costly and offer many limitations.
+
+<hr />
+
+[**Installation**](https://imacodr.github.io/Jetstream/installation/)
+
+</div>
+
