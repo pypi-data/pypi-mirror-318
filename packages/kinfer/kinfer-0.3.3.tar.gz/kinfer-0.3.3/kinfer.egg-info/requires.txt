@@ -1,0 +1,12 @@
+torch
+onnx
+onnxruntime
+protobuf
+
+[dev]
+black
+darglint
+mypy
+mypy-protobuf
+pytest
+ruff
