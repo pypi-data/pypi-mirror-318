@@ -1,0 +1,2 @@
+[console_scripts]
+ammcpc = ammcpc.ammcpc:main

@@ -1,0 +1,8 @@
+lxml
+
+[dev]
+coverage
+pip-tools
+pytest-cov
+pytest
+ruff
