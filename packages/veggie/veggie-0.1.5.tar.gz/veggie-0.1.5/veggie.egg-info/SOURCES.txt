@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_monitor.py
+tests/test_storage.py
+veggie/__init__.py
+veggie/monitor.py
+veggie/storage.py
+veggie.egg-info/PKG-INFO
+veggie.egg-info/SOURCES.txt
+veggie.egg-info/dependency_links.txt
+veggie.egg-info/requires.txt
+veggie.egg-info/top_level.txt
