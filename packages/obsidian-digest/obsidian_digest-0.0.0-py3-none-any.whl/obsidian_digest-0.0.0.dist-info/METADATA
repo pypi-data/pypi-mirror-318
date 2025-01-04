@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: obsidian_digest
+Version: 0.0.0
+Summary: obsidian-digest: Superpower your notes with Gemini 2
+Author-email: "Clelia (Astra) Bertelli" <astraberte9@gmail.com>
+Project-URL: Homepage, https://github.com/AstraBert/obsidian-digest
+Project-URL: Issues, https://github.com/AstraBert/obsidian-digest/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: python-dotenv
+Requires-Dist: termcolor
+Requires-Dist: get_code_from_markdown
+Requires-Dist: google-generativeai==0.8.3
