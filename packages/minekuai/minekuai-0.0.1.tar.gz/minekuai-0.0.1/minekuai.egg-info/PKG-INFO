@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: minekuai
+Version: 0.0.1
+Summary: minekuai request library
+Author: SCH
+Requires-Python: >=3.6
