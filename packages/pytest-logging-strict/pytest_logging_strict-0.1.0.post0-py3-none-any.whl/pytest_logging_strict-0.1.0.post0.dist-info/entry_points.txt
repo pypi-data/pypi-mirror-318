@@ -1,0 +1,2 @@
+[pytest11]
+logging_strict = pytest_logging_strict.plugin
