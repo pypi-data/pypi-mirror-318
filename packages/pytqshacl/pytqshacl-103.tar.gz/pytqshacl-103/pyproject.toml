@@ -1,0 +1,37 @@
+[project]
+name = "pytqshacl"
+dynamic = [ 'version']
+description = "Python wrapper around TopQuadrant SHACL processor"
+authors = [
+    { name = "Majid alDosari", email = "majid.aldosari@pnnl.gov" },
+    { name = "Majid alDosari", email = "majidaldosari-github@yahoo.com" }
+]
+dependencies = ["install-jdk"]
+readme = "README.md"
+[project.optional-dependencies]
+cli = ['fire']
+[project.scripts]
+pytqshacl = "pytqshacl:cli"
+
+[dependency-groups]
+dev = [
+    'pytest',
+    'pre-commit',
+    "ipython", "ipdb",
+    "fire",
+    "pytqshacl[cli]"
+    ]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[tool.hatch.version]
+path = "src/pytqshacl/__init__.py"
+[tool.hatch.build.targets.sdist]
+include = [
+    'src/**/*.py',
+    # run time install 
+    #'src/**/*.jar',
+    #'src/**/*.java',
+    #'src/**/*.properties',
+    ]
