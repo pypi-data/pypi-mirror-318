@@ -1,0 +1,8 @@
+README.md
+setup.py
+get_attachment_image/__init__.py
+get_attachment_image/attachment.py
+get_attachment_image.egg-info/PKG-INFO
+get_attachment_image.egg-info/SOURCES.txt
+get_attachment_image.egg-info/dependency_links.txt
+get_attachment_image.egg-info/top_level.txt
