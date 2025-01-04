@@ -1,0 +1,8 @@
+bin
+compareopt
+dist
+doc
+explore
+extra
+refl1d
+tests
