@@ -1,0 +1,14 @@
+xvec/__init__.py,sha256=CTaCyHB_bTX7t-dFCMFq201Tb6a6_3XzjVxBytpgLUU,275
+xvec/accessor.py,sha256=mze90OVh07EGFjWnaNWL_V8IroqICdCuJspcetPFT2o,56690
+xvec/index.py,sha256=qvoNeBVvPK6ivixIV7HGxeekUWcA0L84cOiGo32OddY,10091
+xvec/zonal.py,sha256=ii_18P7Ej9t4RQ5O0a90XZK2F0mH953GDGd_Wqpm3KA,17601
+xvec/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xvec/tests/conftest.py,sha256=KGAscA3YZ8C1k5pbsLeAMfn74lovgOCCHQeP_TNN5Aw,5495
+xvec/tests/test_accessor.py,sha256=F2gYUTG-VWRUzgeJ84xs9iWLz5JWQD1r3IBylDDPYME,21803
+xvec/tests/test_index.py,sha256=EfANEl15GuG7V2ygEYN6_yP5fJItYxuYpzjBtmo55tg,7340
+xvec/tests/test_zonal_stats.py,sha256=1ojniOsc53AGDmxhhoA6tqXudQT8nQTz-6mrdiobNPI,11958
+xvec-0.3.1.dist-info/LICENSE,sha256=LC4eUMl0xWDP-AKAmku-sVCWElZ8UefyE6IZcSccvqw,1073
+xvec-0.3.1.dist-info/METADATA,sha256=CoSV8J_QjPPpn1b_EOfmhjDKzHXdic_bo448-Fn54-Y,2178
+xvec-0.3.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+xvec-0.3.1.dist-info/top_level.txt,sha256=hAe_Q1pbz8ZXP9KwIlvnxvAjaB6lJ2dgK_QxJnPdEAQ,5
+xvec-0.3.1.dist-info/RECORD,,
