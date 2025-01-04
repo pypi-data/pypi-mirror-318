@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+BingoRun/__init__.py
+BingoRun/module.py
+BingoRun.egg-info/PKG-INFO
+BingoRun.egg-info/SOURCES.txt
+BingoRun.egg-info/dependency_links.txt
+BingoRun.egg-info/requires.txt
+BingoRun.egg-info/top_level.txt
