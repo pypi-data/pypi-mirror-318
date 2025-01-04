@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "reiberdiagram"
+version = "1.0.2"
+description = ""
+authors = ["Stephan Knopp <stephan_knopp@yahoo.de>"]
+readme = "README.md"
+packages = [{include = "reiberdiagram", from = "src"}]
+repository = "https://github.com/sk359/reiberdiagram"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+matplotlib = "^3.10.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[project.urls]
+GitHub = "https://github.com/sk359/reiberdiagram"
