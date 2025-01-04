@@ -1,0 +1,2 @@
+[console_scripts]
+create_env = mu.helpers.env_manager:main

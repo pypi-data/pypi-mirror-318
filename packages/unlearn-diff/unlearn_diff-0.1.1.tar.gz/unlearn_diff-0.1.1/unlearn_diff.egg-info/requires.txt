@@ -1,0 +1,12 @@
+torch
+wandb
+pyyaml
+
+[erase_diff]
+numpy
+
+[esd]
+numpy
+
+[forget_me_not]
+numpy
