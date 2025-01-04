@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+contigion_metatrader/__init__.py
+contigion_metatrader/account.py
+contigion_metatrader/actions.py
+contigion_metatrader/config.py
+contigion_metatrader/connect.py
+contigion_metatrader/data.py
+contigion_metatrader/history.py
+contigion_metatrader/mappers.py
+contigion_metatrader/trades.py
+contigion_metatrader.egg-info/PKG-INFO
+contigion_metatrader.egg-info/SOURCES.txt
+contigion_metatrader.egg-info/dependency_links.txt
+contigion_metatrader.egg-info/requires.txt
+contigion_metatrader.egg-info/top_level.txt
+tests/test_default.py
