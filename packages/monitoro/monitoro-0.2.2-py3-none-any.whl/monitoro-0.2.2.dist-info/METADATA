@@ -1,0 +1,142 @@
+Metadata-Version: 2.1
+Name: monitoro
+Version: 0.2.2
+Summary: Official Python SDK for the Monitoro API
+Home-page: https://github.com/monitoro-inc/python-client
+Author: Omar Kamali
+Author-email: support@monitoro.co
+Keywords: monitoro,scraping,web scraping,web scraping api,local scraping,generative AI,agent tools
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
+Requires-Dist: tqdm>=4.60.0
+
+# Monitoro API Client
+
+This is a Python client for the Monitoro API, which allows you to extract data from websites using Monitoro's scraping capabilities and powered by your own browser - no need to worry about renting servers, proxies, or solving captchas.
+
+## Installation
+
+You can install the Monitoro API client using pip:
+```
+pip install monitoro
+```
+
+## Usage
+
+Here are some examples of how to use the Monitoro API client:
+
+### Basic Usage
+```python
+from monitoro import Monitoro, MonitoroAPIError
+
+# Initialize the client with your API token
+client = Monitoro("your_api_token_here")
+
+try:
+    # Extract data from a single URL using a specific monitor
+    for url, result in client.extract(monitor="monitor_id", url="https://example.com"):
+        print(f"Extracted data from {url}:")
+        print(result)
+
+
+    # Extract data from multiple URLs using a specific monitor
+    urls = ["https://example.com", "https://example.org", "https://example.net"]
+    for url, result in client.extract(monitor="monitor_id", urls=urls):
+        print(f"Extracted data from {url}:")
+        print(result)
+
+
+    # Extract data using a template
+    for url, result in client.extract(template="template_id", urls=["https://example.com"]):
+        print(f"Extracted data from {url} using template:")
+        print(result)
+
+    # Extract data using selectors
+    for url, result in client.extract(selectors={"title": "h1"}, urls=["https://example.com"]):
+        print(f"Extracted data from {url} using selectors:")
+        print(result)
+
+except MonitoroAPIError as e:
+    print(f"An error occurred: {e}")
+```
+
+### Using MonitoroSwarm for Distributed Extraction
+```python
+from monitoro import MonitoroSwarm, MonitoroAPIError
+
+# Initialize the swarm client with multiple API tokens
+swarm = MonitoroSwarm(["token1", "token2", "token3"])
+
+try:
+    urls = ["https://example.com", "https://example.org", "https://example.net"]
+
+    for url, result in swarm.extract(template="template_id", urls=urls):
+        print(f"Extracted data from {url}:")
+        print(result)
+    
+    for url, result in swarm.extract(selectors={"title": "h1"}, urls=urls):
+        print(f"Extracted data from {url}:")
+        print(result)
+        
+except MonitoroAPIError as e:
+    print(f"An error occurred: {e}")
+```
+
+## API Reference
+
+### `Monitoro(token)`
+
+Creates a new Monitoro API client instance.
+
+- `token` (str): Your Monitoro API token.
+
+### `Monitoro.extract(monitor_id=None, template_id=None, selectors=None, url=None, urls=None, no_ingest=False)`
+
+Extracts data from URLs using a specific monitor's settings or a template.
+
+- Only one of these parameters should be provided at a time.
+    - `monitor_id` (str, optional): The ID of the monitor to use for extraction.
+    - `template_id` (str, optional): The ID of the template to use for extraction.
+    - `selectors` (dict, optional): The selectors to use for extraction.
+
+- `url` (str, optional): The URL to extract data from.
+- `urls` (list, optional): The list of URLs to extract data from.
+- `no_ingest` (bool, optional): If True, skip running automations. Defaults to False. Only valid with `monitor_id`.
+
+Returns a generator that yields (url, data) tuples for successful extractions, followed by a list of (url, error) tuples for failed extractions.
+
+### `MonitoroSwarm(tokens)`
+
+Creates a new Monitoro Swarm client instance for distributed extraction.
+
+- `tokens` (list): A list of Monitoro API tokens.
+
+The `MonitoroSwarm` class has the same `extract` method as the `Monitoro` class, but it distributes the workload across multiple API tokens.
+Calling `extract` with monitor_id is not supported in swarm mode, and `no_ingest` is always set to false in this mode.
+
+## Error Handling
+
+The client raises specific exceptions for different error scenarios:
+
+- `BadRequestError`: For 400 Bad Request errors (e.g., missing URL or malformed request)
+- `MonitorNotFoundError`: For 404 Monitor Not Found errors
+- `ServerError`: For 500 Server Error during data extraction
+- `MonitoroAPIError`: Base exception for all other API errors
+
+You can catch these exceptions to handle errors in your code.
+
+## License
+
+This client is licensed under the MIT License.
