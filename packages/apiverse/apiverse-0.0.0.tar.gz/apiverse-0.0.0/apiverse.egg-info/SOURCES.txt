@@ -1,0 +1,6 @@
+README.md
+pyproject.toml
+apiverse.egg-info/PKG-INFO
+apiverse.egg-info/SOURCES.txt
+apiverse.egg-info/dependency_links.txt
+apiverse.egg-info/top_level.txt
