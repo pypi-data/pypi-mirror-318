@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/readgen/__init__.py
+src/readgen/cli.py
+src/readgen/config.py
+src/readgen/generator.py
+src/tbi_readgen.egg-info/PKG-INFO
+src/tbi_readgen.egg-info/SOURCES.txt
+src/tbi_readgen.egg-info/dependency_links.txt
+src/tbi_readgen.egg-info/entry_points.txt
+src/tbi_readgen.egg-info/requires.txt
+src/tbi_readgen.egg-info/top_level.txt
