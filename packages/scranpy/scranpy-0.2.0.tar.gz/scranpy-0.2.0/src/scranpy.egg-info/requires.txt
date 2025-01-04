@@ -1,0 +1,23 @@
+mattress
+knncolle>=0.2.0
+numpy
+biocutils>=0.2.1
+delayedarray
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[optional]
+scrnaseq>=0.3.1
+scipy
+
+[testing]
+setuptools
+pytest
+pytest-cov
+biocframe>=0.6.2
+singlecellexperiment>=0.4.0
+summarizedexperiment>=0.4.0
+scrnaseq>=0.3.1
+igraph
+scipy
