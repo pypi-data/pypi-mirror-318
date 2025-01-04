@@ -1,0 +1,11 @@
+cutlet/__init__.py,sha256=Qf0YfO6cp6VuuEQEJMwdoZ94i_YdGbZLBtmDWMeqvDk,81
+cutlet/cli.py,sha256=qxuN9MIGbsQ2SQkqLH641h4H3VBBPwfB-JBhPnvhgBY,449
+cutlet/cutlet.py,sha256=vVBaI5f4YyJkO1jCNP0tVwMzfCOFejsJLrrXlXSgF_8,15353
+cutlet/exceptions.tsv,sha256=PgjwOYBIjJyEB_htgZ21jQ_RFeybIZh3RxlNTvUJfgY,118
+cutlet/mapping.py,sha256=5vcN-svuVr3O_iMEc7ltpxsdJVsC0rB76Bhbe5ykQWI,3377
+cutlet-0.5.0.dist-info/LICENSE,sha256=hzatDUY2y22rrj6X6ZwI9cDAi4xFHx1Imymg1jvr8HQ,1076
+cutlet-0.5.0.dist-info/METADATA,sha256=ME8W8VlDQwpAKyDmcHIst5RGVO9koMER3x-4liCEzWg,3864
+cutlet-0.5.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+cutlet-0.5.0.dist-info/entry_points.txt,sha256=fso9rZOJ-dHlpCL3PaYEOqYLJsHSjtgzedEHOmogXB8,43
+cutlet-0.5.0.dist-info/top_level.txt,sha256=ZrVZWrqwKbpL1nUm-GGwMVPMowBB_adA1SPTxK00x9Q,7
+cutlet-0.5.0.dist-info/RECORD,,
