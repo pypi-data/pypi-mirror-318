@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "financial_accounts"
+version = "v0.0.7"
+description = "A personal finance accounting system."
+authors = [ "Edward Bridges <github@eqbridges.com>",]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+sqlalchemy = "^2.0.36"
+tomlkit = "^0.13.2"
+
+[tool.poetry.group.dev.dependencies]
+flake8-pyproject = "^1.2.3"
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+gitpython = "^3.1.44"
+
+[tool.pytest.ini_options]
+addopts = [ "--cov=financial_accounts", "--cov-report=term",]
+
+[tool.black]
+line-length = 100
+skip-string-normalization = true
+target-version = [ "py312",]
+include = "\\.pyi?$"
+extend-exclude = "/(\n  # directories\n  \\.eggs\n  | \\.git\n  | \\.hg\n  | \\.mypy_cache\n  | \\.tox\n  | \\.venv\n  | build\n  | dist\n)/\n"
+
+[tool.flake8]
+max-line-length = 100
+extend-ignore = [ "B023", "E24", "E128", "E201", "E202", "E203", "E225", "E231", "E231", "E252", "E265", "E266", "E302", "E303", "E401", "E402", "E501", "E731", "E902", "W503", "W504", "W605",]
+exclude = [ ".git", "__pycache__", "build", "dist", ".venv",]
+
+[tool.poetry.scripts]
+accounts-cli = "financial_accounts.cli:main"
+
+[build-system]
+requires = [ "poetry-core",]
+build-backend = "poetry.core.masonry.api"
