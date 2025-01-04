@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: dtob
+Version: 1.1.2
+Summary: Convert dictionaries into objects with attribute-style access.
+Home-page: https://github.com/husseinnaeemsec/dicttoobject
+Author: Hussein Naeem
+Author-email: husseinnaeemsec@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# DictToObject
+
+`DictToObject` is a Python utility class that converts dictionaries into objects, allowing you to access keys as attributes.
+
+## Installation
+
+Install using pip:
+
+```bash
+pip install dicttoobject
+```
+
+## Dependencies
+- termcolor: python
+
+## Example
+
+1. Import the `DictToObject` class:
+
+```python
+from dicttoobject import DictToObject
+```
+
+2. Create a dictionary:
+
+```python
+data = {
+    'name': 'John Doe',
+    'age': 30,
+    'address': {
+        'street': '123 Main St',
+        'city': 'New York'
+    }
+}
+```
+
+3. Convert the dictionary into an object:
+
+```python
+
+obj = DictToObject(data)
+
+# Accessing attributes
+print(obj.name)  # Output: John Doe
+print(obj.age)  # Output: 30
+```
+
