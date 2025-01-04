@@ -1,0 +1,85 @@
+Metadata-Version: 2.4
+Name: solvis-api-evaluations
+Version: 0.1.3
+Summary: This is a package for requesting and processing results from Solvis's Evaluations API.
+Author-email: Paulo Victor <paulo.barbosa@solvis.com.br>
+License-File: LICENSE
+Requires-Python: >=3.12
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: requests>=2.32.3
+Description-Content-Type: text/markdown
+
+# Solvis API Evaluations
+
+This is a package for requesting and processing results from Solvis's Evaluations API.
+The package is designed to handle complex nested data structures, efficiently transforming them into a tabular format (pandas dataframe) suitable for analysis.
+
+
+## Features
+
+- Converts nested evaluations data into a flat pandas dataframe.
+- Handles various question types, including:
+  - **NPS (Net Promoter Score)**
+  - **Scale**
+  - **Multiple Choice**
+  - **Text and Short Text**
+  - **Multiple Response**
+  - **Special Types** (Phone, CPF, CNPJ, Email)
+- Robust handling of unexpected or malformed data.
+- Logging for process tracking and debugging.
+
+
+## Installation
+
+Install the package via pip (or your favorite package manager):
+
+```bash
+pip install solvis-api-evaluations
+```
+
+
+## Usage
+
+### Importing the Module
+
+```python
+from solvis_api_evaluations import GetEvaluations, DataProcessing
+```
+
+### Example
+
+```python
+# Initialize modules
+api = GetEvaluations()
+processor = DataProcessing()
+
+# Request API
+evaluations = api.get_evaluations(
+    user='',
+    password='',
+    survey_id='',
+    start_datetime='2025-01-01T00:00:00',
+    end_datetime='2025-01-31T23:59:59',
+)
+
+# Process the data
+df = processor.process_data(evaluations)
+
+# Print output
+print(df)
+```
+
+
+## Dependencies
+
+- Python 3.12+
+- Pandas
+- Requests
+
+
+## Contact
+
+For questions or feedback, feel free to reach out:
+
+- Author: Paulo Victor
+- Email: paulo.barbosa@solvis.com.br
