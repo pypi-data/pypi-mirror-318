@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: oracle-sh
+Version: 0.3.0
+Summary: A pairwise comparer to discover your truth
+Author-email: Mike Moran <mike@mkmrn.dev>
+Project-URL: GitLab, https://gitlab.com/mmoran0032/oracle-sh
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typer~=0.13
+Requires-Dist: pydantic~=2.10
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: pytest-mock; extra == "dev"
+Requires-Dist: pip-tools>=6.0.0; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+
+# oracle-sh
+
+[![PyPI](https://img.shields.io/pypi/v/oracle-sh)](https://pypi.org/project/oracle-sh/)
+
+A pairwise comparer to discover your truth
+
+Oracle tracks trials and successes for prompted options. Over time and with enough prompting, the results will show what you actually want between the available choices. If you want, you can also run a single trial, and take that as a final decision.
+
+Oracle uses a random weighted sampling method to determine the final fate. This will be updated in the future, including to automatically tell you when Oracle has enough information to make a firm decision.
+
+## Usage
+
+- `oracle trial`: ask the Oracle for your options, and give your response. Oracle will track your responses through time.
+- `oracle fate [--verbose]`: ask the Oracle for your answer
+- `oracle show [--verbose]`: show the choices that Oracle is tracking for you
+- `oracle add|remove CHOICE`: edit the choices available to you
+- `oracle reset`: reset all of your saved trials on your choices, but keep your choices
+- `oracle clear`: clear everything that Oracle knows
