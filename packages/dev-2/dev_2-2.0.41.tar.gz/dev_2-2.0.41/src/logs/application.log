@@ -1,0 +1,245 @@
+2024-12-30 21:05:02,464 - decorator_logger - INFO - Method: your_turn, Result: <coroutine object WebSocketServer.your_turn at 0x7fe70ce59240>
+2024-12-30 21:05:04,856 - websockets.server - DEBUG - < TEXT 'y' [1 byte]
+2024-12-30 21:05:04,856 - module_perso.websocketo - DEBUG - Message recue de dzed : y
+2024-12-30 21:05:06,859 - decorator_logger - INFO - Method: _gerer_deplacement, Result: reculer
+2024-12-30 21:05:10,865 - decorator_logger - INFO - Method: _gerer_deplacement, Result: None
+2024-12-30 21:05:10,869 - decorator_logger - INFO - Method: your_turn, Result: <coroutine object WebSocketServer.your_turn at 0x7fe70ce59240>
+2024-12-30 21:05:11,399 - websockets.server - DEBUG - < TEXT 'y' [1 byte]
+2024-12-30 21:05:11,400 - module_perso.websocketo - DEBUG - Message recue de dezf : y
+2024-12-30 21:05:13,402 - decorator_logger - INFO - Method: _gerer_deplacement, Result: reculer
+2024-12-30 21:05:17,406 - decorator_logger - INFO - Method: _gerer_deplacement, Result: None
+2024-12-30 21:05:17,411 - decorator_logger - INFO - Method: your_turn, Result: <coroutine object WebSocketServer.your_turn at 0x7fe70ce59240>
+2024-12-30 21:05:17,878 - websockets.server - DEBUG - < TEXT 'y' [1 byte]
+2024-12-30 21:05:17,878 - module_perso.websocketo - DEBUG - Message recue de dzed : y
+2024-12-30 21:05:19,881 - decorator_logger - INFO - Method: _gerer_deplacement, Result: None
+2024-12-30 21:05:21,887 - decorator_logger - INFO - Method: your_turn, Result: <coroutine object WebSocketServer.your_turn at 0x7fe70ce59240>
+2024-12-30 21:05:21,888 - websockets.server - DEBUG - % sending keepalive ping
+2024-12-30 21:05:21,888 - websockets.server - DEBUG - > PING 35 3a e7 52 [binary, 4 bytes]
+2024-12-30 21:05:21,889 - websockets.server - DEBUG - % sending keepalive ping
+2024-12-30 21:05:21,889 - websockets.server - DEBUG - > PING b5 77 32 fc [binary, 4 bytes]
+2024-12-30 21:05:21,890 - websockets.server - DEBUG - < PONG 35 3a e7 52 [binary, 4 bytes]
+2024-12-30 21:05:21,890 - websockets.server - DEBUG - % received keepalive pong
+2024-12-30 21:05:21,890 - websockets.server - DEBUG - < PONG b5 77 32 fc [binary, 4 bytes]
+2024-12-30 21:05:21,890 - websockets.server - DEBUG - % received keepalive pong
+2024-12-30 21:05:25,315 - websockets.server - DEBUG - < TEXT '' [0 bytes]
+2024-12-30 21:05:25,315 - module_perso.websocketo - DEBUG - Message recue de dezf : 
+2024-12-30 21:05:25,319 - decorator_logger - INFO - Method: your_turn, Result: <coroutine object WebSocketServer.your_turn at 0x7fe70ce59240>
+2024-12-30 21:05:26,619 - websockets.server - DEBUG - < TEXT 'y' [1 byte]
+2024-12-30 21:05:26,619 - module_perso.websocketo - DEBUG - Message recue de dzed : y
+2024-12-30 21:05:28,622 - decorator_logger - INFO - Method: _gerer_deplacement, Result: None
+2024-12-30 21:05:42,669 - decorator_logger - INFO - Method: your_turn, Result: <coroutine object WebSocketServer.your_turn at 0x7fe70ce59240>
+2024-12-30 21:05:42,669 - websockets.server - DEBUG - % sending keepalive ping
+2024-12-30 21:05:42,670 - websockets.server - DEBUG - > PING b6 68 ef c7 [binary, 4 bytes]
+2024-12-30 21:05:42,670 - websockets.server - DEBUG - % sending keepalive ping
+2024-12-30 21:05:42,670 - websockets.server - DEBUG - > PING 14 7f af 1a [binary, 4 bytes]
+2024-12-30 21:05:42,671 - websockets.server - DEBUG - < PONG b6 68 ef c7 [binary, 4 bytes]
+2024-12-30 21:05:42,671 - websockets.server - DEBUG - % received keepalive pong
+2024-12-30 21:05:42,671 - websockets.server - DEBUG - < PONG 14 7f af 1a [binary, 4 bytes]
+2024-12-30 21:05:42,672 - websockets.server - DEBUG - % received keepalive pong
+2024-12-30 21:05:49,158 - websockets.server - DEBUG - < TEXT 'y' [1 byte]
+2024-12-30 21:05:49,158 - module_perso.websocketo - DEBUG - Message recue de dzed : y
+2024-12-30 21:05:49,159 - decorator_logger - INFO - Method: your_turn, Result: <coroutine object WebSocketServer.your_turn at 0x7fe70ce59240>
+2024-12-30 21:05:53,062 - websockets.server - DEBUG - < TEXT 'y' [1 byte]
+2024-12-30 21:05:53,062 - module_perso.websocketo - DEBUG - Message recue de dezf : y
+2024-12-30 21:05:55,070 - decorator_logger - INFO - Method: reset, Result: None
+2024-12-30 21:05:55,070 - decorator_logger - INFO - Method: reset, Result: None
+2024-12-30 21:05:55,072 - __main__ - INFO - Nouvelle partie initialisée.
+2024-12-30 21:05:57,075 - websockets.server - DEBUG - > TEXT "les joueurs sont : ['dzed', 'dezf']" [35 bytes]
+2024-12-30 21:05:57,076 - websockets.server - DEBUG - > TEXT "les joueurs sont : ['dzed', 'dezf']" [35 bytes]
+2024-12-30 21:06:01,085 - decorator_logger - INFO - Method: your_turn, Result: <coroutine object WebSocketServer.your_turn at 0x7fe70ce595c0>
+2024-12-30 21:06:02,673 - websockets.server - DEBUG - % sending keepalive ping
+2024-12-30 21:06:02,674 - websockets.server - DEBUG - > PING 9a d0 c3 35 [binary, 4 bytes]
+2024-12-30 21:06:02,675 - websockets.server - DEBUG - % sending keepalive ping
+2024-12-30 21:06:02,676 - websockets.server - DEBUG - > PING bc f2 f8 3f [binary, 4 bytes]
+2024-12-30 21:06:02,677 - websockets.server - DEBUG - < PONG 9a d0 c3 35 [binary, 4 bytes]
+2024-12-30 21:06:02,678 - websockets.server - DEBUG - % received keepalive pong
+2024-12-30 21:06:02,679 - websockets.server - DEBUG - < PONG bc f2 f8 3f [binary, 4 bytes]
+2024-12-30 21:06:02,680 - websockets.server - DEBUG - % received keepalive pong
+2024-12-30 21:06:22,695 - websockets.server - DEBUG - % sending keepalive ping
+2024-12-30 21:06:22,696 - websockets.server - DEBUG - > PING fd 1c 49 c4 [binary, 4 bytes]
+2024-12-30 21:06:22,697 - websockets.server - DEBUG - % sending keepalive ping
+2024-12-30 21:06:22,697 - websockets.server - DEBUG - > PING 41 87 a6 48 [binary, 4 bytes]
+2024-12-30 21:06:22,698 - websockets.server - DEBUG - < PONG fd 1c 49 c4 [binary, 4 bytes]
+2024-12-30 21:06:22,698 - websockets.server - DEBUG - % received keepalive pong
+2024-12-30 21:06:22,698 - websockets.server - DEBUG - < PONG 41 87 a6 48 [binary, 4 bytes]
+2024-12-30 21:06:22,699 - websockets.server - DEBUG - % received keepalive pong
+2024-12-30 21:06:29,192 - websockets.server - DEBUG - < TEXT 'q' [1 byte]
+2024-12-30 21:06:29,192 - module_perso.websocketo - DEBUG - Message recue de dzed : q
+2024-12-30 21:06:29,209 - decorator_logger - INFO - Method: get_connected_players, Result: ['dzed']
+2024-12-30 21:06:29,209 - module_perso.websocketo - INFO - Connexion terminer normalement pour le joueur : dezf était encore connecter: ['dzed']
+2024-12-30 21:06:29,209 - module_perso.websocketo - INFO - le lobby n'est pas pret ,nbr de joueurs minimum doit etre >= a minsize et tour le monde n'est pas ready
+2024-12-30 21:06:29,209 - decorator_logger - INFO - Method: get_connected_players, Result: []
+2024-12-30 21:06:29,210 - module_perso.websocketo - INFO - Connexion terminer normalement pour le joueur : dzed était encore connecter: []
+2024-12-30 21:06:29,210 - module_perso.websocketo - INFO - le lobby n'est pas pret ,nbr de joueurs minimum doit etre >= a minsize et tour le monde n'est pas ready
+2024-12-30 22:07:11,138 - asyncio - DEBUG - Using selector: EpollSelector
+2024-12-30 22:07:11,163 - __main__ - INFO - Lancement du jeu de plateau avec WebSocket Server.
+2024-12-30 22:07:11,188 - websockets.server - INFO - server listening on 0.0.0.0:8765
+2024-12-30 22:07:11,188 - module_perso.websocketo - INFO - serveur WebSocketo ready et a l'ecoute (pour tout tentative de connection): ws://0.0.0.0:8765
+2024-12-30 22:07:14,574 - websockets.server - DEBUG - = connection is CONNECTING
+2024-12-30 22:07:14,575 - websockets.server - DEBUG - < GET / HTTP/1.1
+2024-12-30 22:07:14,575 - websockets.server - DEBUG - < Upgrade: websocket
+2024-12-30 22:07:14,575 - websockets.server - DEBUG - < Host: 172.18.0.3:8765
+2024-12-30 22:07:14,576 - websockets.server - DEBUG - < Origin: http://172.18.0.3:8765
+2024-12-30 22:07:14,576 - websockets.server - DEBUG - < Sec-WebSocket-Key: yb+0gWu0IuyEG/Z92XEVRw==
+2024-12-30 22:07:14,576 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2024-12-30 22:07:14,576 - websockets.server - DEBUG - < Connection: Upgrade
+2024-12-30 22:07:14,577 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2024-12-30 22:07:14,577 - websockets.server - DEBUG - > Date: Mon, 30 Dec 2024 22:07:14 GMT
+2024-12-30 22:07:14,577 - websockets.server - DEBUG - > Upgrade: websocket
+2024-12-30 22:07:14,577 - websockets.server - DEBUG - > Connection: Upgrade
+2024-12-30 22:07:14,577 - websockets.server - DEBUG - > Sec-WebSocket-Accept: qUpXqccZ14lA5TLmY/jj9/0hmcs=
+2024-12-30 22:07:14,577 - websockets.server - DEBUG - > Server: Python/3.9 websockets/14.1
+2024-12-30 22:07:14,577 - websockets.server - DEBUG - = connection is OPEN
+2024-12-30 22:07:14,577 - websockets.server - INFO - connection open
+2024-12-30 22:07:14,577 - decorator_logger - INFO - Method: get_connected_players, Result: [None]
+2024-12-30 22:07:14,578 - module_perso.websocketo - INFO - joueurs connectées : [None]
+2024-12-30 22:07:14,578 - websockets.server - DEBUG - > TEXT 'Bonjour,entrer votre pseudo favorit (pls):' [42 bytes]
+2024-12-30 22:07:17,958 - websockets.server - DEBUG - < TEXT '' [0 bytes]
+2024-12-30 22:07:17,959 - module_perso.websocketo - DEBUG - Message recue de None : 
+2024-12-30 22:07:17,959 - module_perso.websocketo - INFO - pseudo joueur joueur ajouter: Joueur1
+2024-12-30 22:07:17,959 - websockets.server - DEBUG - > TEXT 'Joueur1 a rejoint la partie de jeu' [34 bytes]
+2024-12-30 22:07:28,569 - websockets.server - DEBUG - = connection is CONNECTING
+2024-12-30 22:07:28,569 - websockets.server - DEBUG - < GET / HTTP/1.1
+2024-12-30 22:07:28,569 - websockets.server - DEBUG - < Upgrade: websocket
+2024-12-30 22:07:28,569 - websockets.server - DEBUG - < Host: 172.18.0.3:8765
+2024-12-30 22:07:28,569 - websockets.server - DEBUG - < Origin: http://172.18.0.3:8765
+2024-12-30 22:07:28,569 - websockets.server - DEBUG - < Sec-WebSocket-Key: HpAXZR5vyqu3eTQjChHUeA==
+2024-12-30 22:07:28,570 - websockets.server - DEBUG - < Sec-WebSocket-Version: 13
+2024-12-30 22:07:28,570 - websockets.server - DEBUG - < Connection: Upgrade
+2024-12-30 22:07:28,570 - websockets.server - DEBUG - > HTTP/1.1 101 Switching Protocols
+2024-12-30 22:07:28,570 - websockets.server - DEBUG - > Date: Mon, 30 Dec 2024 22:07:28 GMT
+2024-12-30 22:07:28,570 - websockets.server - DEBUG - > Upgrade: websocket
+2024-12-30 22:07:28,570 - websockets.server - DEBUG - > Connection: Upgrade
+2024-12-30 22:07:28,570 - websockets.server - DEBUG - > Sec-WebSocket-Accept: PtiVfOaM0FoH0pvWt2tGuvExLm4=
+2024-12-30 22:07:28,570 - websockets.server - DEBUG - > Server: Python/3.9 websockets/14.1
+2024-12-30 22:07:28,570 - websockets.server - DEBUG - = connection is OPEN
+2024-12-30 22:07:28,570 - websockets.server - INFO - connection open
+2024-12-30 22:07:28,571 - decorator_logger - INFO - Method: get_connected_players, Result: ['Joueur1', None]
+2024-12-30 22:07:28,571 - module_perso.websocketo - INFO - joueurs connectées : ['Joueur1', None]
+2024-12-30 22:07:28,571 - websockets.server - DEBUG - > TEXT 'Bonjour,entrer votre pseudo favorit (pls):' [42 bytes]
+2024-12-30 22:07:29,372 - websockets.server - DEBUG - < TEXT '' [0 bytes]
+2024-12-30 22:07:29,372 - module_perso.websocketo - DEBUG - Message recue de None : 
+2024-12-30 22:07:29,372 - module_perso.websocketo - INFO - pseudo joueur joueur ajouter: Joueur2
+2024-12-30 22:07:29,373 - websockets.server - DEBUG - > TEXT 'Joueur2 a rejoint la partie de jeu' [34 bytes]
+2024-12-30 22:07:29,373 - websockets.server - DEBUG - > TEXT 'Joueur2 a rejoint la partie de jeu' [34 bytes]
+2024-12-30 22:07:34,579 - websockets.server - DEBUG - % sending keepalive ping
+2024-12-30 22:07:34,580 - websockets.server - DEBUG - > PING f5 81 b0 ce [binary, 4 bytes]
+2024-12-30 22:07:34,580 - websockets.server - DEBUG - < PONG f5 81 b0 ce [binary, 4 bytes]
+2024-12-30 22:07:34,580 - websockets.server - DEBUG - % received keepalive pong
+2024-12-30 22:07:35,277 - websockets.server - DEBUG - < TEXT 'ready' [5 bytes]
+2024-12-30 22:07:35,277 - module_perso.websocketo - DEBUG - Message recue de Joueur2 : ready
+2024-12-30 22:07:35,277 - module_perso.websocketo - INFO - Joueur2 est ready
+2024-12-30 22:07:35,278 - decorator_logger - INFO - Method: get_ready_state, Result: Joueur1 (Prêt : Non), Joueur2 (Prêt : Oui)
+2024-12-30 22:07:35,278 - websockets.server - DEBUG - > TEXT 'Joueur2 est ready to go. liste des joueurs read...), Joueur2 (Prêt : Oui)' [95 bytes]
+2024-12-30 22:07:35,278 - websockets.server - DEBUG - > TEXT 'Joueur2 est ready to go. liste des joueurs read...), Joueur2 (Prêt : Oui)' [95 bytes]
+2024-12-30 22:07:35,278 - module_perso.websocketo - INFO - le lobby n'est pas pret ,nbr de joueurs minimum doit etre >= a minsize et tour le monde n'est pas ready
+2024-12-30 22:07:39,407 - websockets.server - DEBUG - < TEXT 'ready' [5 bytes]
+2024-12-30 22:07:39,408 - module_perso.websocketo - DEBUG - Message recue de Joueur1 : ready
+2024-12-30 22:07:39,408 - module_perso.websocketo - INFO - Joueur1 est ready
+2024-12-30 22:07:39,408 - decorator_logger - INFO - Method: get_ready_state, Result: Joueur1 (Prêt : Oui), Joueur2 (Prêt : Oui)
+2024-12-30 22:07:39,408 - websockets.server - DEBUG - > TEXT 'Joueur1 est ready to go. liste des joueurs read...), Joueur2 (Prêt : Oui)' [95 bytes]
+2024-12-30 22:07:39,409 - websockets.server - DEBUG - > TEXT 'Joueur1 est ready to go. liste des joueurs read...), Joueur2 (Prêt : Oui)' [95 bytes]
+2024-12-30 22:07:39,409 - module_perso.websocketo - INFO - tous les players sont ready
+2024-12-30 22:07:40,210 - decorator_logger - INFO - Method: __demander_pseudo, Result: Joueur1
+2024-12-30 22:07:40,210 - decorator_logger - INFO - Method: __demander_pseudo, Result: Joueur2
+2024-12-30 22:07:40,211 - __main__ - INFO - Nouvelle partie initialisée.
+2024-12-30 22:07:42,213 - websockets.server - DEBUG - > TEXT "les joueurs sont : ['Joueur1', 'Joueur2']" [41 bytes]
+2024-12-30 22:07:42,213 - websockets.server - DEBUG - > TEXT "les joueurs sont : ['Joueur1', 'Joueur2']" [41 bytes]
+2024-12-30 22:07:46,219 - decorator_logger - INFO - Method: jouer_tour, Result: <coroutine object jouer_tour at 0x7419fde479c0>
+2024-12-30 22:07:46,223 - decorator_logger - INFO - Method: your_turn, Result: <coroutine object WebSocketServer.your_turn at 0x7419fc9af7c0>
+2024-12-30 22:07:48,574 - websockets.server - DEBUG - % sending keepalive ping
+2024-12-30 22:07:48,574 - websockets.server - DEBUG - > PING e0 74 19 ab [binary, 4 bytes]
+2024-12-30 22:07:48,575 - websockets.server - DEBUG - < PONG e0 74 19 ab [binary, 4 bytes]
+2024-12-30 22:07:48,575 - websockets.server - DEBUG - % received keepalive pong
+2024-12-30 22:07:51,530 - websockets.server - DEBUG - < TEXT 'y' [1 byte]
+2024-12-30 22:07:51,531 - module_perso.websocketo - DEBUG - Message recue de Joueur1 : y
+2024-12-30 22:07:53,534 - decorator_logger - INFO - Method: _gerer_deplacement, Result: None
+2024-12-30 22:07:55,536 - decorator_logger - INFO - Method: jouer_tour, Result: <coroutine object jouer_tour at 0x7419fde479c0>
+2024-12-30 22:07:55,544 - decorator_logger - INFO - Method: your_turn, Result: <coroutine object WebSocketServer.your_turn at 0x7419fc9af7c0>
+2024-12-30 22:07:55,544 - websockets.server - DEBUG - % sending keepalive ping
+2024-12-30 22:07:55,544 - websockets.server - DEBUG - > PING 66 b4 c3 74 [binary, 4 bytes]
+2024-12-30 22:07:55,545 - websockets.server - DEBUG - < PONG 66 b4 c3 74 [binary, 4 bytes]
+2024-12-30 22:07:55,545 - websockets.server - DEBUG - % received keepalive pong
+2024-12-30 22:07:59,847 - websockets.server - DEBUG - < TEXT '' [0 bytes]
+2024-12-30 22:07:59,847 - module_perso.websocketo - DEBUG - Message recue de Joueur1 : 
+2024-12-30 22:07:59,847 - module_perso.websocketo - INFO - Joueur1tente d'ecrire alors que c'est pas son tour
+2024-12-30 22:07:59,848 - websockets.server - DEBUG - > TEXT "Ce n'est pas votre tour attendez !" [34 bytes]
+2024-12-30 22:08:04,836 - websockets.server - DEBUG - < TEXT 'y' [1 byte]
+2024-12-30 22:08:04,836 - module_perso.websocketo - DEBUG - Message recue de Joueur2 : y
+2024-12-30 22:08:06,839 - decorator_logger - INFO - Method: _gerer_deplacement, Result: reculer
+2024-12-30 22:08:08,842 - decorator_logger - INFO - Method: traiter_case_speciale, Result: <coroutine object traiter_case_speciale at 0x7419fc9af7c0>
+2024-12-30 22:08:10,845 - decorator_logger - INFO - Method: _gerer_deplacement, Result: reculer
+2024-12-30 22:08:12,848 - decorator_logger - INFO - Method: _gerer_deplacement, Result: None
+2024-12-30 22:08:12,849 - decorator_logger - INFO - Method: jouer_tour, Result: <coroutine object jouer_tour at 0x7419fde479c0>
+2024-12-30 22:08:12,854 - decorator_logger - INFO - Method: your_turn, Result: <coroutine object WebSocketServer.your_turn at 0x7419fc9af7c0>
+2024-12-30 22:08:12,855 - websockets.server - DEBUG - % sending keepalive ping
+2024-12-30 22:08:12,855 - websockets.server - DEBUG - > PING 6c 6d 0c 96 [binary, 4 bytes]
+2024-12-30 22:08:12,857 - websockets.server - DEBUG - < PONG 6c 6d 0c 96 [binary, 4 bytes]
+2024-12-30 22:08:12,859 - websockets.server - DEBUG - % received keepalive pong
+2024-12-30 22:08:15,548 - websockets.server - DEBUG - % sending keepalive ping
+2024-12-30 22:08:15,549 - websockets.server - DEBUG - > PING 4c 92 d9 d5 [binary, 4 bytes]
+2024-12-30 22:08:15,549 - websockets.server - DEBUG - < PONG 4c 92 d9 d5 [binary, 4 bytes]
+2024-12-30 22:08:15,550 - websockets.server - DEBUG - % received keepalive pong
+2024-12-30 22:08:23,485 - websockets.server - DEBUG - < TEXT 'n' [1 byte]
+2024-12-30 22:08:23,486 - module_perso.websocketo - DEBUG - Message recue de Joueur1 : n
+2024-12-30 22:08:25,488 - decorator_logger - INFO - Method: jouer_tour, Result: <coroutine object jouer_tour at 0x7419fde479c0>
+2024-12-30 22:08:25,497 - decorator_logger - INFO - Method: your_turn, Result: <coroutine object WebSocketServer.your_turn at 0x7419fc9af7c0>
+2024-12-30 22:08:32,865 - websockets.server - DEBUG - % sending keepalive ping
+2024-12-30 22:08:32,865 - websockets.server - DEBUG - > PING '[m!7' [text, 4 bytes]
+2024-12-30 22:08:32,867 - websockets.server - DEBUG - < PONG '[m!7' [text, 4 bytes]
+2024-12-30 22:08:32,867 - websockets.server - DEBUG - % received keepalive pong
+2024-12-30 22:08:35,553 - websockets.server - DEBUG - % sending keepalive ping
+2024-12-30 22:08:35,554 - websockets.server - DEBUG - > PING 50 c5 48 bf [binary, 4 bytes]
+2024-12-30 22:08:35,556 - websockets.server - DEBUG - < PONG 50 c5 48 bf [binary, 4 bytes]
+2024-12-30 22:08:35,558 - websockets.server - DEBUG - % received keepalive pong
+2024-12-30 22:08:42,420 - websockets.server - DEBUG - < TEXT 'y' [1 byte]
+2024-12-30 22:08:42,420 - module_perso.websocketo - DEBUG - Message recue de Joueur2 : y
+2024-12-30 22:08:44,423 - decorator_logger - INFO - Method: _gerer_deplacement, Result: None
+2024-12-30 22:08:46,426 - decorator_logger - INFO - Method: jouer_tour, Result: <coroutine object jouer_tour at 0x7419fde479c0>
+2024-12-30 22:08:46,430 - decorator_logger - INFO - Method: your_turn, Result: <coroutine object WebSocketServer.your_turn at 0x7419fc9af7c0>
+2024-12-30 22:08:52,873 - websockets.server - DEBUG - % sending keepalive ping
+2024-12-30 22:08:52,874 - websockets.server - DEBUG - > PING 55 e0 46 4c [binary, 4 bytes]
+2024-12-30 22:08:52,875 - websockets.server - DEBUG - < PONG 55 e0 46 4c [binary, 4 bytes]
+2024-12-30 22:08:52,875 - websockets.server - DEBUG - % received keepalive pong
+2024-12-30 22:08:54,193 - websockets.server - DEBUG - < TEXT 'y' [1 byte]
+2024-12-30 22:08:54,193 - module_perso.websocketo - DEBUG - Message recue de Joueur1 : y
+2024-12-30 22:08:56,197 - decorator_logger - INFO - Method: _gerer_deplacement, Result: None
+2024-12-30 22:08:58,200 - decorator_logger - INFO - Method: jouer_tour, Result: <coroutine object jouer_tour at 0x7419fde479c0>
+2024-12-30 22:08:58,205 - decorator_logger - INFO - Method: your_turn, Result: <coroutine object WebSocketServer.your_turn at 0x7419fc9af7c0>
+2024-12-30 22:08:58,205 - websockets.server - DEBUG - % sending keepalive ping
+2024-12-30 22:08:58,206 - websockets.server - DEBUG - > PING 15 92 28 35 [binary, 4 bytes]
+2024-12-30 22:08:58,206 - websockets.server - DEBUG - < PONG 15 92 28 35 [binary, 4 bytes]
+2024-12-30 22:08:58,206 - websockets.server - DEBUG - % received keepalive pong
+2024-12-30 22:08:59,975 - websockets.server - DEBUG - < TEXT 'y' [1 byte]
+2024-12-30 22:08:59,976 - module_perso.websocketo - DEBUG - Message recue de Joueur2 : y
+2024-12-30 22:09:01,979 - decorator_logger - INFO - Method: _gerer_deplacement, Result: reculer
+2024-12-30 22:09:03,981 - decorator_logger - INFO - Method: traiter_case_speciale, Result: <coroutine object traiter_case_speciale at 0x7419fc9af7c0>
+2024-12-30 22:09:05,983 - decorator_logger - INFO - Method: _gerer_deplacement, Result: None
+2024-12-30 22:09:05,984 - decorator_logger - INFO - Method: jouer_tour, Result: <coroutine object jouer_tour at 0x7419fde479c0>
+2024-12-30 22:09:05,992 - decorator_logger - INFO - Method: your_turn, Result: <coroutine object WebSocketServer.your_turn at 0x7419fc9af7c0>
+2024-12-30 22:09:09,536 - websockets.server - DEBUG - < TEXT 'y' [1 byte]
+2024-12-30 22:09:09,537 - module_perso.websocketo - DEBUG - Message recue de Joueur1 : y
+2024-12-30 22:09:11,540 - decorator_logger - INFO - Method: _gerer_deplacement, Result: None
+2024-12-30 22:09:23,575 - decorator_logger - INFO - Method: afficher_score_gagnant, Result: None
+2024-12-30 22:09:23,575 - decorator_logger - INFO - Method: demander_rejouer, Result: <coroutine object demander_rejouer at 0x7419fde479c0>
+2024-12-30 22:09:23,598 - module_perso.db_extract - INFO - Scores enregistrés avec succès dans la base de données.
+2024-12-30 22:09:25,601 - decorator_logger - INFO - Method: your_turn, Result: <coroutine object WebSocketServer.your_turn at 0x7419fc9af7c0>
+2024-12-30 22:09:25,602 - websockets.server - DEBUG - % sending keepalive ping
+2024-12-30 22:09:25,603 - websockets.server - DEBUG - > PING 43 64 41 ff [binary, 4 bytes]
+2024-12-30 22:09:25,604 - websockets.server - DEBUG - % sending keepalive ping
+2024-12-30 22:09:25,605 - websockets.server - DEBUG - > PING af 91 78 e1 [binary, 4 bytes]
+2024-12-30 22:09:25,606 - websockets.server - DEBUG - < PONG 43 64 41 ff [binary, 4 bytes]
+2024-12-30 22:09:25,607 - websockets.server - DEBUG - % received keepalive pong
+2024-12-30 22:09:25,607 - websockets.server - DEBUG - < PONG af 91 78 e1 [binary, 4 bytes]
+2024-12-30 22:09:25,608 - websockets.server - DEBUG - % received keepalive pong
+2024-12-30 22:09:32,190 - websockets.server - DEBUG - < TEXT 'y' [1 byte]
+2024-12-30 22:09:32,191 - module_perso.websocketo - DEBUG - Message recue de Joueur1 : y
+2024-12-30 22:09:32,191 - decorator_logger - INFO - Method: your_turn, Result: <coroutine object WebSocketServer.your_turn at 0x7419fc9af7c0>
+2024-12-30 22:09:34,401 - websockets.server - DEBUG - < TEXT 'n' [1 byte]
+2024-12-30 22:09:34,401 - module_perso.websocketo - DEBUG - Message recue de Joueur2 : n
+2024-12-30 22:09:44,417 - decorator_logger - INFO - Method: get_connected_players, Result: ['Joueur2']
+2024-12-30 22:09:44,418 - module_perso.websocketo - INFO - Connexion terminer normalement pour le joueur : Joueur1 était encore connecter: ['Joueur2']
+2024-12-30 22:09:44,419 - module_perso.websocketo - INFO - le lobby n'est pas pret ,nbr de joueurs minimum doit etre >= a minsize et tour le monde n'est pas ready
+2024-12-30 22:09:44,420 - decorator_logger - INFO - Method: get_connected_players, Result: []
+2024-12-30 22:09:44,420 - module_perso.websocketo - INFO - Connexion terminer normalement pour le joueur : Joueur2 était encore connecter: []
+2024-12-30 22:09:44,421 - module_perso.websocketo - INFO - le lobby n'est pas pret ,nbr de joueurs minimum doit etre >= a minsize et tour le monde n'est pas ready
