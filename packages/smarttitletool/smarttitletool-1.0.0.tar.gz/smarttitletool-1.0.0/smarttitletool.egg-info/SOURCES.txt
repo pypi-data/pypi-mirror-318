@@ -1,0 +1,7 @@
+README.md
+setup.py
+smarttitletool/__init__.py
+smarttitletool.egg-info/PKG-INFO
+smarttitletool.egg-info/SOURCES.txt
+smarttitletool.egg-info/dependency_links.txt
+smarttitletool.egg-info/top_level.txt
