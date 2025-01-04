@@ -1,0 +1,4 @@
+svgwrite
+
+[ipython]
+ipython
