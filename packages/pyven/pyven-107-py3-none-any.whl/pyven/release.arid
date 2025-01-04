@@ -1,0 +1,8 @@
+account = $(void)
+cli
+    path = $(void)
+    upload = $(void)
+golden_remote = $(void)
+path = $(cli path)
+token = $gpg$(token_gpg $(account))
+upload = $(cli upload)
