@@ -1,0 +1,27 @@
+[project]
+name = "mircat"
+version = "1.0.0"
+description = "Mirshahi CT Analysis Toolkit (MirCAT). Convert, Segment, and Quantify CT NIfTI files."
+readme = "README.md"
+requires-python = ">=3.10,<3.12"
+dependencies = [
+    "mircat-seg",
+    "mircat-stats",
+]
+
+[project.scripts]
+mircat = "mircat:mircat"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.sources]
+mircat-seg = { workspace = true }
+mircat-stats = { workspace = true }
+
+[tool.uv.workspace]
+members = ["packages/mircat-seg", "packages/mircat-stats"]
+
+[tool.ruff]
+line-length = 120
