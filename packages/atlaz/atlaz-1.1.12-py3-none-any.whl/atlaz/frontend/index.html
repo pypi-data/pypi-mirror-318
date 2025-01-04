@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atlaz File Viewer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="user-input-section">
+            <input type="text" id="api-key-input" placeholder="Enter API Key here..." required>
+            <select id="llm-provider-dropdown">
+                <option value="gemini">Gemini</option>
+                <option value="openai">OpenAI</option>
+            </select>
+            <input type="text" id="llm-model-input" placeholder="Enter LLM Model here..." required>
+        </div>
+        <h1>Atlaz Code Generator</h1>
+        
+        <!-- Directory Visualization Section -->
+        <div id="directory-tree"></div>
+        
+        <div id="message-section">
+            <form id="message-form">
+                <textarea id="message-input" placeholder="Type your instruction here..."></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+
+        <div class="actions">
+            <button id="apply-button" class="nice-button">Apply</button>
+            <button id="reject-button" class="nice-button">Reject</button>
+            <!-- The crucial "Submit Selection" button -->
+             <!-- <button id="submit-selection-button" class="nice-button">Submit Selection</button> -->
+        </div>
+
+        <div id="files-container">
+            <div id="created-files"></div>
+            <div id="file-pairs"></div>
+        </div>
+    </div>
+
+    <!-- Prism & Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-python.min.js"></script>
+
+    <script src="scripts/messageForm.js"></script>
+    <script src="scripts/fileViewer.js"></script>
+    <script src="scripts/directoryTree.js"></script>
+    <script src="scripts/buttonHandlers.js"></script>
+</body>
+</html>
