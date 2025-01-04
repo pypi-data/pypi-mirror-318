@@ -1,0 +1,9 @@
+aiodocker==0.24.0
+backend.ai-agent==24.12.1
+backend.ai-cli==24.12.1
+backend.ai-common==24.12.1
+backend.ai-kernel-binary==24.12.1
+backend.ai-kernel-helper==24.12.1
+backend.ai-logging==24.12.1
+backend.ai-plugin==24.12.1
+trafaret~=2.1
