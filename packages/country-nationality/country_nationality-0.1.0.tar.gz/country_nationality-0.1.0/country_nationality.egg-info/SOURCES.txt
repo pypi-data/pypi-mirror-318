@@ -1,0 +1,10 @@
+LICENCE
+MANIFEST.in
+README.md
+setup.py
+country_nationality.egg-info/PKG-INFO
+country_nationality.egg-info/SOURCES.txt
+country_nationality.egg-info/dependency_links.txt
+country_nationality.egg-info/top_level.txt
+nationality/__init__.py
+nationality/nationality.py
