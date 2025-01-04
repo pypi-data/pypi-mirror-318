@@ -1,0 +1,7 @@
+pyproject.toml
+unity_cloud.egg-info/PKG-INFO
+unity_cloud.egg-info/SOURCES.txt
+unity_cloud.egg-info/dependency_links.txt
+unity_cloud.egg-info/entry_points.txt
+unity_cloud.egg-info/top_level.txt
+venv3/bin/activate_this.py
