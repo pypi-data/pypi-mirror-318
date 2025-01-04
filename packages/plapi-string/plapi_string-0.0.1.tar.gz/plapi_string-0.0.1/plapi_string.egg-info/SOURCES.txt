@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+plapi_string/__init__.py
+plapi_string/similarity.py
+plapi_string.egg-info/PKG-INFO
+plapi_string.egg-info/SOURCES.txt
+plapi_string.egg-info/dependency_links.txt
+plapi_string.egg-info/top_level.txt
+tests/test_similarity.py

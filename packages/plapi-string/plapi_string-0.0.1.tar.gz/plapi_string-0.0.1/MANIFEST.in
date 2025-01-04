@@ -1,0 +1,5 @@
+include README.md
+include plapi_string/__init__.py
+include plapi_string/similarity.py
+include tests/test_similarity.py
+recursive-include plapi_string *
