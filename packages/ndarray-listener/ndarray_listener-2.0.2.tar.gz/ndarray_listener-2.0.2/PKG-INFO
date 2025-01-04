@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: ndarray-listener
+Version: 2.0.2
+Summary: Implementation of the Observer pattern for NumPy arrays
+License: MIT
+Author: Danilo Horta
+Author-email: danilo.horta@pm.me
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: numpy (>=2.2.1,<3.0.0)
+Description-Content-Type: text/markdown
+
+# ndarray-listener
+
+Implementation of the [Observer pattern](https://en.wikipedia.org/wiki/Observer_pattern) for NumPy arrays.
+
+## Example
+
+```python
+from numpy import array
+from ndarray_listener import ndl
+
+a = ndl(array([-0.5, 0.1, 1.1]))
+
+class Observer(object):
+  def __init__(self):
+    self.called_me = False
+
+  def __call__(self, _):
+    self.called_me = True
+
+o = Observer()
+a.talk_to(o)
+print(o.called_me)
+a[0] = 1.2
+print(o.called_me)
+```
+
+The output should be
+
+```
+False
+True
+```
+
+## Install
+
+From command line, enter
+
+```bash
+pip install ndarray-listener
+```
+
+## Running the tests
+
+Install dependencies
+
+```bash
+pip install pytest
+```
+
+then run
+
+```python
+python -c "import ndarray_listener; ndarray_listener.test()"
+```
+
+## Documentation
+
+[Documentation](https://ndarray-listener.readthedocs.io/en/latest/)
+
+## Authors
+
+* [Danilo Horta](https://github.com/horta)
+
+
+## License
+
+This project is licensed under the [MIT License](https://raw.githubusercontent.com/limix/ndarray-listener/master/LICENSE.md).
+
