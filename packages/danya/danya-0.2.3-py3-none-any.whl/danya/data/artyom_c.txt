@@ -1,0 +1,951 @@
+# Таратин_Артём_ПМ22-1-ДЗ6.html
+In [1]:
+    
+    
+    from sklearn.linear_model import LinearRegression
+    from sklearn.preprocessing import StandardScaler, MaxAbsScaler
+    from sklearn.metrics import r2_score
+    import matplotlib.pyplot as plt
+    import numpy as np
+    import pandas as pd
+    
+
+In [2]:
+    
+    
+    # Считываем CSV
+    df_energy = pd.read_csv('/Users/admin/Downloads/Electricity_consumption.csv', sep=';', decimal=',', index_col=0)
+    
+    # Добавим признак час
+    df_energy.drop(columns=['timestamp'], inplace=True)
+    df_energy['hour'] = df_energy.index % 24
+    
+
+In [3]:
+    
+    
+    # Проверяем, что типы данных корректны и пропусков нет.
+    print(df_energy.info())
+    
+    
+    
+    <class 'pandas.core.frame.DataFrame'>
+    Index: 30627 entries, 1 to 30627
+    Data columns (total 7 columns):
+     #   Column                 Non-Null Count  Dtype  
+    ---  ------                 --------------  -----  
+     0   demand_kW              30627 non-null  float64
+     1   apparent_temperature   30627 non-null  float64
+     2   air_temperature        30627 non-null  float64
+     3   dew_point_temperature  30627 non-null  float64
+     4   relative_humidity      30627 non-null  float64
+     5   wind_speed             30627 non-null  float64
+     6   hour                   30627 non-null  int64  
+    dtypes: float64(6), int64(1)
+    memory usage: 1.9 MB
+    None
+    
+
+In [4]:
+    
+    
+    df_energy.describe()
+    
+
+Out[4]:
+
+| demand_kW | apparent_temperature | air_temperature | dew_point_temperature | relative_humidity | wind_speed | hour  
+---|---|---|---|---|---|---|---  
+count | 30627.000000 | 30627.000000 | 30627.000000 | 30627.000000 | 30627.000000 | 30627.000000 | 30627.000000  
+mean | 476.970524 | 13.304545 | 15.158396 | 9.356622 | 72.692134 | 9.955203 | 11.499069  
+std | 137.785983 | 6.692956 | 6.319345 | 4.003914 | 21.969966 | 7.241984 | 6.922604  
+min | 51.730667 | -5.200000 | -2.300000 | -5.300000 | 8.000000 | 0.000000 | 0.000000  
+25% | 390.645944 | 8.500000 | 10.900000 | 6.500000 | 57.000000 | 5.400000 | 5.000000  
+50% | 447.497571 | 12.400000 | 14.300000 | 9.000000 | 73.000000 | 9.400000 | 11.000000  
+75% | 527.536286 | 17.500000 | 18.700000 | 11.900000 | 95.000000 | 14.800000 | 17.000000  
+max | 1886.905000 | 41.600000 | 44.000000 | 23.600000 | 100.000000 | 59.400000 | 23.000000  
+  
+In [5]:
+    
+    
+    # Проводим кодирование one-hot
+    df_energy = pd.get_dummies(df_energy, columns=['hour'])
+    
+
+In [6]:
+    
+    
+    # Выделяем целевую переменную и факторы
+    power_consumption = df_energy['demand_kW'].values
+    predictors = df_energy.drop(columns=['demand_kW']).values
+    
+
+In [7]:
+    
+    
+    # Масштабируем факторы
+    scaler_mod = MaxAbsScaler()
+    predictors_scaled = scaler_mod.fit_transform(predictors)
+    
+
+In [8]:
+    
+    
+    # Исходный ряд потребления электроэнергии
+    plt.figure(figsize=(10, 4))
+    plt.plot(power_consumption)
+    plt.title('Исходный ряд потребления')
+    plt.xlabel('Время')
+    plt.ylabel('Потребление')
+    plt.grid(True)
+    plt.show()
+    
+
+In [9]:
+    
+    
+    # Применяем FFT к исходному ряду.
+    fft_power = np.fft.fft(power_consumption)
+    freq_bins = np.fft.fftfreq(len(fft_power))
+    
+
+In [10]:
+    
+    
+    # Визуализируем спектр.
+    plt.figure(figsize=(10, 4))
+    plt.plot(np.abs(freq_bins), np.abs(fft_power))
+    plt.title('Частотный спектр исходного ряда')
+    plt.xlabel('Частота')
+    plt.ylabel('Амплитуда')
+    plt.grid(True)
+    plt.show()
+    
+
+In [11]:
+    
+    
+    # Определяем порог для мелких амплитуд
+    threshold_amp = np.quantile(np.abs(fft_power), 0.90)
+    print(f'Порог амплитуды (90-й перцентиль): {threshold_amp:.2f}')
+    
+    
+    
+    Порог амплитуды (90-й перцентиль): 18007.75
+    
+
+In [12]:
+    
+    
+    # Список частот, соответствующих сезонным колебаниям сутки, неделя, месяц, год
+    freqs_to_remove = [1 / 24, 1 / 24 / 7, 1 / 24 / 30, 1 / 24 / 365]
+    
+
+In [13]:
+    
+    
+    keep_mask = np.ones(len(fft_power), dtype=bool)
+    
+    # Глушим частоты, которые соответствуют сезонным пикам
+    for fval in freqs_to_remove:
+        idx_remove = np.where((np.abs(freq_bins - fval) < 0.0005) | (np.abs(freq_bins + fval) < 0.0005))[0]
+        keep_mask[idx_remove] = False
+    cleaned_fft = fft_power.copy()
+    
+
+In [14]:
+    
+    
+    # Убираем сезонные частоты
+    cleaned_fft[~keep_mask] = 0
+    cleaned_fft[np.abs(cleaned_fft) < threshold_amp] = 0
+    
+
+In [15]:
+    
+    
+    # Выполним обратное БПФ
+    adjusted_series = np.real(np.fft.ifft(cleaned_fft))
+    shift_mean = np.mean(power_consumption)
+    adjusted_series = adjusted_series + shift_mean
+    adjusted_series = np.maximum(adjusted_series, 0)
+    
+
+In [16]:
+    
+    
+    plt.figure(figsize=(10, 4))
+    plt.plot(power_consumption, label='Исходный')
+    plt.plot(adjusted_series, label='Десезонированный', alpha=0.7)
+    plt.title('Исходный vs Десезонированный')
+    plt.grid(True)
+    plt.legend()
+    plt.show()
+    
+
+In [17]:
+    
+    
+    # Обучаем регрессию
+    regression_model = LinearRegression()
+    regression_model.fit(predictors_scaled, adjusted_series)
+    
+    # Делаем предсказание
+    fitted_values = regression_model.predict(predictors_scaled)
+    
+
+In [18]:
+    
+    
+    # Остатки между очищенным рядом и моделью.
+    residuals_data = adjusted_series - fitted_values
+    
+    # Сглаживание методом скользящего среднего
+    rolled_residuals = pd.Series(residuals_data).rolling(window=7).mean()
+    
+    # Вычислим R^2
+    score_r2 = r2_score(adjusted_series, fitted_values)
+    print(f'R^2 по десезонированному ряду: {score_r2:.4f}')
+    
+    
+    
+    R^2 по десезонированному ряду: 0.0394
+    
+
+In [19]:
+    
+    
+    # Десезонированный ряд vs предсказание модели
+    plt.figure(figsize=(10, 4))
+    plt.plot(adjusted_series, label='Десезонированный ряд')
+    plt.plot(fitted_values, label='Предсказания модели', alpha=0.7)
+    plt.title('Десезонированный ряд и предсказания модели')
+    plt.grid(True)
+    plt.legend()
+    plt.show()
+    
+
+In [20]:
+    
+    
+    # Остатки и их сглаженная версия
+    plt.figure(figsize=(10, 4))
+    plt.plot(residuals_data, label='Остатки')
+    plt.plot(rolled_residuals, label='Сглаженное', alpha=0.7)
+    plt.title('Остатки и их сглаженное значение')
+    plt.grid(True)
+    plt.legend()
+    plt.show()
+    
+
+In [21]:
+    
+    
+    # Масштабируем исходный ряд
+    scaled_initial = power_consumption / np.max(power_consumption)
+    
+    # Масштабируем сглаженные остатки
+    min_val = rolled_residuals.min()
+    range_val = rolled_residuals.max() - rolled_residuals.min()
+    scaled_residuals = (rolled_residuals - min_val) / range_val
+    
+
+In [22]:
+    
+    
+    plt.figure(figsize=(10, 4))
+    plt.plot(scaled_initial, label='Исходные')
+    plt.plot(scaled_residuals, label='Десезонированный', alpha=0.7)
+    plt.title('Сравнение в одном масштабе')
+    plt.grid(True)
+    plt.legend()
+    plt.show()
+    
+
+Вывод:
+
+  * Модель показала крайне низкое качество (R^2=0.0394), что свидетельствует о неспособности учитывать существенную часть изменений в данных.
+
+
+
+Остатки подтверждают, что модель не отражает реальные закономерности в ряде.
+
+  * Из-за высокого уровня шума сложно выделить какой-то глобальный тренд, однако прослеживается суточная сезонность - ночью потребление электричества снижается, а днём возрастает. Краткосрочный прогноз можно строить на основе суточных и недельных паттернов, но для долгосрочных прогнозов возможно потребуются дополнительные сведения.
+
+
+
+In [ ]:
+    
+    
+     
+    
+
+
+# Таратин_Артём_ПМ22-1_ДЗ4.html
+In [1]:
+    
+    
+    import numpy as np
+    import matplotlib.pyplot as plt
+    from matplotlib.animation import FuncAnimation
+    from scipy.ndimage import gaussian_filter
+    
+    N = 100  # Размер сетки
+    L = 100.0  # Размер области
+    dx = L / (N - 1)  # Шаг по пространству
+    
+    # Координаты пространства
+    x = np.linspace(0, L, N)
+    y = np.linspace(0, L, N)
+    X, Y = np.meshgrid(x, y)
+    
+    dt = 0.85  # Шаг времени
+    T = 320  # Общее время
+    Nt = int(T / dt)  # Количество шагов
+    
+    # Параметры популяции V
+    b_V = 0.45  # Коэффициент рождаемости
+    d_V = 0.05  # Коэффициент смертности
+    c_U = 0.095  # Коэффициент конкуренции
+    D_V = 0.8  # Диффузионный коэффициент
+    
+    # Параметры популяции U
+    b_U = 0.6
+    d_U = 0.1
+    c_V = 0.09
+    D_U = 1.0
+    
+    # Начальные условия
+    U0 = 50.0
+    V0 = 50.0
+    R = 10.0
+    
+    # Координаты пиков роста
+    x_kv, y_kv = L * 0.25, L * 0.75
+    x_ku, y_ku = L * 0.75, L * 0.25
+    
+    # Функции K_V и K_U
+    def K_V(x, y):
+        return np.exp(-((x - x_kv)**2 + (y - y_kv)**2) / (2 * (L / 10)**2))
+    
+    def K_U(x, y):
+        return np.exp(-((x - x_ku)**2 + (y - y_ku)**2) / (2 * (L / 10)**2))
+    
+    # Инициализация популяций
+    U = np.zeros((N, N))
+    V = np.zeros((N, N))
+    
+    U_center = (15.0, 85.0)
+    V_center = (85.0, 15.0)
+    
+    # Инициализация популяции U
+    distance_U = np.sqrt((X - U_center[0])**2 + (Y - U_center[1])**2)
+    U_initial_region = distance_U <= R
+    U[U_initial_region] = U0
+    
+    # Инициализация популяции V
+    distance_V = np.sqrt((X - V_center[0])**2 + (Y - V_center[1])**2)
+    V_initial_region = distance_V <= R
+    V[V_initial_region] = V0
+    
+    # Функция Рунге-Кутта 4-го порядка
+    def rk4(U, V, dt):
+        def dUdt(U, V):
+            growth = b_U * U - d_U * U**2 - c_V * U * V
+            diffusion = D_U * gaussian_filter(U, sigma=1, mode='constant', truncate=2.0)
+            KU = K_U(X, Y) * U
+            return growth + diffusion + KU
+    
+        def dVdt(U, V):
+            growth = b_V * V - d_V * V**2 - c_U * U * V
+            diffusion = D_V * gaussian_filter(V, sigma=1, mode='constant', truncate=2.0)
+            KV = K_V(X, Y) * V
+            return growth + diffusion + KV
+    
+        k1_U = dUdt(U, V)
+        k1_V = dVdt(U, V)
+    
+        k2_U = dUdt(U + dt * k1_U / 2, V + dt * k1_V / 2)
+        k2_V = dVdt(U + dt * k1_U / 2, V + dt * k1_V / 2)
+    
+        k3_U = dUdt(U + dt * k2_U / 2, V + dt * k2_V / 2)
+        k3_V = dVdt(U + dt * k2_U / 2, V + dt * k2_V / 2)
+    
+        k4_U = dUdt(U + dt * k3_U, V + dt * k3_V)
+        k4_V = dVdt(U + dt * k3_U, V + dt * k3_V)
+    
+        U_new = U + (dt / 6) * (k1_U + 2 * k2_U + 2 * k3_U + k4_U)
+        V_new = V + (dt / 6) * (k1_V + 2 * k2_V + 2 * k3_V + k4_V)
+    
+        U_new = np.maximum(U_new, 0)
+        V_new = np.maximum(V_new, 0)
+    
+        return U_new, V_new
+    
+    fig, ax = plt.subplots()
+    plt.xticks([])
+    plt.yticks([])
+    plt.close()
+    
+    # Цветовые карты
+    cmap_U = plt.cm.Blues
+    cmap_V = plt.cm.Greens
+    
+    # Инициализация изображений
+    im_U = None
+    im_V = None
+    
+    def init():
+        global im_U, im_V
+        im_U = ax.imshow(U, cmap=cmap_U, interpolation='nearest', origin='lower', extent=[0, L, 0, L])
+        im_V = ax.imshow(V, cmap=cmap_V, interpolation='nearest', origin='lower', extent=[0, L, 0, L], alpha=0.6)
+        ax.set_title('Время: 0.0')
+        return [im_U, im_V]
+    
+    def update(frame):
+        global U, V
+        U, V = rk4(U, V, dt)
+        im_U.set_data(U)
+        im_V.set_data(V)
+        ax.set_title(f'Время: {frame * dt:.1f}')
+        return [im_U, im_V]
+    
+    anim = FuncAnimation(fig, update, frames=Nt, init_func=init, blit=True)
+    anim.save('population.gif', fps=30)
+    
+
+In [ ]:
+    
+    
+     
+    
+
+
+# Таратин_Артём_ПМ22-1_ДЗ5.html
+In [1]:
+    
+    
+    import scipy.io.wavfile as siowav
+    import numpy as np
+    import IPython.display as ipd
+    import matplotlib.pyplot as plt
+    
+
+In [2]:
+    
+    
+    sr, sound = siowav.read("./test_sound.wav")
+    print(sr, sound.shape, type(sound[0]))
+    
+    
+    
+    44100 (7636608,) <class 'numpy.int16'>
+    
+
+In [3]:
+    
+    
+    sr, sound = siowav.read("./test_sound.wav")
+    print(sr, sound.shape, type(sound[0]))
+    start = 500000
+    fin = 985100
+    sound = sound.astype("float32")
+    
+    # Вырезаем аудиофрагмент и нормализуем его
+    sound = sound[start:fin] / np.max(sound[start:fin])
+    n = sound.shape[0]
+    print("Дискретизация = {}".format(n))
+    
+    duration = len(sound) / sr
+    print("Продолжительность аудиофрагмента = {} секунд".format(duration))
+    
+    plt.plot(sound)
+    plt.show()
+    
+    
+    
+    44100 (7636608,) <class 'numpy.int16'>
+    Дискретизация = 485100
+    Продолжительность аудиофрагмента = 11.0 секунд
+    
+
+In [4]:
+    
+    
+    ipd.Audio(sound, rate=sr)
+    
+
+Out[4]:
+
+Your browser does not support the audio element. 
+
+In [5]:
+    
+    
+    # Добавляем шум
+    corrupt_sound1 = sound + 0.1 * np.random.randn(sound.shape[0])
+    corrupt_sound1 = corrupt_sound1 / np.max(np.abs(corrupt_sound1))
+    plt.plot(corrupt_sound1)
+    plt.show()
+    
+
+In [6]:
+    
+    
+    ipd.Audio(corrupt_sound1, rate=sr)
+    
+
+Out[6]:
+
+Your browser does not support the audio element. 
+
+In [7]:
+    
+    
+    def generate_sine_wave(freq, n, duration):
+        x = np.linspace(0, duration, n, endpoint=False)
+        frequencies = x * freq
+        y = np.sin((2 * np.pi) * frequencies)
+        return x, y
+    
+
+In [8]:
+    
+    
+    _, noise_tone = generate_sine_wave(int(400*np.random.randn()), n, int(duration))
+    corrupt_sound2 = sound + 0.1 * noise_tone
+    
+    _, noise_tone = generate_sine_wave(int(3000*np.random.randn()), n, int(duration))
+    corrupt_sound2 = corrupt_sound2 + 0.15 * noise_tone
+    corrupt_sound2 = corrupt_sound2 / np.max(np.abs(corrupt_sound2))
+    plt.plot(corrupt_sound2)
+    
+
+Out[8]:
+    
+    
+    [<matplotlib.lines.Line2D at 0x10fe7a510>]
+
+In [9]:
+    
+    
+    ipd.Audio(corrupt_sound2, rate=sr)
+    
+
+Out[9]:
+
+Your browser does not support the audio element. 
+
+In [10]:
+    
+    
+    # При помощи разложения Фурье, разбивая исходный corrupt_sound на небольшие части,
+    # удалите шум для каждого из сигналов corrupt_sound1 и corrupt_sound2.
+    
+
+In [11]:
+    
+    
+    def denoise_signal(signal, sr, frame_size, overlap, cutoff_freq):
+        hop_size = frame_size - overlap
+        freq_bins = np.fft.rfftfreq(frame_size, d=1/sr)
+    
+        # Индекс частоты среза
+        cutoff_idx = np.where(freq_bins > cutoff_freq)[0]
+        if len(cutoff_idx) > 0:
+            cutoff_idx = cutoff_idx[0]
+        else:
+            cutoff_idx = len(freq_bins)
+        
+        # Кол-во фреймов
+        num_frames = (len(signal) - frame_size) // hop_size + 1
+        
+        window = np.hanning(frame_size)
+        
+        denoised = np.zeros(len(signal))
+        window_sum = np.zeros(len(signal))
+        
+        for i in range(num_frames):
+            start_idx = i * hop_size
+            end_idx = start_idx + frame_size
+            frame = signal[start_idx:end_idx]
+            
+            # Применяем окно
+            frame_windowed = frame * window
+            
+            # Прямое преобразование Фурье
+            spectrum = np.fft.rfft(frame_windowed)
+            
+            # Обнуляем частоты выше cutoff_idx
+            spectrum[cutoff_idx:] = 0
+            
+            # Обратное преобразование
+            frame_reconstructed = np.fft.irfft(spectrum)
+            
+            denoised[start_idx:end_idx] += frame_reconstructed * window
+            window_sum[start_idx:end_idx] += window**2
+        
+        nonzero_indices = window_sum > 1e-8
+        denoised[nonzero_indices] /= window_sum[nonzero_indices]
+        
+        # Нормируем результат
+        max_val = np.max(np.abs(denoised))
+        if max_val > 0:
+            denoised = denoised / max_val
+    
+        return denoised
+    
+
+In [12]:
+    
+    
+    # Очищаем corrupt_sound1
+    clean_sound1 = denoise_signal(corrupt_sound1, sr, frame_size=8192, overlap=4096, cutoff_freq=1000)
+    plt.figure(figsize=(10, 3))
+    plt.title("Очищенный сигнал 1")
+    plt.plot(clean_sound1)
+    plt.show()
+    ipd.display(ipd.Audio(clean_sound1, rate=sr))
+    
+
+Your browser does not support the audio element. 
+
+In [13]:
+    
+    
+    # Очищаем corrupt_sound2
+    clean_sound2 = denoise_signal(corrupt_sound2, sr, frame_size=8192, overlap=4096, cutoff_freq=2000)
+    plt.figure(figsize=(10, 3))
+    plt.title("Очищенный сигнал 2")
+    plt.plot(clean_sound2)
+    plt.show()
+    ipd.display(ipd.Audio(clean_sound2, rate=sr))
+    
+
+Your browser does not support the audio element. 
+
+In [ ]:
+    
+    
+     
+    
+
+
+# Таратин_Артём_ПМ22-1_ДЗ-1.html
+In [3]:
+    
+    
+    import math
+    import numpy as np
+    
+
+In [12]:
+    
+    
+    # Метод вращений
+    def rotation_method(A, eps=1e-10, max_iterations=100):
+        n = A.shape[0]
+        # Инициализация матрицы собственных векторов
+        V = np.eye(n)
+        # Создание копии матрицы A
+        A = A.copy()
+    
+        for iteration in range(max_iterations):
+            # Поиск индексов максимальног по модулю внедиагонального элемента
+            max_val = 0
+            p = 0
+            q = 0
+            for i in range(n):
+                for j in range(i+1, n):
+                    if abs(A[i][j]) > max_val:
+                        max_val = abs(A[i][j])
+                        p = i
+                        q = j
+    
+            # Проверка условия остановки
+            if max_val < eps:
+                print(f"Алгоритм сошелся за {iteration} итераций")
+                break
+    
+            # Вычисление угла поворота
+            if A[p][p] == A[q][q]:
+                theta = math.pi / 4
+            else:
+                tau = (2 * A[p][q]) / (A[q][q] - A[p][p])
+                theta = 0.5 * math.atan(tau)
+    
+            cos_theta = math.cos(theta)
+            sin_theta = math.sin(theta)
+    
+            # Создание матрицы вращения Якоби
+            J = np.eye(n)
+            J[p][p] = cos_theta
+            J[q][q] = cos_theta
+            J[p][q] = sin_theta
+            J[q][p] = -sin_theta
+    
+            # Применение вращения к матрице
+            A = J.T @ A @ J
+    
+            # Обновление матрицы собственных векторов
+            V = V @ J
+    
+        else:
+            print(f"Алгоритм НЕ сошелся за {iteration} итераций")
+    
+        # Сбор собственных значений
+        eigenvalues = np.diag(A)
+        eigenvectors = V
+    
+        return eigenvalues, eigenvectors
+    
+
+In [13]:
+    
+    
+    # Исходная матрица
+    A = np.array([
+        [10, 4],
+        [4, 5]
+    ], dtype=float)
+    
+    eig_vals, eig_vecs = rotation_method(A)
+    
+    print("Собственные значения:")
+    print(eig_vals)
+    print("\nСобственные векторы:")
+    print(eig_vecs)
+    
+    
+    
+    Алгоритм сошелся за 1 итераций
+    Собственные значения:
+    [12.21699057  2.78300943]
+    
+    Собственные векторы:
+    [[ 0.87464248 -0.48476853]
+     [ 0.48476853  0.87464248]]
+    
+
+In [14]:
+    
+    
+    # Для проверки, используя numpy
+    np_eig_vals, np_eig_vecs = np.linalg.eig(A)
+    
+    print("Собственные значения (numpy.linalg.eig):")
+    print(np_eig_vals)
+    print("\nСобственные векторы (numpy.linalg.eig):")
+    print(np_eig_vecs)
+    
+    
+    
+    Собственные значения (numpy.linalg.eig):
+    [12.21699057  2.78300943]
+    
+    Собственные векторы (numpy.linalg.eig):
+    [[ 0.87464248 -0.48476853]
+     [ 0.48476853  0.87464248]]
+    
+
+In [ ]:
+    
+    
+     
+    
+
+
+# Таратин_Артём_ПМ22-1_ДЗ_2.html
+In [1]:
+    
+    
+    import random
+    
+
+In [2]:
+    
+    
+    # Функция для умножения двух матриц (количество столбцов первой должно совпадать с количеством строк второй)
+    def multiply_matrices(matrix1, matrix2):
+        rows_matrix1 = len(matrix1)
+        cols_matrix1 = len(matrix1[0])
+        cols_matrix2 = len(matrix2[0])
+        
+        # Инициализация результирующей матрицы нулями
+        result = [[0 for _ in range(cols_matrix2)] for _ in range(rows_matrix1)]
+        
+        # Выполнение умножения
+        for row in range(rows_matrix1):
+            for col in range(cols_matrix2):
+                for index in range(cols_matrix1):
+                    result[row][col] += matrix1[row][index] * matrix2[index][col]
+        return result
+    
+
+In [3]:
+    
+    
+    # Функция для транспонирования матрицы
+    def transpose_matrix(matrix):
+        rows = len(matrix)
+        cols = len(matrix[0])
+        transposed = [[0 for _ in range(rows)] for _ in range(cols)]
+        
+        for i in range(rows):
+            for j in range(cols):
+                transposed[j][i] = matrix[i][j]
+        return transposed
+    
+
+In [4]:
+    
+    
+    # Функция для вычисления скалярного произведения двух векторов
+    def scalar_product(vector1, vector2):
+        return sum(x * y for x, y in zip(vector1, vector2))
+    
+
+In [5]:
+    
+    
+    # Функция для вычисления скалярного произведения двух векторов
+    def scalar_product(vector1, vector2):
+        return sum(x * y for x, y in zip(vector1, vector2))
+    
+    # Функция для QR-разложения матрицы методом Грама-Шмидта
+    def gram_schmidt_qr(matrix, precision=10):
+        num_rows = len(matrix)
+        num_cols = len(matrix[0])
+        cols = transpose_matrix(matrix)  # Получение столбцов матрицы
+        orthogonal_vectors = []
+        
+        for i in range(num_cols):
+            current_vector = cols[i].copy()
+            for j in range(len(orthogonal_vectors)):
+                proj_coeff = scalar_product(orthogonal_vectors[j], cols[i]) / scalar_product(orthogonal_vectors[j], orthogonal_vectors[j])
+                current_vector = [elem - proj_coeff * orthogonal_vectors[j][k] for k, elem in enumerate(current_vector)]
+            orthogonal_vectors.append(current_vector)
+        
+        # Нормализация векторов для получения ортонормированной матрицы Q
+        orthonormal_cols = []
+        for vec in orthogonal_vectors:
+            norm = sum(element**2 for element in vec) ** 0.5
+            if norm != 0:
+                orthonormal_cols.append([element / norm for element in vec])
+            else:
+                orthonormal_cols.append(vec)
+        
+        Q = transpose_matrix(orthonormal_cols)
+        R = multiply_matrices(transpose_matrix(Q), matrix)
+        
+        # Округление элементов матриц Q и R
+        Q = [[round(element, precision) for element in row] for row in Q]
+        R = [[round(element, precision) for element in row] for row in R]
+        
+        return Q, R
+    
+
+In [6]:
+    
+    
+    # Функция для стандартного QR-алгоритма нахождения собственных значений
+    def standard_qr_algorithm(matrix, iterations, precision=10):
+        current_matrix = [row.copy() for row in matrix]
+        
+        for _ in range(iterations):
+            Q, R = gram_schmidt_qr(current_matrix, precision)
+            current_matrix = multiply_matrices(R, Q)
+        
+        # Округление итоговой матрицы
+        final_matrix = [[round(element, precision) for element in row] for row in current_matrix]
+        
+        # Вывод результата
+        print(f"Результат стандартного QR-алгоритма после {iterations} итераций:")
+        for row in final_matrix:
+            print(row)
+        return final_matrix
+    
+
+In [7]:
+    
+    
+    # Функция для неявного QR-алгоритма с использованием случайных сдвигов
+    def implicit_qr_algorithm(matrix, iterations, precision=10, random_seed=42):
+        random.seed(random_seed)
+        size = len(matrix)
+        current_matrix = [row.copy() for row in matrix]
+        
+        for _ in range(iterations):
+            shift = random.random()
+            for i in range(size):
+                current_matrix[i][i] -= shift
+            
+            Q, R = gram_schmidt_qr(current_matrix, precision)
+            current_matrix = multiply_matrices(R, Q)
+            
+            for i in range(size):
+                current_matrix[i][i] += shift
+        
+        # Округление итоговой матрицы
+        final_matrix = [[round(element, precision) for element in row] for row in current_matrix]
+        
+        # Вывод результата
+        print(f"Результат неявного QR-алгоритма после {iterations} итераций:")
+        for row in final_matrix:
+            print(row)
+        return final_matrix
+    
+
+In [25]:
+    
+    
+    M = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+    ]
+    
+    for row in M:
+        print(row)
+    
+    
+    
+    [1, 2, 3]
+    [4, 5, 6]
+    [7, 8, 9]
+    
+
+In [30]:
+    
+    
+    # Применение стандартного QR-алгоритма
+    st_qr = standard_qr_algorithm(M, iterations=20)
+    
+    
+    
+    Результат стандартного QR-алгоритма после 20 итераций:
+    [19.3975181278, -6.9279513951, -1e-09]
+    [0.0, -1.8557726143, -3e-10]
+    [-1.4e-09, 3e-10, 0.0]
+    
+
+In [31]:
+    
+    
+    # Применение неявного QR-алгоритма
+    impl_qr = implicit_qr_algorithm(M, iterations=100)
+    
+    
+    
+    Результат неявного QR-алгоритма после 100 итераций:
+    [16.1168439697, -4.8989794824, -8e-10]
+    [0.0, -1.1168439698, 1e-10]
+    [0.0, 0.0, -1e-10]
+    
+
+In [ ]:
+    
+    
+     
+    
+
