@@ -1,0 +1,166 @@
+{
+    "themes": {
+        "default": {
+            "name": "Default Terminal",
+            "description": "Standard theme based on htop colors",
+            "colors": {
+                "normal": {
+                    "fg": "GREEN",
+                    "bg": -1,
+                    "attrs": []
+                },
+                "selected": {
+                    "fg": "BLACK",
+                    "bg": "GREEN",
+                    "attrs": []
+                },
+                "warning": {
+                    "fg": "YELLOW",
+                    "bg": -1,
+                    "attrs": []
+                },
+                "critical": {
+                    "fg": "RED",
+                    "bg": -1,
+                    "attrs": []
+                },
+                "info": {
+                    "fg": "CYAN",
+                    "bg": -1,
+                    "attrs": []
+                },
+                "ai_process": {
+                    "fg": "MAGENTA",
+                    "bg": -1,
+                    "attrs": []
+                },
+                "header": {
+                    "fg": "BLUE",
+                    "bg": -1,
+                    "attrs": []
+                },
+                "footer": {
+                    "fg": "WHITE",
+                    "bg": -1,
+                    "attrs": []
+                }
+            },
+            "progress_bar": {
+                "filled": "█",
+                "empty": "░",
+                "thresholds": {
+                    "critical": 80,
+                    "warning": 60
+                }
+            }
+        },
+        "high_contrast": {
+            "name": "High Contrast",
+            "description": "For terminals with challenging backgrounds",
+            "colors": {
+                "normal": {
+                    "fg": "WHITE",
+                    "bg": -1,
+                    "attrs": ["BOLD"]
+                },
+                "selected": {
+                    "fg": "BLACK",
+                    "bg": "WHITE",
+                    "attrs": []
+                },
+                "warning": {
+                    "fg": "YELLOW",
+                    "bg": -1,
+                    "attrs": ["BOLD"]
+                },
+                "critical": {
+                    "fg": "RED",
+                    "bg": -1,
+                    "attrs": ["BOLD"]
+                },
+                "info": {
+                    "fg": "CYAN",
+                    "bg": -1,
+                    "attrs": ["BOLD"]
+                },
+                "ai_process": {
+                    "fg": "GREEN",
+                    "bg": -1,
+                    "attrs": ["BOLD"]
+                },
+                "header": {
+                    "fg": "WHITE",
+                    "bg": -1,
+                    "attrs": ["BOLD"]
+                },
+                "footer": {
+                    "fg": "WHITE",
+                    "bg": -1,
+                    "attrs": ["BOLD"]
+                }
+            },
+            "progress_bar": {
+                "filled": "█",
+                "empty": "▒",
+                "thresholds": {
+                    "critical": 80,
+                    "warning": 60
+                }
+            }
+        },
+        "light": {
+            "name": "Light Terminal",
+            "description": "For light background terminals",
+            "colors": {
+                "normal": {
+                    "fg": "BLACK",
+                    "bg": -1,
+                    "attrs": []
+                },
+                "selected": {
+                    "fg": "WHITE",
+                    "bg": "BLUE",
+                    "attrs": []
+                },
+                "warning": {
+                    "fg": "RED",
+                    "bg": -1,
+                    "attrs": ["BOLD"]
+                },
+                "critical": {
+                    "fg": "MAGENTA",
+                    "bg": -1,
+                    "attrs": ["BOLD"]
+                },
+                "info": {
+                    "fg": "BLUE",
+                    "bg": -1,
+                    "attrs": []
+                },
+                "ai_process": {
+                    "fg": "GREEN",
+                    "bg": -1,
+                    "attrs": []
+                },
+                "header": {
+                    "fg": "BLACK",
+                    "bg": -1,
+                    "attrs": ["BOLD"]
+                },
+                "footer": {
+                    "fg": "BLACK",
+                    "bg": -1,
+                    "attrs": []
+                }
+            },
+            "progress_bar": {
+                "filled": "█",
+                "empty": "░",
+                "thresholds": {
+                    "critical": 80,
+                    "warning": 60
+                }
+            }
+        }
+    }
+}
