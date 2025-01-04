@@ -1,0 +1,88 @@
+Metadata-Version: 2.4
+Name: optima35
+Version: 0.6.3a2
+Summary: OPTIMA35 is a package to modify images with pillow and piexif.
+Project-URL: Homepage, https://gitlab.com/CodeByMrFinchum/optima35
+Author: Mr. Finchum
+License-File: LICENSE.md
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: piexif
+Requires-Dist: pillow
+Description-Content-Type: text/markdown
+
+# OPTIMA35
+[optima35](https://gitlab.com/CodeByMrFinchum/optima35) is a package utilizing pillow and piexif to modify images, I have also an GUI for this package, [OptimaLab35](https://gitlab.com/CodeByMrFinchum/OptimaLab35)
+
+can be installed with pip, dependencies will be installed automaticly.
+```bash
+pip install optima35
+```
+## Overview
+
+**OPTIMA35** (**Organizing, Processing, Tweaking Images, and Modifying scanned Analogs from 35mm Film**) is a Python-based project designed to streamline the management and editing of metadata and images from analog photography. While it was created with analog photography in mind, it is versatile enough to handle any type of images.
+
+This project replaces my earlier [analogphotography](https://gitlab.com/sf-bashscripts/analogphotography) bash script collection, which has now been archived in favor of OPTIMA-35.
+
+## Current Status
+
+### Development and Versioning Notes
+
+**OPTIMA35** is currently in an **alpha stage** and under active development. As a result:
+- The README may occasionally be outdated.
+- Users are encouraged to check for new branches and read the [**CHANGELOG**](https://gitlab.com/CodeByMrFinchum/optima35/-/blob/main/CHANGELOG.md?ref_type=heads), which is consistently updated and well-documented.
+- Bugs or unforeseen behavior may occur.
+
+While the project follows a semantic versioning structure (major.minor.patch), breaking changes—typically reserved for major version increments—may also occur in minor version updates during this development phase. Please review the changelog carefully before updating.
+
+### Available Features:
+
+**Image Processing:**
+- Resizing
+- Renaming with order adjustment
+- Grayscale conversion
+- Brightness adjustment
+- Contrast adjustment
+**EXIF Management:**
+- Copy EXIF data
+- Add custom EXIF information
+- Add GPS data
+- Add a date to EXIF
+- Remove EXIF
+**Watermarking**
+
+## Dependencies
+
+**Required Dependencies:**
+- **piexif**: For reading, modifying, and writing EXIF metadata.
+- **pillow**: For image processing.
+
+# Use of LLMs
+In the interest of transparency, I disclose that Generative AI (GAI) large language models (LLMs), including OpenAI’s ChatGPT and Ollama models (e.g., OpenCoder and Qwen2.5-coder), have been used to assist in this project.
+
+## Areas of Assistance:
+- Project discussions and planning
+- Spelling and grammar corrections
+- Suggestions for suitable packages and libraries
+- Guidance on code structure and organization
+
+In cases where LLMs contribute directly to code or provide substantial optimizations, such contributions will be disclosed and documented in the relevant sections of the codebase.
+
+**Ollama**
+- mradermacher gguf Q4K-M Instruct version of infly/OpenCoder-1.5B
+- unsloth gguf Q4K_M Instruct version of both Qwen/QWEN2 1.5B and 3B
+
+### References
+1. **Huang, Siming, et al.**
+   *OpenCoder: The Open Cookbook for Top-Tier Code Large Language Models.*
+   2024. [PDF](https://arxiv.org/pdf/2411.04905)
+
+2. **Hui, Binyuan, et al.**
+   *Qwen2.5-Coder Technical Report.*
+   *arXiv preprint arXiv:2409.12186*, 2024. [arXiv](https://arxiv.org/abs/2409.12186)
+
+3. **Yang, An, et al.**
+   *Qwen2 Technical Report.*
+   *arXiv preprint arXiv:2407.10671*, 2024. [arXiv](https://arxiv.org/abs/2407.10671)
