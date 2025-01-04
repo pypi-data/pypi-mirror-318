@@ -1,0 +1,2 @@
+[console_scripts]
+pyspark-explorer = pyspark_explorer.run:run
