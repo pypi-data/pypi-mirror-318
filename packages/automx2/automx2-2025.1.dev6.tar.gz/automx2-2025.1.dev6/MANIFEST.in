@@ -1,0 +1,4 @@
+include contrib/* contrib/OpenRC/*
+exclude contrib/package.sh contrib/unittest.sh
+include docs/*.html docs/*.pdf docs/*.svg
+include tests/*.conf tests/*.py
