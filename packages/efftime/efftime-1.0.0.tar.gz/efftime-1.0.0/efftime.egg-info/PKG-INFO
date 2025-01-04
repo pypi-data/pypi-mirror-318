@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: efftime
+Version: 1.0.0
+Summary: A check Program run efficiency.
+Author: BreezeSun
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# efftime
+A check Program run efficiency.
