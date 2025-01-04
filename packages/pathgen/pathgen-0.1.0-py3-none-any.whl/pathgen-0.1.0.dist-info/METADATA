@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pathgen
+Version: 0.1.0
+Summary: A tool to generate file paths
+Home-page: https://x.com/Lanaev0li
+Author: Avinion
+Author-email: shizofrin@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Pathgen
+
+Pathgen is a tool to generate file paths.
+
+## Installation
+
+To install Pathgen, use:
+
+```bash
+pip install pathgen
+```
+
+## Usage
+
+Run the command:
+
+```bash
+pathgen <base_path> <repeat_count>
