@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+JynAi/__init__.py
+JynAi/module.py
+JynAi.egg-info/PKG-INFO
+JynAi.egg-info/SOURCES.txt
+JynAi.egg-info/dependency_links.txt
+JynAi.egg-info/requires.txt
+JynAi.egg-info/top_level.txt
