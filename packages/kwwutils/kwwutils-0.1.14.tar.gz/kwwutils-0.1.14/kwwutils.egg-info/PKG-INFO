@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: kwwutils
+Version: 0.1.14
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: langchain-chroma>=0.1.4
+Requires-Dist: langchain>=0.3.13
+Requires-Dist: langchain-community>=0.3.13
+Requires-Dist: langchain-ollama>=0.2.2
+Requires-Dist: transformers>=4.47.1
+Requires-Dist: pypdf>=5.1.0
+Requires-Dist: gpt4all>=2.8.2
+Requires-Dist: sentence-transformers>=3.3.1
+Requires-Dist: bs4>=0.0.2
+Requires-Dist: langchain-huggingface>=0.1.2
+Requires-Dist: faiss-cpu>=1.9.0.post1
+Requires-Dist: langchain-faiss>=0.1.1
+
+cat kwwutils.egg-info/PKG-INFO
+
+from setuptools import setup, find_packages
+
+setup(
+    name='kwwutils',
+    version='0.1.14',
+    packages=find_packages(include=['kwwutils', 'tests']),
+    # other options like install_requires, author, etc.
+)
+
+
+mv setup.cfg setup_old.cfg  # Move any existing setup.cfg file
+nano setup.cfg
+
+
+[metadata]
+name = kwwutils
+version = 0.1.14
+
+
+rm -rf build dist kwwutils.egg-info
+python setup.py sdist bdist_wheel
+uv pip install --force-reinstall --no-cache-dir -e .
+
+
+- debugging
+from setuptools import setup, find_packages
+
+version = '0.1.14'
+print(f"Building version {version}")
+
+setup(
+    name='kwwutils',
+    version=version,
+    packages=find_packages(include=['kwwutils', 'tests']),
+    # other options like install_requires, author, etc.
+)
+
