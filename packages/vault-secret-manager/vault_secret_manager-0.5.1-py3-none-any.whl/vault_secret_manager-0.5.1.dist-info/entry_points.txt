@@ -1,0 +1,3 @@
+[console_scripts]
+vault-secret-manager=vault_secret_manager.main:app
+
