@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+xscience/__init__.py
+xscience.egg-info/PKG-INFO
+xscience.egg-info/SOURCES.txt
+xscience.egg-info/dependency_links.txt
+xscience.egg-info/requires.txt
+xscience.egg-info/top_level.txt
