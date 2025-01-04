@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "advanced_tabular_nn_models_pt"
+version = "0.0.2"
+authors = [
+  { name="Ali Haidar Ahmad", email="ali.h.ahmad001@gmail.com" },
+]
+description = "Deep learning for tabular data"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/AliHaiderAhmad001/advanced_tabular_nn_models_pt/tree/main"
+Issues = "https://github.com/AliHaiderAhmad001/advanced_tabular_nn_models_pt/issues"
