@@ -1,0 +1,12 @@
+optionset/__init__.py,sha256=g55WqPfUzpuQpOTHYE8iZb3Y-bn0h6fHUIWEh5AFJkk,281
+optionset/optionset.py,sha256=LiEg9VG_Kkxqua7WI80N21_gh6JBONxF9FzxKQJUZaA,56961
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/checkstyle.py,sha256=DKEq0Ouwpee1E98tOgdGs0vMGS6M5vScFgBIXcFA4WI,725
+tests/test_optionset.py,sha256=awgmplvMzEhBQV8DIzuHmgtXtRtMDD8zvbQrJWjQybs,27721
+optionset-25.1.3.dist-info/AUTHORS,sha256=9DWiFzbz35bwKDfD7ZRwtNRV1ETiwtHn_a9TaapvNqQ,86
+optionset-25.1.3.dist-info/LICENSE,sha256=GzeCzK17hhQQDNow0_r0L8OfLpeTKQjFQwBQU7ZUymg,32473
+optionset-25.1.3.dist-info/METADATA,sha256=voHMPjanm7TG6wEnxZZ9Lyqvyk8W4HfrUGq7VkB1EeI,9727
+optionset-25.1.3.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+optionset-25.1.3.dist-info/entry_points.txt,sha256=pfskHHMMGAeJmfGcjoXsUgkPJp0pO5UTFDs-yGs6mDA,55
+optionset-25.1.3.dist-info/top_level.txt,sha256=hon8cTHg8PMkIVIsfCtscMpNUvcqBo6HmsFwEeZp-js,16
+optionset-25.1.3.dist-info/RECORD,,
