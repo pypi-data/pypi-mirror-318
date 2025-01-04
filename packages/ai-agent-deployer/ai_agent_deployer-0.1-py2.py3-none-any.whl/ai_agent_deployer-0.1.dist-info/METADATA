@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: ai_agent_deployer
+Version: 0.1
+Summary: SDK for deploying AI agents
+Author: custom agent deployer
+Requires-Dist: cryptography
+Requires-Dist: huggingface-hub
+Requires-Dist: openai
+Requires-Dist: streamlit
