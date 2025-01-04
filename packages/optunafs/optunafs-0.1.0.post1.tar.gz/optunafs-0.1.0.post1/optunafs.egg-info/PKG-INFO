@@ -1,0 +1,154 @@
+Metadata-Version: 2.1
+Name: optunafs
+Version: 0.1.0.post1
+Summary: Feature selection with Optuna optimization
+Author-email: Dilge Karakas <karakasdilge@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/dilgekarakas/optunafs
+Project-URL: Documentation, https://github.com/dilgekarakas/optunafs#readme
+Project-URL: Repository, https://github.com/dilgekarakas/optunafs.git
+Keywords: machine learning,feature selection,optuna,optimization
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Requires-Dist: optuna
+Requires-Dist: lightgbm>=4.5.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: black>=22.0; extra == "dev"
+Requires-Dist: isort>=5.0; extra == "dev"
+Requires-Dist: mypy>=0.9; extra == "dev"
+
+# OptunaFS
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/dilgekarakas/OptunaFS/refs/heads/main/assets/images/logo.svg" width="200" alt="OptunaFS Logo">
+</p>
+
+OptunaFS is a Python library that enhances feature selection in machine learning workflows by leveraging Optuna's optimization framework. It provides an intelligent way to identify and select the most impactful features for your models.
+
+## Key Features
+
+- Automated feature selection through Optuna's hyperparameter optimization
+- Supports any scikit-learn compatible estimator
+- Built-in cross-validation for robust feature evaluation
+- Support for feature grouping and early stopping
+- Detailed feature importance analysis
+- Type-safe implementation with comprehensive error handling
+
+## Installation
+
+```bash
+pip install optunafs
+```
+
+## Usage Example
+
+```python
+from optunafs import FeatureSelector
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.datasets import make_classification
+
+# Create example dataset
+X, y = make_classification(
+    n_samples=1000, 
+    n_features=25,
+    n_informative=10,
+    random_state=42
+)
+
+# Initialize model
+model = RandomForestClassifier(random_state=42)
+
+# Create feature selector
+selector = FeatureSelector(
+    model=model,
+    X=X,
+    y=y,
+    scoring='roc_auc',
+    cv=4,
+    optimization_direction='maximize'
+)
+
+# Run optimization
+result = selector.optimize(n_trials=100)
+
+# Get selected features
+print(f"Selected features: {result.selected_features}")
+print(f"Best score: {result.best_score:.4f}")
+
+# Transform data using selected features
+X_transformed = selector.transform(X)
+```
+
+## Useful Features
+
+### Feature Groups
+
+You can define groups of features that should be selected together:
+
+```python
+feature_groups = {
+    'group1': ['feature1', 'feature2', 'feature3'],
+    'group2': ['feature4', 'feature5']
+}
+
+selector = FeatureSelector(
+    model=model,
+    X=X,
+    y=y,
+    scoring='accuracy',
+    feature_groups=feature_groups
+)
+```
+
+### Early Stopping
+
+Enable early stopping to automatically halt optimization when no improvement is seen:
+
+```python
+selector = FeatureSelector(
+    model=model,
+    X=X,
+    y=y,
+    scoring='accuracy',
+    early_stopping_rounds=10
+)
+```
+
+### Feature Importance Analysis
+
+Get detailed insights into feature selection patterns:
+
+```python
+importance_df = selector.get_feature_importance()
+print(importance_df.sort_values('selection_frequency', ascending=False))
+```
+
+## Development
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/optunafs.git
+
+# Install development dependencies
+pip install -e ".[dev]"
+
+# Run tests
+pytest tests/
+```
+
+## License
+
+This project is licensed under the terms of the MIT license.
