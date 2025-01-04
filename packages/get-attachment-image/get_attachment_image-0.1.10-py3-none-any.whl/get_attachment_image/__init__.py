@@ -1,0 +1,1 @@
+from .attachment import get_attachment_image
