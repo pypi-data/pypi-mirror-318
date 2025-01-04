@@ -1,0 +1,6 @@
+requests
+
+[docs]
+sphinx
+sphinx-rtd-theme
+sphinx-markdown-builder

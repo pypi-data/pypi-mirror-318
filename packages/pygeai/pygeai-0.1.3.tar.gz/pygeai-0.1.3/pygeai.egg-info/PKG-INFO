@@ -1,0 +1,117 @@
+Metadata-Version: 2.1
+Name: pygeai
+Version: 0.1.3
+Summary: Software Development Kit to interact with Globant Enterprise AI.
+Author-email: Alejandro Trinidad <alejandro.trinidad@globant.com>
+License: The MIT License (MIT)
+        Copyright © 2025 Globant
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Keywords: geai,pygeai
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx-rtd-theme; extra == "docs"
+Requires-Dist: sphinx-markdown-builder; extra == "docs"
+
+# PyGEAI - SDK for Globant Enterprise AI
+
+PyGEAI is a Software Development Kit to interact with GEAI. It's composed of libraries, tools, code samples and
+other documentation that allows developers to interact with the platform in an easier manner.
+
+## Repository
+[GitHub repository](https://github.com/VY-GEN032-KG/pygeai)
+
+## Configuration
+In order to use the SDK, GEAI_API_KEY and GEAI_API_BASE_URL must be defined. There are three ways in which they
+can be used:
+- Environment variables: Setting GEAI_API_KEY and GEAI_API_BASE_URL as environment variables.
+- Credentials file: Setting GEAI_API_KEY and GEAI_API_BASE_URL in ${USER_HOME}/.geai/credentials
+- Client instantiation: When instantiating a client, one can set the api_key and base_url parameters.
+
+## Modules
+The SDK is composed of several packages, enclosed within a meta-package:
+
+- pygeai: meta-package that encapsulates all the components of the SDK.
+  - pygeai-cli: command line tool to interact with the SDK
+  - pygeai-chat: interactive version of the cli tool
+  - pygeai-dbg: debugger to deal with potential issues with the SDK and to have a detailed view of what it’s doing.
+  - pygeai-core: to handle interaction with base components of GEAI. Also to handle users, groups, permissions, API keys, organizations, projects, etc
+  - pygeai-agent: to handle interactions with Agent Studio
+  - pygeai-assistant: to handle interaction with Data Analyst Assistants, Rag Assistants, Chat with Data Assistants, Chat with API Assistants and Chat Assistants.
+  - pygeai-flows: to handle interactions with Flows
+
+
+## Usage
+### Local install
+
+Clone the repository.
+Create virtual environment
+```
+~$ python3 -m venv venv
+```
+Enable virtual environment:
+```
+~$ source venv/bin/activate
+```
+Install module
+```
+(venv) ~$ pip install -e . 
+```
+Check version
+```
+(venv) ~$ geai v 
+```
+
+### Local update
+Whenever a new version of the project is available, one can update by pulling the latest version and reinstalling the package:
+Update repository
+```
+(venv) ~$ git pull origin master 
+```
+Reinstall module
+```
+(venv) ~$ pip install -e . 
+```
+Check version
+```
+(venv) ~$ geai v 
+```
+
+
+## Documentation
+The documentation is generated with Sphinx.
+
+Generate rst files:
+```
+sphinx-apidoc -f -o docs/source pygeai
+```
+
+To generate a new version of the documentation, run:
+```
+(venv) ~$ sphinx-build -M html docs/source docs/build
+```
+To generate a new version of the documentation in markdown format, run:
+```
+(venv) ~$ sphinx-build -b markdown docs/source docs/build/markdown
+```
+
+
+## Authors
+Copyright 2024, Globant. All rights reserved
+
+Developers:
+- Alejandro Trinidad <alejandro.trinidad@globant.com>
