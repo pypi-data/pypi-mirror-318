@@ -1,0 +1,65 @@
+{
+    "py/object": "bark_monitor.recorders.recording.Recording",
+    "_start": null,
+    "_start_end": [
+        {
+            "py/tuple": [
+                {
+                    "py/object": "datetime.datetime",
+                    "__reduce__": [
+                        {
+                            "py/type": "datetime.datetime"
+                        },
+                        [
+                            "B+cGGRI2Iw1m3w=="
+                        ]
+                    ]
+                },
+                {
+                    "py/object": "datetime.datetime",
+                    "__reduce__": [
+                        {
+                            "py/type": "datetime.datetime"
+                        },
+                        [
+                            "B+cGGRI2KApcDg=="
+                        ]
+                    ]
+                }
+            ]
+        }
+    ],
+    "_time_barked": {
+        "today": {
+            "py/reduce": [
+                {
+                    "py/type": "datetime.timedelta"
+                },
+                {
+                    "py/tuple": [
+                        2,
+                        0,
+                        0
+                    ]
+                }
+            ]
+        }
+    },
+    "_output_folder": {
+        "py/reduce": [
+            {
+                "py/type": "pathlib.PosixPath"
+            },
+            {
+                "py/tuple": [
+                    "tests",
+                    "data"
+                ]
+            }
+        ]
+    },
+    "_activity_tracker": {
+        "json://{\"py/object\": \"datetime.datetime\", \"__reduce__\": [{\"py/type\": \"datetime.datetime\"}, [\"B+cBAQAAAAAAAA==\"]]}": "test activity",
+        "json://{\"py/object\": \"datetime.datetime\", \"__reduce__\": [{\"py/type\": \"datetime.datetime\"}, [\"B+cBAgAAAAAAAA==\"]]}": "test activity"
+    }
+}
