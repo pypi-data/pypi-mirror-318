@@ -1,0 +1,15 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "customaiagent" 
+version = "0.1.2"
+description = "SDK for deploying custom AI agents"
+authors = [{"name" = "Your Name"}]
+dependencies = [
+   "cryptography",
+   "huggingface_hub", 
+   "openai",
+   "streamlit"
+]
