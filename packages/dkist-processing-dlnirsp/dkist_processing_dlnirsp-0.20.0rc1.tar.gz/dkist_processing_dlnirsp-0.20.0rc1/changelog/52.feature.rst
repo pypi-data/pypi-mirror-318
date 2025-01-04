@@ -1,0 +1,2 @@
+Add task to compute bad pixel maps based on static arrays provided by DL team and (for IR only) dynamically discovered
+pixels based on average lamp data and the standard deviation of dark frames.

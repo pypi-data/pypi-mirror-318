@@ -1,0 +1,5 @@
+Add a task that discovers bad pixels. Both IR and VIS cameras have static bad pixel maps provided by the DL team, and
+the IR cameras take an additional step of computing dynamic bad pixels from a combination of lamp gain data and the
+standard deviation over a stack of dark arrays. Pixels in the computed bad pixel map have their values set to NaN in two
+places: during binning when computing demodulation matrices, and during Science Calibration. Thus, bad pixels are NaN in
+L1 science data.
