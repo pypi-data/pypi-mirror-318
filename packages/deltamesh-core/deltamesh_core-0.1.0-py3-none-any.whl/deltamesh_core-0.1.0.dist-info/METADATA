@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: deltamesh-core
+Version: 0.1.0
+Summary: A Python library designed to assist with implementing the Delta Mesh architecture, providing tools and patterns for modern data engineering workflows.
+Author-email: Steve Kerr <dev@deltaflame.net>
+License: MIT
+Requires-Python: >=3.11
+License-File: LICENSE
+Requires-Dist: pyspark
