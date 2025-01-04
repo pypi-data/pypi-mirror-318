@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+email_safeguard.egg-info/PKG-INFO
+email_safeguard.egg-info/SOURCES.txt
+email_safeguard.egg-info/dependency_links.txt
+email_safeguard.egg-info/entry_points.txt
+email_safeguard.egg-info/requires.txt
+email_safeguard.egg-info/top_level.txt
+email_validator/__init__.py
+email_validator/validator.py
+email_validator/data/disposable_domains.txt
+email_validator/data/popular_domains.txt
+email_validator/data/popular_tlds.txt
+tests/__init__.py
+tests/test_validator.py
