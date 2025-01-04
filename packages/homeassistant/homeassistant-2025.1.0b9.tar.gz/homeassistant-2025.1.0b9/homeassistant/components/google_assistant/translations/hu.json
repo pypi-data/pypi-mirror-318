@@ -1,0 +1,20 @@
+{
+    "entity": {
+        "button": {
+            "sync_devices": {
+                "name": "Eszk\u00f6z\u00f6k szinkroniz\u00e1l\u00e1sa"
+            }
+        }
+    },
+    "services": {
+        "request_sync": {
+            "description": "K\u00fcld egy request_sync parancsot a Google-nek.",
+            "fields": {
+                "agent_user_id": {
+                    "name": "Agent felhaszn\u00e1l\u00f3i azonos\u00edt\u00f3"
+                }
+            },
+            "name": "Szinkroniz\u00e1l\u00e1s k\u00e9r\u00e9se"
+        }
+    }
+}
