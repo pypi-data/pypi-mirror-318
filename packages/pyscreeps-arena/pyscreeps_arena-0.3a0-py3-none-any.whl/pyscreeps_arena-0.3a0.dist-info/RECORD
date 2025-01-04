@@ -1,0 +1,17 @@
+pyscreeps_arena/__init__.py,sha256=3O7Oa_IofW8YQYsnrU88SGYNxn-CMR-PpmV8P2hhEhc,800
+pyscreeps_arena/build.py,sha256=DQeGLnID2FjpsWTbnqwt2cOp28olWK68U67bfbFJSOU,177
+pyscreeps_arena/compiler.py,sha256=iCpiG4GqZiA4MtqfqP10IAF_LuZEyygk0sbKH4br_D0,37179
+pyscreeps_arena/localization.py,sha256=_biHwuBLVCczniQrZET88pB_V8f8TtBpe8xKQvL_e7c,4733
+pyscreeps_arena/project.7z,sha256=OYGh2AspHQ5K9pIat2rWT_W2gmzG1uiQW-osDEZkWdM,49177
+pyscreeps_arena/core/__init__.py,sha256=qoP_rx1TpbDLJoTm5via4XPwEPaV1FXr1SYvoVoHGms,41
+pyscreeps_arena/core/basic.py,sha256=DFvyDTsTXf2bQtnS9s254TrkshvRwajaHcvTyVvJyqw,2790
+pyscreeps_arena/core/config.py,sha256=ATIWu8jdHlD0b80gsXptsI8yKeHdYNhlCMxlGlT2SfE,233
+pyscreeps_arena/core/const.py,sha256=HSZ-zodgUlK_vWGAswpK54NBTXlWZiWGWX56toEO35w,298
+pyscreeps_arena/core/core.py,sha256=3Nty8eLKPNgwnYk_sVNBPrWuKxBXI2od8nfEezsEAZQ,5157
+pyscreeps_arena/core/main.py,sha256=-FNSOEjksNlDfCbUqsjtPSUW8vT3qxEdfzXqT5Tdsik,170
+pyscreeps_arena/core/utils.py,sha256=N9OOkORvrqnJakayaFp9qyS0apWhB9lBK4xyyYkhFdo,215
+pyscreeps_arena-0.3a0.dist-info/METADATA,sha256=MFU6vrQaANq9nTT6J1gaj0DfuE939jFled_1K0s2zTg,2055
+pyscreeps_arena-0.3a0.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+pyscreeps_arena-0.3a0.dist-info/entry_points.txt,sha256=dqhZN327jfcNypYjEaEJ2t-ABUZ0sVhtDDrD7GiJBfo,67
+pyscreeps_arena-0.3a0.dist-info/top_level.txt,sha256=l4uLyMR2NOy41ngBMh795jOHTFk3tgYKy64-9cgjVng,16
+pyscreeps_arena-0.3a0.dist-info/RECORD,,
