@@ -1,0 +1,20 @@
+{
+    "entity": {
+        "button": {
+            "sync_devices": {
+                "name": "Synkronisera enheter"
+            }
+        }
+    },
+    "services": {
+        "request_sync": {
+            "description": "Skickar ett request_sync-kommando till Google.",
+            "fields": {
+                "agent_user_id": {
+                    "name": "Anv\u00e4ndar-ID f\u00f6r agent"
+                }
+            },
+            "name": "Beg\u00e4r synkronisering"
+        }
+    }
+}
