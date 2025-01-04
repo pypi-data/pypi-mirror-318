@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: witshape
+Version: 0.1.2.1
+Summary: witshape: This is an implementation for using an arbitrary file system as an external knowledge of Dify.
+Home-page: https://github.com/hamacom2004jp/witshape
+Download-URL: https://github.com/hamacom2004jp/witshape
+Author: hamacom2004jp
+Author-email: hamacom2004jp@gmail.com
+Maintainer: hamacom2004jp
+Maintainer-email: hamacom2004jp@gmail.com
+License: MIT
+Keywords: cli restapi redis fastapi
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Japanese
+Classifier: Programming Language :: Python
+Classifier: Topic :: Utilities
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# witshape
+
+- This is an implementation for using an arbitrary file system as an external knowledge of [Dify](https://dify.ai/).
+- Documentation is [here](https://hamacom2004jp.github.io/witshape/).
+
+# Install
+
+- Install cmdbox with the following command.
+
+```bash
+pip install witshape
+witshape -v
+```
+
+# Lisence
+
+This project is licensed under the MIT License, see the LICENSE file for details

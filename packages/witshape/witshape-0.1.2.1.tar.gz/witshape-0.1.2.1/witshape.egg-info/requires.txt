@@ -1,0 +1,12 @@
+cmdbox>=0.2.4.4
+chardet
+langchain_community
+langchain-google-vertexai
+langchain_ollama
+langchain_openai
+langchain_postgres
+markdown
+psycopg[binary]
+pdfplumber
+requests
+unstructured
