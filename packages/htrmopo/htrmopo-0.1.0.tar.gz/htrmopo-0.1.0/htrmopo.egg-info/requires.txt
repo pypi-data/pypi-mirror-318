@@ -1,0 +1,12 @@
+click
+rich
+requests
+pyyaml
+sickle
+markdown
+jsonschema
+python-dateutil
+platformdirs
+
+[test]
+pytest

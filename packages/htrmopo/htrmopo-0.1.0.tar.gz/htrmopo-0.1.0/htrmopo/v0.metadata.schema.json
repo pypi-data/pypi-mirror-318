@@ -1,0 +1,95 @@
+ {
+   "definitions": {},
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "$id": "http://example.com/root.json",
+   "type": "object",
+   "title": "The Root Schema",
+   "required": [
+     "authors",
+     "summary",
+     "description",
+     "accuracy",
+     "license",
+     "script",
+     "name",
+     "graphemes"
+   ],
+   "properties": {
+     "authors": {
+       "$id": "#/properties/authors",
+       "type": "array",
+       "title": "Authors of the model",
+       "items": {
+         "$id": "#/properties/authors/items",
+         "type": "object",
+         "title": "items",
+         "required": [
+           "name",
+           "affiliation"
+         ],
+         "properties": {
+           "name": {
+             "$id": "#/properties/authors/items/properties/name",
+             "type": "string",
+             "title": "A single author's name"
+           },
+           "affiliation": {
+             "$id": "#/properties/authors/items/properties/affiliation",
+             "type": "string",
+             "title": "A single author's institutional affiliation"
+           }
+         }
+       }
+     },
+     "summary": {
+       "$id": "#/properties/summary",
+       "type": "string",
+       "title": "A one-line summary of the model"
+     },
+     "description": {
+       "$id": "#/properties/description",
+       "type": "string",
+       "title": "A long-form description of the model."
+     },
+     "accuracy": {
+       "$id": "#/properties/accuracy",
+       "type": "number",
+       "title": "Test accuracy of the model",
+       "default": 0.0,
+       "minimum": 0.0,
+       "maximum": 100.0
+     },
+     "license": {
+       "$id": "#/properties/license",
+       "type": "string",
+       "title": "License of the model"
+     },
+     "script": {
+       "$id": "#/properties/script",
+       "type": "array",
+       "uniqueItems": true,
+       "minItems": 1,
+       "title": "ISO 15924 scripts recognized by the model",
+       "items": {
+         "$id": "#/properties/script/items",
+         "type": "string",
+         "enum": ["Tang", "Xsux", "Xpeo", "Blis", "Ugar", "Egyp", "Brai", "Egyh", "Loma", "Egyd", "Hluw", "Maya", "Sgnw", "Inds", "Mero", "Merc", "Sarb", "Narb", "Roro", "Phnx", "Lydi", "Tfng", "Samr", "Armi", "Hebr", "Palm", "Hatr", "Prti", "Phli", "Phlp", "Phlv", "Avst", "Syrc", "Syrn", "Syrj", "Syre", "Mani", "Mand", "Mong", "Nbat", "Arab", "Aran", "Nkoo", "Adlm", "Thaa", "Orkh", "Hung", "Grek", "Cari", "Lyci", "Copt", "Goth", "Ital", "Runr", "Ogam", "Latn", "Latg", "Latf", "Moon", "Osge", "Cyrl", "Cyrs", "Glag", "Elba", "Perm", "Armn", "Aghb", "Geor", "Geok", "Dupl", "Dsrt", "Bass", "Osma", "Olck", "Wara", "Pauc", "Mroo", "Medf", "Visp", "Shaw", "Plrd", "Jamo", "Bopo", "Hang", "Kore", "Kits", "Teng", "Cirt", "Sara", "Piqd", "Brah", "Sidd", "Khar", "Guru", "Gong", "Gonm", "Mahj", "Deva", "Sylo", "Kthi", "Sind", "Shrd", "Gujr", "Takr", "Khoj", "Mult", "Modi", "Beng", "Tirh", "Orya", "Dogr", "Soyo", "Tibt", "Phag", "Marc", "Newa", "Bhks", "Lepc", "Limb", "Mtei", "Ahom", "Zanb", "Telu", "Gran", "Saur", "Knda", "Taml", "Mlym", "Sinh", "Cakm", "Mymr", "Lana", "Thai", "Tale", "Talu", "Khmr", "Laoo", "Kali", "Cham", "Tavt", "Bali", "Java", "Sund", "Rjng", "Leke", "Batk", "Maka", "Bugi", "Tglg", "Hano", "Buhd", "Tagb", "Qaaa", "Sora", "Lisu", "Lina", "Linb", "Cprt", "Hira", "Kana", "Hrkt", "Jpan", "Nkgb", "Ethi", "Bamu", "Kpel", "Qabx", "Mend", "Afak", "Cans", "Cher", "Hmng", "Yiii", "Vaii", "Wole", "Zsye", "Zinh", "Zmth", "Zsym", "Zxxx", "Zyyy", "Zzzz", "Nshu", "Hani", "Hans", "Hant", "Hanb", "Kitl", "Jurc"]
+       }
+     },
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "title": "Filename of the model"
+    },
+    "graphemes": {
+      "$id": "#/properties/graphemes",
+      "type": "array",
+      "title": "Code points recognizable by the model",
+      "minItems": 1,
+      "items": {
+        "$id": "#/properties/graphemes/items",
+        "type": "string"
+      }
+    }
+  }
+}
