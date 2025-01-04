@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: one-man-team
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: Click
+Requires-Dist: python-dotenv
+Requires-Dist: lark-oapi
+Provides-Extra: completion
+Requires-Dist: click-completion; extra == "completion"
+Provides-Extra: test
+Requires-Dist: pytest>=6.0; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+
+UNKNOWN
+
+
