@@ -1,0 +1,100 @@
+# Solvis API Evaluations
+
+A Python package to request and process API evaluations into structured pandas dataframes.
+This tool is designed to handle complex nested data structures typically returned by APIs, efficiently transforming them into a tabular format suitable for analysis.
+
+## Features
+
+- Converts nested evaluation data into a flat Pandas DataFrame.
+- Handles various question types, including:
+  - **NPS (Net Promoter Score)**
+  - **Scale**
+  - **Multiple Choice**
+  - **Text and Short Text**
+  - **Multiple Response**
+  - **Special Types** (Phone, CPF, CNPJ, Email)
+- Robust handling of unexpected or malformed data.
+- Logging for process tracking and debugging.
+
+## Installation
+
+Install the package via pip:
+
+```bash
+pip install solvis-api-evaluations
+```
+
+## Usage
+
+### Importing the Module
+
+```python
+from data_processing import DataProcessing
+```
+
+### Example
+
+```python
+# Sample input data
+evaluations = [
+    [
+        {
+            "id": 1,
+            "survey_id": 123,
+            "formatted_answers": [
+                {
+                    "answer_type": "Scale",
+                    "answers": [
+                        {
+                            "question_text": "How satisfied are you?",
+                            "choice_text": "Very Satisfied",
+                            "choice_value": "5.0"
+                        }
+                    ]
+                },
+                {
+                    "answer_type": "Text",
+                    "answers": [
+                        {
+                            "question_text": "Additional comments",
+                            "choice_value": "Great service!"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+]
+
+# Initialize the processor
+processor = DataProcessing()
+
+# Process the data
+df = processor.data_processing(evaluations)
+
+# Display the DataFrame
+print(df)
+```
+
+### Output Example
+
+| id | survey_id | How satisfied are you? | How satisfied are you?_valor | Additional comments |
+|----|-----------|-------------------------|-----------------------------|----------------------|
+| 1  | 123       | Very Satisfied          | 5.0                         | Great service!       |
+
+## Dependencies
+
+- Python 3.12+
+- Pandas
+- Requests
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request with your improvements or bug fixes.
+
+## Contact
+
+For questions or feedback, feel free to reach out:
+
+- Author: Paulo Victor
+- Email: paulo.barbosa@solvis.com.br
