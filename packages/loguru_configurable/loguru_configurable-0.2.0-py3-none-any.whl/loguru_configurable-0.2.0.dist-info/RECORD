@@ -1,0 +1,11 @@
+CHANGELOG.md,sha256=YEP1WYI-va-lx8dG4HWNZ-J4nn2Bnw-eyJMGvH92B5M,563
+LICENSE,sha256=-_rpkk5YoX1FAOhQnBMmsnL8sMKlcYkDvVjV0D_bCNA,1091
+README.md,sha256=0uY68keYgXuOjnGvHpNzwc_8figkv5PO2RY36nbKynY,1703
+loguru_configurable/__init__.py,sha256=ySrBhl4mBvGspkte5miRjy-ZFpyxyxwAx-o5H9sB0PQ,370
+loguru_configurable/_version.py,sha256=Wij9xawkt9kBTBLMGG2p0nSFWYcfM8qDwMfEaNIBW6s,129
+loguru_configurable/config.py,sha256=ua4mo2ErfEL3FsM0eNvFpZndXwmBbD7t8w9X9LVrXvY,7686
+loguru_configurable/py.typed,sha256=bGD5UrdyV_saa5ISOCeHtHPzB1GvB2xON3LbrE2lxcQ,49
+loguru_configurable-0.2.0.dist-info/LICENSE,sha256=-_rpkk5YoX1FAOhQnBMmsnL8sMKlcYkDvVjV0D_bCNA,1091
+loguru_configurable-0.2.0.dist-info/METADATA,sha256=Z7Dtr8LYR4mGRyYN036oG9zy184nblbbc-Ex-HfvfkE,2931
+loguru_configurable-0.2.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+loguru_configurable-0.2.0.dist-info/RECORD,,
