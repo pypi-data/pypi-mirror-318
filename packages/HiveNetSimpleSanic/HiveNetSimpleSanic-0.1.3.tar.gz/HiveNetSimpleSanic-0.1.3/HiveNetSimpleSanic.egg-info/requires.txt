@@ -1,0 +1,4 @@
+HiveNetCore>=0.1.2
+HiveNetWebUtils>=0.1.1
+sanic==21.12.1
+sanic-ext==21.12.1
