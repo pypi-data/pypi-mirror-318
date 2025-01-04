@@ -1,0 +1,8 @@
+markets_analytics_databricks/__init__.py,sha256=R74RRIX5uPfHWgGRXKux3lDt4XDQDyqKZMdcENlGw8U,90
+markets_analytics_databricks/gsheet_helper.py,sha256=WIBupUJaRaaa6AnOW7ZQ1sklxedsTcGpzli5cv2ozH0,4693
+markets_analytics_databricks/redshift_connector.py,sha256=QIcFrHnURVYgzJoTmuH29Prge8IJN7HVqp735_vC-1s,4995
+markets_analytics_databricks/s3.py,sha256=kbaU8w37yotEkdr7HTDIL_P470oTXneW8FasckUbPVg,42
+markets_analytics_databricks-0.0.10.dist-info/METADATA,sha256=1_00cPJ0vlwafiOW9Xt3nbW7rl51yqBrx9Ps0d8XIsk,2306
+markets_analytics_databricks-0.0.10.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+markets_analytics_databricks-0.0.10.dist-info/licenses/LICENSE,sha256=B6QWRNUeMpIDglm5YtUF3MRRjQpeMdI-ueWRuOZqMNM,1088
+markets_analytics_databricks-0.0.10.dist-info/RECORD,,
