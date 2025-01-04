@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: veggie
+Version: 0.1.9
+Summary: A tool to monitor and execute Celery tasks
+Author: Theodore Tsitsimis
+License-File: LICENSE
