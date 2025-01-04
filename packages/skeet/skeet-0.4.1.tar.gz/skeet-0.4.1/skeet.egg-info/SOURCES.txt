@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+skeet.py
+skeet.egg-info/PKG-INFO
+skeet.egg-info/SOURCES.txt
+skeet.egg-info/dependency_links.txt
+skeet.egg-info/entry_points.txt
+skeet.egg-info/requires.txt
+skeet.egg-info/top_level.txt
