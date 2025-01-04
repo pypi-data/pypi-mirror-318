@@ -1,0 +1,15 @@
+plain/pageviews/README.md,sha256=Uex0EHn8m9O2_A-cGjCDFLTyYklTGkG0--Hbg8gDr08,428
+plain/pageviews/config.py,sha256=eNjlUeIY3B0umhMhnl0FwkYQik__9lAeGHuMGWt4Lqw,130
+plain/pageviews/models.py,sha256=n11O7nFcr0DomfoRPg31JpYjRtFm6_kGgXK6Vh_NbNE,632
+plain/pageviews/staff.py,sha256=1tUks8s36l-Xa3voxZO-0OejdqI_URtX7NBUBHJzMTw,1301
+plain/pageviews/templates.py,sha256=XxlrolobTUyjdMAtmEK5m3-dR0uD4vp7QYu2NRROIvs,448
+plain/pageviews/urls.py,sha256=aCW6erU7SZsaQysvcZU8O0hzrlVvSEWC2SPX826fYvA,152
+plain/pageviews/views.py,sha256=Wcpd5U9Ff1bC1bQV_Tg_X3M36a5uSuB0IXb-NgGqbLo,1034
+plain/pageviews/assets/pageviews/pageviews.js,sha256=0sLsvOffCsO5twwDGNyNu_7TGQvcZWs1_O3bxFFCYgQ,1072
+plain/pageviews/migrations/0001_initial.py,sha256=Rnxtpy5SXmFawY_fpM0UvHMDrjKFqYGSGzTm8LbnPhM,1193
+plain/pageviews/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+plain/pageviews/templates/pageviews/card.html,sha256=LMxEBLzZSMujucVfroRuxoeNvJzBdrwoR6CQa-LQWDs,775
+plain/pageviews/templates/pageviews/js.html,sha256=3ZG5o8W0phYnkeajLOPt0_4TvCB9LHykfEc5GJt1AWI,111
+plain_pageviews-0.1.3.dist-info/METADATA,sha256=Z8tosqSL8_cI4ztkjj4ovdahh5oYomGsAIocVouOECo,827
+plain_pageviews-0.1.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+plain_pageviews-0.1.3.dist-info/RECORD,,
