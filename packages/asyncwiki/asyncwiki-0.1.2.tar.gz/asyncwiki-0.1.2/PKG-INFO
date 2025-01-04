@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: asyncwiki
+Version: 0.1.2
+Summary: Asynchronous work with Wikipedia for asyncio and Python
+Home-page: https://github.com/FailProger/asyncwiki.git
+Author: Vyacheslav Pervakov
+Author-email: WsrrcalzWehgwmD@protonmail.com
+License: MIT License
+Project-URL: GitHub, https://github.com/FailProger/asyncwiki.git
+Keywords: Python,asynchronous,asyncio,aiohttp,Wikipedia
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp==3.11.11
+Requires-Dist: beautifulsoup4==4.12.3
+Requires-Dist: lxml==5.3.0
+Requires-Dist: SQLAlchemy==2.0.36
+Requires-Dist: pyspellchecker==0.8.2
+
+# Asyncwiki
+
+--------------------
+
+## About
+### The library for async work with Wikipedia
+
+Some words about library
+
+- Asynchronous
+- Fast (probably)
+- Parse Wikipedia
+- Can work with databases
+- And it`s all
+
+## License
+<code>Asyncwiki</code> is offered under the MIT license.
