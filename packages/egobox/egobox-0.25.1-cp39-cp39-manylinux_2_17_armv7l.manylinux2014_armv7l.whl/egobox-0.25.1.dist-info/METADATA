@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: egobox
+Version: 0.25.1
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Rust
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Unix
+Requires-Dist: numpy
+Summary: A python binding for egobox crates
+Home-Page: https://github.com/relf/egobox
+Author: Rémi Lafage <remi.lafage@onera.fr>
+Author-email: Rémi Lafage <remi.lafage@onera.fr>
+License: Apache-2.0
+Requires-Python: >=3.9
+Project-URL: Source Code, https://github.com/relf/egobox/python
