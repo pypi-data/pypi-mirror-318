@@ -1,0 +1,18 @@
+# This is the configuration file to define build system requirements.
+
+# The file configures the build system (setuptools and wheel).
+# It specifies where to find the test files for pytest.
+# It sets up mypy for static type checking.
+
+[build-system]
+requires = ['setuptools>=42.0', "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests"
+    ]
+
+[tool.mypy]
+mypy_path = "src"
+ignore_missing_imports = true

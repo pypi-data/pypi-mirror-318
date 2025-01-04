@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+requirements.txt
+setup.cfg
+setup.py
+src/dbautomator/__init__.py
+src/dbautomator/mongo_crud.py
+src/dbautomator.egg-info/PKG-INFO
+src/dbautomator.egg-info/SOURCES.txt
+src/dbautomator.egg-info/dependency_links.txt
+src/dbautomator.egg-info/requires.txt
+src/dbautomator.egg-info/top_level.txt
