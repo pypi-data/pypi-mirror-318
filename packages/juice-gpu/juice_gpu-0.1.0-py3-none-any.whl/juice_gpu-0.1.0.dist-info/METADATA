@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: juice-gpu
+Version: 0.1.0
+Summary: Juice GPU SDK for Python
+Author-email: "Juice Technologies, Inc." <support@juicelabs.com>
+Project-URL: Homepage, https://github.com/Juice-Labs/juice-gpu-python
+Project-URL: Repository, https://github.com/Juice-Labs/juice-gpu-python.git
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# Juice GPU SDK
+
+This is the Juice GPU SDK for Python.
+
+## Installation
+
+```bash
+pip install juice-gpu
+```
