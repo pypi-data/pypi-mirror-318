@@ -1,0 +1,19 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# General
+*.pt
+*.onnx
+.DS_Store
+*.wav
+*.json
+espeak-ng-data/
+*.tar.gz
+
+# Virtual environments
+.venv
