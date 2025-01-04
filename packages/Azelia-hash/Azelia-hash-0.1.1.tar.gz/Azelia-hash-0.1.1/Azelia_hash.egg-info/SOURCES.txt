@@ -1,0 +1,16 @@
+LICENCE
+MANIFEST.in
+README.md
+setup.py
+Azelia_hash.egg-info/PKG-INFO
+Azelia_hash.egg-info/SOURCES.txt
+Azelia_hash.egg-info/dependency_links.txt
+Azelia_hash.egg-info/requires.txt
+Azelia_hash.egg-info/top_level.txt
+azelia/__init__.py
+azelia/azelia.py
+azelia/azeliaconfig.py
+azelia/config.py
+azelia/password_handler.py
+azelia/password_policies.py
+tests/test_azelia.py
