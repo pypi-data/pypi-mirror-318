@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: canvas_ux
+Version: 1.0.1
+Summary: Modular data science components
+Home-page: https://github.com/satishlokkoju/deepview
+Author: betterwithdata
+Author-email: dnikit-canvas-oss@group.betterwithdata.com
+License: betterwithdata Sample Code License
+Keywords: Jupyter,Widgets,IPython
+Platform: Linux
+Platform: Mac OS X
+Platform: Windows
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Framework :: Jupyter
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: ipywidgets>=7.0.0
+Requires-Dist: pyarrow
+Requires-Dist: pandas
+Requires-Dist: jupyterlab==3.*
+Provides-Extra: widgets
+Requires-Dist: canvas_binary_confusion_matrix; extra == "widgets"
+Requires-Dist: canvas_data_map; extra == "widgets"
+Requires-Dist: canvas_duplicates; extra == "widgets"
+Requires-Dist: canvas_fairvis; extra == "widgets"
+Requires-Dist: canvas_familiarity; extra == "widgets"
+Requires-Dist: canvas_hierarchical_confusion_matrix; extra == "widgets"
+Requires-Dist: canvas_list; extra == "widgets"
+Requires-Dist: canvas_markdown; extra == "widgets"
+Requires-Dist: canvas_scatterplot; extra == "widgets"
+Requires-Dist: canvas_summary; extra == "widgets"
+Requires-Dist: canvas_vega; extra == "widgets"
+Provides-Extra: examples
+Requires-Dist: tensorflow; extra == "examples"
+Requires-Dist: opencv-python; extra == "examples"
+Requires-Dist: gitpython; extra == "examples"
+Provides-Extra: docs
+Requires-Dist: jupyter_sphinx; extra == "docs"
+Requires-Dist: nbsphinx; extra == "docs"
+Requires-Dist: nbsphinx-link; extra == "docs"
+Requires-Dist: pytest_check_links; extra == "docs"
+Requires-Dist: pypandoc; extra == "docs"
+Requires-Dist: recommonmark; extra == "docs"
+Requires-Dist: sphinx>=1.5; extra == "docs"
+Requires-Dist: sphinx_book_theme; extra == "docs"
+Requires-Dist: sphinx_mdinclude; extra == "docs"
+
+# Canvas
+
+`canvas_ux` ties together a collection of interactive visualizations that let you explore data. It is designed to be extensible and thus can integrate different [components](../widgets). If you are interested in creating you own component, take a look at our [cookiecutter](../widget-cookiecutter/).
+
+## Installation
+
+```bash
+pip install canvas_ux
+```
+
+## Usage
+
+To learn how to use Canvas, see the [documentation](https://betterwithdata.github.io/ml-canvas/).
+
+## Development
+
+To learn about how to build Canvas from source and how to contribute to the framework, please look at [CONTRIBUTING.md](../CONTRIBUTING.md) and the [development documentation](https://betterwithdata.github.io/ml-canvas/contributing.html).
