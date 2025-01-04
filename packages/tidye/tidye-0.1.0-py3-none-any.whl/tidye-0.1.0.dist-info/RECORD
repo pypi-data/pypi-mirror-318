@@ -1,0 +1,9 @@
+tidye/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tidye/__main__.py,sha256=Cin34RiSCNvJWHxs-giV5-skAUo3GmKX5YhBmyXDWfs,3026
+tidye/model.py,sha256=XToCn7PSVTC-09BIVU_VaTaldNvtwON77UlhIhP9Hds,693
+tidye/simulation.py,sha256=X5atDeNcbq9mr5Vu2sKlQbSa--CW8g94HMSsKEa-S18,1716
+tidye-0.1.0.dist-info/LICENSE,sha256=3RenUuOrsOtZCBuvZVVZhYVHNjuLi-Bocm8FYBdsoaY,1051
+tidye-0.1.0.dist-info/METADATA,sha256=YVxVjL1wswqP2bdx9gMbYLRJSy4EUn8NtD-HukffXCo,3062
+tidye-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+tidye-0.1.0.dist-info/entry_points.txt,sha256=0kXjPb8p9TJFJF4jinjVqJPsoTq8sK8lahHxU59Kvkc,45
+tidye-0.1.0.dist-info/RECORD,,
