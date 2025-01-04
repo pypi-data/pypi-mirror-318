@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: python-decouple-multi
+Version: 0.1.1
+Summary: Usean asetustiedoston tuki python-decouple-pakettiin
+Author-email: Antti Hautaniemi <antti.hautaniemi@pispalanit.fi>
+License: MIT
+Project-URL: Repository, https://github.com/an7oine/python-decouple-multi.git
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: python-decouple

@@ -1,0 +1,12 @@
+[
+  {
+    "revisio": "3b8ba59422d142a3eed091dd8bd01207b6826dff",
+    "versio": "0.1.1",
+    "kuvaus": "P\u00e4ivitetty projektim\u00e4\u00e4ritys pyproject.toml-muotoon"
+  },
+  {
+    "revisio": "253038ee5bc04ad56aae5073886dc685a474e9ec",
+    "versio": "0.1",
+    "kuvaus": "Alustava toteutus"
+  }
+]
