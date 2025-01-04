@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: python-bingsearch
+Version: 1.0.3
+Summary: bing Search unofficial API for Python with no external dependencies
+Home-page: https://github.com/samsha1971/python-bingsearch
+Author: Sam Sha
+Author-email: sam_sha@163.com
+Maintainer: Sam Sha
+Keywords: search-api bing python
+Platform: all
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: requests>=2.18.4
+Requires-Dist: beautifulsoup4>=4.6.0
+Requires-Dist: lxml>=4.1.0
+Requires-Dist: playwright>=1.36.0
+
+Python Bing Search API
+======================
+
+Unofficial bing Search API for Python.
+
+It uses web scraping in the background and is compatible with both
+**Python 2 and 3**.
+
+Source
+------
+
+https://github.com/samsha1971/python-bingsearch
+
+Why this project?
+-----------------
+
+for everyone who want to use bing search.
+
+Features
+--------
+
+-  Free unrestricted API, requires no key or credit card
+
+-  Unicode support
+
+-  Works for all Python versions (2 & 3)
+
+Installation
+------------
+
+.. code:: bash
+
+   pip install python-bingsearch
+
+Using
+-----
+
+.. code:: bash
+
+   >>> from bingsearch import bingsearch
+   >>> bingsearch.search('Python',num_results=10)
+   >>> bingsearch.slow_bingsearch('Python',num_results=20)
