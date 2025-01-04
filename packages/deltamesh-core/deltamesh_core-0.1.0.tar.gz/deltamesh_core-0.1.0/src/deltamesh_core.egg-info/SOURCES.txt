@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/deltamesh-fabric/dataprep.py
+src/deltamesh-fabric/write.py
+src/deltamesh_core.egg-info/PKG-INFO
+src/deltamesh_core.egg-info/SOURCES.txt
+src/deltamesh_core.egg-info/dependency_links.txt
+src/deltamesh_core.egg-info/requires.txt
+src/deltamesh_core.egg-info/top_level.txt
