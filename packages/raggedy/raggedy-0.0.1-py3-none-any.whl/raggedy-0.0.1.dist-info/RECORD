@@ -1,0 +1,9 @@
+raggedy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+raggedy/document/document.py,sha256=XTfG0S3uTyeZNLcZowgzmep7lmRv6qpAgfxYJ_2UrJo,56
+raggedy/document/image/types.py,sha256=U9POLWs0AvER_4UOF_Br8BFw1PdOBGkCa7S3-nU9-ds,119
+raggedy/document/pdf/types.py,sha256=aWizixiOriP5w_phd981JpOSlNlKTsuDv5_EHajpVPc,297
+raggedy/document/pdf/utils.py,sha256=CiNckG8eEcupLcKJwlZ0njChwW_0bGcCCb9k2dDqK-0,1708
+raggedy-0.0.1.dist-info/METADATA,sha256=Mo7nDAhEzFNtrTURIertt_d-uJEQ2-tGvpumkgOpJJI,487
+raggedy-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+raggedy-0.0.1.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+raggedy-0.0.1.dist-info/RECORD,,
