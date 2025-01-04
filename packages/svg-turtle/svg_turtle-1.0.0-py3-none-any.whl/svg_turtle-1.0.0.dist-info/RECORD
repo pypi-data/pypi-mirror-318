@@ -1,0 +1,10 @@
+svg_turtle/__init__.py,sha256=xgAprSlwubqYQPVfesrJjuy4kSubcLI3T7EiWLJOBTM,304
+svg_turtle/about.py,sha256=JZ4KPG3YffukJ_i7iirP8ev64Nw1Pj-uhKKIwvn0K_Y,391
+svg_turtle/canvas.py,sha256=vjIThgjTFg_DPVZmfsjMPkUoPv4E9bt9JZ6tIkqHxhI,6677
+svg_turtle/ipython_turtle.py,sha256=3sMEGfs0j0QZOB1r88bnQd2xG3_SKGDVRRoA6R42VNQ,481
+svg_turtle/svg_turtle.py,sha256=TJ7ZwkGXdpXMIP-aDNFaAm7FUTnz_5C9hwgWWvIKOKs,26549
+svg_turtle-1.0.0.dist-info/LICENSE,sha256=q9CFowF_ULdwCBDSM-ApZcxxp_H8A2MS22pGZxjmECE,1067
+svg_turtle-1.0.0.dist-info/METADATA,sha256=r1HvmjOYTSu2bwf4lzApcGtlgT2EsIWLnnnmFBAshuQ,3641
+svg_turtle-1.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+svg_turtle-1.0.0.dist-info/top_level.txt,sha256=OzD34HR4SXJN75mMTQg7BRWOwD6GxndlmrSqFJqaj2k,11
+svg_turtle-1.0.0.dist-info/RECORD,,
