@@ -1,0 +1,3 @@
+[console_scripts]
+torus-cli=torusdk.cli:app
+
