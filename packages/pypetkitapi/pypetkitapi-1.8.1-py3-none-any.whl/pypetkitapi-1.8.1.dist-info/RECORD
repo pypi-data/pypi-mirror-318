@@ -1,0 +1,16 @@
+pypetkitapi/__init__.py,sha256=qV8NZZeCMyY22gFOav0uic4QiORt9TsenDZkfC0aBqY,1562
+pypetkitapi/client.py,sha256=_iR45tRH59FEQ_Ra1RAMAyTDvpzSLLCNtiKu1yJSW24,20886
+pypetkitapi/command.py,sha256=ONP2BBdnb1nGgAK0xz50GiLO3KPzuQJD1BjqAhblkAs,8165
+pypetkitapi/const.py,sha256=q0HCUoryVyNzuH8erMrTqAR8yW4vEiPE79TTbhKNIEM,4076
+pypetkitapi/containers.py,sha256=9fJVXG-F0lTGcfYyz0WF9xTph5FCQJbqS8LHE5MpZhE,4411
+pypetkitapi/exceptions.py,sha256=fuTLT6Iw2_kA7eOyNJPf59vQkgfByhAnTThY4lC0Rt0,1283
+pypetkitapi/feeder_container.py,sha256=l8SbimdfWhmKcHYINw9_3-jXo9Rxy1K_dV3eSnn7wyk,14480
+pypetkitapi/litter_container.py,sha256=UkF3eAV4ehPcCM0eBRZR1ZNc7foHJTnniLW7HZK--oU,19069
+pypetkitapi/medias.py,sha256=IuWkC7usw0Hbx173X8TGv24jOp4nqv6bIUosZBpXMGg,6945
+pypetkitapi/purifier_container.py,sha256=ssyIxhNben5XJ4KlQTXTrtULg2ji6DqHqjzOq08d1-I,2491
+pypetkitapi/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pypetkitapi/water_fountain_container.py,sha256=_5K2aTpcqHG-VBu7J2vXSZuAjA_SK6DkgV14u5RkFZA,6694
+pypetkitapi-1.8.1.dist-info/LICENSE,sha256=4FWnKolNLc1e3w6cVlT61YxfPh0DQNeQLN1CepKKSBg,1067
+pypetkitapi-1.8.1.dist-info/METADATA,sha256=b1aaD3dPzfW1ftitW2ApBwETN2IAJ8aWRzJnWrfy4PU,4882
+pypetkitapi-1.8.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+pypetkitapi-1.8.1.dist-info/RECORD,,
