@@ -1,0 +1,13 @@
+physkit-0.1.20.dist-info/METADATA,sha256=EEEeo5wwxn-inzXW5wLWOq-JHNMvgyiuR-jnVVT5EL4,4903
+physkit-0.1.20.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+physkit-0.1.20.dist-info/entry_points.txt,sha256=GOPyeWV9vsHwYs8FvWvR1kLPnIC6_o1kuRxjM_2dZ9M,61
+physkit-0.1.20.dist-info/licenses/LICENSE,sha256=5X8cMguM-HmKfS_4Om-eBqM6A1hfbgZf6pfx2G24QFI,35150
+physkit/__init__.py,sha256=0Ir8C887iewu_OEdGRmIy-VKxLf4_zWWnYOnHnMqeX8,1324
+physkit/cli.py,sha256=sUGnTyHKhuqhzfqyxmosA7crPmeLW9ofp2psY0lICwE,3130
+physkit/config.py,sha256=wQaZGIFsjEVWER0Oi5K-vmbirBrsqrlaIeXU_Z6q-eo,1282
+physkit/constants.py,sha256=YpsRAjOMcEynREJGYLI0Gefbus6hrCA2N0Mv7XZ5r8w,14868
+physkit/conversions.py,sha256=Q2Vp5UhLEuiHUFU-UviY-APuzzn2JJUkKCad8L0qb14,4203
+physkit/custom_units.py,sha256=769knoVgg5FOlChwoFp7BzSVB75DW0AS-lZ4w58Whkk,1277
+physkit/equations.py,sha256=hMFuV4SYXXcsN_f3xjNs4ZvYFKialv11myMkkGC-An0,3881
+physkit/plot_styler.py,sha256=ZAgmW7k3DjTsIHnIzk2tKawWBOSAp6IglKx5YUAa-Bc,3138
+physkit-0.1.20.dist-info/RECORD,,
