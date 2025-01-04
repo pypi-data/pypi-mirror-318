@@ -1,0 +1,3 @@
+[console_scripts]
+bro = broski:main
+broski = broski:main
