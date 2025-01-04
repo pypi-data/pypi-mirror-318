@@ -1,0 +1,8 @@
+src/baribal/__init__.py,sha256=m-ZPZF_Eiyjfqi0vl47GOHpew26vBPpgxGoam9-7Yos,558
+src/baribal/core.py,sha256=i5XLDwdjRYSHI07Zb1GjeX8y9hbJZI1OIdyufyjopt8,9474
+src/baribal/utils.py,sha256=aWwW20TcmYJSspX5_A70QaL9EvnAlpggXJZLepatkwg,8144
+src/baribal/viz.py,sha256=My_pxB4Z7H9WLPGioi8Lmc1tqoYFHi7iohzIIUF2aEk,2214
+baribal-0.1.0.dist-info/METADATA,sha256=mvSaaznEMRUG4iQVSxxEzgZ1y4XXErmj2ESBeV4Io_Y,5794
+baribal-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+baribal-0.1.0.dist-info/licenses/LICENSE,sha256=ZQVpVMIbbT0T_nJKkaq3wtKPvuzbjMV70OehBOWb9o8,1071
+baribal-0.1.0.dist-info/RECORD,,
