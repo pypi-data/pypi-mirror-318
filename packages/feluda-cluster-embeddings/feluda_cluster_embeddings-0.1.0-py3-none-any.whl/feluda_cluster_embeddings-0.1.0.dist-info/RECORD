@@ -1,0 +1,9 @@
+./.gitignore,sha256=aufV-uwMFs2rmzfXo8F94X_pE86taqqXjAxsWQsfCng,1909
+./PKG-INFO,sha256=lZq0Bv-PBmszafiP4fOw68y_AcHrp_YP1T4EbUYnNzw,156
+./__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+./cluster_embeddings.py,sha256=8FY2M8v313rMouRNePCthYkk_6FAJEeE-qRvDNoqjkM,3965
+./pyproject.toml,sha256=hfwKa9qtW2VqY4e3w_vdkqLQ8TX_miynSAsNgDRr6qo,487
+./test_cluster_embeddings.py,sha256=aZ3CXctpAD3kFvfyTkNjbZgkpu2-dccaD6E52NUavbs,1663
+feluda_cluster_embeddings-0.1.0.dist-info/METADATA,sha256=lZq0Bv-PBmszafiP4fOw68y_AcHrp_YP1T4EbUYnNzw,156
+feluda_cluster_embeddings-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+feluda_cluster_embeddings-0.1.0.dist-info/RECORD,,
