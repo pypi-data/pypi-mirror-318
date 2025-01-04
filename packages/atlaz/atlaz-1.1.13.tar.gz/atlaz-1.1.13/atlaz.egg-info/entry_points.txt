@@ -1,0 +1,2 @@
+[console_scripts]
+atlaz-code = atlaz.headquarter.entry_point:main
