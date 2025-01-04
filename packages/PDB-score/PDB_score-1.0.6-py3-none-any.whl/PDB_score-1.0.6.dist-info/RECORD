@@ -1,0 +1,10 @@
+PDB_score/ProteinStructure.py,sha256=maY1Ay5N5ME7cL49xwh2WcO24neScdAFUlXfyxSRVqg,3182
+PDB_score/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+PDB_score/core.py,sha256=WwAEvA5L2cUkF3O_VAOjkUO88FZVtlRmZOeEfzRfecY,2053
+PDB_score/main.py,sha256=FIyDc2bIWaNDw_likClQka6RoLCptGeHAwoSpjYieLg,2883
+PDB_score-1.0.6.dist-info/LICENSE,sha256=M6z3HbO5SioptvwHUOqb_srIbcP71fyIRRPYrDZJzBU,1087
+PDB_score-1.0.6.dist-info/METADATA,sha256=J_Rt9bpzTBRAdfG4zPimJG_4kqJXGPW6kNCKoIQDsF4,2888
+PDB_score-1.0.6.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+PDB_score-1.0.6.dist-info/entry_points.txt,sha256=7DgkSgl-Z56SB6uvizC50Q9qHxICgKvHgc3HGEuV2VA,44
+PDB_score-1.0.6.dist-info/top_level.txt,sha256=Jziv3EGLWKOQjg387GWDHv2RxffuPy1byHG9m3LmSJg,10
+PDB_score-1.0.6.dist-info/RECORD,,
