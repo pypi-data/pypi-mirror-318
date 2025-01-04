@@ -1,0 +1,10 @@
+[project]
+name = "adsk-ailab-ray"
+version = "0.0.1"
+description = "adsk package"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.setuptools]
+license-files = []
