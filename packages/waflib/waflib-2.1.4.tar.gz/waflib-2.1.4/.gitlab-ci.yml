@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2025 Tymoteusz Blazejczyk <tymoteusz.blazejczyk@tymonx.com>
+# SPDX-License-Identifier: BSD-3-Clause
+
+.python:
+    variables:
+        PYTHON_IMAGE: python
+        PYTHON_VERSION: 3
+    image: ${PYTHON_IMAGE}:${PYTHON_VERSION}
+
+deploy:
+    .extends: .python
+    script:
+        - python3 -m pip install --root-user-action=ignore --upgrade pip
+        - python3 -m pip install --root-user-action=ignore --upgrade build twine
+        - python3 -m build
+        - python3 -m twine upload dist/*

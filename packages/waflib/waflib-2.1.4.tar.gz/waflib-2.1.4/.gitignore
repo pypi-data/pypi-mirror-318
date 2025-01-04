@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2025 Tymoteusz Blazejczyk <tymoteusz.blazejczyk@tymonx.com>
+# SPDX-License-Identifier: BSD-3-Clause
+
+# Ignore all
+*
+
+# Except the following
+!*/
+!LICENSE
+!.gitignore
+!*.toml
+!*.ini
+!*.yml
+!*.py
+!*.md
