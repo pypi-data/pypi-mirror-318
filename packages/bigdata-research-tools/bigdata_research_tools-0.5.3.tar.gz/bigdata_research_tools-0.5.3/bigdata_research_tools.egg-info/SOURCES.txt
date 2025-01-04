@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+bigdata_research_tools/__init__.py
+bigdata_research_tools/search.py
+bigdata_research_tools.egg-info/PKG-INFO
+bigdata_research_tools.egg-info/SOURCES.txt
+bigdata_research_tools.egg-info/dependency_links.txt
+bigdata_research_tools.egg-info/requires.txt
+bigdata_research_tools.egg-info/top_level.txt
