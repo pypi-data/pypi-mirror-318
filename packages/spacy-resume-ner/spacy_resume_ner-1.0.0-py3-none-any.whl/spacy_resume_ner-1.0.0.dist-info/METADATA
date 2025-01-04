@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: spacy-resume-ner
+Version: 1.0.0
+Summary: A spaCy model for Named Entity Recognition (NER) on resumes
+Author: Ankit Kumar
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9,<3.11
+Requires-Dist: spacy<4.0.0,>=3.0.0
+Requires-Dist: spacy-transformers<1.2.0,>=1.1.5
