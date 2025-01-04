@@ -1,0 +1,8 @@
+currex/__init__.py,sha256=wrW05T2IAg60iF-IfzoCb0C4yHkHdtd-Ygnc0rhHLEM,1584
+currex/currency.py,sha256=z4FvlnZS-4F8q5puJKjIN612dUYwtBHBrZJyNa6cOJY,4884
+currex/exchange.py,sha256=Jmx36nLY0gdTe0Sr00alm_aYEUs-9RnAHzKfV8GM2sk,1037
+currex/factory.py,sha256=sk9cu9AHk0B2rPCKhuLiEGgxnS7keb1umo4aoaMrcZM,4497
+currex-0.1.0.dist-info/METADATA,sha256=uTAgDpojjai_i06op8B4A9lu-54BDoiHQCgnPM04EHQ,2308
+currex-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+currex-0.1.0.dist-info/licenses/LICENSE,sha256=YXp0SigLqSAOqbJu0LFvMy5FsKWdtTphkHUsKcT1-tA,1070
+currex-0.1.0.dist-info/RECORD,,
