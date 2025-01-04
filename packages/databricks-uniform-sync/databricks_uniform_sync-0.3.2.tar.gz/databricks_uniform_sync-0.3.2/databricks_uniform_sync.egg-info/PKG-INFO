@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: databricks_uniform_sync
+Version: 0.3.2
+Summary: A SDK for syncing Databricks using Unity Catalog and Uniform
+Home-page: https://github.com/guanjieshen/databricks-uniform-sync
+Author: Guanjie Shen
+License: MIT License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: pydantic==2.10.4
+Requires-Dist: pyyaml
+Requires-Dist: databricks-sdk==0.40.0
+Requires-Dist: snowflake==1.0.2
+Requires-Dist: snowflake-connector-python==3.12.4
+Requires-Dist: snowflake-snowpark-python==1.26.0
