@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seura"
+version = "0.2.0"
+description = "Python client for Seura TV IP Control"
+authors = [{name = "Mickey Schwab", email = "mickeyschwab@gmail.com"}]
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">=3.7"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-mock>=3.0"
+] 
