@@ -1,0 +1,2 @@
+[console_scripts]
+obsidian_digest = obsidian_digest.obsidian_digest_cli:main

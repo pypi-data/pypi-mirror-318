@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/obsidian_digest/__init__.py
+src/obsidian_digest/obsidian_digest_cli.py
+src/obsidian_digest.egg-info/PKG-INFO
+src/obsidian_digest.egg-info/SOURCES.txt
+src/obsidian_digest.egg-info/dependency_links.txt
+src/obsidian_digest.egg-info/entry_points.txt
+src/obsidian_digest.egg-info/requires.txt
+src/obsidian_digest.egg-info/top_level.txt

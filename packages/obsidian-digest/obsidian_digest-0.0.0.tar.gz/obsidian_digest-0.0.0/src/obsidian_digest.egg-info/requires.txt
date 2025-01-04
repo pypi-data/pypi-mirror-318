@@ -1,0 +1,4 @@
+python-dotenv
+termcolor
+get_code_from_markdown
+google-generativeai==0.8.3

@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "obsidian_digest"
+version = "0.0.0"
+authors = [
+    { name="Clelia (Astra) Bertelli", email="astraberte9@gmail.com" },
+]
+description = "obsidian-digest: Superpower your notes with Gemini 2"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    'python-dotenv',
+    'termcolor',
+    'get_code_from_markdown',
+    'google-generativeai == 0.8.3',
+]
+
+[project.urls]
+Homepage = "https://github.com/AstraBert/obsidian-digest"
+Issues = "https://github.com/AstraBert/obsidian-digest/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["obsidian_digest*"]
+
+[options.package_data]
+obsidian_digest = ["*"]
+
+[project.scripts]
+obsidian_digest = "obsidian_digest.obsidian_digest_cli:main"
