@@ -1,0 +1,10 @@
+large_image_source_tiff/__init__.py,sha256=fP1mgU1hpDIgPTUgn5dFWPNc_JHNY-1heb26Txnao7Q,36620
+large_image_source_tiff/exceptions.py,sha256=NgdwloaDCtbtUMe2BU2lXEU8IwQSYtaokIwGIFypCps,617
+large_image_source_tiff/girder_source.py,sha256=Dp2e3O4VTANYXZI_eybgzs5BcyuMcw2-MAzCUJ8zzPg,1031
+large_image_source_tiff/tiff_reader.py,sha256=4_MCUcAslsdiVCyMvNl0dhrxcKV8_UFffR1yNwB0PjU,40406
+large_image_source_tiff-1.30.6.dev26.dist-info/LICENSE,sha256=psuoW8kuDP96RQsdhzwOqi6fyWv0ct8CR6Jr7He_P_k,10173
+large_image_source_tiff-1.30.6.dev26.dist-info/METADATA,sha256=Ppht4rW4vXWfoEOhyN_1LOAQRsc3SflbDQLlHsfASRk,1188
+large_image_source_tiff-1.30.6.dev26.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+large_image_source_tiff-1.30.6.dev26.dist-info/entry_points.txt,sha256=iZ43sIcj98SND7nDUC-_4qroBL6apyXN4iSbPXZ8LE4,166
+large_image_source_tiff-1.30.6.dev26.dist-info/top_level.txt,sha256=QRx_D2oeiOOz_5FlBOAoDPF-E4Q-aFmerUWlaeP14B8,24
+large_image_source_tiff-1.30.6.dev26.dist-info/RECORD,,
