@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+juice/__init__.py
+juice/cli.py
+juice_gpu.egg-info/PKG-INFO
+juice_gpu.egg-info/SOURCES.txt
+juice_gpu.egg-info/dependency_links.txt
+juice_gpu.egg-info/top_level.txt
