@@ -1,0 +1,2 @@
+[console_scripts]
+nxstub = nxstub.__main__:main

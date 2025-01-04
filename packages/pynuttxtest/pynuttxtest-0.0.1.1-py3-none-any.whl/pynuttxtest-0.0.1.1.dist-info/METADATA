@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pynuttxtest
+Version: 0.0.1.1
+Summary: NuttX python development tools
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Requires: construct
+Requires: debugpy
+Requires: lief
+Requires: matplotlib
+Requires: numpy
+Requires: pyelftools
