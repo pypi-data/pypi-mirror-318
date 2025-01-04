@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: pyecrime
+Version: 0.1.0
+Summary: A CLI tool for ecrime.ch
+Home-page: https://github.com/silascutler/pyecrime
+Author: Silas Cutler
+Author-email: silas@p1nk.io
+License-File: LICENSE

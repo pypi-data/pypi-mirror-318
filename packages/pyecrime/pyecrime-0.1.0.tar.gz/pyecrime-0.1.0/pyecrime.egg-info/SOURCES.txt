@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+ecrime/__init__.py
+ecrime/ecrime.py
+pyecrime.egg-info/PKG-INFO
+pyecrime.egg-info/SOURCES.txt
+pyecrime.egg-info/dependency_links.txt
+pyecrime.egg-info/entry_points.txt
+pyecrime.egg-info/requires.txt
+pyecrime.egg-info/top_level.txt
