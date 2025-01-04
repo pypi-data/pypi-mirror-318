@@ -1,0 +1,5 @@
+include README.md
+include version
+include plapi/hello_world.py
+include tests/test_hello_world.py
+recursive-include plapi *
