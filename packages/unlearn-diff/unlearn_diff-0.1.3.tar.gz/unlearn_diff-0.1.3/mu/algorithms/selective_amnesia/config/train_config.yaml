@@ -1,0 +1,101 @@
+# Training parameters
+seed : 23 
+scale_lr : True 
+
+# Model configuration
+model_config_path: "mu/algorithms/selective_amnesia/configs/model_config.yaml"  # Config path for Stable Diffusion
+ckpt_path: "models/compvis/style50/compvis.ckpt"  # Checkpoint path for Stable Diffusion
+
+# Dataset directories
+raw_dataset_dir: "data/quick-canvas-dataset/sample"
+processed_dataset_dir: "mu/algorithms/selective_amnesia/data"
+dataset_type : "unlearncanvas"
+template : "style"
+template_name : "Abstractionism"
+
+
+# Output configurations
+output_dir: "outputs/selective_amnesia/finetuned_models"  # Output directory to save results
+
+# Sampling and image configurations
+
+# Device configuration
+devices: "0"  # CUDA devices to train on (comma-separated)
+
+# Additional flags
+use_sample: True  # Use the sample dataset for training
+
+data:
+  target: mu.algorithms.selective_amnesia.data_handler.SelectiveAmnesiaDataHandler
+  params:
+    train_batch_size: 4
+    val_batch_size: 6
+    num_workers: 4
+    num_val_workers: 0 # Avoid a weird val dataloader issue (keep unchanged)
+    train:
+      target: stable_diffusion.ldm.data.ForgettingDataset
+      params:
+        forget_prompt: An image in Artist_Sketch style
+        forget_dataset_path: ./q_dist/photo_style
+    validation:
+      target: stable_diffusion.ldm.data.VisualizationDataset
+      params:
+        captions:
+        - a Architectures image in Artist_Sketch style
+        - a Bears image in Artist_Sketch style
+        - a Birds image in Artist_Sketch style
+        - a Butterfly image in Artist_Sketch style
+        - a Cats image in Artist_Sketch style
+        - a Dogs image in Artist_Sketch style
+        - a Fishes image in Artist_Sketch style
+        - a Flame image in Artist_Sketch style
+        - a Flowers image in Artist_Sketch style
+        - a Frogs image in Artist_Sketch style
+        - a Horses image in Artist_Sketch style
+        - a Human image in Artist_Sketch style
+        - a Jellyfish image in Artist_Sketch style
+        - a Rabbits image in Artist_Sketch style
+        - a Sandwiches image in Artist_Sketch style
+        - a Sea image in Artist_Sketch style
+        - a Statues image in Artist_Sketch style
+        - a Towers image in Artist_Sketch style
+        - a Trees image in Artist_Sketch style
+        - a Waterfalls image in Artist_Sketch style
+        output_size: 512
+        n_gpus: 1 # CHANGE THIS TO NUMBER OF GPUS! small hack to sure we see all our logging samples
+
+lightning:
+  find_unused_parameters: False
+
+  modelcheckpoint:
+    params:
+      every_n_epochs: 0
+      save_top_k: 0
+      monitor: null
+
+  callbacks:
+    image_logger:
+      target: mu.algorithms.selective_amnesia.callbacks.ImageLogger
+      params:
+        batch_frequency: 1
+        max_images: 999
+        increase_log_steps: False
+        log_first_step: False
+        log_all_val: True
+        clamp: True
+        log_images_kwargs:
+          ddim_eta: 0
+          ddim_steps: 50
+          use_ema_scope: True
+          inpaint: False
+          plot_progressive_rows: False
+          plot_diffusion_rows: False
+          N: 6 # keep this the same as number of validation prompts!
+          unconditional_guidance_scale: 7.5
+          unconditional_guidance_label: [""]
+
+  trainer:
+    benchmark: True
+    num_sanity_val_steps: 0
+    max_epochs: 50 # modify epochs here!
+    check_val_every_n_epoch: 10

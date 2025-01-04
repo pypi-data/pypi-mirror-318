@@ -1,0 +1,26 @@
+include README.md
+include LICENSE
+include setup.py
+include requirements.txt
+recursive-include mu *
+recursive-include scripts *
+
+# Exclude patterns from .gitignore
+exclude .venv
+exclude .vscode*
+exclude logs/*
+exclude **/__pycache__/
+exclude *.pyc
+exclude wandb
+exclude .vscode
+exclude cache
+exclude outputs/*
+exclude models/*
+exclude venv/
+
+# Include exceptions from .gitignore
+include data/.gitkeep
+include logs/.gitkeep
+include outputs/.gitkeep
+include models/.gitkeep
+include mu/algorithms/erase_diff/.gitignore
