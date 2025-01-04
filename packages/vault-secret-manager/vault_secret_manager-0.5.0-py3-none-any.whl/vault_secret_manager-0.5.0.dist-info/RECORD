@@ -1,0 +1,7 @@
+vault_secret_manager/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vault_secret_manager/__main__.py,sha256=u6rpBkHYPGKSx-YWuYZhegOezs3T4QiLrjfcR9mnG54,59
+vault_secret_manager/main.py,sha256=qmXGe4f1dhi4-ls_SoWES2Y7zP2QvfiIVuiRORNhcM4,7170
+vault_secret_manager-0.5.0.dist-info/METADATA,sha256=t9CNz2sFmDZ3Gq2YJG7idHqVBGEpEer3SRM45ojTycs,472
+vault_secret_manager-0.5.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+vault_secret_manager-0.5.0.dist-info/entry_points.txt,sha256=HQoEiQEla3IRSQT-SBqR2vnx0dzmRk709SL2lL7l73I,70
+vault_secret_manager-0.5.0.dist-info/RECORD,,
