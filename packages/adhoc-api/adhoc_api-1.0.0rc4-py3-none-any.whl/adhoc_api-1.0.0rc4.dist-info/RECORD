@@ -1,0 +1,12 @@
+adhoc_api/__init__.py,sha256=-f-v8M8egcP9NXm2bf0sm3Z1DfEVzNXQmCxDFbiFRXs,26
+adhoc_api/data.py,sha256=Ont6JabUr_VqG83BQ-655smHRdRC5V0SrdK0MduZ0C8,2671
+adhoc_api/files.py,sha256=dm2m8qSqC-vRXtLTwE0Wo2PmhLn1BSQwFsBBkUe7xiM,6573
+adhoc_api/loader.py,sha256=omDoYIzPaaeTCeZUN1gK2TIWHK9RZqJVvLu_UAjqORY,5875
+adhoc_api/python_tool_test.py,sha256=yiq6bv_k7TxX-sXE1T4W3V0mJhvzXAZdQ7q5mI_TnqM,5286
+adhoc_api/test_new_archytas.py,sha256=6AVFnvWIuCSapSvFCxj5WTbVDIlkCaGkmAHgznCiw54,1680
+adhoc_api/tool.py,sha256=RgdrAnB5yEmL9VaYXVeiilJBxRD8B5DaRGJ6hmrs0wU,16296
+adhoc_api/uaii.py,sha256=rJinYuf3oqQ3wLDEwu725Nu-rOaFo1bmGrjwbI7OAY0,16511
+adhoc_api/utils.py,sha256=N3dvzp9Ld79i-ON6jBnkHLemX8Y5eVzKvNA3YN3UJSY,4190
+adhoc_api-1.0.0rc4.dist-info/METADATA,sha256=vT7r8FDPvrRYjKgNrSoafGWHfJBYG2pT2iMLknDiovI,3412
+adhoc_api-1.0.0rc4.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+adhoc_api-1.0.0rc4.dist-info/RECORD,,
