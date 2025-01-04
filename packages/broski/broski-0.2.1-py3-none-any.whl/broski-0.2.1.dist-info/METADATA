@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: broski
+Version: 0.2.1
+Summary: Add your description here
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: click>=8.1.8
+Requires-Dist: promptic>=4.0.1
+Requires-Dist: rich>=13.9.4
+
+# Broski
+
+A cli tool for running terminal commands with a llm.
