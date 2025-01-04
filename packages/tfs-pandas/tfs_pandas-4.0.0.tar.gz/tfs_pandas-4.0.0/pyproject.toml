@@ -1,0 +1,101 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "tfs/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+  "/.github",
+  "/doc",
+  "/tests",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["tfs"]
+
+[project]
+name = "tfs-pandas"
+readme = "README.md"
+description = "Read and write tfs files."
+authors = [
+    {name = "OMC Team", email = "pylhc@github.com"},  # see zenodo file / commits for details
+]
+license = "MIT"
+dynamic = ["version"]
+requires-python = ">=3.10"
+
+keywords = [
+  "MAD-X",
+  "TFS",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+
+dependencies = [
+  "numpy >= 1.24",
+  "pandas[compression] >= 2.1",  # includes zstandard too, so users get compression out-of-the-box
+]
+
+[project.optional-dependencies]
+hdf5 = [
+  "numpy >= 1.24",
+  "numpy >= 1.24; python_version >= '3.10'",
+  "h5py >= 3.0",
+  "tables >= 3.10.1",
+]
+test = [
+  "tfs-pandas[hdf5]",
+  "pytest >= 7.0",
+  "pytest-cov >= 2.9",
+  "cpymad >= 1.8.1",  # to check MAD-X can read our files
+  "pymadng >= 0.6.0",  # to check MAD-NG can read our files
+]
+doc = [
+  "sphinx >= 7.0",
+  "sphinx_rtd_theme >= 2.0",
+  "sphinx_copybutton >= 0.4",
+  "sphinx-prompt >= 1.7",
+  "sphinx_codeautolink >= 0.14",
+]
+
+all = [
+    "tfs-pandas[hdf5]",
+    "tfs-pandas[test]",
+    "tfs-pandas[doc]",
+]
+
+[project.urls]
+homepage = "https://github.com/pylhc/tfs"
+repository = "https://github.com/pylhc/tfs"
+documentation = "https://pylhc.github.io/tfs/ "
+changelog = "https://github.com/pylhc/tfs/blob/master/CHANGELOG.md"
+
+
+[tool.ruff]
+target-version = "py310"  # Assume Python 3.10+
+
+[tool.pytest.ini_options]
+addopts = "--cov-report=xml --cov-report term-missing --cov-config=pyproject.toml --cov=tfs"
+testpaths = ["tests"]
+
+[tool.coverage.report]
+exclude_also = [
+  "if TYPE_CHECKING:",  # do not count type checking imports (ignored at runtime) for coverage
+  "except ImportError:",  # do not count missing optional dependencies set to None, we monkeypatch and test that
+]  
