@@ -1,0 +1,102 @@
+Metadata-Version: 2.1
+Name: vault-secret-manager
+Version: 1.0.0
+Summary: 
+Author: Mike Mackenna
+Author-email: mmackenna@unitedfiregroup.com
+Requires-Python: >=3.13,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: hvac (>=2.3.0,<3.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: pytz (>=2024.2,<2025.0)
+Requires-Dist: typer (>=0.15.1,<0.16.0)
+Description-Content-Type: text/markdown
+
+# `vault-secret-manager`
+
+A HashiCorp Vault AppRole Secrets Manager
+
+You must set VAULT_ADDR and VAULT_TOKEN or define them in a .env file.
+
+Example:
+
+VAULT_ADDR=&quot;https://vault.example.com:8200&quot;
+
+VAULT_TOKEN=&quot;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&quot;
+
+**Usage**:
+
+```console
+$ vault-secret-manager [OPTIONS] COMMAND [ARGS]...
+```
+
+**Options**:
+
+* `--install-completion`: Install completion for the current shell.
+* `--show-completion`: Show completion for the current shell, to copy it or customize the installation.
+* `--help`: Show this message and exit.
+
+**Commands**:
+
+* `list`: List AppRole Secrets for Role in Namespace
+* `get`: Get specific AppRole Secret details
+* `destroy`: Destroy specific AppRole Secret
+
+## `vault-secret-manager list`
+
+List AppRole Secrets for Role in Namespace
+
+**Usage**:
+
+```console
+$ vault-secret-manager list [OPTIONS] ROLE NAMESPACE
+```
+
+**Arguments**:
+
+* `ROLE`: [required]
+* `NAMESPACE`: [required]
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+## `vault-secret-manager get`
+
+Get specific AppRole Secret details
+
+**Usage**:
+
+```console
+$ vault-secret-manager get [OPTIONS] SECRET_ID_ACCESSOR NAMESPACE
+```
+
+**Arguments**:
+
+* `SECRET_ID_ACCESSOR`: [required]
+* `NAMESPACE`: [required]
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
+## `vault-secret-manager destroy`
+
+Destroy specific AppRole Secret
+
+**Usage**:
+
+```console
+$ vault-secret-manager destroy [OPTIONS] SECRET_ID_ACCESSOR NAMESPACE
+```
+
+**Arguments**:
+
+* `SECRET_ID_ACCESSOR`: [required]
+* `NAMESPACE`: [required]
+
+**Options**:
+
+* `--help`: Show this message and exit.
+
