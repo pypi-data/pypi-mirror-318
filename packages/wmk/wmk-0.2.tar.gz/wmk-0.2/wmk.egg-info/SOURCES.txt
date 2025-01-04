@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_player.py
+wmk/__init__.py
+wmk/player.py
+wmk.egg-info/PKG-INFO
+wmk.egg-info/SOURCES.txt
+wmk.egg-info/dependency_links.txt
+wmk.egg-info/requires.txt
+wmk.egg-info/top_level.txt
