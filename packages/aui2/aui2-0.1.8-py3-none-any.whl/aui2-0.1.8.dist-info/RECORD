@@ -1,0 +1,15 @@
+aui2/__init__.py,sha256=2NGFYtWWrkkpbpfMhMQxwCQxaCpCrFhdhnQFowaZECo,16208
+aui2/aui_constants.py,sha256=7LCZsTaJqLe92YGOthQYHbyICF8Gb0D8TB96y8xg2Ok,173743
+aui2/aui_switcherdialog.py,sha256=-zqKYM4pJMm8KTpljPENJpVieeF5zoRFY82wzm2-vAI,33238
+aui2/aui_utilities.py,sha256=ZYWOUCsgtg_NEPvTkdx36WyUq_TjqMc0Zl5j9il-HRo,26070
+aui2/auibar.py,sha256=Wn6gQR6JHGir0zm3jURBPfZQgPM99FUMAizhMqT0-vU,145483
+aui2/auibook.py,sha256=4BJfo5LO54XnTIYPEPRI7KEpnPooVdVtBbaXfLvBB3U,216782
+aui2/dockart.py,sha256=wruWPCgrut8s6ps_uY1XNTM1sEUClgWMzo4h5e6x-o4,48132
+aui2/framemanager.py,sha256=eyvTUOqbAS477CyB9XH7n_VqgKyZgwfinQXIiaxNENo,376287
+aui2/tabart.py,sha256=jTWsqb7spv037BCwSRyLsMY7EB7TCZ9YTw4C7TphhtI,111108
+aui2/tabmdi.py,sha256=5Jlrpm6gUFM7BleVMw1Y5-4c68B86xpOf03YW-2tpH8,17917
+aui2/version.py,sha256=8zGQvSYGqpzl1i3mWOfVO3JngJLTZR0V4R3URAY6g4c,180
+aui2-0.1.8.dist-info/METADATA,sha256=0hd49h9-2JfGZ1JXbJzSvQhXQyGgExqtbP7mVfGS8co,344
+aui2-0.1.8.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+aui2-0.1.8.dist-info/top_level.txt,sha256=IInhqn-bwE2U9wvfXgEsE2V5ckG63ojMkZL4kaY714w,5
+aui2-0.1.8.dist-info/RECORD,,
