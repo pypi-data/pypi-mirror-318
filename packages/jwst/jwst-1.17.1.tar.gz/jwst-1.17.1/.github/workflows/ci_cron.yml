@@ -1,0 +1,42 @@
+name: test on schedule
+
+on:
+  schedule:
+    # Weekly Monday 6AM build
+    - cron: "0 0 * * 1"
+  workflow_dispatch:
+    inputs:
+      crds_context:
+        description: CRDS context (leave blank for latest)
+        type: string
+        required: false
+        default: ''
+      crds_server_url:
+        description: CRDS server URL
+        type: string
+        required: false
+        default: https://jwst-crds.stsci.edu
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}-${{ inputs.crds_context }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    if: (github.repository == 'spacetelescope/jwst' && (github.event_name == 'schedule' || github.event_name == 'push' || github.event_name == 'workflow_dispatch' || contains(github.event.pull_request.labels.*.name, 'run scheduled tests')))
+    uses: OpenAstronomy/github-actions-workflows/.github/workflows/tox.yml@9f1f43251dde69da8613ea8e11144f05cdea41d5  # v1.15.0
+    with:
+      setenv: |
+        CRDS_PATH: /tmp/crds_cache
+        CRDS_SERVER_URL: ${{ inputs.crds_server_url || 'https://jwst-crds.stsci.edu' }}
+        CRDS_CONTEXT: ${{ inputs.crds_context || 'jwst-edit' }}
+        CRDS_CLIENT_RETRY_COUNT: 3
+        CRDS_CLIENT_RETRY_DELAY_SECONDS: 20
+      cache-path: /tmp/crds_cache
+      cache-key: crds-${{ needs.crds_context.outputs.context }}
+      envs: |
+        - macos: py310-xdist
+        - macos: py312-xdist
+        - linux: py311-pyargs-xdist
+        - linux: py3-pyargs-xdist
+
