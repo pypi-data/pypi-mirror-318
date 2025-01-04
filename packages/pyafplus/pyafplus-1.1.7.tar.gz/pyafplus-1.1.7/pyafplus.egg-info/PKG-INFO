@@ -1,0 +1,255 @@
+Metadata-Version: 2.1
+Name: pyafplus
+Version: 1.1.7
+Summary: Python Advanced Features Plus - 提供多种实用的 Python 扩展功能
+Home-page: https://github.com/dhjs0000/PyPlus
+Author: dhjs0000
+Author-email: dhjsllll@foxmail.com
+Keywords: python,utility,progress bar,rust extension,high performance,string math,big number,data structures
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Rust
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# PyAFPlus
+
+PyAFPlus 是一个 Python 工具集合，提供了多种实用的扩展功能。
+
+## 安装
+
+```bash
+pip install pyafplus
+```
+
+## 功能模块
+
+### progressplus - 高性能进度条模块
+
+提供五种不同性能级别和功能的进度条实现：
+
+1. **标准进度条 (ProgressBar)**
+   - 丰富的自定义选项
+   - 支持前缀、后缀、进度单位等
+   - 显示速度、预计剩余时间
+   - 适合需要详细信息的场景
+
+```python
+from pyafplus.progressplus import ProgressBar
+import time
+
+# 创建标准进度条
+bar = ProgressBar(
+    total=100,
+    prefix='处理中:',
+    suffix='完成',
+    decimals=1,
+    length=50,
+    fill='█',
+    unit='MB',
+    speed_unit='MB/s',
+    show_speed=True,
+    show_time=True,
+    show_percent=True
+)
+
+for i in range(100):
+    time.sleep(0.1)  # 模拟处理
+    bar.update()
+bar.finish()
+```
+
+2. **快速进度条 (FastProgressBar)**
+   - 优化的更新性能
+   - 支持最小更新间隔
+   - 保留基本的自定义选项
+   - 适合频繁更新的场景
+
+```python
+from pyafplus.progressplus import FastProgressBar
+
+# 创建快速进度条
+bar = FastProgressBar(
+    total=100,
+    min_update_interval=0.1,  # 最小更新间隔（秒）
+    unit='条',
+    speed_unit='条/s'
+)
+
+for i in range(100):
+    bar.update()
+bar.finish()
+```
+
+3. **极速进度条 (VFTProgressBar)**
+   - 极致的性能优化
+   - 使用更新阈值控制显示频率
+   - 适合大规模迭代场景
+
+```python
+from pyafplus.progressplus import VFTProgressBar
+
+# 创建极速进度条
+bar = VFTProgressBar(
+    total=100,
+    update_threshold=1000,  # 每1000次迭代更新一次显示
+    unit='it',
+    speed_unit='it/s'
+)
+
+for i in range(100):
+    bar.update()
+bar.finish()
+```
+
+4. **Rust 进度条 (RustProgressBar)**
+   - Rust 实现的超高速进度条
+   - 性能提升约 4.7 倍
+   - 支持全部自定义选项
+   - 适合对性能要求极高的场景
+
+```python
+from pyafplus.progressplus import RustProgressBar
+
+# 创建 Rust 进度条
+bar = RustProgressBar(
+    total=100,
+    prefix="处理中:",
+    suffix="完成",
+    decimals=1,
+    length=50,
+    fill="█",
+    unit="MB",
+    speed_unit="MB/s",
+    show_speed=True,
+    show_time=True,
+    show_percent=True,
+    update_threshold=1000
+)
+
+for i in range(100):
+    bar.update()
+bar.finish()
+```
+
+5. **增强版 Rust 进度条 (RustProgressBarPlus)**
+   - 基于 Rust 实现的高度自定义进度条
+   - 支持自定义格式字符串
+   - 提供更多显示控制选项
+   - 性能与 RustProgressBar 相当
+   - 支持最小更新间隔和更新阈值
+
+```python
+from pyafplus.progressplus import RustProgressBarPlus
+
+# 使用标准格式
+bar = RustProgressBarPlus(
+    total=100,
+    prefix="处理中:",
+    suffix="完成",
+    decimals=1,
+    length=50,
+    fill="█",
+    empty="░",  # 自定义空白字符
+    unit="MB",
+    speed_unit="MB/s",
+    show_speed=True,
+    show_time=True,
+    show_percent=True,
+    show_count=True,
+    show_bar=True,
+    update_threshold=1000,
+    min_update_interval=0.1
+)
+
+for i in range(100):
+    bar.update()
+bar.finish()
+
+# 使用自定义格式
+bar = RustProgressBarPlus(
+    total=100,
+    fill="=",
+    empty=" ",
+    unit="个",
+    speed_unit="个/s",
+    custom_format="自定义 |{bar}| {percent}% ({count}) [{speed}] ETA: {eta}"
+)
+
+for i in range(100):
+    bar.update()
+bar.finish()
+```
+
+#### 性能对比
+
+在处理 1 亿次迭代时的性能表现：
+
+- 标准进度条：4.61 秒
+- 快速进度条：2.84 秒（提升 1.62x）
+- 极速进度条：2.76 秒（提升 1.67x）
+- Rust 进度条：0.98 秒（提升 4.70x）
+- 增强版 Rust 进度条：0.99 秒（提升 4.66x）
+
+#### 自定义选项
+
+所有进度条都支持基本的自定义选项：
+
+- `total`: 总迭代次数
+- `prefix`: 前缀字符串
+- `suffix`: 后缀字符串
+- `decimals`: 百分比的小数位数
+- `length`: 进度条的长度
+- `fill`: 进度条填充字符
+- `unit`: 进度单位（如：MB, KB, 个）
+- `speed_unit`: 速度单位（如：it/s, MB/s）
+- `show_speed`: 是否显示速度
+- `show_time`: 是否显示预计剩余时间
+- `show_percent`: 是否显示百分比
+
+增强版 Rust 进度条额外支持：
+
+- `empty`: 进度条空白字符
+- `show_count`: 是否显示计数
+- `show_bar`: 是否显示进度条
+- `min_update_interval`: 最小更新间隔（秒）
+- `custom_format`: 自定义格式字符串，支持以下占位符：
+  - `{bar}`: 进度条
+  - `{percent}`: 百分比
+  - `{count}`: 计数
+  - `{speed}`: 速度
+  - `{eta}`: 预计剩余时间
+
+### 其他模块
+
+- dictplus - 字典扩展
+- listplus - 列表扩展
+- strplus - 字符串扩展
+- strmaths - 字符串数学运算
+- bccmaths - 大数运算
+
+## 版本历史
+
+### v1.1.6
+- 新增 progressplus 模块，提供五种不同性能级别的进度条
+- 添加 Rust 实现的超高速进度条
+- 添加增强版 Rust 进度条，支持更多自定义功能
+- 支持丰富的自定义选项和显示功能
+
+## 贡献
+
+欢迎提交 Issue 和 Pull Request。
+
+## 许可证
+
+MIT License 
