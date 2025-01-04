@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: country-nationality
+Version: 0.1.0
+Summary: A Python package to get nationality by country code
+Home-page: UNKNOWN
+Author: Anand MC
+Author-email: anand.mc.ofcl@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+# Nationality Mapper
+
+This package provides a simple way to get the nationality of a country given its ISO 3166-1 alpha-2 country code.
+
+## Installation
+
+To install the package, use pip:
+
+```bash
+pip install country_nationality
+```
+## Usage
+```bash
+from country_nationality import nationality
+
+nationality = nationality("US")
+print(nationality)  # Output: American
+
