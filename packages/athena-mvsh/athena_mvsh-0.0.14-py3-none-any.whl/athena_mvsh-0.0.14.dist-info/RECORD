@@ -1,0 +1,15 @@
+athena_mvsh/__init__.py,sha256=OgmUqreTgiC5gYytJCD34B4FzdFaVHozGhxKkxU0aDk,273
+athena_mvsh/connection.py,sha256=fU_MzBKGVP3GNc8MvHgXmFqfdhBgInfX78fD5epViRU,47516
+athena_mvsh/converter.py,sha256=V2ihJDti8ZGe4DXzpDcWk_ukHa8zxzP_WSlnJzRsfpI,7274
+athena_mvsh/cursores/__init__.py,sha256=yC2bTAlO8VeD2hjEa5ihG8Mn90UUddNzXBa-jDg_gYs,408
+athena_mvsh/cursores/cursores.py,sha256=atJvsXs3W-pAADtixz_0JWQwlPDjuPWucILcNFLcNRk,3480
+athena_mvsh/cursores/cursorparquet.py,sha256=uifmSD-1QjScwZT4nmtDoF0_sqxrGexj2aWNPii2kas,4880
+athena_mvsh/cursores/cursorparquetduckdb.py,sha256=x7WP2AWSeXJePT3lkudmIp1_rYDsp8Xgeo0OHNwHUVY,21827
+athena_mvsh/cursores/cursorpython.py,sha256=iIAq7HF3DLaYfpmQ1ybp_ml908NTV3AIx8A051ul3xw,4944
+athena_mvsh/dbathena.py,sha256=6ba2GnuKYyWQY484enj11sExMzTkIRUlYvOzVG-L78Q,8053
+athena_mvsh/error.py,sha256=C7_iH3LbNkKE9qOzB1EdcSfd1HMzRLD9NX_uRJbzaBU,692
+athena_mvsh/formatador.py,sha256=nC1cj8oP6vuseCaTX_Q-H6lsCvpJITEKF9cmBlaRiGo,1191
+athena_mvsh/utils.py,sha256=74R_JSpgUWU9_ear4gWUcx4mnlBCSEIxsUHGE_Iy61E,1599
+athena_mvsh-0.0.14.dist-info/METADATA,sha256=cxDTQbHyILWgNviBxpelcXdxWdfyF2uLZm5N1XBU0Ck,2670
+athena_mvsh-0.0.14.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+athena_mvsh-0.0.14.dist-info/RECORD,,
