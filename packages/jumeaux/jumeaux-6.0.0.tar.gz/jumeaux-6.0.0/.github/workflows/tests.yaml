@@ -1,0 +1,41 @@
+name: "Tests"
+
+on:
+  push:
+    paths:
+      - ".github/**/*"
+      - "jumeaux/*"
+      - "jumeaux/**/*"
+      - "tests/*"
+      - "tests/**/*"
+      - "e2e/*"
+      - "pyproject.toml"
+      - "uv.lock"
+      - "Makefile"
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.9", "3.10", "3.11", "3.12", "3.13"]
+    name: Python ${{ matrix.python }}
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: Install dependencies
+        run: |
+          pipx install uv
+          uv sync
+
+      - run: make ci
+        env:
+          TZ: "Asia/Tokyo"
+      - uses: codecov/codecov-action@v3
+        if: matrix.python == 3.13 && success()
