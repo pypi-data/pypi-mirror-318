@@ -1,0 +1,12 @@
+agentarchives/__init__.py,sha256=7J3Q3mebm5euL5m5d0-glav-l9n5bKW-hW8CDAo0PS4,45
+agentarchives/archivesspace/__init__.py,sha256=d0Q6Fn44e7wFfLabDOBxpcJ1DPKWlFunGYDUBmO-4hA,22
+agentarchives/archivesspace/client.py,sha256=PxWc-E42RKrtVS-XEgSy9GPTz0uQS0FDivcSUSnefFw,41748
+agentarchives/archivists_toolkit/__init__.py,sha256=d0Q6Fn44e7wFfLabDOBxpcJ1DPKWlFunGYDUBmO-4hA,22
+agentarchives/archivists_toolkit/client.py,sha256=6OrI1lGAHuBhAsc2l35ZiFrBU4yDJ5phM8QiRjaURps,25277
+agentarchives/atom/__init__.py,sha256=d0Q6Fn44e7wFfLabDOBxpcJ1DPKWlFunGYDUBmO-4hA,22
+agentarchives/atom/client.py,sha256=agg4TopsNZlW11pPh7ueXEX1Uwy8XhR_O4koafnnKSw,27555
+agentarchives-0.10.0.dist-info/LICENSE,sha256=kbZSd5WewnN2PSjvAC6DprP7pXx6NUNsnltmU2Mz1yA,34519
+agentarchives-0.10.0.dist-info/METADATA,sha256=j4C2vZqXJdFSm8AI3l-RrjNMFfYbw9slYxypnbkqcnA,46462
+agentarchives-0.10.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+agentarchives-0.10.0.dist-info/top_level.txt,sha256=86YRJa72kqm9qeJ0l0vMZp_T2BGsEryWkNcLAlR4cGk,14
+agentarchives-0.10.0.dist-info/RECORD,,
