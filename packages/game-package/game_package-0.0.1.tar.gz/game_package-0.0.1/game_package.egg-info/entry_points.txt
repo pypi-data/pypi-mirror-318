@@ -1,0 +1,2 @@
+[console_scripts]
+game_package = game_package.main:play

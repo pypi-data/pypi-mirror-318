@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: game_package
+Version: 0.0.1
+Summary: sudoku to solve
+Home-page: https://github.com/anurag9601/pip-sudoku.git
+Author: -sudoku
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3
