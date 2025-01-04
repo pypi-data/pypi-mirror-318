@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: pingwizard
+Version: 1.0.0a1
+Summary: Light-weight interface for running PING ecosystem (PINGMapper, etc.)
+Author: Cameron Bodine
+Author-email: bodine.cs@gmail.email
+Project-URL: Issues, https://github.com/CameronBodine/PINGWizard/issues
+Project-URL: GitHub, https://github.com/CameronBodine/PINGWizard
+Project-URL: Homepage, https://cameronbodine.github.io/PINGMapper/
+Keywords: pingmapper,sonar,ecology,remotesensing,sidescan,sidescan-sonar,aquatic,humminbird,lowrance,gis,oceanography,limnology
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Scientific/Engineering :: Oceanography
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: Topic :: Scientific/Engineering :: Hydrology
+Requires-Python: <3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# PINGWizard
+Light-weight interface for running PING ecosystem (PINGMapper, etc.)
