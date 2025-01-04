@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+VideoService/__errors__.py
+VideoService/__init__.py
+VideoService/__main__.py
+VideoService/database.py
+VideoService/files_manager.py
+VideoService/playlist.py
+VideoService/video.py
+VideoService.egg-info/PKG-INFO
+VideoService.egg-info/SOURCES.txt
+VideoService.egg-info/dependency_links.txt
+VideoService.egg-info/requires.txt
+VideoService.egg-info/top_level.txt

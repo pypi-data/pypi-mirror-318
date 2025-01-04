@@ -1,0 +1,14 @@
+opencv-python==4.10.0.84
+
+[dev]
+build
+twine
+setuptools
+wheel
+
+[test]
+pytest
+build
+twine
+setuptools
+wheel
