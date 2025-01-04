@@ -1,0 +1,17 @@
+configs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+configs/camera.yaml,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+examples/line_sensor.py,sha256=J2b5rYymTwj4365RkR97K01p6Lbele0THB7XDbSOHq4,273
+examples/motor_wheel_control.py,sha256=zRz_8Ybix62TjaiSZ37kICI47Hv2nh71YmFx7a0BpiU,1307
+fast_sdk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fast_sdk/board_sdk.py,sha256=oHP_hmgHVDVMK5f1EuN3uvC6XiWzY7_i6VKbyHsGp6w,5921
+fast_sdk/infra_red.py,sha256=cJDiy0-EjsUnE5bwGwVlorczxYDRERYRgbPyMdWRECM,2258
+fast_sdk/motors.py,sha256=7-QW89ENSpIMQmIeKv5tijsFWo6Q9IBWh_kYn2_K_hg,2628
+fast_sdk/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fast_sdk/utils/check_sum.py,sha256=MhlBhWLtpyaV9YX3t03K-ic1TUDsSsqBBxhu4CDZ2-k,1374
+fast_sdk/utils/functions.py,sha256=T04O3qILgl-4fkSRrERjMl0TCK9_fRponQT3rqz4ebE,141
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+turbopi_fast_sdk-0.3.3.dist-info/LICENSE,sha256=g8iEDGIIhDh0wHq4B7md4cWUJ69HC13i010cmASC9Lg,1059
+turbopi_fast_sdk-0.3.3.dist-info/METADATA,sha256=j_vNwxyYr3tajNLUX5lCXmn8wvarRwu_JZzCNBhbdE8,4573
+turbopi_fast_sdk-0.3.3.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+turbopi_fast_sdk-0.3.3.dist-info/RECORD,,
