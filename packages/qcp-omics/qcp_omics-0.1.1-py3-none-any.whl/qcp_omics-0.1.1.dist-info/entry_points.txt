@@ -1,0 +1,3 @@
+[console_scripts]
+qcp=qcp_omics.cli.cli:qcp
+
