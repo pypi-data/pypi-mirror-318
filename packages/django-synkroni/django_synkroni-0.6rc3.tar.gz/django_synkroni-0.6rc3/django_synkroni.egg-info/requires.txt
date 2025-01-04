@@ -1,0 +1,4 @@
+django>=4.2
+django-media
+django-pistoke>=0.8
+jsonpatch
