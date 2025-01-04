@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+mi_paquete/__init__.py
+mi_paquete/modulo1.py
+mi_paquete/modulo2.py
+modulo_juan.egg-info/PKG-INFO
+modulo_juan.egg-info/SOURCES.txt
+modulo_juan.egg-info/dependency_links.txt
+modulo_juan.egg-info/requires.txt
+modulo_juan.egg-info/top_level.txt
