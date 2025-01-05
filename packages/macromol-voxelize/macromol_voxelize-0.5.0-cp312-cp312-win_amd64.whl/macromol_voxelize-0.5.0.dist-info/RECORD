@@ -1,0 +1,10 @@
+macromol_voxelize/__init__.py,sha256=NKY1hsnHs58RNjfwBmw05THFLsQmq8qx7SNDhh9xNwY,76
+macromol_voxelize/_voxelize.cc,sha256=NPIFwnCiJiNzO0xg81r9YpgFS6G87xUTJvD2GNw6w_8,15838
+macromol_voxelize/_voxelize.cp312-win_amd64.pyd,sha256=hxM0xHVZONsK1EvUA-izbqbrhrFG3TMV7EE3TIzBN30,270336
+macromol_voxelize/pymol.py,sha256=49ZGKMAD_hII3SoGLJPubuQJ2x_JCMAnfeSWmClmiuM,14471
+macromol_voxelize/voxelize.py,sha256=g9ExW8YpN3l_ZquHvC3ImKNb75q_ITM98y-SbJz6Xvo,16609
+macromol_voxelize-0.5.0.dist-info/LICENSE.txt,sha256=MjdpnZ5ngchYdzZavZSTyhMqD9MfQ-GjJ4uOdfNlSvQ,33094
+macromol_voxelize-0.5.0.dist-info/METADATA,sha256=kROvzCotcxkf_Tfi0jFaoAuflzq7YT6pt_ji22oP_7k,6343
+macromol_voxelize-0.5.0.dist-info/WHEEL,sha256=pWXrJbnZSH-J-PhYmKs2XNn4DHCPNBYq965vsBJBFvA,101
+macromol_voxelize-0.5.0.dist-info/top_level.txt,sha256=hXHmyxrk9Yk8gQ4y4idXgkNEtZzqpy77KtB-cM52RZQ,18
+macromol_voxelize-0.5.0.dist-info/RECORD,,
