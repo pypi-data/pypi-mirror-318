@@ -1,0 +1,16 @@
+copcon/__init__.py,sha256=7_ozKenPk0ZuSrqUERtuUPwuGAS0Jw3fd1_2vTnVmw8,34
+copcon/cli.py,sha256=MnpunVzjRqWmb-cUnSxuLrX3nio5INz5VkPyaR2i7SM,4087
+copcon/core/.copconignore,sha256=klS4FfFq0zLbVEJCRKkFqM6tvS4O6r8Uqjp72di-Hpc,276
+copcon/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+copcon/core/clipboard.py,sha256=ArW8wqW1_W2k4r0npjFa6pzkdzjmkCPzdS9i7NShPCc,397
+copcon/core/file_filter.py,sha256=cPw4S8I4GWXKPp7BdN7zKpbMDgE_NvYgZcnn6v5Kzi8,2780
+copcon/core/file_reader.py,sha256=GlPDFHQ4nX1qGlqTBF6zYZaqog3Bs_ibkn9F-9g3N_Y,2569
+copcon/core/file_tree.py,sha256=a8bptpovRrf_BDPg4bnafwe1dAuT96g2NgkTQMNzAhU,1835
+copcon/core/report.py,sha256=aFGIYjJP9i7uL6-oqHm5kS4_cQHbCHZ52lVZWieT858,1137
+copcon/exceptions.py,sha256=TaAnmrRXgD6-KilSgj4-8VCppF3t42zn0w3UTW1m09U,198
+copcon/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+copcon/utils/logger.py,sha256=Ih9u7xuzDLIXJu59MAurluyYjXDYNJXZ9j-1mDQQ85U,282
+copcon-0.3.0.dist-info/METADATA,sha256=PEDx6fXpcvrx5tSnE3vzbjhf8hK8jMxCHEADE3uFkB4,4537
+copcon-0.3.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+copcon-0.3.0.dist-info/entry_points.txt,sha256=HU4u9oejkwMglCukEqn0hws28vd9LOZzBVngV9SjTcU,44
+copcon-0.3.0.dist-info/RECORD,,
