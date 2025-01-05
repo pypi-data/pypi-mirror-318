@@ -1,0 +1,14 @@
+eplatform/__init__.py,sha256=muEgclV_MG2M06QrMpGCdI6gX-memOaa_RAFsNWxDIk,1494
+eplatform/_eplatform.c,sha256=gz43MvCsJbopx-aF27Ahp7-8k-GrCZ2sQhX22m2YmJM,28234
+eplatform/_eplatform.cpython-312-darwin.so,sha256=DAIM8usRrwumtVdf7FUk3x7nAskQt9KGq_ABvZXXQjc,55928
+eplatform/_eplatform.pyi,sha256=6lgZviNXvciHRRkomGqyuWU_z2JuVMn58ziixsysyJY,9861
+eplatform/_event_loop.py,sha256=8KfIY4jCC5D3Qh-taBxl_G1gXf4rFtEvEYiyvKwdikE,16279
+eplatform/_keyboard.py,sha256=ragfLfWeB2906tcjMIsuZqZFX69iDbpUOfeU8kUjY5w,11636
+eplatform/_mouse.py,sha256=OKeK8BovJlLyW0I6CxPGkjusk6GqkHzUuYVINvNknfY,4116
+eplatform/_platform.py,sha256=29Li9ZNKAeW0gY60GEI_9DZMCWwPnNKwNbQHL2AvTsI,5129
+eplatform/_type.py,sha256=LhHxjZuWYwSZwpo8n9tzAwtGEcrjTY9ZfdjANTku2Ss,340
+eplatform/_window.py,sha256=LJuWTCYMt_7qf5GAXDg63lJ_tfF3yVdi1qpZeyHjTT8,5037
+eplatform/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+eplatform-0.7.0.dist-info/METADATA,sha256=5kEtwczHHEsTHqdqQehFLDPe7heOahzCISUwhrCOO-I,442
+eplatform-0.7.0.dist-info/WHEEL,sha256=Y_weie1TW_WIJbR8IuXTaOeaoIhCjNwGcy5gl47z3EE,107
+eplatform-0.7.0.dist-info/RECORD,,
