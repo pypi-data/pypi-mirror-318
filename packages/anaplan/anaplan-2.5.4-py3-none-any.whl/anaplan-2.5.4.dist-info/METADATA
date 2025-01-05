@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: anaplan
+Version: 2.5.4
+Summary: * Anaplan is a machine learning library written in Python for professionals, incorporating advanced, unique, new, and modern techniques.
+Author: Hasan Can Beydili
+Author-email: tchasancan@gmail.com
+Keywords: model evaluation,classification,potentiation learning artificial neural networks,NEAT,genetic algorithms,reinforcement learning,neural networks
+Description-Content-Type: text/markdown
+
+Anaplan library name changed to 'pyerualjetwork'. Please use this: pip install pyerualjetwork
