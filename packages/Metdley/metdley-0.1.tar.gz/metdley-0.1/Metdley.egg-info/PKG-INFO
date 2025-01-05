@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: Metdley
+Version: 0.1
+Summary: A Python client for the Metdley API
+Home-page: https://metdley.com
+Author: Metdley
+Author-email: contact@metdley.com
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+This library interfaces with the Metdley API. 
+
+Metdley offers a seamless solution for generating accurate metadata for music catalogs. Eliminating the hassle of manual data entry, saving you time and ensuring your catalog is ready for seamless distribution.
+
+Read more at: docs.metdley.com
