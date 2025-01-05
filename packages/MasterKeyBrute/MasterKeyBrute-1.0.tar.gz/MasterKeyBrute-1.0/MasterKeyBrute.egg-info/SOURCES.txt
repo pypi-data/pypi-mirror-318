@@ -1,0 +1,7 @@
+setup.py
+MasterKeyBrute/masterkeybrute.py
+MasterKeyBrute.egg-info/PKG-INFO
+MasterKeyBrute.egg-info/SOURCES.txt
+MasterKeyBrute.egg-info/dependency_links.txt
+MasterKeyBrute.egg-info/requires.txt
+MasterKeyBrute.egg-info/top_level.txt

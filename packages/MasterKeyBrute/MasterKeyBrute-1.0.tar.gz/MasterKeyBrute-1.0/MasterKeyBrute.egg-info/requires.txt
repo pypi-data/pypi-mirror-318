@@ -1,0 +1,6 @@
+impacket
+hashlib
+binascii
+argparse
+Cryptodome
+struct

@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: MasterKeyBrute
+Version: 1.0
+Summary: Bruteforce DPAPI encrypted MasterKey File from Windows Credentials Manager
+Home-page: https://github.com/ProcessusT/MasterKeyBrute
+Author: Processus Thief
+Author-email: processus@thiefin.fr
+License: GPL-3.0 license
+Classifier: Programming Language :: Python :: 3.11
