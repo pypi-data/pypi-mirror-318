@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+KIG2013_G9_cpptopython.egg-info/PKG-INFO
+KIG2013_G9_cpptopython.egg-info/SOURCES.txt
+KIG2013_G9_cpptopython.egg-info/dependency_links.txt
+KIG2013_G9_cpptopython.egg-info/not-zip-safe
+KIG2013_G9_cpptopython.egg-info/top_level.txt
+src/main.cpp
