@@ -1,0 +1,12 @@
+genomespy/__about__.py,sha256=Lwb8cDLnYVil9mwwbh5hlVxc5IHdGYyXkl7xxr8cSi0,126
+genomespy/__init__.py,sha256=_k6A8sgoflfoEjhQIdfeF-81ly8EMzNyuC-HKryA6nk,173
+genomespy/genomespy.py,sha256=N-kPXT9z15Eip2FohG493tpHxhg2k-V4CBU5898yA34,58963
+genomespy/shared/cytobands.json,sha256=PVwvID7F_7qwVsO9knbHmiGsc1w_VrvRUhJ3W5-oVuo,2557
+genomespy/shared/cytobands.tsv,sha256=SkR6ZchSB6-Hu8c0ep1FJsjyfD1f0TJpTdMKHSS4oeY,45543
+genomespy/shared/genes.json,sha256=m9bOSZXbekwXeTta2bNWmIVnzG203E_wuNtuXZ-C1mk,4709
+genomespy/shared/hg38.json,sha256=LkwWKvBvsxZfmMfY0hZDjoXE1yB-0lHOmWBx2_f-2j0,1543
+genomespy/shared/refSeq_genes_scored_compressed.hg38.tsv,sha256=rCTGSC6S-0Qrn1rvLS4mTX7yp_EnmBM4_3bGU3RPWgE,2913391
+genomespy-0.0.1.dist-info/METADATA,sha256=k0qWsCGke0QNpEy_uOAOHFMR5G9pJb78EU3d7fyv4m8,4934
+genomespy-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+genomespy-0.0.1.dist-info/licenses/LICENSE.txt,sha256=A9RLSj3f9ZKhTLQtdoDpzsRcbC9bnf6cfrG4RjHjgUg,1096
+genomespy-0.0.1.dist-info/RECORD,,
