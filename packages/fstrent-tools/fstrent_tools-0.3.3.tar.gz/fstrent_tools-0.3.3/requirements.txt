@@ -1,0 +1,27 @@
+# Version management
+bump2version>=1.0.1
+
+# Development dependencies
+pytest>=7.0.0
+black>=22.0.0
+flake8>=4.0.0
+
+# Core dependencies
+pyttsx3>=2.90        # For tools_speak
+pywin32>=305         # For Windows-specific features
+requests>=2.28.0     # For tools_hyperlinks
+python-dateutil>=2.8.2  # For tools_time
+pillow>=9.0.0        # For image processing
+numpy>=1.21.0        # For numerical operations
+opencv-python>=4.6.0  # For tools_video
+playsound>=1.3.0     # For tools_sounds
+SpeechRecognition>=3.8.1  # For tools_voice
+colorama>=0.4.6      # For tools_print colored output
+psutil>=5.9.0        # For system utilities
+pyperclip>=1.8.2     # For clipboard operations
+tqdm>=4.65.0         # For progress bars
+
+# Optional dependencies
+# Uncomment if you need these features
+# pygame>=2.1.0      # Alternative sound backend
+# pydub>=0.25.1      # Advanced audio processing 
