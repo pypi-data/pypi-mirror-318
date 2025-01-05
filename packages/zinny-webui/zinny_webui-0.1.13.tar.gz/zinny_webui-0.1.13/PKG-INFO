@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: zinny-webui
+Version: 0.1.13
+Summary: A Web UI for rating Motion Picture titles. Uses Zinny API
+Author: Ryan Laney
+License: BSD 3-Clause License
+        
+        Copyright (c) 2025, Ryan
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Project-URL: Homepage, https://github.com/RyLaney/zinny-webui
+Project-URL: Issues, https://github.com/RyLaney/zinny-webui/issues
+Keywords: zinny,surveys,movie,rating
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: black; extra == "dev"
+
+# Zinny Web UI: A Simple Interface to Rate Films
+[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](LICENSE)
+
+## What's the skinny on the ciné?
+Zinny Web UI provides a straightforward browser-based interface for rating films using surveys from [zinny-surveys](https://github.com/RyLaney/zinny-surveys). It connects to the Zinny API to manage surveys, ratings, and more.
+
+## Quickstart
+1. Clone the repository.
+2. Install the dependencies (see [SETUP.md](https://github.com/RyLaney/zinny-webui/blob/main/SETUP.md)).
+3. Start the server:
+   `python zinny-webui.py`
+4. Access the interface at:
+   `http://127.0.0.1:7219`
+
+
+## Installation Details
+
+see [SETUP.md](SETUP.md)
+
+
+## Contributing
+We welcome contributions! If you'd like to report an issue, suggest a feature, or contribute code, please check the [CONTRIBUTING.md](https://github.com/RyLaney/zinny-webui/blob/main/CONTRIBUTING.md) file for guidelines.
+
+
+## Acknowledgements
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/) for the API framework.
+- [PyInstaller](https://www.pyinstaller.org/) for building executables.
+- [Platypus](https://github.com/sveinbjornt/Platypus) for creating macOS app bundles.
+- Special thanks to [IMDb](https://www.imdb.com) for being the standard reference for movie and TV data. While no IMDb data is used directly, title information may coincide with their dataset.
+- Development sponsored by [Teus Media](https://teus.media).

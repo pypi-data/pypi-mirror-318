@@ -1,0 +1,231 @@
+<nav id="header-bar" class="col-12 sticky-bar mb-3">
+    <div class="container d-flex d-flex-column justify-content-between mt-2 mb-2">
+        <span>
+            <button id="about-zinny-button" class="btn" src="/static/img/zinny-logo.png" title="Zinny Web UI" style="padding:0">
+                <img src="/static/img/zinny-logo.png" alt="Zinny Logo" style="height: 30px;">
+                <span style="margin-left: 0.75rem;"><strong>Zinny</strong></span>
+                
+            </button>
+
+        </span>
+        <span id="action-group" class="d-flex" >
+            <div class="dropdown">
+                <button id="download-button" class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"  data-bs-toggle="tooltip" title="Export to a file...">
+                    <i class="bi bi-download"></i>
+                    <span class="d-none d-sm-inline">Save As</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><button class="dropdown-item" id="download-json-all">JSON (All)</button></li>
+                    <li><button class="dropdown-item" id="download-tsv-all-zip">TSV (All as ZIP)</button></li>
+                    <li><button class="dropdown-item" id="download-tsv-current">TSV (Current)</button></li>
+                </ul>
+            </div>
+            <!-- <span id="save-status" class="save-status">not saved</span> -->
+            <button id="save-ratings-button" class="btn btn-secondary was-btn-outline disabled" data-bs-toggle="tooltip" title="Save the current ratings to the db"  style="margin-left: 0.5rem;"">
+                <i class="bi bi-save2"></i>
+                <span class="d-none d-sm-inline">Save Ratings</span>
+            </button>
+            <button id="help-button" class="btn btn-outline-secondary" data-bs-toggle="tooltip" title="About" style="margin-left: 0.5rem;">
+                <i class="bi bi-question-lg"></i>
+            </button>
+        </span>
+    </div>
+</nav>
+
+
+<div class="modal" id="about-modal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="aboutModalLabel">About Zinny</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Zinny is a media rating application allowing users to evaluate titles with predefined surveys.</p>
+                <p>Developed for simplicity, portability, and flexibility.</p>
+                <p>More information can be found at github
+                    <ul>
+                        <li><a href="https://github.com/RyLaney/zinny-surveys">zinny-surveys<a></li>
+                        <li><a href="https://github.com/RyLaney/zinny-api">zinny-api  {{ config['ZINNY_API_VERSION'] }}<a></li>
+                        <li><a href="https://github.com/RyLaney/zinny-webui">zinny-webui {{ config['ZINNY_WEBUI_VERSION'] }}<a></li>
+                    </ul>
+                </p>
+                <p>
+                    Though we have not used IMDb data, IMDb is the gold standard for movie and TV data. Any correct release dates or spellings of titles are purely coincidental.
+                    Still, we should thank IMDb: Title information (in the world is probably all) courtesy of <a href="https://www.imdb.com" target="_blank">IMDb</a>. Used with permission.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal" id="help-modal" tabindex="-1" aria-labelledby="helpModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="helpModalLabel">Quick Start</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Zinny uses surveys to rate titles. To get started:
+                    <ol>
+                        <li>Type in a Title</li>
+                        <li>Select from the list or Add if not matched</li>
+                        <li>Select a Survey</li>
+                        <li>Rate, Save, Repeat</li>
+                    </ol>
+                </p>
+                <p>Notes:
+                    <ul>
+                        <li>Click the edit (pencil) buttons to change title or survey.</li>
+                        <li>All data is local and saved in platform's user app data location.</li>
+                        <li>All data is local and saved in platform's user app data location.</li>
+                        <li>Ratings are not saved until you click the save button (to avoid accidental changes).</li>
+                        <li>Export ratings as JSON or TSV</li>
+                    </ul>
+                </p>
+                <p>More information can be found at the github repo <br>
+                    <a href="https://www.github.com/RyLaney/zinny-webui" target="_blank">zinny-webui {{ config['ZINNY_WEBUI_VERSION'] }}</a>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script> -->
+<script src="{{ url_for('static', filename='js/jszip.min.js') }}"> </script>
+
+<script>
+document.getElementById("about-zinny-button").addEventListener("click", () => {
+    const aboutModal = new bootstrap.Modal(document.getElementById("about-modal"));
+    aboutModal.show();
+});
+document.getElementById("help-button").addEventListener("click", () => {
+    const aboutModal = new bootstrap.Modal(document.getElementById("help-modal"));
+    aboutModal.show();
+});
+
+function getDatestamp() {
+    const now = new Date();
+    return `${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, "0")}${String(now.getDate()).padStart(2, "0")}`;
+}
+
+async function downloadRatings(format) {
+    try {
+        const response = await fetch("/api/v1/ratings");
+        if (!response.ok) {
+            throw new Error("Failed to fetch ratings data.");
+        }
+
+        const ratingsData = await response.json();
+        const datestamp = getDatestamp();
+        const surveyName = state.survey_id || "all-surveys";
+
+        if (format === "json") {
+            const filename = `zinny-${datestamp}.json`;
+            const blob = new Blob([JSON.stringify(ratingsData, null, 2)], { type: "application/json" });
+            triggerDownload(blob, filename);
+        } else if (format === "tsv") {
+            const tsv = convertToTSV(ratingsData, surveyName);
+            const filename = `zinny-${surveyName}-${datestamp}.tsv`;
+            const blob = new Blob([tsv], { type: "text/tab-separated-values" });
+            triggerDownload(blob, filename);
+        }
+    } catch (error) {
+        console.error("Error downloading ratings:", error);
+    }
+}
+
+function convertToTSV(data, surveyName) {
+    // Filter data for the current survey if needed
+    const filteredData = data.filter(rating => rating.survey_id === surveyName);
+
+    // Extract all unique criteria keys from the ratings
+    const uniqueCriteria = new Set();
+    filteredData.forEach(rating => {
+        Object.keys(rating.ratings).forEach(key => uniqueCriteria.add(key));
+    });
+
+    const headers = ["title_id", "survey_id", "screen_type_id", "comments", ...uniqueCriteria];
+    const rows = filteredData.map(rating => {
+        const row = [
+            rating.title_id,
+            rating.survey_id,
+            rating.screen_type_id || "",
+            rating.comments || ""
+        ];
+        headers.slice(4).forEach(criterion => {
+            row.push(rating.ratings[criterion] || "");
+        });
+        return row.join("\t");
+    });
+
+    return [headers.join("\t"), ...rows].join("\n");
+}
+
+function triggerDownload(blob, filename) {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+async function downloadAllTSVsAsZip() {
+    try {
+        // Dynamically load JSZip
+        // const { default: JSZip } = await import("https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js");
+        // const { default: JSZip } = await import("/static/js/jszip.min.js");
+
+        const response = await fetch("/api/v1/ratings");
+        if (!response.ok) {
+            throw new Error("Failed to fetch ratings data.");
+        }
+
+        const ratingsData = await response.json();
+        const datestamp = getDatestamp();
+        const zip = new JSZip();
+
+        // Group ratings by survey
+        const surveys = new Map();
+        ratingsData.forEach(rating => {
+            if (!surveys.has(rating.survey_id)) {
+                surveys.set(rating.survey_id, []);
+            }
+            surveys.get(rating.survey_id).push(rating);
+        });
+
+        // Generate TSV for each survey and add to ZIP
+        for (const [surveyName, surveyRatings] of surveys.entries()) {
+            const tsv = convertToTSV(surveyRatings, surveyName);
+            const filename = `zinny-${surveyName}-${datestamp}.tsv`;
+            zip.file(filename, tsv);
+        }
+
+        // Generate ZIP blob and trigger download
+        const zipBlob = await zip.generateAsync({ type: "blob" });
+        const zipFilename = `zinny-all-surveys-${datestamp}.zip`;
+        triggerDownload(zipBlob, zipFilename);
+    } catch (error) {
+        console.error("Error downloading ZIP file:", error);
+    }
+}
+
+
+document.getElementById("download-json-all").addEventListener("click", () => downloadRatings("json"));
+document.getElementById("download-tsv-current").addEventListener("click", () => downloadRatings("tsv"));
+document.getElementById("download-tsv-all-zip").addEventListener("click", downloadAllTSVsAsZip);
+
+</script>

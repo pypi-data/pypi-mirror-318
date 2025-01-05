@@ -1,0 +1,292 @@
+/* ** CSS Tricks for Range Slider ** */
+body {
+    display: grid;
+    place-items: center;
+    background-color: #999;
+}
+#header-bar {
+    background-color: #ddd;
+}
+
+.range {
+    --ticksThickness: 2px;
+    --ticksHeight: 30%;
+    --ticksColor: silver;
+    display: inline-block;
+    background: silver;
+    background: linear-gradient(to right, var(--ticksColor) var(--ticksThickness), transparent 1px) repeat-x;
+    background-size: calc(100%/((var(--max) - var(--min)) / var(--step)) - .1%) var(--ticksHeight);
+    background-position: 0 bottom;
+    position: relative;
+}
+
+.range::before, .range::after {
+    font: 12px monospace;
+    content: counter(x);
+    position: absolute;
+    bottom: -2ch;
+}
+
+.range::before {
+    counter-reset: x var(--min);
+    transform: translateX(-50%);
+}
+
+.range::after {
+    counter-reset: x var(--max);
+    right: 0;
+    transform: translateX(50%);
+}
+
+.range > input {
+    width: 300px;
+    margin: 0 -6px; /* Critical adjustment */
+}
+
+/* ** DataList Trick for Range Slider ** */
+input[type=range] {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+}
+
+input[type=range] + datalist {
+    display: flex;
+    margin-top: -4px;
+}
+
+input[type=range] + datalist option {
+    display: inline-block;
+    width: calc((100% - 12px) / (var(--list-length) - 1));
+    text-align: center;
+}
+
+input[type=range] + datalist option:first-child {
+    width: calc((100% - 12px) / ((var(--list-length) - 1) * 2) + 6px);
+    text-align: left;
+}
+
+input[type=range] + datalist option:last-child {
+    width: calc((100% - 12px) / ((var(--list-length) - 1) * 2) + 6px);
+    text-align: right;
+}
+
+/* ** Adjust Margins and Responsiveness ** */
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    /* margin: 0 10px; */
+}
+
+@media (max-width: 576px) {
+    .range-labels span:nth-child(2) {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .range-labels span {
+        font-size: 0.8em;
+    }
+}
+
+.text-truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.disabled-section {
+    pointer-events: none; /* Disable interactions */
+    opacity: 0.5; /* Make the section look faded */
+}
+
+.fieldset-compact legend {
+    font-size: 0.875rem; /* Smaller font size */
+    margin-bottom: 0.25rem; /* Reduce spacing */
+}
+
+/* Center icons and labels vertically */
+.btn-check + .btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Adjust spacing for labels */
+.btn-check + .btn span {
+    margin-top: 0.5rem;
+}
+
+/* Responsive behavior: show labels only on larger screens */
+.d-none.d-lg-block {
+    display: none !important;
+}
+@media (min-width: 992px) {
+    .d-none.d-lg-block {
+        display: inline-block !important;
+    }
+}
+
+#criteria-list.disabled {
+    pointer-events: none; /* Disable all interactions */
+    opacity: 0.5; /* Optional: visually indicate disabled state */
+}
+
+#criteria-list.disabled * {
+    pointer-events: none; /* Apply to all child elements */
+}
+
+
+/* Increase thumb size and change color */
+input[type="range"]::-webkit-slider-thumb {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: -0.5rem;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: -0.5rem;
+    cursor: pointer;
+}
+
+input[type="range"]::-ms-thumb {
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+/* Default thumb styles */
+.criterion-range::-webkit-slider-thumb {
+    width: 3rem;
+    height: 3rem;
+    margin-top: -1rem;
+    border: 2px solid transparent;
+    background-color: #007bff; /* Default fill color */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Cleared thumb style */
+.criterion-range.cleared::-webkit-slider-thumb {
+    background-color: #fff;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #888;
+}
+
+/* Filled thumb style */
+.criterion-range.filled::-webkit-slider-thumb {
+    background-color: #888;
+    border-style: none;
+    border-width: 3px;
+    border-color: transparent;
+}
+
+/* For non-WebKit browsers */
+.criterion-range::-moz-range-thumb {
+    width: 3rem;
+    height: 3rem;
+    margin-top: -1rem;
+    background-color: #fff;
+    border: 3px solid #888;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.criterion-range.cleared::-moz-range-thumb {
+    background-color: #fff;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #888;
+}
+
+.criterion-range.filled::-moz-range-thumb {
+    background-color: #888;
+    border-style: none;
+    border-width: 3px;
+    border-color: transparent;
+}
+
+
+/* for filter sections */
+.hidden {
+    display: none; /* Completely hide the section, no space taken */
+}
+
+.visible {
+    display: block;
+    margin: -1rem 0 0 0;
+    padding: 1rem;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.filters-container {
+    margin: -1rem 0 0 0;
+    padding: 1rem;
+    border-width: var(--bs-border-width);
+    border-style: solid;
+    border-radius: 0.375rem;
+    border-color: var(--bs-border-color);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/* Optional fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Sticky top bar */
+.sticky-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it's above other elements */
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.save-status {
+    color: #6c757d;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#screen-type-selector.btn-group {
+    background-color: #ccc;
+}
+/* Custom color for active state of radio buttons in a button group */
+.btn-check:checked + .btn {
+    background-color: #ddd; /* Example custom color */
+    border-color: #333;     /* Match border to background */
+    color: #111;               /* Text color */
+    border-width: 2px;        /* Increase border width */
+    margin: -2px;             /* Compensate for border width */
+}
+
+/* Customize hover effects */
+.btn-check + .btn:hover {
+    background-color: #eee; /* Slightly lighter shade */
+    border-color: #777;
+    color: #111;               /* Text color */
+}
+
+/* Customize focus effects */
+.btn-check:focus + .btn {
+    box-shadow: 0 0 0 0.2rem rgba(99, 99, 71, 0.5);
+    color: #111;               /* Text color */
+}
