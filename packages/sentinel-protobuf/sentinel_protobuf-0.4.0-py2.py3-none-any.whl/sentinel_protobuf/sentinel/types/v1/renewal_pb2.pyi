@@ -1,0 +1,17 @@
+
+from gogoproto import gogo_pb2 as _gogo_pb2
+from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
+from google.protobuf import descriptor as _descriptor
+from typing import ClassVar as _ClassVar
+DESCRIPTOR: _descriptor.FileDescriptor
+RENEWAL_PRICE_POLICY_ALWAYS: RenewalPricePolicy
+RENEWAL_PRICE_POLICY_IF_EQUAL: RenewalPricePolicy
+RENEWAL_PRICE_POLICY_IF_GREATER: RenewalPricePolicy
+RENEWAL_PRICE_POLICY_IF_GREATER_OR_EQUAL: RenewalPricePolicy
+RENEWAL_PRICE_POLICY_IF_LESSER: RenewalPricePolicy
+RENEWAL_PRICE_POLICY_IF_LESSER_OR_EQUAL: RenewalPricePolicy
+RENEWAL_PRICE_POLICY_IF_NOT_EQUAL: RenewalPricePolicy
+RENEWAL_PRICE_POLICY_UNSPECIFIED: RenewalPricePolicy
+
+class RenewalPricePolicy(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = []
