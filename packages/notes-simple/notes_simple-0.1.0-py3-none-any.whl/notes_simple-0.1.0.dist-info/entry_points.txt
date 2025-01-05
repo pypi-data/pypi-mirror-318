@@ -1,0 +1,2 @@
+[console_scripts]
+notes-simple = notes_simple:main
