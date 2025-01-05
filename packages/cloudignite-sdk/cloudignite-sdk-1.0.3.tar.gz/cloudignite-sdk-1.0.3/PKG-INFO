@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: cloudignite-sdk
+Version: 1.0.3
+Summary: A Python SDK for interacting with CloudIgnite services
+Home-page: https://cloudignite.in
+Author: CloudIgnite
+Author-email: arpitrangi72@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
+CloudIgnite SDK Project Description
+Overview
+The CloudIgnite SDK is a Python-based Software Development Kit (SDK) designed to simplify the interaction with the CloudIgnite platform. It provides developers with an easy-to-use interface to integrate CloudIgnite's authentication services into their applications. With this SDK, developers can perform common tasks such as user creation, user authentication, and fetching user data using concise and straightforward Python methods.
+
+Key Features
+User Management:
+
+Add new users to a project.
+Authenticate users with email and password.
+List all registered users for a specific project.
+Secure Authentication:
+
+Built-in support for JWT (JSON Web Tokens) for secure token generation and verification.
+Password hashing using bcrypt for enhanced security.
+Seamless Integration:
+
+Lightweight and easy-to-use Python package.
+Supports integration with CloudIgnite’s authentication APIs.
+Highly Configurable:
+
+Customizable API base URLs and API keys for different environments (e.g., development, staging, production).
+Production-Ready:
+
+Includes exception handling, response validation, and error reporting.
+Compatible with Python 3.6 and above.
+
+
