@@ -1,0 +1,15 @@
+name: 🍎 MacOS
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    name: 🍎 MacOS
+    steps:
+      - uses: actions/checkout@main
+      - name: Build
+        run: |
+          cd example
+          cmake -B build
+          cmake --build build
