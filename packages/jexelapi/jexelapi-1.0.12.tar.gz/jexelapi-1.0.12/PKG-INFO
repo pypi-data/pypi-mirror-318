@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: jexelapi
+Version: 1.0.12
+Summary: This library helps to optimize the creation of APIs with FastAPI
+Home-page: https://github.com/jexelbytes/jexelapi
+Author: Jexel Gómez
+Author-email: jexelg53@gmail.com
+Description-Content-Type: text/markdown
+Requires-Dist: jinja2
+Requires-Dist: shutils
+
+This library helps to optimize the creation of APIs with FastAPI and PostgresDB.
