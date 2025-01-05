@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: mixemy
+Version: 0.1.0
+Summary: Mixins for sqlalchemy and pydantic
+Home-page: https://github.com/frostyfeet909/mixemy
+License: MIT
+Author: Algernon Sampson
+Author-email: algiesampson@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pydantic (>=2.10.4,<3.0.0)
+Requires-Dist: sqlalchemy (>=2.0.36,<3.0.0)
+Project-URL: Repository, https://github.com/frostyfeet909/mixemy
+Description-Content-Type: text/markdown
+
+# Mixemy
