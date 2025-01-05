@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: SDGpy
+Version: 0.1.0
+Summary: A Python lib for Siglent's arbitrary waveform generator control over SCPI commands
+Home-page: https://github.com/lheywang/SDGPy
+License: GPL-3.0-or-later
+Keywords: PyVISA,SCPI,Siglent,SDG,OscilloGBDscope,Python,Waveform Generator
+Author: lheywang
+Author-email: leonard.heywang@gmail.com
+Maintainer: lheywang
+Maintainer-email: leonard.heywang@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pyvisa (>=1.14.1,<2.0.0)
+Project-URL: Documentation, https://github.com/lheywang/SDSpy/tree/Main/documentation/markdown
+Project-URL: Repository, https://github.com/lheywang/SDGPy
+Description-Content-Type: text/markdown
+
+# SDGPy
+Python lib for Siglent's SDG Signal generator control over SCPI
+
