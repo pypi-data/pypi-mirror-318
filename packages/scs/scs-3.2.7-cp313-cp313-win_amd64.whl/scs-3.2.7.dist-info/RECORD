@@ -1,0 +1,11 @@
+_scs_direct.cp313-win_amd64.dll.a,sha256=ZImtEV-AjG75Ww0-3kPB2eZI45-xsqSe3-4HrYo8T5g,1782
+_scs_direct.cp313-win_amd64.pyd,sha256=PnBPqsiANt9TBDZcvSINB45X-hiYeNgAjiwwbZPXZhg,186639
+_scs_indirect.cp313-win_amd64.dll.a,sha256=bqoxhk5gnVaH9JhUZWoNz2S75T8EOh2qQnTUjjYC-28,1812
+_scs_indirect.cp313-win_amd64.pyd,sha256=Yz7hECHAaQQUfto3hZeGxwOWyu2NBZ_yeErXSYoGlWA,158511
+scs/__init__.py,sha256=eum-rly5TYTItarK276crsJmWnh8slf8Eghm08qtMqA,6636
+scs-3.2.7.data/platlib/openblas-799dfccf6f75ab7d2d11c29934d646e6.dll,sha256=21Sl8qMbq3NGi8aME593wjWxf1RDoN82hZ_iZX85RoQ,27924480
+scs-3.2.7.dist-info/DELVEWHEEL,sha256=xLkBwm2KCPMzmZWgQuQeHaXmlyUfWveP-Y8FT1F8Dn0,395
+scs-3.2.7.dist-info/LICENSE,sha256=7Lc8bCEkAOhTRGOUitKX0hhZiZ-e_jS1V_naEQR5YDw,1096
+scs-3.2.7.dist-info/METADATA,sha256=ZbYsyDzwxeMH9THdg0u_uKGIYkPaj3rv58zFy31qvVE,2084
+scs-3.2.7.dist-info/RECORD,,
+scs-3.2.7.dist-info/WHEEL,sha256=suq8ARrxbiI7iLH3BgK-82uzxQ-4Hm-m8w01oCokrtA,85
