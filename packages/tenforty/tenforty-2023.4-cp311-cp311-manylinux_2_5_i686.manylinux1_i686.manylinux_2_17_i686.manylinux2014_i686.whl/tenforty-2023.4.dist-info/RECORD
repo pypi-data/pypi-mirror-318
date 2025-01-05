@@ -1,0 +1,12 @@
+tenforty-2023.4.dist-info/METADATA,sha256=gOsK6UWUgXNuHZc0WMVlmy33VGvEAesWbyT5Qw1IRgM,15997
+tenforty-2023.4.dist-info/RECORD,,
+tenforty-2023.4.dist-info/top_level.txt,sha256=1sL2mKIfjMBc9vV0eVea4C6CX4-37TLlNDjyQ9SLo24,9
+tenforty-2023.4.dist-info/WHEEL,sha256=ccmfN6vt3IeCdNXTMRg_9Ov3v47JqUa3AtZ48bFtYP8,216
+tenforty-2023.4.dist-info/LICENSE.txt,sha256=2wqJhzVMXsr2dy-nkaKUih0A_G_Ec8eKVadsEFm-I78,1072
+tenforty/otslib.cpython-311-i386-linux-gnu.so,sha256=MJFUpRsQWePZYna5-onS4DuFkfA4jbUnoGHKLWnGudA,3337296
+tenforty/__init__.py,sha256=n1eRFmeR0iFLAXedPEm3hP6S3saTitcUVab_2bw-Ykk,128
+tenforty/_ots_form_models.py,sha256=bA641Z-YxNveXe0-4geVg88LOiMVl2qZDNV_2vxQhfw,421264
+tenforty/core.py,sha256=sbyD2ihRG3oVntgecsq_F4zAfymBquCMErr7qOZwZhQ,14994
+tenforty/models.py,sha256=T07afWmkvRnClDdVqjwU-tC8K1CO_9yA4tPhD6P9Usw,15513
+tenforty/otslib/ots.cpp,sha256=p4Fxenfb_pmubk5B34N71GemkauPPwZVcUEdaciWtck,481537
+tenforty/otslib/ots_amalgamation.cpp,sha256=TTRc16MZ3nXkS4wFHhMP1gm_7ibNOm7CMUye3AQLxfc,2396223
