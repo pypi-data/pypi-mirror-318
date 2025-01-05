@@ -1,0 +1,12 @@
+churn_prediction/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+churn_prediction/config.py,sha256=KqB76PlnsuHe-4W_5nhnoyMnkkFS87kU33Sc_-F93zI,945
+churn_prediction/dataset.py,sha256=nEO5bU_z4viOmeTKSz7GElgjdC4DKvacQEav_MT6Rzg,2716
+churn_prediction/experiments.py,sha256=H08rLnQ9fwx7_0L176FvqU1dDIAXzW_4JE3WEtlub-I,2659
+churn_prediction/features.py,sha256=rtbN_qr4YjyZg53PqIuOp-3dwJYl0C8HHPbGvAi-oJY,4927
+churn_prediction/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+churn_prediction/models/predict.py,sha256=HuW0NpPrJ1EVzoUOqWZoxDqm_HhWmHtKLj3Lv_FAdaY,4293
+churn_prediction/models/train.py,sha256=jkRZrwnbRYEKBJsSuGR-4onGwlutdt9R2jRbe6LN7rA,3200
+churn_prediction/tests/test_features.py,sha256=073A_ufA49aKuq4dXddsdBgKao5R2h4hroCitOx3zIg,3605
+churn_prediction-0.1.0.dist-info/METADATA,sha256=ILB1sf-fkrrWa0ldGAyI7GFSQy-RNQjUiim24WqCX_w,3409
+churn_prediction-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+churn_prediction-0.1.0.dist-info/RECORD,,
