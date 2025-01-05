@@ -1,0 +1,24 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Environment variables:
+.env
+
+# Exclude local .deb and .zip files from mscl:
+mscl_release_assets/*.zip
+mscl_release_assets/*.deb
+
+# VSCode:
+.vscode/
+
+# Exclude build downloaded mscl files:
+src/mscl/mscl.py
+src/mscl/_mscl.so
