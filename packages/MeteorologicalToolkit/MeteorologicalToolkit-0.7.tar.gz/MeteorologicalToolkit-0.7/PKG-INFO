@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: MeteorologicalToolkit
+Version: 0.7
+Summary: 气象数据处理工具箱
+Home-page: https://github.com/zhangxutao3/meteorological-toolkit
+Author: 张栩滔
+Author-email: zxt0413363@163.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Meteorological Toolkit
+
+This is a Python library for processing meteorological data.
+
+## Installation
+
+You can install the package via pip:
+
+```bash
+pip install MeteorologicalToolkit
+
+
