@@ -1,0 +1,17 @@
+GenZBot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+GenZBot/chatbot.py,sha256=QL4SHr2ITiXW_oD3OsAM9FQ1V9YOQqiE0JbYbtBSDwU,2952
+GenZBot/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+GenZBot/utils/AIModels/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+GenZBot/utils/AIModels/response.py,sha256=Csc2ySYVWcLWqTx1FxY-5WhmmFMICilhYCByQxbWpIM,1240
+GenZBot/utils/backend/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+GenZBot/utils/backend/flask_app.py,sha256=E1987WWTXntL_lfhYAve6MM9hHEo3a0dFXMVgHLbzs4,791
+GenZBot/utils/templates_list/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+GenZBot/utils/templates_list/design1/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+GenZBot/utils/templates_list/design1/index.py,sha256=E9w9rAsbct_bbqAUlnAoycbyIN-GFUahFJNW-qNkfmo,1447
+GenZBot/utils/templates_list/design1/script.py,sha256=aOmFR1CzhxOfxWT1jnXe1_LlWH6OoBeoZFLkv5W9Zxw,2475
+GenZBot/utils/templates_list/design1/style.py,sha256=Zkl2KSsp9Fct21i73RrOsaM-G9w76OMcSOJjy-e9Bo4,2531
+GenZBot/utils/templates_list/design2/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+GenZBot-0.1.dist-info/METADATA,sha256=-dP5UIV-P5vWhE2UD8lSopk9WWzrIAn1O9_voBeGdz4,148
+GenZBot-0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+GenZBot-0.1.dist-info/top_level.txt,sha256=SNn39DZtPMO_cQ_6simWFTyGefvSUU3IgiOhY__0g64,8
+GenZBot-0.1.dist-info/RECORD,,
