@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: bizkaibus
+Version: 0.2.0
+Summary: Online information for buses of Biscay bus services (Basque Country, Spain).
+Home-page: https://github.com/UgaitzEtxebarria/BizkaibusRTPI
+Download-URL: https://github.com/UgaitzEtxebarria/BizkaibusRTPI/archive/0.2.0.tar.gz
+Author: Ugaitz Etxebarria
+Author-email: etxeba17@gmail.com
+License: MIT
+Keywords: Bizkaibus,Bizkaia,Autobusa,rtpi,buses
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+License-File: LICENSE
+License-File: LICENSE.txt
+Requires-Dist: aiohttp
