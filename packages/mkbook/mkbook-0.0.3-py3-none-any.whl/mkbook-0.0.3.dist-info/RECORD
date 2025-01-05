@@ -1,0 +1,10 @@
+mkbook/__init__.py,sha256=gsEWMm7cHNa4uXjYjmsy6Za8vjnUAKVe7_EAbepUo9A,76
+mkbook/fonts/RampartOne-Regular.ttf,sha256=pHpyfFgUL2BiNbnWcHO4eSy-RtRpXKpHJoENtrhx-t4,3722796
+mkbook/main.py,sha256=0luD6htrnh3B9ker_aZ3i6lgbcrySCNuAK13WhBPs_Q,2819
+mkbook/mkbook.py,sha256=EFALS2KShBXRomyb10eilDCWiWMe7IHDmtccACi_uOk,5262
+mkbook/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mkbook-0.0.3.dist-info/LICENSE,sha256=1O8e7jUApJ0iyLPjJW3qy1h3tz4bhE2Dst6EWqdMyb0,1063
+mkbook-0.0.3.dist-info/METADATA,sha256=1dLPY95lbAQdJeHbd86GywGF1awGBlU2M5U3EmxrsDM,3312
+mkbook-0.0.3.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+mkbook-0.0.3.dist-info/entry_points.txt,sha256=0BxXboTE_TR8XMyKDPz2iEGxrPz4fLUFDk0btrHPJRA,43
+mkbook-0.0.3.dist-info/RECORD,,
