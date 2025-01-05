@@ -1,0 +1,47 @@
+name: napari-swc-editor
+display_name: napari-swc-editor
+# use 'hidden' to remove plugin from napari hub search results
+visibility: public
+# see https://napari.org/stable/plugins/manifest.html for valid categories
+categories: ["Annotation", "Segmentation", "Acquisition"]
+contributions:
+  commands:
+    - id: napari-swc-editor.write_multiple
+      python_name: napari_swc_editor._writer:write_multiple
+      title: Save multi-layer data with napari-swc-editor
+    - id: napari-swc-editor.write_single_image
+      python_name: napari_swc_editor._writer:write_single_image
+      title: Save image data with napari-swc-editor
+    - id: napari-swc-editor.make_sample_data
+      python_name: napari_swc_editor._sample_data:make_sample_data
+      title: Load sample data from napari-swc-editor
+    - id: napari-swc-editor.make_empty_sample
+      python_name: napari_swc_editor._sample_data:make_empty_sample
+      title: Create empty swc from napari-swc-editor
+    - id: napari-swc-editor.swc_editor_widget
+      python_name: napari_swc_editor:SWCEditorWidget
+      title: SWC Editor Widget
+    - id: napari-swc-editor.get_reader
+      python_name: napari_swc_editor._reader:napari_get_reader
+      title: Open data with napari-swc-reader
+  readers:
+    - command: napari-swc-editor.get_reader
+      accepts_directories: false
+      filename_patterns: ['*.swc']
+  writers:
+    - command: napari-swc-editor.write_multiple
+      layer_types: ['image*','labels*']
+      filename_extensions: []
+    - command: napari-swc-editor.write_single_image
+      layer_types: ['points']
+      filename_extensions: ['.swc']
+  sample_data:
+    - command: napari-swc-editor.make_sample_data
+      display_name: sample-napari-swc-editor
+      key: unique_id.1
+    - command: napari-swc-editor.make_empty_sample
+      display_name: empty-napari-swc-editor
+      key: unique_id.2
+  widgets:
+    - command: napari-swc-editor.swc_editor_widget
+      display_name: SWC Editor Widget
