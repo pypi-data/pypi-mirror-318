@@ -1,0 +1,35 @@
+[build-system]
+# Poetry requires at least version 1.0.0 of poetry-core
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "networkkit"
+version = "0.0.2"
+description = "A simple communication framework for agents using pubsub and http"
+# If your LICENSE file indicates a specific license (e.g., MIT),
+# you can replace this with `license = "MIT"`
+license = "Apache-2.0"
+readme = "README.md"
+authors = [
+  "Vikram Kumar <vik@japanvik.net>"
+]
+homepage = "https://github.com/japanvik/networkkit"
+keywords = ["network agents", "pubsub", "framework", "communication"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+zmq = "*"
+fastapi = "*"
+uvicorn = "*"
+pydantic = "*"
+requests = "*"
+
+# If you have dev/test dependencies, add them here:
+[tool.poetry.dev-dependencies]
+# example:
+# pytest = "^7.0"
