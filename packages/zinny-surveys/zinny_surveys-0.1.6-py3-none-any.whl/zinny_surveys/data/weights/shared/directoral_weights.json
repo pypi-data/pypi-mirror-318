@@ -1,0 +1,16 @@
+{
+  "id": "directoral",
+  "name": "Directoral default (Even Weights)",
+  "description": "Evenly weighted criteria for evaluating the achievements of a film's director.",
+  "version": "1.0",
+  "survey_id": "directoral",
+  "criteria_weights": {
+    "contribution_arts": 1.0,
+    "emotional_resonance": 1.0,
+    "historical_visual_language": 1.0,
+    "leadership": 1.0,
+    "literary_historical_accuracy": 1.0,
+    "societal_impact": 1.0,
+    "vision_creativity": 1.0
+  }
+}

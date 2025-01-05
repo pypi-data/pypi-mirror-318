@@ -1,0 +1,53 @@
+{
+    "id": "picture_extended",
+    "name": "Picture - Extended",
+    "version": "1.0",
+    "description": "Extended criteria for overall excellence of a Picture Show.",
+    "author": "the-zinny team",
+    "extends": "picture_basic",
+    "defaults": {
+      "range": [1, 10]
+    },
+    "criteria": [
+      {
+        "id": "storytelling",
+        "name": "Storytelling",
+        "description": "Clarity, originality, and impact of the narrative."
+      },
+      {
+        "id": "visual",
+        "name": "Visual Aesthetics",
+        "description": "Cinematography, production design, and overall visual style."
+      },
+      {
+        "id": "emotional",
+        "name": "Emotional Impact",
+        "description": "The ability to evoke strong emotions in viewers."
+      },
+      {
+        "id": "cultural",
+        "name": "Cultural Significance or Impact",
+        "description": "Influence on society or arts and sciences."
+      },
+      {
+        "id": "humanity",
+        "name": "Humanity",
+        "description": "Contribution to understanding the human condition or how we exist in the world."
+      },
+      {
+        "id": "artistry",
+        "name": "Artistry",
+        "description": "Advancement of artistic techniques or practices."
+      },
+      {
+        "id": "craft",
+        "name": "Craftwork",
+        "description": "Effective use of existing tools and techniques to convey ideas."
+      },
+      {
+        "id": "technical",
+        "name": "Technical Achievement",
+        "description": "Adaptation or use of innovative or exceptional technical methods."
+      }
+    ]
+  }

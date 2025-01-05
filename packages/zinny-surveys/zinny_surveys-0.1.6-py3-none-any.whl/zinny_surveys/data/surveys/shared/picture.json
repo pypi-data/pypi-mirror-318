@@ -1,0 +1,27 @@
+{
+    "id": "picture_basic",
+    "name": "Picture",
+    "version": "1.0",
+    "description": "Basic evaluation criteria for overall excellence of a Picture Show.",
+    "author": "the-zinny team",
+    "defaults": {
+      "range": [1, 10]
+    },
+    "criteria": [
+      {
+        "id": "storytelling",
+        "name": "Storytelling",
+        "description": "Clarity, originality, and impact of the narrative."
+      },
+      {
+        "id": "visual",
+        "name": "Visual Aesthetics",
+        "description": "Cinematography, production design, and overall visual style."
+      },
+      {
+        "id": "emotional",
+        "name": "Emotional Impact",
+        "description": "The ability to evoke strong emotions in viewers."
+      }
+    ]
+  }

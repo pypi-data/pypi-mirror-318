@@ -1,0 +1,14 @@
+{
+  "id": "cinematography",
+  "name": "Cinematography default (Even Weights)",
+  "description": "Evenly weighted criteria for evaluating cinematography.",
+  "version": "1.0",
+  "survey_id": "cinematography",
+  "criteria_weights": {
+    "aesthetic": 1.0,
+    "composition": 1.0,
+    "lighting": 1.0,
+    "technical": 1.0,
+    "visuals": 1.0
+  }
+}
