@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: openai_tools_decorator
+Version: 1.0.0
+Summary: Python module, that provides a simple way to create and manage ChatGPT tools by python decorators
+Project-URL: Homepage, https://github.com/lixelv/openai_tools_decorator
+Project-URL: Issues, https://github.com/lixelv/openai_tools_decorator/issues
+Author-email: lixelv <simeongfremenko@gmail.com>
+License-File: LICENSE
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6
