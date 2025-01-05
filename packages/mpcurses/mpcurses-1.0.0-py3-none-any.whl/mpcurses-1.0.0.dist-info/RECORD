@@ -1,0 +1,9 @@
+mpcurses/__init__.py,sha256=25SWMirmWBI5RPsSIALHoeSRPPnEAomXATIqehJKNCc,616
+mpcurses/mpcurses.py,sha256=ZGHUGrMmdPSusjfRKULGxBui9k2J6_zI5GIE19OZZ8g,8566
+mpcurses/screen.py,sha256=XcBb60rKonL7r3z-7d-g8OpLIkG_aWVW-GV6tCHQESs,21310
+mpcurses-1.0.0.dist-info/METADATA,sha256=TTGop5Dnxr1P2zChR-_7j7SZZcF_h_DZGpb3m1VOxLY,6210
+mpcurses-1.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+mpcurses-1.0.0.dist-info/namespace_packages.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+mpcurses-1.0.0.dist-info/top_level.txt,sha256=rd7I1HrJfX0iCyJuDo7Kfs2z9htM7SG-UW_g42vPv6I,9
+mpcurses-1.0.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+mpcurses-1.0.0.dist-info/RECORD,,
