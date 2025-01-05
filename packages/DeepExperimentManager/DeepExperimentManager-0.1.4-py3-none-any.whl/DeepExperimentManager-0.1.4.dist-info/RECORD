@@ -1,0 +1,17 @@
+DeepExperimentManager/__init__.py,sha256=eLOjyMW4PLzWcYHI167HCiLiBISTKCwszn-PIqenNLo,140
+DeepExperimentManager/config.py,sha256=0wr4MY9RyTbyMFJZzvKjJANOjV5GYGOZLZWtq4RVEjo,353
+DeepExperimentManager/datasets.py,sha256=2h53s0ITb9ngIQuh5MJZwHizTvWzGA4dSWXa_-8q8o4,4100
+DeepExperimentManager/manager.py,sha256=eCsigbCYv9Elsns0dDBpEzR-gY6INDbWdjyT2AIHQTc,7630
+DeepExperimentManager/tasks.py,sha256=oIMP_bzK1l3liSHNydY6FOAOAVFt_ula_z2eTKlWGj8,6947
+DeepExperimentManager/tester.py,sha256=hmX71rXj8nNt10T_3Xq5CXl8arLhsKUydS5ndZ3fh_o,3721
+DeepExperimentManager/trainer.py,sha256=fDWlBME3HggcQt-_yGEW9-WTUU0_9amcopk9dNiUhXo,7749
+DeepExperimentManager/utils.py,sha256=Pi5o2PEA9PbzPYn9rN8HNGQVMYLORAn-iH4Ve86sD_c,893
+DeepExperimentManager/visualization.py,sha256=eaCe9v-Jj--r13SmNNSL688RF0t-CZoJayKhT2_nflQ,3278
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/model.py,sha256=ES4AKILcGp-Q3xnPOsQRGlYQkR_0TqeDk2x0KzxtdtM,758
+tests/preprocessing.py,sha256=1t24xMD8q3mJJOWx8fS61z05YSY_IMVCMADqMBYMgcQ,206
+DeepExperimentManager-0.1.4.dist-info/LICENSE,sha256=es3qer-eD2-Sd42TklhDLCiKwLxiKhZNwC9xtnX6zMs,1066
+DeepExperimentManager-0.1.4.dist-info/METADATA,sha256=j7uHliXX0ZBGr6czZhFv8QiKULBGX2vDLn7VH6yBi8o,11247
+DeepExperimentManager-0.1.4.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+DeepExperimentManager-0.1.4.dist-info/top_level.txt,sha256=J5KSiMk6KBj8TXtdk_ighgN522zv5ZU3wCbvf7NwSRA,28
+DeepExperimentManager-0.1.4.dist-info/RECORD,,
