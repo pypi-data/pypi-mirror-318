@@ -1,0 +1,16 @@
+[project]
+name = "batux-lib-test"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Batuhan Avcı", email = "batuhanavcix@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "cython>=3.0.11",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
