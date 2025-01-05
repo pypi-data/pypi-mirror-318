@@ -1,0 +1,17 @@
+[project]
+name = "notes-simple"
+version = "0.1.0"
+description = "A MCP server project"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [ "mcp>=1.1.0",]
+[[project.authors]]
+name = "Darin"
+email = "86675935+darinkishore@users.noreply.github.com"
+
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+[project.scripts]
+notes-simple = "notes_simple:main"
