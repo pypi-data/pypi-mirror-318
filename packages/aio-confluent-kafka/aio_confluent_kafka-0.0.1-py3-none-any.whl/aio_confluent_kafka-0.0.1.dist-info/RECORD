@@ -1,0 +1,7 @@
+aio_confluent_kafka/__init__.py,sha256=VA9wXk5oNX67KCcxea6kQRgDVT2DklAEXFfemETtWgM,150
+aio_confluent_kafka/_consumer.py,sha256=GvqkLdamq7gAzNMFlv-7X6W3dJr3ft25OynfPGuYuZg,525
+aio_confluent_kafka/_producer.py,sha256=bGEEurZCnRh2YPwgIhcFsN0uhVouOq8fxM2mAvQ5bSE,1064
+aio_confluent_kafka-0.0.1.dist-info/METADATA,sha256=7wk1wNN6g9EteESIhtd41chb_iGhfgov813K4P1zuio,698
+aio_confluent_kafka-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+aio_confluent_kafka-0.0.1.dist-info/top_level.txt,sha256=JhTURwMIwcLDCTT3hAGdSHbfKRYIPEU2mvsZcgbON0g,20
+aio_confluent_kafka-0.0.1.dist-info/RECORD,,

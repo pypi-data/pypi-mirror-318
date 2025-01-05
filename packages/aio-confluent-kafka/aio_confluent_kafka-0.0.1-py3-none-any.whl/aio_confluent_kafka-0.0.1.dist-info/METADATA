@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: aio_confluent_kafka
+Version: 0.0.1
+Summary: Asyncio wrapper for confluent_kafka
+Author-email: John Griffith <me@joh.ng>
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: confluent_kafka
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-asyncio; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+
+# `aio_confluent_kafka`
+
+A lightweight wrapper around `confluent_kafka` to enable use with asyncio 
+
+`pip install aio_confluent_kafka`
