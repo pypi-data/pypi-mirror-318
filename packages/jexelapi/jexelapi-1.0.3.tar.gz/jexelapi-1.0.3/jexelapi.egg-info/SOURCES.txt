@@ -1,0 +1,8 @@
+setup.py
+jexelapi/__init__.py
+jexelapi/__main__.py
+jexelapi.egg-info/PKG-INFO
+jexelapi.egg-info/SOURCES.txt
+jexelapi.egg-info/dependency_links.txt
+jexelapi.egg-info/requires.txt
+jexelapi.egg-info/top_level.txt
