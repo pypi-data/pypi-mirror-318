@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.md
+setup.py
+ChemDescriptors/__init__.py
+ChemDescriptors.egg-info/PKG-INFO
+ChemDescriptors.egg-info/SOURCES.txt
+ChemDescriptors.egg-info/dependency_links.txt
+ChemDescriptors.egg-info/requires.txt
+ChemDescriptors.egg-info/top_level.txt
