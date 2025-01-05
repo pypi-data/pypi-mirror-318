@@ -1,0 +1,3 @@
+[console_scripts]
+masterkeybrute=masterkeybrute.masterkeybrute:main
+
