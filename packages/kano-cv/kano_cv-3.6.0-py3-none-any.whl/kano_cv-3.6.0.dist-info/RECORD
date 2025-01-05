@@ -1,0 +1,11 @@
+kano/dataset_utils.py,sha256=n2sYBpqIH2HwAJ4Lv6uMLVcErkvZ_DKJ0QjsZCkiJ4g,21327
+kano/detect_utils.py,sha256=qTMdsVhRPGjhsdPxk9qHM1t1fsqQL_HN3uBw5tyO_m8,6352
+kano/file_utils.py,sha256=bbJqxrMqLmD6vRhJXfwKhD_GQiH3674-NaHtZu_UFRQ,8186
+kano/pose_utils.py,sha256=vSUnKGTT39MzansK9QM4Oe_Jqmw6mzDk5a6W_qoYRjI,2486
+kano/segment_utils.py,sha256=EmR8RBTwcL43VO-5xhUr8qeaUX27dbBHzISLkIftywU,660
+kano/video_utils.py,sha256=iKp1Da_QCTAq7miiuIExlyg5IXVbe-MnVPHwbLMLUvQ,7890
+kano_cv-3.6.0.dist-info/LICENSE,sha256=dOWH5TP09gmi-ePA_t01XH92g5B6aZ07yJVuN1XNl-4,1072
+kano_cv-3.6.0.dist-info/METADATA,sha256=Q0vI4ZG3apU0LSZQlvqYp0rJo7FXGZfYsfCnf5_PjFg,3082
+kano_cv-3.6.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+kano_cv-3.6.0.dist-info/top_level.txt,sha256=_rJboIUjIIO_9V-_dW3toNGqxI6iMD06_lyNictCIyk,5
+kano_cv-3.6.0.dist-info/RECORD,,
