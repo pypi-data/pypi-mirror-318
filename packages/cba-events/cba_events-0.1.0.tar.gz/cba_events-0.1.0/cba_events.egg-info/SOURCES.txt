@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+cba_events/__init__.py
+cba_events.egg-info/PKG-INFO
+cba_events.egg-info/SOURCES.txt
+cba_events.egg-info/dependency_links.txt
+cba_events.egg-info/requires.txt
+cba_events.egg-info/top_level.txt
