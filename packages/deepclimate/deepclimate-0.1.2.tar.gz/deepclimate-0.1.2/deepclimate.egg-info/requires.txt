@@ -1,0 +1,6 @@
+numpy
+pandas
+scipy
+netcdf4
+tensorflow==2.17.0
+xarray>=2024.11.0
