@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+med_chat/__init__.py
+med_chat/abc.py
+med_chat/chatgpt.py
+med_chat.egg-info/PKG-INFO
+med_chat.egg-info/SOURCES.txt
+med_chat.egg-info/dependency_links.txt
+med_chat.egg-info/requires.txt
+med_chat.egg-info/top_level.txt
+tests/test_abc_func2json.py
+tests/test_chatgpt.py
