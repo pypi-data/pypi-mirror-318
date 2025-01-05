@@ -1,0 +1,15 @@
+cypher_shell/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cypher_shell/__main__.py,sha256=stlPkeDxSjwyKfyAMGQUPSBV3G1U6vWakQ7Vf0JF8n0,5042
+cypher_shell/agent.py,sha256=dEDQshBaYPC4ZnAAMLpHbciyUx2D7zDTkHI9JeuSBW0,7979
+cypher_shell/memory.py,sha256=1vtjsQAl0j-V-fwnzqbXlY5XZj_KqNU3bsqzhhbkrMg,2778
+cypher_shell/optimizer.py,sha256=QifzxIJu2Yagmn-SQ_gwOFYip-B5oGXOZDm34VZX6gw,917
+cypher_shell/query_runner.py,sha256=09mnEnGSmu9UTiKYHDYgd_kVH9xNhU_HvaJ9eHdzAEk,1346
+cypher_shell/utils.py,sha256=L9e1jj3TU-GCX5-Ckx2_f-c3HrG_XBLTJf027_mHkjI,412
+cypher_shell/prompts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cypher_shell/prompts/cypher.py,sha256=Xb5ICosSjTjkFW9crt5OaWGBhNKMCWRbD5ijOuqDTIE,5160
+cypher_shell/prompts/general.py,sha256=9iuM0mopm9ZedEcnM_8nAG3h3SXf-ENBW9YJgmICUV4,290
+cypher_shell/prompts/optim.py,sha256=luqDJMDd3zsZ2zWwI6tT1nFfAlqVZ65a1JyqcY3e3PA,240
+cypher_shell-0.4.dist-info/entry_points.txt,sha256=4l-Ycs0DVC3M0PPEuLM-tXzOq8RGq6v_tYyEk0mbn3o,64
+cypher_shell-0.4.dist-info/WHEEL,sha256=CpUCUxeHQbRN5UGRQHYRJorO5Af-Qy_fHMctcQ8DSGI,82
+cypher_shell-0.4.dist-info/METADATA,sha256=hP4dU_JZg-xBKYk_7-NCidQ53dDGTnoAbamefl1-fbE,1968
+cypher_shell-0.4.dist-info/RECORD,,
