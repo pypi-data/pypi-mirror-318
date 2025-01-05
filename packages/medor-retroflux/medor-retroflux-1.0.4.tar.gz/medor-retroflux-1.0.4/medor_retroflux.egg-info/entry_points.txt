@@ -1,0 +1,3 @@
+[console_scripts]
+run-backtest = restroflux.main:main
+
