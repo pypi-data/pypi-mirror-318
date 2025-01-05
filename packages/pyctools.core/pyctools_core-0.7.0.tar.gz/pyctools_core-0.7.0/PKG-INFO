@@ -1,0 +1,162 @@
+Metadata-Version: 2.1
+Name: pyctools.core
+Version: 0.7.0
+Summary: Picture processing algorithm development kit
+Author-email: Jim Easterbrook <jim@jim-easterbrook.me.uk>
+License: GNU GPL
+Project-URL: homepage, https://github.com/jim-easterbrook/pyctools
+Project-URL: documentation, https://pyctools.readthedocs.io/
+Project-URL: repository, https://github.com/jim-easterbrook/pyctools
+Project-URL: changelog, https://github.com/jim-easterbrook/pyctools/blob/main/CHANGELOG.txt
+Platform: POSIX
+Platform: MacOS
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: BSD :: FreeBSD
+Classifier: Operating System :: POSIX :: BSD :: NetBSD
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+Requires-Dist: docutils
+Requires-Dist: exiv2>=0.11
+Requires-Dist: numpy<2
+Requires-Dist: pillow
+Provides-Extra: pyqt5
+Requires-Dist: PyQt5>=5.9; extra == "pyqt5"
+Provides-Extra: pyqt6
+Requires-Dist: pyctools-core[PyQt6-linux]; platform_system == "Linux" and extra == "pyqt6"
+Requires-Dist: pyctools-core[PyQt6-darwin]; platform_system == "Darwin" and extra == "pyqt6"
+Provides-Extra: pyside2
+Requires-Dist: PySide2>=5.11.1; python_version < "3.8" and extra == "pyside2"
+Requires-Dist: PySide2>=5.14; python_version >= "3.8" and extra == "pyside2"
+Provides-Extra: pyside6
+Requires-Dist: pyctools-core[PySide6-linux]; platform_system == "Linux" and extra == "pyside6"
+Requires-Dist: pyctools-core[PySide6-darwin]; platform_system == "Darwin" and extra == "pyside6"
+Provides-Extra: pyqt6-linux
+Requires-Dist: PyQt6>=6.2; python_version != "3.6.*" and extra == "pyqt6-linux"
+Requires-Dist: PyQt6<6.3,>=6.2; python_version == "3.6.*" and extra == "pyqt6-linux"
+Requires-Dist: PyQt6-Qt6<6.3; python_version == "3.6.*" and extra == "pyqt6-linux"
+Provides-Extra: pyqt6-darwin
+Requires-Dist: PyQt6>=6.2; extra == "pyqt6-darwin"
+Requires-Dist: PyQt6-Qt6!=6.6.1,>=6.2; extra == "pyqt6-darwin"
+Provides-Extra: pyside6-linux
+Requires-Dist: PySide6>=6.2; extra == "pyside6-linux"
+Provides-Extra: pyside6-darwin
+Requires-Dist: PySide6!=6.6.1,>=6.2; extra == "pyside6-darwin"
+Provides-Extra: cv2
+Requires-Dist: pyctools-core[OpenCV]; extra == "cv2"
+Provides-Extra: matplotlib
+Requires-Dist: matplotlib; extra == "matplotlib"
+Provides-Extra: opencv
+Requires-Dist: opencv-python-headless; python_version != "3.6.*" and extra == "opencv"
+Requires-Dist: opencv-python-headless<4.7; python_version == "3.6.*" and extra == "opencv"
+Provides-Extra: opengl
+Requires-Dist: pyctools-core[PyOpenGL]; extra == "opengl"
+Provides-Extra: pyopengl
+Requires-Dist: PyOpenGL; extra == "pyopengl"
+Requires-Dist: PyOpenGL-accelerate; extra == "pyopengl"
+Provides-Extra: rawkit
+Requires-Dist: rawkit; extra == "rawkit"
+Provides-Extra: rawpy
+Requires-Dist: rawpy; extra == "rawpy"
+Provides-Extra: scipy
+Requires-Dist: scipy; extra == "scipy"
+Provides-Extra: all
+Requires-Dist: pyctools-core[OpenCV,PyOpenGL,SciPy,matplotlib,rawkit,rawpy]; extra == "all"
+
+Pyctools
+========
+
+A picture processing algorithm development kit.
+
+Pyctools is a collection of picture processing primitive components that you can easily interconnect to make complex algorithm simulations.
+It works with stills or video, and utilises popular libraries such as `Python Imaging Library`_, NumPy_ and OpenCV_.
+
+.. image:: https://pyctools.readthedocs.io/en/latest/_images/editor_8.png
+
+Example projects using pyctools include `pyctools-pal`_ (a simulation of the `Transform PAL decoder`_) and `pyctools-demo`_ (demonstrations of some simple processing).
+
+Documentation
+-------------
+
+The core Pyctools library and components are documented on `Read The Docs`_.
+If you install additional components you should build a local copy of the documentation to include the extra components.
+
+Requirements
+------------
+
+Essential
+^^^^^^^^^
+
+* Python_ version 3.6 or later.
+* NumPy_ for its powerful multi-dimensional array object.
+* `Python Imaging Library`_ for image file reading and writing. (The pillow_ fork of PIL is recommended.)
+* Cython_ to build fast extensions for Python.
+* `python-exiv2`_ to handle metadata.
+
+Optional
+^^^^^^^^
+
+* OpenCV_ python bindings for advanced image processing.
+* FFmpeg_ to read and write video files.
+* rawkit_ and/or rawpy_ to read raw image files.
+* PyQt5_ and PyOpenGL_ graphic toolkit used by the Pyctools visual editor and the Qt display components.
+* Sphinx_ to build local documentation.
+
+Installation
+------------
+
+Please see `the documentation`_ for full details of how to install Pyctools and its requirements.
+
+Licence
+-------
+
+| Pyctools - a picture processing algorithm development kit.
+| https://github.com/jim-easterbrook/pyctools
+| Copyright (C) 2014-23  Pyctools contributors
+
+Pyctools is free software: you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+Pyctools is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Pyctools.  If not, see https://www.gnu.org/licenses/.
+
+
+.. _Cython: https://cython.org/
+.. _FFmpeg: https://www.ffmpeg.org/
+.. _NumPy: https://numpy.org/
+.. _OpenCV: https://opencv.org/
+.. _pillow: https://python-pillow.org/
+.. _pyctools-demo: https://github.com/jim-easterbrook/pyctools-demo
+.. _pyctools-pal: https://github.com/jim-easterbrook/pyctools-pal
+.. _PyOpenGL: https://pyopengl.sourceforge.net/
+.. _PyQt5: https://riverbankcomputing.com/software/pyqt/intro
+.. _Python: https://www.python.org/
+.. _python-exiv2: https://pypi.org/project/exiv2/
+.. _Python Imaging Library:
+    https://en.wikipedia.org/wiki/Python_Imaging_Library
+.. _rawkit: https://rawkit.readthedocs.io/
+.. _rawpy: https://letmaik.github.io/rawpy/api/index.html
+.. _Read The Docs: https://pyctools.readthedocs.io/
+.. _Sphinx: https://www.sphinx-doc.org/
+.. _the documentation:
+    https://pyctools.readthedocs.io/en/latest/manual/installation.html
+.. _Transform PAL decoder: https://www.jim-easterbrook.me.uk/pal/

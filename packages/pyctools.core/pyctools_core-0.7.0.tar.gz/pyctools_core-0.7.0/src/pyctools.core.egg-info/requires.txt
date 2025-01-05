@@ -1,0 +1,83 @@
+docutils
+exiv2>=0.11
+numpy<2
+pillow
+
+[OpenCV]
+
+[OpenCV:python_version != "3.6.*"]
+opencv-python-headless
+
+[OpenCV:python_version == "3.6.*"]
+opencv-python-headless<4.7
+
+[OpenGL]
+pyctools-core[PyOpenGL]
+
+[PyOpenGL]
+PyOpenGL
+PyOpenGL-accelerate
+
+[PyQt5]
+PyQt5>=5.9
+
+[PyQt6]
+
+[PyQt6-darwin]
+PyQt6>=6.2
+PyQt6-Qt6!=6.6.1,>=6.2
+
+[PyQt6-linux]
+
+[PyQt6-linux:python_version != "3.6.*"]
+PyQt6>=6.2
+
+[PyQt6-linux:python_version == "3.6.*"]
+PyQt6<6.3,>=6.2
+PyQt6-Qt6<6.3
+
+[PyQt6:platform_system == "Darwin"]
+pyctools-core[PyQt6-darwin]
+
+[PyQt6:platform_system == "Linux"]
+pyctools-core[PyQt6-linux]
+
+[PySide2]
+
+[PySide2:python_version < "3.8"]
+PySide2>=5.11.1
+
+[PySide2:python_version >= "3.8"]
+PySide2>=5.14
+
+[PySide6]
+
+[PySide6-darwin]
+PySide6!=6.6.1,>=6.2
+
+[PySide6-linux]
+PySide6>=6.2
+
+[PySide6:platform_system == "Darwin"]
+pyctools-core[PySide6-darwin]
+
+[PySide6:platform_system == "Linux"]
+pyctools-core[PySide6-linux]
+
+[SciPy]
+scipy
+
+[all]
+pyctools-core[OpenCV,PyOpenGL,SciPy,matplotlib,rawkit,rawpy]
+
+[cv2]
+pyctools-core[OpenCV]
+
+[matplotlib]
+matplotlib
+
+[rawkit]
+rawkit
+
+[rawpy]
+rawpy
