@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/vim_prompt/__init__.py
+src/vim_prompt/fzf.py
+src/vim_prompt/rofi.py
+src/vim_prompt.egg-info/PKG-INFO
+src/vim_prompt.egg-info/SOURCES.txt
+src/vim_prompt.egg-info/dependency_links.txt
+src/vim_prompt.egg-info/entry_points.txt
+src/vim_prompt.egg-info/requires.txt
+src/vim_prompt.egg-info/top_level.txt
+src/vim_prompt/assets/icon.png
+src/vim_prompt/db/commands.json
