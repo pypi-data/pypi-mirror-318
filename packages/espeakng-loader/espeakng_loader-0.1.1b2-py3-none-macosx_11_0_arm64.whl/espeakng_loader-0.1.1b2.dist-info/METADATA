@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: espeakng-loader
+Version: 0.1.1b2
+Summary: A Python package that provides shared library loader for eSpeak NG
+Author-email: thewh1teagle <61390950+thewh1teagle@users.noreply.github.com>
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# espeakng-loader
+
