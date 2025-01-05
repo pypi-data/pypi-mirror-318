@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: fgdata
+Version: 0.1.1
+Summary: A data toolkit for the Chinese futures market.
+Home-page: https://github.com/shuzip/fgdata
+Author: shuzip
+License: MIT
+Keywords: futures,fund,finance,data
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# FGdata
+
+A data toolkit for the Chinese futures market.
+
+一个中国期货市场的数据工具包。
+
+## Installation
+```bash
+pip install fgdata
+```
+## Usage Examples
+
+```python
+import fgdata as fg
+import pandas as pd
+
+
+futures_code = 'CU'
+df = fg.futures_news_sina(futures_code)
+print(df.head())
+```

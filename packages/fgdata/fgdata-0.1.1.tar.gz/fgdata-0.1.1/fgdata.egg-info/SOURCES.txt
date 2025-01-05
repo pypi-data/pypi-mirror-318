@@ -1,0 +1,13 @@
+README.md
+setup.py
+fgdata/__init__.py
+fgdata.egg-info/PKG-INFO
+fgdata.egg-info/SOURCES.txt
+fgdata.egg-info/dependency_links.txt
+fgdata.egg-info/requires.txt
+fgdata.egg-info/top_level.txt
+fgdata/futures/__init__.py
+fgdata/futures/future_news.py
+test/__init__.py
+test/futures/__init__.py
+test/futures/test_future_news.py
