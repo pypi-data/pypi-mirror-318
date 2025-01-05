@@ -1,0 +1,3 @@
+[console_scripts]
+generate-deployments=pcba_helper.cli:main
+
