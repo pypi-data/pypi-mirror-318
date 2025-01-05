@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mx-auto p-6">
+    <h1 class="text-5xl font-bold mb-6 text-center text-blue-400">
+        🌐 Peer Power Network 🌐
+    </h1>
+    <p class="text-center text-gray-600 mb-8">
+        Connect to the Sallmon Core blockchain! <span class="font-bold text-green-500">No peer, no cheer! 🚀</span>
+    </p>
+
+    <!-- Form to Add a Peer -->
+    <form method="POST" action="/peers/add" class="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 p-6 rounded shadow-md mb-8">
+        <label for="peer_ip" class="block mb-2 text-lg font-medium text-white">
+            Add a New Peer to the Network:
+        </label>
+        <input
+            type="text"
+            id="peer_ip"
+            name="peer_ip"
+            class="block w-full p-4 mb-4 border rounded shadow-md text-black"
+            placeholder="Enter Peer IP (e.g., 192.168.1.1:1337)"
+            required
+        />
+        <button
+            type="submit"
+            class="bg-yellow-400 px-6 py-3 rounded-full font-extrabold text-black hover:bg-yellow-500 hover:shadow-lg w-full"
+        >
+            🔗 Add Peer 🔗
+        </button>
+    </form>
+
+    <!-- List of Peers -->
+    <div id="peersList" class="bg-gray-100 p-6 rounded shadow-md">
+        <h2 class="text-3xl font-bold mb-4 text-center text-purple-500">
+            🔍 Connected Peers 🔍
+        </h2>
+        <ul id="peerListContainer" class="list-disc list-inside text-black">
+            <li class="text-center text-gray-500">Loading peers...</li>
+        </ul>
+    </div>
+
+    <!-- Clear Peers Button -->
+    <div class="mt-4 text-center">
+        <button
+            id="clearPeersBtn"
+            class="bg-red-500 px-6 py-3 rounded-full font-extrabold text-white hover:bg-red-600 hover:shadow-lg"
+        >
+            🗑️ Clear All Peers 🗑️
+        </button>
+    </div>
+
+    <!-- Meme Section -->
+    <div class="mt-8 text-center">
+        <img src="{{ url_for('static', filename='assets/peers-meme.gif') }}" alt="Peers Meme" class="mx-auto w-64 h-64">
+        <p class="text-gray-500 mt-4">"The more peers, the merrier!"</p>
+    </div>
+</div>
+
+<script>
+    const peersListDiv = document.getElementById("peersList");
+    const peerListContainer = document.getElementById("peerListContainer");
+    const clearPeersBtn = document.getElementById("clearPeersBtn");
+
+    // Fetch and display peers
+    async function fetchPeers() {
+        peerListContainer.innerHTML = '<li class="text-center text-gray-500">Loading peers...</li>';
+        try {
+            const response = await fetch("http://localhost:1337/get-peers");
+            const data = await response.json();
+
+            if (response.ok && data.peers.length > 0) {
+                const peersHTML = data.peers
+                    .map(peer => `<li class="py-2 border-b text-lg font-medium text-gray-700">🌐 ${peer}</li>`)
+                    .join("");
+                peerListContainer.innerHTML = peersHTML;
+            } else {
+                peerListContainer.innerHTML = '<li class="text-center text-red-500 font-bold">No peers connected yet. Start building your network!</li>';
+            }
+        } catch (error) {
+            peerListContainer.innerHTML = `<li class="text-center text-red-500 font-bold">Error: Unable to fetch peers.</li>`;
+        }
+    }
+
+    // Clear peers (dummy function to simulate)
+    clearPeersBtn.addEventListener("click", () => {
+        peerListContainer.innerHTML = '<li class="text-center text-red-500 font-bold">No peers connected yet. Start building your network!</li>';
+    });
+
+    // Fetch peers on page load
+    fetchPeers();
+
+    // Optionally, refresh the peers list every 5 seconds
+    setInterval(fetchPeers, 5000);
+</script>
+{% endblock %}

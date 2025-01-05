@@ -1,0 +1,6 @@
+
+include README.md
+include sallmon/frontend/templates/*.html
+include sallmon/frontend/static/*
+recursive-include sallmon/frontend/templates *.html
+recursive-include sallmon/frontend/static *
