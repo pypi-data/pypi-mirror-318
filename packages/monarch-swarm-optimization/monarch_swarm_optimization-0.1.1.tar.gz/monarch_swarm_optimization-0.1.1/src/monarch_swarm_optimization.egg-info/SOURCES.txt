@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/monarch_swarm_optimization.egg-info/PKG-INFO
+src/monarch_swarm_optimization.egg-info/SOURCES.txt
+src/monarch_swarm_optimization.egg-info/dependency_links.txt
+src/monarch_swarm_optimization.egg-info/requires.txt
+src/monarch_swarm_optimization.egg-info/top_level.txt
+src/mso/__init__.py
+src/mso/core.py
+src/mso/exceptions.py
+src/mso/utils.py
+src/mso/validators.py
+tests/test_core.py
