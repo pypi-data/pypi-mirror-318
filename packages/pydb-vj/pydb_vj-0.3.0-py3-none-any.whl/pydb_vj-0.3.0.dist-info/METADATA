@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: pydb-vj
+Version: 0.3.0
+Summary: SCDB with json
+License: MIT
+Author: Drag-GameStudio
+Author-email: sinica911@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+## Thanks for using [quick-doc-py](https://pypi.org/project/quick-doc-py). If you like this project, you can support it on [ko-fi](https://ko-fi.com/draggamestudio). Your support helps improve the project and add new features. Thank you!
+
+# Description
+
+This documentation explains how to use the `db_system.py` file, which contains classes and methods for handling JSON files with databases in a specifically designed manner.
+
+## Usage
+
+Before using the `db_system.py` file, make sure you've installed the required dependencies. In this case, it only requires os and json modules.
+
+```python
+import os
+import json
+```
+
+To use the provided functionality, import the `DataBase` class from the `db_system.py` file:
+
+```python
+from db_system import DataBase
+```
+
+Now you can utilize the various methods available for handling JSON files within the class (`DataBase`).
+
+## Methods
+
+### `__init__(self, source_path: str) -> None:`
+This method initializes a new instance of the `DataBase` class with a given `source_path` where your JSON files are stored. It takes one mandatory parameter: `source_path`.
+
+Example:
+
+```python
+source_path = "C:/Users/huina/Python Projects/Important projects/Libs/db_py/pydb/data"
+my_database = DataBase(source_path)
+```
+
+### `read(self, name: str) -> dict:`
+This method reads the content of a specified JSON file and returns it as a dictionary. It takes one mandatory parameter: `name` (the name of the JSON file without extension).
+
+Example:
+
+```python
+data = my_database.read("sample_file")
+```
+
+### `save(self, name: str, new_data: any) -> None:`
+This method saves a new dictionary or updates an existing one in a specified JSON file. It takes two mandatory parameters: `name` (the name of the JSON file without extension), and `new_data` (a new dictionary to be saved or updated).
+
+Example:
+
+```python
+my_database.save("sample_file", {"key": "value"})
+```
+
+### `add_element(self, name: str, key: any, data: dict):`
+This method adds a new element (specified by `key`) to an existing dictionary within the specified JSON file. The parameters include `name` (the name of the JSON file without extension), `key` (the identifier of the new element), and `data` (the data of the element to be added).
+
+Example:
+
+```python
+my_database.add_element("sample_file", "new_key", {"some_value": "example"})
+```
+
+### `edit_element(self, name: str, key: any, low_data: dict):`
+This method edits an existing element within a specified dictionary in the specified JSON file. It takes three mandatory parameters: `name` (the name of the JSON file without extension), `key` (the identifier of the element to be edited), and `low_data` (a dictionary with the new values to be updated).
+
+Example:
+
+```python
+my_database.edit_element("sample_file", "existing_key", {"some_key": "new_value"})
+```
+
+This documentation covers the basic usage of the `db_system.py` file and explains how you can use each method provided by the `DataBase` class. For full documentation, visit the official repository or contact the developers.
+
+### Created by [quick-doc-py](https://pypi.org/project/quick-doc-py)
