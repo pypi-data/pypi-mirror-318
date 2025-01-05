@@ -1,0 +1,44 @@
+Metadata-Version: 2.4
+Name: pipewine
+Version: 0.0.0
+Summary: Data workflow automation
+Author-email: Luca Bonfiglioli <luca.bonfiglioli@gmail.com>
+Maintainer-email: Luca Bonfiglioli <luca.bonfiglioli@gmail.com>
+License-Expression: Unlicense
+License-File: LICENSE
+Keywords: dataflow,dataset,orchestration,pipeline,workflow
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: The Unlicense (Unlicense)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Requires-Python: >=3.12
+Requires-Dist: imageio
+Requires-Dist: numpy
+Requires-Dist: pyyaml
+Requires-Dist: tifffile
+Provides-Extra: dev
+Requires-Dist: black; extra == 'dev'
+Requires-Dist: build; extra == 'dev'
+Requires-Dist: flake8; extra == 'dev'
+Requires-Dist: hatch; extra == 'dev'
+Requires-Dist: mypy; extra == 'dev'
+Requires-Dist: pydantic; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: pytest-cov; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: mkdocs; extra == 'docs'
+Requires-Dist: mkdocs-material; extra == 'docs'
+Description-Content-Type: text/markdown
+
+# [WIP] 🚧 Pipewine 🚧 [WIP] 
+ 
+> [!WARNING] 
+> Pipewine is **under construction** and **not** ready for use yet. Expect a first (non-stable) release within Feb 2025. 
+
+Pipewine is a complete rewrite of the [Pipelime](https://github.com/eyecan-ai/pipelime-python.git) library: a set of tools to manipulate multi-modal small and medium-sized datasets, intended mainly for research purposes in the CV/ML domain.
+
