@@ -1,0 +1,81 @@
+[build-system]
+requires = ["maturin>=1,<2"]
+build-backend = "maturin"
+
+[project]
+name = "rust_itertools"
+authors = [
+  { name="Bert de Bruijn", email="lpdebruijn@gmail.com" },
+]
+description = "Run Rusts itertools and more in Python."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dynamic = ["version"]
+dependencies = [
+    "more-itertools>=10.5.0",
+    "pytest>=8.3.4",
+]
+
+[project.urls]
+Homepage = "https://gitlab.com/bert.debruijn/rust_itertools"
+Issues = "https://gitlab.com/bert.debruijn/rust_itertools/-/issues"
+
+[[tool.setuptools-rust.ext-modules]]
+# Private Rust extension module to be nested into the Python package
+target = "rust_itertools._rust_itertools"  # The last part of the name (e.g. "_lib") has to match lib.name in Cargo.toml,
+                             # but you can add a prefix to nest it inside of a Python package.
+path = "Cargo.toml"      # Default value, can be omitted
+binding = "PyO3"         # Default value, can be omitted
+
+[dependency-groups]
+dev = [
+    "coverage>=7.6.9",
+    "maturin>=1.7.8",
+    "pytest>=8.3.4",
+]
+lint = [
+    "mypy>=1.13.0",
+    "ruff>=0.8.2",
+]
+
+[tool.maturin]
+python-source = "python"
+bindings = "pyo3"
+module-name = "rust_itertools._rust_itertools"
+features = ["pyo3/extension-module", "pyo3/generate-import-lib"]
+
+[tool.coverage.run]
+source = ["python/rust_itertools"]
+branch = true
+
+[tool.coverage.report]
+precision = 2
+exclude_lines = [
+    "pragma: no cover",
+    "raise NotImplementedError",
+    "if TYPE_CHECKING:",
+    "@overload",
+]
+
+[tool.ruff]
+line-length = 120
+lint.extend-select = ["Q", "RUF100", "UP", "I"]
+lint.flake8-quotes = {inline-quotes = "single", multiline-quotes = "double"}
+lint.isort = { known-first-party = ["rust_itertools", "tests"] }
+format.quote-style = "single"
+target-version = "py310"
+
+[tool.mypy]
+follow_imports = "normal"
+strict_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+disallow_any_generics = true
+check_untyped_defs = true
+no_implicit_reexport = true
+disallow_untyped_defs = true
