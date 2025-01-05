@@ -1,0 +1,169 @@
+Metadata-Version: 2.1
+Name: langflow-law
+Version: 1.0.18
+Summary: A Python package with a built-in web application
+Home-page: https://github.com/dmentx/law-langflow
+License: MIT
+Keywords: nlp,langchain,openai,gpt,gui
+Author: Daniel
+Author-email: daniel.mentjukov@osborneclarke.com
+Maintainer: Daniel
+Maintainer-email: daniel.mentjukov@osborneclarke.com
+Requires-Python: >=3.10,<3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: cassio
+Provides-Extra: couchbase
+Provides-Extra: deploy
+Provides-Extra: local
+Requires-Dist: assemblyai (>=0.26.0,<0.27.0)
+Requires-Dist: astra-assistants (>=2.1.2,<3.0.0)
+Requires-Dist: azure-storage-blob (>=12.23.1,<13.0.0)
+Requires-Dist: beautifulsoup4 (>=4.12.2,<5.0.0)
+Requires-Dist: boto3 (>=1.34.162,<1.35.0)
+Requires-Dist: bson (>=0.5.10,<0.6.0)
+Requires-Dist: cassio[cassio] (>=0.1.7,<0.2.0) ; extra == "cassio"
+Requires-Dist: celery[redis] (>=5.3.6,<6.0.0) ; extra == "deploy"
+Requires-Dist: certifi (>=2023.11.17,<2025.0.0)
+Requires-Dist: chromadb (>=0.4,<0.5)
+Requires-Dist: clickhouse-connect[clickhouse-connect] (==0.7.19)
+Requires-Dist: cohere (>=5.5.3,<6.0.0)
+Requires-Dist: composio-langchain (==0.5.9)
+Requires-Dist: couchbase[couchbase] (>=4.2.1,<5.0.0) ; extra == "couchbase"
+Requires-Dist: crewai[tools] (>=0.36.0,<0.37.0)
+Requires-Dist: ctransformers (>=0.2.10,<0.3.0) ; extra == "local"
+Requires-Dist: dask[complete,dataframe,distributed] (>=2024.9.1,<2025.0.0)
+Requires-Dist: dspy-ai (>=2.4.0,<3.0.0)
+Requires-Dist: duckduckgo-search (>=6.2.12,<7.0.0)
+Requires-Dist: elasticsearch (>=8.12.0,<9.0.0)
+Requires-Dist: faiss-cpu (>=1.8.0,<2.0.0)
+Requires-Dist: fake-useragent (>=1.5.0,<2.0.0)
+Requires-Dist: fastavro (>=1.8.0,<2.0.0)
+Requires-Dist: firecrawl-py (>=0.0.16,<0.0.17)
+Requires-Dist: flower (>=2.0.0,<3.0.0) ; extra == "deploy"
+Requires-Dist: fpdf2 (>=2.8.1,<3.0.0)
+Requires-Dist: gitpython (>=3.1.43,<4.0.0)
+Requires-Dist: google-api-python-client (>=2.130.0,<3.0.0)
+Requires-Dist: google-search-results (>=2.4.1,<3.0.0)
+Requires-Dist: huggingface-hub[inference] (>=0.23.2,<0.24.0)
+Requires-Dist: jq (>=1.8.0,<2.0.0)
+Requires-Dist: json-repair (>=0.25.2,<0.26.0)
+Requires-Dist: kubernetes (>=30.1.0,<31.0.0)
+Requires-Dist: langchain-anthropic (>=0.1.23,<0.2.0)
+Requires-Dist: langchain-astradb (>=0.3.5,<0.4.0)
+Requires-Dist: langchain-aws (>=0.1.16,<0.2.0)
+Requires-Dist: langchain-chroma (>=0.1.1,<0.2.0)
+Requires-Dist: langchain-cohere (>=0.1.5,<0.2.0)
+Requires-Dist: langchain-community (==0.2.17)
+Requires-Dist: langchain-google-calendar-tools (>=0.0.1,<0.0.2)
+Requires-Dist: langchain-google-community (==1.0.7)
+Requires-Dist: langchain-google-genai (==1.0.8)
+Requires-Dist: langchain-google-vertexai (==1.0.10)
+Requires-Dist: langchain-groq (==0.1.9)
+Requires-Dist: langchain-milvus (>=0.1.1,<0.2.0)
+Requires-Dist: langchain-mistralai (==0.1.12)
+Requires-Dist: langchain-mongodb (>=0.1.6,<0.2.0)
+Requires-Dist: langchain-nvidia-ai-endpoints (==0.1.6)
+Requires-Dist: langchain-openai (==0.1.22)
+Requires-Dist: langchain-pinecone (>=0.1.3,<0.2.0)
+Requires-Dist: langchain-unstructured (>=0.1.2,<0.2.0)
+Requires-Dist: langflow-base (==0.0.96)
+Requires-Dist: langfuse (>=2.33.0,<3.0.0)
+Requires-Dist: langsmith (>=0.1.86,<0.2.0)
+Requires-Dist: langwatch (>=0.1.16,<0.2.0)
+Requires-Dist: lark (>=1.2.2,<2.0.0)
+Requires-Dist: llama-cpp-python (>=0.2.0,<0.3.0) ; extra == "local"
+Requires-Dist: markdown (>=3.7,<4.0)
+Requires-Dist: markupsafe (>=2.1.3,<3.0.0)
+Requires-Dist: metal-sdk (>=2.5.0,<3.0.0)
+Requires-Dist: metaphor-python (>=0.1.11,<0.2.0)
+Requires-Dist: modin[ray] (>=0.32.0,<0.33.0)
+Requires-Dist: networkx (>=3.1,<4.0)
+Requires-Dist: nltk (>=3.9.1,<4.0.0)
+Requires-Dist: numexpr (>=2.8.6,<3.0.0)
+Requires-Dist: openpy (>=0.0.2,<0.0.3)
+Requires-Dist: openpyxl (>=3.1.5,<4.0.0)
+Requires-Dist: pandas (==2.2.2)
+Requires-Dist: pgvector (>=0.2.3,<0.3.0)
+Requires-Dist: pillow (>=10.4.0,<11.0.0)
+Requires-Dist: psycopg (==3.1.9)
+Requires-Dist: psycopg2-binary (>=2.9.6,<3.0.0)
+Requires-Dist: pyarrow (>=14.0.0,<15.0.0)
+Requires-Dist: pyautogen (>=0.2.0,<0.3.0)
+Requires-Dist: pydantic-settings (==2.4.0)
+Requires-Dist: pymongo (>=4.6.0,<5.0.0)
+Requires-Dist: pytube (>=15.0.0,<16.0.0)
+Requires-Dist: pywin32 (>=306,<307) ; sys_platform == "win32"
+Requires-Dist: qdrant-client (>=1.9.0,<2.0.0)
+Requires-Dist: qianfan (==0.3.5)
+Requires-Dist: ragstack-ai-knowledge-store (>=0.2.1,<0.3.0)
+Requires-Dist: redis (>=5.0.1,<6.0.0) ; extra == "deploy"
+Requires-Dist: selenium (>=4.27.1,<5.0.0)
+Requires-Dist: sentence-transformers (>=2.3.1,<3.0.0) ; extra == "local"
+Requires-Dist: spider-client (>=0.0.27,<0.0.28)
+Requires-Dist: supabase (>=2.3.0,<3.0.0)
+Requires-Dist: types-cachetools (>=5.3.0.5,<6.0.0.0)
+Requires-Dist: unidecode (>=1.3.8,<2.0.0)
+Requires-Dist: unstructured[docx,md,pptx,xlsx] (>=0.14.4,<0.15.0)
+Requires-Dist: upstash-vector (>=0.5.0,<0.6.0)
+Requires-Dist: weaviate-client
+Requires-Dist: wikipedia (>=1.4.0,<2.0.0)
+Requires-Dist: wolframalpha (>=5.1.3,<6.0.0)
+Requires-Dist: word2num-de (>=1.1,<2.0)
+Requires-Dist: word2number (>=1.1,<2.0)
+Requires-Dist: yfinance (>=0.2.40,<0.3.0)
+Requires-Dist: youtube-transcript-api (>=0.6.2,<0.7.0)
+Requires-Dist: zep-python (>=2.0.0rc5,<3.0.0)
+Project-URL: Repository, https://github.com/dmentx/law-langflow
+Description-Content-Type: text/markdown
+
+<!-- markdownlint-disable MD030 -->
+
+# Langflow Law ⚖️
+
+<p align="center" style="font-size: 12px;">
+    Langflow Law is a Fork of Langflow and is a low-code app builder for RAG and multi-agent AI legal applications. It’s Python-based and agnostic to any model, API, or database.
+</p>
+
+<p align="center" style="font-size: 12px;">
+    <a href="https://docs.langflow.org" style="text-decoration: underline;">Docs</a> 
+    
+</p>
+
+
+
+## ✨ Core features
+
+1. **Python-based** and agnostic to models, APIs, data sources, or databases.
+2. **Visual IDE** for drag-and-drop building and testing of workflows.
+3. **Playground** to immediately test and iterate workflows with step-by-step control.
+4. **Multi-agent** orchestration and conversation management and retrieval.
+5. **Free cloud service** to get started in minutes with no setup.
+6. **Publish as an API** or export as a Python application.
+7. **Observability** with LangSmith, LangFuse, or LangWatch integration.
+8.  **Ecosystem integrations** as reusable components for any model, API or database.
+
+![Integrations](https://github.com/user-attachments/assets/e9c96dc4-47bf-48ab-ad58-e01e038f25e8)
+
+
+## 📦 Quickstart
+
+- **Install with pip** (Python 3.10 or greater):
+
+```shell
+pip install langflow-law
+```
+
+
+
+
+
+## 👋 Contribute
+
+I welcome contributions from developers of all levels.
+
+
+
