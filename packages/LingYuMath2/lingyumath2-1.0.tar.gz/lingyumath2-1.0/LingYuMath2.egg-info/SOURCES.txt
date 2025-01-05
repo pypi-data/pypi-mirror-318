@@ -1,0 +1,8 @@
+setup.py
+LingYuMath2.egg-info/PKG-INFO
+LingYuMath2.egg-info/SOURCES.txt
+LingYuMath2.egg-info/dependency_links.txt
+LingYuMath2.egg-info/top_level.txt
+baizhanMath2/__init__.py
+baizhanMath2/demo1.py
+baizhanMath2/demo2.py
