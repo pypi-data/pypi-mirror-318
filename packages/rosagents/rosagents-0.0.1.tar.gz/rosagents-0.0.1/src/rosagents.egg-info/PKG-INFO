@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: rosagents
+Version: 0.0.1
+Summary: 🤗 rosagents: a barebones library for uas and robotics agents. Agents write python code to call tools or orchestrate other agents.
+Author-email: jerry zhang <jerry.zhang.bill@gmail.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch
+Requires-Dist: torchaudio
+Requires-Dist: torchvision
+Requires-Dist: transformers>=4.0.0
+Requires-Dist: requests>=2.32.3
+Requires-Dist: rich>=13.9.4
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: jinja2>=3.1.4
+Requires-Dist: pillow>=11.0.0
+Requires-Dist: markdownify>=0.14.1
+Requires-Dist: gradio>=5.8.0
+Requires-Dist: duckduckgo-search>=6.3.7
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: e2b-code-interpreter>=1.0.3
+Requires-Dist: litellm>=1.55.10
+Provides-Extra: test
+Requires-Dist: pytest>=8.1.0; extra == "test"
+Requires-Dist: sqlalchemy; extra == "test"
+
+# rosagents
+
+rosagents forked from `solmagents` and modified to support uas and robotics.
+
+
+## Usage
+
+```bash
+python server.py
+```
+
