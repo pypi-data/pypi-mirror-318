@@ -1,0 +1,442 @@
+Metadata-Version: 2.1
+Name: SchoginiAI
+Version: 0.1.7
+Summary: A sample AI toolkit by Schogini Systems with Retrieval-Augmented Generation (RAG).
+Home-page: https://github.com/schogini/SchoginiAI
+Author: Sreeprakash Neelakantan
+Author-email: schogini@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: langchain>=0.3.14
+Requires-Dist: langchain-community>=0.3.14
+Requires-Dist: openai>=1.59.3
+Requires-Dist: tiktoken>=0.8.0
+Requires-Dist: faiss-cpu>=1.9.0.post1
+Requires-Dist: langchain-openai
+Requires-Dist: langchain-chroma
+Requires-Dist: langchain-pinecone
+Requires-Dist: chromadb
+Requires-Dist: pinecone-client
+
+# SchoginiAI
+
+SchoginiAI is an AI toolkit developed by **Schogini Systems** that provides **Retrieval-Augmented Generation (RAG)** capabilities using [LangChain](https://langchain.com/) and [OpenAI](https://openai.com/). It leverages both **FAISS** and **ChromaDB** for efficient vector storage and retrieval, enabling advanced AI-driven solutions for small businesses and beyond.
+
+## 🚀 Features
+
+- **Recursive Text Chunking**: Efficiently splits large text corpora into manageable chunks.
+- **OpenAI Embeddings**: Utilizes OpenAI's embedding models for high-quality vector representations.
+- **FAISS & ChromaDB Vector Stores**: Offers flexibility to choose between FAISS and ChromaDB for vector storage and retrieval via configuration.
+- **Retrieval-Augmented Generation (RAG)**: Combines retrieval mechanisms with language models to generate informed responses.
+- **Dockerized Environment**: Easily build and run in isolated Docker containers for consistency across environments.
+- **Environment Variable Management**: Securely handles API keys and sensitive information using `.env` files.
+
+## 🛠 Installation
+
+### 📦 From PyPI
+
+Install the latest version of SchoginiAI directly from PyPI:
+
+```bash
+pip install SchoginiAI
+```
+
+### 🧑‍💻 From Source
+
+Clone the repository and install the package manually:
+
+```bash
+git clone https://github.com/yourusername/SchoginiAI.git
+cd SchoginiAI
+pip install .
+```
+
+*Replace `yourusername` with your actual GitHub username.*
+
+## 🔧 Usage
+
+### 📝 Environment Setup
+
+Create a `.env` file in the `examples02/` directory to store your OpenAI API key and vector store type securely:
+
+```dotenv
+OPENAI_API_KEY=your_openai_api_key_here
+VECTOR_STORE_TYPE=faiss  # Options: 'faiss' or 'chroma'
+```
+
+> **⚠️ Important:** Do **not** commit the `.env` file to version control. Ensure it's listed in your `.gitignore`.
+
+### 📚 Knowledge Creation
+
+Build and save the vector store from your text corpus using the `knowledge_creation.py` script.
+
+#### 🐍 Python Script
+
+```bash
+cd examples02
+python knowledge_creation.py
+```
+
+#### 📦 Using Docker
+
+Build the Docker image and run the container with the `create` argument to generate the vector store:
+
+- **With FAISS:**
+
+  ```bash
+  docker build --no-cache -t schogini-examples .
+  docker run --rm -e OPENAI_API_KEY="your_openai_api_key_here" schogini-examples create
+  ```
+
+- **With ChromaDB:**
+
+  ```bash
+  docker run --rm -e OPENAI_API_KEY="your_openai_api_key_here" schogini-examples create
+  ```
+
+**Expected Output:**
+
+- **For FAISS:**
+
+  ```
+  Running knowledge_creation.py with VECTOR_STORE_TYPE='faiss'...
+  FAISS vector store created.
+  FAISS vector store saved to faiss_store
+  ```
+
+- **For ChromaDB:**
+
+  ```
+  Running knowledge_creation.py with VECTOR_STORE_TYPE='chroma'...
+  ChromaDB vector store created at chroma_store.
+  ChromaDB vector store persisted at chroma_store
+  ```
+
+### ❓ Querying the Knowledge Base
+
+Load the pre-built vector store and perform a query using the `usage_example02.py` script.
+
+#### 🐍 Python Script
+
+```bash
+cd examples02
+python usage_example02.py
+```
+
+#### 📦 Using Docker
+
+Run the container with the `query` argument to perform the query:
+
+- **With FAISS:**
+
+  ```bash
+  docker run --rm -e OPENAI_API_KEY="your_openai_api_key_here" schogini-examples query
+  ```
+
+- **With ChromaDB:**
+
+  ```bash
+  docker run --rm -e OPENAI_API_KEY="your_openai_api_key_here" schogini-examples query
+  ```
+
+**Expected Output:**
+
+```
+Running usage_example02.py with VECTOR_STORE_TYPE='faiss'...
+Answer: Schogini Systems is a pioneer in AI Chatbots.
+We specialize in automation solutions for small businesses.
+```
+
+or for ChromaDB:
+
+```
+Running usage_example02.py with VECTOR_STORE_TYPE='chroma'...
+Answer: Schogini Systems is a pioneer in AI Chatbots.
+We specialize in automation solutions for small businesses.
+```
+
+## 🐳 Docker Usage
+
+### 🛠 Build the Docker Image
+
+Navigate to the project root directory (where the `Dockerfile` is located) and build the Docker image:
+
+```bash
+docker build --no-cache -t schogini-examples .
+```
+
+### 🚀 Run the Docker Container
+
+#### 1. **Create Vector Store**
+
+- **With FAISS:**
+
+  ```bash
+  docker run --rm -e OPENAI_API_KEY="your_openai_api_key_here" schogini-examples create
+  ```
+
+- **With ChromaDB:**
+
+  ```bash
+  docker run --rm -e OPENAI_API_KEY="your_openai_api_key_here" schogini-examples create
+  ```
+
+#### 2. **Query Vector Store**
+
+- **With FAISS:**
+
+  ```bash
+  docker run --rm -e OPENAI_API_KEY="your_openai_api_key_here" schogini-examples query
+  ```
+
+- **With ChromaDB:**
+
+  ```bash
+  docker run --rm -e OPENAI_API_KEY="your_openai_api_key_here" schogini-examples query
+  ```
+
+> **Note:** Replace `"your_openai_api_key_here"` with your actual OpenAI API key.
+
+## 📦 Dependencies
+
+SchoginiAI relies on the following Python packages:
+
+- [`langchain`](https://pypi.org/project/langchain/) `>=0.0.200,<0.1.0`
+- [`langchain-community`](https://pypi.org/project/langchain-community/) `>=0.0.20,<0.1.0`
+- [`langchain-chroma`](https://pypi.org/project/langchain-chroma/) `>=0.1.0,<1.0.0`
+- [`openai`](https://pypi.org/project/openai/) `>=0.28.1,<0.29.0`
+- [`tiktoken`](https://pypi.org/project/tiktoken/) `>=0.4.0,<0.5.0`
+- [`faiss-cpu`](https://pypi.org/project/faiss-cpu/) `>=1.7.6,<1.8.0`
+- [`python-dotenv`](https://pypi.org/project/python-dotenv/) `>=0.21.0,<0.22.0`
+- [`chromadb`](https://pypi.org/project/chromadb/) `>=0.3.22,<0.4.0`
+
+These dependencies are automatically installed when you install SchoginiAI via `pip` or using `requirements.txt` in Docker.
+
+### 📄 `requirements.txt`
+
+```plaintext
+langchain>=0.0.200,<0.1.0
+langchain-community>=0.0.20,<0.1.0
+langchain-chroma>=0.1.0,<1.0.0
+openai>=0.28.1,<0.29.0
+tiktoken>=0.4.0,<0.5.0
+faiss-cpu>=1.7.6,<1.8.0
+python-dotenv>=0.21.0,<0.22.0
+chromadb>=0.3.22,<0.4.0
+```
+
+## 🐳 Docker Configuration
+
+### 📄 `Dockerfile`
+
+```dockerfile
+# Use a lightweight Python base image
+FROM python:3.11-slim
+
+# Install bash and other dependencies (if needed)
+RUN apt-get update && apt-get install -y bash && rm -rf /var/lib/apt/lists/*
+
+# Set environment variables for Python
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+# Create and set the working directory
+WORKDIR /app
+
+# Copy the current directory contents into the container at /app
+COPY . /app
+
+# Install Python dependencies into the current directory
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt --target=.
+RUN pip install -e .
+
+# Ensure the .env file is present
+COPY examples02/.env /app/examples02/.env
+
+# Make sure the scripts are executable
+RUN chmod +x examples02/doit.sh
+
+# Use bash as the entrypoint
+ENTRYPOINT ["/bin/bash"]
+# Default command: run doit.sh with arguments
+CMD ["examples02/doit.sh"]
+```
+
+### 📄 `doit.sh`
+
+Handles the execution of either the knowledge creation or querying scripts based on input arguments.
+
+```bash
+#!/bin/bash
+set -e  # Exit immediately if a command exits with a non-zero status
+
+# Check if one argument is provided
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 {create|query}"
+    exit 1
+fi
+
+SCRIPT=$1
+
+if [ "$SCRIPT" == "create" ]; then
+    echo "Running knowledge_creation.py..."
+    python examples02/knowledge_creation.py
+elif [ "$SCRIPT" == "query" ]; then
+    echo "Running usage_example02.py..."
+    python examples02/usage_example02.py
+else
+    echo "Invalid argument. Use 'create' or 'query'."
+    exit 1
+fi
+```
+
+> **Usage Examples:**
+>
+> - **Create Vector Store with FAISS:**
+>
+>   ```bash
+>   docker run --rm -e OPENAI_API_KEY="your_openai_api_key_here" schogini-examples create
+>   ```
+>
+> - **Create Vector Store with ChromaDB:**
+>
+>   ```bash
+>   docker run --rm -e OPENAI_API_KEY="your_openai_api_key_here" schogini-examples create
+>   ```
+>
+> - **Query Vector Store with FAISS:**
+>
+>   ```bash
+>   docker run --rm -e OPENAI_API_KEY="your_openai_api_key_here" schogini-examples query
+>   ```
+>
+> - **Query Vector Store with ChromaDB:**
+>
+>   ```bash
+>   docker run --rm -e OPENAI_API_KEY="your_openai_api_key_here" schogini-examples query
+>   ```
+
+## 🗃 Project Structure
+
+```
+SchoginiAI/
+├── SchoginiAI/
+│   ├── __init__.py
+│   └── main.py
+├── examples02/
+│   ├── usage_example02.py
+│   ├── knowledge_creation.py
+│   └── .env
+├── tests/
+│   └── test_main.py
+├── .gitignore
+├── LICENSE
+├── README.md
+├── requirements.txt
+├── setup.py
+├── Dockerfile
+├── doit.sh
+└── build.sh
+```
+
+## 🛡 License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+## 📝 Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+1. Fork the repository.
+2. Create your feature branch: `git checkout -b feature/YourFeature`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature/YourFeature`
+5. Open a pull request.
+
+## 📄 `.gitignore`
+
+Ensure you have a `.gitignore` file to exclude unnecessary or sensitive files from your GitHub repository.
+
+```gitignore
+# Python
+__pycache__/
+*.py[cod]
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Environment
+venv/
+.env/
+
+# Vector Stores
+faiss_store/
+chroma_store/
+
+# OS generated files
+.DS_Store
+
+# IDE configs
+.vscode/
+.idea/
+
+# Secrets
+.pypirc
+.env
+```
+
+## 📚 Additional Resources
+
+- [LangChain Documentation](https://langchain.com/docs/)
+- [OpenAI API Documentation](https://beta.openai.com/docs/)
+- [FAISS Documentation](https://github.com/facebookresearch/faiss)
+- [ChromaDB Documentation](https://www.trychroma.com/docs/)
+- [Python-Dotenv Documentation](https://pypi.org/project/python-dotenv/)
+
+---
+
+## 🎯 Summary
+
+By configuring your **SchoginiAI** project to select the vector store type (`faiss` or `chroma`) through the `.env` file, you achieve a more streamlined and maintainable setup. This approach centralizes configuration, reduces the need for repetitive command-line arguments, and aligns with best practices for environment-specific settings.
+
+### **Key Actions Taken:**
+
+1. **Environment Variable Configuration:**
+   - Added `VECTOR_STORE_TYPE` to the `.env` file to specify the desired vector store.
+
+2. **Script Modifications:**
+   - Removed command-line argument parsing for vector store selection.
+   - Updated scripts to read `VECTOR_STORE_TYPE` from environment variables.
+
+3. **Docker Adjustments:**
+   - Ensured the `.env` file is copied into the Docker image.
+   - Modified `doit.sh` to eliminate the need for vector store type arguments.
+
+4. **Verification:**
+   - Provided steps to verify that the changes work both locally and within Docker.
+
+5. **Documentation:**
+   - Updated `README.md` to reflect the new configuration method.
+
+6. **Testing:**
+   - Recommended implementing unit tests to ensure correct vector store selection based on `.env` settings.
+
+### **Next Steps:**
+
+1. **Implement Unit Tests:** Ensure that vector store selections work as intended.
+2. **Continuous Integration (CI):** Set up CI pipelines to automatically test configurations.
+3. **Monitor Dependencies:** Keep your packages updated to avoid future deprecations or compatibility issues.
+4. **User Documentation:** Make sure all users are aware of the `.env` configuration for vector store selection.
+
+Feel free to reach out if you need further assistance or encounter any issues during implementation!
+
+---
+
+By following this guide, your **SchoginiAI** module is now equipped to handle both FAISS and ChromaDB vector stores seamlessly, ensuring compatibility with the latest LangChain updates and maintaining best practices for security and maintainability.
