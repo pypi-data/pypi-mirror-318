@@ -1,0 +1,7 @@
+confluent_kafka
+
+[dev]
+black
+pytest
+pytest-asyncio
+mypy

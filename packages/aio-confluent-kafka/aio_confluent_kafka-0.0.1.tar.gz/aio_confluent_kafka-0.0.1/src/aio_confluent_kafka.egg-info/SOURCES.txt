@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/aio_confluent_kafka/__init__.py
+src/aio_confluent_kafka/_consumer.py
+src/aio_confluent_kafka/_producer.py
+src/aio_confluent_kafka.egg-info/PKG-INFO
+src/aio_confluent_kafka.egg-info/SOURCES.txt
+src/aio_confluent_kafka.egg-info/dependency_links.txt
+src/aio_confluent_kafka.egg-info/requires.txt
+src/aio_confluent_kafka.egg-info/top_level.txt
