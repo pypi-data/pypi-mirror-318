@@ -1,0 +1,126 @@
+
+# apdl - YouTube Downloader
+
+`apdl` is a Python module to download YouTube videos as MP3 or MP4 files. You can specify the quality or resolution of the download and also retrieve video details such as title and thumbnail.
+
+## Installation
+
+To install the module, you can use `pip`:
+
+```bash
+pip install apdl
+```
+
+## Command-Line Usage
+
+Once the module is installed, you can use it directly from the command line.
+
+### Syntax:
+
+```bash
+apdl -url <youtube_url> -mp3 [<quality>]     # For MP3 downloads
+apdl -url <youtube_url> -mp4 [<resolution>]  # For MP4 downloads
+apdl -url <youtube_url> -thumbnail           # For thumbnail download
+apdl -url <youtube_url> -title               # For video title
+apdl -url <youtube_url> -list                # For display the quality of MP3 and MP4
+```
+
+### Examples:
+
+1. **Download MP3 with Best Audio Quality:**
+   ```bash
+   apdl -url https://youtu.be/qWEhlE7NVi0 -mp3
+   ```
+
+2. **Download MP3 with Specific Quality (e.g., 128kbps):**
+   ```bash
+   apdl -url https://youtu.be/qWEhlE7NVi0 -mp3 128
+   ```
+
+3. **Download MP4 with Best Video Quality:**
+   ```bash
+   apdl -url https://youtu.be/qWEhlE7NVi0 -mp4
+   ```
+
+4. **Download MP4 with Specific Resolution (e.g., 360p):**
+   ```bash
+   apdl -url https://youtu.be/qWEhlE7NVi0 -mp4 360
+   ```
+
+5. **Download Thumbnail:**
+   ```bash
+   apdl -url https://youtu.be/qWEhlE7NVi0 -thumbnail
+   ```
+
+6. **Get Video Title:**
+   ```bash
+   apdl -url https://youtu.be/qWEhlE7NVi0 -title
+   ```
+
+7. **Help Command:**
+   ```bash
+   apdl -help
+   ```
+
+This will display the usage instructions.
+
+---
+
+## Python Script Usage
+
+You can also use the `apdl` module directly in a Python script to download YouTube videos, retrieve their information, and choose the quality/resolution for the download.
+
+### Example Script:
+
+```python
+# Import the required functions from apdl
+from apdl import fetch_video_info, thumbnail_mode, mp3_mode, mp4_mode
+
+# URL of the YouTube video to be processed
+url = "https://youtu.be/ztYDA38JLGM"  # Replace with the actual YouTube video URL
+
+# Define the desired format and quality
+format_type = "mp3"  # Options: "mp3" or "mp4"
+quality = "128" # For mp3: 64, 128, 192, 256, 320 kbps; For mp4: 360, 480, 720, 1080
+
+try:
+    # Fetching video information (e.g., title, available qualities, etc.)
+    video_info, auth = fetch_video_info(url)
+    print(f"Video Title: {video_info.get('title', 'Unknown')}")
+
+    # Display the video thumbnail
+    print("Displaying video thumbnail...")
+    thumbnail_mode(url)
+
+    # Downloading MP3 in the specified quality (e.g., 128kbps)
+    if format_type == "mp3":
+        print(f"Downloading MP3 in {quality}kbps quality...")
+        mp3_mode(video_info, auth, quality=quality)
+
+    # Downloading MP4 in the specified quality (e.g., 720p)
+    elif format_type == "mp4":
+        print(f"Downloading MP4 in {quality} quality...")
+        mp4_mode(video_info, auth, quality=quality)
+
+except Exception as e:
+    # Handling any potential errors that might occur during the process
+    print(f"An error occurred: {e}")
+```
+
+### Explanation:
+
+1. **Setup**:
+   - The script starts by importing the `YouTube` class from the `apdl` module and defining the video URL.
+
+2. **Fetching Video Info**:
+   - The script retrieves video details like title and thumbnail by calling `youtube.fetch_video_info()`.
+
+3. **Downloading**:
+   - Depending on the desired format (`mp3` or `mp4`), it starts the conversion with the chosen quality and monitors the conversion process.
+   - Once the conversion is completed, the file is downloaded and saved with the title of the video and the format/quality in the filename.
+
+### Notes:
+
+- Make sure to install the necessary dependencies (`requests`, `fake_useragent`, etc.).
+- The `quality` parameter for `mp3` can be set to values like `64`, `128`, `192`, `256`, `320` kbps.
+- The `quality` for `mp4` can be set to resolutions like `360`, `480`, `720`, `1080` p.
