@@ -1,0 +1,11 @@
+vietnam_provinces/__init__.py,sha256=na1wFbhRRZjBv1Awwva2ziugW9hZTlnYzhfzzErZRx0,344
+vietnam_provinces/base.py,sha256=v9nbitAgPBKZqiUGdRzhswl4YAD9yvYu8OHco2UgNh0,1593
+vietnam_provinces/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vietnam_provinces/data/flat-divisions.json,sha256=xKCLlsT0ROftYzTVXf0RlC7Wc2OQOH59-Vd4nEfUesM,3329873
+vietnam_provinces/data/nested-divisions.json,sha256=p950qgJlMf_wljbLtmV9qwmoPq_18jDkc29m4LdGAAE,2272874
+vietnam_provinces/enums/__init__.py,sha256=ATjBqZdPvUZ--DPitp4PC7FdzOwGNO0HhctMo6KHKmQ,89
+vietnam_provinces/enums/districts.py,sha256=WudP7KRKvdQkqSCCrdp6V0bnqFVH3fxSg-iegQywuIw,109487
+vietnam_provinces/enums/wards.py,sha256=RSAU9Q9x2trVWP3LleBp8-VDzdQbSwlwnlN-Zjw5_nI,1471567
+vietnam_provinces-0.5.8.dist-info/WHEEL,sha256=CpUCUxeHQbRN5UGRQHYRJorO5Af-Qy_fHMctcQ8DSGI,82
+vietnam_provinces-0.5.8.dist-info/METADATA,sha256=4u4LuBJU3RxvhHRfkjrXLPbH66qWNzxqMDF8vW3Mu68,9822
+vietnam_provinces-0.5.8.dist-info/RECORD,,
