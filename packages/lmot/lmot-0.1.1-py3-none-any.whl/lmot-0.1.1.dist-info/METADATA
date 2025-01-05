@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: lmot
+Version: 0.1.1
+Summary: A Large language model Optimization Tool chain, lot is a lot of LOT(Large model Optimization Tools)
+Author: BEIKE-Computing and Storage Department-Heterogeneous Computing Group
+License: Apache 2.0
+Requires-Python: >=3.9
+
