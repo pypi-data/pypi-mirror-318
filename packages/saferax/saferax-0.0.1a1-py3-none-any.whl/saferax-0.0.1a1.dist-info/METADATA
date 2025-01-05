@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: saferax
+Version: 0.0.1a1
+Summary: Loading Safetensor from HF to Equinox
+License: Apache-2.0 license
+Author: Herumb Shandilya
+Author-email: herumbshandilya123@gmail.com
+Requires-Python: >=3.10
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: equinox (>=0.11.11,<0.12.0)
+Requires-Dist: fsspec (>=2024.12.0,<2025.0.0)
+Requires-Dist: huggingface-hub (>=0.27.0,<0.28.0)
+Requires-Dist: jax (>=0.4.38,<0.5.0)
+Requires-Dist: safetensors (>=0.4.5,<0.5.0)
+Description-Content-Type: text/markdown
+
+# saferax: Loading Safetensor from HF to Equinox
+
+Loading Safetensor from HF to Equinox
+
