@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+TFcomb/__init__.py
+bio_tfcomb.egg-info/PKG-INFO
+bio_tfcomb.egg-info/SOURCES.txt
+bio_tfcomb.egg-info/dependency_links.txt
+bio_tfcomb.egg-info/requires.txt
+bio_tfcomb.egg-info/top_level.txt
