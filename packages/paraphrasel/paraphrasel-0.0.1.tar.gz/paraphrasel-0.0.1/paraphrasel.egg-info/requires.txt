@@ -1,0 +1,12 @@
+torch>=2.5.0
+sentence_transformers>=3.0.0
+click>=8.0.0
+
+[dev]
+black>=24.0.0
+pytest>=8.0.0
+isort>=5.0.0
+pre-commit>=4.0.0
+ruff>=0.8.0
+mkdocs>=1.6.0
+mkdocs-material>=9.0.0

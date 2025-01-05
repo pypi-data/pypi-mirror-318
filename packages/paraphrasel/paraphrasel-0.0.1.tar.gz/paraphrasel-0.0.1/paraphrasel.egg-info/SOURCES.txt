@@ -1,0 +1,15 @@
+LICENSE.md
+README.md
+pyproject.toml
+paraphrasel/__init__.py
+paraphrasel/cli.py
+paraphrasel/match.py
+paraphrasel/semantic_similarity.py
+paraphrasel/util.py
+paraphrasel.egg-info/PKG-INFO
+paraphrasel.egg-info/SOURCES.txt
+paraphrasel.egg-info/dependency_links.txt
+paraphrasel.egg-info/entry_points.txt
+paraphrasel.egg-info/requires.txt
+paraphrasel.egg-info/top_level.txt
+tests/test_match.py
