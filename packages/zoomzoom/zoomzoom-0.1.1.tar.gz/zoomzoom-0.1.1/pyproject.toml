@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "zoomzoom"
+version = "0.1.1"
+authors = [
+    { name = "JimEverest", email = "your.email@example.com" },
+]
+description = "An intelligent meeting assistant that enhances Zoom meetings with AI-powered analysis"
+license = { file = "LICENSE" }
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Office/Business :: Scheduling",
+]
+dependencies = [
+    "uiautomation>=2.0.0",
+    "openai>=1.0.0",
+    "configparser>=5.0.0",
+    "requests>=2.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/JimEverest/ZoomZoom"
+"Bug Tracker" = "https://github.com/JimEverest/ZoomZoom/issues"
+
+[project.scripts]
+zoomzoom = "zoomzoom.meeting_navigator:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/zoomzoom"]
