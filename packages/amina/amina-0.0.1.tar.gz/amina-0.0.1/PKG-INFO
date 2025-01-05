@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: amina
+Version: 0.0.1
+Author-email: amina <nakovaamina3@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10.0
+Description-Content-Type: text/markdown
+
+This library is not that useful. Perhaps someday it will become great.
