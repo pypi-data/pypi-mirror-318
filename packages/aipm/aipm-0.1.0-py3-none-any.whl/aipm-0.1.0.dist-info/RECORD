@@ -1,0 +1,13 @@
+aipm/.DS_Store,sha256=Shk0lP5K2W7YZw_7eubTUGkyZrkpR7ZJ29HpXoe8nss,6148
+aipm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aipm/config.py,sha256=0UJ_1PukKTwWwgd7mYAayo3aGeyGmFyqoqOfqiKLf54,1871
+aipm/env.py,sha256=835zpiqb-J_n1TqzvD_fvl8LiZ4b3vtndxddKOTf-ec,10840
+aipm/exp.py,sha256=kJAT-LgPiV4Ja2W99vpOHJ1L8Y8wqbYOvuy2VAw9s68,5962
+aipm/loss.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aipm/main.py,sha256=eHmNWhvOn7-gH3OJpszq1sc8aQChPrXUhNedyomSG1U,1055
+aipm/model.py,sha256=dbad248h2ixCb8Bgg6HFlcaiEasVj__hxk6ChEFXDkE,12517
+aipm/results/results.txt,sha256=GXMfGFaLz8ZeclB5Z5EYPQ0wS6k6A1bQLEcMTrKAiIU,6690
+aipm/utils.py,sha256=YjN5aT5fF5ifJdXXtU0YTflsrvqcYpoFJMzQTtFtHBM,5178
+aipm-0.1.0.dist-info/METADATA,sha256=xE55ZRFMag_0X9YWgOgrzlRp6PQ4N-z2jHy3kP3-YK8,647
+aipm-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+aipm-0.1.0.dist-info/RECORD,,
