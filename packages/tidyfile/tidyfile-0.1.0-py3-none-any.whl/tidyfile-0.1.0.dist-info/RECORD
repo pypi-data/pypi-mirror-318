@@ -1,0 +1,11 @@
+tidyfile/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tidyfile/main.py,sha256=cJjflQczS_7BN24Kt1DhACY9lOWF8UtxdCRlpYoHLUo,1159
+tidyfile/modules/file_classifier.py,sha256=uhhExwCToq-t4om4yN44OPwNfqSLkl2TuZS5uJ42pK8,3637
+tidyfile/modules/file_exporter.py,sha256=Z7AnGBUCluy3o0PH2SCkCpC1DMBDYJeDJ35gAnwqlRg,1272
+tidyfile/modules/file_organiser.py,sha256=FcZY22x6Bv-lEgzPWjcC-uiaXv2VDnUy7HYr2v7CURE,1317
+tidyfile/utils/logger_setup.py,sha256=QBwiKW_VDPw1NJMkNSfq5_w4SkoF65Mf-fC7dHt3HeI,1810
+tidyfile-0.1.0.dist-info/METADATA,sha256=gqXd_fjpHw-ScdcrGRhYYhmF-hScsCzItR3BwtYRzXs,42576
+tidyfile-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+tidyfile-0.1.0.dist-info/entry_points.txt,sha256=j5-YHrzI3xDrF6z9mTwpYAH7qyoJ6PnK5vS18rzjDsk,47
+tidyfile-0.1.0.dist-info/licenses/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+tidyfile-0.1.0.dist-info/RECORD,,
