@@ -1,0 +1,7 @@
+espeakng_loader/__init__.py,sha256=YmjL0RTcn3pqR7dOX5YA4vHn6W8PJyFPrArL6iQ9F58,1280
+espeakng_loader/libespeak-ng.so,sha256=W_DUsV5jdN6CcFGKPrrUVnkoydzIKPYk6qIasPewgjM,601336
+espeakng_loader/libespeak-ng.so.1,sha256=W_DUsV5jdN6CcFGKPrrUVnkoydzIKPYk6qIasPewgjM,601336
+espeakng_loader/libespeak-ng.so.1.52.0.1,sha256=W_DUsV5jdN6CcFGKPrrUVnkoydzIKPYk6qIasPewgjM,601336
+espeakng_loader-0.1.1.dist-info/METADATA,sha256=oC-mtCcxm3ln0ALGESucyVSFCum4ARLDDf-1exm6Sqg,961
+espeakng_loader-0.1.1.dist-info/WHEEL,sha256=3WUKDSelZk-NkiXLNho7v7nXvE1M9vFJQhN4DFpQAIs,107
+espeakng_loader-0.1.1.dist-info/RECORD,,
