@@ -1,0 +1,18 @@
+{
+  "module": "IbovWebWapperB3",
+  "description": "Módulo para captura de dados históricos do IBOVESPA via web scraping.",
+  "version": "1.0.0",
+  "author": "Flavio Lopes",
+  "email": "fnldesign@hotmail.com",
+  "dependencies": [
+    "selenium",
+    "webdriver-manager"
+  ],
+  "indexData": {
+    "indexName": "IBOV",
+    "indexSource": "B3",
+    "indexSourceReference": "https://www.b3.com.br/pt_br/market-data-e-indices/indices/indices-amplos/indice-ibovespa-ibovespa-estatisticas-historicas.htm",
+    "indexDocumentation": "https://www.b3.com.br/pt_br/market-data-e-indices/indices/indices-amplos/ibovespa.htm"
+  },  
+  "last_update": "2024-12-28"
+}
