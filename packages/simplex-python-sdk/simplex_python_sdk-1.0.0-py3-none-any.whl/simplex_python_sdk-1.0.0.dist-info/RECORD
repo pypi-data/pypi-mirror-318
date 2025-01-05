@@ -1,0 +1,10 @@
+simplex/__init__.py,sha256=334mS3nxqpVbGLfe28DiQr8iJkb6zvyc4uLBTMcDHuQ,74
+simplex/constants.py,sha256=nIXF2oVNNNknXweXAlmE-KBM9QjJtYw9osXVYjvloN0,59
+simplex/simplex.py,sha256=1F60jOGfcz7-pwfleUZA0z52C_6PqRUYMFE1pHRBdn0,5803
+simplex/utils.py,sha256=SCXVucfzLOVMp3Tv6w7Brfh_etiFNMFDr7kiXSY0opQ,371
+simplex_python_sdk-1.0.0.dist-info/LICENSE,sha256=Xh0SJjYZfNI71pCNMB40aKlBLLuOB0blx5xkTtufFNQ,1075
+simplex_python_sdk-1.0.0.dist-info/METADATA,sha256=3LhfVyRuOYLToKx-Zu_7srWsg9LqsoqN-tjCPyiXxVw,928
+simplex_python_sdk-1.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+simplex_python_sdk-1.0.0.dist-info/entry_points.txt,sha256=3veL2w3c5vxb3dm8I_M8Fs-370n1ZnvD8uu1nSsL7z8,45
+simplex_python_sdk-1.0.0.dist-info/top_level.txt,sha256=cbMH1bYpN0A3gP-ecibPRHasHoqB-01T_2BUFS8p0CE,8
+simplex_python_sdk-1.0.0.dist-info/RECORD,,
