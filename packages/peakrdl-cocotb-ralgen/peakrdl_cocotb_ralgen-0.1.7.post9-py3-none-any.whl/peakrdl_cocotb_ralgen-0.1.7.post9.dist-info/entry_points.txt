@@ -1,0 +1,8 @@
+[console_scripts]
+cocotb_ralgen = peakrdl_cocotb_ralgen.cli:cocotb_ralgenerator
+
+[gui_scripts]
+
+[peakrdl.exporters]
+cocotb_ralgen = peakrdl_cocotb_ralgen.__peakrdl__:Exporter
+
