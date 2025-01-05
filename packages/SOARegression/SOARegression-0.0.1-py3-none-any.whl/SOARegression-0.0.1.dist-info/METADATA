@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: SOARegression
+Version: 0.0.1
+Summary: Sample Optimized Adaptive Regression.
+Home-page: https://github.com/tblume1992/SOARegression
+Author: Tyler Blume
+Author-email: t-blume@hotmail.com
+Keywords: machine learning,linear regression
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+
+# SOARegression
+ Sample Optimized Adaptive Regression
