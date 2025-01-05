@@ -1,0 +1,6 @@
+batux_lib_test/__init__.py,sha256=Pv9twWewqJVwZccFVnMWOd0SZRJGuUkb1QIKReJ0zbs,60
+batux_lib_test/lib_stuff.pyx,sha256=9BhMZpv3Gg28VQGrlCkaWm83aJPwxPrveP57aKw1GOY,172
+batux_lib_test/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+batux_lib_test-0.1.4.dist-info/METADATA,sha256=ZT4agze1QU23EzoSfjMwCc3skwUTJ8Y5L4HYq4DEEPY,262
+batux_lib_test-0.1.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+batux_lib_test-0.1.4.dist-info/RECORD,,
