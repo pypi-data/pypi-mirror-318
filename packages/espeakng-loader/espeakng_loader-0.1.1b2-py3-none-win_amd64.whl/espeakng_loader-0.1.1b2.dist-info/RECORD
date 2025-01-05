@@ -1,0 +1,5 @@
+espeakng_loader/__init__.py,sha256=eS7c5cxEVMEenWeh4KTISJXADmd-2YAUoOBcxiPNFCE,1314
+espeakng_loader/espeak-ng.dll,sha256=7kIsmyxnq1jrW03CdKiBE-6ZzdKv6yKhVLf2L7SYGzM,421376
+espeakng_loader-0.1.1b2.dist-info/METADATA,sha256=GPWVdt4FlJiVs11ugKttVvkoIEUkKMDVe1c4_Mhk7Z4,296
+espeakng_loader-0.1.1b2.dist-info/WHEEL,sha256=Vhj7RpPOKCXcsr4rUs7q4pISuo5nT6VsOuaQwH9GILY,94
+espeakng_loader-0.1.1b2.dist-info/RECORD,,
