@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: PDB_score
+Version: 1.1.2
+Summary: A tool to massively calculate protein scores using PDB files.
+Home-page: https://github.com/SiriNatsume/PDB-score
+Author: SiriNatsume
+Author-email: SiriNatsume@outlook.com
+License: MIT
+Keywords: protein,score,PDB,alignment,GDT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: biopython
+Requires-Dist: scipy
+
+
+<h1 align="center">PDB-score</h1>
+
+[中文文档请点击](https://github.com/SiriNatsume/PDB-score/blob/master/readme-zh.md)
+
+## Features
+Implemented GDT scoring for a large number of predicted and actual protein models, along with calculating RMSD after coordinate alignment, which can be used to evaluate the prediction models.
+
+## Installation
+```
+pip install PDB-score
+```
+
+## Usage
+```aiignore
+psc [-h] -c CONTROL -t TREATMENT -o OUTPUT [-T THREAT] [-B BATCH] [-m {default,prealign}] [-d THRESHOLD] [-i MAX_ITERATIONS] [-s SAVE_LIMIT]
+```
+- `-c` Directory where the experimental PDB files are stored.
+- `-t` Directory where the predicted PDB files are stored.
+- `-o` Directory for saving the output scores.
+- `-T` Specify the number of cores, default is 4.
+- `-B` Specify the Batch size, default is 5000.
+- `-m` Specifies the atomic alignment method, defaulting to the Biopython implementation.  
+---
+The following parameters apply only in `-m prealign` mode:  
+- `-d` Specifies the distance threshold (in Å) for excluding atoms during each iteration of optimization, defaulting to 1.0.  
+- `-i` Specifies the maximum number of iterations, defaulting to 10.  
+- `-s` Specifies the minimum proportion of atomic points allowed to be retained, defaulting to 1.0.  
+
+## Notes
+- `-s` should be precise to two decimal places and cannot exceed 1.0. It applies to the smaller molecule among two of different sizes.  
+- `-o` should only specify the output directory and not the file name.  
+- The output is a `.csv` file with a fixed file name, so take care to avoid overwriting it.  
+- Only `.pdb` and `.ent` files with the same name (excluding extensions) in the two input directories will be analyzed.  
+- The `prealign` mode has not been performance-optimized and may exhibit suboptimal performance.  
+
+## Output
+/path/to/output/protein_scores.csv
+
+| name     | RMSD         | 1A    | 2A    | ... | 128A  | Average |
+|:---------|:-------------|:------|:------|:----|:------|:--------|
+| Protein1 | rmsd (float) | Score | Score | ... | Score | Score   |
+| Protein2 | rmsd (float) | Score | Score | ... | Score | Score   |
+| ...      | ...          | ...   | ...   | ... | ...   | ...     |
+
+## Calculation Method
+Default Mode:
+- Use Biopython for coordinate alignment.
+- Calculate scores using the GDT algorithm.
+- Remove all ligands; represent residue coordinates using the central carbon atom coordinate.
+- If the number of central carbon atoms is unequal, excess/fewer residues are directly ignored (regardless of precision).
+---
+Prealign Mode:
+- Use a custom `align` algorithm for rigid coordinate alignment.
+- Calculate scores using the GDT algorithm.
+- Remove all ligands; represent residue coordinates using the central carbon atom coordinate.
+- If the number of central carbon atoms is unequal, the most matched chains and fragments are selected using the LCS method.
+
+## Performance
+- Test Environment:
+  - Default parameters: `-T 4 -B 5000`
+  - Test Machine: `Windows 11 PC, CPU Intel 12600k`
+  - Single sample size: 146KB with 154 residues
+- Comparing 50,000 samples took 387061ms.
+- Memory usage is less than 6GB.
+
+## Others
+- When `-s` is less than 1.0, it indicates that an equivalent proportion of information (excluding certain atoms) is allowed to be lost during the alignment process. This often results in better alignment performance but may affect the accuracy of the results.  
+- If the protein data contains significant noise (e.g., the centroid is not located at the origin, includes irrelevant chains, or has a significantly unequal number of central carbon atoms), the `prealign` alignment method typically performs better.  
+- It is recommended to ensure minimal contamination of protein data before using the default alignment method to achieve more accurate results.  
+
+## Acknowledgments
+- [JetBrains](https://www.jetbrains.com/)
+- [ChatGPT](https://www.chatgpt.com)
+
+[@SiriNatsume](https://github.com/SiriNatsume)  
+Wishing you happiness :)

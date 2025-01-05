@@ -1,0 +1,12 @@
+PDB_score/PDBProcessor.py,sha256=lmRnwMutZkVwJqm4mJUHDNBp9TuVcGIl5p4qPOOmoTw,3083
+PDB_score/ProteinStructure.py,sha256=5Pk4dXfhAz7dHcZF-k1VanHcMPAaIU4QraRX0gnsdxM,3781
+PDB_score/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+PDB_score/alignment.py,sha256=7oKi5EGnXNa0ecq99w6w9RmMs2rXZ8j_4iCVWdczqgs,6090
+PDB_score/core.py,sha256=KjIAbYmWtCZY4rVfBP-2qB2dg1CfMuul9OmGNohNHEg,5548
+PDB_score/main.py,sha256=zMMKPhGm00Vr2TzqN4hfIQMZKilKJCm4_N7QXTA9YLM,6046
+PDB_score-1.1.2.dist-info/LICENSE,sha256=M6z3HbO5SioptvwHUOqb_srIbcP71fyIRRPYrDZJzBU,1087
+PDB_score-1.1.2.dist-info/METADATA,sha256=mgISZTCWaU7luK4CU1oZIzzlWz1tkef7cRy5C_bnFj8,4658
+PDB_score-1.1.2.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+PDB_score-1.1.2.dist-info/entry_points.txt,sha256=7DgkSgl-Z56SB6uvizC50Q9qHxICgKvHgc3HGEuV2VA,44
+PDB_score-1.1.2.dist-info/top_level.txt,sha256=Jziv3EGLWKOQjg387GWDHv2RxffuPy1byHG9m3LmSJg,10
+PDB_score-1.1.2.dist-info/RECORD,,
