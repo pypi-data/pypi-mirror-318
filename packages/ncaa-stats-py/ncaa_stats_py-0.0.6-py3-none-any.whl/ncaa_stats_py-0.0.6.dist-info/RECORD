@@ -1,0 +1,16 @@
+ncaa_stats_py/__init__.py,sha256=tHC6KG8xlQQxVxCxsrMImP1qD3VWWEz0ytLCUgEP-1k,4284
+ncaa_stats_py/baseball.py,sha256=Mc0RcoR9wcY88CmStVoMXpjj-Jq122YJ68DmLVMzm1A,126488
+ncaa_stats_py/basketball.py,sha256=hT3YZbH6BtU2RXqiAUx2jzm43Pf9IEENcMSdWfUksKs,117180
+ncaa_stats_py/field_hockey.py,sha256=HqR_RC76D8m3siCodm7kQDCVw47axrdyYpJU5chd4sA,95994
+ncaa_stats_py/football.py,sha256=Y0vTBWJ7SrKbLaI254Ll9MAP1_NMPYUcuXnyr3ATcug,244
+ncaa_stats_py/hockey.py,sha256=CInMJ8SDshsBlz9z9XQMY65ajL1LP_-4-AqVPcKsctM,120117
+ncaa_stats_py/lacrosse.py,sha256=otz5YpuhUacyKqWNkbyy6blQvkkRbKavumgUZWmgoMI,122576
+ncaa_stats_py/soccer.py,sha256=ZxSlVFozJZwzYfTtJam7dpAYbyyuCpvhlrlk78vEhmI,240
+ncaa_stats_py/softball.py,sha256=IbT4wJPZuwJovHJ1eS8MJu74aKg8HzSzP50b33frDE4,140868
+ncaa_stats_py/utls.py,sha256=RCqH9O6Gu7Oj9tRH-W8loNgIstN8BhcrifzjRGgugkk,26088
+ncaa_stats_py/volleyball.py,sha256=9xHcZgBz8uDa3twY4o1aVN_tOSNc96s4BdAo7CWMiTs,248
+ncaa_stats_py-0.0.6.dist-info/LICENSE,sha256=xWvi6n-HEP8qjj_IkHIZc5suLI_EQReeNoPp1QwY68U,1073
+ncaa_stats_py-0.0.6.dist-info/METADATA,sha256=bwNT-rdKsnvvxVRbL-gIl46wCYLMFNIwNB4B1t3CRiA,5572
+ncaa_stats_py-0.0.6.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+ncaa_stats_py-0.0.6.dist-info/top_level.txt,sha256=uz0S25WK_d1w0OR303PMA46yfDhLsxwZFTR_UUCR7ZI,14
+ncaa_stats_py-0.0.6.dist-info/RECORD,,
