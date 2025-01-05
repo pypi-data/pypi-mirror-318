@@ -1,0 +1,14 @@
+tagpatch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tagpatch/__main__.py,sha256=yz-vkQeWBgItJOewtcs-lWo7F6r5SrKQbQbHhVB1Fgk,2094
+tagpatch/options.py,sha256=AQnndXDZauFeBCopQj9QoDVP9P06d9iV9ScEYFLeTFQ,1190
+tagpatch/types.py,sha256=mb8PtTCMIXyX6LL4IlxXTq8fnLU3HZ0SyTElBGu26K8,90
+tagpatch/utils.py,sha256=moOUB5PWcVSirbd1fIrKOgO4gL7UDd8Jw4DBDNGrhek,2699
+tagpatch/patches/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tagpatch/patches/artist_name.py,sha256=Ui8fGe-VEYD9odS-tRYyBGETS4CQHklhdl8TjXaSjA0,2984
+tagpatch/patches/embed_lrc.py,sha256=FbuHyHhHyU05P1RB_UyRKUsUs5F7QC1Y32iuI8_e4gI,3016
+tagpatch/patches/patch.py,sha256=J4qcaJWZGeCwOOM_Wm5WDvhCSxX5ilOTO5FxzkP_inE,861
+tagpatch-0.1.3.dist-info/METADATA,sha256=2QADTt_hcF_5E2j2Es9PKTU7PT7kHAtjk6IpKgyQD7g,1988
+tagpatch-0.1.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+tagpatch-0.1.3.dist-info/entry_points.txt,sha256=0LNJmE-ZsJlu6k_3rmqhitqh8dzAteeLpSTquCbNUKs,52
+tagpatch-0.1.3.dist-info/licenses/LICENSE,sha256=og_soKckifUsmAoLKuNwrmpt5m_oo4--wHyhSaZp1CI,1081
+tagpatch-0.1.3.dist-info/RECORD,,
