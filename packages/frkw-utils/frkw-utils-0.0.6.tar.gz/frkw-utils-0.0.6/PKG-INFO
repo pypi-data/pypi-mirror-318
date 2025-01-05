@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: frkw-utils
+Version: 0.0.6
+Summary: A placeholder for frkw_utils package.
+Home-page: https://gitlab.com/frkw50group/frkw-utils
+Author: Koichi Furukawa
+Author-email: frkw50@gmail.com
+License: UNKNOWN
+Description: This is an empty package for testing purposes.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/plain
