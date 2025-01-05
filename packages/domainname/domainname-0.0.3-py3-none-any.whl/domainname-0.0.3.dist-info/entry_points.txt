@@ -1,0 +1,3 @@
+[console_scripts]
+checkdomain = domainname.main:check_domain
+d = domainname.main:check_domain
