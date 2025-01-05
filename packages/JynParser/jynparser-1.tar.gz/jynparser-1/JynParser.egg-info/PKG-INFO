@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: JynParser
+Version: 1
+Summary: JynParser Python Parser Module
+Home-page: https://github.com/Jynoqtra/JynPopMod
+Author: Jynoqtra
+Author-email: Jynoqtra@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Intended Audience :: Developers
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+1. **`JynParser(Replacement with main)`**
+   - **`Replacement`**:Replacement code to replace with main functon.
+   - **What it does**: Swaps the codes with main.
+   - **WARNING**:Swapping the codes cannot be undoed after! (Working on so u can swap the codes back.)
+   - **Example**:
+   def main():
+      print("Hello world!")
+   def function-name():
+      print("Not hello world!")
+   main()
+   JynParser(function-name)
+   main()
+
+   Output:Hello world!
+          Not hello world!
