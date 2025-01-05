@@ -1,0 +1,11 @@
+paraphrasel/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+paraphrasel/cli.py,sha256=FNUz7RUcsvEbMo5CR3XJQK227t9thc0KNoXhmsv-ITY,3122
+paraphrasel/match.py,sha256=7tej3rmfj2OHePd7yHfAW77pVuq7vfvjAlEiMtSklmA,2310
+paraphrasel/semantic_similarity.py,sha256=WfKHKZ5-NF5k8hEujm5YmXXMzM4nRtSpbsP5Nj4Ruus,1392
+paraphrasel/util.py,sha256=koj4qQ05Fe3GenAiPorsEa6KNIzJzv2-djDgYw_cI50,1039
+paraphrasel-0.0.1.dist-info/LICENSE.md,sha256=lu6TOgD2pKVquTr0vv-iZwBmxCVq7T8UwviRq56Gv0g,1078
+paraphrasel-0.0.1.dist-info/METADATA,sha256=8Hl3K6tzsiqgoow7CoiJSDC9qXZqTPZ46nGDVj_oEQo,4585
+paraphrasel-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+paraphrasel-0.0.1.dist-info/entry_points.txt,sha256=lOYGV_56W9ujSUq-lJlhQ9U3j73fOMpDzZgV0Mgv3-0,52
+paraphrasel-0.0.1.dist-info/top_level.txt,sha256=SEeYonSScWIPtbu6MiMnnW10ZllGZ-WJYkCW181cwHc,12
+paraphrasel-0.0.1.dist-info/RECORD,,
