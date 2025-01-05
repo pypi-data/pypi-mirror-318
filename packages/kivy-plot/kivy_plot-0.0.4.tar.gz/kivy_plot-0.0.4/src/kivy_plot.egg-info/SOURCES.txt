@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/kivy_plot/__init__.py
+src/kivy_plot/histlayout.py
+src/kivy_plot/linelayout.py
+src/kivy_plot/pielayout.py
+src/kivy_plot.egg-info/PKG-INFO
+src/kivy_plot.egg-info/SOURCES.txt
+src/kivy_plot.egg-info/dependency_links.txt
+src/kivy_plot.egg-info/top_level.txt
