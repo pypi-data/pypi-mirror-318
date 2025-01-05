@@ -1,0 +1,4 @@
+httpx
+nonebot-adapter-onebot
+nonebot2
+pydantic
