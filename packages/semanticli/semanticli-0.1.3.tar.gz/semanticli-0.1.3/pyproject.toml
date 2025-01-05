@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "semanticli"
+dynamic = ["version"]
+description = "Semantic Text Search."
+authors = [{name = "Yair Zafrany", email = "Jair.Zefran@gmail.com"}]
+requires-python = ">=3.8"
+dependencies = ["langchain", "langchain_community", "onnxruntime", "tokenizers", "appdirs", "numpy"]  
+
+[project.scripts]
+smnti = "semanticli.cli.cli:main"
+
+[tool.setuptools.dynamic]
+version = {attr = "semanticli.__version__"}
