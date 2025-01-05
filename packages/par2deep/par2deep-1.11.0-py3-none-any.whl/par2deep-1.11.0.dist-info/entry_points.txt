@@ -1,0 +1,3 @@
+[console_scripts]
+par2deep = par2deep:main
+par2deep-cli = par2deep.cli:main
