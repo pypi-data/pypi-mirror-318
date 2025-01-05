@@ -1,0 +1,60 @@
+[tool.poetry]
+name = "mixemy"
+version = "0.1.2"
+description = "Mixins for sqlalchemy and pydantic"
+authors = ["Algernon Sampson <algiesampson@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+include = [{ path = "tests", format = "sdist" }]
+repository = "https://github.com/frostyfeet909/mixemy"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Database",
+    "Typing :: Typed"
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+sqlalchemy = "^2.0"
+pydantic = "^2.10"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "0.8.4"
+pyright = "1.1.391"
+pytest = "^8.3.4"
+pre-commit = "^4.0.1"
+
+[tool.pyright]
+include = ["src/mixemy/**/*.py"]
+typeCheckingMode = "strict"
+reportUnusedImport = "none"  # Handled by ruff
+venvPath = "."
+venv = ".venv"
+
+[tool.ruff]
+include = ["src/mixemy/**/*.py", "tests/*.py"]
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "E501", "D", "A002", "ERA001", "T20", "FBT001", "FBT002",
+    "W191", "E111", "E114", "E117", "D206", "D300", "Q000", "Q001", "Q002", "Q003", "COM812", "COM819", "ISC001", "ISC002"  # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
+    ]
+fixable = ["ALL"]
+unfixable = ["T20", "ERA001"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = ["--import-mode=importlib"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
