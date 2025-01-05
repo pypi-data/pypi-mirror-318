@@ -1,0 +1,16 @@
+include LICENSE
+include README.md
+include pyproject.toml
+include requirements/*.txt
+include requirements/providers/*.txt
+include docs/*.md
+include scripts/install/*.sh
+
+recursive-include src *.py
+recursive-include tests *.py
+recursive-include examples *.py
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[cod]
+recursive-exclude * *.so
+recursive-exclude venv * 

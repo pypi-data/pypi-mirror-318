@@ -1,0 +1,6 @@
+# OpenAI Provider Dependencies
+# Version: stable_openai_v1 (commit: b25d24a)
+# DO NOT MODIFY WITHOUT EXPLICIT PERMISSION
+
+openai>=1.58.1  # Core OpenAI SDK 
+tiktoken>=0.6.0  # Required for token counting 
