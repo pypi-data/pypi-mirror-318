@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: dynamicalsystem.gazette
+Version: 0.1.3
+Summary: POSSE Publisher
+Author-email: Simon Horrobin <simon@dynamicalsystem.com>
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: atproto>=0.0.56
+Requires-Dist: dynamicalsystem.halogen>=0.1.2
+Requires-Dist: requests>=2.32.3
+
+# dynamicalsystem.gazette
+
+A POSSE publishing system which consumes micro-blogging content from json files, formats it for Bluesky and Signal.
