@@ -1,0 +1,9 @@
+kivy_plot/__init__.py,sha256=-jtZxIs7djsTAXWvjcgHgm8Q31xEneMHGnCFtX0mKBE,51
+kivy_plot/histlayout.py,sha256=_7Hx2QwiTLGHJkS3BXM0KxbQaX3pbjN8ljQuFLOQgr0,6922
+kivy_plot/linelayout.py,sha256=FY-LCUQwvE_aaDulxM8t88Iq9Kb0Igu4DgXzJ5Sh-q8,11886
+kivy_plot/pielayout.py,sha256=hdSGWLo1ecMb6v6ENJMiCluxuty3r-Iulf11JAPDPSM,3759
+kivy_plot-0.0.4.dist-info/LICENSE,sha256=Qv2ilebwoUtMJnRsZwRy729xS5JZQzLauJ0tQzkAkTA,1088
+kivy_plot-0.0.4.dist-info/METADATA,sha256=0Eo7C9ErDJm4VwOhKfy1dv1t63ppTlRRAyYJgCnux8E,4708
+kivy_plot-0.0.4.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+kivy_plot-0.0.4.dist-info/top_level.txt,sha256=taKhXWCwpXJTCBnBecUCGeJ4980b-sQhE6y1cGlBXVw,10
+kivy_plot-0.0.4.dist-info/RECORD,,
