@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "tartarus-lib"
+version = "0.0.0"
+description = "Python client library for Tartarus Config Store"
+readme = "README.md"
+authors = ["Qreater <qreater@gmail.com>"]
+license = "Apache-2.0"
+keywords = ["config store", "Tartarus", "Python client"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+requests = "2.32.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "8.3.4"
+
+[tool.poetry-dynamic-versioning]
+enable = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
+build-backend = "poetry_dynamic_versioning.backend"
