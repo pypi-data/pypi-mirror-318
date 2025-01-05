@@ -1,0 +1,3 @@
+[console_scripts]
+geetak=geetak:cli
+
