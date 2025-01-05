@@ -1,0 +1,17 @@
+cimd/__init__.py,sha256=zsDWEm66N6pZyW0kYzl7Yum0QDuRifh4HxapFU0VpGM,11
+cimd/classes/__init__.py,sha256=t08AnOvbXj7RpHYQj1l9xKnLjNNadt6hV5kePegkwaU,25
+cimd/classes/context.py,sha256=4jZ-lTsuQJ_Ar7zTiaYSPKf8HkSAnH2TVhYO2A_UfBQ,3269
+cimd/classes/metadata.py,sha256=KmWHsXslcahgOBlYOkH75nHAakuf7XmWW3BBQzPQsw0,744
+cimd/cli.py,sha256=gSpHHmTZPDwAh6NbgzzG3lMOLwyLT0MRfKXTAFhkGao,1221
+cimd/commands/__init__.py,sha256=DamDTrOQBRd3uo7sV1TzDMGtQ1DZYDTQ4gPA7epjBwI,23
+cimd/commands/add.py,sha256=_GlzuORx1U0Jncq7CjiVjDmrp1JzUouxu-mmgemJuIQ,1279
+cimd/commands/delete.py,sha256=GexemJTdV6wuIw6Y9LbA8uwvNbudIlsm318DXLP6VEU,296
+cimd/commands/get.py,sha256=iBCzgInZufsR6bixDm-rXtRvwG7ZwLwFXkuMArC2X-Q,605
+cimd/commands/list.py,sha256=Sopf1eBg-zaK-lfYH_1tUKhwoE1AojP6EgUfq8ZtnpM,868
+cimd/commands/scratch/__init__.py,sha256=MPScvGgOIazlrJhKKRCBD_Qaistm0uqXz8AwdmfQb6A,23
+cimd/commands/scratch/pipeline_logs.py,sha256=Cri2L0lUMigcnunC47URHYhY1rszEUmubo137SrHM0c,3922
+cimd-0.5.0.dist-info/LICENSE,sha256=kXnvvMVutSv1cRPkuYy_GsJRpyaUA2pJ-KeaLwnsWms,11345
+cimd-0.5.0.dist-info/METADATA,sha256=QWybrjxnjKFukXHCe6uHTh8G0d4mInI3bVUlJkYGN48,1884
+cimd-0.5.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+cimd-0.5.0.dist-info/entry_points.txt,sha256=OlPPQAZ5VGP1ZhMtbmC-qRoBDYIK_BR-z_Qj8pSX7S8,37
+cimd-0.5.0.dist-info/RECORD,,
