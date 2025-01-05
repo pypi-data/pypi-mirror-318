@@ -1,0 +1,2 @@
+[console_scripts]
+zinny-webui = zinny_webui.cli:main
