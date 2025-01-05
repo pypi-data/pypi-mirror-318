@@ -1,0 +1,1 @@
+APP1 = 'com.cathaybk.cathaybkUAT'

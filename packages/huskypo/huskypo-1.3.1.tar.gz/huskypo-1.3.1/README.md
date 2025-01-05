@@ -1,0 +1,260 @@
+# huskyPO
+---
+
+## Copyright
+- Developer: Johnny Chou
+---
+
+## Overview
+- huskyPO stands for husky Page Object, named "husky" due to the author's fondness.
+- Constructed using Python's data descriptors, it's a UI Page Object package.
+- Enables developers to build Python Selenium/Appium UI automation scripts more easily and elegantly.
+---
+
+## Usage
+- Build page objects simply and elegantly using the `Page` and `Element(s)` classes.
+- Write test scripts simply and elegantly using the constructed Page objects.
+---
+
+## Page Object Example Code
+1. Construct a Page object in any Python file, each page recommended to be a separate Page class.
+```python
+# my_page.py
+
+from huskypo import Page, Element, Elements
+from huskypo import By
+from huskypo import dynamic
+
+
+class MyPage(Page):
+    
+    # Static element: The most common way to set up Page objects.
+    # Element is a data descriptor of Page, allowing simple setup as shown below:
+    search_field = Element(By.NAME, 'q', remark='Search input box')
+    search_results = Elements(By.TAG_NAME, 'h3', remark='All search results')
+    search_result1 = Element(By.XPATH, '//h3[1]', remark='First search result')
+    
+    # Dynamic element: Rarely used, typically determined during test case execution.
+    # Must use @dynamic to enable the descriptor's functionality.
+    @dynamic
+    def search_result(self, order: int = 1):
+        return Element(By.XPATH, f'//h3[{order}]', remark=f'Search result no.{order}')
+    
+    # For dynamic elements as properties, use the following format:
+    @property
+    @dynamic
+    def keyword_results(self):
+        return Elements(By.XPATH, f'//*[contains(text(), "{Keyword.text1}")]')
+    
+    # To record dynamic elements statically, use standard data descriptor dynamic assignment:
+    # 1. Create a data descriptor object (e.g., static_element1).
+    static_element1 = Element()
+    
+    # 2. Define a function to assign a tuple to the descriptor, 
+    # the parameter logic is the same as Element(s).
+    def dynamic_element(self, par) -> Element:
+        self.static_element1 = (By.XPATH, f'//*[contains(text(), "{par}")]', f'This is {par}')
+        return self.static_element1
+    
+    # 3. Alternatively, use a dict for clearer parameter names.
+    def dynamic_element(self, par) -> Element:
+        self.static_element1 = {
+            'by': By.XPATH, 
+            'value': f'//*[contains(text(), "{par}")]', 
+            'remark': f'This is {par}'}
+        return self.static_element1
+```
+
+2. After constructing the Page object, you can begin writing test cases.
+```python
+# test_my_page.py
+
+from selenium import webdriver
+from my_page import MyPage
+
+
+class TestMyPage:
+    
+    driver = webdriver.Chrome()
+
+    # Set up a page object. All actions will be triggered from this object.
+    my_page = MyPage(driver)
+
+    # The Page object can also call driver-related methods.
+    my_page.get("https://google.com")
+
+    # Example of a wait usage:
+    # Wait until an element is visible, then take a screenshot.
+    my_page.search_field.wait_visible()
+    my_page.save_screenshot("my/file/image1.png")
+
+    # All actions automatically handle explicit waits.
+    # No need to manually call wait methods unless required, e.g.:
+    # Equivalent to: my_page.search_field.wait_clickable().send_keys(keyword).wait_clickable().submit()
+    my_page.search_field.send_keys(keyword).submit()
+
+    # Various wait states are available, including negative waits like not present, not visible, or not clickable.
+    my_page.loading_image.wait_not_present()
+    my_page.search_results.wait_all_visible()
+    my_page.save_screenshot("my/file/image2.png")
+
+    # Assertions can be made directly:
+    search_keyword = 'dinner'
+    assert my_page.keyword_results(search_keyword).quantity > 1
+    assert search_keyword in my_page.search_result1.text
+
+    # Reuse found elements through existing sessions:
+    # Once an element (e.g., `my_page.search_result1`) is located, 
+    # it will use the same session unless the element becomes stale.
+    # No need to store the found element in a separate variable.
+    # Just perform actions directly:
+    my_page.search_result1.click()
+    ...
+
+    driver.close()
+```
+---
+
+## Timeout Global Settings
+1.	In addition to setting timeouts for individual elements and methods, a global timeout setting is also available. See the example below:
+```python
+from huskyPO import Timeout
+
+
+# Set the default timeout for all Elements.
+# The huskyPO default is 30 seconds. You can change it as needed:
+Timeout.DEFAULT = 60
+
+# If you don’t want any waiting, you can also set it to 0:
+Timeout.DEFAULT = 0
+
+# Set the reraise behavior for timeouts on all Elements.
+# The huskyPO default is True, with the following logic:
+# True: Raise a TimeoutException if the element times out.
+# False: Return False if the element times out, without raising a TimeoutException.
+Timeout.RERAISE = False
+```
+
+2.	The priority order for timeout values is as follows:
+- P1: `page.element.wait_method(timeout=20)` (Method-level setting)
+- P2: `element = Element(..., timeout=10, ...)` (Element-level setting)
+- P3: `Timeout.DEFAULT = 60` (Global default)
+
+3.	The priority order for timeout reraise behavior is as follows:
+- P1: `page.element.wait_method(reraise=True)` (Method-level setting)
+- P2: `Timeout.RERAISE = False` (Global default)
+---
+
+## Wait Functions
+We offers a comprehensive set of wait methods, built on and extending official expected_conditions. 
+Below is a list of all available Element(s) wait methods for reference, allowing users to choose as needed.
+```python
+# Element
+page.element.wait_present()
+page.element.wait_absent()
+page.element.wait_visible()
+page.element.wait_invisible()
+page.element.wait_clickable()
+page.element.wait_unclickable()
+page.element.wait_selected()
+page.element.wait_unselected()
+
+# Elements
+page.elements.wait_all_present()
+page.elements.wait_all_absent()
+page.elements.wait_all_visible()
+page.elements.wait_any_visible()
+```
+---
+
+## Appium Extended Actions
+We have extended Appium with highly convenient action features, including:
+```python
+# Offset allows you to define swipe directions, with UP as the default. 
+# It supports eight standard directions: UP, DOWN, LEFT, RIGHT, UPPER_LEFT, UPPER_RIGHT, LOWER_LEFT, LOWER_RIGHT.
+# Area lets you define the swipeable range, defaulting to the full device screen (FULL), or you can customize it.
+
+from huskypo import Offset, Area
+
+# Page swiping. Refer to function docstrings for details.
+page.swipe_by(Offset.UP, Area.FULL)
+page.swipe_by(Offset.DOWN)
+page.swipe_by(Offset.LEFT)
+page.swipe_by(Offset.RIGHT)
+page.swipe_by(Offset.UPPER_LEFT)
+page.swipe_by(Offset.UPPER_RIGHT)
+page.swipe_by(Offset.LOWER_LEFT)
+page.swipe_by(Offset.LOWER_RIGHT)
+
+# Page flicking. Refer to function docstrings for details.
+# All Offset directions are supported.
+page.flick_by(Offset.UP, Area.FULL)
+
+# Element swiping until an element is visible.
+# All Offset directions are supported.
+page.element.swipe_by(Offset.UP, Area.FULL)
+
+# Element flicking until an element is visible.
+# All Offset directions are supported.
+page.element.flick_by(Offset.UP, Area.FULL)
+
+# Page draw lines.
+# Define dots coordinates
+dots = [{"x": x1, "y": y1}, {"x": x2, "y": y2}, {"x": x3, "y": y3}, ...]
+# Alternatively, use element locations if available
+dots = page.elements.locations
+page.draw_lines(dots)
+
+# Page draw gesture.
+dots = page.elements.locations  # 9-grid coordinates, or define your own
+gesture = "9875321"  # 9-grid gesture string (1–9 represent grid positions). This example draws a reverse Z.
+page.draw_gesture(dots, gesture)
+```
+
+## Other Actions
+All Selenium/Appium features and utility methods are included. Here are some examples:
+```python
+# ActionChains
+page.element.scroll_to_element().perform()
+page.element.move_to_element().drag_and_drop().perform()
+
+# Temporarily store ActionChains and execute later
+page.element.move_to_element().drag_and_drop()
+...  # Process other logic before executing perform()
+page.element.perform()
+
+# Select options
+page.element.options
+page.element.select_by_value()
+```
+
+## Logstack
+Using logstack to log specific frame information.
+The logstack module extends logging functionality, allowing you to capture information for specific frames, 
+such as those starting with a designated prefix (e.g., test), without tracing all frames manually.
+```python
+from huskypo import logstack
+from huskypo import logconfig
+import logging  # Optional: You can also use logging for basic configuration.
+
+# Configure logging using either `logging.basicConfig()` or `logconfig.basic()`
+logconfig.basic(file="./log.log")  # Simplified configuration with common settings
+
+# Use `logstack` in your code to log specific frames
+def some_func():
+    ...
+    # Logs information from the first frame with the prefix (default: `test`)
+    logstack.info("Log from some function.", prefix="test")
+
+def test_func():
+    ...
+    # Logs frame info for `test_func`, not `some_func`
+    some_func()
+
+# Example log output:
+# 2025-01-04 18:20:48 | INFO | testing.py:32 | test_func | Log from some function.
+```
+
+## TODO
+- Continuously monitor new features in Selenium 4.0 and Appium 2.0.
+- Other optimizations.
