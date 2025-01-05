@@ -1,0 +1,11 @@
+vim_prompt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vim_prompt/fzf.py,sha256=pPDkUmjjwvUTArspu2cFKOu5BJCcf12RWro01701NuQ,2853
+vim_prompt/rofi.py,sha256=HrGsDdgnABq4K83bligqh9oPzUj-OScXbIYNIqOjARs,2662
+vim_prompt/assets/icon.png,sha256=_7EpJau2ThCo-gWlmBfNFT_0rHANqqsZtBZeLlNjjaw,18670
+vim_prompt/db/commands.json,sha256=eNnUAk2RABZEKqmZ9DeYq-hESY6_qAw9ZDGOZuVTgBI,81678
+vim_prompt-0.1.0.dist-info/LICENSE,sha256=FunFpN5w8nQYQnaV_kYf5_sVAwmZf_7yVoORYmvjHjg,1066
+vim_prompt-0.1.0.dist-info/METADATA,sha256=cv7I54HeXuivhSB7FQ9N_QYiDUHcFifPrKXS7Wz29Bg,2951
+vim_prompt-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+vim_prompt-0.1.0.dist-info/entry_points.txt,sha256=RPRuwM-AbFmJ6sMdpT3ySrBKPlVTNsVTfyHN-DS96Mg,80
+vim_prompt-0.1.0.dist-info/top_level.txt,sha256=0cFvkOBshty8eLGisa-CULfNNf9geqmrJke1Jmxn_6A,11
+vim_prompt-0.1.0.dist-info/RECORD,,
