@@ -1,0 +1,3 @@
+[console_scripts]
+litechat_server=litechat_server_run:run_server
+
