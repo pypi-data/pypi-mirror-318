@@ -1,0 +1,11 @@
+openai
+sounddevice
+numpy
+pygame
+pydub
+elevenlabs
+pyyaml
+opencv-python
+groq
+ollama
+scipy
