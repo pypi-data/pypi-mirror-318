@@ -1,0 +1,9 @@
+
+[dev]
+pz-clouder[tests]
+
+[tests]
+pytest==8.3.4
+pytest-sugar==1.0.0
+pytest-cov==3.0.0
+pytest-mock==3.8.2
