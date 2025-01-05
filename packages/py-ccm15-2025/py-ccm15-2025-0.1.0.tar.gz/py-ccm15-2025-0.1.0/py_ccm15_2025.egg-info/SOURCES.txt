@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+ccm15/CCM15Device.py
+ccm15/CCM15DeviceState.py
+ccm15/CCM15SlaveDevice.py
+ccm15/__init__.py
+py_ccm15_2025.egg-info/PKG-INFO
+py_ccm15_2025.egg-info/SOURCES.txt
+py_ccm15_2025.egg-info/dependency_links.txt
+py_ccm15_2025.egg-info/requires.txt
+py_ccm15_2025.egg-info/top_level.txt
