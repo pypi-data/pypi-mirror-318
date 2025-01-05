@@ -1,0 +1,103 @@
+[project]
+name = "nonebot-adapter-mail"
+version = "1.0.0-alpha.7"
+description = "Mail adapter for nonebot2"
+authors = [
+    { name = "mobyw", email = "mobyw66@gmail.com" },
+]
+dependencies = [
+    "nonebot2~=2.3",
+    "aiosmtplib~=3.0",
+    "aioimaplib~=1.1",
+    "pydantic[email]<3.0.0,!=2.5.0,!=2.5.1,>=1.10.0",
+    "mail-parser~=4.0",
+]
+requires-python = "<4.0,>=3.9"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[tool.ruff]
+line-length = 88
+target-version = "py39"
+
+[tool.ruff.format]
+line-ending = "lf"
+
+[tool.ruff.lint]
+select = [
+    "F",
+    "W",
+    "E",
+    "I",
+    "UP",
+    "ASYNC",
+    "C4",
+    "T10",
+    "T20",
+    "PYI",
+    "PT",
+    "Q",
+    "TID",
+    "RUF",
+]
+ignore = [
+    "E402",
+    "UP037",
+    "RUF001",
+    "RUF002",
+    "RUF003",
+]
+
+[tool.ruff.lint.isort]
+force-sort-within-sections = true
+known-first-party = [
+    "nonebot",
+]
+extra-standard-library = [
+    "typing_extensions",
+]
+
+[tool.ruff.lint.flake8-pytest-style]
+fixture-parentheses = false
+mark-parentheses = false
+
+[tool.ruff.lint.pyupgrade]
+keep-runtime-typing = true
+
+[tool.pyright]
+pythonVersion = "3.9"
+pythonPlatform = "All"
+executionEnvironments = [
+    { root = "./" },
+]
+typeCheckingMode = "standard"
+reportShadowedImports = false
+disableBytesTypePromotions = true
+
+[tool.pyright.defineConstant]
+PYDANTIC_V2 = true
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "ruff>=0.7.0",
+    "isort>=5.13.2",
+    "black>=24.0.0",
+    "nonemoji>=0.1.4",
+    "pre-commit>=4.0.1",
+]
+
+[tool.pdm.build]
+includes = [
+    "nonebot",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
