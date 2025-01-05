@@ -1,0 +1,13 @@
+opencv-python
+requests
+pyperclip
+pyttsx3
+SpeechRecognition
+psutil
+pyautogui
+better_profanity
+scikit-learn
+textblob
+torch
+beautifulsoup4
+JynAi
