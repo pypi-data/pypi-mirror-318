@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: kokoro-onnx
+Version: 0.1.8
+Summary: TTS with kokoro and onnx runtime
+Project-URL: Homepage, https://github.com/thewh1teagle/kokoro-onnx
+Project-URL: Repository, https://github.com/thewh1teagle/kokoro-onnx
+Project-URL: Issues, https://github.com/thewh1teagle/kokoro-onnx/issues
+Author-email: thewh1teagle <61390950+thewh1teagle@users.noreply.github.com>
+Requires-Python: >=3.9
+Requires-Dist: colorlog>=6.9.0
+Requires-Dist: espeakng-loader==0.1.2
+Requires-Dist: onnxruntime>=1.20.1
+Requires-Dist: phonemizer-fork==3.3.1
+Description-Content-Type: text/markdown
+
+# kokoro-onnx
+
+TTS with onnx runtime based on [Kokoro-TTS](https://huggingface.co/spaces/hexgrad/Kokoro-TTS)
+
+## Features
+
+- Support `English`, `French`, `Japanse`, `Korean`, and `Chinese`
+- 4X Faster than realtime (macOS M1)
+- Support multiple voices including whispering
+
+## Setup
+
+```console
+pip install -U kokoro-onnx
+```
+
+- You also need [`kokoro-v0_19.onnx`](https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/kokoro-v0_19.onnx), and [`voices.json`](https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/voices.json). 
+- We recommend use [uv](https://docs.astral.sh/uv/getting-started/installation) for Python.
+- Python 3.12 is recommended. (`uv init -p 3.12`)
+- Please see examples.
+
+## Examples
+
+See [examples](examples)
+
+## Voices
+
+Available voices are `af`, `af_bella`, `af_nicole`, `af_sarah`, `af_sky`, `am_adam`, `am_michael`, `bf_emma`, `bf_isabella`, `bm_george`, `bm_lewis`
+
+<video src="https://github.com/user-attachments/assets/a89b4c75-303d-47ac-96c8-7edb64b9150a" width=400></video>
