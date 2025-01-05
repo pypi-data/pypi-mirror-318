@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: kliptypek
+Version: 0.0.1
+Summary: Clipboard typer. Insert text from clipboard using simulated typing. 
+Author-email: The220th <The220th@gmail.com>
+Project-URL: Homepage, https://github.com/The220th/kliptypek
+Project-URL: Issues, https://github.com/The220th/kliptypek/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: argparse
+Requires-Dist: pyperclip
+Requires-Dist: pyautogui
+
+# kliptypek
+
+Clipboard typer. Insert text from clipboard using simulated typing.
+
+# Start
+
+Just copy needed text in clipboard and run:
+
+```bash
+kliptypek
+```
+
+Then focus needed window. There are 3 seconds for this by default, change it with flag `--delay_before` if needed.
+
+# Installation
+
+```bash
+pip3 install --upgrade pip
+pip3 install kliptypek
+```
+
+There are flags to configure program behaviour. Type "--help" to see them. For example, you can use text not from clipboard with another timings:
+
+```bash
+kliptypek --help
+kliptypek  --print_unicode_special
+kliptypek --clip_text "c⌫kliptyper=←⌫k→)↵" --delay_between_up_down 1 --delay_between 100 --delay_before 2000
+```

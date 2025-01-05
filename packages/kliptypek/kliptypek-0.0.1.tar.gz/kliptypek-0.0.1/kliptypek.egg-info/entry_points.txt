@@ -1,0 +1,2 @@
+[console_scripts]
+kliptypek = kliptypek.main:main
