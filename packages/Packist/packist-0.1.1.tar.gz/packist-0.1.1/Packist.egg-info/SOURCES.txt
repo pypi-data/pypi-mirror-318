@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+Packist.egg-info/PKG-INFO
+Packist.egg-info/SOURCES.txt
+Packist.egg-info/dependency_links.txt
+Packist.egg-info/top_level.txt
+my_pypi/__init__.py
+my_pypi/module1.py
+my_pypi/module2.py

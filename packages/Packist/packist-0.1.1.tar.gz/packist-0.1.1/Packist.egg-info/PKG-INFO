@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: Packist
+Version: 0.1.1
+Summary: A Python package example
+Author: Aayush
+Author-email: aayushpratapsingh14@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# Your Package
+
+This is an example Python package.
+
+## Installation
+
+```bash
+pip install your-package
