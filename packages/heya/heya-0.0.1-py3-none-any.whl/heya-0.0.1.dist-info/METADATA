@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: heya
+Version: 0.0.1
+Summary: 
+License: MIT
+Author: zkep
+Author-email: zkeper@foxmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: click (>=8.1.8,<9.0.0)
+Requires-Dist: click-didyoumean (>=0.3.1,<0.4.0)
+Requires-Dist: click-plugins (>=1.1.1,<2.0.0)
+Requires-Dist: selenium (>=4.27.1,<5.0.0)
+Requires-Dist: webdriver-manager (>=4.0.2,<5.0.0)
+Description-Content-Type: text/markdown
+
+# heya
+heya is html, markdown to pdf tools
+
