@@ -1,0 +1,9 @@
+requests
+
+[dev]
+pytest
+black
+
+[docs]
+sphinx
+sphinx-rtd-theme

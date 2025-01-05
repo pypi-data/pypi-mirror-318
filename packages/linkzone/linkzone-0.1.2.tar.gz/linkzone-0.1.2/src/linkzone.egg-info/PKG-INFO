@@ -1,0 +1,107 @@
+Metadata-Version: 2.1
+Name: linkzone
+Version: 0.1.2
+Summary: SDK for Alcatel Linkzone modems: MW41NF, MW41CL
+Author-email: Jimmy Angel Pérez Díaz <jianpedi@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2022 Jimmy Angel Pérez Díaz
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Source, https://github.com/JimScope/linkzone
+Keywords: alcatel,linkzone,SDK,API,SMS
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Communications :: Internet Phone
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx-rtd-theme; extra == "docs"
+
+# Alcatel LinkZone SDK
+
+## Documentation
+
+[https://linkzone.readthedocs.io/](https://linkzone.readthedocs.io/)
+
+## Installation
+
+### For development
+
+- First create a virtual environment
+
+``` bash
+python -m venv .venv
+```
+
+- Activate the virtual environment
+
+``` bash
+source .venv/bin/activate
+```
+
+- Install pip-tools
+
+``` bash
+pip install pip-tools
+```
+
+- Resolve project dependencies
+
+``` bash
+pip-compile -o requirements.txt pyproject.toml
+```
+
+- Optional dev dependencies
+
+``` bash
+pip-compile --extra dev -o dev-requirements.txt pyproject.toml
+```
+
+- Optional doc dependencies
+pip-compile --extra docs -o docs-requirements.txt pyproject.toml
+
+- Install dependencies
+
+``` bash
+pip install -r requirements.txt
+```
+
+``` bash
+pip install -r dev-requirements.txt
+```
+
+```bash
+pip install -r docs-requirements.txt
+```
+
+## Created by
+
+[@JimScope](https://twitter.com/JimScope)
