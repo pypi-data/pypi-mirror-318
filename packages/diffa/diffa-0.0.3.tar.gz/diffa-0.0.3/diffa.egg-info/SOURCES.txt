@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+diffa/__init__.py
+diffa/diffa.py
+diffa.egg-info/PKG-INFO
+diffa.egg-info/SOURCES.txt
+diffa.egg-info/dependency_links.txt
+diffa.egg-info/entry_points.txt
+diffa.egg-info/requires.txt
+diffa.egg-info/top_level.txt
