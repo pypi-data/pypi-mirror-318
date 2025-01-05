@@ -1,0 +1,90 @@
+{% extends "layout.html.j2" %}
+
+{% block container %}container-full{% endblock %}
+
+{% block body %}
+
+<script src="/plotly.js"></script>
+<script src="/static/vs/loader.js"></script>
+<script>
+    require.config({ paths: { vs: '/static/vs' } });
+</script>
+<script>
+    function runQuery() {
+        const results = document.getElementById('results');
+        results.dispatchEvent(new Event('sql-change'));
+    }
+    function runQueryIfAutoRun() {
+        if (document.querySelector('input[name=auto-run]').checked) {
+            runQuery();
+        }
+    }
+    // An HX-Trigger event to disable auto-run
+    document.body.addEventListener("disableAutoRun", function (evt) {
+        document.querySelector('input[name=auto-run]').checked = false;
+        hideRunButtonIfAutoRun();
+    });
+    function hideRunButtonIfAutoRun() {
+        if (document.querySelector('input[name=auto-run]').checked) {
+            document.querySelector('input[type=submit]').style.display = 'none';
+        } else {
+            document.querySelector('input[type=submit]').style.display = 'block';
+        }
+    }
+    document.addEventListener('DOMContentLoaded', hideRunButtonIfAutoRun);
+
+    function toggleSideBySideCheckbox() {
+        const chartType = document.querySelector('select[name="chart"]').value;
+        const sideBySideCheckbox = document.getElementById('side-by-side-checkbox')
+        if (chartType === "table") {
+            sideBySideCheckbox.style.display = "none";
+        } else {
+            sideBySideCheckbox.style.display = "block";
+        }
+    }
+    document.addEventListener('DOMContentLoaded', toggleSideBySideCheckbox);
+</script>
+
+<div class="row">
+    <div class="col-s-12 col-lg-3">
+        <div id="form" class="card">
+            <div class="card-body">
+                <label for="chart" class="form-label">Chart type</label>
+                <select name="chart" class="form-select" aria-label="Chart type" onchange="runQueryIfAutoRun();toggleSideBySideCheckbox()">
+                    {% for chart,chart_title in charts %}
+                        <option value="{{chart}}">{{chart_title}}</option>
+                    {% endfor %}
+                </select>
+                <div class="form-check form-switch" id="side-by-side-checkbox">
+                    <input type="checkbox" name="side-by-side" class="form-check-input"
+                        onchange="runQueryIfAutoRun()" />
+                    <label for="side-by-side" class="form-check-label">Side by side</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input type="checkbox" name="auto-run" class="form-check-input" role="switch" checked
+                        onchange="hideRunButtonIfAutoRun()" />
+                    <label for="auto-run" class="form-check-label">Auto run query</label>
+                </div>
+                <input type="submit" class="btn btn-primary" value="Run query" onclick="runQuery()">
+            </div>
+        </div>
+    </div>
+
+    <div class="col-s-12 col-lg-9">
+        {% set tab = 'tab-sql' %}
+        {% include "_query_form.html.j2" %}
+    </div>
+</div>
+
+<div class="row  gy-1">
+    <span id="loader">
+        <div class="loading">
+            <h3>Loading<span class="animated-dots"></span></h3>
+        </div>
+        <div id="results" hx-post="/results" hx-trigger="load, sql-change delay:500ms" hx-swap="innerHtml"
+            hx-include="input, select">
+        </div>
+    </span>
+</div>
+
+{% endblock %}

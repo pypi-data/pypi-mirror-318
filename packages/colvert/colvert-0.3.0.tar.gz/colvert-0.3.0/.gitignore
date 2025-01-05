@@ -1,0 +1,7 @@
+dist
+.venv
+.tmp
+_version.py
+.env
+uv.lock
+videos
