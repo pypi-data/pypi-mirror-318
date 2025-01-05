@@ -1,0 +1,10 @@
+kliptypek/__init__.py,sha256=rQkzUVSDulem3B0vWndD6a8yzbfPdSfhn0GXvADVuys,39
+kliptypek/main.py,sha256=e16qAVkxC1DtljJWPE-_b-eKob5k1Z-lb9zZf9P9w2c,187
+kliptypek/parsing.py,sha256=HiHdDEmRXC5wlj-VKf9DwZW3lTPzxO7o4Vy9vCJ_NWE,1693
+kliptypek/process.py,sha256=Q-QR8ySWTZkl2ygxJplm_RaqZ2AwcFN-chfduO2C63E,3863
+kliptypek-0.0.1.dist-info/LICENSE,sha256=2Qauw4rxBxy3-WLX1SaHVzoJqz50vDrSoDu09EchcB0,1065
+kliptypek-0.0.1.dist-info/METADATA,sha256=DcwByfibHdpCZ_IaF88aNu7zRCfLgtY6uv4mwIYGvyo,1292
+kliptypek-0.0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+kliptypek-0.0.1.dist-info/entry_points.txt,sha256=ptYVPQeE4K-74Y7rRbk-RSdwnStEbWCCzMEiIKpzpYA,50
+kliptypek-0.0.1.dist-info/top_level.txt,sha256=PF7gt6F05I0x1oidCv2LhhcdNo6fUQT4caFrgdwCoZw,10
+kliptypek-0.0.1.dist-info/RECORD,,
