@@ -1,0 +1,5 @@
+from .diffusion_probabilistic_models_samplers import DenoisingDiffusionProbabilisticModelsSampler, DenoisingDiffusionImplicitModelsSampler
+
+
+DDPMSampler = DenoisingDiffusionProbabilisticModelsSampler
+DDIMSampler = DenoisingDiffusionImplicitModelsSampler

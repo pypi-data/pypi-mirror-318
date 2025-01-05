@@ -1,0 +1,4 @@
+from .diffusion_probabilistic_models_buffer import DiffusionProbabilisticModelsBuffer
+
+
+DPMBuffer = DiffusionProbabilisticModelsBuffer
