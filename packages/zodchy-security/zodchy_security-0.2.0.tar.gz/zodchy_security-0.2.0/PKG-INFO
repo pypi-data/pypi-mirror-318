@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: zodchy-security
+Version: 0.2.0
+Summary: Collection of tools to secure application with zodchy architecture
+Home-page: https://github.com/smairon/zodchy-security
+Author: Smairon
+Author-email: man@smairon.ru
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pyjwt (>=2)
+Requires-Dist: zodchy (>=0.5.4,<0.6.0)
+Project-URL: Repository, https://github.com/smairon/zodchy-security
+Description-Content-Type: text/markdown
+
+# Zodchy security
