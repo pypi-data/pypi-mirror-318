@@ -1,0 +1,1 @@
+Anaplan library name changed to 'pyerualjetwork'. Please use this: pip install pyerualjetwork
