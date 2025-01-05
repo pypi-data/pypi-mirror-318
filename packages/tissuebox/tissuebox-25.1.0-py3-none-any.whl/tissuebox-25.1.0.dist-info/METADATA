@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: tissuebox
+Version: 25.1.0
+Summary: Tissuebox :: Pythonic payload validator
+Home-page: https://github.com/n3h3m/tissuebox.git
+Author: nehemiah
+Author-email: nehemiah.jacob@gmail.com
+Description-Content-Type: text/x-rst
