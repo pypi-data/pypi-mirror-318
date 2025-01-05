@@ -1,0 +1,7 @@
+string_metrics_rs-0.1.2.dist-info/METADATA,sha256=GcUsXSv-Ql1QPrzWgL-6rzBWC07Ah-P6NhP48rYayRY,456
+string_metrics_rs-0.1.2.dist-info/WHEEL,sha256=3v_mPEJI8eYP9g-6GI3qMKke7f44IisvaaA6YMblZRI,90
+string_metrics/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+string_metrics/__init__.py,sha256=RbkgypkjAuPchDB5UuOzI1R28jpYHnnxufRlcSTLs1k,85
+string_metrics/__init__.pyi,sha256=JGOK5ujugHgz7yKmiBl0QUwZwu2-9cQC9pMV8XBFmq4,45
+string_metrics/_string_metrics.pyd,sha256=2TlkW1ALL8hOGPEbyiBEv0GdWUbFPujYZI5oDBCzdi8,170496
+string_metrics_rs-0.1.2.dist-info/RECORD,,
