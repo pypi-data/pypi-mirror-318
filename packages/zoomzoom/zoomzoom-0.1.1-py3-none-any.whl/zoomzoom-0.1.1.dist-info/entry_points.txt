@@ -1,0 +1,2 @@
+[console_scripts]
+zoomzoom = zoomzoom.meeting_navigator:main

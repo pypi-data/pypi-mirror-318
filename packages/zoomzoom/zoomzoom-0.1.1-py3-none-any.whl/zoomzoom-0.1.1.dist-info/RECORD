@@ -1,0 +1,12 @@
+zoomzoom/__init__.py,sha256=_yS8j4-_TLap4FxRxY6GsexdQsWAEGU9gSuordzvr3o,127
+zoomzoom/config.ini,sha256=1kQ2a-NgnpuofawVzujKsh-IrRunD_D9WTdeeOvCJtg,2813
+zoomzoom/core.py,sha256=2u3bZAlYFFi27DhFW5UJ81ZoBlGl5RwNidIreyzSdXA,3406
+zoomzoom/gpt4o.py,sha256=2qqcDNNoIY_nsKxS2Dv7tUDa5M4JE6J3qzjj2E-3en0,1119
+zoomzoom/meeting_navigator.py,sha256=eW3mtEjrkYR3GdPtgJzr_-0bOlw2QZMl5sNzTlfR4F4,37830
+zoomzoom/readme.txt,sha256=bvtPfJEVZtlhJikXuhUJgXOqJvKUg9AiCRbcWwm1AXs,4362
+zoomzoom/config/default_config.ini,sha256=CkJlBZB6zwlWckXPL3CwVf6aXZs2Inj8g4GrpwRvAb4,2860
+zoomzoom-0.1.1.dist-info/METADATA,sha256=Y4G2AcfQxzDtDlOD5QCm4DGh2HnQGZo9pRaRMmNWXBU,2040
+zoomzoom-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+zoomzoom-0.1.1.dist-info/entry_points.txt,sha256=ynDz46DNHyi571_iWngPxM7Aj_Bt6SKwpeaerM_DmfM,61
+zoomzoom-0.1.1.dist-info/licenses/LICENSE,sha256=OXxZLuXzZTLefXRmZcvY7fSwKVDKnDLNGCK3YimQgsw,1086
+zoomzoom-0.1.1.dist-info/RECORD,,
