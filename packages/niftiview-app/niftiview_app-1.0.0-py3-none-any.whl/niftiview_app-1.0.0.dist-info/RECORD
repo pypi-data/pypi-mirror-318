@@ -1,0 +1,12 @@
+niftiview_app/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+niftiview_app/data/config.json,sha256=3OI5ymOHL2N_4TvgdM4xsmGmOf2RlKvVsXFjkqNQjME,994
+niftiview_app/data/niftiview.icns,sha256=3dnOigfzOd5yOShKm2aMAmZ-fgPLCrucqi3dwG3DAcM,1650657
+niftiview_app/data/niftiview.ico,sha256=YnFGTnjBG82YcaoB6ZH0ozQEkml2xUIr28oSmtXDM2g,126807
+niftiview_app/data/niftiview.png,sha256=dzAcRdnxHJGIxnGgb0Wd0tLQ5ont6J-tYf4k_CM-pCw,74113
+niftiview_app/main.py,sha256=nWL8Y57ihaFOeHkXJ44ydGp270HNu7hfbQO42edMdcI,53128
+niftiview_app/utils.py,sha256=-tF88kicFIwkJIeRpFM-DzkzBdHm2AAe1jDgf7FuJog,1450
+niftiview_app-1.0.0.dist-info/LICENSE,sha256=XxhyDFy0W2ovFvd44v5Df-8botgGXkiaPCdAM9Icsiw,1068
+niftiview_app-1.0.0.dist-info/METADATA,sha256=HXknD6oR6U1BWZsccmKynXItIE99uSb7KBH6LdhVuJU,3841
+niftiview_app-1.0.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+niftiview_app-1.0.0.dist-info/entry_points.txt,sha256=1R448Te6EWvUzi2Kh0B12BAqnIXF2rWpu1MP-ongLkk,57
+niftiview_app-1.0.0.dist-info/RECORD,,
