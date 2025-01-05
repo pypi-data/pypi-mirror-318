@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "zyjj-spider"
+version = "1.0.2"
+description = ""
+authors = ["xiaoyou <xiaoyou2333@foxmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+httpx = "^0.28.1" # http请求
+gmssl = "^3.2.2"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+pytest-asyncio = "^0.24.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
