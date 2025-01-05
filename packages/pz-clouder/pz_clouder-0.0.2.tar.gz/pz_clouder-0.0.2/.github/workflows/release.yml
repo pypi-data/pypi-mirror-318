@@ -1,0 +1,82 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: 'Publish build'
+        required: true
+        default: true
+        type: boolean
+
+      overrideVersion:
+        description: 'Override version'
+        required: false
+        type: string
+
+env:
+  FORCE_COLOR: "1"
+
+jobs:
+  release:
+    environment: aws-code-artifact
+    permissions:
+      contents: read
+      id-token: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Setup UV
+        uses: astral-sh/setup-uv@v5
+
+      - name: Install nox
+        run: uv pip install nox --system
+
+      - name: Set version from tag
+        if: github.event_name == 'release' && startsWith(github.ref, 'refs/tags/v')
+        run: |
+          TAG=${{ github.event.release.tag_name }}
+          echo "SETUPTOOLS_SCM_PRETEND_VERSION=${TAG#v}" >> "$GITHUB_ENV"
+
+      - name: Set version manually
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          echo "SETUPTOOLS_SCM_PRETEND_VERSION=${{ inputs.overrideVersion }}" >> "$GITHUB_ENV"
+
+      - name: Build package
+        run: nox -s build
+
+      - uses: aws-actions/setup-sam@v2
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-central-1
+
+      - name: Publish package
+        if: github.event_name == 'release' || (github.event_name == 'workflow_dispatch' && inputs.publish)
+        run: |
+          uv pip install twine --system
+          export TWINE_USERNAME=aws
+          export TWINE_PASSWORD=`aws codeartifact get-authorization-token \
+            --domain ${{ secrets.AWS_CODEARTIFACT_DOMAIN }} \
+            --domain-owner ${{ secrets.AWS_ACCOUNT_ID }} \
+            --query authorizationToken --output text`
+          export TWINE_REPOSITORY_URL=`aws codeartifact get-repository-endpoint \
+            --domain ${{ secrets.AWS_CODEARTIFACT_DOMAIN }} \
+            --domain-owner ${{ secrets.AWS_ACCOUNT_ID }} \
+            --repository ${{ secrets.AWS_CODEARTIFACT_REPO }} \
+            --format pypi --query repositoryEndpoint --output text`
+          twine upload --skip-existing --verbose dist/*
