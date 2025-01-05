@@ -1,0 +1,4 @@
+from .diffusion_buffer import StochasticDifferentialEquationsBuffer
+
+
+SDEBuffer = StochasticDifferentialEquationsBuffer

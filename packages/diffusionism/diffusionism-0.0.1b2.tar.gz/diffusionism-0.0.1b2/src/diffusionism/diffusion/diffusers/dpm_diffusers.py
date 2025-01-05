@@ -1,0 +1,4 @@
+from .diffusion_probabilistic_models_diffusers import DiffusionProbabilisticModelsDiffuser
+
+
+DPMDiffuser = DiffusionProbabilisticModelsDiffuser
