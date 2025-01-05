@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: rover_connect2_module
+Version: 0.1.2
+License-File: LICENSE
+Requires-Dist: sim800l-gsm-module

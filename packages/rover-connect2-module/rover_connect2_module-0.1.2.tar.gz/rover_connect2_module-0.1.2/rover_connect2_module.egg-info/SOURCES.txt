@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+rover_connect2_module/__init__.py
+rover_connect2_module/rover_connect.py
+rover_connect2_module.egg-info/PKG-INFO
+rover_connect2_module.egg-info/SOURCES.txt
+rover_connect2_module.egg-info/dependency_links.txt
+rover_connect2_module.egg-info/requires.txt
+rover_connect2_module.egg-info/top_level.txt
