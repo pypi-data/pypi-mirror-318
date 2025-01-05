@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: binance-bulk-downloader
+Version: 1.1.0.1
+Summary: A Python library to efficiently and concurrently download historical data files from Binance. Supports all asset types (spot, futures, options) and all frequencies.
+Author: aoki-h-jp
+Author-email: aoki.hirotaka.biz@gmail.com
+License: MIT
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: rich
+Requires-Dist: pytest
