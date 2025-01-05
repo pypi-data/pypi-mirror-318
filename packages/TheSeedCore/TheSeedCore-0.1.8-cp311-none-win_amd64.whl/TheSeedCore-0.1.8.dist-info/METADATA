@@ -1,0 +1,152 @@
+Metadata-Version: 2.1
+Name: TheSeedCore
+Version: 0.1.8
+Summary: TheSeedCore is a comprehensive modular framework designed to meet the diverse needs of modern application development. Whether building high-performance, scalable applications or integrating complex systems, TheSeedCore provides a strong foundation covering a wide range of functions. With its modular, secure and flexible design, TheSeedCore can help developers create reliable and easy-to-maintain solutions.
+Home-page: https://github.com/JFkirito/TheSeedCore
+Author: 疾风Kirito
+Author-email: 1453882193@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.11,<3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# TheSeedCore
+
+## 简介
+
+TheSeedCore 是一个综合性的模块化框架，旨在满足现代应用开发的多样化需求。无论是构建高性能、可扩展的应用程序，还是集成复杂的系统，TheSeedCore 都提供了强大的基础，涵盖广泛的功能。凭借其模块化、安全性和灵活性的设计，TheSeedCore 能够帮助开发者创建可靠且易于维护的解决方案
+
+## 主要特性
+
+### 全面的并发支持
+
+- 提供了对并发任务的配置与管理支持，能够有效处理多线程与多进程任务，确保系统的高效运行和资源的最佳利用。
+
+### 多功能数据库集成
+
+- TheSeedCore 提供与多种数据库（包括 SQLite、MySQL）的无缝集成。通过统一的数据库操作接口，开发者可以轻松切换不同数据库，而无需修改代码。
+
+### PyQt/PySide 支持
+
+- 集成对 Qt 的支持，特别是在回调执行和界面操作方面。通过 PyQt/PySide 事件循环管理回调和异步任务，确保图形界面应用的流畅性和响应性。
+
+### 高级加密功能
+
+- TheSeedCore 提供先进的数据加密和解密功能，支持AES和RSA加密，提供密钥的生成、管理和使用功能。配备密钥管理和安全数据处理，确保您的数据始终受到保护。
+
+### 先进的网络服务
+
+- 网络模块包括 HTTP 服务器和 WebSocket 服务器/客户端功能，以及异步的Flask和FastAPI，支持异步操作、安全连接和定制化消息处理。适用于实时通信、高并发和高效的网络操作，满足现代 Web 应用和 API 服务的需求。
+
+### 灵活的日志系统
+
+- TheSeedCore 提供先进的日志模块，支持颜色格式化的控制台输出和文件日志记录，并支持日志轮换。可配置的日志级别和调试模式确保您能够详细了解应用程序的操作和错误。
+
+### 可扩展性与可配置性
+
+- TheSeedCore 设计高度可定制和扩展。其模块化方法允许开发者轻松添加新功能并与其他系统集成，确保框架能够随应用需求的增长而扩展。
+
+### 详细的错误处理和日志记录
+
+- TheSeedCore 的每个模块都配备了完善的错误处理和详细的日志记录功能，确保能够及时识别和解决任何问题，便于调试和维护应用的稳定性。
+
+## 使用场景
+
+TheSeedCore 框架适用于需要高并发处理、安全数据操作、实时通讯和复杂日志管理的各种应用程序，例如：
+
+- **企业级后端服务及应用**
+    - **企业资源规划 (ERP) 系统**：整合财务、采购、人力资源等业务流程。
+    - **客户关系管理 (CRM) 系统**：管理客户信息，提升客户服务和销售效率。
+    - **供应链管理 (SCM) 系统**：自动化库存跟踪和管理，实时更新库存状态，预测需求，优化库存水平。集成供应商数据，自动化采购订单处理，评估和管理供应商绩效。
+    - **人力资源管理 (HRM) 系统**：允许员工自行管理个人信息、请假、报销等。自动化招聘流程，从简历筛选到面试安排，以及员工绩效跟踪和发展规划。
+    - **商务智能 (BI) 系统**：提供强大的数据分析工具，帮助企业从大量数据中提取有价值的业务洞察。定制化仪表板展示关键性能指标(KPI)，助力决策者快速做出决策。
+
+
+- **云计算和微服务**
+    - **容器化和微服务架构**：为各种微服务提供日志记录、配置管理和数据库支持。
+    - **云资源管理**：动态管理计算资源，如自动扩展、负载均衡和资源监控。
+
+
+- **数据处理和分析**
+    - **大数据处理**：处理和分析海量数据，支持数据仓库和数据湖的建设。
+    - **实时数据流分析**：对来自IoT设备或在线服务的数据进行实时分析和反馈。
+    - **人工智能和机器学习**：支持模型训练、数据预处理和模型部署。
+
+
+- **安全和合规**
+    - **数据加密和安全**：确保传输和存储中的数据安全，支持多种加密标准。
+    - **合规性监控**：自动检测系统运行和数据处理是否符合法规要求。
+
+
+- **网络通信**
+    - **实时通信服务**：支持IM、实时视频会议等应用的后端服务。
+    - **API管理和微服务通信**：管理API网关，提供服务间通信的安全和效率。
+
+
+- **高性能计算 (HPC) 应用**
+    - **科学模拟和计算**：用于复杂的科学计算和模拟，如气候模型、物理仿真等。
+    - **金融建模**：进行高速的金融市场模拟和风险分析。
+
+
+- **智能城市和IoT**
+    - **智能交通系统**：实时分析交通数据，优化交通流和信号控制。
+    - **智能监控系统**：处理和分析从各种传感器和摄像头收集的大量数据，提高城市管理效率和安全。
+
+## 框架结构
+
+/TheSeedCore
+
+│
+
+├── init.py
+
+├── Concurrent.py
+
+├── Database.py
+
+├── LoggerModule.py
+
+├── Network.py
+
+└── Security.py
+
+## 环境要求
+
+- 系统环境：Windows, Linux, macOS
+
+
+- Python 3.11 或更高版本
+
+## 使用说明
+
+### 模块依赖
+
+1. `ConnectTheSeedCore` 方法在启动时会检查各个模块的依赖，如果某个模块缺少依赖，TheSeedCore会提示应该安装哪些依赖库以支持该模块的使用。
+
+2. 如果在缺少依赖的情况下仍然使用该模块的功能，将会抛出 `ModuleNotFoundError` 异常。
+
+3. 如果不希望看到依赖检查信息，可以在调用 `ConnectTheSeedCore` 时传递 `CheckEnv=False`，依赖检查信息将不会显示在控制台中。
+
+```python
+import TheSeedCore as TSC
+
+if __name__ == "__main__":
+    # 传递check_env=False将不会显示依赖检查信息
+    TSC.ConnectTheSeedCore(CheckEnv=False)
+    TSC.LinkStart()
+```
+
+### 加密
+
+1. TheSeedCore 的加密器被设计为启动时使用 _设备编码_ + _自定义key_ 来生成 `Keyring` 的唯一标识符并使用该标识符存储AES秘钥。
+2. 如果分发时携带了加密的数据，或数据库使用了数据加密，被分发的应用将无法解密数据
+
+## 接口文档
+
+- 接口文档详见[TheSeedCoreInterface](TheSeedCoreInterface.md)。
+
+## 许可证
+
+此项目在 MIT许可下发布，您可以自由使用，复制，修改，分发本项目。
+请查阅 [LICENSE](LICENSE) 文件获取更多信息。
