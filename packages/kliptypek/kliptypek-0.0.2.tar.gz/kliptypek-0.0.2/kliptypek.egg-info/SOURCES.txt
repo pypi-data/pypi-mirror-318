@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+kliptypek/__init__.py
+kliptypek/main.py
+kliptypek/parsing.py
+kliptypek/process.py
+kliptypek.egg-info/PKG-INFO
+kliptypek.egg-info/SOURCES.txt
+kliptypek.egg-info/dependency_links.txt
+kliptypek.egg-info/entry_points.txt
+kliptypek.egg-info/requires.txt
+kliptypek.egg-info/top_level.txt
