@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: MCFXQ
+Version: 0.1.0
+Summary: 低音5到中音5到高音4#的乐器乐谱
+Home-page: UNKNOWN
+Author: 风汐琴
+Author-email: 2062479194@qq.com
+License: LICENSE
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: keyboard
+
+In 2024, NetEase launched a new server called "Elemental Poetry" which includes musical instruments that I love to play. But the instrument only has two octaves, which is very difficult to hold. So I converted some of my favorite song sheet music adaptations into electronic sheet music and script code, and put them in a place where the pip command can be obtained for everyone to download. I hope you like my adaptations.
+
