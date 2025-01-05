@@ -1,0 +1,11 @@
+.DS_Store,sha256=LPKap48aRs52RQFUy6Gv5O63Y7KBEtQ6kqbwoApR2t8,6148
+myhttps/__init__.py,sha256=RZ2GR6aQ9yKYhxVcsiM54r6BGLZeY-i5nNH60Uw8lcQ,585
+myhttps/__main__.py,sha256=wPW_lkbFBRTBLpuugwSbefGjyPlTr-DFydLzkPNFxmM,91
+myhttps/_myhttps.py,sha256=nTwjqY9I2rN9mHvOYkyZCBqO3IjbLsZ1Os4n7wdVeqU,8492
+myhttps/_upload.py,sha256=8Om4E71h5KBfCuUKa8dR2vZuJfnhHLX0u7U-vtQIDqk,3423
+myhttps-0.0.19.dist-info/LICENSE,sha256=29nBbnL0aVPWA-VZS2knf_fOWI0bNlVQwKBVXQYCF0g,1064
+myhttps-0.0.19.dist-info/METADATA,sha256=l-3Ripw29OkOX4ntI8G528KqkSjOxxsY-MTdeTi3keY,906
+myhttps-0.0.19.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+myhttps-0.0.19.dist-info/entry_points.txt,sha256=Vze2bCcJvaYfTYXQplyOrASb1bFM_Vk8fX4bFaO0-4o,50
+myhttps-0.0.19.dist-info/top_level.txt,sha256=MfES4k043szFot9IG6lqsmVHeOXRT7C7L9GMPdxeHks,8
+myhttps-0.0.19.dist-info/RECORD,,
