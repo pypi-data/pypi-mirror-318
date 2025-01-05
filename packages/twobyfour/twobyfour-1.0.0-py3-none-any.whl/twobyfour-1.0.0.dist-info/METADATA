@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: twobyfour
+Version: 1.0.0
+Summary: A double quaternion library for pytorch using cuda
+Project-URL: Repository, https://github.com/Wirlocke/twobyfour.git
+Project-URL: Issues, https://github.com/Wirlocke/twobyfour/issues
+Author-email: Marisha Norcross <marishaloznorcross@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: GPU
+Classifier: Environment :: GPU :: NVIDIA CUDA
+Classifier: Environment :: GPU :: NVIDIA CUDA :: 11.8
+Classifier: Environment :: GPU :: NVIDIA CUDA :: 12 :: 12.1
+Classifier: Environment :: GPU :: NVIDIA CUDA :: 12 :: 12.4
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Requires-Python: >=3.8
+Requires-Dist: cutex>=0.3.9
+Requires-Dist: torch
