@@ -1,0 +1,134 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/cloud/osconfig/v1/os_policy.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n(google/cloud/osconfig/v1/os_policy.proto\x12\x18google.cloud.osconfig.v1\x1a\x1fgoogle/api/field_behavior.proto"\xe4 \n\x08OSPolicy\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x13\n\x0bdescription\x18\x02 \x01(\t\x12:\n\x04mode\x18\x03 \x01(\x0e2\'.google.cloud.osconfig.v1.OSPolicy.ModeB\x03\xe0A\x02\x12N\n\x0fresource_groups\x18\x04 \x03(\x0b20.google.cloud.osconfig.v1.OSPolicy.ResourceGroupB\x03\xe0A\x02\x12%\n\x1dallow_no_resource_group_match\x18\x05 \x01(\x08\x1aA\n\x0fInventoryFilter\x12\x1a\n\ros_short_name\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x12\n\nos_version\x18\x02 \x01(\t\x1a\xd6\x1c\n\x08Resource\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0A\x02\x12J\n\x03pkg\x18\x02 \x01(\x0b2;.google.cloud.osconfig.v1.OSPolicy.Resource.PackageResourceH\x00\x12T\n\nrepository\x18\x03 \x01(\x0b2>.google.cloud.osconfig.v1.OSPolicy.Resource.RepositoryResourceH\x00\x12H\n\x04exec\x18\x04 \x01(\x0b28.google.cloud.osconfig.v1.OSPolicy.Resource.ExecResourceH\x00\x12H\n\x04file\x18\x05 \x01(\x0b28.google.cloud.osconfig.v1.OSPolicy.Resource.FileResourceH\x00\x1a\xc6\x02\n\x04File\x12I\n\x06remote\x18\x01 \x01(\x0b27.google.cloud.osconfig.v1.OSPolicy.Resource.File.RemoteH\x00\x12C\n\x03gcs\x18\x02 \x01(\x0b24.google.cloud.osconfig.v1.OSPolicy.Resource.File.GcsH\x00\x12\x14\n\nlocal_path\x18\x03 \x01(\tH\x00\x12\x16\n\x0eallow_insecure\x18\x04 \x01(\x08\x1a3\n\x06Remote\x12\x10\n\x03uri\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x17\n\x0fsha256_checksum\x18\x02 \x01(\t\x1aC\n\x03Gcs\x12\x13\n\x06bucket\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x13\n\x06object\x18\x02 \x01(\tB\x03\xe0A\x02\x12\x12\n\ngeneration\x18\x03 \x01(\x03B\x06\n\x04type\x1a\xa2\t\n\x0fPackageResource\x12d\n\rdesired_state\x18\x01 \x01(\x0e2H.google.cloud.osconfig.v1.OSPolicy.Resource.PackageResource.DesiredStateB\x03\xe0A\x02\x12N\n\x03apt\x18\x02 \x01(\x0b2?.google.cloud.osconfig.v1.OSPolicy.Resource.PackageResource.APTH\x00\x12N\n\x03deb\x18\x03 \x01(\x0b2?.google.cloud.osconfig.v1.OSPolicy.Resource.PackageResource.DebH\x00\x12N\n\x03yum\x18\x04 \x01(\x0b2?.google.cloud.osconfig.v1.OSPolicy.Resource.PackageResource.YUMH\x00\x12T\n\x06zypper\x18\x05 \x01(\x0b2B.google.cloud.osconfig.v1.OSPolicy.Resource.PackageResource.ZypperH\x00\x12N\n\x03rpm\x18\x06 \x01(\x0b2?.google.cloud.osconfig.v1.OSPolicy.Resource.PackageResource.RPMH\x00\x12T\n\x06googet\x18\x07 \x01(\x0b2B.google.cloud.osconfig.v1.OSPolicy.Resource.PackageResource.GooGetH\x00\x12N\n\x03msi\x18\x08 \x01(\x0b2?.google.cloud.osconfig.v1.OSPolicy.Resource.PackageResource.MSIH\x00\x1a_\n\x03Deb\x12E\n\x06source\x18\x01 \x01(\x0b20.google.cloud.osconfig.v1.OSPolicy.Resource.FileB\x03\xe0A\x02\x12\x11\n\tpull_deps\x18\x02 \x01(\x08\x1a\x18\n\x03APT\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x02\x1a_\n\x03RPM\x12E\n\x06source\x18\x01 \x01(\x0b20.google.cloud.osconfig.v1.OSPolicy.Resource.FileB\x03\xe0A\x02\x12\x11\n\tpull_deps\x18\x02 \x01(\x08\x1a\x18\n\x03YUM\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x02\x1a\x1b\n\x06Zypper\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x02\x1a\x1b\n\x06GooGet\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x02\x1a`\n\x03MSI\x12E\n\x06source\x18\x01 \x01(\x0b20.google.cloud.osconfig.v1.OSPolicy.Resource.FileB\x03\xe0A\x02\x12\x12\n\nproperties\x18\x02 \x03(\t"I\n\x0cDesiredState\x12\x1d\n\x19DESIRED_STATE_UNSPECIFIED\x10\x00\x12\r\n\tINSTALLED\x10\x01\x12\x0b\n\x07REMOVED\x10\x02B\x10\n\x0esystem_package\x1a\xb8\x07\n\x12RepositoryResource\x12[\n\x03apt\x18\x01 \x01(\x0b2L.google.cloud.osconfig.v1.OSPolicy.Resource.RepositoryResource.AptRepositoryH\x00\x12[\n\x03yum\x18\x02 \x01(\x0b2L.google.cloud.osconfig.v1.OSPolicy.Resource.RepositoryResource.YumRepositoryH\x00\x12a\n\x06zypper\x18\x03 \x01(\x0b2O.google.cloud.osconfig.v1.OSPolicy.Resource.RepositoryResource.ZypperRepositoryH\x00\x12[\n\x03goo\x18\x04 \x01(\x0b2L.google.cloud.osconfig.v1.OSPolicy.Resource.RepositoryResource.GooRepositoryH\x00\x1a\x9e\x02\n\rAptRepository\x12s\n\x0carchive_type\x18\x01 \x01(\x0e2X.google.cloud.osconfig.v1.OSPolicy.Resource.RepositoryResource.AptRepository.ArchiveTypeB\x03\xe0A\x02\x12\x10\n\x03uri\x18\x02 \x01(\tB\x03\xe0A\x02\x12\x19\n\x0cdistribution\x18\x03 \x01(\tB\x03\xe0A\x02\x12\x17\n\ncomponents\x18\x04 \x03(\tB\x03\xe0A\x02\x12\x0f\n\x07gpg_key\x18\x05 \x01(\t"A\n\x0bArchiveType\x12\x1c\n\x18ARCHIVE_TYPE_UNSPECIFIED\x10\x00\x12\x07\n\x03DEB\x10\x01\x12\x0b\n\x07DEB_SRC\x10\x02\x1a_\n\rYumRepository\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x14\n\x0cdisplay_name\x18\x02 \x01(\t\x12\x15\n\x08base_url\x18\x03 \x01(\tB\x03\xe0A\x02\x12\x10\n\x08gpg_keys\x18\x04 \x03(\t\x1ab\n\x10ZypperRepository\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x14\n\x0cdisplay_name\x18\x02 \x01(\t\x12\x15\n\x08base_url\x18\x03 \x01(\tB\x03\xe0A\x02\x12\x10\n\x08gpg_keys\x18\x04 \x03(\t\x1a4\n\rGooRepository\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x10\n\x03url\x18\x02 \x01(\tB\x03\xe0A\x02B\x0c\n\nrepository\x1a\xf9\x03\n\x0cExecResource\x12T\n\x08validate\x18\x01 \x01(\x0b2=.google.cloud.osconfig.v1.OSPolicy.Resource.ExecResource.ExecB\x03\xe0A\x02\x12N\n\x07enforce\x18\x02 \x01(\x0b2=.google.cloud.osconfig.v1.OSPolicy.Resource.ExecResource.Exec\x1a\xc2\x02\n\x04Exec\x12@\n\x04file\x18\x01 \x01(\x0b20.google.cloud.osconfig.v1.OSPolicy.Resource.FileH\x00\x12\x10\n\x06script\x18\x02 \x01(\tH\x00\x12\x0c\n\x04args\x18\x03 \x03(\t\x12c\n\x0binterpreter\x18\x04 \x01(\x0e2I.google.cloud.osconfig.v1.OSPolicy.Resource.ExecResource.Exec.InterpreterB\x03\xe0A\x02\x12\x18\n\x10output_file_path\x18\x05 \x01(\t"O\n\x0bInterpreter\x12\x1b\n\x17INTERPRETER_UNSPECIFIED\x10\x00\x12\x08\n\x04NONE\x10\x01\x12\t\n\x05SHELL\x10\x02\x12\x0e\n\nPOWERSHELL\x10\x03B\x08\n\x06source\x1a\xcc\x02\n\x0cFileResource\x12@\n\x04file\x18\x01 \x01(\x0b20.google.cloud.osconfig.v1.OSPolicy.Resource.FileH\x00\x12\x11\n\x07content\x18\x02 \x01(\tH\x00\x12\x11\n\x04path\x18\x03 \x01(\tB\x03\xe0A\x02\x12Y\n\x05state\x18\x04 \x01(\x0e2E.google.cloud.osconfig.v1.OSPolicy.Resource.FileResource.DesiredStateB\x03\xe0A\x02\x12\x13\n\x0bpermissions\x18\x05 \x01(\t"Z\n\x0cDesiredState\x12\x1d\n\x19DESIRED_STATE_UNSPECIFIED\x10\x00\x12\x0b\n\x07PRESENT\x10\x01\x12\n\n\x06ABSENT\x10\x02\x12\x12\n\x0eCONTENTS_MATCH\x10\x03B\x08\n\x06sourceB\x0f\n\rresource_type\x1a\xa3\x01\n\rResourceGroup\x12M\n\x11inventory_filters\x18\x01 \x03(\x0b22.google.cloud.osconfig.v1.OSPolicy.InventoryFilter\x12C\n\tresources\x18\x02 \x03(\x0b2+.google.cloud.osconfig.v1.OSPolicy.ResourceB\x03\xe0A\x02"=\n\x04Mode\x12\x14\n\x10MODE_UNSPECIFIED\x10\x00\x12\x0e\n\nVALIDATION\x10\x01\x12\x0f\n\x0bENFORCEMENT\x10\x02B\xbd\x01\n\x1ccom.google.cloud.osconfig.v1B\rOsPolicyProtoP\x01Z8cloud.google.com/go/osconfig/apiv1/osconfigpb;osconfigpb\xaa\x02\x18Google.Cloud.OsConfig.V1\xca\x02\x18Google\\Cloud\\OsConfig\\V1\xea\x02\x1bGoogle::Cloud::OsConfig::V1b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.osconfig.v1.os_policy_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n\x1ccom.google.cloud.osconfig.v1B\rOsPolicyProtoP\x01Z8cloud.google.com/go/osconfig/apiv1/osconfigpb;osconfigpb\xaa\x02\x18Google.Cloud.OsConfig.V1\xca\x02\x18Google\\Cloud\\OsConfig\\V1\xea\x02\x1bGoogle::Cloud::OsConfig::V1'
+    _globals['_OSPOLICY_INVENTORYFILTER'].fields_by_name['os_short_name']._loaded_options = None
+    _globals['_OSPOLICY_INVENTORYFILTER'].fields_by_name['os_short_name']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE_FILE_REMOTE'].fields_by_name['uri']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE_FILE_REMOTE'].fields_by_name['uri']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE_FILE_GCS'].fields_by_name['bucket']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE_FILE_GCS'].fields_by_name['bucket']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE_FILE_GCS'].fields_by_name['object']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE_FILE_GCS'].fields_by_name['object']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_DEB'].fields_by_name['source']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_DEB'].fields_by_name['source']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_APT'].fields_by_name['name']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_APT'].fields_by_name['name']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_RPM'].fields_by_name['source']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_RPM'].fields_by_name['source']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_YUM'].fields_by_name['name']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_YUM'].fields_by_name['name']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_ZYPPER'].fields_by_name['name']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_ZYPPER'].fields_by_name['name']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_GOOGET'].fields_by_name['name']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_GOOGET'].fields_by_name['name']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_MSI'].fields_by_name['source']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_MSI'].fields_by_name['source']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE'].fields_by_name['desired_state']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE'].fields_by_name['desired_state']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_APTREPOSITORY'].fields_by_name['archive_type']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_APTREPOSITORY'].fields_by_name['archive_type']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_APTREPOSITORY'].fields_by_name['uri']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_APTREPOSITORY'].fields_by_name['uri']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_APTREPOSITORY'].fields_by_name['distribution']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_APTREPOSITORY'].fields_by_name['distribution']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_APTREPOSITORY'].fields_by_name['components']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_APTREPOSITORY'].fields_by_name['components']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_YUMREPOSITORY'].fields_by_name['id']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_YUMREPOSITORY'].fields_by_name['id']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_YUMREPOSITORY'].fields_by_name['base_url']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_YUMREPOSITORY'].fields_by_name['base_url']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_ZYPPERREPOSITORY'].fields_by_name['id']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_ZYPPERREPOSITORY'].fields_by_name['id']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_ZYPPERREPOSITORY'].fields_by_name['base_url']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_ZYPPERREPOSITORY'].fields_by_name['base_url']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_GOOREPOSITORY'].fields_by_name['name']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_GOOREPOSITORY'].fields_by_name['name']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_GOOREPOSITORY'].fields_by_name['url']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_GOOREPOSITORY'].fields_by_name['url']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE_EXECRESOURCE_EXEC'].fields_by_name['interpreter']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE_EXECRESOURCE_EXEC'].fields_by_name['interpreter']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE_EXECRESOURCE'].fields_by_name['validate']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE_EXECRESOURCE'].fields_by_name['validate']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE_FILERESOURCE'].fields_by_name['path']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE_FILERESOURCE'].fields_by_name['path']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE_FILERESOURCE'].fields_by_name['state']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE_FILERESOURCE'].fields_by_name['state']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCE'].fields_by_name['id']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCE'].fields_by_name['id']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY_RESOURCEGROUP'].fields_by_name['resources']._loaded_options = None
+    _globals['_OSPOLICY_RESOURCEGROUP'].fields_by_name['resources']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY'].fields_by_name['id']._loaded_options = None
+    _globals['_OSPOLICY'].fields_by_name['id']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY'].fields_by_name['mode']._loaded_options = None
+    _globals['_OSPOLICY'].fields_by_name['mode']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY'].fields_by_name['resource_groups']._loaded_options = None
+    _globals['_OSPOLICY'].fields_by_name['resource_groups']._serialized_options = b'\xe0A\x02'
+    _globals['_OSPOLICY']._serialized_start = 104
+    _globals['_OSPOLICY']._serialized_end = 4300
+    _globals['_OSPOLICY_INVENTORYFILTER']._serialized_start = 333
+    _globals['_OSPOLICY_INVENTORYFILTER']._serialized_end = 398
+    _globals['_OSPOLICY_RESOURCE']._serialized_start = 401
+    _globals['_OSPOLICY_RESOURCE']._serialized_end = 4071
+    _globals['_OSPOLICY_RESOURCE_FILE']._serialized_start = 741
+    _globals['_OSPOLICY_RESOURCE_FILE']._serialized_end = 1067
+    _globals['_OSPOLICY_RESOURCE_FILE_REMOTE']._serialized_start = 939
+    _globals['_OSPOLICY_RESOURCE_FILE_REMOTE']._serialized_end = 990
+    _globals['_OSPOLICY_RESOURCE_FILE_GCS']._serialized_start = 992
+    _globals['_OSPOLICY_RESOURCE_FILE_GCS']._serialized_end = 1059
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE']._serialized_start = 1070
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE']._serialized_end = 2256
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_DEB']._serialized_start = 1763
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_DEB']._serialized_end = 1858
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_APT']._serialized_start = 1860
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_APT']._serialized_end = 1884
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_RPM']._serialized_start = 1886
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_RPM']._serialized_end = 1981
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_YUM']._serialized_start = 1983
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_YUM']._serialized_end = 2007
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_ZYPPER']._serialized_start = 2009
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_ZYPPER']._serialized_end = 2036
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_GOOGET']._serialized_start = 2038
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_GOOGET']._serialized_end = 2065
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_MSI']._serialized_start = 2067
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_MSI']._serialized_end = 2163
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_DESIREDSTATE']._serialized_start = 2165
+    _globals['_OSPOLICY_RESOURCE_PACKAGERESOURCE_DESIREDSTATE']._serialized_end = 2238
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE']._serialized_start = 2259
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE']._serialized_end = 3211
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_APTREPOSITORY']._serialized_start = 2660
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_APTREPOSITORY']._serialized_end = 2946
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_APTREPOSITORY_ARCHIVETYPE']._serialized_start = 2881
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_APTREPOSITORY_ARCHIVETYPE']._serialized_end = 2946
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_YUMREPOSITORY']._serialized_start = 2948
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_YUMREPOSITORY']._serialized_end = 3043
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_ZYPPERREPOSITORY']._serialized_start = 3045
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_ZYPPERREPOSITORY']._serialized_end = 3143
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_GOOREPOSITORY']._serialized_start = 3145
+    _globals['_OSPOLICY_RESOURCE_REPOSITORYRESOURCE_GOOREPOSITORY']._serialized_end = 3197
+    _globals['_OSPOLICY_RESOURCE_EXECRESOURCE']._serialized_start = 3214
+    _globals['_OSPOLICY_RESOURCE_EXECRESOURCE']._serialized_end = 3719
+    _globals['_OSPOLICY_RESOURCE_EXECRESOURCE_EXEC']._serialized_start = 3397
+    _globals['_OSPOLICY_RESOURCE_EXECRESOURCE_EXEC']._serialized_end = 3719
+    _globals['_OSPOLICY_RESOURCE_EXECRESOURCE_EXEC_INTERPRETER']._serialized_start = 3630
+    _globals['_OSPOLICY_RESOURCE_EXECRESOURCE_EXEC_INTERPRETER']._serialized_end = 3709
+    _globals['_OSPOLICY_RESOURCE_FILERESOURCE']._serialized_start = 3722
+    _globals['_OSPOLICY_RESOURCE_FILERESOURCE']._serialized_end = 4054
+    _globals['_OSPOLICY_RESOURCE_FILERESOURCE_DESIREDSTATE']._serialized_start = 3954
+    _globals['_OSPOLICY_RESOURCE_FILERESOURCE_DESIREDSTATE']._serialized_end = 4044
+    _globals['_OSPOLICY_RESOURCEGROUP']._serialized_start = 4074
+    _globals['_OSPOLICY_RESOURCEGROUP']._serialized_end = 4237
+    _globals['_OSPOLICY_MODE']._serialized_start = 4239
+    _globals['_OSPOLICY_MODE']._serialized_end = 4300

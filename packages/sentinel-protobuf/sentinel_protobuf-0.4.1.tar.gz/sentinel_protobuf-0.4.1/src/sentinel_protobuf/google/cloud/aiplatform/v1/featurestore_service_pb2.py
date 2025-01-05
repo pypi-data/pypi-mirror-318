@@ -1,0 +1,260 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/cloud/aiplatform/v1/featurestore_service.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from .....google.api import client_pb2 as google_dot_api_dot_client__pb2
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from .....google.cloud.aiplatform.v1 import entity_type_pb2 as google_dot_cloud_dot_aiplatform_dot_v1_dot_entity__type__pb2
+from .....google.cloud.aiplatform.v1 import feature_pb2 as google_dot_cloud_dot_aiplatform_dot_v1_dot_feature__pb2
+from .....google.cloud.aiplatform.v1 import feature_selector_pb2 as google_dot_cloud_dot_aiplatform_dot_v1_dot_feature__selector__pb2
+from .....google.cloud.aiplatform.v1 import featurestore_pb2 as google_dot_cloud_dot_aiplatform_dot_v1_dot_featurestore__pb2
+from .....google.cloud.aiplatform.v1 import io_pb2 as google_dot_cloud_dot_aiplatform_dot_v1_dot_io__pb2
+from .....google.cloud.aiplatform.v1 import operation_pb2 as google_dot_cloud_dot_aiplatform_dot_v1_dot_operation__pb2
+from .....google.longrunning import operations_pb2 as google_dot_longrunning_dot_operations__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
+from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+from .....google.type import interval_pb2 as google_dot_type_dot_interval__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n5google/cloud/aiplatform/v1/featurestore_service.proto\x12\x1agoogle.cloud.aiplatform.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a,google/cloud/aiplatform/v1/entity_type.proto\x1a(google/cloud/aiplatform/v1/feature.proto\x1a1google/cloud/aiplatform/v1/feature_selector.proto\x1a-google/cloud/aiplatform/v1/featurestore.proto\x1a#google/cloud/aiplatform/v1/io.proto\x1a*google/cloud/aiplatform/v1/operation.proto\x1a#google/longrunning/operations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1agoogle/type/interval.proto"\xbe\x01\n\x19CreateFeaturestoreRequest\x12>\n\x06parent\x18\x01 \x01(\tB.\xe0A\x02\xfaA(\x12&aiplatform.googleapis.com/Featurestore\x12C\n\x0cfeaturestore\x18\x02 \x01(\x0b2(.google.cloud.aiplatform.v1.FeaturestoreB\x03\xe0A\x02\x12\x1c\n\x0ffeaturestore_id\x18\x03 \x01(\tB\x03\xe0A\x02"V\n\x16GetFeaturestoreRequest\x12<\n\x04name\x18\x01 \x01(\tB.\xe0A\x02\xfaA(\n&aiplatform.googleapis.com/Featurestore"\xd2\x01\n\x18ListFeaturestoresRequest\x12>\n\x06parent\x18\x01 \x01(\tB.\xe0A\x02\xfaA(\x12&aiplatform.googleapis.com/Featurestore\x12\x0e\n\x06filter\x18\x02 \x01(\t\x12\x11\n\tpage_size\x18\x03 \x01(\x05\x12\x12\n\npage_token\x18\x04 \x01(\t\x12\x10\n\x08order_by\x18\x05 \x01(\t\x12-\n\tread_mask\x18\x06 \x01(\x0b2\x1a.google.protobuf.FieldMask"u\n\x19ListFeaturestoresResponse\x12?\n\rfeaturestores\x18\x01 \x03(\x0b2(.google.cloud.aiplatform.v1.Featurestore\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"\x91\x01\n\x19UpdateFeaturestoreRequest\x12C\n\x0cfeaturestore\x18\x01 \x01(\x0b2(.google.cloud.aiplatform.v1.FeaturestoreB\x03\xe0A\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMask"h\n\x19DeleteFeaturestoreRequest\x12<\n\x04name\x18\x01 \x01(\tB.\xe0A\x02\xfaA(\n&aiplatform.googleapis.com/Featurestore\x12\r\n\x05force\x18\x02 \x01(\x08"\x9e\x05\n\x1aImportFeatureValuesRequest\x12=\n\x0bavro_source\x18\x02 \x01(\x0b2&.google.cloud.aiplatform.v1.AvroSourceH\x00\x12E\n\x0fbigquery_source\x18\x03 \x01(\x0b2*.google.cloud.aiplatform.v1.BigQuerySourceH\x00\x12;\n\ncsv_source\x18\x04 \x01(\x0b2%.google.cloud.aiplatform.v1.CsvSourceH\x00\x12\x1c\n\x12feature_time_field\x18\x06 \x01(\tH\x01\x122\n\x0cfeature_time\x18\x07 \x01(\x0b2\x1a.google.protobuf.TimestampH\x01\x12A\n\x0bentity_type\x18\x01 \x01(\tB,\xe0A\x02\xfaA&\n$aiplatform.googleapis.com/EntityType\x12\x17\n\x0fentity_id_field\x18\x05 \x01(\t\x12^\n\rfeature_specs\x18\x08 \x03(\x0b2B.google.cloud.aiplatform.v1.ImportFeatureValuesRequest.FeatureSpecB\x03\xe0A\x02\x12\x1e\n\x16disable_online_serving\x18\t \x01(\x08\x12\x14\n\x0cworker_count\x18\x0b \x01(\x05\x12"\n\x1adisable_ingestion_analysis\x18\x0c \x01(\x08\x1a4\n\x0bFeatureSpec\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x14\n\x0csource_field\x18\x02 \x01(\tB\x08\n\x06sourceB\x15\n\x13feature_time_source"\xad\x01\n\x1bImportFeatureValuesResponse\x12\x1d\n\x15imported_entity_count\x18\x01 \x01(\x03\x12$\n\x1cimported_feature_value_count\x18\x02 \x01(\x03\x12\x19\n\x11invalid_row_count\x18\x06 \x01(\x03\x12.\n&timestamp_outside_retention_rows_count\x18\x04 \x01(\x03"\xd1\x06\n\x1dBatchReadFeatureValuesRequest\x12C\n\x12csv_read_instances\x18\x03 \x01(\x0b2%.google.cloud.aiplatform.v1.CsvSourceH\x00\x12M\n\x17bigquery_read_instances\x18\x05 \x01(\x0b2*.google.cloud.aiplatform.v1.BigQuerySourceH\x00\x12D\n\x0cfeaturestore\x18\x01 \x01(\tB.\xe0A\x02\xfaA(\n&aiplatform.googleapis.com/Featurestore\x12M\n\x0bdestination\x18\x04 \x01(\x0b23.google.cloud.aiplatform.v1.FeatureValueDestinationB\x03\xe0A\x02\x12g\n\x13pass_through_fields\x18\x08 \x03(\x0b2J.google.cloud.aiplatform.v1.BatchReadFeatureValuesRequest.PassThroughField\x12h\n\x11entity_type_specs\x18\x07 \x03(\x0b2H.google.cloud.aiplatform.v1.BatchReadFeatureValuesRequest.EntityTypeSpecB\x03\xe0A\x02\x123\n\nstart_time\x18\x0b \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x01\x1a+\n\x10PassThroughField\x12\x17\n\nfield_name\x18\x01 \x01(\tB\x03\xe0A\x02\x1a\xc2\x01\n\x0eEntityTypeSpec\x12\x1b\n\x0eentity_type_id\x18\x01 \x01(\tB\x03\xe0A\x02\x12J\n\x10feature_selector\x18\x02 \x01(\x0b2+.google.cloud.aiplatform.v1.FeatureSelectorB\x03\xe0A\x02\x12G\n\x08settings\x18\x03 \x03(\x0b25.google.cloud.aiplatform.v1.DestinationFeatureSettingB\r\n\x0bread_option"\xe8\x05\n\x1aExportFeatureValuesRequest\x12`\n\x0fsnapshot_export\x18\x03 \x01(\x0b2E.google.cloud.aiplatform.v1.ExportFeatureValuesRequest.SnapshotExportH\x00\x12X\n\x0bfull_export\x18\x07 \x01(\x0b2A.google.cloud.aiplatform.v1.ExportFeatureValuesRequest.FullExportH\x00\x12A\n\x0bentity_type\x18\x01 \x01(\tB,\xe0A\x02\xfaA&\n$aiplatform.googleapis.com/EntityType\x12M\n\x0bdestination\x18\x04 \x01(\x0b23.google.cloud.aiplatform.v1.FeatureValueDestinationB\x03\xe0A\x02\x12J\n\x10feature_selector\x18\x05 \x01(\x0b2+.google.cloud.aiplatform.v1.FeatureSelectorB\x03\xe0A\x02\x12G\n\x08settings\x18\x06 \x03(\x0b25.google.cloud.aiplatform.v1.DestinationFeatureSetting\x1as\n\x0eSnapshotExport\x121\n\rsnapshot_time\x18\x01 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12.\n\nstart_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.Timestamp\x1aj\n\nFullExport\x12.\n\nstart_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12,\n\x08end_time\x18\x01 \x01(\x0b2\x1a.google.protobuf.TimestampB\x06\n\x04mode"O\n\x19DestinationFeatureSetting\x12\x17\n\nfeature_id\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x19\n\x11destination_field\x18\x02 \x01(\t"\x91\x02\n\x17FeatureValueDestination\x12O\n\x14bigquery_destination\x18\x01 \x01(\x0b2/.google.cloud.aiplatform.v1.BigQueryDestinationH\x00\x12O\n\x14tfrecord_destination\x18\x02 \x01(\x0b2/.google.cloud.aiplatform.v1.TFRecordDestinationH\x00\x12E\n\x0fcsv_destination\x18\x03 \x01(\x0b2*.google.cloud.aiplatform.v1.CsvDestinationH\x00B\r\n\x0bdestination"\x1d\n\x1bExportFeatureValuesResponse" \n\x1eBatchReadFeatureValuesResponse"\xb3\x01\n\x17CreateEntityTypeRequest\x12>\n\x06parent\x18\x01 \x01(\tB.\xe0A\x02\xfaA(\n&aiplatform.googleapis.com/Featurestore\x12;\n\x0bentity_type\x18\x02 \x01(\x0b2&.google.cloud.aiplatform.v1.EntityType\x12\x1b\n\x0eentity_type_id\x18\x03 \x01(\tB\x03\xe0A\x02"R\n\x14GetEntityTypeRequest\x12:\n\x04name\x18\x01 \x01(\tB,\xe0A\x02\xfaA&\n$aiplatform.googleapis.com/EntityType"\xce\x01\n\x16ListEntityTypesRequest\x12<\n\x06parent\x18\x01 \x01(\tB,\xe0A\x02\xfaA&\x12$aiplatform.googleapis.com/EntityType\x12\x0e\n\x06filter\x18\x02 \x01(\t\x12\x11\n\tpage_size\x18\x03 \x01(\x05\x12\x12\n\npage_token\x18\x04 \x01(\t\x12\x10\n\x08order_by\x18\x05 \x01(\t\x12-\n\tread_mask\x18\x06 \x01(\x0b2\x1a.google.protobuf.FieldMask"p\n\x17ListEntityTypesResponse\x12<\n\x0centity_types\x18\x01 \x03(\x0b2&.google.cloud.aiplatform.v1.EntityType\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"\x8c\x01\n\x17UpdateEntityTypeRequest\x12@\n\x0bentity_type\x18\x01 \x01(\x0b2&.google.cloud.aiplatform.v1.EntityTypeB\x03\xe0A\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMask"d\n\x17DeleteEntityTypeRequest\x12:\n\x04name\x18\x01 \x01(\tB,\xe0A\x02\xfaA&\n$aiplatform.googleapis.com/EntityType\x12\r\n\x05force\x18\x02 \x01(\x08"\xa5\x01\n\x14CreateFeatureRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\x12!aiplatform.googleapis.com/Feature\x129\n\x07feature\x18\x02 \x01(\x0b2#.google.cloud.aiplatform.v1.FeatureB\x03\xe0A\x02\x12\x17\n\nfeature_id\x18\x03 \x01(\tB\x03\xe0A\x02"\xa0\x01\n\x1aBatchCreateFeaturesRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\x12!aiplatform.googleapis.com/Feature\x12G\n\x08requests\x18\x02 \x03(\x0b20.google.cloud.aiplatform.v1.CreateFeatureRequestB\x03\xe0A\x02"T\n\x1bBatchCreateFeaturesResponse\x125\n\x08features\x18\x01 \x03(\x0b2#.google.cloud.aiplatform.v1.Feature"L\n\x11GetFeatureRequest\x127\n\x04name\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!aiplatform.googleapis.com/Feature"\xe4\x01\n\x13ListFeaturesRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\x12!aiplatform.googleapis.com/Feature\x12\x0e\n\x06filter\x18\x02 \x01(\t\x12\x11\n\tpage_size\x18\x03 \x01(\x05\x12\x12\n\npage_token\x18\x04 \x01(\t\x12\x10\n\x08order_by\x18\x05 \x01(\t\x12-\n\tread_mask\x18\x06 \x01(\x0b2\x1a.google.protobuf.FieldMask\x12\x1a\n\x12latest_stats_count\x18\x07 \x01(\x05"f\n\x14ListFeaturesResponse\x125\n\x08features\x18\x01 \x03(\x0b2#.google.cloud.aiplatform.v1.Feature\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"\x8a\x01\n\x15SearchFeaturesRequest\x12;\n\x08location\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!locations.googleapis.com/Location\x12\r\n\x05query\x18\x03 \x01(\t\x12\x11\n\tpage_size\x18\x04 \x01(\x05\x12\x12\n\npage_token\x18\x05 \x01(\t"h\n\x16SearchFeaturesResponse\x125\n\x08features\x18\x01 \x03(\x0b2#.google.cloud.aiplatform.v1.Feature\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"\x82\x01\n\x14UpdateFeatureRequest\x129\n\x07feature\x18\x01 \x01(\x0b2#.google.cloud.aiplatform.v1.FeatureB\x03\xe0A\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMask"O\n\x14DeleteFeatureRequest\x127\n\x04name\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!aiplatform.googleapis.com/Feature"u\n#CreateFeaturestoreOperationMetadata\x12N\n\x10generic_metadata\x18\x01 \x01(\x0b24.google.cloud.aiplatform.v1.GenericOperationMetadata"u\n#UpdateFeaturestoreOperationMetadata\x12N\n\x10generic_metadata\x18\x01 \x01(\x0b24.google.cloud.aiplatform.v1.GenericOperationMetadata"\xbb\x02\n$ImportFeatureValuesOperationMetadata\x12N\n\x10generic_metadata\x18\x01 \x01(\x0b24.google.cloud.aiplatform.v1.GenericOperationMetadata\x12\x1d\n\x15imported_entity_count\x18\x02 \x01(\x03\x12$\n\x1cimported_feature_value_count\x18\x03 \x01(\x03\x12\x13\n\x0bsource_uris\x18\x04 \x03(\t\x12\x19\n\x11invalid_row_count\x18\x06 \x01(\x03\x12.\n&timestamp_outside_retention_rows_count\x18\x07 \x01(\x03\x12\x1e\n\x16blocking_operation_ids\x18\x08 \x03(\x03"v\n$ExportFeatureValuesOperationMetadata\x12N\n\x10generic_metadata\x18\x01 \x01(\x0b24.google.cloud.aiplatform.v1.GenericOperationMetadata"y\n\'BatchReadFeatureValuesOperationMetadata\x12N\n\x10generic_metadata\x18\x01 \x01(\x0b24.google.cloud.aiplatform.v1.GenericOperationMetadata"v\n$DeleteFeatureValuesOperationMetadata\x12N\n\x10generic_metadata\x18\x01 \x01(\x0b24.google.cloud.aiplatform.v1.GenericOperationMetadata"s\n!CreateEntityTypeOperationMetadata\x12N\n\x10generic_metadata\x18\x01 \x01(\x0b24.google.cloud.aiplatform.v1.GenericOperationMetadata"p\n\x1eCreateFeatureOperationMetadata\x12N\n\x10generic_metadata\x18\x01 \x01(\x0b24.google.cloud.aiplatform.v1.GenericOperationMetadata"v\n$BatchCreateFeaturesOperationMetadata\x12N\n\x10generic_metadata\x18\x01 \x01(\x0b24.google.cloud.aiplatform.v1.GenericOperationMetadata"\xe5\x04\n\x1aDeleteFeatureValuesRequest\x12\\\n\rselect_entity\x18\x02 \x01(\x0b2C.google.cloud.aiplatform.v1.DeleteFeatureValuesRequest.SelectEntityH\x00\x12y\n\x1dselect_time_range_and_feature\x18\x03 \x01(\x0b2P.google.cloud.aiplatform.v1.DeleteFeatureValuesRequest.SelectTimeRangeAndFeatureH\x00\x12A\n\x0bentity_type\x18\x01 \x01(\tB,\xe0A\x02\xfaA&\n$aiplatform.googleapis.com/EntityType\x1a]\n\x0cSelectEntity\x12M\n\x12entity_id_selector\x18\x01 \x01(\x0b2,.google.cloud.aiplatform.v1.EntityIdSelectorB\x03\xe0A\x02\x1a\xbb\x01\n\x19SelectTimeRangeAndFeature\x12.\n\ntime_range\x18\x01 \x01(\x0b2\x15.google.type.IntervalB\x03\xe0A\x02\x12J\n\x10feature_selector\x18\x02 \x01(\x0b2+.google.cloud.aiplatform.v1.FeatureSelectorB\x03\xe0A\x02\x12"\n\x1askip_online_storage_delete\x18\x03 \x01(\x08B\x0e\n\x0cDeleteOption"\x92\x04\n\x1bDeleteFeatureValuesResponse\x12]\n\rselect_entity\x18\x01 \x01(\x0b2D.google.cloud.aiplatform.v1.DeleteFeatureValuesResponse.SelectEntityH\x00\x12z\n\x1dselect_time_range_and_feature\x18\x02 \x01(\x0b2Q.google.cloud.aiplatform.v1.DeleteFeatureValuesResponse.SelectTimeRangeAndFeatureH\x00\x1am\n\x0cSelectEntity\x120\n(offline_storage_deleted_entity_row_count\x18\x01 \x01(\x03\x12+\n#online_storage_deleted_entity_count\x18\x02 \x01(\x03\x1a\x9c\x01\n\x19SelectTimeRangeAndFeature\x12\x1e\n\x16impacted_feature_count\x18\x01 \x01(\x03\x121\n)offline_storage_modified_entity_row_count\x18\x02 \x01(\x03\x12,\n$online_storage_modified_entity_count\x18\x03 \x01(\x03B\n\n\x08response"{\n\x10EntityIdSelector\x12;\n\ncsv_source\x18\x03 \x01(\x0b2%.google.cloud.aiplatform.v1.CsvSourceH\x00\x12\x17\n\x0fentity_id_field\x18\x05 \x01(\tB\x11\n\x0fEntityIdsSource2\xe6)\n\x13FeaturestoreService\x12\xa6\x02\n\x12CreateFeaturestore\x125.google.cloud.aiplatform.v1.CreateFeaturestoreRequest\x1a\x1d.google.longrunning.Operation"\xb9\x01\xcaA3\n\x0cFeaturestore\x12#CreateFeaturestoreOperationMetadata\xdaA\x13parent,featurestore\xdaA#parent,featurestore,featurestore_id\x82\xd3\xe4\x93\x02A"1/v1/{parent=projects/*/locations/*}/featurestores:\x0cfeaturestore\x12\xb1\x01\n\x0fGetFeaturestore\x122.google.cloud.aiplatform.v1.GetFeaturestoreRequest\x1a(.google.cloud.aiplatform.v1.Featurestore"@\xdaA\x04name\x82\xd3\xe4\x93\x023\x121/v1/{name=projects/*/locations/*/featurestores/*}\x12\xc4\x01\n\x11ListFeaturestores\x124.google.cloud.aiplatform.v1.ListFeaturestoresRequest\x1a5.google.cloud.aiplatform.v1.ListFeaturestoresResponse"B\xdaA\x06parent\x82\xd3\xe4\x93\x023\x121/v1/{parent=projects/*/locations/*}/featurestores\x12\x92\x02\n\x12UpdateFeaturestore\x125.google.cloud.aiplatform.v1.UpdateFeaturestoreRequest\x1a\x1d.google.longrunning.Operation"\xa5\x01\xcaA3\n\x0cFeaturestore\x12#UpdateFeaturestoreOperationMetadata\xdaA\x18featurestore,update_mask\x82\xd3\xe4\x93\x02N2>/v1/{featurestore.name=projects/*/locations/*/featurestores/*}:\x0cfeaturestore\x12\xed\x01\n\x12DeleteFeaturestore\x125.google.cloud.aiplatform.v1.DeleteFeaturestoreRequest\x1a\x1d.google.longrunning.Operation"\x80\x01\xcaA0\n\x15google.protobuf.Empty\x12\x17DeleteOperationMetadata\xdaA\x04name\xdaA\nname,force\x82\xd3\xe4\x93\x023*1/v1/{name=projects/*/locations/*/featurestores/*}\x12\xa8\x02\n\x10CreateEntityType\x123.google.cloud.aiplatform.v1.CreateEntityTypeRequest\x1a\x1d.google.longrunning.Operation"\xbf\x01\xcaA/\n\nEntityType\x12!CreateEntityTypeOperationMetadata\xdaA\x12parent,entity_type\xdaA!parent,entity_type,entity_type_id\x82\xd3\xe4\x93\x02N"?/v1/{parent=projects/*/locations/*/featurestores/*}/entityTypes:\x0bentity_type\x12\xb9\x01\n\rGetEntityType\x120.google.cloud.aiplatform.v1.GetEntityTypeRequest\x1a&.google.cloud.aiplatform.v1.EntityType"N\xdaA\x04name\x82\xd3\xe4\x93\x02A\x12?/v1/{name=projects/*/locations/*/featurestores/*/entityTypes/*}\x12\xcc\x01\n\x0fListEntityTypes\x122.google.cloud.aiplatform.v1.ListEntityTypesRequest\x1a3.google.cloud.aiplatform.v1.ListEntityTypesResponse"P\xdaA\x06parent\x82\xd3\xe4\x93\x02A\x12?/v1/{parent=projects/*/locations/*/featurestores/*}/entityTypes\x12\xeb\x01\n\x10UpdateEntityType\x123.google.cloud.aiplatform.v1.UpdateEntityTypeRequest\x1a&.google.cloud.aiplatform.v1.EntityType"z\xdaA\x17entity_type,update_mask\x82\xd3\xe4\x93\x02Z2K/v1/{entity_type.name=projects/*/locations/*/featurestores/*/entityTypes/*}:\x0bentity_type\x12\xf7\x01\n\x10DeleteEntityType\x123.google.cloud.aiplatform.v1.DeleteEntityTypeRequest\x1a\x1d.google.longrunning.Operation"\x8e\x01\xcaA0\n\x15google.protobuf.Empty\x12\x17DeleteOperationMetadata\xdaA\x04name\xdaA\nname,force\x82\xd3\xe4\x93\x02A*?/v1/{name=projects/*/locations/*/featurestores/*/entityTypes/*}\x12\x97\x02\n\rCreateFeature\x120.google.cloud.aiplatform.v1.CreateFeatureRequest\x1a\x1d.google.longrunning.Operation"\xb4\x01\xcaA)\n\x07Feature\x12\x1eCreateFeatureOperationMetadata\xdaA\x0eparent,feature\xdaA\x19parent,feature,feature_id\x82\xd3\xe4\x93\x02U"J/v1/{parent=projects/*/locations/*/featurestores/*/entityTypes/*}/features:\x07feature\x12\xa8\x02\n\x13BatchCreateFeatures\x126.google.cloud.aiplatform.v1.BatchCreateFeaturesRequest\x1a\x1d.google.longrunning.Operation"\xb9\x01\xcaAC\n\x1bBatchCreateFeaturesResponse\x12$BatchCreateFeaturesOperationMetadata\xdaA\x0fparent,requests\x82\xd3\xe4\x93\x02["V/v1/{parent=projects/*/locations/*/featurestores/*/entityTypes/*}/features:batchCreate:\x01*\x12\xbb\x01\n\nGetFeature\x12-.google.cloud.aiplatform.v1.GetFeatureRequest\x1a#.google.cloud.aiplatform.v1.Feature"Y\xdaA\x04name\x82\xd3\xe4\x93\x02L\x12J/v1/{name=projects/*/locations/*/featurestores/*/entityTypes/*/features/*}\x12\xce\x01\n\x0cListFeatures\x12/.google.cloud.aiplatform.v1.ListFeaturesRequest\x1a0.google.cloud.aiplatform.v1.ListFeaturesResponse"[\xdaA\x06parent\x82\xd3\xe4\x93\x02L\x12J/v1/{parent=projects/*/locations/*/featurestores/*/entityTypes/*}/features\x12\xe1\x01\n\rUpdateFeature\x120.google.cloud.aiplatform.v1.UpdateFeatureRequest\x1a#.google.cloud.aiplatform.v1.Feature"y\xdaA\x13feature,update_mask\x82\xd3\xe4\x93\x02]2R/v1/{feature.name=projects/*/locations/*/featurestores/*/entityTypes/*/features/*}:\x07feature\x12\xef\x01\n\rDeleteFeature\x120.google.cloud.aiplatform.v1.DeleteFeatureRequest\x1a\x1d.google.longrunning.Operation"\x8c\x01\xcaA0\n\x15google.protobuf.Empty\x12\x17DeleteOperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02L*J/v1/{name=projects/*/locations/*/featurestores/*/entityTypes/*/features/*}\x12\xa8\x02\n\x13ImportFeatureValues\x126.google.cloud.aiplatform.v1.ImportFeatureValuesRequest\x1a\x1d.google.longrunning.Operation"\xb9\x01\xcaAC\n\x1bImportFeatureValuesResponse\x12$ImportFeatureValuesOperationMetadata\xdaA\x0bentity_type\x82\xd3\xe4\x93\x02_"Z/v1/{entity_type=projects/*/locations/*/featurestores/*/entityTypes/*}:importFeatureValues:\x01*\x12\xab\x02\n\x16BatchReadFeatureValues\x129.google.cloud.aiplatform.v1.BatchReadFeatureValuesRequest\x1a\x1d.google.longrunning.Operation"\xb6\x01\xcaAI\n\x1eBatchReadFeatureValuesResponse\x12\'BatchReadFeatureValuesOperationMetadata\xdaA\x0cfeaturestore\x82\xd3\xe4\x93\x02U"P/v1/{featurestore=projects/*/locations/*/featurestores/*}:batchReadFeatureValues:\x01*\x12\xa8\x02\n\x13ExportFeatureValues\x126.google.cloud.aiplatform.v1.ExportFeatureValuesRequest\x1a\x1d.google.longrunning.Operation"\xb9\x01\xcaAC\n\x1bExportFeatureValuesResponse\x12$ExportFeatureValuesOperationMetadata\xdaA\x0bentity_type\x82\xd3\xe4\x93\x02_"Z/v1/{entity_type=projects/*/locations/*/featurestores/*/entityTypes/*}:exportFeatureValues:\x01*\x12\xa8\x02\n\x13DeleteFeatureValues\x126.google.cloud.aiplatform.v1.DeleteFeatureValuesRequest\x1a\x1d.google.longrunning.Operation"\xb9\x01\xcaAC\n\x1bDeleteFeatureValuesResponse\x12$DeleteFeatureValuesOperationMetadata\xdaA\x0bentity_type\x82\xd3\xe4\x93\x02_"Z/v1/{entity_type=projects/*/locations/*/featurestores/*/entityTypes/*}:deleteFeatureValues:\x01*\x12\xdf\x01\n\x0eSearchFeatures\x121.google.cloud.aiplatform.v1.SearchFeaturesRequest\x1a2.google.cloud.aiplatform.v1.SearchFeaturesResponse"f\xdaA\x08location\xdaA\x0elocation,query\x82\xd3\xe4\x93\x02D\x12B/v1/{location=projects/*/locations/*}/featurestores:searchFeatures\x1aM\xcaA\x19aiplatform.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platformB\xd6\x01\n\x1ecom.google.cloud.aiplatform.v1B\x18FeaturestoreServiceProtoP\x01Z>cloud.google.com/go/aiplatform/apiv1/aiplatformpb;aiplatformpb\xaa\x02\x1aGoogle.Cloud.AIPlatform.V1\xca\x02\x1aGoogle\\Cloud\\AIPlatform\\V1\xea\x02\x1dGoogle::Cloud::AIPlatform::V1b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.aiplatform.v1.featurestore_service_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n\x1ecom.google.cloud.aiplatform.v1B\x18FeaturestoreServiceProtoP\x01Z>cloud.google.com/go/aiplatform/apiv1/aiplatformpb;aiplatformpb\xaa\x02\x1aGoogle.Cloud.AIPlatform.V1\xca\x02\x1aGoogle\\Cloud\\AIPlatform\\V1\xea\x02\x1dGoogle::Cloud::AIPlatform::V1'
+    _globals['_CREATEFEATURESTOREREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEFEATURESTOREREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA(\x12&aiplatform.googleapis.com/Featurestore'
+    _globals['_CREATEFEATURESTOREREQUEST'].fields_by_name['featurestore']._loaded_options = None
+    _globals['_CREATEFEATURESTOREREQUEST'].fields_by_name['featurestore']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEFEATURESTOREREQUEST'].fields_by_name['featurestore_id']._loaded_options = None
+    _globals['_CREATEFEATURESTOREREQUEST'].fields_by_name['featurestore_id']._serialized_options = b'\xe0A\x02'
+    _globals['_GETFEATURESTOREREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETFEATURESTOREREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA(\n&aiplatform.googleapis.com/Featurestore'
+    _globals['_LISTFEATURESTORESREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTFEATURESTORESREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA(\x12&aiplatform.googleapis.com/Featurestore'
+    _globals['_UPDATEFEATURESTOREREQUEST'].fields_by_name['featurestore']._loaded_options = None
+    _globals['_UPDATEFEATURESTOREREQUEST'].fields_by_name['featurestore']._serialized_options = b'\xe0A\x02'
+    _globals['_DELETEFEATURESTOREREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEFEATURESTOREREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA(\n&aiplatform.googleapis.com/Featurestore'
+    _globals['_IMPORTFEATUREVALUESREQUEST_FEATURESPEC'].fields_by_name['id']._loaded_options = None
+    _globals['_IMPORTFEATUREVALUESREQUEST_FEATURESPEC'].fields_by_name['id']._serialized_options = b'\xe0A\x02'
+    _globals['_IMPORTFEATUREVALUESREQUEST'].fields_by_name['entity_type']._loaded_options = None
+    _globals['_IMPORTFEATUREVALUESREQUEST'].fields_by_name['entity_type']._serialized_options = b'\xe0A\x02\xfaA&\n$aiplatform.googleapis.com/EntityType'
+    _globals['_IMPORTFEATUREVALUESREQUEST'].fields_by_name['feature_specs']._loaded_options = None
+    _globals['_IMPORTFEATUREVALUESREQUEST'].fields_by_name['feature_specs']._serialized_options = b'\xe0A\x02'
+    _globals['_BATCHREADFEATUREVALUESREQUEST_PASSTHROUGHFIELD'].fields_by_name['field_name']._loaded_options = None
+    _globals['_BATCHREADFEATUREVALUESREQUEST_PASSTHROUGHFIELD'].fields_by_name['field_name']._serialized_options = b'\xe0A\x02'
+    _globals['_BATCHREADFEATUREVALUESREQUEST_ENTITYTYPESPEC'].fields_by_name['entity_type_id']._loaded_options = None
+    _globals['_BATCHREADFEATUREVALUESREQUEST_ENTITYTYPESPEC'].fields_by_name['entity_type_id']._serialized_options = b'\xe0A\x02'
+    _globals['_BATCHREADFEATUREVALUESREQUEST_ENTITYTYPESPEC'].fields_by_name['feature_selector']._loaded_options = None
+    _globals['_BATCHREADFEATUREVALUESREQUEST_ENTITYTYPESPEC'].fields_by_name['feature_selector']._serialized_options = b'\xe0A\x02'
+    _globals['_BATCHREADFEATUREVALUESREQUEST'].fields_by_name['featurestore']._loaded_options = None
+    _globals['_BATCHREADFEATUREVALUESREQUEST'].fields_by_name['featurestore']._serialized_options = b'\xe0A\x02\xfaA(\n&aiplatform.googleapis.com/Featurestore'
+    _globals['_BATCHREADFEATUREVALUESREQUEST'].fields_by_name['destination']._loaded_options = None
+    _globals['_BATCHREADFEATUREVALUESREQUEST'].fields_by_name['destination']._serialized_options = b'\xe0A\x02'
+    _globals['_BATCHREADFEATUREVALUESREQUEST'].fields_by_name['entity_type_specs']._loaded_options = None
+    _globals['_BATCHREADFEATUREVALUESREQUEST'].fields_by_name['entity_type_specs']._serialized_options = b'\xe0A\x02'
+    _globals['_BATCHREADFEATUREVALUESREQUEST'].fields_by_name['start_time']._loaded_options = None
+    _globals['_BATCHREADFEATUREVALUESREQUEST'].fields_by_name['start_time']._serialized_options = b'\xe0A\x01'
+    _globals['_EXPORTFEATUREVALUESREQUEST'].fields_by_name['entity_type']._loaded_options = None
+    _globals['_EXPORTFEATUREVALUESREQUEST'].fields_by_name['entity_type']._serialized_options = b'\xe0A\x02\xfaA&\n$aiplatform.googleapis.com/EntityType'
+    _globals['_EXPORTFEATUREVALUESREQUEST'].fields_by_name['destination']._loaded_options = None
+    _globals['_EXPORTFEATUREVALUESREQUEST'].fields_by_name['destination']._serialized_options = b'\xe0A\x02'
+    _globals['_EXPORTFEATUREVALUESREQUEST'].fields_by_name['feature_selector']._loaded_options = None
+    _globals['_EXPORTFEATUREVALUESREQUEST'].fields_by_name['feature_selector']._serialized_options = b'\xe0A\x02'
+    _globals['_DESTINATIONFEATURESETTING'].fields_by_name['feature_id']._loaded_options = None
+    _globals['_DESTINATIONFEATURESETTING'].fields_by_name['feature_id']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEENTITYTYPEREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEENTITYTYPEREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA(\n&aiplatform.googleapis.com/Featurestore'
+    _globals['_CREATEENTITYTYPEREQUEST'].fields_by_name['entity_type_id']._loaded_options = None
+    _globals['_CREATEENTITYTYPEREQUEST'].fields_by_name['entity_type_id']._serialized_options = b'\xe0A\x02'
+    _globals['_GETENTITYTYPEREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETENTITYTYPEREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA&\n$aiplatform.googleapis.com/EntityType'
+    _globals['_LISTENTITYTYPESREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTENTITYTYPESREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA&\x12$aiplatform.googleapis.com/EntityType'
+    _globals['_UPDATEENTITYTYPEREQUEST'].fields_by_name['entity_type']._loaded_options = None
+    _globals['_UPDATEENTITYTYPEREQUEST'].fields_by_name['entity_type']._serialized_options = b'\xe0A\x02'
+    _globals['_DELETEENTITYTYPEREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEENTITYTYPEREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA&\n$aiplatform.googleapis.com/EntityType'
+    _globals['_CREATEFEATUREREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEFEATUREREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\x12!aiplatform.googleapis.com/Feature'
+    _globals['_CREATEFEATUREREQUEST'].fields_by_name['feature']._loaded_options = None
+    _globals['_CREATEFEATUREREQUEST'].fields_by_name['feature']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEFEATUREREQUEST'].fields_by_name['feature_id']._loaded_options = None
+    _globals['_CREATEFEATUREREQUEST'].fields_by_name['feature_id']._serialized_options = b'\xe0A\x02'
+    _globals['_BATCHCREATEFEATURESREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_BATCHCREATEFEATURESREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\x12!aiplatform.googleapis.com/Feature'
+    _globals['_BATCHCREATEFEATURESREQUEST'].fields_by_name['requests']._loaded_options = None
+    _globals['_BATCHCREATEFEATURESREQUEST'].fields_by_name['requests']._serialized_options = b'\xe0A\x02'
+    _globals['_GETFEATUREREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETFEATUREREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA#\n!aiplatform.googleapis.com/Feature'
+    _globals['_LISTFEATURESREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTFEATURESREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\x12!aiplatform.googleapis.com/Feature'
+    _globals['_SEARCHFEATURESREQUEST'].fields_by_name['location']._loaded_options = None
+    _globals['_SEARCHFEATURESREQUEST'].fields_by_name['location']._serialized_options = b'\xe0A\x02\xfaA#\n!locations.googleapis.com/Location'
+    _globals['_UPDATEFEATUREREQUEST'].fields_by_name['feature']._loaded_options = None
+    _globals['_UPDATEFEATUREREQUEST'].fields_by_name['feature']._serialized_options = b'\xe0A\x02'
+    _globals['_DELETEFEATUREREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEFEATUREREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA#\n!aiplatform.googleapis.com/Feature'
+    _globals['_DELETEFEATUREVALUESREQUEST_SELECTENTITY'].fields_by_name['entity_id_selector']._loaded_options = None
+    _globals['_DELETEFEATUREVALUESREQUEST_SELECTENTITY'].fields_by_name['entity_id_selector']._serialized_options = b'\xe0A\x02'
+    _globals['_DELETEFEATUREVALUESREQUEST_SELECTTIMERANGEANDFEATURE'].fields_by_name['time_range']._loaded_options = None
+    _globals['_DELETEFEATUREVALUESREQUEST_SELECTTIMERANGEANDFEATURE'].fields_by_name['time_range']._serialized_options = b'\xe0A\x02'
+    _globals['_DELETEFEATUREVALUESREQUEST_SELECTTIMERANGEANDFEATURE'].fields_by_name['feature_selector']._loaded_options = None
+    _globals['_DELETEFEATUREVALUESREQUEST_SELECTTIMERANGEANDFEATURE'].fields_by_name['feature_selector']._serialized_options = b'\xe0A\x02'
+    _globals['_DELETEFEATUREVALUESREQUEST'].fields_by_name['entity_type']._loaded_options = None
+    _globals['_DELETEFEATUREVALUESREQUEST'].fields_by_name['entity_type']._serialized_options = b'\xe0A\x02\xfaA&\n$aiplatform.googleapis.com/EntityType'
+    _globals['_FEATURESTORESERVICE']._loaded_options = None
+    _globals['_FEATURESTORESERVICE']._serialized_options = b'\xcaA\x19aiplatform.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platform'
+    _globals['_FEATURESTORESERVICE'].methods_by_name['CreateFeaturestore']._loaded_options = None
+    _globals['_FEATURESTORESERVICE'].methods_by_name['CreateFeaturestore']._serialized_options = b'\xcaA3\n\x0cFeaturestore\x12#CreateFeaturestoreOperationMetadata\xdaA\x13parent,featurestore\xdaA#parent,featurestore,featurestore_id\x82\xd3\xe4\x93\x02A"1/v1/{parent=projects/*/locations/*}/featurestores:\x0cfeaturestore'
+    _globals['_FEATURESTORESERVICE'].methods_by_name['GetFeaturestore']._loaded_options = None
+    _globals['_FEATURESTORESERVICE'].methods_by_name['GetFeaturestore']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x023\x121/v1/{name=projects/*/locations/*/featurestores/*}'
+    _globals['_FEATURESTORESERVICE'].methods_by_name['ListFeaturestores']._loaded_options = None
+    _globals['_FEATURESTORESERVICE'].methods_by_name['ListFeaturestores']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x023\x121/v1/{parent=projects/*/locations/*}/featurestores'
+    _globals['_FEATURESTORESERVICE'].methods_by_name['UpdateFeaturestore']._loaded_options = None
+    _globals['_FEATURESTORESERVICE'].methods_by_name['UpdateFeaturestore']._serialized_options = b'\xcaA3\n\x0cFeaturestore\x12#UpdateFeaturestoreOperationMetadata\xdaA\x18featurestore,update_mask\x82\xd3\xe4\x93\x02N2>/v1/{featurestore.name=projects/*/locations/*/featurestores/*}:\x0cfeaturestore'
+    _globals['_FEATURESTORESERVICE'].methods_by_name['DeleteFeaturestore']._loaded_options = None
+    _globals['_FEATURESTORESERVICE'].methods_by_name['DeleteFeaturestore']._serialized_options = b'\xcaA0\n\x15google.protobuf.Empty\x12\x17DeleteOperationMetadata\xdaA\x04name\xdaA\nname,force\x82\xd3\xe4\x93\x023*1/v1/{name=projects/*/locations/*/featurestores/*}'
+    _globals['_FEATURESTORESERVICE'].methods_by_name['CreateEntityType']._loaded_options = None
+    _globals['_FEATURESTORESERVICE'].methods_by_name['CreateEntityType']._serialized_options = b'\xcaA/\n\nEntityType\x12!CreateEntityTypeOperationMetadata\xdaA\x12parent,entity_type\xdaA!parent,entity_type,entity_type_id\x82\xd3\xe4\x93\x02N"?/v1/{parent=projects/*/locations/*/featurestores/*}/entityTypes:\x0bentity_type'
+    _globals['_FEATURESTORESERVICE'].methods_by_name['GetEntityType']._loaded_options = None
+    _globals['_FEATURESTORESERVICE'].methods_by_name['GetEntityType']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02A\x12?/v1/{name=projects/*/locations/*/featurestores/*/entityTypes/*}'
+    _globals['_FEATURESTORESERVICE'].methods_by_name['ListEntityTypes']._loaded_options = None
+    _globals['_FEATURESTORESERVICE'].methods_by_name['ListEntityTypes']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02A\x12?/v1/{parent=projects/*/locations/*/featurestores/*}/entityTypes'
+    _globals['_FEATURESTORESERVICE'].methods_by_name['UpdateEntityType']._loaded_options = None
+    _globals['_FEATURESTORESERVICE'].methods_by_name['UpdateEntityType']._serialized_options = b'\xdaA\x17entity_type,update_mask\x82\xd3\xe4\x93\x02Z2K/v1/{entity_type.name=projects/*/locations/*/featurestores/*/entityTypes/*}:\x0bentity_type'
+    _globals['_FEATURESTORESERVICE'].methods_by_name['DeleteEntityType']._loaded_options = None
+    _globals['_FEATURESTORESERVICE'].methods_by_name['DeleteEntityType']._serialized_options = b'\xcaA0\n\x15google.protobuf.Empty\x12\x17DeleteOperationMetadata\xdaA\x04name\xdaA\nname,force\x82\xd3\xe4\x93\x02A*?/v1/{name=projects/*/locations/*/featurestores/*/entityTypes/*}'
+    _globals['_FEATURESTORESERVICE'].methods_by_name['CreateFeature']._loaded_options = None
+    _globals['_FEATURESTORESERVICE'].methods_by_name['CreateFeature']._serialized_options = b'\xcaA)\n\x07Feature\x12\x1eCreateFeatureOperationMetadata\xdaA\x0eparent,feature\xdaA\x19parent,feature,feature_id\x82\xd3\xe4\x93\x02U"J/v1/{parent=projects/*/locations/*/featurestores/*/entityTypes/*}/features:\x07feature'
+    _globals['_FEATURESTORESERVICE'].methods_by_name['BatchCreateFeatures']._loaded_options = None
+    _globals['_FEATURESTORESERVICE'].methods_by_name['BatchCreateFeatures']._serialized_options = b'\xcaAC\n\x1bBatchCreateFeaturesResponse\x12$BatchCreateFeaturesOperationMetadata\xdaA\x0fparent,requests\x82\xd3\xe4\x93\x02["V/v1/{parent=projects/*/locations/*/featurestores/*/entityTypes/*}/features:batchCreate:\x01*'
+    _globals['_FEATURESTORESERVICE'].methods_by_name['GetFeature']._loaded_options = None
+    _globals['_FEATURESTORESERVICE'].methods_by_name['GetFeature']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02L\x12J/v1/{name=projects/*/locations/*/featurestores/*/entityTypes/*/features/*}'
+    _globals['_FEATURESTORESERVICE'].methods_by_name['ListFeatures']._loaded_options = None
+    _globals['_FEATURESTORESERVICE'].methods_by_name['ListFeatures']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02L\x12J/v1/{parent=projects/*/locations/*/featurestores/*/entityTypes/*}/features'
+    _globals['_FEATURESTORESERVICE'].methods_by_name['UpdateFeature']._loaded_options = None
+    _globals['_FEATURESTORESERVICE'].methods_by_name['UpdateFeature']._serialized_options = b'\xdaA\x13feature,update_mask\x82\xd3\xe4\x93\x02]2R/v1/{feature.name=projects/*/locations/*/featurestores/*/entityTypes/*/features/*}:\x07feature'
+    _globals['_FEATURESTORESERVICE'].methods_by_name['DeleteFeature']._loaded_options = None
+    _globals['_FEATURESTORESERVICE'].methods_by_name['DeleteFeature']._serialized_options = b'\xcaA0\n\x15google.protobuf.Empty\x12\x17DeleteOperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02L*J/v1/{name=projects/*/locations/*/featurestores/*/entityTypes/*/features/*}'
+    _globals['_FEATURESTORESERVICE'].methods_by_name['ImportFeatureValues']._loaded_options = None
+    _globals['_FEATURESTORESERVICE'].methods_by_name['ImportFeatureValues']._serialized_options = b'\xcaAC\n\x1bImportFeatureValuesResponse\x12$ImportFeatureValuesOperationMetadata\xdaA\x0bentity_type\x82\xd3\xe4\x93\x02_"Z/v1/{entity_type=projects/*/locations/*/featurestores/*/entityTypes/*}:importFeatureValues:\x01*'
+    _globals['_FEATURESTORESERVICE'].methods_by_name['BatchReadFeatureValues']._loaded_options = None
+    _globals['_FEATURESTORESERVICE'].methods_by_name['BatchReadFeatureValues']._serialized_options = b'\xcaAI\n\x1eBatchReadFeatureValuesResponse\x12\'BatchReadFeatureValuesOperationMetadata\xdaA\x0cfeaturestore\x82\xd3\xe4\x93\x02U"P/v1/{featurestore=projects/*/locations/*/featurestores/*}:batchReadFeatureValues:\x01*'
+    _globals['_FEATURESTORESERVICE'].methods_by_name['ExportFeatureValues']._loaded_options = None
+    _globals['_FEATURESTORESERVICE'].methods_by_name['ExportFeatureValues']._serialized_options = b'\xcaAC\n\x1bExportFeatureValuesResponse\x12$ExportFeatureValuesOperationMetadata\xdaA\x0bentity_type\x82\xd3\xe4\x93\x02_"Z/v1/{entity_type=projects/*/locations/*/featurestores/*/entityTypes/*}:exportFeatureValues:\x01*'
+    _globals['_FEATURESTORESERVICE'].methods_by_name['DeleteFeatureValues']._loaded_options = None
+    _globals['_FEATURESTORESERVICE'].methods_by_name['DeleteFeatureValues']._serialized_options = b'\xcaAC\n\x1bDeleteFeatureValuesResponse\x12$DeleteFeatureValuesOperationMetadata\xdaA\x0bentity_type\x82\xd3\xe4\x93\x02_"Z/v1/{entity_type=projects/*/locations/*/featurestores/*/entityTypes/*}:deleteFeatureValues:\x01*'
+    _globals['_FEATURESTORESERVICE'].methods_by_name['SearchFeatures']._loaded_options = None
+    _globals['_FEATURESTORESERVICE'].methods_by_name['SearchFeatures']._serialized_options = b'\xdaA\x08location\xdaA\x0elocation,query\x82\xd3\xe4\x93\x02D\x12B/v1/{location=projects/*/locations/*}/featurestores:searchFeatures'
+    _globals['_CREATEFEATURESTOREREQUEST']._serialized_start = 629
+    _globals['_CREATEFEATURESTOREREQUEST']._serialized_end = 819
+    _globals['_GETFEATURESTOREREQUEST']._serialized_start = 821
+    _globals['_GETFEATURESTOREREQUEST']._serialized_end = 907
+    _globals['_LISTFEATURESTORESREQUEST']._serialized_start = 910
+    _globals['_LISTFEATURESTORESREQUEST']._serialized_end = 1120
+    _globals['_LISTFEATURESTORESRESPONSE']._serialized_start = 1122
+    _globals['_LISTFEATURESTORESRESPONSE']._serialized_end = 1239
+    _globals['_UPDATEFEATURESTOREREQUEST']._serialized_start = 1242
+    _globals['_UPDATEFEATURESTOREREQUEST']._serialized_end = 1387
+    _globals['_DELETEFEATURESTOREREQUEST']._serialized_start = 1389
+    _globals['_DELETEFEATURESTOREREQUEST']._serialized_end = 1493
+    _globals['_IMPORTFEATUREVALUESREQUEST']._serialized_start = 1496
+    _globals['_IMPORTFEATUREVALUESREQUEST']._serialized_end = 2166
+    _globals['_IMPORTFEATUREVALUESREQUEST_FEATURESPEC']._serialized_start = 2081
+    _globals['_IMPORTFEATUREVALUESREQUEST_FEATURESPEC']._serialized_end = 2133
+    _globals['_IMPORTFEATUREVALUESRESPONSE']._serialized_start = 2169
+    _globals['_IMPORTFEATUREVALUESRESPONSE']._serialized_end = 2342
+    _globals['_BATCHREADFEATUREVALUESREQUEST']._serialized_start = 2345
+    _globals['_BATCHREADFEATUREVALUESREQUEST']._serialized_end = 3194
+    _globals['_BATCHREADFEATUREVALUESREQUEST_PASSTHROUGHFIELD']._serialized_start = 2939
+    _globals['_BATCHREADFEATUREVALUESREQUEST_PASSTHROUGHFIELD']._serialized_end = 2982
+    _globals['_BATCHREADFEATUREVALUESREQUEST_ENTITYTYPESPEC']._serialized_start = 2985
+    _globals['_BATCHREADFEATUREVALUESREQUEST_ENTITYTYPESPEC']._serialized_end = 3179
+    _globals['_EXPORTFEATUREVALUESREQUEST']._serialized_start = 3197
+    _globals['_EXPORTFEATUREVALUESREQUEST']._serialized_end = 3941
+    _globals['_EXPORTFEATUREVALUESREQUEST_SNAPSHOTEXPORT']._serialized_start = 3710
+    _globals['_EXPORTFEATUREVALUESREQUEST_SNAPSHOTEXPORT']._serialized_end = 3825
+    _globals['_EXPORTFEATUREVALUESREQUEST_FULLEXPORT']._serialized_start = 3827
+    _globals['_EXPORTFEATUREVALUESREQUEST_FULLEXPORT']._serialized_end = 3933
+    _globals['_DESTINATIONFEATURESETTING']._serialized_start = 3943
+    _globals['_DESTINATIONFEATURESETTING']._serialized_end = 4022
+    _globals['_FEATUREVALUEDESTINATION']._serialized_start = 4025
+    _globals['_FEATUREVALUEDESTINATION']._serialized_end = 4298
+    _globals['_EXPORTFEATUREVALUESRESPONSE']._serialized_start = 4300
+    _globals['_EXPORTFEATUREVALUESRESPONSE']._serialized_end = 4329
+    _globals['_BATCHREADFEATUREVALUESRESPONSE']._serialized_start = 4331
+    _globals['_BATCHREADFEATUREVALUESRESPONSE']._serialized_end = 4363
+    _globals['_CREATEENTITYTYPEREQUEST']._serialized_start = 4366
+    _globals['_CREATEENTITYTYPEREQUEST']._serialized_end = 4545
+    _globals['_GETENTITYTYPEREQUEST']._serialized_start = 4547
+    _globals['_GETENTITYTYPEREQUEST']._serialized_end = 4629
+    _globals['_LISTENTITYTYPESREQUEST']._serialized_start = 4632
+    _globals['_LISTENTITYTYPESREQUEST']._serialized_end = 4838
+    _globals['_LISTENTITYTYPESRESPONSE']._serialized_start = 4840
+    _globals['_LISTENTITYTYPESRESPONSE']._serialized_end = 4952
+    _globals['_UPDATEENTITYTYPEREQUEST']._serialized_start = 4955
+    _globals['_UPDATEENTITYTYPEREQUEST']._serialized_end = 5095
+    _globals['_DELETEENTITYTYPEREQUEST']._serialized_start = 5097
+    _globals['_DELETEENTITYTYPEREQUEST']._serialized_end = 5197
+    _globals['_CREATEFEATUREREQUEST']._serialized_start = 5200
+    _globals['_CREATEFEATUREREQUEST']._serialized_end = 5365
+    _globals['_BATCHCREATEFEATURESREQUEST']._serialized_start = 5368
+    _globals['_BATCHCREATEFEATURESREQUEST']._serialized_end = 5528
+    _globals['_BATCHCREATEFEATURESRESPONSE']._serialized_start = 5530
+    _globals['_BATCHCREATEFEATURESRESPONSE']._serialized_end = 5614
+    _globals['_GETFEATUREREQUEST']._serialized_start = 5616
+    _globals['_GETFEATUREREQUEST']._serialized_end = 5692
+    _globals['_LISTFEATURESREQUEST']._serialized_start = 5695
+    _globals['_LISTFEATURESREQUEST']._serialized_end = 5923
+    _globals['_LISTFEATURESRESPONSE']._serialized_start = 5925
+    _globals['_LISTFEATURESRESPONSE']._serialized_end = 6027
+    _globals['_SEARCHFEATURESREQUEST']._serialized_start = 6030
+    _globals['_SEARCHFEATURESREQUEST']._serialized_end = 6168
+    _globals['_SEARCHFEATURESRESPONSE']._serialized_start = 6170
+    _globals['_SEARCHFEATURESRESPONSE']._serialized_end = 6274
+    _globals['_UPDATEFEATUREREQUEST']._serialized_start = 6277
+    _globals['_UPDATEFEATUREREQUEST']._serialized_end = 6407
+    _globals['_DELETEFEATUREREQUEST']._serialized_start = 6409
+    _globals['_DELETEFEATUREREQUEST']._serialized_end = 6488
+    _globals['_CREATEFEATURESTOREOPERATIONMETADATA']._serialized_start = 6490
+    _globals['_CREATEFEATURESTOREOPERATIONMETADATA']._serialized_end = 6607
+    _globals['_UPDATEFEATURESTOREOPERATIONMETADATA']._serialized_start = 6609
+    _globals['_UPDATEFEATURESTOREOPERATIONMETADATA']._serialized_end = 6726
+    _globals['_IMPORTFEATUREVALUESOPERATIONMETADATA']._serialized_start = 6729
+    _globals['_IMPORTFEATUREVALUESOPERATIONMETADATA']._serialized_end = 7044
+    _globals['_EXPORTFEATUREVALUESOPERATIONMETADATA']._serialized_start = 7046
+    _globals['_EXPORTFEATUREVALUESOPERATIONMETADATA']._serialized_end = 7164
+    _globals['_BATCHREADFEATUREVALUESOPERATIONMETADATA']._serialized_start = 7166
+    _globals['_BATCHREADFEATUREVALUESOPERATIONMETADATA']._serialized_end = 7287
+    _globals['_DELETEFEATUREVALUESOPERATIONMETADATA']._serialized_start = 7289
+    _globals['_DELETEFEATUREVALUESOPERATIONMETADATA']._serialized_end = 7407
+    _globals['_CREATEENTITYTYPEOPERATIONMETADATA']._serialized_start = 7409
+    _globals['_CREATEENTITYTYPEOPERATIONMETADATA']._serialized_end = 7524
+    _globals['_CREATEFEATUREOPERATIONMETADATA']._serialized_start = 7526
+    _globals['_CREATEFEATUREOPERATIONMETADATA']._serialized_end = 7638
+    _globals['_BATCHCREATEFEATURESOPERATIONMETADATA']._serialized_start = 7640
+    _globals['_BATCHCREATEFEATURESOPERATIONMETADATA']._serialized_end = 7758
+    _globals['_DELETEFEATUREVALUESREQUEST']._serialized_start = 7761
+    _globals['_DELETEFEATUREVALUESREQUEST']._serialized_end = 8374
+    _globals['_DELETEFEATUREVALUESREQUEST_SELECTENTITY']._serialized_start = 8075
+    _globals['_DELETEFEATUREVALUESREQUEST_SELECTENTITY']._serialized_end = 8168
+    _globals['_DELETEFEATUREVALUESREQUEST_SELECTTIMERANGEANDFEATURE']._serialized_start = 8171
+    _globals['_DELETEFEATUREVALUESREQUEST_SELECTTIMERANGEANDFEATURE']._serialized_end = 8358
+    _globals['_DELETEFEATUREVALUESRESPONSE']._serialized_start = 8377
+    _globals['_DELETEFEATUREVALUESRESPONSE']._serialized_end = 8907
+    _globals['_DELETEFEATUREVALUESRESPONSE_SELECTENTITY']._serialized_start = 8627
+    _globals['_DELETEFEATUREVALUESRESPONSE_SELECTENTITY']._serialized_end = 8736
+    _globals['_DELETEFEATUREVALUESRESPONSE_SELECTTIMERANGEANDFEATURE']._serialized_start = 8739
+    _globals['_DELETEFEATUREVALUESRESPONSE_SELECTTIMERANGEANDFEATURE']._serialized_end = 8895
+    _globals['_ENTITYIDSELECTOR']._serialized_start = 8909
+    _globals['_ENTITYIDSELECTOR']._serialized_end = 9032
+    _globals['_FEATURESTORESERVICE']._serialized_start = 9035
+    _globals['_FEATURESTORESERVICE']._serialized_end = 14385

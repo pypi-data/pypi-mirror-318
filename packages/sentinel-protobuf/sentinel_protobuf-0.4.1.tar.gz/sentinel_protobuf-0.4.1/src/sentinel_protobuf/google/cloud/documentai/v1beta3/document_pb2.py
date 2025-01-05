@@ -1,0 +1,209 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/cloud/documentai/v1beta3/document.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.cloud.documentai.v1beta3 import barcode_pb2 as google_dot_cloud_dot_documentai_dot_v1beta3_dot_barcode__pb2
+from .....google.cloud.documentai.v1beta3 import geometry_pb2 as google_dot_cloud_dot_documentai_dot_v1beta3_dot_geometry__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+from .....google.rpc import status_pb2 as google_dot_rpc_dot_status__pb2
+from .....google.type import color_pb2 as google_dot_type_dot_color__pb2
+from .....google.type import date_pb2 as google_dot_type_dot_date__pb2
+from .....google.type import datetime_pb2 as google_dot_type_dot_datetime__pb2
+from .....google.type import money_pb2 as google_dot_type_dot_money__pb2
+from .....google.type import postal_address_pb2 as google_dot_type_dot_postal__address__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n.google/cloud/documentai/v1beta3/document.proto\x12\x1fgoogle.cloud.documentai.v1beta3\x1a\x1fgoogle/api/field_behavior.proto\x1a-google/cloud/documentai/v1beta3/barcode.proto\x1a.google/cloud/documentai/v1beta3/geometry.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x17google/rpc/status.proto\x1a\x17google/type/color.proto\x1a\x16google/type/date.proto\x1a\x1agoogle/type/datetime.proto\x1a\x17google/type/money.proto\x1a google/type/postal_address.proto"\xa7\\\n\x08Document\x12\x12\n\x03uri\x18\x01 \x01(\tB\x03\xe0A\x01H\x00\x12\x16\n\x07content\x18\x02 \x01(\x0cB\x03\xe0A\x01H\x00\x12\x11\n\tmime_type\x18\x03 \x01(\t\x12\x11\n\x04text\x18\x04 \x01(\tB\x03\xe0A\x01\x12H\n\x0btext_styles\x18\x05 \x03(\x0b2/.google.cloud.documentai.v1beta3.Document.StyleB\x02\x18\x01\x12=\n\x05pages\x18\x06 \x03(\x0b2..google.cloud.documentai.v1beta3.Document.Page\x12B\n\x08entities\x18\x07 \x03(\x0b20.google.cloud.documentai.v1beta3.Document.Entity\x12R\n\x10entity_relations\x18\x08 \x03(\x0b28.google.cloud.documentai.v1beta3.Document.EntityRelation\x12J\n\x0ctext_changes\x18\x0e \x03(\x0b24.google.cloud.documentai.v1beta3.Document.TextChange\x12G\n\nshard_info\x18\t \x01(\x0b23.google.cloud.documentai.v1beta3.Document.ShardInfo\x12!\n\x05error\x18\n \x01(\x0b2\x12.google.rpc.Status\x12E\n\trevisions\x18\r \x03(\x0b22.google.cloud.documentai.v1beta3.Document.Revision\x12Q\n\x0fdocument_layout\x18\x11 \x01(\x0b28.google.cloud.documentai.v1beta3.Document.DocumentLayout\x12S\n\x10chunked_document\x18\x12 \x01(\x0b29.google.cloud.documentai.v1beta3.Document.ChunkedDocument\x1aJ\n\tShardInfo\x12\x13\n\x0bshard_index\x18\x01 \x01(\x03\x12\x13\n\x0bshard_count\x18\x02 \x01(\x03\x12\x13\n\x0btext_offset\x18\x03 \x01(\x03\x1a\xef\x02\n\x05Style\x12I\n\x0btext_anchor\x18\x01 \x01(\x0b24.google.cloud.documentai.v1beta3.Document.TextAnchor\x12!\n\x05color\x18\x02 \x01(\x0b2\x12.google.type.Color\x12,\n\x10background_color\x18\x03 \x01(\x0b2\x12.google.type.Color\x12\x13\n\x0bfont_weight\x18\x04 \x01(\t\x12\x12\n\ntext_style\x18\x05 \x01(\t\x12\x17\n\x0ftext_decoration\x18\x06 \x01(\t\x12K\n\tfont_size\x18\x07 \x01(\x0b28.google.cloud.documentai.v1beta3.Document.Style.FontSize\x12\x13\n\x0bfont_family\x18\x08 \x01(\t\x1a&\n\x08FontSize\x12\x0c\n\x04size\x18\x01 \x01(\x02\x12\x0c\n\x04unit\x18\x02 \x01(\t\x1a\xd0+\n\x04Page\x12\x13\n\x0bpage_number\x18\x01 \x01(\x05\x12C\n\x05image\x18\r \x01(\x0b24.google.cloud.documentai.v1beta3.Document.Page.Image\x12I\n\ntransforms\x18\x0e \x03(\x0b25.google.cloud.documentai.v1beta3.Document.Page.Matrix\x12K\n\tdimension\x18\x02 \x01(\x0b28.google.cloud.documentai.v1beta3.Document.Page.Dimension\x12E\n\x06layout\x18\x03 \x01(\x0b25.google.cloud.documentai.v1beta3.Document.Page.Layout\x12[\n\x12detected_languages\x18\x04 \x03(\x0b2?.google.cloud.documentai.v1beta3.Document.Page.DetectedLanguage\x12D\n\x06blocks\x18\x05 \x03(\x0b24.google.cloud.documentai.v1beta3.Document.Page.Block\x12L\n\nparagraphs\x18\x06 \x03(\x0b28.google.cloud.documentai.v1beta3.Document.Page.Paragraph\x12B\n\x05lines\x18\x07 \x03(\x0b23.google.cloud.documentai.v1beta3.Document.Page.Line\x12D\n\x06tokens\x18\x08 \x03(\x0b24.google.cloud.documentai.v1beta3.Document.Page.Token\x12U\n\x0fvisual_elements\x18\t \x03(\x0b2<.google.cloud.documentai.v1beta3.Document.Page.VisualElement\x12D\n\x06tables\x18\n \x03(\x0b24.google.cloud.documentai.v1beta3.Document.Page.Table\x12M\n\x0bform_fields\x18\x0b \x03(\x0b28.google.cloud.documentai.v1beta3.Document.Page.FormField\x12F\n\x07symbols\x18\x0c \x03(\x0b25.google.cloud.documentai.v1beta3.Document.Page.Symbol\x12Y\n\x11detected_barcodes\x18\x0f \x03(\x0b2>.google.cloud.documentai.v1beta3.Document.Page.DetectedBarcode\x12_\n\x14image_quality_scores\x18\x11 \x01(\x0b2A.google.cloud.documentai.v1beta3.Document.Page.ImageQualityScores\x12L\n\nprovenance\x18\x10 \x01(\x0b24.google.cloud.documentai.v1beta3.Document.ProvenanceB\x02\x18\x01\x1a8\n\tDimension\x12\r\n\x05width\x18\x01 \x01(\x02\x12\x0e\n\x06height\x18\x02 \x01(\x02\x12\x0c\n\x04unit\x18\x03 \x01(\t\x1aJ\n\x05Image\x12\x0f\n\x07content\x18\x01 \x01(\x0c\x12\x11\n\tmime_type\x18\x02 \x01(\t\x12\r\n\x05width\x18\x03 \x01(\x05\x12\x0e\n\x06height\x18\x04 \x01(\x05\x1a@\n\x06Matrix\x12\x0c\n\x04rows\x18\x01 \x01(\x05\x12\x0c\n\x04cols\x18\x02 \x01(\x05\x12\x0c\n\x04type\x18\x03 \x01(\x05\x12\x0c\n\x04data\x18\x04 \x01(\x0c\x1a\xec\x02\n\x06Layout\x12I\n\x0btext_anchor\x18\x01 \x01(\x0b24.google.cloud.documentai.v1beta3.Document.TextAnchor\x12\x12\n\nconfidence\x18\x02 \x01(\x02\x12D\n\rbounding_poly\x18\x03 \x01(\x0b2-.google.cloud.documentai.v1beta3.BoundingPoly\x12V\n\x0borientation\x18\x04 \x01(\x0e2A.google.cloud.documentai.v1beta3.Document.Page.Layout.Orientation"e\n\x0bOrientation\x12\x1b\n\x17ORIENTATION_UNSPECIFIED\x10\x00\x12\x0b\n\x07PAGE_UP\x10\x01\x12\x0e\n\nPAGE_RIGHT\x10\x02\x12\r\n\tPAGE_DOWN\x10\x03\x12\r\n\tPAGE_LEFT\x10\x04\x1a\xf9\x01\n\x05Block\x12E\n\x06layout\x18\x01 \x01(\x0b25.google.cloud.documentai.v1beta3.Document.Page.Layout\x12[\n\x12detected_languages\x18\x02 \x03(\x0b2?.google.cloud.documentai.v1beta3.Document.Page.DetectedLanguage\x12L\n\nprovenance\x18\x03 \x01(\x0b24.google.cloud.documentai.v1beta3.Document.ProvenanceB\x02\x18\x01\x1a\xfd\x01\n\tParagraph\x12E\n\x06layout\x18\x01 \x01(\x0b25.google.cloud.documentai.v1beta3.Document.Page.Layout\x12[\n\x12detected_languages\x18\x02 \x03(\x0b2?.google.cloud.documentai.v1beta3.Document.Page.DetectedLanguage\x12L\n\nprovenance\x18\x03 \x01(\x0b24.google.cloud.documentai.v1beta3.Document.ProvenanceB\x02\x18\x01\x1a\xf8\x01\n\x04Line\x12E\n\x06layout\x18\x01 \x01(\x0b25.google.cloud.documentai.v1beta3.Document.Page.Layout\x12[\n\x12detected_languages\x18\x02 \x03(\x0b2?.google.cloud.documentai.v1beta3.Document.Page.DetectedLanguage\x12L\n\nprovenance\x18\x03 \x01(\x0b24.google.cloud.documentai.v1beta3.Document.ProvenanceB\x02\x18\x01\x1a\xbc\x07\n\x05Token\x12E\n\x06layout\x18\x01 \x01(\x0b25.google.cloud.documentai.v1beta3.Document.Page.Layout\x12Z\n\x0edetected_break\x18\x02 \x01(\x0b2B.google.cloud.documentai.v1beta3.Document.Page.Token.DetectedBreak\x12[\n\x12detected_languages\x18\x03 \x03(\x0b2?.google.cloud.documentai.v1beta3.Document.Page.DetectedLanguage\x12L\n\nprovenance\x18\x04 \x01(\x0b24.google.cloud.documentai.v1beta3.Document.ProvenanceB\x02\x18\x01\x12R\n\nstyle_info\x18\x05 \x01(\x0b2>.google.cloud.documentai.v1beta3.Document.Page.Token.StyleInfo\x1a\xab\x01\n\rDetectedBreak\x12U\n\x04type\x18\x01 \x01(\x0e2G.google.cloud.documentai.v1beta3.Document.Page.Token.DetectedBreak.Type"C\n\x04Type\x12\x14\n\x10TYPE_UNSPECIFIED\x10\x00\x12\t\n\x05SPACE\x10\x01\x12\x0e\n\nWIDE_SPACE\x10\x02\x12\n\n\x06HYPHEN\x10\x03\x1a\xe2\x02\n\tStyleInfo\x12\x11\n\tfont_size\x18\x01 \x01(\x05\x12\x17\n\x0fpixel_font_size\x18\x02 \x01(\x01\x12\x16\n\x0eletter_spacing\x18\x03 \x01(\x01\x12\x11\n\tfont_type\x18\x04 \x01(\t\x12\x0c\n\x04bold\x18\x05 \x01(\x08\x12\x0e\n\x06italic\x18\x06 \x01(\x08\x12\x12\n\nunderlined\x18\x07 \x01(\x08\x12\x11\n\tstrikeout\x18\x08 \x01(\x08\x12\x11\n\tsubscript\x18\t \x01(\x08\x12\x13\n\x0bsuperscript\x18\n \x01(\x08\x12\x11\n\tsmallcaps\x18\x0b \x01(\x08\x12\x13\n\x0bfont_weight\x18\x0c \x01(\x05\x12\x13\n\x0bhandwritten\x18\r \x01(\x08\x12&\n\ntext_color\x18\x0e \x01(\x0b2\x12.google.type.Color\x12,\n\x10background_color\x18\x0f \x01(\x0b2\x12.google.type.Color\x1a\xac\x01\n\x06Symbol\x12E\n\x06layout\x18\x01 \x01(\x0b25.google.cloud.documentai.v1beta3.Document.Page.Layout\x12[\n\x12detected_languages\x18\x02 \x03(\x0b2?.google.cloud.documentai.v1beta3.Document.Page.DetectedLanguage\x1a\xc1\x01\n\rVisualElement\x12E\n\x06layout\x18\x01 \x01(\x0b25.google.cloud.documentai.v1beta3.Document.Page.Layout\x12\x0c\n\x04type\x18\x02 \x01(\t\x12[\n\x12detected_languages\x18\x03 \x03(\x0b2?.google.cloud.documentai.v1beta3.Document.Page.DetectedLanguage\x1a\xd0\x05\n\x05Table\x12E\n\x06layout\x18\x01 \x01(\x0b25.google.cloud.documentai.v1beta3.Document.Page.Layout\x12R\n\x0bheader_rows\x18\x02 \x03(\x0b2=.google.cloud.documentai.v1beta3.Document.Page.Table.TableRow\x12P\n\tbody_rows\x18\x03 \x03(\x0b2=.google.cloud.documentai.v1beta3.Document.Page.Table.TableRow\x12[\n\x12detected_languages\x18\x04 \x03(\x0b2?.google.cloud.documentai.v1beta3.Document.Page.DetectedLanguage\x12L\n\nprovenance\x18\x05 \x01(\x0b24.google.cloud.documentai.v1beta3.Document.ProvenanceB\x02\x18\x01\x1aY\n\x08TableRow\x12M\n\x05cells\x18\x01 \x03(\x0b2>.google.cloud.documentai.v1beta3.Document.Page.Table.TableCell\x1a\xd3\x01\n\tTableCell\x12E\n\x06layout\x18\x01 \x01(\x0b25.google.cloud.documentai.v1beta3.Document.Page.Layout\x12\x10\n\x08row_span\x18\x02 \x01(\x05\x12\x10\n\x08col_span\x18\x03 \x01(\x05\x12[\n\x12detected_languages\x18\x04 \x03(\x0b2?.google.cloud.documentai.v1beta3.Document.Page.DetectedLanguage\x1a\xff\x03\n\tFormField\x12I\n\nfield_name\x18\x01 \x01(\x0b25.google.cloud.documentai.v1beta3.Document.Page.Layout\x12J\n\x0bfield_value\x18\x02 \x01(\x0b25.google.cloud.documentai.v1beta3.Document.Page.Layout\x12`\n\x17name_detected_languages\x18\x03 \x03(\x0b2?.google.cloud.documentai.v1beta3.Document.Page.DetectedLanguage\x12a\n\x18value_detected_languages\x18\x04 \x03(\x0b2?.google.cloud.documentai.v1beta3.Document.Page.DetectedLanguage\x12\x12\n\nvalue_type\x18\x05 \x01(\t\x12\x1a\n\x12corrected_key_text\x18\x06 \x01(\t\x12\x1c\n\x14corrected_value_text\x18\x07 \x01(\t\x12H\n\nprovenance\x18\x08 \x01(\x0b24.google.cloud.documentai.v1beta3.Document.Provenance\x1a\x93\x01\n\x0fDetectedBarcode\x12E\n\x06layout\x18\x01 \x01(\x0b25.google.cloud.documentai.v1beta3.Document.Page.Layout\x129\n\x07barcode\x18\x02 \x01(\x0b2(.google.cloud.documentai.v1beta3.Barcode\x1a=\n\x10DetectedLanguage\x12\x15\n\rlanguage_code\x18\x01 \x01(\t\x12\x12\n\nconfidence\x18\x02 \x01(\x02\x1a\xcb\x01\n\x12ImageQualityScores\x12\x15\n\rquality_score\x18\x01 \x01(\x02\x12j\n\x10detected_defects\x18\x02 \x03(\x0b2P.google.cloud.documentai.v1beta3.Document.Page.ImageQualityScores.DetectedDefect\x1a2\n\x0eDetectedDefect\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x12\n\nconfidence\x18\x02 \x01(\x02\x1a\xe9\x06\n\x06Entity\x12N\n\x0btext_anchor\x18\x01 \x01(\x0b24.google.cloud.documentai.v1beta3.Document.TextAnchorB\x03\xe0A\x01\x12\x11\n\x04type\x18\x02 \x01(\tB\x03\xe0A\x02\x12\x19\n\x0cmention_text\x18\x03 \x01(\tB\x03\xe0A\x01\x12\x17\n\nmention_id\x18\x04 \x01(\tB\x03\xe0A\x01\x12\x17\n\nconfidence\x18\x05 \x01(\x02B\x03\xe0A\x01\x12N\n\x0bpage_anchor\x18\x06 \x01(\x0b24.google.cloud.documentai.v1beta3.Document.PageAnchorB\x03\xe0A\x01\x12\x0f\n\x02id\x18\x07 \x01(\tB\x03\xe0A\x01\x12_\n\x10normalized_value\x18\t \x01(\x0b2@.google.cloud.documentai.v1beta3.Document.Entity.NormalizedValueB\x03\xe0A\x01\x12I\n\nproperties\x18\n \x03(\x0b20.google.cloud.documentai.v1beta3.Document.EntityB\x03\xe0A\x01\x12M\n\nprovenance\x18\x0b \x01(\x0b24.google.cloud.documentai.v1beta3.Document.ProvenanceB\x03\xe0A\x01\x12\x15\n\x08redacted\x18\x0c \x01(\x08B\x03\xe0A\x01\x1a\xbb\x02\n\x0fNormalizedValue\x12)\n\x0bmoney_value\x18\x02 \x01(\x0b2\x12.google.type.MoneyH\x00\x12\'\n\ndate_value\x18\x03 \x01(\x0b2\x11.google.type.DateH\x00\x12/\n\x0edatetime_value\x18\x04 \x01(\x0b2\x15.google.type.DateTimeH\x00\x123\n\raddress_value\x18\x05 \x01(\x0b2\x1a.google.type.PostalAddressH\x00\x12\x17\n\rboolean_value\x18\x06 \x01(\x08H\x00\x12\x17\n\rinteger_value\x18\x07 \x01(\x05H\x00\x12\x15\n\x0bfloat_value\x18\x08 \x01(\x02H\x00\x12\x11\n\x04text\x18\x01 \x01(\tB\x03\xe0A\x01B\x12\n\x10structured_value\x1aI\n\x0eEntityRelation\x12\x12\n\nsubject_id\x18\x01 \x01(\t\x12\x11\n\tobject_id\x18\x02 \x01(\t\x12\x10\n\x08relation\x18\x03 \x01(\t\x1a\xad\x01\n\nTextAnchor\x12W\n\rtext_segments\x18\x01 \x03(\x0b2@.google.cloud.documentai.v1beta3.Document.TextAnchor.TextSegment\x12\x0f\n\x07content\x18\x02 \x01(\t\x1a5\n\x0bTextSegment\x12\x13\n\x0bstart_index\x18\x01 \x01(\x03\x12\x11\n\tend_index\x18\x02 \x01(\x03\x1a\xe7\x03\n\nPageAnchor\x12O\n\tpage_refs\x18\x01 \x03(\x0b2<.google.cloud.documentai.v1beta3.Document.PageAnchor.PageRef\x1a\x87\x03\n\x07PageRef\x12\x11\n\x04page\x18\x01 \x01(\x03B\x03\xe0A\x02\x12a\n\x0blayout_type\x18\x02 \x01(\x0e2G.google.cloud.documentai.v1beta3.Document.PageAnchor.PageRef.LayoutTypeB\x03\xe0A\x01\x12\x18\n\tlayout_id\x18\x03 \x01(\tB\x05\x18\x01\xe0A\x01\x12I\n\rbounding_poly\x18\x04 \x01(\x0b2-.google.cloud.documentai.v1beta3.BoundingPolyB\x03\xe0A\x01\x12\x17\n\nconfidence\x18\x05 \x01(\x02B\x03\xe0A\x01"\x87\x01\n\nLayoutType\x12\x1b\n\x17LAYOUT_TYPE_UNSPECIFIED\x10\x00\x12\t\n\x05BLOCK\x10\x01\x12\r\n\tPARAGRAPH\x10\x02\x12\x08\n\x04LINE\x10\x03\x12\t\n\x05TOKEN\x10\x04\x12\x12\n\x0eVISUAL_ELEMENT\x10\x05\x12\t\n\x05TABLE\x10\x06\x12\x0e\n\nFORM_FIELD\x10\x07\x1a\xb2\x03\n\nProvenance\x12\x14\n\x08revision\x18\x01 \x01(\x05B\x02\x18\x01\x12\x0e\n\x02id\x18\x02 \x01(\x05B\x02\x18\x01\x12L\n\x07parents\x18\x03 \x03(\x0b2;.google.cloud.documentai.v1beta3.Document.Provenance.Parent\x12P\n\x04type\x18\x04 \x01(\x0e2B.google.cloud.documentai.v1beta3.Document.Provenance.OperationType\x1a9\n\x06Parent\x12\x10\n\x08revision\x18\x01 \x01(\x05\x12\r\n\x05index\x18\x03 \x01(\x05\x12\x0e\n\x02id\x18\x02 \x01(\x05B\x02\x18\x01"\xa2\x01\n\rOperationType\x12\x1e\n\x1aOPERATION_TYPE_UNSPECIFIED\x10\x00\x12\x07\n\x03ADD\x10\x01\x12\n\n\x06REMOVE\x10\x02\x12\n\n\x06UPDATE\x10\x07\x12\x0b\n\x07REPLACE\x10\x03\x12\x16\n\x0eEVAL_REQUESTED\x10\x04\x1a\x02\x08\x01\x12\x15\n\rEVAL_APPROVED\x10\x05\x1a\x02\x08\x01\x12\x14\n\x0cEVAL_SKIPPED\x10\x06\x1a\x02\x08\x01\x1a\xaa\x02\n\x08Revision\x12\x0f\n\x05agent\x18\x04 \x01(\tH\x00\x12\x13\n\tprocessor\x18\x05 \x01(\tH\x00\x12\n\n\x02id\x18\x01 \x01(\t\x12\x12\n\x06parent\x18\x02 \x03(\x05B\x02\x18\x01\x12\x12\n\nparent_ids\x18\x07 \x03(\t\x12/\n\x0bcreate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12T\n\x0chuman_review\x18\x06 \x01(\x0b2>.google.cloud.documentai.v1beta3.Document.Revision.HumanReview\x1a3\n\x0bHumanReview\x12\r\n\x05state\x18\x01 \x01(\t\x12\x15\n\rstate_message\x18\x02 \x01(\tB\x08\n\x06source\x1a\xbb\x01\n\nTextChange\x12I\n\x0btext_anchor\x18\x01 \x01(\x0b24.google.cloud.documentai.v1beta3.Document.TextAnchor\x12\x14\n\x0cchanged_text\x18\x02 \x01(\t\x12L\n\nprovenance\x18\x03 \x03(\x0b24.google.cloud.documentai.v1beta3.Document.ProvenanceB\x02\x18\x01\x1a\xd9\x0c\n\x0eDocumentLayout\x12\\\n\x06blocks\x18\x01 \x03(\x0b2L.google.cloud.documentai.v1beta3.Document.DocumentLayout.DocumentLayoutBlock\x1a\xe8\x0b\n\x13DocumentLayoutBlock\x12r\n\ntext_block\x18\x02 \x01(\x0b2\\.google.cloud.documentai.v1beta3.Document.DocumentLayout.DocumentLayoutBlock.LayoutTextBlockH\x00\x12t\n\x0btable_block\x18\x03 \x01(\x0b2].google.cloud.documentai.v1beta3.Document.DocumentLayout.DocumentLayoutBlock.LayoutTableBlockH\x00\x12r\n\nlist_block\x18\x04 \x01(\x0b2\\.google.cloud.documentai.v1beta3.Document.DocumentLayout.DocumentLayoutBlock.LayoutListBlockH\x00\x12\x10\n\x08block_id\x18\x01 \x01(\t\x12n\n\tpage_span\x18\x05 \x01(\x0b2[.google.cloud.documentai.v1beta3.Document.DocumentLayout.DocumentLayoutBlock.LayoutPageSpan\x1a6\n\x0eLayoutPageSpan\x12\x12\n\npage_start\x18\x01 \x01(\x05\x12\x10\n\x08page_end\x18\x02 \x01(\x05\x1a\x8b\x01\n\x0fLayoutTextBlock\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\\\n\x06blocks\x18\x03 \x03(\x0b2L.google.cloud.documentai.v1beta3.Document.DocumentLayout.DocumentLayoutBlock\x1a\x85\x02\n\x10LayoutTableBlock\x12p\n\x0bheader_rows\x18\x01 \x03(\x0b2[.google.cloud.documentai.v1beta3.Document.DocumentLayout.DocumentLayoutBlock.LayoutTableRow\x12n\n\tbody_rows\x18\x02 \x03(\x0b2[.google.cloud.documentai.v1beta3.Document.DocumentLayout.DocumentLayoutBlock.LayoutTableRow\x12\x0f\n\x07caption\x18\x03 \x01(\t\x1a}\n\x0eLayoutTableRow\x12k\n\x05cells\x18\x01 \x03(\x0b2\\.google.cloud.documentai.v1beta3.Document.DocumentLayout.DocumentLayoutBlock.LayoutTableCell\x1a\x93\x01\n\x0fLayoutTableCell\x12\\\n\x06blocks\x18\x01 \x03(\x0b2L.google.cloud.documentai.v1beta3.Document.DocumentLayout.DocumentLayoutBlock\x12\x10\n\x08row_span\x18\x02 \x01(\x05\x12\x10\n\x08col_span\x18\x03 \x01(\x05\x1a\x93\x01\n\x0fLayoutListBlock\x12r\n\x0clist_entries\x18\x01 \x03(\x0b2\\.google.cloud.documentai.v1beta3.Document.DocumentLayout.DocumentLayoutBlock.LayoutListEntry\x12\x0c\n\x04type\x18\x02 \x01(\t\x1ao\n\x0fLayoutListEntry\x12\\\n\x06blocks\x18\x01 \x03(\x0b2L.google.cloud.documentai.v1beta3.Document.DocumentLayout.DocumentLayoutBlockB\x07\n\x05block\x1a\x98\x06\n\x0fChunkedDocument\x12O\n\x06chunks\x18\x01 \x03(\x0b2?.google.cloud.documentai.v1beta3.Document.ChunkedDocument.Chunk\x1a\xb3\x05\n\x05Chunk\x12\x10\n\x08chunk_id\x18\x01 \x01(\t\x12\x18\n\x10source_block_ids\x18\x02 \x03(\t\x12\x0f\n\x07content\x18\x03 \x01(\t\x12`\n\tpage_span\x18\x04 \x01(\x0b2M.google.cloud.documentai.v1beta3.Document.ChunkedDocument.Chunk.ChunkPageSpan\x12e\n\x0cpage_headers\x18\x05 \x03(\x0b2O.google.cloud.documentai.v1beta3.Document.ChunkedDocument.Chunk.ChunkPageHeader\x12e\n\x0cpage_footers\x18\x06 \x03(\x0b2O.google.cloud.documentai.v1beta3.Document.ChunkedDocument.Chunk.ChunkPageFooter\x1a5\n\rChunkPageSpan\x12\x12\n\npage_start\x18\x01 \x01(\x05\x12\x10\n\x08page_end\x18\x02 \x01(\x05\x1a\x81\x01\n\x0fChunkPageHeader\x12\x0c\n\x04text\x18\x01 \x01(\t\x12`\n\tpage_span\x18\x02 \x01(\x0b2M.google.cloud.documentai.v1beta3.Document.ChunkedDocument.Chunk.ChunkPageSpan\x1a\x81\x01\n\x0fChunkPageFooter\x12\x0c\n\x04text\x18\x01 \x01(\t\x12`\n\tpage_span\x18\x02 \x01(\x0b2M.google.cloud.documentai.v1beta3.Document.ChunkedDocument.Chunk.ChunkPageSpanB\x08\n\x06source"\x9b\x02\n\x0bRevisionRef\x12R\n\rrevision_case\x18\x01 \x01(\x0e29.google.cloud.documentai.v1beta3.RevisionRef.RevisionCaseH\x00\x12\x15\n\x0brevision_id\x18\x02 \x01(\tH\x00\x12"\n\x18latest_processor_version\x18\x03 \x01(\tH\x00"s\n\x0cRevisionCase\x12\x1d\n\x19REVISION_CASE_UNSPECIFIED\x10\x00\x12\x17\n\x13LATEST_HUMAN_REVIEW\x10\x01\x12\x14\n\x10LATEST_TIMESTAMP\x10\x02\x12\x15\n\x11BASE_OCR_REVISION\x10\x03B\x08\n\x06sourceB\xe4\x01\n#com.google.cloud.documentai.v1beta3B\rDocumentProtoP\x01ZCcloud.google.com/go/documentai/apiv1beta3/documentaipb;documentaipb\xaa\x02\x1fGoogle.Cloud.DocumentAI.V1Beta3\xca\x02\x1fGoogle\\Cloud\\DocumentAI\\V1beta3\xea\x02"Google::Cloud::DocumentAI::V1beta3b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.documentai.v1beta3.document_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n#com.google.cloud.documentai.v1beta3B\rDocumentProtoP\x01ZCcloud.google.com/go/documentai/apiv1beta3/documentaipb;documentaipb\xaa\x02\x1fGoogle.Cloud.DocumentAI.V1Beta3\xca\x02\x1fGoogle\\Cloud\\DocumentAI\\V1beta3\xea\x02"Google::Cloud::DocumentAI::V1beta3'
+    _globals['_DOCUMENT_PAGE_BLOCK'].fields_by_name['provenance']._loaded_options = None
+    _globals['_DOCUMENT_PAGE_BLOCK'].fields_by_name['provenance']._serialized_options = b'\x18\x01'
+    _globals['_DOCUMENT_PAGE_PARAGRAPH'].fields_by_name['provenance']._loaded_options = None
+    _globals['_DOCUMENT_PAGE_PARAGRAPH'].fields_by_name['provenance']._serialized_options = b'\x18\x01'
+    _globals['_DOCUMENT_PAGE_LINE'].fields_by_name['provenance']._loaded_options = None
+    _globals['_DOCUMENT_PAGE_LINE'].fields_by_name['provenance']._serialized_options = b'\x18\x01'
+    _globals['_DOCUMENT_PAGE_TOKEN'].fields_by_name['provenance']._loaded_options = None
+    _globals['_DOCUMENT_PAGE_TOKEN'].fields_by_name['provenance']._serialized_options = b'\x18\x01'
+    _globals['_DOCUMENT_PAGE_TABLE'].fields_by_name['provenance']._loaded_options = None
+    _globals['_DOCUMENT_PAGE_TABLE'].fields_by_name['provenance']._serialized_options = b'\x18\x01'
+    _globals['_DOCUMENT_PAGE'].fields_by_name['provenance']._loaded_options = None
+    _globals['_DOCUMENT_PAGE'].fields_by_name['provenance']._serialized_options = b'\x18\x01'
+    _globals['_DOCUMENT_ENTITY_NORMALIZEDVALUE'].fields_by_name['text']._loaded_options = None
+    _globals['_DOCUMENT_ENTITY_NORMALIZEDVALUE'].fields_by_name['text']._serialized_options = b'\xe0A\x01'
+    _globals['_DOCUMENT_ENTITY'].fields_by_name['text_anchor']._loaded_options = None
+    _globals['_DOCUMENT_ENTITY'].fields_by_name['text_anchor']._serialized_options = b'\xe0A\x01'
+    _globals['_DOCUMENT_ENTITY'].fields_by_name['type']._loaded_options = None
+    _globals['_DOCUMENT_ENTITY'].fields_by_name['type']._serialized_options = b'\xe0A\x02'
+    _globals['_DOCUMENT_ENTITY'].fields_by_name['mention_text']._loaded_options = None
+    _globals['_DOCUMENT_ENTITY'].fields_by_name['mention_text']._serialized_options = b'\xe0A\x01'
+    _globals['_DOCUMENT_ENTITY'].fields_by_name['mention_id']._loaded_options = None
+    _globals['_DOCUMENT_ENTITY'].fields_by_name['mention_id']._serialized_options = b'\xe0A\x01'
+    _globals['_DOCUMENT_ENTITY'].fields_by_name['confidence']._loaded_options = None
+    _globals['_DOCUMENT_ENTITY'].fields_by_name['confidence']._serialized_options = b'\xe0A\x01'
+    _globals['_DOCUMENT_ENTITY'].fields_by_name['page_anchor']._loaded_options = None
+    _globals['_DOCUMENT_ENTITY'].fields_by_name['page_anchor']._serialized_options = b'\xe0A\x01'
+    _globals['_DOCUMENT_ENTITY'].fields_by_name['id']._loaded_options = None
+    _globals['_DOCUMENT_ENTITY'].fields_by_name['id']._serialized_options = b'\xe0A\x01'
+    _globals['_DOCUMENT_ENTITY'].fields_by_name['normalized_value']._loaded_options = None
+    _globals['_DOCUMENT_ENTITY'].fields_by_name['normalized_value']._serialized_options = b'\xe0A\x01'
+    _globals['_DOCUMENT_ENTITY'].fields_by_name['properties']._loaded_options = None
+    _globals['_DOCUMENT_ENTITY'].fields_by_name['properties']._serialized_options = b'\xe0A\x01'
+    _globals['_DOCUMENT_ENTITY'].fields_by_name['provenance']._loaded_options = None
+    _globals['_DOCUMENT_ENTITY'].fields_by_name['provenance']._serialized_options = b'\xe0A\x01'
+    _globals['_DOCUMENT_ENTITY'].fields_by_name['redacted']._loaded_options = None
+    _globals['_DOCUMENT_ENTITY'].fields_by_name['redacted']._serialized_options = b'\xe0A\x01'
+    _globals['_DOCUMENT_PAGEANCHOR_PAGEREF'].fields_by_name['page']._loaded_options = None
+    _globals['_DOCUMENT_PAGEANCHOR_PAGEREF'].fields_by_name['page']._serialized_options = b'\xe0A\x02'
+    _globals['_DOCUMENT_PAGEANCHOR_PAGEREF'].fields_by_name['layout_type']._loaded_options = None
+    _globals['_DOCUMENT_PAGEANCHOR_PAGEREF'].fields_by_name['layout_type']._serialized_options = b'\xe0A\x01'
+    _globals['_DOCUMENT_PAGEANCHOR_PAGEREF'].fields_by_name['layout_id']._loaded_options = None
+    _globals['_DOCUMENT_PAGEANCHOR_PAGEREF'].fields_by_name['layout_id']._serialized_options = b'\x18\x01\xe0A\x01'
+    _globals['_DOCUMENT_PAGEANCHOR_PAGEREF'].fields_by_name['bounding_poly']._loaded_options = None
+    _globals['_DOCUMENT_PAGEANCHOR_PAGEREF'].fields_by_name['bounding_poly']._serialized_options = b'\xe0A\x01'
+    _globals['_DOCUMENT_PAGEANCHOR_PAGEREF'].fields_by_name['confidence']._loaded_options = None
+    _globals['_DOCUMENT_PAGEANCHOR_PAGEREF'].fields_by_name['confidence']._serialized_options = b'\xe0A\x01'
+    _globals['_DOCUMENT_PROVENANCE_PARENT'].fields_by_name['id']._loaded_options = None
+    _globals['_DOCUMENT_PROVENANCE_PARENT'].fields_by_name['id']._serialized_options = b'\x18\x01'
+    _globals['_DOCUMENT_PROVENANCE_OPERATIONTYPE'].values_by_name['EVAL_REQUESTED']._loaded_options = None
+    _globals['_DOCUMENT_PROVENANCE_OPERATIONTYPE'].values_by_name['EVAL_REQUESTED']._serialized_options = b'\x08\x01'
+    _globals['_DOCUMENT_PROVENANCE_OPERATIONTYPE'].values_by_name['EVAL_APPROVED']._loaded_options = None
+    _globals['_DOCUMENT_PROVENANCE_OPERATIONTYPE'].values_by_name['EVAL_APPROVED']._serialized_options = b'\x08\x01'
+    _globals['_DOCUMENT_PROVENANCE_OPERATIONTYPE'].values_by_name['EVAL_SKIPPED']._loaded_options = None
+    _globals['_DOCUMENT_PROVENANCE_OPERATIONTYPE'].values_by_name['EVAL_SKIPPED']._serialized_options = b'\x08\x01'
+    _globals['_DOCUMENT_PROVENANCE'].fields_by_name['revision']._loaded_options = None
+    _globals['_DOCUMENT_PROVENANCE'].fields_by_name['revision']._serialized_options = b'\x18\x01'
+    _globals['_DOCUMENT_PROVENANCE'].fields_by_name['id']._loaded_options = None
+    _globals['_DOCUMENT_PROVENANCE'].fields_by_name['id']._serialized_options = b'\x18\x01'
+    _globals['_DOCUMENT_REVISION'].fields_by_name['parent']._loaded_options = None
+    _globals['_DOCUMENT_REVISION'].fields_by_name['parent']._serialized_options = b'\x18\x01'
+    _globals['_DOCUMENT_TEXTCHANGE'].fields_by_name['provenance']._loaded_options = None
+    _globals['_DOCUMENT_TEXTCHANGE'].fields_by_name['provenance']._serialized_options = b'\x18\x01'
+    _globals['_DOCUMENT'].fields_by_name['uri']._loaded_options = None
+    _globals['_DOCUMENT'].fields_by_name['uri']._serialized_options = b'\xe0A\x01'
+    _globals['_DOCUMENT'].fields_by_name['content']._loaded_options = None
+    _globals['_DOCUMENT'].fields_by_name['content']._serialized_options = b'\xe0A\x01'
+    _globals['_DOCUMENT'].fields_by_name['text']._loaded_options = None
+    _globals['_DOCUMENT'].fields_by_name['text']._serialized_options = b'\xe0A\x01'
+    _globals['_DOCUMENT'].fields_by_name['text_styles']._loaded_options = None
+    _globals['_DOCUMENT'].fields_by_name['text_styles']._serialized_options = b'\x18\x01'
+    _globals['_DOCUMENT']._serialized_start = 406
+    _globals['_DOCUMENT']._serialized_end = 12221
+    _globals['_DOCUMENT_SHARDINFO']._serialized_start = 1212
+    _globals['_DOCUMENT_SHARDINFO']._serialized_end = 1286
+    _globals['_DOCUMENT_STYLE']._serialized_start = 1289
+    _globals['_DOCUMENT_STYLE']._serialized_end = 1656
+    _globals['_DOCUMENT_STYLE_FONTSIZE']._serialized_start = 1618
+    _globals['_DOCUMENT_STYLE_FONTSIZE']._serialized_end = 1656
+    _globals['_DOCUMENT_PAGE']._serialized_start = 1659
+    _globals['_DOCUMENT_PAGE']._serialized_end = 7243
+    _globals['_DOCUMENT_PAGE_DIMENSION']._serialized_start = 2933
+    _globals['_DOCUMENT_PAGE_DIMENSION']._serialized_end = 2989
+    _globals['_DOCUMENT_PAGE_IMAGE']._serialized_start = 2991
+    _globals['_DOCUMENT_PAGE_IMAGE']._serialized_end = 3065
+    _globals['_DOCUMENT_PAGE_MATRIX']._serialized_start = 3067
+    _globals['_DOCUMENT_PAGE_MATRIX']._serialized_end = 3131
+    _globals['_DOCUMENT_PAGE_LAYOUT']._serialized_start = 3134
+    _globals['_DOCUMENT_PAGE_LAYOUT']._serialized_end = 3498
+    _globals['_DOCUMENT_PAGE_LAYOUT_ORIENTATION']._serialized_start = 3397
+    _globals['_DOCUMENT_PAGE_LAYOUT_ORIENTATION']._serialized_end = 3498
+    _globals['_DOCUMENT_PAGE_BLOCK']._serialized_start = 3501
+    _globals['_DOCUMENT_PAGE_BLOCK']._serialized_end = 3750
+    _globals['_DOCUMENT_PAGE_PARAGRAPH']._serialized_start = 3753
+    _globals['_DOCUMENT_PAGE_PARAGRAPH']._serialized_end = 4006
+    _globals['_DOCUMENT_PAGE_LINE']._serialized_start = 4009
+    _globals['_DOCUMENT_PAGE_LINE']._serialized_end = 4257
+    _globals['_DOCUMENT_PAGE_TOKEN']._serialized_start = 4260
+    _globals['_DOCUMENT_PAGE_TOKEN']._serialized_end = 5216
+    _globals['_DOCUMENT_PAGE_TOKEN_DETECTEDBREAK']._serialized_start = 4688
+    _globals['_DOCUMENT_PAGE_TOKEN_DETECTEDBREAK']._serialized_end = 4859
+    _globals['_DOCUMENT_PAGE_TOKEN_DETECTEDBREAK_TYPE']._serialized_start = 4792
+    _globals['_DOCUMENT_PAGE_TOKEN_DETECTEDBREAK_TYPE']._serialized_end = 4859
+    _globals['_DOCUMENT_PAGE_TOKEN_STYLEINFO']._serialized_start = 4862
+    _globals['_DOCUMENT_PAGE_TOKEN_STYLEINFO']._serialized_end = 5216
+    _globals['_DOCUMENT_PAGE_SYMBOL']._serialized_start = 5219
+    _globals['_DOCUMENT_PAGE_SYMBOL']._serialized_end = 5391
+    _globals['_DOCUMENT_PAGE_VISUALELEMENT']._serialized_start = 5394
+    _globals['_DOCUMENT_PAGE_VISUALELEMENT']._serialized_end = 5587
+    _globals['_DOCUMENT_PAGE_TABLE']._serialized_start = 5590
+    _globals['_DOCUMENT_PAGE_TABLE']._serialized_end = 6310
+    _globals['_DOCUMENT_PAGE_TABLE_TABLEROW']._serialized_start = 6007
+    _globals['_DOCUMENT_PAGE_TABLE_TABLEROW']._serialized_end = 6096
+    _globals['_DOCUMENT_PAGE_TABLE_TABLECELL']._serialized_start = 6099
+    _globals['_DOCUMENT_PAGE_TABLE_TABLECELL']._serialized_end = 6310
+    _globals['_DOCUMENT_PAGE_FORMFIELD']._serialized_start = 6313
+    _globals['_DOCUMENT_PAGE_FORMFIELD']._serialized_end = 6824
+    _globals['_DOCUMENT_PAGE_DETECTEDBARCODE']._serialized_start = 6827
+    _globals['_DOCUMENT_PAGE_DETECTEDBARCODE']._serialized_end = 6974
+    _globals['_DOCUMENT_PAGE_DETECTEDLANGUAGE']._serialized_start = 6976
+    _globals['_DOCUMENT_PAGE_DETECTEDLANGUAGE']._serialized_end = 7037
+    _globals['_DOCUMENT_PAGE_IMAGEQUALITYSCORES']._serialized_start = 7040
+    _globals['_DOCUMENT_PAGE_IMAGEQUALITYSCORES']._serialized_end = 7243
+    _globals['_DOCUMENT_PAGE_IMAGEQUALITYSCORES_DETECTEDDEFECT']._serialized_start = 7193
+    _globals['_DOCUMENT_PAGE_IMAGEQUALITYSCORES_DETECTEDDEFECT']._serialized_end = 7243
+    _globals['_DOCUMENT_ENTITY']._serialized_start = 7246
+    _globals['_DOCUMENT_ENTITY']._serialized_end = 8119
+    _globals['_DOCUMENT_ENTITY_NORMALIZEDVALUE']._serialized_start = 7804
+    _globals['_DOCUMENT_ENTITY_NORMALIZEDVALUE']._serialized_end = 8119
+    _globals['_DOCUMENT_ENTITYRELATION']._serialized_start = 8121
+    _globals['_DOCUMENT_ENTITYRELATION']._serialized_end = 8194
+    _globals['_DOCUMENT_TEXTANCHOR']._serialized_start = 8197
+    _globals['_DOCUMENT_TEXTANCHOR']._serialized_end = 8370
+    _globals['_DOCUMENT_TEXTANCHOR_TEXTSEGMENT']._serialized_start = 8317
+    _globals['_DOCUMENT_TEXTANCHOR_TEXTSEGMENT']._serialized_end = 8370
+    _globals['_DOCUMENT_PAGEANCHOR']._serialized_start = 8373
+    _globals['_DOCUMENT_PAGEANCHOR']._serialized_end = 8860
+    _globals['_DOCUMENT_PAGEANCHOR_PAGEREF']._serialized_start = 8469
+    _globals['_DOCUMENT_PAGEANCHOR_PAGEREF']._serialized_end = 8860
+    _globals['_DOCUMENT_PAGEANCHOR_PAGEREF_LAYOUTTYPE']._serialized_start = 8725
+    _globals['_DOCUMENT_PAGEANCHOR_PAGEREF_LAYOUTTYPE']._serialized_end = 8860
+    _globals['_DOCUMENT_PROVENANCE']._serialized_start = 8863
+    _globals['_DOCUMENT_PROVENANCE']._serialized_end = 9297
+    _globals['_DOCUMENT_PROVENANCE_PARENT']._serialized_start = 9075
+    _globals['_DOCUMENT_PROVENANCE_PARENT']._serialized_end = 9132
+    _globals['_DOCUMENT_PROVENANCE_OPERATIONTYPE']._serialized_start = 9135
+    _globals['_DOCUMENT_PROVENANCE_OPERATIONTYPE']._serialized_end = 9297
+    _globals['_DOCUMENT_REVISION']._serialized_start = 9300
+    _globals['_DOCUMENT_REVISION']._serialized_end = 9598
+    _globals['_DOCUMENT_REVISION_HUMANREVIEW']._serialized_start = 9537
+    _globals['_DOCUMENT_REVISION_HUMANREVIEW']._serialized_end = 9588
+    _globals['_DOCUMENT_TEXTCHANGE']._serialized_start = 9601
+    _globals['_DOCUMENT_TEXTCHANGE']._serialized_end = 9788
+    _globals['_DOCUMENT_DOCUMENTLAYOUT']._serialized_start = 9791
+    _globals['_DOCUMENT_DOCUMENTLAYOUT']._serialized_end = 11416
+    _globals['_DOCUMENT_DOCUMENTLAYOUT_DOCUMENTLAYOUTBLOCK']._serialized_start = 9904
+    _globals['_DOCUMENT_DOCUMENTLAYOUT_DOCUMENTLAYOUTBLOCK']._serialized_end = 11416
+    _globals['_DOCUMENT_DOCUMENTLAYOUT_DOCUMENTLAYOUTBLOCK_LAYOUTPAGESPAN']._serialized_start = 10407
+    _globals['_DOCUMENT_DOCUMENTLAYOUT_DOCUMENTLAYOUTBLOCK_LAYOUTPAGESPAN']._serialized_end = 10461
+    _globals['_DOCUMENT_DOCUMENTLAYOUT_DOCUMENTLAYOUTBLOCK_LAYOUTTEXTBLOCK']._serialized_start = 10464
+    _globals['_DOCUMENT_DOCUMENTLAYOUT_DOCUMENTLAYOUTBLOCK_LAYOUTTEXTBLOCK']._serialized_end = 10603
+    _globals['_DOCUMENT_DOCUMENTLAYOUT_DOCUMENTLAYOUTBLOCK_LAYOUTTABLEBLOCK']._serialized_start = 10606
+    _globals['_DOCUMENT_DOCUMENTLAYOUT_DOCUMENTLAYOUTBLOCK_LAYOUTTABLEBLOCK']._serialized_end = 10867
+    _globals['_DOCUMENT_DOCUMENTLAYOUT_DOCUMENTLAYOUTBLOCK_LAYOUTTABLEROW']._serialized_start = 10869
+    _globals['_DOCUMENT_DOCUMENTLAYOUT_DOCUMENTLAYOUTBLOCK_LAYOUTTABLEROW']._serialized_end = 10994
+    _globals['_DOCUMENT_DOCUMENTLAYOUT_DOCUMENTLAYOUTBLOCK_LAYOUTTABLECELL']._serialized_start = 10997
+    _globals['_DOCUMENT_DOCUMENTLAYOUT_DOCUMENTLAYOUTBLOCK_LAYOUTTABLECELL']._serialized_end = 11144
+    _globals['_DOCUMENT_DOCUMENTLAYOUT_DOCUMENTLAYOUTBLOCK_LAYOUTLISTBLOCK']._serialized_start = 11147
+    _globals['_DOCUMENT_DOCUMENTLAYOUT_DOCUMENTLAYOUTBLOCK_LAYOUTLISTBLOCK']._serialized_end = 11294
+    _globals['_DOCUMENT_DOCUMENTLAYOUT_DOCUMENTLAYOUTBLOCK_LAYOUTLISTENTRY']._serialized_start = 11296
+    _globals['_DOCUMENT_DOCUMENTLAYOUT_DOCUMENTLAYOUTBLOCK_LAYOUTLISTENTRY']._serialized_end = 11407
+    _globals['_DOCUMENT_CHUNKEDDOCUMENT']._serialized_start = 11419
+    _globals['_DOCUMENT_CHUNKEDDOCUMENT']._serialized_end = 12211
+    _globals['_DOCUMENT_CHUNKEDDOCUMENT_CHUNK']._serialized_start = 11520
+    _globals['_DOCUMENT_CHUNKEDDOCUMENT_CHUNK']._serialized_end = 12211
+    _globals['_DOCUMENT_CHUNKEDDOCUMENT_CHUNK_CHUNKPAGESPAN']._serialized_start = 11894
+    _globals['_DOCUMENT_CHUNKEDDOCUMENT_CHUNK_CHUNKPAGESPAN']._serialized_end = 11947
+    _globals['_DOCUMENT_CHUNKEDDOCUMENT_CHUNK_CHUNKPAGEHEADER']._serialized_start = 11950
+    _globals['_DOCUMENT_CHUNKEDDOCUMENT_CHUNK_CHUNKPAGEHEADER']._serialized_end = 12079
+    _globals['_DOCUMENT_CHUNKEDDOCUMENT_CHUNK_CHUNKPAGEFOOTER']._serialized_start = 12082
+    _globals['_DOCUMENT_CHUNKEDDOCUMENT_CHUNK_CHUNKPAGEFOOTER']._serialized_end = 12211
+    _globals['_REVISIONREF']._serialized_start = 12224
+    _globals['_REVISIONREF']._serialized_end = 12507
+    _globals['_REVISIONREF_REVISIONCASE']._serialized_start = 12382
+    _globals['_REVISIONREF_REVISIONCASE']._serialized_end = 12497

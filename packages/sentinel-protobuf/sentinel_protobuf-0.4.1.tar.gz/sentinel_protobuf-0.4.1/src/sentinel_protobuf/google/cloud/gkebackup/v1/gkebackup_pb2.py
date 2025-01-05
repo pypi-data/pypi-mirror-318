@@ -1,0 +1,300 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/cloud/gkebackup/v1/gkebackup.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from .....google.api import client_pb2 as google_dot_api_dot_client__pb2
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from .....google.cloud.gkebackup.v1 import backup_pb2 as google_dot_cloud_dot_gkebackup_dot_v1_dot_backup__pb2
+from .....google.cloud.gkebackup.v1 import backup_plan_pb2 as google_dot_cloud_dot_gkebackup_dot_v1_dot_backup__plan__pb2
+from .....google.cloud.gkebackup.v1 import restore_pb2 as google_dot_cloud_dot_gkebackup_dot_v1_dot_restore__pb2
+from .....google.cloud.gkebackup.v1 import restore_plan_pb2 as google_dot_cloud_dot_gkebackup_dot_v1_dot_restore__plan__pb2
+from .....google.cloud.gkebackup.v1 import volume_pb2 as google_dot_cloud_dot_gkebackup_dot_v1_dot_volume__pb2
+from .....google.longrunning import operations_pb2 as google_dot_longrunning_dot_operations__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
+from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n)google/cloud/gkebackup/v1/gkebackup.proto\x12\x19google.cloud.gkebackup.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a&google/cloud/gkebackup/v1/backup.proto\x1a+google/cloud/gkebackup/v1/backup_plan.proto\x1a\'google/cloud/gkebackup/v1/restore.proto\x1a,google/cloud/gkebackup/v1/restore_plan.proto\x1a&google/cloud/gkebackup/v1/volume.proto\x1a#google/longrunning/operations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto\x1a\x1fgoogle/protobuf/timestamp.proto"\x80\x02\n\x11OperationMetadata\x124\n\x0bcreate_time\x18\x01 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x121\n\x08end_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12\x13\n\x06target\x18\x03 \x01(\tB\x03\xe0A\x03\x12\x11\n\x04verb\x18\x04 \x01(\tB\x03\xe0A\x03\x12\x1b\n\x0estatus_message\x18\x05 \x01(\tB\x03\xe0A\x03\x12#\n\x16requested_cancellation\x18\x06 \x01(\x08B\x03\xe0A\x03\x12\x18\n\x0bapi_version\x18\x07 \x01(\tB\x03\xe0A\x03"\xb2\x01\n\x17CreateBackupPlanRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!locations.googleapis.com/Location\x12?\n\x0bbackup_plan\x18\x02 \x01(\x0b2%.google.cloud.gkebackup.v1.BackupPlanB\x03\xe0A\x02\x12\x1b\n\x0ebackup_plan_id\x18\x03 \x01(\tB\x03\xe0A\x02"\xb0\x01\n\x16ListBackupPlansRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!locations.googleapis.com/Location\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01\x12\x13\n\x06filter\x18\x04 \x01(\tB\x03\xe0A\x01\x12\x15\n\x08order_by\x18\x05 \x01(\tB\x03\xe0A\x01"\x84\x01\n\x17ListBackupPlansResponse\x12;\n\x0cbackup_plans\x18\x01 \x03(\x0b2%.google.cloud.gkebackup.v1.BackupPlan\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x13\n\x0bunreachable\x18\x03 \x03(\t"Q\n\x14GetBackupPlanRequest\x129\n\x04name\x18\x01 \x01(\tB+\xe0A\x02\xfaA%\n#gkebackup.googleapis.com/BackupPlan"\x90\x01\n\x17UpdateBackupPlanRequest\x12?\n\x0bbackup_plan\x18\x01 \x01(\x0b2%.google.cloud.gkebackup.v1.BackupPlanB\x03\xe0A\x02\x124\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x01"g\n\x17DeleteBackupPlanRequest\x129\n\x04name\x18\x01 \x01(\tB+\xe0A\x02\xfaA%\n#gkebackup.googleapis.com/BackupPlan\x12\x11\n\x04etag\x18\x02 \x01(\tB\x03\xe0A\x01"\xa2\x01\n\x13CreateBackupRequest\x12;\n\x06parent\x18\x01 \x01(\tB+\xe0A\x02\xfaA%\n#gkebackup.googleapis.com/BackupPlan\x126\n\x06backup\x18\x02 \x01(\x0b2!.google.cloud.gkebackup.v1.BackupB\x03\xe0A\x01\x12\x16\n\tbackup_id\x18\x03 \x01(\tB\x03\xe0A\x01"\xae\x01\n\x12ListBackupsRequest\x12;\n\x06parent\x18\x01 \x01(\tB+\xe0A\x02\xfaA%\n#gkebackup.googleapis.com/BackupPlan\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01\x12\x13\n\x06filter\x18\x04 \x01(\tB\x03\xe0A\x01\x12\x15\n\x08order_by\x18\x05 \x01(\tB\x03\xe0A\x01"b\n\x13ListBackupsResponse\x122\n\x07backups\x18\x01 \x03(\x0b2!.google.cloud.gkebackup.v1.Backup\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"I\n\x10GetBackupRequest\x125\n\x04name\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\n\x1fgkebackup.googleapis.com/Backup"\x83\x01\n\x13UpdateBackupRequest\x126\n\x06backup\x18\x01 \x01(\x0b2!.google.cloud.gkebackup.v1.BackupB\x03\xe0A\x02\x124\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x01"s\n\x13DeleteBackupRequest\x125\n\x04name\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\n\x1fgkebackup.googleapis.com/Backup\x12\x11\n\x04etag\x18\x02 \x01(\tB\x03\xe0A\x01\x12\x12\n\x05force\x18\x03 \x01(\x08B\x03\xe0A\x01"\xb0\x01\n\x18ListVolumeBackupsRequest\x127\n\x06parent\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\n\x1fgkebackup.googleapis.com/Backup\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01\x12\x13\n\x06filter\x18\x04 \x01(\tB\x03\xe0A\x01\x12\x15\n\x08order_by\x18\x05 \x01(\tB\x03\xe0A\x01"u\n\x19ListVolumeBackupsResponse\x12?\n\x0evolume_backups\x18\x01 \x03(\x0b2\'.google.cloud.gkebackup.v1.VolumeBackup\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"U\n\x16GetVolumeBackupRequest\x12;\n\x04name\x18\x01 \x01(\tB-\xe0A\x02\xfaA\'\n%gkebackup.googleapis.com/VolumeBackup"\xb6\x01\n\x18CreateRestorePlanRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!locations.googleapis.com/Location\x12A\n\x0crestore_plan\x18\x02 \x01(\x0b2&.google.cloud.gkebackup.v1.RestorePlanB\x03\xe0A\x02\x12\x1c\n\x0frestore_plan_id\x18\x03 \x01(\tB\x03\xe0A\x02"\xb1\x01\n\x17ListRestorePlansRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!locations.googleapis.com/Location\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01\x12\x13\n\x06filter\x18\x04 \x01(\tB\x03\xe0A\x01\x12\x15\n\x08order_by\x18\x05 \x01(\tB\x03\xe0A\x01"\x87\x01\n\x18ListRestorePlansResponse\x12=\n\rrestore_plans\x18\x01 \x03(\x0b2&.google.cloud.gkebackup.v1.RestorePlan\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x13\n\x0bunreachable\x18\x03 \x03(\t"S\n\x15GetRestorePlanRequest\x12:\n\x04name\x18\x01 \x01(\tB,\xe0A\x02\xfaA&\n$gkebackup.googleapis.com/RestorePlan"\x93\x01\n\x18UpdateRestorePlanRequest\x12A\n\x0crestore_plan\x18\x01 \x01(\x0b2&.google.cloud.gkebackup.v1.RestorePlanB\x03\xe0A\x02\x124\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x01"}\n\x18DeleteRestorePlanRequest\x12:\n\x04name\x18\x01 \x01(\tB,\xe0A\x02\xfaA&\n$gkebackup.googleapis.com/RestorePlan\x12\x11\n\x04etag\x18\x02 \x01(\tB\x03\xe0A\x01\x12\x12\n\x05force\x18\x03 \x01(\x08B\x03\xe0A\x01"\xa7\x01\n\x14CreateRestoreRequest\x12<\n\x06parent\x18\x01 \x01(\tB,\xe0A\x02\xfaA&\n$gkebackup.googleapis.com/RestorePlan\x128\n\x07restore\x18\x02 \x01(\x0b2".google.cloud.gkebackup.v1.RestoreB\x03\xe0A\x02\x12\x17\n\nrestore_id\x18\x03 \x01(\tB\x03\xe0A\x02"\xb0\x01\n\x13ListRestoresRequest\x12<\n\x06parent\x18\x01 \x01(\tB,\xe0A\x02\xfaA&\n$gkebackup.googleapis.com/RestorePlan\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01\x12\x13\n\x06filter\x18\x04 \x01(\tB\x03\xe0A\x01\x12\x15\n\x08order_by\x18\x05 \x01(\tB\x03\xe0A\x01"z\n\x14ListRestoresResponse\x124\n\x08restores\x18\x01 \x03(\x0b2".google.cloud.gkebackup.v1.Restore\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x13\n\x0bunreachable\x18\x03 \x03(\t"K\n\x11GetRestoreRequest\x126\n\x04name\x18\x01 \x01(\tB(\xe0A\x02\xfaA"\n gkebackup.googleapis.com/Restore"\x86\x01\n\x14UpdateRestoreRequest\x128\n\x07restore\x18\x01 \x01(\x0b2".google.cloud.gkebackup.v1.RestoreB\x03\xe0A\x02\x124\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x01"u\n\x14DeleteRestoreRequest\x126\n\x04name\x18\x01 \x01(\tB(\xe0A\x02\xfaA"\n gkebackup.googleapis.com/Restore\x12\x11\n\x04etag\x18\x02 \x01(\tB\x03\xe0A\x01\x12\x12\n\x05force\x18\x03 \x01(\x08B\x03\xe0A\x01"\xb2\x01\n\x19ListVolumeRestoresRequest\x128\n\x06parent\x18\x01 \x01(\tB(\xe0A\x02\xfaA"\n gkebackup.googleapis.com/Restore\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01\x12\x13\n\x06filter\x18\x04 \x01(\tB\x03\xe0A\x01\x12\x15\n\x08order_by\x18\x05 \x01(\tB\x03\xe0A\x01"x\n\x1aListVolumeRestoresResponse\x12A\n\x0fvolume_restores\x18\x01 \x03(\x0b2(.google.cloud.gkebackup.v1.VolumeRestore\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"W\n\x17GetVolumeRestoreRequest\x12<\n\x04name\x18\x01 \x01(\tB.\xe0A\x02\xfaA(\n&gkebackup.googleapis.com/VolumeRestore"[\n GetBackupIndexDownloadUrlRequest\x127\n\x06backup\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\n\x1fgkebackup.googleapis.com/Backup"<\n!GetBackupIndexDownloadUrlResponse\x12\x17\n\nsigned_url\x18\x01 \x01(\tB\x03\xe0A\x022\xc6*\n\x0cBackupForGKE\x12\xf2\x01\n\x10CreateBackupPlan\x122.google.cloud.gkebackup.v1.CreateBackupPlanRequest\x1a\x1d.google.longrunning.Operation"\x8a\x01\xcaA\x1f\n\nBackupPlan\x12\x11OperationMetadata\xdaA!parent,backup_plan,backup_plan_id\x82\xd3\xe4\x93\x02>"//v1/{parent=projects/*/locations/*}/backupPlans:\x0bbackup_plan\x12\xba\x01\n\x0fListBackupPlans\x121.google.cloud.gkebackup.v1.ListBackupPlansRequest\x1a2.google.cloud.gkebackup.v1.ListBackupPlansResponse"@\xdaA\x06parent\x82\xd3\xe4\x93\x021\x12//v1/{parent=projects/*/locations/*}/backupPlans\x12\xa7\x01\n\rGetBackupPlan\x12/.google.cloud.gkebackup.v1.GetBackupPlanRequest\x1a%.google.cloud.gkebackup.v1.BackupPlan">\xdaA\x04name\x82\xd3\xe4\x93\x021\x12//v1/{name=projects/*/locations/*/backupPlans/*}\x12\xf4\x01\n\x10UpdateBackupPlan\x122.google.cloud.gkebackup.v1.UpdateBackupPlanRequest\x1a\x1d.google.longrunning.Operation"\x8c\x01\xcaA\x1f\n\nBackupPlan\x12\x11OperationMetadata\xdaA\x17backup_plan,update_mask\x82\xd3\xe4\x93\x02J2;/v1/{backup_plan.name=projects/*/locations/*/backupPlans/*}:\x0bbackup_plan\x12\xd2\x01\n\x10DeleteBackupPlan\x122.google.cloud.gkebackup.v1.DeleteBackupPlanRequest\x1a\x1d.google.longrunning.Operation"k\xcaA*\n\x15google.protobuf.Empty\x12\x11OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x021*//v1/{name=projects/*/locations/*/backupPlans/*}\x12\xe1\x01\n\x0cCreateBackup\x12..google.cloud.gkebackup.v1.CreateBackupRequest\x1a\x1d.google.longrunning.Operation"\x81\x01\xcaA\x1b\n\x06Backup\x12\x11OperationMetadata\xdaA\x17parent,backup,backup_id\x82\xd3\xe4\x93\x02C"9/v1/{parent=projects/*/locations/*/backupPlans/*}/backups:\x06backup\x12\xb8\x01\n\x0bListBackups\x12-.google.cloud.gkebackup.v1.ListBackupsRequest\x1a..google.cloud.gkebackup.v1.ListBackupsResponse"J\xdaA\x06parent\x82\xd3\xe4\x93\x02;\x129/v1/{parent=projects/*/locations/*/backupPlans/*}/backups\x12\xa5\x01\n\tGetBackup\x12+.google.cloud.gkebackup.v1.GetBackupRequest\x1a!.google.cloud.gkebackup.v1.Backup"H\xdaA\x04name\x82\xd3\xe4\x93\x02;\x129/v1/{name=projects/*/locations/*/backupPlans/*/backups/*}\x12\xe3\x01\n\x0cUpdateBackup\x12..google.cloud.gkebackup.v1.UpdateBackupRequest\x1a\x1d.google.longrunning.Operation"\x83\x01\xcaA\x1b\n\x06Backup\x12\x11OperationMetadata\xdaA\x12backup,update_mask\x82\xd3\xe4\x93\x02J2@/v1/{backup.name=projects/*/locations/*/backupPlans/*/backups/*}:\x06backup\x12\xd4\x01\n\x0cDeleteBackup\x12..google.cloud.gkebackup.v1.DeleteBackupRequest\x1a\x1d.google.longrunning.Operation"u\xcaA*\n\x15google.protobuf.Empty\x12\x11OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02;*9/v1/{name=projects/*/locations/*/backupPlans/*/backups/*}\x12\xda\x01\n\x11ListVolumeBackups\x123.google.cloud.gkebackup.v1.ListVolumeBackupsRequest\x1a4.google.cloud.gkebackup.v1.ListVolumeBackupsResponse"Z\xdaA\x06parent\x82\xd3\xe4\x93\x02K\x12I/v1/{parent=projects/*/locations/*/backupPlans/*/backups/*}/volumeBackups\x12\xc7\x01\n\x0fGetVolumeBackup\x121.google.cloud.gkebackup.v1.GetVolumeBackupRequest\x1a\'.google.cloud.gkebackup.v1.VolumeBackup"X\xdaA\x04name\x82\xd3\xe4\x93\x02K\x12I/v1/{name=projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*}\x12\xf9\x01\n\x11CreateRestorePlan\x123.google.cloud.gkebackup.v1.CreateRestorePlanRequest\x1a\x1d.google.longrunning.Operation"\x8f\x01\xcaA \n\x0bRestorePlan\x12\x11OperationMetadata\xdaA#parent,restore_plan,restore_plan_id\x82\xd3\xe4\x93\x02@"0/v1/{parent=projects/*/locations/*}/restorePlans:\x0crestore_plan\x12\xbe\x01\n\x10ListRestorePlans\x122.google.cloud.gkebackup.v1.ListRestorePlansRequest\x1a3.google.cloud.gkebackup.v1.ListRestorePlansResponse"A\xdaA\x06parent\x82\xd3\xe4\x93\x022\x120/v1/{parent=projects/*/locations/*}/restorePlans\x12\xab\x01\n\x0eGetRestorePlan\x120.google.cloud.gkebackup.v1.GetRestorePlanRequest\x1a&.google.cloud.gkebackup.v1.RestorePlan"?\xdaA\x04name\x82\xd3\xe4\x93\x022\x120/v1/{name=projects/*/locations/*/restorePlans/*}\x12\xfb\x01\n\x11UpdateRestorePlan\x123.google.cloud.gkebackup.v1.UpdateRestorePlanRequest\x1a\x1d.google.longrunning.Operation"\x91\x01\xcaA \n\x0bRestorePlan\x12\x11OperationMetadata\xdaA\x18restore_plan,update_mask\x82\xd3\xe4\x93\x02M2=/v1/{restore_plan.name=projects/*/locations/*/restorePlans/*}:\x0crestore_plan\x12\xd5\x01\n\x11DeleteRestorePlan\x123.google.cloud.gkebackup.v1.DeleteRestorePlanRequest\x1a\x1d.google.longrunning.Operation"l\xcaA*\n\x15google.protobuf.Empty\x12\x11OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x022*0/v1/{name=projects/*/locations/*/restorePlans/*}\x12\xe9\x01\n\rCreateRestore\x12/.google.cloud.gkebackup.v1.CreateRestoreRequest\x1a\x1d.google.longrunning.Operation"\x87\x01\xcaA\x1c\n\x07Restore\x12\x11OperationMetadata\xdaA\x19parent,restore,restore_id\x82\xd3\xe4\x93\x02F";/v1/{parent=projects/*/locations/*/restorePlans/*}/restores:\x07restore\x12\xbd\x01\n\x0cListRestores\x12..google.cloud.gkebackup.v1.ListRestoresRequest\x1a/.google.cloud.gkebackup.v1.ListRestoresResponse"L\xdaA\x06parent\x82\xd3\xe4\x93\x02=\x12;/v1/{parent=projects/*/locations/*/restorePlans/*}/restores\x12\xaa\x01\n\nGetRestore\x12,.google.cloud.gkebackup.v1.GetRestoreRequest\x1a".google.cloud.gkebackup.v1.Restore"J\xdaA\x04name\x82\xd3\xe4\x93\x02=\x12;/v1/{name=projects/*/locations/*/restorePlans/*/restores/*}\x12\xeb\x01\n\rUpdateRestore\x12/.google.cloud.gkebackup.v1.UpdateRestoreRequest\x1a\x1d.google.longrunning.Operation"\x89\x01\xcaA\x1c\n\x07Restore\x12\x11OperationMetadata\xdaA\x13restore,update_mask\x82\xd3\xe4\x93\x02N2C/v1/{restore.name=projects/*/locations/*/restorePlans/*/restores/*}:\x07restore\x12\xd8\x01\n\rDeleteRestore\x12/.google.cloud.gkebackup.v1.DeleteRestoreRequest\x1a\x1d.google.longrunning.Operation"w\xcaA*\n\x15google.protobuf.Empty\x12\x11OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02=*;/v1/{name=projects/*/locations/*/restorePlans/*/restores/*}\x12\xe0\x01\n\x12ListVolumeRestores\x124.google.cloud.gkebackup.v1.ListVolumeRestoresRequest\x1a5.google.cloud.gkebackup.v1.ListVolumeRestoresResponse"]\xdaA\x06parent\x82\xd3\xe4\x93\x02N\x12L/v1/{parent=projects/*/locations/*/restorePlans/*/restores/*}/volumeRestores\x12\xcd\x01\n\x10GetVolumeRestore\x122.google.cloud.gkebackup.v1.GetVolumeRestoreRequest\x1a(.google.cloud.gkebackup.v1.VolumeRestore"[\xdaA\x04name\x82\xd3\xe4\x93\x02N\x12L/v1/{name=projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*}\x12\xfe\x01\n\x19GetBackupIndexDownloadUrl\x12;.google.cloud.gkebackup.v1.GetBackupIndexDownloadUrlRequest\x1a<.google.cloud.gkebackup.v1.GetBackupIndexDownloadUrlResponse"f\xdaA\x06backup\x82\xd3\xe4\x93\x02W\x12U/v1/{backup=projects/*/locations/*/backupPlans/*/backups/*}:getBackupIndexDownloadUrl\x1aL\xcaA\x18gkebackup.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platformB\xa1\x03\n\x1dcom.google.cloud.gkebackup.v1B\x0eGKEBackupProtoP\x01Z;cloud.google.com/go/gkebackup/apiv1/gkebackuppb;gkebackuppb\xaa\x02\x19Google.Cloud.GkeBackup.V1\xca\x02\x19Google\\Cloud\\GkeBackup\\V1\xea\x02\x1cGoogle::Cloud::GkeBackup::V1\xeaA^\n container.googleapis.com/Cluster\x12:projects/{project}/locations/{location}/clusters/{cluster}\xeaAx\n!cloudkms.googleapis.com/CryptoKey\x12Sprojects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.gkebackup.v1.gkebackup_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n\x1dcom.google.cloud.gkebackup.v1B\x0eGKEBackupProtoP\x01Z;cloud.google.com/go/gkebackup/apiv1/gkebackuppb;gkebackuppb\xaa\x02\x19Google.Cloud.GkeBackup.V1\xca\x02\x19Google\\Cloud\\GkeBackup\\V1\xea\x02\x1cGoogle::Cloud::GkeBackup::V1\xeaA^\n container.googleapis.com/Cluster\x12:projects/{project}/locations/{location}/clusters/{cluster}\xeaAx\n!cloudkms.googleapis.com/CryptoKey\x12Sprojects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}'
+    _globals['_OPERATIONMETADATA'].fields_by_name['create_time']._loaded_options = None
+    _globals['_OPERATIONMETADATA'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_OPERATIONMETADATA'].fields_by_name['end_time']._loaded_options = None
+    _globals['_OPERATIONMETADATA'].fields_by_name['end_time']._serialized_options = b'\xe0A\x03'
+    _globals['_OPERATIONMETADATA'].fields_by_name['target']._loaded_options = None
+    _globals['_OPERATIONMETADATA'].fields_by_name['target']._serialized_options = b'\xe0A\x03'
+    _globals['_OPERATIONMETADATA'].fields_by_name['verb']._loaded_options = None
+    _globals['_OPERATIONMETADATA'].fields_by_name['verb']._serialized_options = b'\xe0A\x03'
+    _globals['_OPERATIONMETADATA'].fields_by_name['status_message']._loaded_options = None
+    _globals['_OPERATIONMETADATA'].fields_by_name['status_message']._serialized_options = b'\xe0A\x03'
+    _globals['_OPERATIONMETADATA'].fields_by_name['requested_cancellation']._loaded_options = None
+    _globals['_OPERATIONMETADATA'].fields_by_name['requested_cancellation']._serialized_options = b'\xe0A\x03'
+    _globals['_OPERATIONMETADATA'].fields_by_name['api_version']._loaded_options = None
+    _globals['_OPERATIONMETADATA'].fields_by_name['api_version']._serialized_options = b'\xe0A\x03'
+    _globals['_CREATEBACKUPPLANREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEBACKUPPLANREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\n!locations.googleapis.com/Location'
+    _globals['_CREATEBACKUPPLANREQUEST'].fields_by_name['backup_plan']._loaded_options = None
+    _globals['_CREATEBACKUPPLANREQUEST'].fields_by_name['backup_plan']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEBACKUPPLANREQUEST'].fields_by_name['backup_plan_id']._loaded_options = None
+    _globals['_CREATEBACKUPPLANREQUEST'].fields_by_name['backup_plan_id']._serialized_options = b'\xe0A\x02'
+    _globals['_LISTBACKUPPLANSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTBACKUPPLANSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\n!locations.googleapis.com/Location'
+    _globals['_LISTBACKUPPLANSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTBACKUPPLANSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTBACKUPPLANSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTBACKUPPLANSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTBACKUPPLANSREQUEST'].fields_by_name['filter']._loaded_options = None
+    _globals['_LISTBACKUPPLANSREQUEST'].fields_by_name['filter']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTBACKUPPLANSREQUEST'].fields_by_name['order_by']._loaded_options = None
+    _globals['_LISTBACKUPPLANSREQUEST'].fields_by_name['order_by']._serialized_options = b'\xe0A\x01'
+    _globals['_GETBACKUPPLANREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETBACKUPPLANREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA%\n#gkebackup.googleapis.com/BackupPlan'
+    _globals['_UPDATEBACKUPPLANREQUEST'].fields_by_name['backup_plan']._loaded_options = None
+    _globals['_UPDATEBACKUPPLANREQUEST'].fields_by_name['backup_plan']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATEBACKUPPLANREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATEBACKUPPLANREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x01'
+    _globals['_DELETEBACKUPPLANREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEBACKUPPLANREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA%\n#gkebackup.googleapis.com/BackupPlan'
+    _globals['_DELETEBACKUPPLANREQUEST'].fields_by_name['etag']._loaded_options = None
+    _globals['_DELETEBACKUPPLANREQUEST'].fields_by_name['etag']._serialized_options = b'\xe0A\x01'
+    _globals['_CREATEBACKUPREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEBACKUPREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA%\n#gkebackup.googleapis.com/BackupPlan'
+    _globals['_CREATEBACKUPREQUEST'].fields_by_name['backup']._loaded_options = None
+    _globals['_CREATEBACKUPREQUEST'].fields_by_name['backup']._serialized_options = b'\xe0A\x01'
+    _globals['_CREATEBACKUPREQUEST'].fields_by_name['backup_id']._loaded_options = None
+    _globals['_CREATEBACKUPREQUEST'].fields_by_name['backup_id']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTBACKUPSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTBACKUPSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA%\n#gkebackup.googleapis.com/BackupPlan'
+    _globals['_LISTBACKUPSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTBACKUPSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTBACKUPSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTBACKUPSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTBACKUPSREQUEST'].fields_by_name['filter']._loaded_options = None
+    _globals['_LISTBACKUPSREQUEST'].fields_by_name['filter']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTBACKUPSREQUEST'].fields_by_name['order_by']._loaded_options = None
+    _globals['_LISTBACKUPSREQUEST'].fields_by_name['order_by']._serialized_options = b'\xe0A\x01'
+    _globals['_GETBACKUPREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETBACKUPREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA!\n\x1fgkebackup.googleapis.com/Backup'
+    _globals['_UPDATEBACKUPREQUEST'].fields_by_name['backup']._loaded_options = None
+    _globals['_UPDATEBACKUPREQUEST'].fields_by_name['backup']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATEBACKUPREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATEBACKUPREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x01'
+    _globals['_DELETEBACKUPREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEBACKUPREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA!\n\x1fgkebackup.googleapis.com/Backup'
+    _globals['_DELETEBACKUPREQUEST'].fields_by_name['etag']._loaded_options = None
+    _globals['_DELETEBACKUPREQUEST'].fields_by_name['etag']._serialized_options = b'\xe0A\x01'
+    _globals['_DELETEBACKUPREQUEST'].fields_by_name['force']._loaded_options = None
+    _globals['_DELETEBACKUPREQUEST'].fields_by_name['force']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTVOLUMEBACKUPSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTVOLUMEBACKUPSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA!\n\x1fgkebackup.googleapis.com/Backup'
+    _globals['_LISTVOLUMEBACKUPSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTVOLUMEBACKUPSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTVOLUMEBACKUPSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTVOLUMEBACKUPSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTVOLUMEBACKUPSREQUEST'].fields_by_name['filter']._loaded_options = None
+    _globals['_LISTVOLUMEBACKUPSREQUEST'].fields_by_name['filter']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTVOLUMEBACKUPSREQUEST'].fields_by_name['order_by']._loaded_options = None
+    _globals['_LISTVOLUMEBACKUPSREQUEST'].fields_by_name['order_by']._serialized_options = b'\xe0A\x01'
+    _globals['_GETVOLUMEBACKUPREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETVOLUMEBACKUPREQUEST'].fields_by_name['name']._serialized_options = b"\xe0A\x02\xfaA'\n%gkebackup.googleapis.com/VolumeBackup"
+    _globals['_CREATERESTOREPLANREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATERESTOREPLANREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\n!locations.googleapis.com/Location'
+    _globals['_CREATERESTOREPLANREQUEST'].fields_by_name['restore_plan']._loaded_options = None
+    _globals['_CREATERESTOREPLANREQUEST'].fields_by_name['restore_plan']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATERESTOREPLANREQUEST'].fields_by_name['restore_plan_id']._loaded_options = None
+    _globals['_CREATERESTOREPLANREQUEST'].fields_by_name['restore_plan_id']._serialized_options = b'\xe0A\x02'
+    _globals['_LISTRESTOREPLANSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTRESTOREPLANSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\n!locations.googleapis.com/Location'
+    _globals['_LISTRESTOREPLANSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTRESTOREPLANSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTRESTOREPLANSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTRESTOREPLANSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTRESTOREPLANSREQUEST'].fields_by_name['filter']._loaded_options = None
+    _globals['_LISTRESTOREPLANSREQUEST'].fields_by_name['filter']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTRESTOREPLANSREQUEST'].fields_by_name['order_by']._loaded_options = None
+    _globals['_LISTRESTOREPLANSREQUEST'].fields_by_name['order_by']._serialized_options = b'\xe0A\x01'
+    _globals['_GETRESTOREPLANREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETRESTOREPLANREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA&\n$gkebackup.googleapis.com/RestorePlan'
+    _globals['_UPDATERESTOREPLANREQUEST'].fields_by_name['restore_plan']._loaded_options = None
+    _globals['_UPDATERESTOREPLANREQUEST'].fields_by_name['restore_plan']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATERESTOREPLANREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATERESTOREPLANREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x01'
+    _globals['_DELETERESTOREPLANREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETERESTOREPLANREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA&\n$gkebackup.googleapis.com/RestorePlan'
+    _globals['_DELETERESTOREPLANREQUEST'].fields_by_name['etag']._loaded_options = None
+    _globals['_DELETERESTOREPLANREQUEST'].fields_by_name['etag']._serialized_options = b'\xe0A\x01'
+    _globals['_DELETERESTOREPLANREQUEST'].fields_by_name['force']._loaded_options = None
+    _globals['_DELETERESTOREPLANREQUEST'].fields_by_name['force']._serialized_options = b'\xe0A\x01'
+    _globals['_CREATERESTOREREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATERESTOREREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA&\n$gkebackup.googleapis.com/RestorePlan'
+    _globals['_CREATERESTOREREQUEST'].fields_by_name['restore']._loaded_options = None
+    _globals['_CREATERESTOREREQUEST'].fields_by_name['restore']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATERESTOREREQUEST'].fields_by_name['restore_id']._loaded_options = None
+    _globals['_CREATERESTOREREQUEST'].fields_by_name['restore_id']._serialized_options = b'\xe0A\x02'
+    _globals['_LISTRESTORESREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTRESTORESREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA&\n$gkebackup.googleapis.com/RestorePlan'
+    _globals['_LISTRESTORESREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTRESTORESREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTRESTORESREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTRESTORESREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTRESTORESREQUEST'].fields_by_name['filter']._loaded_options = None
+    _globals['_LISTRESTORESREQUEST'].fields_by_name['filter']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTRESTORESREQUEST'].fields_by_name['order_by']._loaded_options = None
+    _globals['_LISTRESTORESREQUEST'].fields_by_name['order_by']._serialized_options = b'\xe0A\x01'
+    _globals['_GETRESTOREREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETRESTOREREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA"\n gkebackup.googleapis.com/Restore'
+    _globals['_UPDATERESTOREREQUEST'].fields_by_name['restore']._loaded_options = None
+    _globals['_UPDATERESTOREREQUEST'].fields_by_name['restore']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATERESTOREREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATERESTOREREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x01'
+    _globals['_DELETERESTOREREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETERESTOREREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA"\n gkebackup.googleapis.com/Restore'
+    _globals['_DELETERESTOREREQUEST'].fields_by_name['etag']._loaded_options = None
+    _globals['_DELETERESTOREREQUEST'].fields_by_name['etag']._serialized_options = b'\xe0A\x01'
+    _globals['_DELETERESTOREREQUEST'].fields_by_name['force']._loaded_options = None
+    _globals['_DELETERESTOREREQUEST'].fields_by_name['force']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTVOLUMERESTORESREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTVOLUMERESTORESREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA"\n gkebackup.googleapis.com/Restore'
+    _globals['_LISTVOLUMERESTORESREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTVOLUMERESTORESREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTVOLUMERESTORESREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTVOLUMERESTORESREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTVOLUMERESTORESREQUEST'].fields_by_name['filter']._loaded_options = None
+    _globals['_LISTVOLUMERESTORESREQUEST'].fields_by_name['filter']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTVOLUMERESTORESREQUEST'].fields_by_name['order_by']._loaded_options = None
+    _globals['_LISTVOLUMERESTORESREQUEST'].fields_by_name['order_by']._serialized_options = b'\xe0A\x01'
+    _globals['_GETVOLUMERESTOREREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETVOLUMERESTOREREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA(\n&gkebackup.googleapis.com/VolumeRestore'
+    _globals['_GETBACKUPINDEXDOWNLOADURLREQUEST'].fields_by_name['backup']._loaded_options = None
+    _globals['_GETBACKUPINDEXDOWNLOADURLREQUEST'].fields_by_name['backup']._serialized_options = b'\xe0A\x02\xfaA!\n\x1fgkebackup.googleapis.com/Backup'
+    _globals['_GETBACKUPINDEXDOWNLOADURLRESPONSE'].fields_by_name['signed_url']._loaded_options = None
+    _globals['_GETBACKUPINDEXDOWNLOADURLRESPONSE'].fields_by_name['signed_url']._serialized_options = b'\xe0A\x02'
+    _globals['_BACKUPFORGKE']._loaded_options = None
+    _globals['_BACKUPFORGKE']._serialized_options = b'\xcaA\x18gkebackup.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platform'
+    _globals['_BACKUPFORGKE'].methods_by_name['CreateBackupPlan']._loaded_options = None
+    _globals['_BACKUPFORGKE'].methods_by_name['CreateBackupPlan']._serialized_options = b'\xcaA\x1f\n\nBackupPlan\x12\x11OperationMetadata\xdaA!parent,backup_plan,backup_plan_id\x82\xd3\xe4\x93\x02>"//v1/{parent=projects/*/locations/*}/backupPlans:\x0bbackup_plan'
+    _globals['_BACKUPFORGKE'].methods_by_name['ListBackupPlans']._loaded_options = None
+    _globals['_BACKUPFORGKE'].methods_by_name['ListBackupPlans']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x021\x12//v1/{parent=projects/*/locations/*}/backupPlans'
+    _globals['_BACKUPFORGKE'].methods_by_name['GetBackupPlan']._loaded_options = None
+    _globals['_BACKUPFORGKE'].methods_by_name['GetBackupPlan']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x021\x12//v1/{name=projects/*/locations/*/backupPlans/*}'
+    _globals['_BACKUPFORGKE'].methods_by_name['UpdateBackupPlan']._loaded_options = None
+    _globals['_BACKUPFORGKE'].methods_by_name['UpdateBackupPlan']._serialized_options = b'\xcaA\x1f\n\nBackupPlan\x12\x11OperationMetadata\xdaA\x17backup_plan,update_mask\x82\xd3\xe4\x93\x02J2;/v1/{backup_plan.name=projects/*/locations/*/backupPlans/*}:\x0bbackup_plan'
+    _globals['_BACKUPFORGKE'].methods_by_name['DeleteBackupPlan']._loaded_options = None
+    _globals['_BACKUPFORGKE'].methods_by_name['DeleteBackupPlan']._serialized_options = b'\xcaA*\n\x15google.protobuf.Empty\x12\x11OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x021*//v1/{name=projects/*/locations/*/backupPlans/*}'
+    _globals['_BACKUPFORGKE'].methods_by_name['CreateBackup']._loaded_options = None
+    _globals['_BACKUPFORGKE'].methods_by_name['CreateBackup']._serialized_options = b'\xcaA\x1b\n\x06Backup\x12\x11OperationMetadata\xdaA\x17parent,backup,backup_id\x82\xd3\xe4\x93\x02C"9/v1/{parent=projects/*/locations/*/backupPlans/*}/backups:\x06backup'
+    _globals['_BACKUPFORGKE'].methods_by_name['ListBackups']._loaded_options = None
+    _globals['_BACKUPFORGKE'].methods_by_name['ListBackups']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02;\x129/v1/{parent=projects/*/locations/*/backupPlans/*}/backups'
+    _globals['_BACKUPFORGKE'].methods_by_name['GetBackup']._loaded_options = None
+    _globals['_BACKUPFORGKE'].methods_by_name['GetBackup']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02;\x129/v1/{name=projects/*/locations/*/backupPlans/*/backups/*}'
+    _globals['_BACKUPFORGKE'].methods_by_name['UpdateBackup']._loaded_options = None
+    _globals['_BACKUPFORGKE'].methods_by_name['UpdateBackup']._serialized_options = b'\xcaA\x1b\n\x06Backup\x12\x11OperationMetadata\xdaA\x12backup,update_mask\x82\xd3\xe4\x93\x02J2@/v1/{backup.name=projects/*/locations/*/backupPlans/*/backups/*}:\x06backup'
+    _globals['_BACKUPFORGKE'].methods_by_name['DeleteBackup']._loaded_options = None
+    _globals['_BACKUPFORGKE'].methods_by_name['DeleteBackup']._serialized_options = b'\xcaA*\n\x15google.protobuf.Empty\x12\x11OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02;*9/v1/{name=projects/*/locations/*/backupPlans/*/backups/*}'
+    _globals['_BACKUPFORGKE'].methods_by_name['ListVolumeBackups']._loaded_options = None
+    _globals['_BACKUPFORGKE'].methods_by_name['ListVolumeBackups']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02K\x12I/v1/{parent=projects/*/locations/*/backupPlans/*/backups/*}/volumeBackups'
+    _globals['_BACKUPFORGKE'].methods_by_name['GetVolumeBackup']._loaded_options = None
+    _globals['_BACKUPFORGKE'].methods_by_name['GetVolumeBackup']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02K\x12I/v1/{name=projects/*/locations/*/backupPlans/*/backups/*/volumeBackups/*}'
+    _globals['_BACKUPFORGKE'].methods_by_name['CreateRestorePlan']._loaded_options = None
+    _globals['_BACKUPFORGKE'].methods_by_name['CreateRestorePlan']._serialized_options = b'\xcaA \n\x0bRestorePlan\x12\x11OperationMetadata\xdaA#parent,restore_plan,restore_plan_id\x82\xd3\xe4\x93\x02@"0/v1/{parent=projects/*/locations/*}/restorePlans:\x0crestore_plan'
+    _globals['_BACKUPFORGKE'].methods_by_name['ListRestorePlans']._loaded_options = None
+    _globals['_BACKUPFORGKE'].methods_by_name['ListRestorePlans']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x022\x120/v1/{parent=projects/*/locations/*}/restorePlans'
+    _globals['_BACKUPFORGKE'].methods_by_name['GetRestorePlan']._loaded_options = None
+    _globals['_BACKUPFORGKE'].methods_by_name['GetRestorePlan']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x022\x120/v1/{name=projects/*/locations/*/restorePlans/*}'
+    _globals['_BACKUPFORGKE'].methods_by_name['UpdateRestorePlan']._loaded_options = None
+    _globals['_BACKUPFORGKE'].methods_by_name['UpdateRestorePlan']._serialized_options = b'\xcaA \n\x0bRestorePlan\x12\x11OperationMetadata\xdaA\x18restore_plan,update_mask\x82\xd3\xe4\x93\x02M2=/v1/{restore_plan.name=projects/*/locations/*/restorePlans/*}:\x0crestore_plan'
+    _globals['_BACKUPFORGKE'].methods_by_name['DeleteRestorePlan']._loaded_options = None
+    _globals['_BACKUPFORGKE'].methods_by_name['DeleteRestorePlan']._serialized_options = b'\xcaA*\n\x15google.protobuf.Empty\x12\x11OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x022*0/v1/{name=projects/*/locations/*/restorePlans/*}'
+    _globals['_BACKUPFORGKE'].methods_by_name['CreateRestore']._loaded_options = None
+    _globals['_BACKUPFORGKE'].methods_by_name['CreateRestore']._serialized_options = b'\xcaA\x1c\n\x07Restore\x12\x11OperationMetadata\xdaA\x19parent,restore,restore_id\x82\xd3\xe4\x93\x02F";/v1/{parent=projects/*/locations/*/restorePlans/*}/restores:\x07restore'
+    _globals['_BACKUPFORGKE'].methods_by_name['ListRestores']._loaded_options = None
+    _globals['_BACKUPFORGKE'].methods_by_name['ListRestores']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02=\x12;/v1/{parent=projects/*/locations/*/restorePlans/*}/restores'
+    _globals['_BACKUPFORGKE'].methods_by_name['GetRestore']._loaded_options = None
+    _globals['_BACKUPFORGKE'].methods_by_name['GetRestore']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02=\x12;/v1/{name=projects/*/locations/*/restorePlans/*/restores/*}'
+    _globals['_BACKUPFORGKE'].methods_by_name['UpdateRestore']._loaded_options = None
+    _globals['_BACKUPFORGKE'].methods_by_name['UpdateRestore']._serialized_options = b'\xcaA\x1c\n\x07Restore\x12\x11OperationMetadata\xdaA\x13restore,update_mask\x82\xd3\xe4\x93\x02N2C/v1/{restore.name=projects/*/locations/*/restorePlans/*/restores/*}:\x07restore'
+    _globals['_BACKUPFORGKE'].methods_by_name['DeleteRestore']._loaded_options = None
+    _globals['_BACKUPFORGKE'].methods_by_name['DeleteRestore']._serialized_options = b'\xcaA*\n\x15google.protobuf.Empty\x12\x11OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02=*;/v1/{name=projects/*/locations/*/restorePlans/*/restores/*}'
+    _globals['_BACKUPFORGKE'].methods_by_name['ListVolumeRestores']._loaded_options = None
+    _globals['_BACKUPFORGKE'].methods_by_name['ListVolumeRestores']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02N\x12L/v1/{parent=projects/*/locations/*/restorePlans/*/restores/*}/volumeRestores'
+    _globals['_BACKUPFORGKE'].methods_by_name['GetVolumeRestore']._loaded_options = None
+    _globals['_BACKUPFORGKE'].methods_by_name['GetVolumeRestore']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02N\x12L/v1/{name=projects/*/locations/*/restorePlans/*/restores/*/volumeRestores/*}'
+    _globals['_BACKUPFORGKE'].methods_by_name['GetBackupIndexDownloadUrl']._loaded_options = None
+    _globals['_BACKUPFORGKE'].methods_by_name['GetBackupIndexDownloadUrl']._serialized_options = b'\xdaA\x06backup\x82\xd3\xe4\x93\x02W\x12U/v1/{backup=projects/*/locations/*/backupPlans/*/backups/*}:getBackupIndexDownloadUrl'
+    _globals['_OPERATIONMETADATA']._serialized_start = 533
+    _globals['_OPERATIONMETADATA']._serialized_end = 789
+    _globals['_CREATEBACKUPPLANREQUEST']._serialized_start = 792
+    _globals['_CREATEBACKUPPLANREQUEST']._serialized_end = 970
+    _globals['_LISTBACKUPPLANSREQUEST']._serialized_start = 973
+    _globals['_LISTBACKUPPLANSREQUEST']._serialized_end = 1149
+    _globals['_LISTBACKUPPLANSRESPONSE']._serialized_start = 1152
+    _globals['_LISTBACKUPPLANSRESPONSE']._serialized_end = 1284
+    _globals['_GETBACKUPPLANREQUEST']._serialized_start = 1286
+    _globals['_GETBACKUPPLANREQUEST']._serialized_end = 1367
+    _globals['_UPDATEBACKUPPLANREQUEST']._serialized_start = 1370
+    _globals['_UPDATEBACKUPPLANREQUEST']._serialized_end = 1514
+    _globals['_DELETEBACKUPPLANREQUEST']._serialized_start = 1516
+    _globals['_DELETEBACKUPPLANREQUEST']._serialized_end = 1619
+    _globals['_CREATEBACKUPREQUEST']._serialized_start = 1622
+    _globals['_CREATEBACKUPREQUEST']._serialized_end = 1784
+    _globals['_LISTBACKUPSREQUEST']._serialized_start = 1787
+    _globals['_LISTBACKUPSREQUEST']._serialized_end = 1961
+    _globals['_LISTBACKUPSRESPONSE']._serialized_start = 1963
+    _globals['_LISTBACKUPSRESPONSE']._serialized_end = 2061
+    _globals['_GETBACKUPREQUEST']._serialized_start = 2063
+    _globals['_GETBACKUPREQUEST']._serialized_end = 2136
+    _globals['_UPDATEBACKUPREQUEST']._serialized_start = 2139
+    _globals['_UPDATEBACKUPREQUEST']._serialized_end = 2270
+    _globals['_DELETEBACKUPREQUEST']._serialized_start = 2272
+    _globals['_DELETEBACKUPREQUEST']._serialized_end = 2387
+    _globals['_LISTVOLUMEBACKUPSREQUEST']._serialized_start = 2390
+    _globals['_LISTVOLUMEBACKUPSREQUEST']._serialized_end = 2566
+    _globals['_LISTVOLUMEBACKUPSRESPONSE']._serialized_start = 2568
+    _globals['_LISTVOLUMEBACKUPSRESPONSE']._serialized_end = 2685
+    _globals['_GETVOLUMEBACKUPREQUEST']._serialized_start = 2687
+    _globals['_GETVOLUMEBACKUPREQUEST']._serialized_end = 2772
+    _globals['_CREATERESTOREPLANREQUEST']._serialized_start = 2775
+    _globals['_CREATERESTOREPLANREQUEST']._serialized_end = 2957
+    _globals['_LISTRESTOREPLANSREQUEST']._serialized_start = 2960
+    _globals['_LISTRESTOREPLANSREQUEST']._serialized_end = 3137
+    _globals['_LISTRESTOREPLANSRESPONSE']._serialized_start = 3140
+    _globals['_LISTRESTOREPLANSRESPONSE']._serialized_end = 3275
+    _globals['_GETRESTOREPLANREQUEST']._serialized_start = 3277
+    _globals['_GETRESTOREPLANREQUEST']._serialized_end = 3360
+    _globals['_UPDATERESTOREPLANREQUEST']._serialized_start = 3363
+    _globals['_UPDATERESTOREPLANREQUEST']._serialized_end = 3510
+    _globals['_DELETERESTOREPLANREQUEST']._serialized_start = 3512
+    _globals['_DELETERESTOREPLANREQUEST']._serialized_end = 3637
+    _globals['_CREATERESTOREREQUEST']._serialized_start = 3640
+    _globals['_CREATERESTOREREQUEST']._serialized_end = 3807
+    _globals['_LISTRESTORESREQUEST']._serialized_start = 3810
+    _globals['_LISTRESTORESREQUEST']._serialized_end = 3986
+    _globals['_LISTRESTORESRESPONSE']._serialized_start = 3988
+    _globals['_LISTRESTORESRESPONSE']._serialized_end = 4110
+    _globals['_GETRESTOREREQUEST']._serialized_start = 4112
+    _globals['_GETRESTOREREQUEST']._serialized_end = 4187
+    _globals['_UPDATERESTOREREQUEST']._serialized_start = 4190
+    _globals['_UPDATERESTOREREQUEST']._serialized_end = 4324
+    _globals['_DELETERESTOREREQUEST']._serialized_start = 4326
+    _globals['_DELETERESTOREREQUEST']._serialized_end = 4443
+    _globals['_LISTVOLUMERESTORESREQUEST']._serialized_start = 4446
+    _globals['_LISTVOLUMERESTORESREQUEST']._serialized_end = 4624
+    _globals['_LISTVOLUMERESTORESRESPONSE']._serialized_start = 4626
+    _globals['_LISTVOLUMERESTORESRESPONSE']._serialized_end = 4746
+    _globals['_GETVOLUMERESTOREREQUEST']._serialized_start = 4748
+    _globals['_GETVOLUMERESTOREREQUEST']._serialized_end = 4835
+    _globals['_GETBACKUPINDEXDOWNLOADURLREQUEST']._serialized_start = 4837
+    _globals['_GETBACKUPINDEXDOWNLOADURLREQUEST']._serialized_end = 4928
+    _globals['_GETBACKUPINDEXDOWNLOADURLRESPONSE']._serialized_start = 4930
+    _globals['_GETBACKUPINDEXDOWNLOADURLRESPONSE']._serialized_end = 4990
+    _globals['_BACKUPFORGKE']._serialized_start = 4993
+    _globals['_BACKUPFORGKE']._serialized_end = 10439

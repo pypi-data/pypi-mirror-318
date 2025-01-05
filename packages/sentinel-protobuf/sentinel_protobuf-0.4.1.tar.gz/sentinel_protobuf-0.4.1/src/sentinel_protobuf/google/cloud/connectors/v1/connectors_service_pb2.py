@@ -1,0 +1,64 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/cloud/connectors/v1/connectors_service.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from .....google.api import client_pb2 as google_dot_api_dot_client__pb2
+from .....google.cloud.connectors.v1 import common_pb2 as google_dot_cloud_dot_connectors_dot_v1_dot_common__pb2
+from .....google.cloud.connectors.v1 import connection_pb2 as google_dot_cloud_dot_connectors_dot_v1_dot_connection__pb2
+from .....google.cloud.connectors.v1 import connector_pb2 as google_dot_cloud_dot_connectors_dot_v1_dot_connector__pb2
+from .....google.cloud.connectors.v1 import connector_version_pb2 as google_dot_cloud_dot_connectors_dot_v1_dot_connector__version__pb2
+from .....google.cloud.connectors.v1 import provider_pb2 as google_dot_cloud_dot_connectors_dot_v1_dot_provider__pb2
+from .....google.cloud.connectors.v1 import runtime_pb2 as google_dot_cloud_dot_connectors_dot_v1_dot_runtime__pb2
+from .....google.cloud.connectors.v1 import settings_pb2 as google_dot_cloud_dot_connectors_dot_v1_dot_settings__pb2
+from .....google.longrunning import operations_pb2 as google_dot_longrunning_dot_operations__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n3google/cloud/connectors/v1/connectors_service.proto\x12\x1agoogle.cloud.connectors.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\'google/cloud/connectors/v1/common.proto\x1a+google/cloud/connectors/v1/connection.proto\x1a*google/cloud/connectors/v1/connector.proto\x1a2google/cloud/connectors/v1/connector_version.proto\x1a)google/cloud/connectors/v1/provider.proto\x1a(google/cloud/connectors/v1/runtime.proto\x1a)google/cloud/connectors/v1/settings.proto\x1a#google/longrunning/operations.proto\x1a\x1bgoogle/protobuf/empty.proto2\xe9\x1c\n\nConnectors\x12\xbc\x01\n\x0fListConnections\x122.google.cloud.connectors.v1.ListConnectionsRequest\x1a3.google.cloud.connectors.v1.ListConnectionsResponse"@\xdaA\x06parent\x82\xd3\xe4\x93\x021\x12//v1/{parent=projects/*/locations/*}/connections\x12\xa9\x01\n\rGetConnection\x120.google.cloud.connectors.v1.GetConnectionRequest\x1a&.google.cloud.connectors.v1.Connection">\xdaA\x04name\x82\xd3\xe4\x93\x021\x12//v1/{name=projects/*/locations/*/connections/*}\x12\xf0\x01\n\x10CreateConnection\x123.google.cloud.connectors.v1.CreateConnectionRequest\x1a\x1d.google.longrunning.Operation"\x87\x01\xcaA\x1f\n\nConnection\x12\x11OperationMetadata\xdaA\x1fparent,connection,connection_id\x82\xd3\xe4\x93\x02="//v1/{parent=projects/*/locations/*}/connections:\nconnection\x12\xf2\x01\n\x10UpdateConnection\x123.google.cloud.connectors.v1.UpdateConnectionRequest\x1a\x1d.google.longrunning.Operation"\x89\x01\xcaA\x1f\n\nConnection\x12\x11OperationMetadata\xdaA\x16connection,update_mask\x82\xd3\xe4\x93\x02H2:/v1/{connection.name=projects/*/locations/*/connections/*}:\nconnection\x12\xd3\x01\n\x10DeleteConnection\x123.google.cloud.connectors.v1.DeleteConnectionRequest\x1a\x1d.google.longrunning.Operation"k\xcaA*\n\x15google.protobuf.Empty\x12\x11OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x021*//v1/{name=projects/*/locations/*/connections/*}\x12\xb4\x01\n\rListProviders\x120.google.cloud.connectors.v1.ListProvidersRequest\x1a1.google.cloud.connectors.v1.ListProvidersResponse">\xdaA\x06parent\x82\xd3\xe4\x93\x02/\x12-/v1/{parent=projects/*/locations/*}/providers\x12\xa1\x01\n\x0bGetProvider\x12..google.cloud.connectors.v1.GetProviderRequest\x1a$.google.cloud.connectors.v1.Provider"<\xdaA\x04name\x82\xd3\xe4\x93\x02/\x12-/v1/{name=projects/*/locations/*/providers/*}\x12\xc4\x01\n\x0eListConnectors\x121.google.cloud.connectors.v1.ListConnectorsRequest\x1a2.google.cloud.connectors.v1.ListConnectorsResponse"K\xdaA\x06parent\x82\xd3\xe4\x93\x02<\x12:/v1/{parent=projects/*/locations/*/providers/*}/connectors\x12\xb1\x01\n\x0cGetConnector\x12/.google.cloud.connectors.v1.GetConnectorRequest\x1a%.google.cloud.connectors.v1.Connector"I\xdaA\x04name\x82\xd3\xe4\x93\x02<\x12:/v1/{name=projects/*/locations/*/providers/*/connectors/*}\x12\xe4\x01\n\x15ListConnectorVersions\x128.google.cloud.connectors.v1.ListConnectorVersionsRequest\x1a9.google.cloud.connectors.v1.ListConnectorVersionsResponse"V\xdaA\x06parent\x82\xd3\xe4\x93\x02G\x12E/v1/{parent=projects/*/locations/*/providers/*/connectors/*}/versions\x12\xd1\x01\n\x13GetConnectorVersion\x126.google.cloud.connectors.v1.GetConnectorVersionRequest\x1a,.google.cloud.connectors.v1.ConnectorVersion"T\xdaA\x04name\x82\xd3\xe4\x93\x02G\x12E/v1/{name=projects/*/locations/*/providers/*/connectors/*/versions/*}\x12\xec\x01\n\x1bGetConnectionSchemaMetadata\x12>.google.cloud.connectors.v1.GetConnectionSchemaMetadataRequest\x1a4.google.cloud.connectors.v1.ConnectionSchemaMetadata"W\xdaA\x04name\x82\xd3\xe4\x93\x02J\x12H/v1/{name=projects/*/locations/*/connections/*/connectionSchemaMetadata}\x12\x99\x02\n\x1fRefreshConnectionSchemaMetadata\x12B.google.cloud.connectors.v1.RefreshConnectionSchemaMetadataRequest\x1a\x1d.google.longrunning.Operation"\x92\x01\xcaA-\n\x18ConnectionSchemaMetadata\x12\x11OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02U"P/v1/{name=projects/*/locations/*/connections/*/connectionSchemaMetadata}:refresh:\x01*\x12\xee\x01\n\x18ListRuntimeEntitySchemas\x12;.google.cloud.connectors.v1.ListRuntimeEntitySchemasRequest\x1a<.google.cloud.connectors.v1.ListRuntimeEntitySchemasResponse"W\xdaA\x06parent\x82\xd3\xe4\x93\x02H\x12F/v1/{parent=projects/*/locations/*/connections/*}/runtimeEntitySchemas\x12\xee\x01\n\x18ListRuntimeActionSchemas\x12;.google.cloud.connectors.v1.ListRuntimeActionSchemasRequest\x1a<.google.cloud.connectors.v1.ListRuntimeActionSchemasResponse"W\xdaA\x06parent\x82\xd3\xe4\x93\x02H\x12F/v1/{parent=projects/*/locations/*/connections/*}/runtimeActionSchemas\x12\xb2\x01\n\x10GetRuntimeConfig\x123.google.cloud.connectors.v1.GetRuntimeConfigRequest\x1a).google.cloud.connectors.v1.RuntimeConfig">\xdaA\x04name\x82\xd3\xe4\x93\x021\x12//v1/{name=projects/*/locations/*/runtimeConfig}\x12\xaf\x01\n\x11GetGlobalSettings\x124.google.cloud.connectors.v1.GetGlobalSettingsRequest\x1a$.google.cloud.connectors.v1.Settings">\xdaA\x04name\x82\xd3\xe4\x93\x021\x12//v1/{name=projects/*/locations/global/settings}\x1aM\xcaA\x19connectors.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platformBz\n\x1ecom.google.cloud.connectors.v1B\x16ConnectorsServiceProtoP\x01Z>cloud.google.com/go/connectors/apiv1/connectorspb;connectorspbb\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.connectors.v1.connectors_service_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n\x1ecom.google.cloud.connectors.v1B\x16ConnectorsServiceProtoP\x01Z>cloud.google.com/go/connectors/apiv1/connectorspb;connectorspb'
+    _globals['_CONNECTORS']._loaded_options = None
+    _globals['_CONNECTORS']._serialized_options = b'\xcaA\x19connectors.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platform'
+    _globals['_CONNECTORS'].methods_by_name['ListConnections']._loaded_options = None
+    _globals['_CONNECTORS'].methods_by_name['ListConnections']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x021\x12//v1/{parent=projects/*/locations/*}/connections'
+    _globals['_CONNECTORS'].methods_by_name['GetConnection']._loaded_options = None
+    _globals['_CONNECTORS'].methods_by_name['GetConnection']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x021\x12//v1/{name=projects/*/locations/*/connections/*}'
+    _globals['_CONNECTORS'].methods_by_name['CreateConnection']._loaded_options = None
+    _globals['_CONNECTORS'].methods_by_name['CreateConnection']._serialized_options = b'\xcaA\x1f\n\nConnection\x12\x11OperationMetadata\xdaA\x1fparent,connection,connection_id\x82\xd3\xe4\x93\x02="//v1/{parent=projects/*/locations/*}/connections:\nconnection'
+    _globals['_CONNECTORS'].methods_by_name['UpdateConnection']._loaded_options = None
+    _globals['_CONNECTORS'].methods_by_name['UpdateConnection']._serialized_options = b'\xcaA\x1f\n\nConnection\x12\x11OperationMetadata\xdaA\x16connection,update_mask\x82\xd3\xe4\x93\x02H2:/v1/{connection.name=projects/*/locations/*/connections/*}:\nconnection'
+    _globals['_CONNECTORS'].methods_by_name['DeleteConnection']._loaded_options = None
+    _globals['_CONNECTORS'].methods_by_name['DeleteConnection']._serialized_options = b'\xcaA*\n\x15google.protobuf.Empty\x12\x11OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x021*//v1/{name=projects/*/locations/*/connections/*}'
+    _globals['_CONNECTORS'].methods_by_name['ListProviders']._loaded_options = None
+    _globals['_CONNECTORS'].methods_by_name['ListProviders']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02/\x12-/v1/{parent=projects/*/locations/*}/providers'
+    _globals['_CONNECTORS'].methods_by_name['GetProvider']._loaded_options = None
+    _globals['_CONNECTORS'].methods_by_name['GetProvider']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02/\x12-/v1/{name=projects/*/locations/*/providers/*}'
+    _globals['_CONNECTORS'].methods_by_name['ListConnectors']._loaded_options = None
+    _globals['_CONNECTORS'].methods_by_name['ListConnectors']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02<\x12:/v1/{parent=projects/*/locations/*/providers/*}/connectors'
+    _globals['_CONNECTORS'].methods_by_name['GetConnector']._loaded_options = None
+    _globals['_CONNECTORS'].methods_by_name['GetConnector']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02<\x12:/v1/{name=projects/*/locations/*/providers/*/connectors/*}'
+    _globals['_CONNECTORS'].methods_by_name['ListConnectorVersions']._loaded_options = None
+    _globals['_CONNECTORS'].methods_by_name['ListConnectorVersions']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02G\x12E/v1/{parent=projects/*/locations/*/providers/*/connectors/*}/versions'
+    _globals['_CONNECTORS'].methods_by_name['GetConnectorVersion']._loaded_options = None
+    _globals['_CONNECTORS'].methods_by_name['GetConnectorVersion']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02G\x12E/v1/{name=projects/*/locations/*/providers/*/connectors/*/versions/*}'
+    _globals['_CONNECTORS'].methods_by_name['GetConnectionSchemaMetadata']._loaded_options = None
+    _globals['_CONNECTORS'].methods_by_name['GetConnectionSchemaMetadata']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02J\x12H/v1/{name=projects/*/locations/*/connections/*/connectionSchemaMetadata}'
+    _globals['_CONNECTORS'].methods_by_name['RefreshConnectionSchemaMetadata']._loaded_options = None
+    _globals['_CONNECTORS'].methods_by_name['RefreshConnectionSchemaMetadata']._serialized_options = b'\xcaA-\n\x18ConnectionSchemaMetadata\x12\x11OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02U"P/v1/{name=projects/*/locations/*/connections/*/connectionSchemaMetadata}:refresh:\x01*'
+    _globals['_CONNECTORS'].methods_by_name['ListRuntimeEntitySchemas']._loaded_options = None
+    _globals['_CONNECTORS'].methods_by_name['ListRuntimeEntitySchemas']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02H\x12F/v1/{parent=projects/*/locations/*/connections/*}/runtimeEntitySchemas'
+    _globals['_CONNECTORS'].methods_by_name['ListRuntimeActionSchemas']._loaded_options = None
+    _globals['_CONNECTORS'].methods_by_name['ListRuntimeActionSchemas']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02H\x12F/v1/{parent=projects/*/locations/*/connections/*}/runtimeActionSchemas'
+    _globals['_CONNECTORS'].methods_by_name['GetRuntimeConfig']._loaded_options = None
+    _globals['_CONNECTORS'].methods_by_name['GetRuntimeConfig']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x021\x12//v1/{name=projects/*/locations/*/runtimeConfig}'
+    _globals['_CONNECTORS'].methods_by_name['GetGlobalSettings']._loaded_options = None
+    _globals['_CONNECTORS'].methods_by_name['GetGlobalSettings']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x021\x12//v1/{name=projects/*/locations/global/settings}'
+    _globals['_CONNECTORS']._serialized_start = 515
+    _globals['_CONNECTORS']._serialized_end = 4204

@@ -1,0 +1,221 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/cloud/functions/v2alpha/functions.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from .....google.api import client_pb2 as google_dot_api_dot_client__pb2
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from .....google.longrunning import operations_pb2 as google_dot_longrunning_dot_operations__pb2
+from google.protobuf import any_pb2 as google_dot_protobuf_dot_any__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
+from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+from .....google.type import date_pb2 as google_dot_type_dot_date__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n.google/cloud/functions/v2alpha/functions.proto\x12\x1egoogle.cloud.functions.v2alpha\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a#google/longrunning/operations.proto\x1a\x19google/protobuf/any.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x16google/type/date.proto"\xfc\x07\n\x08Function\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0bdescription\x18\x02 \x01(\t\x12A\n\x0cbuild_config\x18\x03 \x01(\x0b2+.google.cloud.functions.v2alpha.BuildConfig\x12E\n\x0eservice_config\x18\x04 \x01(\x0b2-.google.cloud.functions.v2alpha.ServiceConfig\x12C\n\revent_trigger\x18\x05 \x01(\x0b2,.google.cloud.functions.v2alpha.EventTrigger\x12B\n\x05state\x18\x06 \x01(\x0e2..google.cloud.functions.v2alpha.Function.StateB\x03\xe0A\x03\x124\n\x0bupdate_time\x18\x07 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12D\n\x06labels\x18\x08 \x03(\x0b24.google.cloud.functions.v2alpha.Function.LabelsEntry\x12I\n\x0estate_messages\x18\t \x03(\x0b2,.google.cloud.functions.v2alpha.StateMessageB\x03\xe0A\x03\x12@\n\x0benvironment\x18\n \x01(\x0e2+.google.cloud.functions.v2alpha.Environment\x12\x10\n\x03url\x18\x0e \x01(\tB\x03\xe0A\x03\x12<\n\x0ckms_key_name\x18\x19 \x01(\tB&\xfaA#\n!cloudkms.googleapis.com/CryptoKey\x12\x1a\n\rsatisfies_pzs\x18\x1b \x01(\x08B\x03\xe0A\x03\x124\n\x0bcreate_time\x18\x1c \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x028\x01"`\n\x05State\x12\x15\n\x11STATE_UNSPECIFIED\x10\x00\x12\n\n\x06ACTIVE\x10\x01\x12\n\n\x06FAILED\x10\x02\x12\r\n\tDEPLOYING\x10\x03\x12\x0c\n\x08DELETING\x10\x04\x12\x0b\n\x07UNKNOWN\x10\x05:~\xeaA{\n&cloudfunctions.googleapis.com/Function\x12<projects/{project}/locations/{location}/functions/{function}*\tfunctions2\x08function"\xbe\x01\n\x0cStateMessage\x12G\n\x08severity\x18\x01 \x01(\x0e25.google.cloud.functions.v2alpha.StateMessage.Severity\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x0f\n\x07message\x18\x03 \x01(\t"F\n\x08Severity\x12\x18\n\x14SEVERITY_UNSPECIFIED\x10\x00\x12\t\n\x05ERROR\x10\x01\x12\x0b\n\x07WARNING\x10\x02\x12\x08\n\x04INFO\x10\x03"^\n\rStorageSource\x12\x0e\n\x06bucket\x18\x01 \x01(\t\x12\x0e\n\x06object\x18\x02 \x01(\t\x12\x12\n\ngeneration\x18\x03 \x01(\x03\x12\x19\n\x11source_upload_url\x18\x04 \x01(\t"\xa3\x01\n\nRepoSource\x12\x15\n\x0bbranch_name\x18\x03 \x01(\tH\x00\x12\x12\n\x08tag_name\x18\x04 \x01(\tH\x00\x12\x14\n\ncommit_sha\x18\x05 \x01(\tH\x00\x12\x12\n\nproject_id\x18\x01 \x01(\t\x12\x11\n\trepo_name\x18\x02 \x01(\t\x12\x0b\n\x03dir\x18\x06 \x01(\t\x12\x14\n\x0cinvert_regex\x18\x07 \x01(\x08B\n\n\x08revision"\xb1\x01\n\x06Source\x12G\n\x0estorage_source\x18\x01 \x01(\x0b2-.google.cloud.functions.v2alpha.StorageSourceH\x00\x12A\n\x0brepo_source\x18\x02 \x01(\x0b2*.google.cloud.functions.v2alpha.RepoSourceH\x00\x12\x11\n\x07git_uri\x18\x03 \x01(\tH\x00B\x08\n\x06source"\xbd\x01\n\x10SourceProvenance\x12N\n\x17resolved_storage_source\x18\x01 \x01(\x0b2-.google.cloud.functions.v2alpha.StorageSource\x12H\n\x14resolved_repo_source\x18\x02 \x01(\x0b2*.google.cloud.functions.v2alpha.RepoSource\x12\x0f\n\x07git_uri\x18\x03 \x01(\t"\xc0\x07\n\x0bBuildConfig\x12X\n\x17automatic_update_policy\x18( \x01(\x0b25.google.cloud.functions.v2alpha.AutomaticUpdatePolicyH\x00\x12W\n\x17on_deploy_update_policy\x18) \x01(\x0b24.google.cloud.functions.v2alpha.OnDeployUpdatePolicyH\x00\x126\n\x05build\x18\x01 \x01(\tB\'\xe0A\x03\xfaA!\n\x1fcloudbuild.googleapis.com/Build\x12\x0f\n\x07runtime\x18\x02 \x01(\t\x12\x13\n\x0bentry_point\x18\x03 \x01(\t\x126\n\x06source\x18\x04 \x01(\x0b2&.google.cloud.functions.v2alpha.Source\x12P\n\x11source_provenance\x18\x08 \x01(\x0b20.google.cloud.functions.v2alpha.SourceProvenanceB\x03\xe0A\x03\x12>\n\x0bworker_pool\x18\x05 \x01(\tB)\xfaA&\n$cloudbuild.googleapis.com/WorkerPool\x12d\n\x15environment_variables\x18\x06 \x03(\x0b2E.google.cloud.functions.v2alpha.BuildConfig.EnvironmentVariablesEntry\x12S\n\x0fdocker_registry\x18\n \x01(\x0e2:.google.cloud.functions.v2alpha.BuildConfig.DockerRegistry\x12J\n\x11docker_repository\x18\x07 \x01(\tB/\xfaA,\n*artifactregistry.googleapis.com/Repository\x12\x17\n\x0fservice_account\x18\x1b \x01(\t\x1a;\n\x19EnvironmentVariablesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x028\x01"`\n\x0eDockerRegistry\x12\x1f\n\x1bDOCKER_REGISTRY_UNSPECIFIED\x10\x00\x12\x16\n\x12CONTAINER_REGISTRY\x10\x01\x12\x15\n\x11ARTIFACT_REGISTRY\x10\x02B\x17\n\x15runtime_update_policy"\xf2\n\n\rServiceConfig\x123\n\x07service\x18\x01 \x01(\tB"\xe0A\x03\xfaA\x1c\n\x1arun.googleapis.com/Service\x12\x17\n\x0ftimeout_seconds\x18\x02 \x01(\x05\x12\x18\n\x10available_memory\x18\r \x01(\t\x12\x15\n\ravailable_cpu\x18\x16 \x01(\t\x12f\n\x15environment_variables\x18\x04 \x03(\x0b2G.google.cloud.functions.v2alpha.ServiceConfig.EnvironmentVariablesEntry\x12\x1a\n\x12max_instance_count\x18\x05 \x01(\x05\x12\x1a\n\x12min_instance_count\x18\x0c \x01(\x05\x12>\n\rvpc_connector\x18\x06 \x01(\tB\'\xfaA$\n"vpcaccess.googleapis.com/Connector\x12o\n\x1dvpc_connector_egress_settings\x18\x07 \x01(\x0e2H.google.cloud.functions.v2alpha.ServiceConfig.VpcConnectorEgressSettings\x12W\n\x10ingress_settings\x18\x08 \x01(\x0e2=.google.cloud.functions.v2alpha.ServiceConfig.IngressSettings\x12\x10\n\x03uri\x18\t \x01(\tB\x03\xe0A\x03\x12\x1d\n\x15service_account_email\x18\n \x01(\t\x12&\n\x1eall_traffic_on_latest_revision\x18\x10 \x01(\x08\x12R\n\x1csecret_environment_variables\x18\x11 \x03(\x0b2,.google.cloud.functions.v2alpha.SecretEnvVar\x12D\n\x0esecret_volumes\x18\x13 \x03(\x0b2,.google.cloud.functions.v2alpha.SecretVolume\x12\x15\n\x08revision\x18\x12 \x01(\tB\x03\xe0A\x03\x12(\n max_instance_request_concurrency\x18\x14 \x01(\x05\x12S\n\x0esecurity_level\x18\x15 \x01(\x0e2;.google.cloud.functions.v2alpha.ServiceConfig.SecurityLevel\x12(\n\x1bbinary_authorization_policy\x18\x17 \x01(\tB\x03\xe0A\x01\x1a;\n\x19EnvironmentVariablesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x028\x01"u\n\x1aVpcConnectorEgressSettings\x12-\n)VPC_CONNECTOR_EGRESS_SETTINGS_UNSPECIFIED\x10\x00\x12\x17\n\x13PRIVATE_RANGES_ONLY\x10\x01\x12\x0f\n\x0bALL_TRAFFIC\x10\x02"x\n\x0fIngressSettings\x12 \n\x1cINGRESS_SETTINGS_UNSPECIFIED\x10\x00\x12\r\n\tALLOW_ALL\x10\x01\x12\x17\n\x13ALLOW_INTERNAL_ONLY\x10\x02\x12\x1b\n\x17ALLOW_INTERNAL_AND_GCLB\x10\x03"W\n\rSecurityLevel\x12\x1e\n\x1aSECURITY_LEVEL_UNSPECIFIED\x10\x00\x12\x11\n\rSECURE_ALWAYS\x10\x01\x12\x13\n\x0fSECURE_OPTIONAL\x10\x02"P\n\x0cSecretEnvVar\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x12\n\nproject_id\x18\x02 \x01(\t\x12\x0e\n\x06secret\x18\x03 \x01(\t\x12\x0f\n\x07version\x18\x04 \x01(\t"\xc4\x01\n\x0cSecretVolume\x12\x12\n\nmount_path\x18\x01 \x01(\t\x12\x12\n\nproject_id\x18\x02 \x01(\t\x12\x0e\n\x06secret\x18\x03 \x01(\t\x12L\n\x08versions\x18\x04 \x03(\x0b2:.google.cloud.functions.v2alpha.SecretVolume.SecretVersion\x1a.\n\rSecretVersion\x12\x0f\n\x07version\x18\x01 \x01(\t\x12\x0c\n\x04path\x18\x02 \x01(\t"\xa5\x04\n\x0cEventTrigger\x128\n\x07trigger\x18\x01 \x01(\tB\'\xe0A\x03\xfaA!\n\x1feventarc.googleapis.com/Trigger\x12\x16\n\x0etrigger_region\x18\x02 \x01(\t\x12\x17\n\nevent_type\x18\x03 \x01(\tB\x03\xe0A\x02\x12B\n\revent_filters\x18\x04 \x03(\x0b2+.google.cloud.functions.v2alpha.EventFilter\x129\n\x0cpubsub_topic\x18\x05 \x01(\tB#\xe0A\x01\xfaA\x1d\n\x1bpubsub.googleapis.com/Topic\x12"\n\x15service_account_email\x18\x06 \x01(\tB\x03\xe0A\x01\x12S\n\x0cretry_policy\x18\x07 \x01(\x0e28.google.cloud.functions.v2alpha.EventTrigger.RetryPolicyB\x03\xe0A\x01\x128\n\x07channel\x18\x08 \x01(\tB\'\xe0A\x01\xfaA!\n\x1feventarc.googleapis.com/Channel\x12\x14\n\x07service\x18\t \x01(\tB\x03\xe0A\x01"b\n\x0bRetryPolicy\x12\x1c\n\x18RETRY_POLICY_UNSPECIFIED\x10\x00\x12\x1d\n\x19RETRY_POLICY_DO_NOT_RETRY\x10\x01\x12\x16\n\x12RETRY_POLICY_RETRY\x10\x02"P\n\x0bEventFilter\x12\x16\n\tattribute\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x12\n\x05value\x18\x02 \x01(\tB\x03\xe0A\x02\x12\x15\n\x08operator\x18\x03 \x01(\tB\x03\xe0A\x01"i\n\x12GetFunctionRequest\x12<\n\x04name\x18\x01 \x01(\tB.\xe0A\x02\xfaA(\n&cloudfunctions.googleapis.com/Function\x12\x15\n\x08revision\x18\x02 \x01(\tB\x03\xe0A\x01"\x9f\x01\n\x14ListFunctionsRequest\x12>\n\x06parent\x18\x01 \x01(\tB.\xe0A\x02\xfaA(\x12&cloudfunctions.googleapis.com/Function\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t\x12\x0e\n\x06filter\x18\x04 \x01(\t\x12\x10\n\x08order_by\x18\x05 \x01(\t"\x82\x01\n\x15ListFunctionsResponse\x12;\n\tfunctions\x18\x01 \x03(\x0b2(.google.cloud.functions.v2alpha.Function\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x13\n\x0bunreachable\x18\x03 \x03(\t"\xa8\x01\n\x15CreateFunctionRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!locations.googleapis.com/Location\x12?\n\x08function\x18\x02 \x01(\x0b2(.google.cloud.functions.v2alpha.FunctionB\x03\xe0A\x02\x12\x13\n\x0bfunction_id\x18\x03 \x01(\t"\x89\x01\n\x15UpdateFunctionRequest\x12?\n\x08function\x18\x01 \x01(\x0b2(.google.cloud.functions.v2alpha.FunctionB\x03\xe0A\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMask"U\n\x15DeleteFunctionRequest\x12<\n\x04name\x18\x01 \x01(\tB.\xe0A\x02\xfaA(\n&cloudfunctions.googleapis.com/Function"\xd5\x01\n\x18GenerateUploadUrlRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!locations.googleapis.com/Location\x12<\n\x0ckms_key_name\x18\x02 \x01(\tB&\xfaA#\n!cloudkms.googleapis.com/CryptoKey\x12@\n\x0benvironment\x18\x03 \x01(\x0e2+.google.cloud.functions.v2alpha.Environment"v\n\x19GenerateUploadUrlResponse\x12\x12\n\nupload_url\x18\x01 \x01(\t\x12E\n\x0estorage_source\x18\x02 \x01(\x0b2-.google.cloud.functions.v2alpha.StorageSource"Z\n\x1aGenerateDownloadUrlRequest\x12<\n\x04name\x18\x01 \x01(\tB.\xe0A\x02\xfaA(\n&cloudfunctions.googleapis.com/Function"3\n\x1bGenerateDownloadUrlResponse\x12\x14\n\x0cdownload_url\x18\x01 \x01(\t"`\n\x13ListRuntimesRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!locations.googleapis.com/Location\x12\x0e\n\x06filter\x18\x02 \x01(\t"\x98\x04\n\x14ListRuntimesResponse\x12N\n\x08runtimes\x18\x01 \x03(\x0b2<.google.cloud.functions.v2alpha.ListRuntimesResponse.Runtime\x1a\xae\x02\n\x07Runtime\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0cdisplay_name\x18\x05 \x01(\t\x12P\n\x05stage\x18\x02 \x01(\x0e2A.google.cloud.functions.v2alpha.ListRuntimesResponse.RuntimeStage\x12\x10\n\x08warnings\x18\x03 \x03(\t\x12@\n\x0benvironment\x18\x04 \x01(\x0e2+.google.cloud.functions.v2alpha.Environment\x12+\n\x10deprecation_date\x18\x06 \x01(\x0b2\x11.google.type.Date\x12,\n\x11decommission_date\x18\x07 \x01(\x0b2\x11.google.type.Date"\x7f\n\x0cRuntimeStage\x12\x1d\n\x19RUNTIME_STAGE_UNSPECIFIED\x10\x00\x12\x0f\n\x0bDEVELOPMENT\x10\x01\x12\t\n\x05ALPHA\x10\x02\x12\x08\n\x04BETA\x10\x03\x12\x06\n\x02GA\x10\x04\x12\x0e\n\nDEPRECATED\x10\x05\x12\x12\n\x0eDECOMMISSIONED\x10\x06"\x17\n\x15AutomaticUpdatePolicy"4\n\x14OnDeployUpdatePolicy\x12\x1c\n\x0fruntime_version\x18\x01 \x01(\tB\x03\xe0A\x03"\x98\x03\n\x11OperationMetadata\x12/\n\x0bcreate_time\x18\x01 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12,\n\x08end_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12\x0e\n\x06target\x18\x03 \x01(\t\x12\x0c\n\x04verb\x18\x04 \x01(\t\x12\x15\n\rstatus_detail\x18\x05 \x01(\t\x12\x18\n\x10cancel_requested\x18\x06 \x01(\x08\x12\x13\n\x0bapi_version\x18\x07 \x01(\t\x12.\n\x10request_resource\x18\x08 \x01(\x0b2\x14.google.protobuf.Any\x125\n\x06stages\x18\t \x03(\x0b2%.google.cloud.functions.v2alpha.Stage\x12\x12\n\nbuild_name\x18\r \x01(\t\x12E\n\x0eoperation_type\x18\x0b \x01(\x0e2-.google.cloud.functions.v2alpha.OperationType"U\n\x10LocationMetadata\x12A\n\x0cenvironments\x18\x01 \x03(\x0e2+.google.cloud.functions.v2alpha.Environment"\xd3\x03\n\x05Stage\x128\n\x04name\x18\x01 \x01(\x0e2*.google.cloud.functions.v2alpha.Stage.Name\x12\x0f\n\x07message\x18\x02 \x01(\t\x12:\n\x05state\x18\x03 \x01(\x0e2+.google.cloud.functions.v2alpha.Stage.State\x12\x10\n\x08resource\x18\x04 \x01(\t\x12\x14\n\x0cresource_uri\x18\x05 \x01(\t\x12D\n\x0estate_messages\x18\x06 \x03(\x0b2,.google.cloud.functions.v2alpha.StateMessage"\x84\x01\n\x04Name\x12\x14\n\x10NAME_UNSPECIFIED\x10\x00\x12\x15\n\x11ARTIFACT_REGISTRY\x10\x01\x12\t\n\x05BUILD\x10\x02\x12\x0b\n\x07SERVICE\x10\x03\x12\x0b\n\x07TRIGGER\x10\x04\x12\x14\n\x10SERVICE_ROLLBACK\x10\x05\x12\x14\n\x10TRIGGER_ROLLBACK\x10\x06"N\n\x05State\x12\x15\n\x11STATE_UNSPECIFIED\x10\x00\x12\x0f\n\x0bNOT_STARTED\x10\x01\x12\x0f\n\x0bIN_PROGRESS\x10\x02\x12\x0c\n\x08COMPLETE\x10\x03*m\n\rOperationType\x12\x1d\n\x19OPERATIONTYPE_UNSPECIFIED\x10\x00\x12\x13\n\x0fCREATE_FUNCTION\x10\x01\x12\x13\n\x0fUPDATE_FUNCTION\x10\x02\x12\x13\n\x0fDELETE_FUNCTION\x10\x03*@\n\x0bEnvironment\x12\x1b\n\x17ENVIRONMENT_UNSPECIFIED\x10\x00\x12\t\n\x05GEN_1\x10\x01\x12\t\n\x05GEN_2\x10\x022\xac\x0f\n\x0fFunctionService\x12\xae\x01\n\x0bGetFunction\x122.google.cloud.functions.v2alpha.GetFunctionRequest\x1a(.google.cloud.functions.v2alpha.Function"A\xdaA\x04name\x82\xd3\xe4\x93\x024\x122/v2alpha/{name=projects/*/locations/*/functions/*}\x12\xc1\x01\n\rListFunctions\x124.google.cloud.functions.v2alpha.ListFunctionsRequest\x1a5.google.cloud.functions.v2alpha.ListFunctionsResponse"C\xdaA\x06parent\x82\xd3\xe4\x93\x024\x122/v2alpha/{parent=projects/*/locations/*}/functions\x12\xa9\x02\n\x0eCreateFunction\x125.google.cloud.functions.v2alpha.CreateFunctionRequest\x1a\x1d.google.longrunning.Operation"\xc0\x01\xcaA[\n\'google.cloud.functions.v2alpha.Function\x120google.cloud.functions.v2alpha.OperationMetadata\xdaA\x1bparent,function,function_id\x82\xd3\xe4\x93\x02>"2/v2alpha/{parent=projects/*/locations/*}/functions:\x08function\x12\xab\x02\n\x0eUpdateFunction\x125.google.cloud.functions.v2alpha.UpdateFunctionRequest\x1a\x1d.google.longrunning.Operation"\xc2\x01\xcaA[\n\'google.cloud.functions.v2alpha.Function\x120google.cloud.functions.v2alpha.OperationMetadata\xdaA\x14function,update_mask\x82\xd3\xe4\x93\x02G2;/v2alpha/{function.name=projects/*/locations/*/functions/*}:\x08function\x12\xf6\x01\n\x0eDeleteFunction\x125.google.cloud.functions.v2alpha.DeleteFunctionRequest\x1a\x1d.google.longrunning.Operation"\x8d\x01\xcaAI\n\x15google.protobuf.Empty\x120google.cloud.functions.v2alpha.OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x024*2/v2alpha/{name=projects/*/locations/*/functions/*}\x12\xd9\x01\n\x11GenerateUploadUrl\x128.google.cloud.functions.v2alpha.GenerateUploadUrlRequest\x1a9.google.cloud.functions.v2alpha.GenerateUploadUrlResponse"O\x82\xd3\xe4\x93\x02I"D/v2alpha/{parent=projects/*/locations/*}/functions:generateUploadUrl:\x01*\x12\xe1\x01\n\x13GenerateDownloadUrl\x12:.google.cloud.functions.v2alpha.GenerateDownloadUrlRequest\x1a;.google.cloud.functions.v2alpha.GenerateDownloadUrlResponse"Q\x82\xd3\xe4\x93\x02K"F/v2alpha/{name=projects/*/locations/*/functions/*}:generateDownloadUrl:\x01*\x12\xbd\x01\n\x0cListRuntimes\x123.google.cloud.functions.v2alpha.ListRuntimesRequest\x1a4.google.cloud.functions.v2alpha.ListRuntimesResponse"B\xdaA\x06parent\x82\xd3\xe4\x93\x023\x121/v2alpha/{parent=projects/*/locations/*}/runtimes\x1aQ\xcaA\x1dcloudfunctions.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platformB\xf8\x07\n"com.google.cloud.functions.v2alphaB\x0eFunctionsProtoP\x01Z@cloud.google.com/go/functions/apiv2alpha/functionspb;functionspb\xa2\x02\x03GCF\xeaAo\n*artifactregistry.googleapis.com/Repository\x12Aprojects/{project}/locations/{location}/repositories/{repository}\xeaAY\n\x1fcloudbuild.googleapis.com/Build\x126projects/{project}/locations/{location}/builds/{build}\xeaAi\n$cloudbuild.googleapis.com/WorkerPool\x12Aprojects/{project}/locations/{location}/workerPools/{worker_pool}\xeaAX\n\x1arun.googleapis.com/Service\x12:projects/{project}/locations/{location}/services/{service}\xeaAd\n"vpcaccess.googleapis.com/Connector\x12>projects/{project}/locations/{location}/connectors/{connector}\xeaA]\n\x1feventarc.googleapis.com/Trigger\x12:projects/{project}/locations/{location}/triggers/{trigger}\xeaA]\n\x1feventarc.googleapis.com/Channel\x12:projects/{project}/locations/{location}/channels/{channel}\xeaA@\n\x1bpubsub.googleapis.com/Topic\x12!projects/{project}/topics/{topic}\xeaAx\n!cloudkms.googleapis.com/CryptoKey\x12Sprojects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.functions.v2alpha.functions_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n"com.google.cloud.functions.v2alphaB\x0eFunctionsProtoP\x01Z@cloud.google.com/go/functions/apiv2alpha/functionspb;functionspb\xa2\x02\x03GCF\xeaAo\n*artifactregistry.googleapis.com/Repository\x12Aprojects/{project}/locations/{location}/repositories/{repository}\xeaAY\n\x1fcloudbuild.googleapis.com/Build\x126projects/{project}/locations/{location}/builds/{build}\xeaAi\n$cloudbuild.googleapis.com/WorkerPool\x12Aprojects/{project}/locations/{location}/workerPools/{worker_pool}\xeaAX\n\x1arun.googleapis.com/Service\x12:projects/{project}/locations/{location}/services/{service}\xeaAd\n"vpcaccess.googleapis.com/Connector\x12>projects/{project}/locations/{location}/connectors/{connector}\xeaA]\n\x1feventarc.googleapis.com/Trigger\x12:projects/{project}/locations/{location}/triggers/{trigger}\xeaA]\n\x1feventarc.googleapis.com/Channel\x12:projects/{project}/locations/{location}/channels/{channel}\xeaA@\n\x1bpubsub.googleapis.com/Topic\x12!projects/{project}/topics/{topic}\xeaAx\n!cloudkms.googleapis.com/CryptoKey\x12Sprojects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}'
+    _globals['_FUNCTION_LABELSENTRY']._loaded_options = None
+    _globals['_FUNCTION_LABELSENTRY']._serialized_options = b'8\x01'
+    _globals['_FUNCTION'].fields_by_name['state']._loaded_options = None
+    _globals['_FUNCTION'].fields_by_name['state']._serialized_options = b'\xe0A\x03'
+    _globals['_FUNCTION'].fields_by_name['update_time']._loaded_options = None
+    _globals['_FUNCTION'].fields_by_name['update_time']._serialized_options = b'\xe0A\x03'
+    _globals['_FUNCTION'].fields_by_name['state_messages']._loaded_options = None
+    _globals['_FUNCTION'].fields_by_name['state_messages']._serialized_options = b'\xe0A\x03'
+    _globals['_FUNCTION'].fields_by_name['url']._loaded_options = None
+    _globals['_FUNCTION'].fields_by_name['url']._serialized_options = b'\xe0A\x03'
+    _globals['_FUNCTION'].fields_by_name['kms_key_name']._loaded_options = None
+    _globals['_FUNCTION'].fields_by_name['kms_key_name']._serialized_options = b'\xfaA#\n!cloudkms.googleapis.com/CryptoKey'
+    _globals['_FUNCTION'].fields_by_name['satisfies_pzs']._loaded_options = None
+    _globals['_FUNCTION'].fields_by_name['satisfies_pzs']._serialized_options = b'\xe0A\x03'
+    _globals['_FUNCTION'].fields_by_name['create_time']._loaded_options = None
+    _globals['_FUNCTION'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_FUNCTION']._loaded_options = None
+    _globals['_FUNCTION']._serialized_options = b'\xeaA{\n&cloudfunctions.googleapis.com/Function\x12<projects/{project}/locations/{location}/functions/{function}*\tfunctions2\x08function'
+    _globals['_BUILDCONFIG_ENVIRONMENTVARIABLESENTRY']._loaded_options = None
+    _globals['_BUILDCONFIG_ENVIRONMENTVARIABLESENTRY']._serialized_options = b'8\x01'
+    _globals['_BUILDCONFIG'].fields_by_name['build']._loaded_options = None
+    _globals['_BUILDCONFIG'].fields_by_name['build']._serialized_options = b'\xe0A\x03\xfaA!\n\x1fcloudbuild.googleapis.com/Build'
+    _globals['_BUILDCONFIG'].fields_by_name['source_provenance']._loaded_options = None
+    _globals['_BUILDCONFIG'].fields_by_name['source_provenance']._serialized_options = b'\xe0A\x03'
+    _globals['_BUILDCONFIG'].fields_by_name['worker_pool']._loaded_options = None
+    _globals['_BUILDCONFIG'].fields_by_name['worker_pool']._serialized_options = b'\xfaA&\n$cloudbuild.googleapis.com/WorkerPool'
+    _globals['_BUILDCONFIG'].fields_by_name['docker_repository']._loaded_options = None
+    _globals['_BUILDCONFIG'].fields_by_name['docker_repository']._serialized_options = b'\xfaA,\n*artifactregistry.googleapis.com/Repository'
+    _globals['_SERVICECONFIG_ENVIRONMENTVARIABLESENTRY']._loaded_options = None
+    _globals['_SERVICECONFIG_ENVIRONMENTVARIABLESENTRY']._serialized_options = b'8\x01'
+    _globals['_SERVICECONFIG'].fields_by_name['service']._loaded_options = None
+    _globals['_SERVICECONFIG'].fields_by_name['service']._serialized_options = b'\xe0A\x03\xfaA\x1c\n\x1arun.googleapis.com/Service'
+    _globals['_SERVICECONFIG'].fields_by_name['vpc_connector']._loaded_options = None
+    _globals['_SERVICECONFIG'].fields_by_name['vpc_connector']._serialized_options = b'\xfaA$\n"vpcaccess.googleapis.com/Connector'
+    _globals['_SERVICECONFIG'].fields_by_name['uri']._loaded_options = None
+    _globals['_SERVICECONFIG'].fields_by_name['uri']._serialized_options = b'\xe0A\x03'
+    _globals['_SERVICECONFIG'].fields_by_name['revision']._loaded_options = None
+    _globals['_SERVICECONFIG'].fields_by_name['revision']._serialized_options = b'\xe0A\x03'
+    _globals['_SERVICECONFIG'].fields_by_name['binary_authorization_policy']._loaded_options = None
+    _globals['_SERVICECONFIG'].fields_by_name['binary_authorization_policy']._serialized_options = b'\xe0A\x01'
+    _globals['_EVENTTRIGGER'].fields_by_name['trigger']._loaded_options = None
+    _globals['_EVENTTRIGGER'].fields_by_name['trigger']._serialized_options = b'\xe0A\x03\xfaA!\n\x1feventarc.googleapis.com/Trigger'
+    _globals['_EVENTTRIGGER'].fields_by_name['event_type']._loaded_options = None
+    _globals['_EVENTTRIGGER'].fields_by_name['event_type']._serialized_options = b'\xe0A\x02'
+    _globals['_EVENTTRIGGER'].fields_by_name['pubsub_topic']._loaded_options = None
+    _globals['_EVENTTRIGGER'].fields_by_name['pubsub_topic']._serialized_options = b'\xe0A\x01\xfaA\x1d\n\x1bpubsub.googleapis.com/Topic'
+    _globals['_EVENTTRIGGER'].fields_by_name['service_account_email']._loaded_options = None
+    _globals['_EVENTTRIGGER'].fields_by_name['service_account_email']._serialized_options = b'\xe0A\x01'
+    _globals['_EVENTTRIGGER'].fields_by_name['retry_policy']._loaded_options = None
+    _globals['_EVENTTRIGGER'].fields_by_name['retry_policy']._serialized_options = b'\xe0A\x01'
+    _globals['_EVENTTRIGGER'].fields_by_name['channel']._loaded_options = None
+    _globals['_EVENTTRIGGER'].fields_by_name['channel']._serialized_options = b'\xe0A\x01\xfaA!\n\x1feventarc.googleapis.com/Channel'
+    _globals['_EVENTTRIGGER'].fields_by_name['service']._loaded_options = None
+    _globals['_EVENTTRIGGER'].fields_by_name['service']._serialized_options = b'\xe0A\x01'
+    _globals['_EVENTFILTER'].fields_by_name['attribute']._loaded_options = None
+    _globals['_EVENTFILTER'].fields_by_name['attribute']._serialized_options = b'\xe0A\x02'
+    _globals['_EVENTFILTER'].fields_by_name['value']._loaded_options = None
+    _globals['_EVENTFILTER'].fields_by_name['value']._serialized_options = b'\xe0A\x02'
+    _globals['_EVENTFILTER'].fields_by_name['operator']._loaded_options = None
+    _globals['_EVENTFILTER'].fields_by_name['operator']._serialized_options = b'\xe0A\x01'
+    _globals['_GETFUNCTIONREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETFUNCTIONREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA(\n&cloudfunctions.googleapis.com/Function'
+    _globals['_GETFUNCTIONREQUEST'].fields_by_name['revision']._loaded_options = None
+    _globals['_GETFUNCTIONREQUEST'].fields_by_name['revision']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTFUNCTIONSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTFUNCTIONSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA(\x12&cloudfunctions.googleapis.com/Function'
+    _globals['_CREATEFUNCTIONREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEFUNCTIONREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\n!locations.googleapis.com/Location'
+    _globals['_CREATEFUNCTIONREQUEST'].fields_by_name['function']._loaded_options = None
+    _globals['_CREATEFUNCTIONREQUEST'].fields_by_name['function']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATEFUNCTIONREQUEST'].fields_by_name['function']._loaded_options = None
+    _globals['_UPDATEFUNCTIONREQUEST'].fields_by_name['function']._serialized_options = b'\xe0A\x02'
+    _globals['_DELETEFUNCTIONREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEFUNCTIONREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA(\n&cloudfunctions.googleapis.com/Function'
+    _globals['_GENERATEUPLOADURLREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_GENERATEUPLOADURLREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\n!locations.googleapis.com/Location'
+    _globals['_GENERATEUPLOADURLREQUEST'].fields_by_name['kms_key_name']._loaded_options = None
+    _globals['_GENERATEUPLOADURLREQUEST'].fields_by_name['kms_key_name']._serialized_options = b'\xfaA#\n!cloudkms.googleapis.com/CryptoKey'
+    _globals['_GENERATEDOWNLOADURLREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GENERATEDOWNLOADURLREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA(\n&cloudfunctions.googleapis.com/Function'
+    _globals['_LISTRUNTIMESREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTRUNTIMESREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\n!locations.googleapis.com/Location'
+    _globals['_ONDEPLOYUPDATEPOLICY'].fields_by_name['runtime_version']._loaded_options = None
+    _globals['_ONDEPLOYUPDATEPOLICY'].fields_by_name['runtime_version']._serialized_options = b'\xe0A\x03'
+    _globals['_FUNCTIONSERVICE']._loaded_options = None
+    _globals['_FUNCTIONSERVICE']._serialized_options = b'\xcaA\x1dcloudfunctions.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platform'
+    _globals['_FUNCTIONSERVICE'].methods_by_name['GetFunction']._loaded_options = None
+    _globals['_FUNCTIONSERVICE'].methods_by_name['GetFunction']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x024\x122/v2alpha/{name=projects/*/locations/*/functions/*}'
+    _globals['_FUNCTIONSERVICE'].methods_by_name['ListFunctions']._loaded_options = None
+    _globals['_FUNCTIONSERVICE'].methods_by_name['ListFunctions']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x024\x122/v2alpha/{parent=projects/*/locations/*}/functions'
+    _globals['_FUNCTIONSERVICE'].methods_by_name['CreateFunction']._loaded_options = None
+    _globals['_FUNCTIONSERVICE'].methods_by_name['CreateFunction']._serialized_options = b'\xcaA[\n\'google.cloud.functions.v2alpha.Function\x120google.cloud.functions.v2alpha.OperationMetadata\xdaA\x1bparent,function,function_id\x82\xd3\xe4\x93\x02>"2/v2alpha/{parent=projects/*/locations/*}/functions:\x08function'
+    _globals['_FUNCTIONSERVICE'].methods_by_name['UpdateFunction']._loaded_options = None
+    _globals['_FUNCTIONSERVICE'].methods_by_name['UpdateFunction']._serialized_options = b"\xcaA[\n'google.cloud.functions.v2alpha.Function\x120google.cloud.functions.v2alpha.OperationMetadata\xdaA\x14function,update_mask\x82\xd3\xe4\x93\x02G2;/v2alpha/{function.name=projects/*/locations/*/functions/*}:\x08function"
+    _globals['_FUNCTIONSERVICE'].methods_by_name['DeleteFunction']._loaded_options = None
+    _globals['_FUNCTIONSERVICE'].methods_by_name['DeleteFunction']._serialized_options = b'\xcaAI\n\x15google.protobuf.Empty\x120google.cloud.functions.v2alpha.OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x024*2/v2alpha/{name=projects/*/locations/*/functions/*}'
+    _globals['_FUNCTIONSERVICE'].methods_by_name['GenerateUploadUrl']._loaded_options = None
+    _globals['_FUNCTIONSERVICE'].methods_by_name['GenerateUploadUrl']._serialized_options = b'\x82\xd3\xe4\x93\x02I"D/v2alpha/{parent=projects/*/locations/*}/functions:generateUploadUrl:\x01*'
+    _globals['_FUNCTIONSERVICE'].methods_by_name['GenerateDownloadUrl']._loaded_options = None
+    _globals['_FUNCTIONSERVICE'].methods_by_name['GenerateDownloadUrl']._serialized_options = b'\x82\xd3\xe4\x93\x02K"F/v2alpha/{name=projects/*/locations/*/functions/*}:generateDownloadUrl:\x01*'
+    _globals['_FUNCTIONSERVICE'].methods_by_name['ListRuntimes']._loaded_options = None
+    _globals['_FUNCTIONSERVICE'].methods_by_name['ListRuntimes']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x023\x121/v2alpha/{parent=projects/*/locations/*}/runtimes'
+    _globals['_OPERATIONTYPE']._serialized_start = 8471
+    _globals['_OPERATIONTYPE']._serialized_end = 8580
+    _globals['_ENVIRONMENT']._serialized_start = 8582
+    _globals['_ENVIRONMENT']._serialized_end = 8646
+    _globals['_FUNCTION']._serialized_start = 382
+    _globals['_FUNCTION']._serialized_end = 1402
+    _globals['_FUNCTION_LABELSENTRY']._serialized_start = 1131
+    _globals['_FUNCTION_LABELSENTRY']._serialized_end = 1176
+    _globals['_FUNCTION_STATE']._serialized_start = 1178
+    _globals['_FUNCTION_STATE']._serialized_end = 1274
+    _globals['_STATEMESSAGE']._serialized_start = 1405
+    _globals['_STATEMESSAGE']._serialized_end = 1595
+    _globals['_STATEMESSAGE_SEVERITY']._serialized_start = 1525
+    _globals['_STATEMESSAGE_SEVERITY']._serialized_end = 1595
+    _globals['_STORAGESOURCE']._serialized_start = 1597
+    _globals['_STORAGESOURCE']._serialized_end = 1691
+    _globals['_REPOSOURCE']._serialized_start = 1694
+    _globals['_REPOSOURCE']._serialized_end = 1857
+    _globals['_SOURCE']._serialized_start = 1860
+    _globals['_SOURCE']._serialized_end = 2037
+    _globals['_SOURCEPROVENANCE']._serialized_start = 2040
+    _globals['_SOURCEPROVENANCE']._serialized_end = 2229
+    _globals['_BUILDCONFIG']._serialized_start = 2232
+    _globals['_BUILDCONFIG']._serialized_end = 3192
+    _globals['_BUILDCONFIG_ENVIRONMENTVARIABLESENTRY']._serialized_start = 3010
+    _globals['_BUILDCONFIG_ENVIRONMENTVARIABLESENTRY']._serialized_end = 3069
+    _globals['_BUILDCONFIG_DOCKERREGISTRY']._serialized_start = 3071
+    _globals['_BUILDCONFIG_DOCKERREGISTRY']._serialized_end = 3167
+    _globals['_SERVICECONFIG']._serialized_start = 3195
+    _globals['_SERVICECONFIG']._serialized_end = 4589
+    _globals['_SERVICECONFIG_ENVIRONMENTVARIABLESENTRY']._serialized_start = 3010
+    _globals['_SERVICECONFIG_ENVIRONMENTVARIABLESENTRY']._serialized_end = 3069
+    _globals['_SERVICECONFIG_VPCCONNECTOREGRESSSETTINGS']._serialized_start = 4261
+    _globals['_SERVICECONFIG_VPCCONNECTOREGRESSSETTINGS']._serialized_end = 4378
+    _globals['_SERVICECONFIG_INGRESSSETTINGS']._serialized_start = 4380
+    _globals['_SERVICECONFIG_INGRESSSETTINGS']._serialized_end = 4500
+    _globals['_SERVICECONFIG_SECURITYLEVEL']._serialized_start = 4502
+    _globals['_SERVICECONFIG_SECURITYLEVEL']._serialized_end = 4589
+    _globals['_SECRETENVVAR']._serialized_start = 4591
+    _globals['_SECRETENVVAR']._serialized_end = 4671
+    _globals['_SECRETVOLUME']._serialized_start = 4674
+    _globals['_SECRETVOLUME']._serialized_end = 4870
+    _globals['_SECRETVOLUME_SECRETVERSION']._serialized_start = 4824
+    _globals['_SECRETVOLUME_SECRETVERSION']._serialized_end = 4870
+    _globals['_EVENTTRIGGER']._serialized_start = 4873
+    _globals['_EVENTTRIGGER']._serialized_end = 5422
+    _globals['_EVENTTRIGGER_RETRYPOLICY']._serialized_start = 5324
+    _globals['_EVENTTRIGGER_RETRYPOLICY']._serialized_end = 5422
+    _globals['_EVENTFILTER']._serialized_start = 5424
+    _globals['_EVENTFILTER']._serialized_end = 5504
+    _globals['_GETFUNCTIONREQUEST']._serialized_start = 5506
+    _globals['_GETFUNCTIONREQUEST']._serialized_end = 5611
+    _globals['_LISTFUNCTIONSREQUEST']._serialized_start = 5614
+    _globals['_LISTFUNCTIONSREQUEST']._serialized_end = 5773
+    _globals['_LISTFUNCTIONSRESPONSE']._serialized_start = 5776
+    _globals['_LISTFUNCTIONSRESPONSE']._serialized_end = 5906
+    _globals['_CREATEFUNCTIONREQUEST']._serialized_start = 5909
+    _globals['_CREATEFUNCTIONREQUEST']._serialized_end = 6077
+    _globals['_UPDATEFUNCTIONREQUEST']._serialized_start = 6080
+    _globals['_UPDATEFUNCTIONREQUEST']._serialized_end = 6217
+    _globals['_DELETEFUNCTIONREQUEST']._serialized_start = 6219
+    _globals['_DELETEFUNCTIONREQUEST']._serialized_end = 6304
+    _globals['_GENERATEUPLOADURLREQUEST']._serialized_start = 6307
+    _globals['_GENERATEUPLOADURLREQUEST']._serialized_end = 6520
+    _globals['_GENERATEUPLOADURLRESPONSE']._serialized_start = 6522
+    _globals['_GENERATEUPLOADURLRESPONSE']._serialized_end = 6640
+    _globals['_GENERATEDOWNLOADURLREQUEST']._serialized_start = 6642
+    _globals['_GENERATEDOWNLOADURLREQUEST']._serialized_end = 6732
+    _globals['_GENERATEDOWNLOADURLRESPONSE']._serialized_start = 6734
+    _globals['_GENERATEDOWNLOADURLRESPONSE']._serialized_end = 6785
+    _globals['_LISTRUNTIMESREQUEST']._serialized_start = 6787
+    _globals['_LISTRUNTIMESREQUEST']._serialized_end = 6883
+    _globals['_LISTRUNTIMESRESPONSE']._serialized_start = 6886
+    _globals['_LISTRUNTIMESRESPONSE']._serialized_end = 7422
+    _globals['_LISTRUNTIMESRESPONSE_RUNTIME']._serialized_start = 6991
+    _globals['_LISTRUNTIMESRESPONSE_RUNTIME']._serialized_end = 7293
+    _globals['_LISTRUNTIMESRESPONSE_RUNTIMESTAGE']._serialized_start = 7295
+    _globals['_LISTRUNTIMESRESPONSE_RUNTIMESTAGE']._serialized_end = 7422
+    _globals['_AUTOMATICUPDATEPOLICY']._serialized_start = 7424
+    _globals['_AUTOMATICUPDATEPOLICY']._serialized_end = 7447
+    _globals['_ONDEPLOYUPDATEPOLICY']._serialized_start = 7449
+    _globals['_ONDEPLOYUPDATEPOLICY']._serialized_end = 7501
+    _globals['_OPERATIONMETADATA']._serialized_start = 7504
+    _globals['_OPERATIONMETADATA']._serialized_end = 7912
+    _globals['_LOCATIONMETADATA']._serialized_start = 7914
+    _globals['_LOCATIONMETADATA']._serialized_end = 7999
+    _globals['_STAGE']._serialized_start = 8002
+    _globals['_STAGE']._serialized_end = 8469
+    _globals['_STAGE_NAME']._serialized_start = 8257
+    _globals['_STAGE_NAME']._serialized_end = 8389
+    _globals['_STAGE_STATE']._serialized_start = 8391
+    _globals['_STAGE_STATE']._serialized_end = 8469
+    _globals['_FUNCTIONSERVICE']._serialized_start = 8649
+    _globals['_FUNCTIONSERVICE']._serialized_end = 10613

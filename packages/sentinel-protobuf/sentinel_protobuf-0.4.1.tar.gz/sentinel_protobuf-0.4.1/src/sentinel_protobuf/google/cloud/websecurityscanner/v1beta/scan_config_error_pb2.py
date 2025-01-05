@@ -1,0 +1,21 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/cloud/websecurityscanner/v1beta/scan_config_error.proto')
+_sym_db = _symbol_database.Default()
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n>google/cloud/websecurityscanner/v1beta/scan_config_error.proto\x12&google.cloud.websecurityscanner.v1beta"\xed\x0b\n\x0fScanConfigError\x12J\n\x04code\x18\x01 \x01(\x0e2<.google.cloud.websecurityscanner.v1beta.ScanConfigError.Code\x12\x12\n\nfield_name\x18\x02 \x01(\t"\xf9\n\n\x04Code\x12\x14\n\x10CODE_UNSPECIFIED\x10\x00\x12\x06\n\x02OK\x10\x00\x12\x12\n\x0eINTERNAL_ERROR\x10\x01\x12\x1f\n\x1bAPPENGINE_API_BACKEND_ERROR\x10\x02\x12 \n\x1cAPPENGINE_API_NOT_ACCESSIBLE\x10\x03\x12"\n\x1eAPPENGINE_DEFAULT_HOST_MISSING\x10\x04\x12!\n\x1dCANNOT_USE_GOOGLE_COM_ACCOUNT\x10\x06\x12\x1c\n\x18CANNOT_USE_OWNER_ACCOUNT\x10\x07\x12\x1d\n\x19COMPUTE_API_BACKEND_ERROR\x10\x08\x12\x1e\n\x1aCOMPUTE_API_NOT_ACCESSIBLE\x10\t\x127\n3CUSTOM_LOGIN_URL_DOES_NOT_BELONG_TO_CURRENT_PROJECT\x10\n\x12\x1e\n\x1aCUSTOM_LOGIN_URL_MALFORMED\x10\x0b\x123\n/CUSTOM_LOGIN_URL_MAPPED_TO_NON_ROUTABLE_ADDRESS\x10\x0c\x121\n-CUSTOM_LOGIN_URL_MAPPED_TO_UNRESERVED_ADDRESS\x10\r\x120\n,CUSTOM_LOGIN_URL_HAS_NON_ROUTABLE_IP_ADDRESS\x10\x0e\x12.\n*CUSTOM_LOGIN_URL_HAS_UNRESERVED_IP_ADDRESS\x10\x0f\x12\x17\n\x13DUPLICATE_SCAN_NAME\x10\x10\x12\x17\n\x13INVALID_FIELD_VALUE\x10\x12\x12$\n FAILED_TO_AUTHENTICATE_TO_TARGET\x10\x13\x12\x1c\n\x18FINDING_TYPE_UNSPECIFIED\x10\x14\x12\x1d\n\x19FORBIDDEN_TO_SCAN_COMPUTE\x10\x15\x12$\n FORBIDDEN_UPDATE_TO_MANAGED_SCAN\x10+\x12\x14\n\x10MALFORMED_FILTER\x10\x16\x12\x1b\n\x17MALFORMED_RESOURCE_NAME\x10\x17\x12\x14\n\x10PROJECT_INACTIVE\x10\x18\x12\x12\n\x0eREQUIRED_FIELD\x10\x19\x12\x1e\n\x1aRESOURCE_NAME_INCONSISTENT\x10\x1a\x12\x18\n\x14SCAN_ALREADY_RUNNING\x10\x1b\x12\x14\n\x10SCAN_NOT_RUNNING\x10\x1c\x12/\n+SEED_URL_DOES_NOT_BELONG_TO_CURRENT_PROJECT\x10\x1d\x12\x16\n\x12SEED_URL_MALFORMED\x10\x1e\x12+\n\'SEED_URL_MAPPED_TO_NON_ROUTABLE_ADDRESS\x10\x1f\x12)\n%SEED_URL_MAPPED_TO_UNRESERVED_ADDRESS\x10 \x12(\n$SEED_URL_HAS_NON_ROUTABLE_IP_ADDRESS\x10!\x12&\n"SEED_URL_HAS_UNRESERVED_IP_ADDRESS\x10#\x12"\n\x1eSERVICE_ACCOUNT_NOT_CONFIGURED\x10$\x12\x12\n\x0eTOO_MANY_SCANS\x10%\x12"\n\x1eUNABLE_TO_RESOLVE_PROJECT_INFO\x10&\x12(\n$UNSUPPORTED_BLACKLIST_PATTERN_FORMAT\x10\'\x12\x16\n\x12UNSUPPORTED_FILTER\x10(\x12\x1c\n\x18UNSUPPORTED_FINDING_TYPE\x10)\x12\x1a\n\x16UNSUPPORTED_URL_SCHEME\x10*\x1a\x02\x10\x01B\x9e\x02\n*com.google.cloud.websecurityscanner.v1betaB\x14ScanConfigErrorProtoP\x01ZZcloud.google.com/go/websecurityscanner/apiv1beta/websecurityscannerpb;websecurityscannerpb\xaa\x02&Google.Cloud.WebSecurityScanner.V1Beta\xca\x02&Google\\Cloud\\WebSecurityScanner\\V1beta\xea\x02)Google::Cloud::WebSecurityScanner::V1betab\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.websecurityscanner.v1beta.scan_config_error_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n*com.google.cloud.websecurityscanner.v1betaB\x14ScanConfigErrorProtoP\x01ZZcloud.google.com/go/websecurityscanner/apiv1beta/websecurityscannerpb;websecurityscannerpb\xaa\x02&Google.Cloud.WebSecurityScanner.V1Beta\xca\x02&Google\\Cloud\\WebSecurityScanner\\V1beta\xea\x02)Google::Cloud::WebSecurityScanner::V1beta'
+    _globals['_SCANCONFIGERROR_CODE']._loaded_options = None
+    _globals['_SCANCONFIGERROR_CODE']._serialized_options = b'\x10\x01'
+    _globals['_SCANCONFIGERROR']._serialized_start = 107
+    _globals['_SCANCONFIGERROR']._serialized_end = 1624
+    _globals['_SCANCONFIGERROR_CODE']._serialized_start = 223
+    _globals['_SCANCONFIGERROR_CODE']._serialized_end = 1624

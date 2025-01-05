@@ -1,0 +1,160 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/cloud/translate/v3/automl_translation.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from .....google.cloud.translate.v3 import common_pb2 as google_dot_cloud_dot_translate_dot_v3_dot_common__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+from .....google.rpc import status_pb2 as google_dot_rpc_dot_status__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n2google/cloud/translate/v3/automl_translation.proto\x12\x1bgoogle.cloud.translation.v3\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a&google/cloud/translate/v3/common.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x17google/rpc/status.proto"u\n\x11ImportDataRequest\x12\x14\n\x07dataset\x18\x01 \x01(\tB\x03\xe0A\x02\x12J\n\x0cinput_config\x18\x02 \x01(\x0b2/.google.cloud.translation.v3.DatasetInputConfigB\x03\xe0A\x02"\xd2\x01\n\x12DatasetInputConfig\x12N\n\x0binput_files\x18\x01 \x03(\x0b29.google.cloud.translation.v3.DatasetInputConfig.InputFile\x1al\n\tInputFile\x12\x12\n\x05usage\x18\x02 \x01(\tB\x03\xe0A\x01\x12A\n\ngcs_source\x18\x03 \x01(\x0b2+.google.cloud.translation.v3.GcsInputSourceH\x00B\x08\n\x06source"\xd5\x01\n\x12ImportDataMetadata\x12:\n\x05state\x18\x01 \x01(\x0e2+.google.cloud.translation.v3.OperationState\x12/\n\x0bcreate_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12/\n\x0bupdate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12!\n\x05error\x18\x04 \x01(\x0b2\x12.google.rpc.Status"w\n\x11ExportDataRequest\x12\x14\n\x07dataset\x18\x01 \x01(\tB\x03\xe0A\x02\x12L\n\routput_config\x18\x02 \x01(\x0b20.google.cloud.translation.v3.DatasetOutputConfigB\x03\xe0A\x02"r\n\x13DatasetOutputConfig\x12L\n\x0fgcs_destination\x18\x01 \x01(\x0b21.google.cloud.translation.v3.GcsOutputDestinationH\x00B\r\n\x0bdestination"\xd5\x01\n\x12ExportDataMetadata\x12:\n\x05state\x18\x01 \x01(\x0e2+.google.cloud.translation.v3.OperationState\x12/\n\x0bcreate_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12/\n\x0bupdate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12!\n\x05error\x18\x04 \x01(\x0b2\x12.google.rpc.Status"N\n\x14DeleteDatasetRequest\x126\n\x04name\x18\x01 \x01(\tB(\xe0A\x02\xfaA"\n translate.googleapis.com/Dataset"\xd8\x01\n\x15DeleteDatasetMetadata\x12:\n\x05state\x18\x01 \x01(\x0e2+.google.cloud.translation.v3.OperationState\x12/\n\x0bcreate_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12/\n\x0bupdate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12!\n\x05error\x18\x04 \x01(\x0b2\x12.google.rpc.Status"K\n\x11GetDatasetRequest\x126\n\x04name\x18\x01 \x01(\tB(\xe0A\x02\xfaA"\n translate.googleapis.com/Dataset"\x81\x01\n\x13ListDatasetsRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!locations.googleapis.com/Location\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01"g\n\x14ListDatasetsResponse\x126\n\x08datasets\x18\x01 \x03(\x0b2$.google.cloud.translation.v3.Dataset\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"\x8d\x01\n\x14CreateDatasetRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!locations.googleapis.com/Location\x12:\n\x07dataset\x18\x02 \x01(\x0b2$.google.cloud.translation.v3.DatasetB\x03\xe0A\x02"\xd8\x01\n\x15CreateDatasetMetadata\x12:\n\x05state\x18\x01 \x01(\x0e2+.google.cloud.translation.v3.OperationState\x12/\n\x0bcreate_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12/\n\x0bupdate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12!\n\x05error\x18\x04 \x01(\x0b2\x12.google.rpc.Status"\x95\x01\n\x13ListExamplesRequest\x128\n\x06parent\x18\x01 \x01(\tB(\xe0A\x02\xfaA"\n translate.googleapis.com/Dataset\x12\x13\n\x06filter\x18\x02 \x01(\tB\x03\xe0A\x01\x12\x16\n\tpage_size\x18\x03 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x04 \x01(\tB\x03\xe0A\x01"g\n\x14ListExamplesResponse\x126\n\x08examples\x18\x01 \x03(\x0b2$.google.cloud.translation.v3.Example\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"\xd0\x01\n\x07Example\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x03\x12\x13\n\x0bsource_text\x18\x02 \x01(\t\x12\x13\n\x0btarget_text\x18\x03 \x01(\t\x12\x12\n\x05usage\x18\x04 \x01(\tB\x03\xe0A\x03:t\xeaAq\n translate.googleapis.com/Example\x12Mprojects/{project}/locations/{location}/datasets/{dataset}/examples/{example}"\xe8\x01\n\x1eBatchTransferResourcesResponse\x12g\n\tresponses\x18\x01 \x03(\x0b2T.google.cloud.translation.v3.BatchTransferResourcesResponse.TransferResourceResponse\x1a]\n\x18TransferResourceResponse\x12\x0e\n\x06source\x18\x01 \x01(\t\x12\x0e\n\x06target\x18\x02 \x01(\t\x12!\n\x05error\x18\x03 \x01(\x0b2\x12.google.rpc.Status"\xbc\x03\n\x07Dataset\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0cdisplay_name\x18\x02 \x01(\t\x12\x1c\n\x14source_language_code\x18\x03 \x01(\t\x12\x1c\n\x14target_language_code\x18\x04 \x01(\t\x12\x1a\n\rexample_count\x18\x05 \x01(\x05B\x03\xe0A\x03\x12 \n\x13train_example_count\x18\x06 \x01(\x05B\x03\xe0A\x03\x12#\n\x16validate_example_count\x18\x07 \x01(\x05B\x03\xe0A\x03\x12\x1f\n\x12test_example_count\x18\x08 \x01(\x05B\x03\xe0A\x03\x124\n\x0bcreate_time\x18\t \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bupdate_time\x18\n \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03:a\xeaA^\n translate.googleapis.com/Dataset\x12:projects/{project}/locations/{location}/datasets/{dataset}"\x87\x01\n\x12CreateModelRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!locations.googleapis.com/Location\x126\n\x05model\x18\x02 \x01(\x0b2".google.cloud.translation.v3.ModelB\x03\xe0A\x02"\xd6\x01\n\x13CreateModelMetadata\x12:\n\x05state\x18\x01 \x01(\x0e2+.google.cloud.translation.v3.OperationState\x12/\n\x0bcreate_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12/\n\x0bupdate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12!\n\x05error\x18\x04 \x01(\x0b2\x12.google.rpc.Status"\x94\x01\n\x11ListModelsRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!locations.googleapis.com/Location\x12\x13\n\x06filter\x18\x04 \x01(\tB\x03\xe0A\x01\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01"a\n\x12ListModelsResponse\x122\n\x06models\x18\x01 \x03(\x0b2".google.cloud.translation.v3.Model\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"G\n\x0fGetModelRequest\x124\n\x04name\x18\x01 \x01(\tB&\xe0A\x02\xfaA \n\x1etranslate.googleapis.com/Model"J\n\x12DeleteModelRequest\x124\n\x04name\x18\x01 \x01(\tB&\xe0A\x02\xfaA \n\x1etranslate.googleapis.com/Model"\xd6\x01\n\x13DeleteModelMetadata\x12:\n\x05state\x18\x01 \x01(\x0e2+.google.cloud.translation.v3.OperationState\x12/\n\x0bcreate_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12/\n\x0bupdate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12!\n\x05error\x18\x04 \x01(\x0b2\x12.google.rpc.Status"\xb3\x03\n\x05Model\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0cdisplay_name\x18\x02 \x01(\t\x12\x0f\n\x07dataset\x18\x03 \x01(\t\x12!\n\x14source_language_code\x18\x04 \x01(\tB\x03\xe0A\x03\x12!\n\x14target_language_code\x18\x05 \x01(\tB\x03\xe0A\x03\x12 \n\x13train_example_count\x18\x06 \x01(\x05B\x03\xe0A\x03\x12#\n\x16validate_example_count\x18\x07 \x01(\x05B\x03\xe0A\x03\x12\x1f\n\x12test_example_count\x18\x0c \x01(\x05B\x03\xe0A\x03\x124\n\x0bcreate_time\x18\x08 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bupdate_time\x18\n \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03:[\xeaAX\n\x1etranslate.googleapis.com/Model\x126projects/{project}/locations/{location}/models/{model}B\xd0\x01\n\x1dcom.google.cloud.translate.v3B\x16AutoMLTranslationProtoP\x01Z;cloud.google.com/go/translate/apiv3/translatepb;translatepb\xf8\x01\x01\xaa\x02\x19Google.Cloud.Translate.V3\xca\x02\x19Google\\Cloud\\Translate\\V3\xea\x02\x1cGoogle::Cloud::Translate::V3b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.translate.v3.automl_translation_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n\x1dcom.google.cloud.translate.v3B\x16AutoMLTranslationProtoP\x01Z;cloud.google.com/go/translate/apiv3/translatepb;translatepb\xf8\x01\x01\xaa\x02\x19Google.Cloud.Translate.V3\xca\x02\x19Google\\Cloud\\Translate\\V3\xea\x02\x1cGoogle::Cloud::Translate::V3'
+    _globals['_IMPORTDATAREQUEST'].fields_by_name['dataset']._loaded_options = None
+    _globals['_IMPORTDATAREQUEST'].fields_by_name['dataset']._serialized_options = b'\xe0A\x02'
+    _globals['_IMPORTDATAREQUEST'].fields_by_name['input_config']._loaded_options = None
+    _globals['_IMPORTDATAREQUEST'].fields_by_name['input_config']._serialized_options = b'\xe0A\x02'
+    _globals['_DATASETINPUTCONFIG_INPUTFILE'].fields_by_name['usage']._loaded_options = None
+    _globals['_DATASETINPUTCONFIG_INPUTFILE'].fields_by_name['usage']._serialized_options = b'\xe0A\x01'
+    _globals['_EXPORTDATAREQUEST'].fields_by_name['dataset']._loaded_options = None
+    _globals['_EXPORTDATAREQUEST'].fields_by_name['dataset']._serialized_options = b'\xe0A\x02'
+    _globals['_EXPORTDATAREQUEST'].fields_by_name['output_config']._loaded_options = None
+    _globals['_EXPORTDATAREQUEST'].fields_by_name['output_config']._serialized_options = b'\xe0A\x02'
+    _globals['_DELETEDATASETREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEDATASETREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA"\n translate.googleapis.com/Dataset'
+    _globals['_GETDATASETREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETDATASETREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA"\n translate.googleapis.com/Dataset'
+    _globals['_LISTDATASETSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTDATASETSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\n!locations.googleapis.com/Location'
+    _globals['_LISTDATASETSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTDATASETSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTDATASETSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTDATASETSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_CREATEDATASETREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEDATASETREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\n!locations.googleapis.com/Location'
+    _globals['_CREATEDATASETREQUEST'].fields_by_name['dataset']._loaded_options = None
+    _globals['_CREATEDATASETREQUEST'].fields_by_name['dataset']._serialized_options = b'\xe0A\x02'
+    _globals['_LISTEXAMPLESREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTEXAMPLESREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA"\n translate.googleapis.com/Dataset'
+    _globals['_LISTEXAMPLESREQUEST'].fields_by_name['filter']._loaded_options = None
+    _globals['_LISTEXAMPLESREQUEST'].fields_by_name['filter']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTEXAMPLESREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTEXAMPLESREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTEXAMPLESREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTEXAMPLESREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_EXAMPLE'].fields_by_name['name']._loaded_options = None
+    _globals['_EXAMPLE'].fields_by_name['name']._serialized_options = b'\xe0A\x03'
+    _globals['_EXAMPLE'].fields_by_name['usage']._loaded_options = None
+    _globals['_EXAMPLE'].fields_by_name['usage']._serialized_options = b'\xe0A\x03'
+    _globals['_EXAMPLE']._loaded_options = None
+    _globals['_EXAMPLE']._serialized_options = b'\xeaAq\n translate.googleapis.com/Example\x12Mprojects/{project}/locations/{location}/datasets/{dataset}/examples/{example}'
+    _globals['_DATASET'].fields_by_name['example_count']._loaded_options = None
+    _globals['_DATASET'].fields_by_name['example_count']._serialized_options = b'\xe0A\x03'
+    _globals['_DATASET'].fields_by_name['train_example_count']._loaded_options = None
+    _globals['_DATASET'].fields_by_name['train_example_count']._serialized_options = b'\xe0A\x03'
+    _globals['_DATASET'].fields_by_name['validate_example_count']._loaded_options = None
+    _globals['_DATASET'].fields_by_name['validate_example_count']._serialized_options = b'\xe0A\x03'
+    _globals['_DATASET'].fields_by_name['test_example_count']._loaded_options = None
+    _globals['_DATASET'].fields_by_name['test_example_count']._serialized_options = b'\xe0A\x03'
+    _globals['_DATASET'].fields_by_name['create_time']._loaded_options = None
+    _globals['_DATASET'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_DATASET'].fields_by_name['update_time']._loaded_options = None
+    _globals['_DATASET'].fields_by_name['update_time']._serialized_options = b'\xe0A\x03'
+    _globals['_DATASET']._loaded_options = None
+    _globals['_DATASET']._serialized_options = b'\xeaA^\n translate.googleapis.com/Dataset\x12:projects/{project}/locations/{location}/datasets/{dataset}'
+    _globals['_CREATEMODELREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEMODELREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\n!locations.googleapis.com/Location'
+    _globals['_CREATEMODELREQUEST'].fields_by_name['model']._loaded_options = None
+    _globals['_CREATEMODELREQUEST'].fields_by_name['model']._serialized_options = b'\xe0A\x02'
+    _globals['_LISTMODELSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTMODELSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\n!locations.googleapis.com/Location'
+    _globals['_LISTMODELSREQUEST'].fields_by_name['filter']._loaded_options = None
+    _globals['_LISTMODELSREQUEST'].fields_by_name['filter']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTMODELSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTMODELSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTMODELSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTMODELSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_GETMODELREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETMODELREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA \n\x1etranslate.googleapis.com/Model'
+    _globals['_DELETEMODELREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEMODELREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA \n\x1etranslate.googleapis.com/Model'
+    _globals['_MODEL'].fields_by_name['source_language_code']._loaded_options = None
+    _globals['_MODEL'].fields_by_name['source_language_code']._serialized_options = b'\xe0A\x03'
+    _globals['_MODEL'].fields_by_name['target_language_code']._loaded_options = None
+    _globals['_MODEL'].fields_by_name['target_language_code']._serialized_options = b'\xe0A\x03'
+    _globals['_MODEL'].fields_by_name['train_example_count']._loaded_options = None
+    _globals['_MODEL'].fields_by_name['train_example_count']._serialized_options = b'\xe0A\x03'
+    _globals['_MODEL'].fields_by_name['validate_example_count']._loaded_options = None
+    _globals['_MODEL'].fields_by_name['validate_example_count']._serialized_options = b'\xe0A\x03'
+    _globals['_MODEL'].fields_by_name['test_example_count']._loaded_options = None
+    _globals['_MODEL'].fields_by_name['test_example_count']._serialized_options = b'\xe0A\x03'
+    _globals['_MODEL'].fields_by_name['create_time']._loaded_options = None
+    _globals['_MODEL'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_MODEL'].fields_by_name['update_time']._loaded_options = None
+    _globals['_MODEL'].fields_by_name['update_time']._serialized_options = b'\xe0A\x03'
+    _globals['_MODEL']._loaded_options = None
+    _globals['_MODEL']._serialized_options = b'\xeaAX\n\x1etranslate.googleapis.com/Model\x126projects/{project}/locations/{location}/models/{model}'
+    _globals['_IMPORTDATAREQUEST']._serialized_start = 241
+    _globals['_IMPORTDATAREQUEST']._serialized_end = 358
+    _globals['_DATASETINPUTCONFIG']._serialized_start = 361
+    _globals['_DATASETINPUTCONFIG']._serialized_end = 571
+    _globals['_DATASETINPUTCONFIG_INPUTFILE']._serialized_start = 463
+    _globals['_DATASETINPUTCONFIG_INPUTFILE']._serialized_end = 571
+    _globals['_IMPORTDATAMETADATA']._serialized_start = 574
+    _globals['_IMPORTDATAMETADATA']._serialized_end = 787
+    _globals['_EXPORTDATAREQUEST']._serialized_start = 789
+    _globals['_EXPORTDATAREQUEST']._serialized_end = 908
+    _globals['_DATASETOUTPUTCONFIG']._serialized_start = 910
+    _globals['_DATASETOUTPUTCONFIG']._serialized_end = 1024
+    _globals['_EXPORTDATAMETADATA']._serialized_start = 1027
+    _globals['_EXPORTDATAMETADATA']._serialized_end = 1240
+    _globals['_DELETEDATASETREQUEST']._serialized_start = 1242
+    _globals['_DELETEDATASETREQUEST']._serialized_end = 1320
+    _globals['_DELETEDATASETMETADATA']._serialized_start = 1323
+    _globals['_DELETEDATASETMETADATA']._serialized_end = 1539
+    _globals['_GETDATASETREQUEST']._serialized_start = 1541
+    _globals['_GETDATASETREQUEST']._serialized_end = 1616
+    _globals['_LISTDATASETSREQUEST']._serialized_start = 1619
+    _globals['_LISTDATASETSREQUEST']._serialized_end = 1748
+    _globals['_LISTDATASETSRESPONSE']._serialized_start = 1750
+    _globals['_LISTDATASETSRESPONSE']._serialized_end = 1853
+    _globals['_CREATEDATASETREQUEST']._serialized_start = 1856
+    _globals['_CREATEDATASETREQUEST']._serialized_end = 1997
+    _globals['_CREATEDATASETMETADATA']._serialized_start = 2000
+    _globals['_CREATEDATASETMETADATA']._serialized_end = 2216
+    _globals['_LISTEXAMPLESREQUEST']._serialized_start = 2219
+    _globals['_LISTEXAMPLESREQUEST']._serialized_end = 2368
+    _globals['_LISTEXAMPLESRESPONSE']._serialized_start = 2370
+    _globals['_LISTEXAMPLESRESPONSE']._serialized_end = 2473
+    _globals['_EXAMPLE']._serialized_start = 2476
+    _globals['_EXAMPLE']._serialized_end = 2684
+    _globals['_BATCHTRANSFERRESOURCESRESPONSE']._serialized_start = 2687
+    _globals['_BATCHTRANSFERRESOURCESRESPONSE']._serialized_end = 2919
+    _globals['_BATCHTRANSFERRESOURCESRESPONSE_TRANSFERRESOURCERESPONSE']._serialized_start = 2826
+    _globals['_BATCHTRANSFERRESOURCESRESPONSE_TRANSFERRESOURCERESPONSE']._serialized_end = 2919
+    _globals['_DATASET']._serialized_start = 2922
+    _globals['_DATASET']._serialized_end = 3366
+    _globals['_CREATEMODELREQUEST']._serialized_start = 3369
+    _globals['_CREATEMODELREQUEST']._serialized_end = 3504
+    _globals['_CREATEMODELMETADATA']._serialized_start = 3507
+    _globals['_CREATEMODELMETADATA']._serialized_end = 3721
+    _globals['_LISTMODELSREQUEST']._serialized_start = 3724
+    _globals['_LISTMODELSREQUEST']._serialized_end = 3872
+    _globals['_LISTMODELSRESPONSE']._serialized_start = 3874
+    _globals['_LISTMODELSRESPONSE']._serialized_end = 3971
+    _globals['_GETMODELREQUEST']._serialized_start = 3973
+    _globals['_GETMODELREQUEST']._serialized_end = 4044
+    _globals['_DELETEMODELREQUEST']._serialized_start = 4046
+    _globals['_DELETEMODELREQUEST']._serialized_end = 4120
+    _globals['_DELETEMODELMETADATA']._serialized_start = 4123
+    _globals['_DELETEMODELMETADATA']._serialized_end = 4337
+    _globals['_MODEL']._serialized_start = 4340
+    _globals['_MODEL']._serialized_end = 4775

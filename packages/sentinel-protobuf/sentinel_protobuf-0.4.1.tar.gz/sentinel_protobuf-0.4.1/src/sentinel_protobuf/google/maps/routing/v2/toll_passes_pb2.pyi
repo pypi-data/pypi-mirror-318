@@ -1,0 +1,205 @@
+from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
+from google.protobuf import descriptor as _descriptor
+from typing import ClassVar as _ClassVar
+DESCRIPTOR: _descriptor.FileDescriptor
+
+class TollPass(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    TOLL_PASS_UNSPECIFIED: _ClassVar[TollPass]
+    AU_ETOLL_TAG: _ClassVar[TollPass]
+    AU_EWAY_TAG: _ClassVar[TollPass]
+    AU_LINKT: _ClassVar[TollPass]
+    AR_TELEPASE: _ClassVar[TollPass]
+    BR_AUTO_EXPRESO: _ClassVar[TollPass]
+    BR_CONECTCAR: _ClassVar[TollPass]
+    BR_MOVE_MAIS: _ClassVar[TollPass]
+    BR_PASSA_RAPIDO: _ClassVar[TollPass]
+    BR_SEM_PARAR: _ClassVar[TollPass]
+    BR_TAGGY: _ClassVar[TollPass]
+    BR_VELOE: _ClassVar[TollPass]
+    CA_US_AKWASASNE_SEAWAY_CORPORATE_CARD: _ClassVar[TollPass]
+    CA_US_AKWASASNE_SEAWAY_TRANSIT_CARD: _ClassVar[TollPass]
+    CA_US_BLUE_WATER_EDGE_PASS: _ClassVar[TollPass]
+    CA_US_CONNEXION: _ClassVar[TollPass]
+    CA_US_NEXUS_CARD: _ClassVar[TollPass]
+    ID_E_TOLL: _ClassVar[TollPass]
+    IN_FASTAG: _ClassVar[TollPass]
+    IN_LOCAL_HP_PLATE_EXEMPT: _ClassVar[TollPass]
+    JP_ETC: _ClassVar[TollPass]
+    JP_ETC2: _ClassVar[TollPass]
+    MX_IAVE: _ClassVar[TollPass]
+    MX_PASE: _ClassVar[TollPass]
+    MX_QUICKPASS: _ClassVar[TollPass]
+    MX_SISTEMA_TELEPEAJE_CHIHUAHUA: _ClassVar[TollPass]
+    MX_TAG_IAVE: _ClassVar[TollPass]
+    MX_TAG_TELEVIA: _ClassVar[TollPass]
+    MX_TELEVIA: _ClassVar[TollPass]
+    MX_VIAPASS: _ClassVar[TollPass]
+    US_AL_FREEDOM_PASS: _ClassVar[TollPass]
+    US_AK_ANTON_ANDERSON_TUNNEL_BOOK_OF_10_TICKETS: _ClassVar[TollPass]
+    US_CA_FASTRAK: _ClassVar[TollPass]
+    US_CA_FASTRAK_CAV_STICKER: _ClassVar[TollPass]
+    US_CO_EXPRESSTOLL: _ClassVar[TollPass]
+    US_CO_GO_PASS: _ClassVar[TollPass]
+    US_DE_EZPASSDE: _ClassVar[TollPass]
+    US_FL_BOB_SIKES_TOLL_BRIDGE_PASS: _ClassVar[TollPass]
+    US_FL_DUNES_COMMUNITY_DEVELOPMENT_DISTRICT_EXPRESSCARD: _ClassVar[TollPass]
+    US_FL_EPASS: _ClassVar[TollPass]
+    US_FL_GIBA_TOLL_PASS: _ClassVar[TollPass]
+    US_FL_LEEWAY: _ClassVar[TollPass]
+    US_FL_SUNPASS: _ClassVar[TollPass]
+    US_FL_SUNPASS_PRO: _ClassVar[TollPass]
+    US_IL_EZPASSIL: _ClassVar[TollPass]
+    US_IL_IPASS: _ClassVar[TollPass]
+    US_IN_EZPASSIN: _ClassVar[TollPass]
+    US_KS_BESTPASS_HORIZON: _ClassVar[TollPass]
+    US_KS_KTAG: _ClassVar[TollPass]
+    US_KS_NATIONALPASS: _ClassVar[TollPass]
+    US_KS_PREPASS_ELITEPASS: _ClassVar[TollPass]
+    US_KY_RIVERLINK: _ClassVar[TollPass]
+    US_LA_GEAUXPASS: _ClassVar[TollPass]
+    US_LA_TOLL_TAG: _ClassVar[TollPass]
+    US_MA_EZPASSMA: _ClassVar[TollPass]
+    US_MD_EZPASSMD: _ClassVar[TollPass]
+    US_ME_EZPASSME: _ClassVar[TollPass]
+    US_MI_AMBASSADOR_BRIDGE_PREMIER_COMMUTER_CARD: _ClassVar[TollPass]
+    US_MI_BCPASS: _ClassVar[TollPass]
+    US_MI_GROSSE_ILE_TOLL_BRIDGE_PASS_TAG: _ClassVar[TollPass]
+    US_MI_IQ_PROX_CARD: _ClassVar[TollPass]
+    US_MI_IQ_TAG: _ClassVar[TollPass]
+    US_MI_MACKINAC_BRIDGE_MAC_PASS: _ClassVar[TollPass]
+    US_MI_NEXPRESS_TOLL: _ClassVar[TollPass]
+    US_MN_EZPASSMN: _ClassVar[TollPass]
+    US_NC_EZPASSNC: _ClassVar[TollPass]
+    US_NC_PEACH_PASS: _ClassVar[TollPass]
+    US_NC_QUICK_PASS: _ClassVar[TollPass]
+    US_NH_EZPASSNH: _ClassVar[TollPass]
+    US_NJ_DOWNBEACH_EXPRESS_PASS: _ClassVar[TollPass]
+    US_NJ_EZPASSNJ: _ClassVar[TollPass]
+    US_NY_EXPRESSPASS: _ClassVar[TollPass]
+    US_NY_EZPASSNY: _ClassVar[TollPass]
+    US_OH_EZPASSOH: _ClassVar[TollPass]
+    US_PA_EZPASSPA: _ClassVar[TollPass]
+    US_RI_EZPASSRI: _ClassVar[TollPass]
+    US_SC_PALPASS: _ClassVar[TollPass]
+    US_TX_AVI_TAG: _ClassVar[TollPass]
+    US_TX_BANCPASS: _ClassVar[TollPass]
+    US_TX_DEL_RIO_PASS: _ClassVar[TollPass]
+    US_TX_EFAST_PASS: _ClassVar[TollPass]
+    US_TX_EAGLE_PASS_EXPRESS_CARD: _ClassVar[TollPass]
+    US_TX_EPTOLL: _ClassVar[TollPass]
+    US_TX_EZ_CROSS: _ClassVar[TollPass]
+    US_TX_EZTAG: _ClassVar[TollPass]
+    US_TX_FUEGO_TAG: _ClassVar[TollPass]
+    US_TX_LAREDO_TRADE_TAG: _ClassVar[TollPass]
+    US_TX_PLUSPASS: _ClassVar[TollPass]
+    US_TX_TOLLTAG: _ClassVar[TollPass]
+    US_TX_TXTAG: _ClassVar[TollPass]
+    US_TX_XPRESS_CARD: _ClassVar[TollPass]
+    US_UT_ADAMS_AVE_PARKWAY_EXPRESSCARD: _ClassVar[TollPass]
+    US_VA_EZPASSVA: _ClassVar[TollPass]
+    US_WA_BREEZEBY: _ClassVar[TollPass]
+    US_WA_GOOD_TO_GO: _ClassVar[TollPass]
+    US_WV_EZPASSWV: _ClassVar[TollPass]
+    US_WV_MEMORIAL_BRIDGE_TICKETS: _ClassVar[TollPass]
+    US_WV_MOV_PASS: _ClassVar[TollPass]
+    US_WV_NEWELL_TOLL_BRIDGE_TICKET: _ClassVar[TollPass]
+TOLL_PASS_UNSPECIFIED: TollPass
+AU_ETOLL_TAG: TollPass
+AU_EWAY_TAG: TollPass
+AU_LINKT: TollPass
+AR_TELEPASE: TollPass
+BR_AUTO_EXPRESO: TollPass
+BR_CONECTCAR: TollPass
+BR_MOVE_MAIS: TollPass
+BR_PASSA_RAPIDO: TollPass
+BR_SEM_PARAR: TollPass
+BR_TAGGY: TollPass
+BR_VELOE: TollPass
+CA_US_AKWASASNE_SEAWAY_CORPORATE_CARD: TollPass
+CA_US_AKWASASNE_SEAWAY_TRANSIT_CARD: TollPass
+CA_US_BLUE_WATER_EDGE_PASS: TollPass
+CA_US_CONNEXION: TollPass
+CA_US_NEXUS_CARD: TollPass
+ID_E_TOLL: TollPass
+IN_FASTAG: TollPass
+IN_LOCAL_HP_PLATE_EXEMPT: TollPass
+JP_ETC: TollPass
+JP_ETC2: TollPass
+MX_IAVE: TollPass
+MX_PASE: TollPass
+MX_QUICKPASS: TollPass
+MX_SISTEMA_TELEPEAJE_CHIHUAHUA: TollPass
+MX_TAG_IAVE: TollPass
+MX_TAG_TELEVIA: TollPass
+MX_TELEVIA: TollPass
+MX_VIAPASS: TollPass
+US_AL_FREEDOM_PASS: TollPass
+US_AK_ANTON_ANDERSON_TUNNEL_BOOK_OF_10_TICKETS: TollPass
+US_CA_FASTRAK: TollPass
+US_CA_FASTRAK_CAV_STICKER: TollPass
+US_CO_EXPRESSTOLL: TollPass
+US_CO_GO_PASS: TollPass
+US_DE_EZPASSDE: TollPass
+US_FL_BOB_SIKES_TOLL_BRIDGE_PASS: TollPass
+US_FL_DUNES_COMMUNITY_DEVELOPMENT_DISTRICT_EXPRESSCARD: TollPass
+US_FL_EPASS: TollPass
+US_FL_GIBA_TOLL_PASS: TollPass
+US_FL_LEEWAY: TollPass
+US_FL_SUNPASS: TollPass
+US_FL_SUNPASS_PRO: TollPass
+US_IL_EZPASSIL: TollPass
+US_IL_IPASS: TollPass
+US_IN_EZPASSIN: TollPass
+US_KS_BESTPASS_HORIZON: TollPass
+US_KS_KTAG: TollPass
+US_KS_NATIONALPASS: TollPass
+US_KS_PREPASS_ELITEPASS: TollPass
+US_KY_RIVERLINK: TollPass
+US_LA_GEAUXPASS: TollPass
+US_LA_TOLL_TAG: TollPass
+US_MA_EZPASSMA: TollPass
+US_MD_EZPASSMD: TollPass
+US_ME_EZPASSME: TollPass
+US_MI_AMBASSADOR_BRIDGE_PREMIER_COMMUTER_CARD: TollPass
+US_MI_BCPASS: TollPass
+US_MI_GROSSE_ILE_TOLL_BRIDGE_PASS_TAG: TollPass
+US_MI_IQ_PROX_CARD: TollPass
+US_MI_IQ_TAG: TollPass
+US_MI_MACKINAC_BRIDGE_MAC_PASS: TollPass
+US_MI_NEXPRESS_TOLL: TollPass
+US_MN_EZPASSMN: TollPass
+US_NC_EZPASSNC: TollPass
+US_NC_PEACH_PASS: TollPass
+US_NC_QUICK_PASS: TollPass
+US_NH_EZPASSNH: TollPass
+US_NJ_DOWNBEACH_EXPRESS_PASS: TollPass
+US_NJ_EZPASSNJ: TollPass
+US_NY_EXPRESSPASS: TollPass
+US_NY_EZPASSNY: TollPass
+US_OH_EZPASSOH: TollPass
+US_PA_EZPASSPA: TollPass
+US_RI_EZPASSRI: TollPass
+US_SC_PALPASS: TollPass
+US_TX_AVI_TAG: TollPass
+US_TX_BANCPASS: TollPass
+US_TX_DEL_RIO_PASS: TollPass
+US_TX_EFAST_PASS: TollPass
+US_TX_EAGLE_PASS_EXPRESS_CARD: TollPass
+US_TX_EPTOLL: TollPass
+US_TX_EZ_CROSS: TollPass
+US_TX_EZTAG: TollPass
+US_TX_FUEGO_TAG: TollPass
+US_TX_LAREDO_TRADE_TAG: TollPass
+US_TX_PLUSPASS: TollPass
+US_TX_TOLLTAG: TollPass
+US_TX_TXTAG: TollPass
+US_TX_XPRESS_CARD: TollPass
+US_UT_ADAMS_AVE_PARKWAY_EXPRESSCARD: TollPass
+US_VA_EZPASSVA: TollPass
+US_WA_BREEZEBY: TollPass
+US_WA_GOOD_TO_GO: TollPass
+US_WV_EZPASSWV: TollPass
+US_WV_MEMORIAL_BRIDGE_TICKETS: TollPass
+US_WV_MOV_PASS: TollPass
+US_WV_NEWELL_TOLL_BRIDGE_TICKET: TollPass

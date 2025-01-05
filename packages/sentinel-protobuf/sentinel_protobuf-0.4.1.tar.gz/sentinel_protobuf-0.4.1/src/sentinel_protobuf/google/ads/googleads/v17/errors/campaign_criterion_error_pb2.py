@@ -1,0 +1,19 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/ads/googleads/v17/errors/campaign_criterion_error.proto')
+_sym_db = _symbol_database.Default()
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n>google/ads/googleads/v17/errors/campaign_criterion_error.proto\x12\x1fgoogle.ads.googleads.v17.errors"\x87\x0b\n\x1aCampaignCriterionErrorEnum"\xe8\n\n\x16CampaignCriterionError\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\x0b\n\x07UNKNOWN\x10\x01\x12\x1a\n\x16CONCRETE_TYPE_REQUIRED\x10\x02\x12\x19\n\x15INVALID_PLACEMENT_URL\x10\x03\x12 \n\x1cCANNOT_EXCLUDE_CRITERIA_TYPE\x10\x04\x12\'\n#CANNOT_SET_STATUS_FOR_CRITERIA_TYPE\x10\x05\x12+\n\'CANNOT_SET_STATUS_FOR_EXCLUDED_CRITERIA\x10\x06\x12\x1d\n\x19CANNOT_TARGET_AND_EXCLUDE\x10\x07\x12\x17\n\x13TOO_MANY_OPERATIONS\x10\x08\x12-\n)OPERATOR_NOT_SUPPORTED_FOR_CRITERION_TYPE\x10\t\x12C\n?SHOPPING_CAMPAIGN_SALES_COUNTRY_NOT_SUPPORTED_FOR_SALES_CHANNEL\x10\n\x12\x1d\n\x19CANNOT_ADD_EXISTING_FIELD\x10\x0b\x12$\n CANNOT_UPDATE_NEGATIVE_CRITERION\x10\x0c\x128\n4CANNOT_SET_NEGATIVE_KEYWORD_THEME_CONSTANT_CRITERION\x10\r\x12"\n\x1eINVALID_KEYWORD_THEME_CONSTANT\x10\x0e\x12=\n9MISSING_KEYWORD_THEME_CONSTANT_OR_FREE_FORM_KEYWORD_THEME\x10\x0f\x12I\nECANNOT_TARGET_BOTH_PROXIMITY_AND_LOCATION_CRITERIA_FOR_SMART_CAMPAIGN\x10\x10\x12@\n<CANNOT_TARGET_MULTIPLE_PROXIMITY_CRITERIA_FOR_SMART_CAMPAIGN\x10\x11\x125\n1LOCATION_NOT_LAUNCHED_FOR_LOCAL_SERVICES_CAMPAIGN\x10\x12\x120\n,LOCATION_INVALID_FOR_LOCAL_SERVICES_CAMPAIGN\x10\x13\x125\n1CANNOT_TARGET_COUNTRY_FOR_LOCAL_SERVICES_CAMPAIGN\x10\x14\x12<\n8LOCATION_NOT_IN_HOME_COUNTRY_FOR_LOCAL_SERVICES_CAMPAIGN\x10\x15\x12=\n9CANNOT_ADD_OR_REMOVE_LOCATION_FOR_LOCAL_SERVICES_CAMPAIGN\x10\x16\x12G\nCAT_LEAST_ONE_POSITIVE_LOCATION_REQUIRED_FOR_LOCAL_SERVICES_CAMPAIGN\x10\x17\x12P\nLAT_LEAST_ONE_LOCAL_SERVICE_ID_CRITERION_REQUIRED_FOR_LOCAL_SERVICES_CAMPAIGN\x10\x18\x12+\n\'LOCAL_SERVICE_ID_NOT_FOUND_FOR_CATEGORY\x10\x19\x12=\n9CANNOT_ATTACH_BRAND_LIST_TO_NON_QUALIFIED_SEARCH_CAMPAIGN\x10\x1a\x12B\n>CANNOT_REMOVE_ALL_LOCATIONS_DUE_TO_TOO_MANY_COUNTRY_EXCLUSIONS\x10\x1bB\xfb\x01\n#com.google.ads.googleads.v17.errorsB\x1bCampaignCriterionErrorProtoP\x01ZEgoogle.golang.org/genproto/googleapis/ads/googleads/v17/errors;errors\xa2\x02\x03GAA\xaa\x02\x1fGoogle.Ads.GoogleAds.V17.Errors\xca\x02\x1fGoogle\\Ads\\GoogleAds\\V17\\Errors\xea\x02#Google::Ads::GoogleAds::V17::Errorsb\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.ads.googleads.v17.errors.campaign_criterion_error_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n#com.google.ads.googleads.v17.errorsB\x1bCampaignCriterionErrorProtoP\x01ZEgoogle.golang.org/genproto/googleapis/ads/googleads/v17/errors;errors\xa2\x02\x03GAA\xaa\x02\x1fGoogle.Ads.GoogleAds.V17.Errors\xca\x02\x1fGoogle\\Ads\\GoogleAds\\V17\\Errors\xea\x02#Google::Ads::GoogleAds::V17::Errors'
+    _globals['_CAMPAIGNCRITERIONERRORENUM']._serialized_start = 100
+    _globals['_CAMPAIGNCRITERIONERRORENUM']._serialized_end = 1515
+    _globals['_CAMPAIGNCRITERIONERRORENUM_CAMPAIGNCRITERIONERROR']._serialized_start = 131
+    _globals['_CAMPAIGNCRITERIONERRORENUM_CAMPAIGNCRITERIONERROR']._serialized_end = 1515

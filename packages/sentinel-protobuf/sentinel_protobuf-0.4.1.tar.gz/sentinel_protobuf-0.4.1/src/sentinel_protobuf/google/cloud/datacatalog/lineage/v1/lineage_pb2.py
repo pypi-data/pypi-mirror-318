@@ -1,0 +1,258 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/cloud/datacatalog/lineage/v1/lineage.proto')
+_sym_db = _symbol_database.Default()
+from ......google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from ......google.api import client_pb2 as google_dot_api_dot_client__pb2
+from ......google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from ......google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from ......google.longrunning import operations_pb2 as google_dot_longrunning_dot_operations__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
+from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
+from google.protobuf import struct_pb2 as google_dot_protobuf_dot_struct__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n1google/cloud/datacatalog/lineage/v1/lineage.proto\x12#google.cloud.datacatalog.lineage.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a#google/longrunning/operations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto\x1a\x1cgoogle/protobuf/struct.proto\x1a\x1fgoogle/protobuf/timestamp.proto"\x81\x03\n\x07Process\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x05\x12\x19\n\x0cdisplay_name\x18\x02 \x01(\tB\x03\xe0A\x01\x12U\n\nattributes\x18\x03 \x03(\x0b2<.google.cloud.datacatalog.lineage.v1.Process.AttributesEntryB\x03\xe0A\x01\x12@\n\x06origin\x18\x04 \x01(\x0b2+.google.cloud.datacatalog.lineage.v1.OriginB\x03\xe0A\x01\x1aI\n\x0fAttributesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12%\n\x05value\x18\x02 \x01(\x0b2\x16.google.protobuf.Value:\x028\x01:d\xeaAa\n"datalineage.googleapis.com/Process\x12;projects/{project}/locations/{location}/processes/{process}"\xb5\x04\n\x03Run\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x05\x12\x19\n\x0cdisplay_name\x18\x02 \x01(\tB\x03\xe0A\x01\x12Q\n\nattributes\x18\x03 \x03(\x0b28.google.cloud.datacatalog.lineage.v1.Run.AttributesEntryB\x03\xe0A\x01\x123\n\nstart_time\x18\x04 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x02\x121\n\x08end_time\x18\x05 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x01\x12B\n\x05state\x18\x06 \x01(\x0e2..google.cloud.datacatalog.lineage.v1.Run.StateB\x03\xe0A\x02\x1aI\n\x0fAttributesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12%\n\x05value\x18\x02 \x01(\x0b2\x16.google.protobuf.Value:\x028\x01"I\n\x05State\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0b\n\x07STARTED\x10\x01\x12\r\n\tCOMPLETED\x10\x02\x12\n\n\x06FAILED\x10\x03\x12\x0b\n\x07ABORTED\x10\x04:k\xeaAh\n\x1edatalineage.googleapis.com/Run\x12Fprojects/{project}/locations/{location}/processes/{process}/runs/{run}"\xe3\x02\n\x0cLineageEvent\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x05\x12B\n\x05links\x18\x08 \x03(\x0b2..google.cloud.datacatalog.lineage.v1.EventLinkB\x03\xe0A\x01\x123\n\nstart_time\x18\x06 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x02\x121\n\x08end_time\x18\x07 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x01:\x93\x01\xeaA\x8f\x01\n\'datalineage.googleapis.com/LineageEvent\x12dprojects/{project}/locations/{location}/processes/{process}/runs/{run}/lineageEvents/{lineage_event}"\xa1\x01\n\tEventLink\x12I\n\x06source\x18\x01 \x01(\x0b24.google.cloud.datacatalog.lineage.v1.EntityReferenceB\x03\xe0A\x02\x12I\n\x06target\x18\x02 \x01(\x0b24.google.cloud.datacatalog.lineage.v1.EntityReferenceB\x03\xe0A\x02"4\n\x0fEntityReference\x12!\n\x14fully_qualified_name\x18\x01 \x01(\tB\x03\xe0A\x02"\xe6\x03\n\x11OperationMetadata\x12P\n\x05state\x18\x01 \x01(\x0e2<.google.cloud.datacatalog.lineage.v1.OperationMetadata.StateB\x03\xe0A\x03\x12X\n\x0eoperation_type\x18\x02 \x01(\x0e2;.google.cloud.datacatalog.lineage.v1.OperationMetadata.TypeB\x03\xe0A\x03\x12\x15\n\x08resource\x18\x03 \x01(\tB\x03\xe0A\x03\x12\x1a\n\rresource_uuid\x18\x04 \x01(\tB\x03\xe0A\x03\x124\n\x0bcreate_time\x18\x05 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x121\n\x08end_time\x18\x06 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03"S\n\x05State\x12\x15\n\x11STATE_UNSPECIFIED\x10\x00\x12\x0b\n\x07PENDING\x10\x01\x12\x0b\n\x07RUNNING\x10\x02\x12\r\n\tSUCCEEDED\x10\x03\x12\n\n\x06FAILED\x10\x04"4\n\x04Type\x12\x14\n\x10TYPE_UNSPECIFIED\x10\x00\x12\n\n\x06DELETE\x10\x01\x12\n\n\x06CREATE\x10\x02"\x80\x01\n!ProcessOpenLineageRunEventRequest\x12\x13\n\x06parent\x18\x01 \x01(\tB\x03\xe0A\x02\x122\n\x0copen_lineage\x18\x02 \x01(\x0b2\x17.google.protobuf.StructB\x03\xe0A\x02\x12\x12\n\nrequest_id\x18\x03 \x01(\t"\xd6\x01\n"ProcessOpenLineageRunEventResponse\x128\n\x07process\x18\x01 \x01(\tB\'\xfaA$\n"datalineage.googleapis.com/Process\x120\n\x03run\x18\x02 \x01(\tB#\xfaA \n\x1edatalineage.googleapis.com/Run\x12D\n\x0elineage_events\x18\x03 \x03(\tB,\xfaA)\n\'datalineage.googleapis.com/LineageEvent"\xaa\x01\n\x14CreateProcessRequest\x12:\n\x06parent\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\x12"datalineage.googleapis.com/Process\x12B\n\x07process\x18\x02 \x01(\x0b2,.google.cloud.datacatalog.lineage.v1.ProcessB\x03\xe0A\x02\x12\x12\n\nrequest_id\x18\x03 \x01(\t"\xa2\x01\n\x14UpdateProcessRequest\x12B\n\x07process\x18\x01 \x01(\x0b2,.google.cloud.datacatalog.lineage.v1.ProcessB\x03\xe0A\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMask\x12\x15\n\rallow_missing\x18\x03 \x01(\x08"M\n\x11GetProcessRequest\x128\n\x04name\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\n"datalineage.googleapis.com/Process"y\n\x14ListProcessesRequest\x12:\n\x06parent\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\x12"datalineage.googleapis.com/Process\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t"q\n\x15ListProcessesResponse\x12?\n\tprocesses\x18\x01 \x03(\x0b2,.google.cloud.datacatalog.lineage.v1.Process\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"g\n\x14DeleteProcessRequest\x128\n\x04name\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\n"datalineage.googleapis.com/Process\x12\x15\n\rallow_missing\x18\x02 \x01(\x08"\x9a\x01\n\x10CreateRunRequest\x126\n\x06parent\x18\x01 \x01(\tB&\xe0A\x02\xfaA \x12\x1edatalineage.googleapis.com/Run\x12:\n\x03run\x18\x02 \x01(\x0b2(.google.cloud.datacatalog.lineage.v1.RunB\x03\xe0A\x02\x12\x12\n\nrequest_id\x18\x03 \x01(\t"\x96\x01\n\x10UpdateRunRequest\x12:\n\x03run\x18\x01 \x01(\x0b2(.google.cloud.datacatalog.lineage.v1.RunB\x03\xe0A\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMask\x12\x15\n\rallow_missing\x18\x03 \x01(\x08"E\n\rGetRunRequest\x124\n\x04name\x18\x01 \x01(\tB&\xe0A\x02\xfaA \n\x1edatalineage.googleapis.com/Run"p\n\x0fListRunsRequest\x126\n\x06parent\x18\x01 \x01(\tB&\xe0A\x02\xfaA \x12\x1edatalineage.googleapis.com/Run\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t"c\n\x10ListRunsResponse\x126\n\x04runs\x18\x01 \x03(\x0b2(.google.cloud.datacatalog.lineage.v1.Run\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"_\n\x10DeleteRunRequest\x124\n\x04name\x18\x01 \x01(\tB&\xe0A\x02\xfaA \n\x1edatalineage.googleapis.com/Run\x12\x15\n\rallow_missing\x18\x02 \x01(\x08"\xbf\x01\n\x19CreateLineageEventRequest\x12?\n\x06parent\x18\x01 \x01(\tB/\xe0A\x02\xfaA)\x12\'datalineage.googleapis.com/LineageEvent\x12M\n\rlineage_event\x18\x02 \x01(\x0b21.google.cloud.datacatalog.lineage.v1.LineageEventB\x03\xe0A\x02\x12\x12\n\nrequest_id\x18\x03 \x01(\t"W\n\x16GetLineageEventRequest\x12=\n\x04name\x18\x01 \x01(\tB/\xe0A\x02\xfaA)\n\'datalineage.googleapis.com/LineageEvent"\x82\x01\n\x18ListLineageEventsRequest\x12?\n\x06parent\x18\x01 \x01(\tB/\xe0A\x02\xfaA)\x12\'datalineage.googleapis.com/LineageEvent\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t"\x7f\n\x19ListLineageEventsResponse\x12I\n\x0elineage_events\x18\x01 \x03(\x0b21.google.cloud.datacatalog.lineage.v1.LineageEvent\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"q\n\x19DeleteLineageEventRequest\x12=\n\x04name\x18\x01 \x01(\tB/\xe0A\x02\xfaA)\n\'datalineage.googleapis.com/LineageEvent\x12\x15\n\rallow_missing\x18\x02 \x01(\x08"\xa7\x02\n\x12SearchLinksRequest\x12:\n\x06parent\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\x12"datalineage.googleapis.com/Process\x12K\n\x06source\x18\x04 \x01(\x0b24.google.cloud.datacatalog.lineage.v1.EntityReferenceB\x03\xe0A\x01H\x00\x12K\n\x06target\x18\x05 \x01(\x0b24.google.cloud.datacatalog.lineage.v1.EntityReferenceB\x03\xe0A\x01H\x00\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01B\n\n\x08criteria"h\n\x13SearchLinksResponse\x128\n\x05links\x18\x01 \x03(\x0b2).google.cloud.datacatalog.lineage.v1.Link\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"\x86\x02\n\x04Link\x12\x14\n\x04name\x18\x01 \x01(\tB\x06\xe0A\x03\xe0A\x05\x12D\n\x06source\x18\x02 \x01(\x0b24.google.cloud.datacatalog.lineage.v1.EntityReference\x12D\n\x06target\x18\x03 \x01(\x0b24.google.cloud.datacatalog.lineage.v1.EntityReference\x12.\n\nstart_time\x18\x04 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12,\n\x08end_time\x18\x05 \x01(\x0b2\x1a.google.protobuf.Timestamp"\x98\x01\n\x1fBatchSearchLinkProcessesRequest\x12:\n\x06parent\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\x12"datalineage.googleapis.com/Process\x12\x12\n\x05links\x18\x02 \x03(\tB\x03\xe0A\x02\x12\x11\n\tpage_size\x18\x03 \x01(\x05\x12\x12\n\npage_token\x18\x04 \x01(\t"\x85\x01\n BatchSearchLinkProcessesResponse\x12H\n\rprocess_links\x18\x01 \x03(\x0b21.google.cloud.datacatalog.lineage.v1.ProcessLinks\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"\x8d\x01\n\x0cProcessLinks\x128\n\x07process\x18\x01 \x01(\tB\'\xfaA$\n"datalineage.googleapis.com/Process\x12C\n\x05links\x18\x02 \x03(\x0b24.google.cloud.datacatalog.lineage.v1.ProcessLinkInfo"}\n\x0fProcessLinkInfo\x12\x0c\n\x04link\x18\x01 \x01(\t\x12.\n\nstart_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12,\n\x08end_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.Timestamp"\xe9\x01\n\x06Origin\x12K\n\x0bsource_type\x18\x01 \x01(\x0e26.google.cloud.datacatalog.lineage.v1.Origin.SourceType\x12\x0c\n\x04name\x18\x02 \x01(\t"\x83\x01\n\nSourceType\x12\x1b\n\x17SOURCE_TYPE_UNSPECIFIED\x10\x00\x12\n\n\x06CUSTOM\x10\x01\x12\x0c\n\x08BIGQUERY\x10\x02\x12\x0f\n\x0bDATA_FUSION\x10\x03\x12\x0c\n\x08COMPOSER\x10\x04\x12\x11\n\rLOOKER_STUDIO\x10\x05\x12\x0c\n\x08DATAPROC\x10\x062\xbc\x1d\n\x07Lineage\x12\x99\x02\n\x1aProcessOpenLineageRunEvent\x12F.google.cloud.datacatalog.lineage.v1.ProcessOpenLineageRunEventRequest\x1aG.google.cloud.datacatalog.lineage.v1.ProcessOpenLineageRunEventResponse"j\xdaA\x13parent,open_lineage\x82\xd3\xe4\x93\x02N">/v1/{parent=projects/*/locations/*}:processOpenLineageRunEvent:\x0copen_lineage\x12\xc9\x01\n\rCreateProcess\x129.google.cloud.datacatalog.lineage.v1.CreateProcessRequest\x1a,.google.cloud.datacatalog.lineage.v1.Process"O\xdaA\x0eparent,process\x82\xd3\xe4\x93\x028"-/v1/{parent=projects/*/locations/*}/processes:\x07process\x12\xd6\x01\n\rUpdateProcess\x129.google.cloud.datacatalog.lineage.v1.UpdateProcessRequest\x1a,.google.cloud.datacatalog.lineage.v1.Process"\\\xdaA\x13process,update_mask\x82\xd3\xe4\x93\x02@25/v1/{process.name=projects/*/locations/*/processes/*}:\x07process\x12\xb0\x01\n\nGetProcess\x126.google.cloud.datacatalog.lineage.v1.GetProcessRequest\x1a,.google.cloud.datacatalog.lineage.v1.Process"<\xdaA\x04name\x82\xd3\xe4\x93\x02/\x12-/v1/{name=projects/*/locations/*/processes/*}\x12\xc6\x01\n\rListProcesses\x129.google.cloud.datacatalog.lineage.v1.ListProcessesRequest\x1a:.google.cloud.datacatalog.lineage.v1.ListProcessesResponse">\xdaA\x06parent\x82\xd3\xe4\x93\x02/\x12-/v1/{parent=projects/*/locations/*}/processes\x12\xf9\x01\n\rDeleteProcess\x129.google.cloud.datacatalog.lineage.v1.DeleteProcessRequest\x1a\x1d.google.longrunning.Operation"\x8d\x01\xcaAN\n\x15google.protobuf.Empty\x125google.cloud.datacatalog.lineage.v1.OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02/*-/v1/{name=projects/*/locations/*/processes/*}\x12\xbc\x01\n\tCreateRun\x125.google.cloud.datacatalog.lineage.v1.CreateRunRequest\x1a(.google.cloud.datacatalog.lineage.v1.Run"N\xdaA\nparent,run\x82\xd3\xe4\x93\x02;"4/v1/{parent=projects/*/locations/*/processes/*}/runs:\x03run\x12\xc5\x01\n\tUpdateRun\x125.google.cloud.datacatalog.lineage.v1.UpdateRunRequest\x1a(.google.cloud.datacatalog.lineage.v1.Run"W\xdaA\x0frun,update_mask\x82\xd3\xe4\x93\x02?28/v1/{run.name=projects/*/locations/*/processes/*/runs/*}:\x03run\x12\xab\x01\n\x06GetRun\x122.google.cloud.datacatalog.lineage.v1.GetRunRequest\x1a(.google.cloud.datacatalog.lineage.v1.Run"C\xdaA\x04name\x82\xd3\xe4\x93\x026\x124/v1/{name=projects/*/locations/*/processes/*/runs/*}\x12\xbe\x01\n\x08ListRuns\x124.google.cloud.datacatalog.lineage.v1.ListRunsRequest\x1a5.google.cloud.datacatalog.lineage.v1.ListRunsResponse"E\xdaA\x06parent\x82\xd3\xe4\x93\x026\x124/v1/{parent=projects/*/locations/*/processes/*}/runs\x12\xf8\x01\n\tDeleteRun\x125.google.cloud.datacatalog.lineage.v1.DeleteRunRequest\x1a\x1d.google.longrunning.Operation"\x94\x01\xcaAN\n\x15google.protobuf.Empty\x125google.cloud.datacatalog.lineage.v1.OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x026*4/v1/{name=projects/*/locations/*/processes/*/runs/*}\x12\xfb\x01\n\x12CreateLineageEvent\x12>.google.cloud.datacatalog.lineage.v1.CreateLineageEventRequest\x1a1.google.cloud.datacatalog.lineage.v1.LineageEvent"r\xdaA\x14parent,lineage_event\x82\xd3\xe4\x93\x02U"D/v1/{parent=projects/*/locations/*/processes/*/runs/*}/lineageEvents:\rlineage_event\x12\xd6\x01\n\x0fGetLineageEvent\x12;.google.cloud.datacatalog.lineage.v1.GetLineageEventRequest\x1a1.google.cloud.datacatalog.lineage.v1.LineageEvent"S\xdaA\x04name\x82\xd3\xe4\x93\x02F\x12D/v1/{name=projects/*/locations/*/processes/*/runs/*/lineageEvents/*}\x12\xe9\x01\n\x11ListLineageEvents\x12=.google.cloud.datacatalog.lineage.v1.ListLineageEventsRequest\x1a>.google.cloud.datacatalog.lineage.v1.ListLineageEventsResponse"U\xdaA\x06parent\x82\xd3\xe4\x93\x02F\x12D/v1/{parent=projects/*/locations/*/processes/*/runs/*}/lineageEvents\x12\xc1\x01\n\x12DeleteLineageEvent\x12>.google.cloud.datacatalog.lineage.v1.DeleteLineageEventRequest\x1a\x16.google.protobuf.Empty"S\xdaA\x04name\x82\xd3\xe4\x93\x02F*D/v1/{name=projects/*/locations/*/processes/*/runs/*/lineageEvents/*}\x12\xbc\x01\n\x0bSearchLinks\x127.google.cloud.datacatalog.lineage.v1.SearchLinksRequest\x1a8.google.cloud.datacatalog.lineage.v1.SearchLinksResponse":\x82\xd3\xe4\x93\x024"//v1/{parent=projects/*/locations/*}:searchLinks:\x01*\x12\xf0\x01\n\x18BatchSearchLinkProcesses\x12D.google.cloud.datacatalog.lineage.v1.BatchSearchLinkProcessesRequest\x1aE.google.cloud.datacatalog.lineage.v1.BatchSearchLinkProcessesResponse"G\x82\xd3\xe4\x93\x02A"</v1/{parent=projects/*/locations/*}:batchSearchLinkProcesses:\x01*\x1aN\xcaA\x1adatalineage.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platformB\xf2\x01\n\'com.google.cloud.datacatalog.lineage.v1B\x0cLineageProtoP\x01ZAcloud.google.com/go/datacatalog/lineage/apiv1/lineagepb;lineagepb\xaa\x02#Google.Cloud.DataCatalog.Lineage.V1\xca\x02#Google\\Cloud\\DataCatalog\\Lineage\\V1\xea\x02\'Google::Cloud::DataCatalog::Lineage::V1b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.datacatalog.lineage.v1.lineage_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b"\n'com.google.cloud.datacatalog.lineage.v1B\x0cLineageProtoP\x01ZAcloud.google.com/go/datacatalog/lineage/apiv1/lineagepb;lineagepb\xaa\x02#Google.Cloud.DataCatalog.Lineage.V1\xca\x02#Google\\Cloud\\DataCatalog\\Lineage\\V1\xea\x02'Google::Cloud::DataCatalog::Lineage::V1"
+    _globals['_PROCESS_ATTRIBUTESENTRY']._loaded_options = None
+    _globals['_PROCESS_ATTRIBUTESENTRY']._serialized_options = b'8\x01'
+    _globals['_PROCESS'].fields_by_name['name']._loaded_options = None
+    _globals['_PROCESS'].fields_by_name['name']._serialized_options = b'\xe0A\x05'
+    _globals['_PROCESS'].fields_by_name['display_name']._loaded_options = None
+    _globals['_PROCESS'].fields_by_name['display_name']._serialized_options = b'\xe0A\x01'
+    _globals['_PROCESS'].fields_by_name['attributes']._loaded_options = None
+    _globals['_PROCESS'].fields_by_name['attributes']._serialized_options = b'\xe0A\x01'
+    _globals['_PROCESS'].fields_by_name['origin']._loaded_options = None
+    _globals['_PROCESS'].fields_by_name['origin']._serialized_options = b'\xe0A\x01'
+    _globals['_PROCESS']._loaded_options = None
+    _globals['_PROCESS']._serialized_options = b'\xeaAa\n"datalineage.googleapis.com/Process\x12;projects/{project}/locations/{location}/processes/{process}'
+    _globals['_RUN_ATTRIBUTESENTRY']._loaded_options = None
+    _globals['_RUN_ATTRIBUTESENTRY']._serialized_options = b'8\x01'
+    _globals['_RUN'].fields_by_name['name']._loaded_options = None
+    _globals['_RUN'].fields_by_name['name']._serialized_options = b'\xe0A\x05'
+    _globals['_RUN'].fields_by_name['display_name']._loaded_options = None
+    _globals['_RUN'].fields_by_name['display_name']._serialized_options = b'\xe0A\x01'
+    _globals['_RUN'].fields_by_name['attributes']._loaded_options = None
+    _globals['_RUN'].fields_by_name['attributes']._serialized_options = b'\xe0A\x01'
+    _globals['_RUN'].fields_by_name['start_time']._loaded_options = None
+    _globals['_RUN'].fields_by_name['start_time']._serialized_options = b'\xe0A\x02'
+    _globals['_RUN'].fields_by_name['end_time']._loaded_options = None
+    _globals['_RUN'].fields_by_name['end_time']._serialized_options = b'\xe0A\x01'
+    _globals['_RUN'].fields_by_name['state']._loaded_options = None
+    _globals['_RUN'].fields_by_name['state']._serialized_options = b'\xe0A\x02'
+    _globals['_RUN']._loaded_options = None
+    _globals['_RUN']._serialized_options = b'\xeaAh\n\x1edatalineage.googleapis.com/Run\x12Fprojects/{project}/locations/{location}/processes/{process}/runs/{run}'
+    _globals['_LINEAGEEVENT'].fields_by_name['name']._loaded_options = None
+    _globals['_LINEAGEEVENT'].fields_by_name['name']._serialized_options = b'\xe0A\x05'
+    _globals['_LINEAGEEVENT'].fields_by_name['links']._loaded_options = None
+    _globals['_LINEAGEEVENT'].fields_by_name['links']._serialized_options = b'\xe0A\x01'
+    _globals['_LINEAGEEVENT'].fields_by_name['start_time']._loaded_options = None
+    _globals['_LINEAGEEVENT'].fields_by_name['start_time']._serialized_options = b'\xe0A\x02'
+    _globals['_LINEAGEEVENT'].fields_by_name['end_time']._loaded_options = None
+    _globals['_LINEAGEEVENT'].fields_by_name['end_time']._serialized_options = b'\xe0A\x01'
+    _globals['_LINEAGEEVENT']._loaded_options = None
+    _globals['_LINEAGEEVENT']._serialized_options = b"\xeaA\x8f\x01\n'datalineage.googleapis.com/LineageEvent\x12dprojects/{project}/locations/{location}/processes/{process}/runs/{run}/lineageEvents/{lineage_event}"
+    _globals['_EVENTLINK'].fields_by_name['source']._loaded_options = None
+    _globals['_EVENTLINK'].fields_by_name['source']._serialized_options = b'\xe0A\x02'
+    _globals['_EVENTLINK'].fields_by_name['target']._loaded_options = None
+    _globals['_EVENTLINK'].fields_by_name['target']._serialized_options = b'\xe0A\x02'
+    _globals['_ENTITYREFERENCE'].fields_by_name['fully_qualified_name']._loaded_options = None
+    _globals['_ENTITYREFERENCE'].fields_by_name['fully_qualified_name']._serialized_options = b'\xe0A\x02'
+    _globals['_OPERATIONMETADATA'].fields_by_name['state']._loaded_options = None
+    _globals['_OPERATIONMETADATA'].fields_by_name['state']._serialized_options = b'\xe0A\x03'
+    _globals['_OPERATIONMETADATA'].fields_by_name['operation_type']._loaded_options = None
+    _globals['_OPERATIONMETADATA'].fields_by_name['operation_type']._serialized_options = b'\xe0A\x03'
+    _globals['_OPERATIONMETADATA'].fields_by_name['resource']._loaded_options = None
+    _globals['_OPERATIONMETADATA'].fields_by_name['resource']._serialized_options = b'\xe0A\x03'
+    _globals['_OPERATIONMETADATA'].fields_by_name['resource_uuid']._loaded_options = None
+    _globals['_OPERATIONMETADATA'].fields_by_name['resource_uuid']._serialized_options = b'\xe0A\x03'
+    _globals['_OPERATIONMETADATA'].fields_by_name['create_time']._loaded_options = None
+    _globals['_OPERATIONMETADATA'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_OPERATIONMETADATA'].fields_by_name['end_time']._loaded_options = None
+    _globals['_OPERATIONMETADATA'].fields_by_name['end_time']._serialized_options = b'\xe0A\x03'
+    _globals['_PROCESSOPENLINEAGERUNEVENTREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_PROCESSOPENLINEAGERUNEVENTREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02'
+    _globals['_PROCESSOPENLINEAGERUNEVENTREQUEST'].fields_by_name['open_lineage']._loaded_options = None
+    _globals['_PROCESSOPENLINEAGERUNEVENTREQUEST'].fields_by_name['open_lineage']._serialized_options = b'\xe0A\x02'
+    _globals['_PROCESSOPENLINEAGERUNEVENTRESPONSE'].fields_by_name['process']._loaded_options = None
+    _globals['_PROCESSOPENLINEAGERUNEVENTRESPONSE'].fields_by_name['process']._serialized_options = b'\xfaA$\n"datalineage.googleapis.com/Process'
+    _globals['_PROCESSOPENLINEAGERUNEVENTRESPONSE'].fields_by_name['run']._loaded_options = None
+    _globals['_PROCESSOPENLINEAGERUNEVENTRESPONSE'].fields_by_name['run']._serialized_options = b'\xfaA \n\x1edatalineage.googleapis.com/Run'
+    _globals['_PROCESSOPENLINEAGERUNEVENTRESPONSE'].fields_by_name['lineage_events']._loaded_options = None
+    _globals['_PROCESSOPENLINEAGERUNEVENTRESPONSE'].fields_by_name['lineage_events']._serialized_options = b"\xfaA)\n'datalineage.googleapis.com/LineageEvent"
+    _globals['_CREATEPROCESSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEPROCESSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA$\x12"datalineage.googleapis.com/Process'
+    _globals['_CREATEPROCESSREQUEST'].fields_by_name['process']._loaded_options = None
+    _globals['_CREATEPROCESSREQUEST'].fields_by_name['process']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATEPROCESSREQUEST'].fields_by_name['process']._loaded_options = None
+    _globals['_UPDATEPROCESSREQUEST'].fields_by_name['process']._serialized_options = b'\xe0A\x02'
+    _globals['_GETPROCESSREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETPROCESSREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA$\n"datalineage.googleapis.com/Process'
+    _globals['_LISTPROCESSESREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTPROCESSESREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA$\x12"datalineage.googleapis.com/Process'
+    _globals['_DELETEPROCESSREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEPROCESSREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA$\n"datalineage.googleapis.com/Process'
+    _globals['_CREATERUNREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATERUNREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA \x12\x1edatalineage.googleapis.com/Run'
+    _globals['_CREATERUNREQUEST'].fields_by_name['run']._loaded_options = None
+    _globals['_CREATERUNREQUEST'].fields_by_name['run']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATERUNREQUEST'].fields_by_name['run']._loaded_options = None
+    _globals['_UPDATERUNREQUEST'].fields_by_name['run']._serialized_options = b'\xe0A\x02'
+    _globals['_GETRUNREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETRUNREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA \n\x1edatalineage.googleapis.com/Run'
+    _globals['_LISTRUNSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTRUNSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA \x12\x1edatalineage.googleapis.com/Run'
+    _globals['_DELETERUNREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETERUNREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA \n\x1edatalineage.googleapis.com/Run'
+    _globals['_CREATELINEAGEEVENTREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATELINEAGEEVENTREQUEST'].fields_by_name['parent']._serialized_options = b"\xe0A\x02\xfaA)\x12'datalineage.googleapis.com/LineageEvent"
+    _globals['_CREATELINEAGEEVENTREQUEST'].fields_by_name['lineage_event']._loaded_options = None
+    _globals['_CREATELINEAGEEVENTREQUEST'].fields_by_name['lineage_event']._serialized_options = b'\xe0A\x02'
+    _globals['_GETLINEAGEEVENTREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETLINEAGEEVENTREQUEST'].fields_by_name['name']._serialized_options = b"\xe0A\x02\xfaA)\n'datalineage.googleapis.com/LineageEvent"
+    _globals['_LISTLINEAGEEVENTSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTLINEAGEEVENTSREQUEST'].fields_by_name['parent']._serialized_options = b"\xe0A\x02\xfaA)\x12'datalineage.googleapis.com/LineageEvent"
+    _globals['_DELETELINEAGEEVENTREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETELINEAGEEVENTREQUEST'].fields_by_name['name']._serialized_options = b"\xe0A\x02\xfaA)\n'datalineage.googleapis.com/LineageEvent"
+    _globals['_SEARCHLINKSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_SEARCHLINKSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA$\x12"datalineage.googleapis.com/Process'
+    _globals['_SEARCHLINKSREQUEST'].fields_by_name['source']._loaded_options = None
+    _globals['_SEARCHLINKSREQUEST'].fields_by_name['source']._serialized_options = b'\xe0A\x01'
+    _globals['_SEARCHLINKSREQUEST'].fields_by_name['target']._loaded_options = None
+    _globals['_SEARCHLINKSREQUEST'].fields_by_name['target']._serialized_options = b'\xe0A\x01'
+    _globals['_SEARCHLINKSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_SEARCHLINKSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_SEARCHLINKSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_SEARCHLINKSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_LINK'].fields_by_name['name']._loaded_options = None
+    _globals['_LINK'].fields_by_name['name']._serialized_options = b'\xe0A\x03\xe0A\x05'
+    _globals['_BATCHSEARCHLINKPROCESSESREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_BATCHSEARCHLINKPROCESSESREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA$\x12"datalineage.googleapis.com/Process'
+    _globals['_BATCHSEARCHLINKPROCESSESREQUEST'].fields_by_name['links']._loaded_options = None
+    _globals['_BATCHSEARCHLINKPROCESSESREQUEST'].fields_by_name['links']._serialized_options = b'\xe0A\x02'
+    _globals['_PROCESSLINKS'].fields_by_name['process']._loaded_options = None
+    _globals['_PROCESSLINKS'].fields_by_name['process']._serialized_options = b'\xfaA$\n"datalineage.googleapis.com/Process'
+    _globals['_LINEAGE']._loaded_options = None
+    _globals['_LINEAGE']._serialized_options = b'\xcaA\x1adatalineage.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platform'
+    _globals['_LINEAGE'].methods_by_name['ProcessOpenLineageRunEvent']._loaded_options = None
+    _globals['_LINEAGE'].methods_by_name['ProcessOpenLineageRunEvent']._serialized_options = b'\xdaA\x13parent,open_lineage\x82\xd3\xe4\x93\x02N">/v1/{parent=projects/*/locations/*}:processOpenLineageRunEvent:\x0copen_lineage'
+    _globals['_LINEAGE'].methods_by_name['CreateProcess']._loaded_options = None
+    _globals['_LINEAGE'].methods_by_name['CreateProcess']._serialized_options = b'\xdaA\x0eparent,process\x82\xd3\xe4\x93\x028"-/v1/{parent=projects/*/locations/*}/processes:\x07process'
+    _globals['_LINEAGE'].methods_by_name['UpdateProcess']._loaded_options = None
+    _globals['_LINEAGE'].methods_by_name['UpdateProcess']._serialized_options = b'\xdaA\x13process,update_mask\x82\xd3\xe4\x93\x02@25/v1/{process.name=projects/*/locations/*/processes/*}:\x07process'
+    _globals['_LINEAGE'].methods_by_name['GetProcess']._loaded_options = None
+    _globals['_LINEAGE'].methods_by_name['GetProcess']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02/\x12-/v1/{name=projects/*/locations/*/processes/*}'
+    _globals['_LINEAGE'].methods_by_name['ListProcesses']._loaded_options = None
+    _globals['_LINEAGE'].methods_by_name['ListProcesses']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02/\x12-/v1/{parent=projects/*/locations/*}/processes'
+    _globals['_LINEAGE'].methods_by_name['DeleteProcess']._loaded_options = None
+    _globals['_LINEAGE'].methods_by_name['DeleteProcess']._serialized_options = b'\xcaAN\n\x15google.protobuf.Empty\x125google.cloud.datacatalog.lineage.v1.OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02/*-/v1/{name=projects/*/locations/*/processes/*}'
+    _globals['_LINEAGE'].methods_by_name['CreateRun']._loaded_options = None
+    _globals['_LINEAGE'].methods_by_name['CreateRun']._serialized_options = b'\xdaA\nparent,run\x82\xd3\xe4\x93\x02;"4/v1/{parent=projects/*/locations/*/processes/*}/runs:\x03run'
+    _globals['_LINEAGE'].methods_by_name['UpdateRun']._loaded_options = None
+    _globals['_LINEAGE'].methods_by_name['UpdateRun']._serialized_options = b'\xdaA\x0frun,update_mask\x82\xd3\xe4\x93\x02?28/v1/{run.name=projects/*/locations/*/processes/*/runs/*}:\x03run'
+    _globals['_LINEAGE'].methods_by_name['GetRun']._loaded_options = None
+    _globals['_LINEAGE'].methods_by_name['GetRun']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x026\x124/v1/{name=projects/*/locations/*/processes/*/runs/*}'
+    _globals['_LINEAGE'].methods_by_name['ListRuns']._loaded_options = None
+    _globals['_LINEAGE'].methods_by_name['ListRuns']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x026\x124/v1/{parent=projects/*/locations/*/processes/*}/runs'
+    _globals['_LINEAGE'].methods_by_name['DeleteRun']._loaded_options = None
+    _globals['_LINEAGE'].methods_by_name['DeleteRun']._serialized_options = b'\xcaAN\n\x15google.protobuf.Empty\x125google.cloud.datacatalog.lineage.v1.OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x026*4/v1/{name=projects/*/locations/*/processes/*/runs/*}'
+    _globals['_LINEAGE'].methods_by_name['CreateLineageEvent']._loaded_options = None
+    _globals['_LINEAGE'].methods_by_name['CreateLineageEvent']._serialized_options = b'\xdaA\x14parent,lineage_event\x82\xd3\xe4\x93\x02U"D/v1/{parent=projects/*/locations/*/processes/*/runs/*}/lineageEvents:\rlineage_event'
+    _globals['_LINEAGE'].methods_by_name['GetLineageEvent']._loaded_options = None
+    _globals['_LINEAGE'].methods_by_name['GetLineageEvent']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02F\x12D/v1/{name=projects/*/locations/*/processes/*/runs/*/lineageEvents/*}'
+    _globals['_LINEAGE'].methods_by_name['ListLineageEvents']._loaded_options = None
+    _globals['_LINEAGE'].methods_by_name['ListLineageEvents']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02F\x12D/v1/{parent=projects/*/locations/*/processes/*/runs/*}/lineageEvents'
+    _globals['_LINEAGE'].methods_by_name['DeleteLineageEvent']._loaded_options = None
+    _globals['_LINEAGE'].methods_by_name['DeleteLineageEvent']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02F*D/v1/{name=projects/*/locations/*/processes/*/runs/*/lineageEvents/*}'
+    _globals['_LINEAGE'].methods_by_name['SearchLinks']._loaded_options = None
+    _globals['_LINEAGE'].methods_by_name['SearchLinks']._serialized_options = b'\x82\xd3\xe4\x93\x024"//v1/{parent=projects/*/locations/*}:searchLinks:\x01*'
+    _globals['_LINEAGE'].methods_by_name['BatchSearchLinkProcesses']._loaded_options = None
+    _globals['_LINEAGE'].methods_by_name['BatchSearchLinkProcesses']._serialized_options = b'\x82\xd3\xe4\x93\x02A"</v1/{parent=projects/*/locations/*}:batchSearchLinkProcesses:\x01*'
+    _globals['_PROCESS']._serialized_start = 369
+    _globals['_PROCESS']._serialized_end = 754
+    _globals['_PROCESS_ATTRIBUTESENTRY']._serialized_start = 579
+    _globals['_PROCESS_ATTRIBUTESENTRY']._serialized_end = 652
+    _globals['_RUN']._serialized_start = 757
+    _globals['_RUN']._serialized_end = 1322
+    _globals['_RUN_ATTRIBUTESENTRY']._serialized_start = 579
+    _globals['_RUN_ATTRIBUTESENTRY']._serialized_end = 652
+    _globals['_RUN_STATE']._serialized_start = 1140
+    _globals['_RUN_STATE']._serialized_end = 1213
+    _globals['_LINEAGEEVENT']._serialized_start = 1325
+    _globals['_LINEAGEEVENT']._serialized_end = 1680
+    _globals['_EVENTLINK']._serialized_start = 1683
+    _globals['_EVENTLINK']._serialized_end = 1844
+    _globals['_ENTITYREFERENCE']._serialized_start = 1846
+    _globals['_ENTITYREFERENCE']._serialized_end = 1898
+    _globals['_OPERATIONMETADATA']._serialized_start = 1901
+    _globals['_OPERATIONMETADATA']._serialized_end = 2387
+    _globals['_OPERATIONMETADATA_STATE']._serialized_start = 2250
+    _globals['_OPERATIONMETADATA_STATE']._serialized_end = 2333
+    _globals['_OPERATIONMETADATA_TYPE']._serialized_start = 2335
+    _globals['_OPERATIONMETADATA_TYPE']._serialized_end = 2387
+    _globals['_PROCESSOPENLINEAGERUNEVENTREQUEST']._serialized_start = 2390
+    _globals['_PROCESSOPENLINEAGERUNEVENTREQUEST']._serialized_end = 2518
+    _globals['_PROCESSOPENLINEAGERUNEVENTRESPONSE']._serialized_start = 2521
+    _globals['_PROCESSOPENLINEAGERUNEVENTRESPONSE']._serialized_end = 2735
+    _globals['_CREATEPROCESSREQUEST']._serialized_start = 2738
+    _globals['_CREATEPROCESSREQUEST']._serialized_end = 2908
+    _globals['_UPDATEPROCESSREQUEST']._serialized_start = 2911
+    _globals['_UPDATEPROCESSREQUEST']._serialized_end = 3073
+    _globals['_GETPROCESSREQUEST']._serialized_start = 3075
+    _globals['_GETPROCESSREQUEST']._serialized_end = 3152
+    _globals['_LISTPROCESSESREQUEST']._serialized_start = 3154
+    _globals['_LISTPROCESSESREQUEST']._serialized_end = 3275
+    _globals['_LISTPROCESSESRESPONSE']._serialized_start = 3277
+    _globals['_LISTPROCESSESRESPONSE']._serialized_end = 3390
+    _globals['_DELETEPROCESSREQUEST']._serialized_start = 3392
+    _globals['_DELETEPROCESSREQUEST']._serialized_end = 3495
+    _globals['_CREATERUNREQUEST']._serialized_start = 3498
+    _globals['_CREATERUNREQUEST']._serialized_end = 3652
+    _globals['_UPDATERUNREQUEST']._serialized_start = 3655
+    _globals['_UPDATERUNREQUEST']._serialized_end = 3805
+    _globals['_GETRUNREQUEST']._serialized_start = 3807
+    _globals['_GETRUNREQUEST']._serialized_end = 3876
+    _globals['_LISTRUNSREQUEST']._serialized_start = 3878
+    _globals['_LISTRUNSREQUEST']._serialized_end = 3990
+    _globals['_LISTRUNSRESPONSE']._serialized_start = 3992
+    _globals['_LISTRUNSRESPONSE']._serialized_end = 4091
+    _globals['_DELETERUNREQUEST']._serialized_start = 4093
+    _globals['_DELETERUNREQUEST']._serialized_end = 4188
+    _globals['_CREATELINEAGEEVENTREQUEST']._serialized_start = 4191
+    _globals['_CREATELINEAGEEVENTREQUEST']._serialized_end = 4382
+    _globals['_GETLINEAGEEVENTREQUEST']._serialized_start = 4384
+    _globals['_GETLINEAGEEVENTREQUEST']._serialized_end = 4471
+    _globals['_LISTLINEAGEEVENTSREQUEST']._serialized_start = 4474
+    _globals['_LISTLINEAGEEVENTSREQUEST']._serialized_end = 4604
+    _globals['_LISTLINEAGEEVENTSRESPONSE']._serialized_start = 4606
+    _globals['_LISTLINEAGEEVENTSRESPONSE']._serialized_end = 4733
+    _globals['_DELETELINEAGEEVENTREQUEST']._serialized_start = 4735
+    _globals['_DELETELINEAGEEVENTREQUEST']._serialized_end = 4848
+    _globals['_SEARCHLINKSREQUEST']._serialized_start = 4851
+    _globals['_SEARCHLINKSREQUEST']._serialized_end = 5146
+    _globals['_SEARCHLINKSRESPONSE']._serialized_start = 5148
+    _globals['_SEARCHLINKSRESPONSE']._serialized_end = 5252
+    _globals['_LINK']._serialized_start = 5255
+    _globals['_LINK']._serialized_end = 5517
+    _globals['_BATCHSEARCHLINKPROCESSESREQUEST']._serialized_start = 5520
+    _globals['_BATCHSEARCHLINKPROCESSESREQUEST']._serialized_end = 5672
+    _globals['_BATCHSEARCHLINKPROCESSESRESPONSE']._serialized_start = 5675
+    _globals['_BATCHSEARCHLINKPROCESSESRESPONSE']._serialized_end = 5808
+    _globals['_PROCESSLINKS']._serialized_start = 5811
+    _globals['_PROCESSLINKS']._serialized_end = 5952
+    _globals['_PROCESSLINKINFO']._serialized_start = 5954
+    _globals['_PROCESSLINKINFO']._serialized_end = 6079
+    _globals['_ORIGIN']._serialized_start = 6082
+    _globals['_ORIGIN']._serialized_end = 6315
+    _globals['_ORIGIN_SOURCETYPE']._serialized_start = 6184
+    _globals['_ORIGIN_SOURCETYPE']._serialized_end = 6315
+    _globals['_LINEAGE']._serialized_start = 6318
+    _globals['_LINEAGE']._serialized_end = 10090

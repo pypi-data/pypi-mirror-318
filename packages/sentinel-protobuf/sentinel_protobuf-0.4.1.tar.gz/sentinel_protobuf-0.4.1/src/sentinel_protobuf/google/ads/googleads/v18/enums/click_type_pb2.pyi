@@ -1,0 +1,130 @@
+from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import message as _message
+from typing import ClassVar as _ClassVar
+DESCRIPTOR: _descriptor.FileDescriptor
+
+class ClickTypeEnum(_message.Message):
+    __slots__ = ()
+
+    class ClickType(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+        __slots__ = ()
+        UNSPECIFIED: _ClassVar[ClickTypeEnum.ClickType]
+        UNKNOWN: _ClassVar[ClickTypeEnum.ClickType]
+        APP_DEEPLINK: _ClassVar[ClickTypeEnum.ClickType]
+        BREADCRUMBS: _ClassVar[ClickTypeEnum.ClickType]
+        BROADBAND_PLAN: _ClassVar[ClickTypeEnum.ClickType]
+        CALL_TRACKING: _ClassVar[ClickTypeEnum.ClickType]
+        CALLS: _ClassVar[ClickTypeEnum.ClickType]
+        CLICK_ON_ENGAGEMENT_AD: _ClassVar[ClickTypeEnum.ClickType]
+        GET_DIRECTIONS: _ClassVar[ClickTypeEnum.ClickType]
+        LOCATION_EXPANSION: _ClassVar[ClickTypeEnum.ClickType]
+        LOCATION_FORMAT_CALL: _ClassVar[ClickTypeEnum.ClickType]
+        LOCATION_FORMAT_DIRECTIONS: _ClassVar[ClickTypeEnum.ClickType]
+        LOCATION_FORMAT_IMAGE: _ClassVar[ClickTypeEnum.ClickType]
+        LOCATION_FORMAT_LANDING_PAGE: _ClassVar[ClickTypeEnum.ClickType]
+        LOCATION_FORMAT_MAP: _ClassVar[ClickTypeEnum.ClickType]
+        LOCATION_FORMAT_STORE_INFO: _ClassVar[ClickTypeEnum.ClickType]
+        LOCATION_FORMAT_TEXT: _ClassVar[ClickTypeEnum.ClickType]
+        MOBILE_CALL_TRACKING: _ClassVar[ClickTypeEnum.ClickType]
+        OFFER_PRINTS: _ClassVar[ClickTypeEnum.ClickType]
+        OTHER: _ClassVar[ClickTypeEnum.ClickType]
+        PRODUCT_EXTENSION_CLICKS: _ClassVar[ClickTypeEnum.ClickType]
+        PRODUCT_LISTING_AD_CLICKS: _ClassVar[ClickTypeEnum.ClickType]
+        SITELINKS: _ClassVar[ClickTypeEnum.ClickType]
+        STORE_LOCATOR: _ClassVar[ClickTypeEnum.ClickType]
+        URL_CLICKS: _ClassVar[ClickTypeEnum.ClickType]
+        VIDEO_APP_STORE_CLICKS: _ClassVar[ClickTypeEnum.ClickType]
+        VIDEO_CALL_TO_ACTION_CLICKS: _ClassVar[ClickTypeEnum.ClickType]
+        VIDEO_CARD_ACTION_HEADLINE_CLICKS: _ClassVar[ClickTypeEnum.ClickType]
+        VIDEO_END_CAP_CLICKS: _ClassVar[ClickTypeEnum.ClickType]
+        VIDEO_WEBSITE_CLICKS: _ClassVar[ClickTypeEnum.ClickType]
+        VISUAL_SITELINKS: _ClassVar[ClickTypeEnum.ClickType]
+        WIRELESS_PLAN: _ClassVar[ClickTypeEnum.ClickType]
+        PRODUCT_LISTING_AD_LOCAL: _ClassVar[ClickTypeEnum.ClickType]
+        PRODUCT_LISTING_AD_MULTICHANNEL_LOCAL: _ClassVar[ClickTypeEnum.ClickType]
+        PRODUCT_LISTING_AD_MULTICHANNEL_ONLINE: _ClassVar[ClickTypeEnum.ClickType]
+        PRODUCT_LISTING_ADS_COUPON: _ClassVar[ClickTypeEnum.ClickType]
+        PRODUCT_LISTING_AD_TRANSACTABLE: _ClassVar[ClickTypeEnum.ClickType]
+        PRODUCT_AD_APP_DEEPLINK: _ClassVar[ClickTypeEnum.ClickType]
+        SHOWCASE_AD_CATEGORY_LINK: _ClassVar[ClickTypeEnum.ClickType]
+        SHOWCASE_AD_LOCAL_STOREFRONT_LINK: _ClassVar[ClickTypeEnum.ClickType]
+        SHOWCASE_AD_ONLINE_PRODUCT_LINK: _ClassVar[ClickTypeEnum.ClickType]
+        SHOWCASE_AD_LOCAL_PRODUCT_LINK: _ClassVar[ClickTypeEnum.ClickType]
+        PROMOTION_EXTENSION: _ClassVar[ClickTypeEnum.ClickType]
+        SWIPEABLE_GALLERY_AD_HEADLINE: _ClassVar[ClickTypeEnum.ClickType]
+        SWIPEABLE_GALLERY_AD_SWIPES: _ClassVar[ClickTypeEnum.ClickType]
+        SWIPEABLE_GALLERY_AD_SEE_MORE: _ClassVar[ClickTypeEnum.ClickType]
+        SWIPEABLE_GALLERY_AD_SITELINK_ONE: _ClassVar[ClickTypeEnum.ClickType]
+        SWIPEABLE_GALLERY_AD_SITELINK_TWO: _ClassVar[ClickTypeEnum.ClickType]
+        SWIPEABLE_GALLERY_AD_SITELINK_THREE: _ClassVar[ClickTypeEnum.ClickType]
+        SWIPEABLE_GALLERY_AD_SITELINK_FOUR: _ClassVar[ClickTypeEnum.ClickType]
+        SWIPEABLE_GALLERY_AD_SITELINK_FIVE: _ClassVar[ClickTypeEnum.ClickType]
+        HOTEL_PRICE: _ClassVar[ClickTypeEnum.ClickType]
+        PRICE_EXTENSION: _ClassVar[ClickTypeEnum.ClickType]
+        HOTEL_BOOK_ON_GOOGLE_ROOM_SELECTION: _ClassVar[ClickTypeEnum.ClickType]
+        SHOPPING_COMPARISON_LISTING: _ClassVar[ClickTypeEnum.ClickType]
+        CROSS_NETWORK: _ClassVar[ClickTypeEnum.ClickType]
+        AD_IMAGE: _ClassVar[ClickTypeEnum.ClickType]
+        TRAVEL_ASSETS: _ClassVar[ClickTypeEnum.ClickType]
+    UNSPECIFIED: ClickTypeEnum.ClickType
+    UNKNOWN: ClickTypeEnum.ClickType
+    APP_DEEPLINK: ClickTypeEnum.ClickType
+    BREADCRUMBS: ClickTypeEnum.ClickType
+    BROADBAND_PLAN: ClickTypeEnum.ClickType
+    CALL_TRACKING: ClickTypeEnum.ClickType
+    CALLS: ClickTypeEnum.ClickType
+    CLICK_ON_ENGAGEMENT_AD: ClickTypeEnum.ClickType
+    GET_DIRECTIONS: ClickTypeEnum.ClickType
+    LOCATION_EXPANSION: ClickTypeEnum.ClickType
+    LOCATION_FORMAT_CALL: ClickTypeEnum.ClickType
+    LOCATION_FORMAT_DIRECTIONS: ClickTypeEnum.ClickType
+    LOCATION_FORMAT_IMAGE: ClickTypeEnum.ClickType
+    LOCATION_FORMAT_LANDING_PAGE: ClickTypeEnum.ClickType
+    LOCATION_FORMAT_MAP: ClickTypeEnum.ClickType
+    LOCATION_FORMAT_STORE_INFO: ClickTypeEnum.ClickType
+    LOCATION_FORMAT_TEXT: ClickTypeEnum.ClickType
+    MOBILE_CALL_TRACKING: ClickTypeEnum.ClickType
+    OFFER_PRINTS: ClickTypeEnum.ClickType
+    OTHER: ClickTypeEnum.ClickType
+    PRODUCT_EXTENSION_CLICKS: ClickTypeEnum.ClickType
+    PRODUCT_LISTING_AD_CLICKS: ClickTypeEnum.ClickType
+    SITELINKS: ClickTypeEnum.ClickType
+    STORE_LOCATOR: ClickTypeEnum.ClickType
+    URL_CLICKS: ClickTypeEnum.ClickType
+    VIDEO_APP_STORE_CLICKS: ClickTypeEnum.ClickType
+    VIDEO_CALL_TO_ACTION_CLICKS: ClickTypeEnum.ClickType
+    VIDEO_CARD_ACTION_HEADLINE_CLICKS: ClickTypeEnum.ClickType
+    VIDEO_END_CAP_CLICKS: ClickTypeEnum.ClickType
+    VIDEO_WEBSITE_CLICKS: ClickTypeEnum.ClickType
+    VISUAL_SITELINKS: ClickTypeEnum.ClickType
+    WIRELESS_PLAN: ClickTypeEnum.ClickType
+    PRODUCT_LISTING_AD_LOCAL: ClickTypeEnum.ClickType
+    PRODUCT_LISTING_AD_MULTICHANNEL_LOCAL: ClickTypeEnum.ClickType
+    PRODUCT_LISTING_AD_MULTICHANNEL_ONLINE: ClickTypeEnum.ClickType
+    PRODUCT_LISTING_ADS_COUPON: ClickTypeEnum.ClickType
+    PRODUCT_LISTING_AD_TRANSACTABLE: ClickTypeEnum.ClickType
+    PRODUCT_AD_APP_DEEPLINK: ClickTypeEnum.ClickType
+    SHOWCASE_AD_CATEGORY_LINK: ClickTypeEnum.ClickType
+    SHOWCASE_AD_LOCAL_STOREFRONT_LINK: ClickTypeEnum.ClickType
+    SHOWCASE_AD_ONLINE_PRODUCT_LINK: ClickTypeEnum.ClickType
+    SHOWCASE_AD_LOCAL_PRODUCT_LINK: ClickTypeEnum.ClickType
+    PROMOTION_EXTENSION: ClickTypeEnum.ClickType
+    SWIPEABLE_GALLERY_AD_HEADLINE: ClickTypeEnum.ClickType
+    SWIPEABLE_GALLERY_AD_SWIPES: ClickTypeEnum.ClickType
+    SWIPEABLE_GALLERY_AD_SEE_MORE: ClickTypeEnum.ClickType
+    SWIPEABLE_GALLERY_AD_SITELINK_ONE: ClickTypeEnum.ClickType
+    SWIPEABLE_GALLERY_AD_SITELINK_TWO: ClickTypeEnum.ClickType
+    SWIPEABLE_GALLERY_AD_SITELINK_THREE: ClickTypeEnum.ClickType
+    SWIPEABLE_GALLERY_AD_SITELINK_FOUR: ClickTypeEnum.ClickType
+    SWIPEABLE_GALLERY_AD_SITELINK_FIVE: ClickTypeEnum.ClickType
+    HOTEL_PRICE: ClickTypeEnum.ClickType
+    PRICE_EXTENSION: ClickTypeEnum.ClickType
+    HOTEL_BOOK_ON_GOOGLE_ROOM_SELECTION: ClickTypeEnum.ClickType
+    SHOPPING_COMPARISON_LISTING: ClickTypeEnum.ClickType
+    CROSS_NETWORK: ClickTypeEnum.ClickType
+    AD_IMAGE: ClickTypeEnum.ClickType
+    TRAVEL_ASSETS: ClickTypeEnum.ClickType
+
+    def __init__(self) -> None:
+        ...

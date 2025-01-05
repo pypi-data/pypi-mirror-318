@@ -1,0 +1,126 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/cloud/notebooks/v2/gce_setup.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n)google/cloud/notebooks/v2/gce_setup.proto\x12\x19google.cloud.notebooks.v2\x1a\x1fgoogle/api/field_behavior.proto"\xc9\x01\n\x10NetworkInterface\x12\x14\n\x07network\x18\x01 \x01(\tB\x03\xe0A\x01\x12\x13\n\x06subnet\x18\x02 \x01(\tB\x03\xe0A\x01\x12J\n\x08nic_type\x18\x03 \x01(\x0e23.google.cloud.notebooks.v2.NetworkInterface.NicTypeB\x03\xe0A\x01">\n\x07NicType\x12\x18\n\x14NIC_TYPE_UNSPECIFIED\x10\x00\x12\x0e\n\nVIRTIO_NET\x10\x01\x12\t\n\x05GVNIC\x10\x02"T\n\x07VmImage\x12\x14\n\x07project\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x13\n\x04name\x18\x02 \x01(\tB\x03\xe0A\x01H\x00\x12\x15\n\x06family\x18\x03 \x01(\tB\x03\xe0A\x01H\x00B\x07\n\x05image";\n\x0eContainerImage\x12\x17\n\nrepository\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x10\n\x03tag\x18\x02 \x01(\tB\x03\xe0A\x01"\x94\x03\n\x11AcceleratorConfig\x12O\n\x04type\x18\x01 \x01(\x0e2<.google.cloud.notebooks.v2.AcceleratorConfig.AcceleratorTypeB\x03\xe0A\x01\x12\x17\n\ncore_count\x18\x02 \x01(\x03B\x03\xe0A\x01"\x94\x02\n\x0fAcceleratorType\x12 \n\x1cACCELERATOR_TYPE_UNSPECIFIED\x10\x00\x12\x15\n\x11NVIDIA_TESLA_P100\x10\x02\x12\x15\n\x11NVIDIA_TESLA_V100\x10\x03\x12\x13\n\x0fNVIDIA_TESLA_P4\x10\x04\x12\x13\n\x0fNVIDIA_TESLA_T4\x10\x05\x12\x15\n\x11NVIDIA_TESLA_A100\x10\x0b\x12\x14\n\x10NVIDIA_A100_80GB\x10\x0c\x12\r\n\tNVIDIA_L4\x10\r\x12\x17\n\x13NVIDIA_TESLA_T4_VWS\x10\x08\x12\x19\n\x15NVIDIA_TESLA_P100_VWS\x10\t\x12\x17\n\x13NVIDIA_TESLA_P4_VWS\x10\n"}\n\x16ShieldedInstanceConfig\x12\x1f\n\x12enable_secure_boot\x18\x01 \x01(\x08B\x03\xe0A\x01\x12\x18\n\x0benable_vtpm\x18\x02 \x01(\x08B\x03\xe0A\x01\x12(\n\x1benable_integrity_monitoring\x18\x03 \x01(\x08B\x03\xe0A\x01"V\n\x0fGPUDriverConfig\x12\x1e\n\x11enable_gpu_driver\x18\x01 \x01(\x08B\x03\xe0A\x01\x12#\n\x16custom_gpu_driver_path\x18\x02 \x01(\tB\x03\xe0A\x01"\xca\x01\n\x08DataDisk\x12\x19\n\x0cdisk_size_gb\x18\x01 \x01(\x03B\x03\xe0A\x01\x12>\n\tdisk_type\x18\x02 \x01(\x0e2#.google.cloud.notebooks.v2.DiskTypeB\x06\xe0A\x04\xe0A\x01\x12J\n\x0fdisk_encryption\x18\x05 \x01(\x0e2).google.cloud.notebooks.v2.DiskEncryptionB\x06\xe0A\x04\xe0A\x01\x12\x17\n\x07kms_key\x18\x06 \x01(\tB\x06\xe0A\x04\xe0A\x01"\xc7\x01\n\x08BootDisk\x12\x19\n\x0cdisk_size_gb\x18\x01 \x01(\x03B\x03\xe0A\x01\x12;\n\tdisk_type\x18\x02 \x01(\x0e2#.google.cloud.notebooks.v2.DiskTypeB\x03\xe0A\x01\x12J\n\x0fdisk_encryption\x18\x03 \x01(\x0e2).google.cloud.notebooks.v2.DiskEncryptionB\x06\xe0A\x04\xe0A\x01\x12\x17\n\x07kms_key\x18\x04 \x01(\tB\x06\xe0A\x04\xe0A\x01"9\n\x0eServiceAccount\x12\x12\n\x05email\x18\x01 \x01(\tB\x03\xe0A\x01\x12\x13\n\x06scopes\x18\x02 \x03(\tB\x03\xe0A\x03"\x90\x07\n\x08GceSetup\x12\x19\n\x0cmachine_type\x18\x01 \x01(\tB\x03\xe0A\x01\x12N\n\x13accelerator_configs\x18\x02 \x03(\x0b2,.google.cloud.notebooks.v2.AcceleratorConfigB\x03\xe0A\x01\x12H\n\x10service_accounts\x18\x03 \x03(\x0b2).google.cloud.notebooks.v2.ServiceAccountB\x03\xe0A\x01\x12;\n\x08vm_image\x18\x04 \x01(\x0b2".google.cloud.notebooks.v2.VmImageB\x03\xe0A\x01H\x00\x12I\n\x0fcontainer_image\x18\x05 \x01(\x0b2).google.cloud.notebooks.v2.ContainerImageB\x03\xe0A\x01H\x00\x12;\n\tboot_disk\x18\x06 \x01(\x0b2#.google.cloud.notebooks.v2.BootDiskB\x03\xe0A\x01\x12<\n\ndata_disks\x18\x07 \x03(\x0b2#.google.cloud.notebooks.v2.DataDiskB\x03\xe0A\x01\x12X\n\x18shielded_instance_config\x18\x08 \x01(\x0b21.google.cloud.notebooks.v2.ShieldedInstanceConfigB\x03\xe0A\x01\x12L\n\x12network_interfaces\x18\t \x03(\x0b2+.google.cloud.notebooks.v2.NetworkInterfaceB\x03\xe0A\x01\x12\x1e\n\x11disable_public_ip\x18\n \x01(\x08B\x03\xe0A\x01\x12\x11\n\x04tags\x18\x0b \x03(\tB\x03\xe0A\x01\x12H\n\x08metadata\x18\x0c \x03(\x0b21.google.cloud.notebooks.v2.GceSetup.MetadataEntryB\x03\xe0A\x01\x12!\n\x14enable_ip_forwarding\x18\r \x01(\x08B\x03\xe0A\x01\x12J\n\x11gpu_driver_config\x18\x0e \x01(\x0b2*.google.cloud.notebooks.v2.GPUDriverConfigB\x03\xe0A\x01\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x028\x01B\x07\n\x05image*E\n\x0eDiskEncryption\x12\x1f\n\x1bDISK_ENCRYPTION_UNSPECIFIED\x10\x00\x12\x08\n\x04GMEK\x10\x01\x12\x08\n\x04CMEK\x10\x02*c\n\x08DiskType\x12\x19\n\x15DISK_TYPE_UNSPECIFIED\x10\x00\x12\x0f\n\x0bPD_STANDARD\x10\x01\x12\n\n\x06PD_SSD\x10\x02\x12\x0f\n\x0bPD_BALANCED\x10\x03\x12\x0e\n\nPD_EXTREME\x10\x04B\xc4\x01\n\x1dcom.google.cloud.notebooks.v2B\rGceSetupProtoP\x01Z;cloud.google.com/go/notebooks/apiv2/notebookspb;notebookspb\xaa\x02\x19Google.Cloud.Notebooks.V2\xca\x02\x19Google\\Cloud\\Notebooks\\V2\xea\x02\x1cGoogle::Cloud::Notebooks::V2b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.notebooks.v2.gce_setup_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n\x1dcom.google.cloud.notebooks.v2B\rGceSetupProtoP\x01Z;cloud.google.com/go/notebooks/apiv2/notebookspb;notebookspb\xaa\x02\x19Google.Cloud.Notebooks.V2\xca\x02\x19Google\\Cloud\\Notebooks\\V2\xea\x02\x1cGoogle::Cloud::Notebooks::V2'
+    _globals['_NETWORKINTERFACE'].fields_by_name['network']._loaded_options = None
+    _globals['_NETWORKINTERFACE'].fields_by_name['network']._serialized_options = b'\xe0A\x01'
+    _globals['_NETWORKINTERFACE'].fields_by_name['subnet']._loaded_options = None
+    _globals['_NETWORKINTERFACE'].fields_by_name['subnet']._serialized_options = b'\xe0A\x01'
+    _globals['_NETWORKINTERFACE'].fields_by_name['nic_type']._loaded_options = None
+    _globals['_NETWORKINTERFACE'].fields_by_name['nic_type']._serialized_options = b'\xe0A\x01'
+    _globals['_VMIMAGE'].fields_by_name['project']._loaded_options = None
+    _globals['_VMIMAGE'].fields_by_name['project']._serialized_options = b'\xe0A\x02'
+    _globals['_VMIMAGE'].fields_by_name['name']._loaded_options = None
+    _globals['_VMIMAGE'].fields_by_name['name']._serialized_options = b'\xe0A\x01'
+    _globals['_VMIMAGE'].fields_by_name['family']._loaded_options = None
+    _globals['_VMIMAGE'].fields_by_name['family']._serialized_options = b'\xe0A\x01'
+    _globals['_CONTAINERIMAGE'].fields_by_name['repository']._loaded_options = None
+    _globals['_CONTAINERIMAGE'].fields_by_name['repository']._serialized_options = b'\xe0A\x02'
+    _globals['_CONTAINERIMAGE'].fields_by_name['tag']._loaded_options = None
+    _globals['_CONTAINERIMAGE'].fields_by_name['tag']._serialized_options = b'\xe0A\x01'
+    _globals['_ACCELERATORCONFIG'].fields_by_name['type']._loaded_options = None
+    _globals['_ACCELERATORCONFIG'].fields_by_name['type']._serialized_options = b'\xe0A\x01'
+    _globals['_ACCELERATORCONFIG'].fields_by_name['core_count']._loaded_options = None
+    _globals['_ACCELERATORCONFIG'].fields_by_name['core_count']._serialized_options = b'\xe0A\x01'
+    _globals['_SHIELDEDINSTANCECONFIG'].fields_by_name['enable_secure_boot']._loaded_options = None
+    _globals['_SHIELDEDINSTANCECONFIG'].fields_by_name['enable_secure_boot']._serialized_options = b'\xe0A\x01'
+    _globals['_SHIELDEDINSTANCECONFIG'].fields_by_name['enable_vtpm']._loaded_options = None
+    _globals['_SHIELDEDINSTANCECONFIG'].fields_by_name['enable_vtpm']._serialized_options = b'\xe0A\x01'
+    _globals['_SHIELDEDINSTANCECONFIG'].fields_by_name['enable_integrity_monitoring']._loaded_options = None
+    _globals['_SHIELDEDINSTANCECONFIG'].fields_by_name['enable_integrity_monitoring']._serialized_options = b'\xe0A\x01'
+    _globals['_GPUDRIVERCONFIG'].fields_by_name['enable_gpu_driver']._loaded_options = None
+    _globals['_GPUDRIVERCONFIG'].fields_by_name['enable_gpu_driver']._serialized_options = b'\xe0A\x01'
+    _globals['_GPUDRIVERCONFIG'].fields_by_name['custom_gpu_driver_path']._loaded_options = None
+    _globals['_GPUDRIVERCONFIG'].fields_by_name['custom_gpu_driver_path']._serialized_options = b'\xe0A\x01'
+    _globals['_DATADISK'].fields_by_name['disk_size_gb']._loaded_options = None
+    _globals['_DATADISK'].fields_by_name['disk_size_gb']._serialized_options = b'\xe0A\x01'
+    _globals['_DATADISK'].fields_by_name['disk_type']._loaded_options = None
+    _globals['_DATADISK'].fields_by_name['disk_type']._serialized_options = b'\xe0A\x04\xe0A\x01'
+    _globals['_DATADISK'].fields_by_name['disk_encryption']._loaded_options = None
+    _globals['_DATADISK'].fields_by_name['disk_encryption']._serialized_options = b'\xe0A\x04\xe0A\x01'
+    _globals['_DATADISK'].fields_by_name['kms_key']._loaded_options = None
+    _globals['_DATADISK'].fields_by_name['kms_key']._serialized_options = b'\xe0A\x04\xe0A\x01'
+    _globals['_BOOTDISK'].fields_by_name['disk_size_gb']._loaded_options = None
+    _globals['_BOOTDISK'].fields_by_name['disk_size_gb']._serialized_options = b'\xe0A\x01'
+    _globals['_BOOTDISK'].fields_by_name['disk_type']._loaded_options = None
+    _globals['_BOOTDISK'].fields_by_name['disk_type']._serialized_options = b'\xe0A\x01'
+    _globals['_BOOTDISK'].fields_by_name['disk_encryption']._loaded_options = None
+    _globals['_BOOTDISK'].fields_by_name['disk_encryption']._serialized_options = b'\xe0A\x04\xe0A\x01'
+    _globals['_BOOTDISK'].fields_by_name['kms_key']._loaded_options = None
+    _globals['_BOOTDISK'].fields_by_name['kms_key']._serialized_options = b'\xe0A\x04\xe0A\x01'
+    _globals['_SERVICEACCOUNT'].fields_by_name['email']._loaded_options = None
+    _globals['_SERVICEACCOUNT'].fields_by_name['email']._serialized_options = b'\xe0A\x01'
+    _globals['_SERVICEACCOUNT'].fields_by_name['scopes']._loaded_options = None
+    _globals['_SERVICEACCOUNT'].fields_by_name['scopes']._serialized_options = b'\xe0A\x03'
+    _globals['_GCESETUP_METADATAENTRY']._loaded_options = None
+    _globals['_GCESETUP_METADATAENTRY']._serialized_options = b'8\x01'
+    _globals['_GCESETUP'].fields_by_name['machine_type']._loaded_options = None
+    _globals['_GCESETUP'].fields_by_name['machine_type']._serialized_options = b'\xe0A\x01'
+    _globals['_GCESETUP'].fields_by_name['accelerator_configs']._loaded_options = None
+    _globals['_GCESETUP'].fields_by_name['accelerator_configs']._serialized_options = b'\xe0A\x01'
+    _globals['_GCESETUP'].fields_by_name['service_accounts']._loaded_options = None
+    _globals['_GCESETUP'].fields_by_name['service_accounts']._serialized_options = b'\xe0A\x01'
+    _globals['_GCESETUP'].fields_by_name['vm_image']._loaded_options = None
+    _globals['_GCESETUP'].fields_by_name['vm_image']._serialized_options = b'\xe0A\x01'
+    _globals['_GCESETUP'].fields_by_name['container_image']._loaded_options = None
+    _globals['_GCESETUP'].fields_by_name['container_image']._serialized_options = b'\xe0A\x01'
+    _globals['_GCESETUP'].fields_by_name['boot_disk']._loaded_options = None
+    _globals['_GCESETUP'].fields_by_name['boot_disk']._serialized_options = b'\xe0A\x01'
+    _globals['_GCESETUP'].fields_by_name['data_disks']._loaded_options = None
+    _globals['_GCESETUP'].fields_by_name['data_disks']._serialized_options = b'\xe0A\x01'
+    _globals['_GCESETUP'].fields_by_name['shielded_instance_config']._loaded_options = None
+    _globals['_GCESETUP'].fields_by_name['shielded_instance_config']._serialized_options = b'\xe0A\x01'
+    _globals['_GCESETUP'].fields_by_name['network_interfaces']._loaded_options = None
+    _globals['_GCESETUP'].fields_by_name['network_interfaces']._serialized_options = b'\xe0A\x01'
+    _globals['_GCESETUP'].fields_by_name['disable_public_ip']._loaded_options = None
+    _globals['_GCESETUP'].fields_by_name['disable_public_ip']._serialized_options = b'\xe0A\x01'
+    _globals['_GCESETUP'].fields_by_name['tags']._loaded_options = None
+    _globals['_GCESETUP'].fields_by_name['tags']._serialized_options = b'\xe0A\x01'
+    _globals['_GCESETUP'].fields_by_name['metadata']._loaded_options = None
+    _globals['_GCESETUP'].fields_by_name['metadata']._serialized_options = b'\xe0A\x01'
+    _globals['_GCESETUP'].fields_by_name['enable_ip_forwarding']._loaded_options = None
+    _globals['_GCESETUP'].fields_by_name['enable_ip_forwarding']._serialized_options = b'\xe0A\x01'
+    _globals['_GCESETUP'].fields_by_name['gpu_driver_config']._loaded_options = None
+    _globals['_GCESETUP'].fields_by_name['gpu_driver_config']._serialized_options = b'\xe0A\x01'
+    _globals['_DISKENCRYPTION']._serialized_start = 2459
+    _globals['_DISKENCRYPTION']._serialized_end = 2528
+    _globals['_DISKTYPE']._serialized_start = 2530
+    _globals['_DISKTYPE']._serialized_end = 2629
+    _globals['_NETWORKINTERFACE']._serialized_start = 106
+    _globals['_NETWORKINTERFACE']._serialized_end = 307
+    _globals['_NETWORKINTERFACE_NICTYPE']._serialized_start = 245
+    _globals['_NETWORKINTERFACE_NICTYPE']._serialized_end = 307
+    _globals['_VMIMAGE']._serialized_start = 309
+    _globals['_VMIMAGE']._serialized_end = 393
+    _globals['_CONTAINERIMAGE']._serialized_start = 395
+    _globals['_CONTAINERIMAGE']._serialized_end = 454
+    _globals['_ACCELERATORCONFIG']._serialized_start = 457
+    _globals['_ACCELERATORCONFIG']._serialized_end = 861
+    _globals['_ACCELERATORCONFIG_ACCELERATORTYPE']._serialized_start = 585
+    _globals['_ACCELERATORCONFIG_ACCELERATORTYPE']._serialized_end = 861
+    _globals['_SHIELDEDINSTANCECONFIG']._serialized_start = 863
+    _globals['_SHIELDEDINSTANCECONFIG']._serialized_end = 988
+    _globals['_GPUDRIVERCONFIG']._serialized_start = 990
+    _globals['_GPUDRIVERCONFIG']._serialized_end = 1076
+    _globals['_DATADISK']._serialized_start = 1079
+    _globals['_DATADISK']._serialized_end = 1281
+    _globals['_BOOTDISK']._serialized_start = 1284
+    _globals['_BOOTDISK']._serialized_end = 1483
+    _globals['_SERVICEACCOUNT']._serialized_start = 1485
+    _globals['_SERVICEACCOUNT']._serialized_end = 1542
+    _globals['_GCESETUP']._serialized_start = 1545
+    _globals['_GCESETUP']._serialized_end = 2457
+    _globals['_GCESETUP_METADATAENTRY']._serialized_start = 2401
+    _globals['_GCESETUP_METADATAENTRY']._serialized_end = 2448

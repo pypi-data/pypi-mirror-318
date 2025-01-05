@@ -1,0 +1,170 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/cloud/beyondcorp/appconnections/v1/app_connections_service.proto')
+_sym_db = _symbol_database.Default()
+from ......google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from ......google.api import client_pb2 as google_dot_api_dot_client__pb2
+from ......google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from ......google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from ......google.longrunning import operations_pb2 as google_dot_longrunning_dot_operations__pb2
+from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nGgoogle/cloud/beyondcorp/appconnections/v1/app_connections_service.proto\x12)google.cloud.beyondcorp.appconnections.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a#google/longrunning/operations.proto\x1a google/protobuf/field_mask.proto\x1a\x1fgoogle/protobuf/timestamp.proto"\xb9\x01\n\x19ListAppConnectionsRequest\x12?\n\x06parent\x18\x01 \x01(\tB/\xe0A\x02\xfaA)\x12\'beyondcorp.googleapis.com/AppConnection\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01\x12\x13\n\x06filter\x18\x04 \x01(\tB\x03\xe0A\x01\x12\x15\n\x08order_by\x18\x05 \x01(\tB\x03\xe0A\x01"\x9d\x01\n\x1aListAppConnectionsResponse\x12Q\n\x0fapp_connections\x18\x01 \x03(\x0b28.google.cloud.beyondcorp.appconnections.v1.AppConnection\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x13\n\x0bunreachable\x18\x03 \x03(\t"X\n\x17GetAppConnectionRequest\x12=\n\x04name\x18\x01 \x01(\tB/\xe0A\x02\xfaA)\n\'beyondcorp.googleapis.com/AppConnection"\x89\x02\n\x1aCreateAppConnectionRequest\x12?\n\x06parent\x18\x01 \x01(\tB/\xe0A\x02\xfaA)\x12\'beyondcorp.googleapis.com/AppConnection\x12\x1e\n\x11app_connection_id\x18\x02 \x01(\tB\x03\xe0A\x01\x12U\n\x0eapp_connection\x18\x03 \x01(\x0b28.google.cloud.beyondcorp.appconnections.v1.AppConnectionB\x03\xe0A\x02\x12\x17\n\nrequest_id\x18\x04 \x01(\tB\x03\xe0A\x01\x12\x1a\n\rvalidate_only\x18\x05 \x01(\x08B\x03\xe0A\x01"\xfa\x01\n\x1aUpdateAppConnectionRequest\x124\n\x0bupdate_mask\x18\x01 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x02\x12U\n\x0eapp_connection\x18\x02 \x01(\x0b28.google.cloud.beyondcorp.appconnections.v1.AppConnectionB\x03\xe0A\x02\x12\x17\n\nrequest_id\x18\x03 \x01(\tB\x03\xe0A\x01\x12\x1a\n\rvalidate_only\x18\x04 \x01(\x08B\x03\xe0A\x01\x12\x1a\n\rallow_missing\x18\x05 \x01(\x08B\x03\xe0A\x01"\x90\x01\n\x1aDeleteAppConnectionRequest\x12=\n\x04name\x18\x01 \x01(\tB/\xe0A\x02\xfaA)\n\'beyondcorp.googleapis.com/AppConnection\x12\x17\n\nrequest_id\x18\x02 \x01(\tB\x03\xe0A\x01\x12\x1a\n\rvalidate_only\x18\x03 \x01(\x08B\x03\xe0A\x01"\xda\x01\n\x1cResolveAppConnectionsRequest\x12?\n\x06parent\x18\x01 \x01(\tB/\xe0A\x02\xfaA)\x12\'beyondcorp.googleapis.com/AppConnection\x12H\n\x10app_connector_id\x18\x02 \x01(\tB.\xe0A\x02\xfaA(\n&beyondcorp.googleapis.com/AppConnector\x12\x16\n\tpage_size\x18\x03 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x04 \x01(\tB\x03\xe0A\x01"\xcf\x02\n\x1dResolveAppConnectionsResponse\x12}\n\x16app_connection_details\x18\x01 \x03(\x0b2].google.cloud.beyondcorp.appconnections.v1.ResolveAppConnectionsResponse.AppConnectionDetails\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x13\n\x0bunreachable\x18\x03 \x03(\t\x1a\x80\x01\n\x14AppConnectionDetails\x12P\n\x0eapp_connection\x18\x01 \x01(\x0b28.google.cloud.beyondcorp.appconnections.v1.AppConnection\x12\x16\n\x0erecent_mig_vms\x18\x02 \x03(\t"\x99\n\n\rAppConnection\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x02\x124\n\x0bcreate_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bupdate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12Y\n\x06labels\x18\x04 \x03(\x0b2D.google.cloud.beyondcorp.appconnections.v1.AppConnection.LabelsEntryB\x03\xe0A\x01\x12\x19\n\x0cdisplay_name\x18\x05 \x01(\tB\x03\xe0A\x01\x12\x10\n\x03uid\x18\x06 \x01(\tB\x03\xe0A\x03\x12P\n\x04type\x18\x07 \x01(\x0e2=.google.cloud.beyondcorp.appconnections.v1.AppConnection.TypeB\x03\xe0A\x02\x12o\n\x14application_endpoint\x18\x08 \x01(\x0b2L.google.cloud.beyondcorp.appconnections.v1.AppConnection.ApplicationEndpointB\x03\xe0A\x02\x12\x17\n\nconnectors\x18\t \x03(\tB\x03\xe0A\x01\x12R\n\x05state\x18\n \x01(\x0e2>.google.cloud.beyondcorp.appconnections.v1.AppConnection.StateB\x03\xe0A\x03\x12V\n\x07gateway\x18\x0b \x01(\x0b2@.google.cloud.beyondcorp.appconnections.v1.AppConnection.GatewayB\x03\xe0A\x01\x1a;\n\x13ApplicationEndpoint\x12\x11\n\x04host\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x11\n\x04port\x18\x02 \x01(\x05B\x03\xe0A\x02\x1a\x87\x02\n\x07Gateway\x12X\n\x04type\x18\x02 \x01(\x0e2E.google.cloud.beyondcorp.appconnections.v1.AppConnection.Gateway.TypeB\x03\xe0A\x02\x12\x10\n\x03uri\x18\x03 \x01(\tB\x03\xe0A\x03\x12\x19\n\x0cingress_port\x18\x04 \x01(\x05B\x03\xe0A\x03\x12A\n\x0bapp_gateway\x18\x05 \x01(\tB,\xe0A\x02\xfaA&\n$beyondcorp.googleapis.com/AppGateway"2\n\x04Type\x12\x14\n\x10TYPE_UNSPECIFIED\x10\x00\x12\x14\n\x10GCP_REGIONAL_MIG\x10\x01\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x028\x01"+\n\x04Type\x12\x14\n\x10TYPE_UNSPECIFIED\x10\x00\x12\r\n\tTCP_PROXY\x10\x01"_\n\x05State\x12\x15\n\x11STATE_UNSPECIFIED\x10\x00\x12\x0c\n\x08CREATING\x10\x01\x12\x0b\n\x07CREATED\x10\x02\x12\x0c\n\x08UPDATING\x10\x03\x12\x0c\n\x08DELETING\x10\x04\x12\x08\n\x04DOWN\x10\x05:u\xeaAr\n\'beyondcorp.googleapis.com/AppConnection\x12Gprojects/{project}/locations/{location}/appConnections/{app_connection}"\x8d\x02\n\x1eAppConnectionOperationMetadata\x124\n\x0bcreate_time\x18\x01 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x121\n\x08end_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12\x13\n\x06target\x18\x03 \x01(\tB\x03\xe0A\x03\x12\x11\n\x04verb\x18\x04 \x01(\tB\x03\xe0A\x03\x12\x1b\n\x0estatus_message\x18\x05 \x01(\tB\x03\xe0A\x03\x12#\n\x16requested_cancellation\x18\x06 \x01(\x08B\x03\xe0A\x03\x12\x18\n\x0bapi_version\x18\x07 \x01(\tB\x03\xe0A\x032\xea\x0c\n\x15AppConnectionsService\x12\xe6\x01\n\x12ListAppConnections\x12D.google.cloud.beyondcorp.appconnections.v1.ListAppConnectionsRequest\x1aE.google.cloud.beyondcorp.appconnections.v1.ListAppConnectionsResponse"C\xdaA\x06parent\x82\xd3\xe4\x93\x024\x122/v1/{parent=projects/*/locations/*}/appConnections\x12\xd3\x01\n\x10GetAppConnection\x12B.google.cloud.beyondcorp.appconnections.v1.GetAppConnectionRequest\x1a8.google.cloud.beyondcorp.appconnections.v1.AppConnection"A\xdaA\x04name\x82\xd3\xe4\x93\x024\x122/v1/{name=projects/*/locations/*/appConnections/*}\x12\xa4\x02\n\x13CreateAppConnection\x12E.google.cloud.beyondcorp.appconnections.v1.CreateAppConnectionRequest\x1a\x1d.google.longrunning.Operation"\xa6\x01\xcaA/\n\rAppConnection\x12\x1eAppConnectionOperationMetadata\xdaA\'parent,app_connection,app_connection_id\x82\xd3\xe4\x93\x02D"2/v1/{parent=projects/*/locations/*}/appConnections:\x0eapp_connection\x12\xa6\x02\n\x13UpdateAppConnection\x12E.google.cloud.beyondcorp.appconnections.v1.UpdateAppConnectionRequest\x1a\x1d.google.longrunning.Operation"\xa8\x01\xcaA/\n\rAppConnection\x12\x1eAppConnectionOperationMetadata\xdaA\x1aapp_connection,update_mask\x82\xd3\xe4\x93\x02S2A/v1/{app_connection.name=projects/*/locations/*/appConnections/*}:\x0eapp_connection\x12\xf8\x01\n\x13DeleteAppConnection\x12E.google.cloud.beyondcorp.appconnections.v1.DeleteAppConnectionRequest\x1a\x1d.google.longrunning.Operation"{\xcaA7\n\x15google.protobuf.Empty\x12\x1eAppConnectionOperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x024*2/v1/{name=projects/*/locations/*/appConnections/*}\x12\xf7\x01\n\x15ResolveAppConnections\x12G.google.cloud.beyondcorp.appconnections.v1.ResolveAppConnectionsRequest\x1aH.google.cloud.beyondcorp.appconnections.v1.ResolveAppConnectionsResponse"K\xdaA\x06parent\x82\xd3\xe4\x93\x02<\x12:/v1/{parent=projects/*/locations/*}/appConnections:resolve\x1aM\xcaA\x19beyondcorp.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platformB\x8a\x04\n-com.google.cloud.beyondcorp.appconnections.v1B\x1aAppConnectionsServiceProtoP\x01ZUcloud.google.com/go/beyondcorp/appconnections/apiv1/appconnectionspb;appconnectionspb\xaa\x02)Google.Cloud.BeyondCorp.AppConnections.V1\xca\x02)Google\\Cloud\\BeyondCorp\\AppConnections\\V1\xea\x02-Google::Cloud::BeyondCorp::AppConnections::V1\xeaAo\n&beyondcorp.googleapis.com/AppConnector\x12Eprojects/{project}/locations/{location}/appConnectors/{app_connector}\xeaAi\n$beyondcorp.googleapis.com/AppGateway\x12Aprojects/{project}/locations/{location}/appGateways/{app_gateway}b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.beyondcorp.appconnections.v1.app_connections_service_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n-com.google.cloud.beyondcorp.appconnections.v1B\x1aAppConnectionsServiceProtoP\x01ZUcloud.google.com/go/beyondcorp/appconnections/apiv1/appconnectionspb;appconnectionspb\xaa\x02)Google.Cloud.BeyondCorp.AppConnections.V1\xca\x02)Google\\Cloud\\BeyondCorp\\AppConnections\\V1\xea\x02-Google::Cloud::BeyondCorp::AppConnections::V1\xeaAo\n&beyondcorp.googleapis.com/AppConnector\x12Eprojects/{project}/locations/{location}/appConnectors/{app_connector}\xeaAi\n$beyondcorp.googleapis.com/AppGateway\x12Aprojects/{project}/locations/{location}/appGateways/{app_gateway}'
+    _globals['_LISTAPPCONNECTIONSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTAPPCONNECTIONSREQUEST'].fields_by_name['parent']._serialized_options = b"\xe0A\x02\xfaA)\x12'beyondcorp.googleapis.com/AppConnection"
+    _globals['_LISTAPPCONNECTIONSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTAPPCONNECTIONSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTAPPCONNECTIONSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTAPPCONNECTIONSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTAPPCONNECTIONSREQUEST'].fields_by_name['filter']._loaded_options = None
+    _globals['_LISTAPPCONNECTIONSREQUEST'].fields_by_name['filter']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTAPPCONNECTIONSREQUEST'].fields_by_name['order_by']._loaded_options = None
+    _globals['_LISTAPPCONNECTIONSREQUEST'].fields_by_name['order_by']._serialized_options = b'\xe0A\x01'
+    _globals['_GETAPPCONNECTIONREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETAPPCONNECTIONREQUEST'].fields_by_name['name']._serialized_options = b"\xe0A\x02\xfaA)\n'beyondcorp.googleapis.com/AppConnection"
+    _globals['_CREATEAPPCONNECTIONREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEAPPCONNECTIONREQUEST'].fields_by_name['parent']._serialized_options = b"\xe0A\x02\xfaA)\x12'beyondcorp.googleapis.com/AppConnection"
+    _globals['_CREATEAPPCONNECTIONREQUEST'].fields_by_name['app_connection_id']._loaded_options = None
+    _globals['_CREATEAPPCONNECTIONREQUEST'].fields_by_name['app_connection_id']._serialized_options = b'\xe0A\x01'
+    _globals['_CREATEAPPCONNECTIONREQUEST'].fields_by_name['app_connection']._loaded_options = None
+    _globals['_CREATEAPPCONNECTIONREQUEST'].fields_by_name['app_connection']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEAPPCONNECTIONREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_CREATEAPPCONNECTIONREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01'
+    _globals['_CREATEAPPCONNECTIONREQUEST'].fields_by_name['validate_only']._loaded_options = None
+    _globals['_CREATEAPPCONNECTIONREQUEST'].fields_by_name['validate_only']._serialized_options = b'\xe0A\x01'
+    _globals['_UPDATEAPPCONNECTIONREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATEAPPCONNECTIONREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATEAPPCONNECTIONREQUEST'].fields_by_name['app_connection']._loaded_options = None
+    _globals['_UPDATEAPPCONNECTIONREQUEST'].fields_by_name['app_connection']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATEAPPCONNECTIONREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_UPDATEAPPCONNECTIONREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01'
+    _globals['_UPDATEAPPCONNECTIONREQUEST'].fields_by_name['validate_only']._loaded_options = None
+    _globals['_UPDATEAPPCONNECTIONREQUEST'].fields_by_name['validate_only']._serialized_options = b'\xe0A\x01'
+    _globals['_UPDATEAPPCONNECTIONREQUEST'].fields_by_name['allow_missing']._loaded_options = None
+    _globals['_UPDATEAPPCONNECTIONREQUEST'].fields_by_name['allow_missing']._serialized_options = b'\xe0A\x01'
+    _globals['_DELETEAPPCONNECTIONREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEAPPCONNECTIONREQUEST'].fields_by_name['name']._serialized_options = b"\xe0A\x02\xfaA)\n'beyondcorp.googleapis.com/AppConnection"
+    _globals['_DELETEAPPCONNECTIONREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_DELETEAPPCONNECTIONREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01'
+    _globals['_DELETEAPPCONNECTIONREQUEST'].fields_by_name['validate_only']._loaded_options = None
+    _globals['_DELETEAPPCONNECTIONREQUEST'].fields_by_name['validate_only']._serialized_options = b'\xe0A\x01'
+    _globals['_RESOLVEAPPCONNECTIONSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_RESOLVEAPPCONNECTIONSREQUEST'].fields_by_name['parent']._serialized_options = b"\xe0A\x02\xfaA)\x12'beyondcorp.googleapis.com/AppConnection"
+    _globals['_RESOLVEAPPCONNECTIONSREQUEST'].fields_by_name['app_connector_id']._loaded_options = None
+    _globals['_RESOLVEAPPCONNECTIONSREQUEST'].fields_by_name['app_connector_id']._serialized_options = b'\xe0A\x02\xfaA(\n&beyondcorp.googleapis.com/AppConnector'
+    _globals['_RESOLVEAPPCONNECTIONSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_RESOLVEAPPCONNECTIONSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_RESOLVEAPPCONNECTIONSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_RESOLVEAPPCONNECTIONSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_APPCONNECTION_APPLICATIONENDPOINT'].fields_by_name['host']._loaded_options = None
+    _globals['_APPCONNECTION_APPLICATIONENDPOINT'].fields_by_name['host']._serialized_options = b'\xe0A\x02'
+    _globals['_APPCONNECTION_APPLICATIONENDPOINT'].fields_by_name['port']._loaded_options = None
+    _globals['_APPCONNECTION_APPLICATIONENDPOINT'].fields_by_name['port']._serialized_options = b'\xe0A\x02'
+    _globals['_APPCONNECTION_GATEWAY'].fields_by_name['type']._loaded_options = None
+    _globals['_APPCONNECTION_GATEWAY'].fields_by_name['type']._serialized_options = b'\xe0A\x02'
+    _globals['_APPCONNECTION_GATEWAY'].fields_by_name['uri']._loaded_options = None
+    _globals['_APPCONNECTION_GATEWAY'].fields_by_name['uri']._serialized_options = b'\xe0A\x03'
+    _globals['_APPCONNECTION_GATEWAY'].fields_by_name['ingress_port']._loaded_options = None
+    _globals['_APPCONNECTION_GATEWAY'].fields_by_name['ingress_port']._serialized_options = b'\xe0A\x03'
+    _globals['_APPCONNECTION_GATEWAY'].fields_by_name['app_gateway']._loaded_options = None
+    _globals['_APPCONNECTION_GATEWAY'].fields_by_name['app_gateway']._serialized_options = b'\xe0A\x02\xfaA&\n$beyondcorp.googleapis.com/AppGateway'
+    _globals['_APPCONNECTION_LABELSENTRY']._loaded_options = None
+    _globals['_APPCONNECTION_LABELSENTRY']._serialized_options = b'8\x01'
+    _globals['_APPCONNECTION'].fields_by_name['name']._loaded_options = None
+    _globals['_APPCONNECTION'].fields_by_name['name']._serialized_options = b'\xe0A\x02'
+    _globals['_APPCONNECTION'].fields_by_name['create_time']._loaded_options = None
+    _globals['_APPCONNECTION'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_APPCONNECTION'].fields_by_name['update_time']._loaded_options = None
+    _globals['_APPCONNECTION'].fields_by_name['update_time']._serialized_options = b'\xe0A\x03'
+    _globals['_APPCONNECTION'].fields_by_name['labels']._loaded_options = None
+    _globals['_APPCONNECTION'].fields_by_name['labels']._serialized_options = b'\xe0A\x01'
+    _globals['_APPCONNECTION'].fields_by_name['display_name']._loaded_options = None
+    _globals['_APPCONNECTION'].fields_by_name['display_name']._serialized_options = b'\xe0A\x01'
+    _globals['_APPCONNECTION'].fields_by_name['uid']._loaded_options = None
+    _globals['_APPCONNECTION'].fields_by_name['uid']._serialized_options = b'\xe0A\x03'
+    _globals['_APPCONNECTION'].fields_by_name['type']._loaded_options = None
+    _globals['_APPCONNECTION'].fields_by_name['type']._serialized_options = b'\xe0A\x02'
+    _globals['_APPCONNECTION'].fields_by_name['application_endpoint']._loaded_options = None
+    _globals['_APPCONNECTION'].fields_by_name['application_endpoint']._serialized_options = b'\xe0A\x02'
+    _globals['_APPCONNECTION'].fields_by_name['connectors']._loaded_options = None
+    _globals['_APPCONNECTION'].fields_by_name['connectors']._serialized_options = b'\xe0A\x01'
+    _globals['_APPCONNECTION'].fields_by_name['state']._loaded_options = None
+    _globals['_APPCONNECTION'].fields_by_name['state']._serialized_options = b'\xe0A\x03'
+    _globals['_APPCONNECTION'].fields_by_name['gateway']._loaded_options = None
+    _globals['_APPCONNECTION'].fields_by_name['gateway']._serialized_options = b'\xe0A\x01'
+    _globals['_APPCONNECTION']._loaded_options = None
+    _globals['_APPCONNECTION']._serialized_options = b"\xeaAr\n'beyondcorp.googleapis.com/AppConnection\x12Gprojects/{project}/locations/{location}/appConnections/{app_connection}"
+    _globals['_APPCONNECTIONOPERATIONMETADATA'].fields_by_name['create_time']._loaded_options = None
+    _globals['_APPCONNECTIONOPERATIONMETADATA'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_APPCONNECTIONOPERATIONMETADATA'].fields_by_name['end_time']._loaded_options = None
+    _globals['_APPCONNECTIONOPERATIONMETADATA'].fields_by_name['end_time']._serialized_options = b'\xe0A\x03'
+    _globals['_APPCONNECTIONOPERATIONMETADATA'].fields_by_name['target']._loaded_options = None
+    _globals['_APPCONNECTIONOPERATIONMETADATA'].fields_by_name['target']._serialized_options = b'\xe0A\x03'
+    _globals['_APPCONNECTIONOPERATIONMETADATA'].fields_by_name['verb']._loaded_options = None
+    _globals['_APPCONNECTIONOPERATIONMETADATA'].fields_by_name['verb']._serialized_options = b'\xe0A\x03'
+    _globals['_APPCONNECTIONOPERATIONMETADATA'].fields_by_name['status_message']._loaded_options = None
+    _globals['_APPCONNECTIONOPERATIONMETADATA'].fields_by_name['status_message']._serialized_options = b'\xe0A\x03'
+    _globals['_APPCONNECTIONOPERATIONMETADATA'].fields_by_name['requested_cancellation']._loaded_options = None
+    _globals['_APPCONNECTIONOPERATIONMETADATA'].fields_by_name['requested_cancellation']._serialized_options = b'\xe0A\x03'
+    _globals['_APPCONNECTIONOPERATIONMETADATA'].fields_by_name['api_version']._loaded_options = None
+    _globals['_APPCONNECTIONOPERATIONMETADATA'].fields_by_name['api_version']._serialized_options = b'\xe0A\x03'
+    _globals['_APPCONNECTIONSSERVICE']._loaded_options = None
+    _globals['_APPCONNECTIONSSERVICE']._serialized_options = b'\xcaA\x19beyondcorp.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platform'
+    _globals['_APPCONNECTIONSSERVICE'].methods_by_name['ListAppConnections']._loaded_options = None
+    _globals['_APPCONNECTIONSSERVICE'].methods_by_name['ListAppConnections']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x024\x122/v1/{parent=projects/*/locations/*}/appConnections'
+    _globals['_APPCONNECTIONSSERVICE'].methods_by_name['GetAppConnection']._loaded_options = None
+    _globals['_APPCONNECTIONSSERVICE'].methods_by_name['GetAppConnection']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x024\x122/v1/{name=projects/*/locations/*/appConnections/*}'
+    _globals['_APPCONNECTIONSSERVICE'].methods_by_name['CreateAppConnection']._loaded_options = None
+    _globals['_APPCONNECTIONSSERVICE'].methods_by_name['CreateAppConnection']._serialized_options = b'\xcaA/\n\rAppConnection\x12\x1eAppConnectionOperationMetadata\xdaA\'parent,app_connection,app_connection_id\x82\xd3\xe4\x93\x02D"2/v1/{parent=projects/*/locations/*}/appConnections:\x0eapp_connection'
+    _globals['_APPCONNECTIONSSERVICE'].methods_by_name['UpdateAppConnection']._loaded_options = None
+    _globals['_APPCONNECTIONSSERVICE'].methods_by_name['UpdateAppConnection']._serialized_options = b'\xcaA/\n\rAppConnection\x12\x1eAppConnectionOperationMetadata\xdaA\x1aapp_connection,update_mask\x82\xd3\xe4\x93\x02S2A/v1/{app_connection.name=projects/*/locations/*/appConnections/*}:\x0eapp_connection'
+    _globals['_APPCONNECTIONSSERVICE'].methods_by_name['DeleteAppConnection']._loaded_options = None
+    _globals['_APPCONNECTIONSSERVICE'].methods_by_name['DeleteAppConnection']._serialized_options = b'\xcaA7\n\x15google.protobuf.Empty\x12\x1eAppConnectionOperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x024*2/v1/{name=projects/*/locations/*/appConnections/*}'
+    _globals['_APPCONNECTIONSSERVICE'].methods_by_name['ResolveAppConnections']._loaded_options = None
+    _globals['_APPCONNECTIONSSERVICE'].methods_by_name['ResolveAppConnections']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02<\x12:/v1/{parent=projects/*/locations/*}/appConnections:resolve'
+    _globals['_LISTAPPCONNECTIONSREQUEST']._serialized_start = 338
+    _globals['_LISTAPPCONNECTIONSREQUEST']._serialized_end = 523
+    _globals['_LISTAPPCONNECTIONSRESPONSE']._serialized_start = 526
+    _globals['_LISTAPPCONNECTIONSRESPONSE']._serialized_end = 683
+    _globals['_GETAPPCONNECTIONREQUEST']._serialized_start = 685
+    _globals['_GETAPPCONNECTIONREQUEST']._serialized_end = 773
+    _globals['_CREATEAPPCONNECTIONREQUEST']._serialized_start = 776
+    _globals['_CREATEAPPCONNECTIONREQUEST']._serialized_end = 1041
+    _globals['_UPDATEAPPCONNECTIONREQUEST']._serialized_start = 1044
+    _globals['_UPDATEAPPCONNECTIONREQUEST']._serialized_end = 1294
+    _globals['_DELETEAPPCONNECTIONREQUEST']._serialized_start = 1297
+    _globals['_DELETEAPPCONNECTIONREQUEST']._serialized_end = 1441
+    _globals['_RESOLVEAPPCONNECTIONSREQUEST']._serialized_start = 1444
+    _globals['_RESOLVEAPPCONNECTIONSREQUEST']._serialized_end = 1662
+    _globals['_RESOLVEAPPCONNECTIONSRESPONSE']._serialized_start = 1665
+    _globals['_RESOLVEAPPCONNECTIONSRESPONSE']._serialized_end = 2000
+    _globals['_RESOLVEAPPCONNECTIONSRESPONSE_APPCONNECTIONDETAILS']._serialized_start = 1872
+    _globals['_RESOLVEAPPCONNECTIONSRESPONSE_APPCONNECTIONDETAILS']._serialized_end = 2000
+    _globals['_APPCONNECTION']._serialized_start = 2003
+    _globals['_APPCONNECTION']._serialized_end = 3308
+    _globals['_APPCONNECTION_APPLICATIONENDPOINT']._serialized_start = 2675
+    _globals['_APPCONNECTION_APPLICATIONENDPOINT']._serialized_end = 2734
+    _globals['_APPCONNECTION_GATEWAY']._serialized_start = 2737
+    _globals['_APPCONNECTION_GATEWAY']._serialized_end = 3000
+    _globals['_APPCONNECTION_GATEWAY_TYPE']._serialized_start = 2950
+    _globals['_APPCONNECTION_GATEWAY_TYPE']._serialized_end = 3000
+    _globals['_APPCONNECTION_LABELSENTRY']._serialized_start = 3002
+    _globals['_APPCONNECTION_LABELSENTRY']._serialized_end = 3047
+    _globals['_APPCONNECTION_TYPE']._serialized_start = 3049
+    _globals['_APPCONNECTION_TYPE']._serialized_end = 3092
+    _globals['_APPCONNECTION_STATE']._serialized_start = 3094
+    _globals['_APPCONNECTION_STATE']._serialized_end = 3189
+    _globals['_APPCONNECTIONOPERATIONMETADATA']._serialized_start = 3311
+    _globals['_APPCONNECTIONOPERATIONMETADATA']._serialized_end = 3580
+    _globals['_APPCONNECTIONSSERVICE']._serialized_start = 3583
+    _globals['_APPCONNECTIONSSERVICE']._serialized_end = 5225

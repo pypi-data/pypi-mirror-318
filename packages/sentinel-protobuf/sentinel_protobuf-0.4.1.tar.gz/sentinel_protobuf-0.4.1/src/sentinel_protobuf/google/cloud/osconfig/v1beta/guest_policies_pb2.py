@@ -1,0 +1,165 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/cloud/osconfig/v1beta/guest_policies.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n1google/cloud/osconfig/v1beta/guest_policies.proto\x12\x1cgoogle.cloud.osconfig.v1beta\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a google/protobuf/field_mask.proto\x1a\x1fgoogle/protobuf/timestamp.proto"\x94\x04\n\x0bGuestPolicy\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x13\n\x0bdescription\x18\x02 \x01(\t\x124\n\x0bcreate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bupdate_time\x18\x04 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12A\n\nassignment\x18\x06 \x01(\x0b2(.google.cloud.osconfig.v1beta.AssignmentB\x03\xe0A\x02\x127\n\x08packages\x18\x07 \x03(\x0b2%.google.cloud.osconfig.v1beta.Package\x12M\n\x14package_repositories\x18\x08 \x03(\x0b2/.google.cloud.osconfig.v1beta.PackageRepository\x12=\n\x07recipes\x18\t \x03(\x0b2,.google.cloud.osconfig.v1beta.SoftwareRecipe\x12\x0c\n\x04etag\x18\n \x01(\t:Y\xeaAV\n#osconfig.googleapis.com/GuestPolicy\x12/projects/{project}/guestPolicies/{guest_policy}"\xb9\x03\n\nAssignment\x12I\n\x0cgroup_labels\x18\x01 \x03(\x0b23.google.cloud.osconfig.v1beta.Assignment.GroupLabel\x12\r\n\x05zones\x18\x02 \x03(\t\x12\x11\n\tinstances\x18\x03 \x03(\t\x12\x1e\n\x16instance_name_prefixes\x18\x04 \x03(\t\x12A\n\x08os_types\x18\x05 \x03(\x0b2/.google.cloud.osconfig.v1beta.Assignment.OsType\x1a\x8c\x01\n\nGroupLabel\x12O\n\x06labels\x18\x01 \x03(\x0b2?.google.cloud.osconfig.v1beta.Assignment.GroupLabel.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x028\x01\x1aL\n\x06OsType\x12\x15\n\ros_short_name\x18\x01 \x01(\t\x12\x12\n\nos_version\x18\x02 \x01(\t\x12\x17\n\x0fos_architecture\x18\x03 \x01(\t"\xf3\x01\n\x07Package\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x02\x12A\n\rdesired_state\x18\x02 \x01(\x0e2*.google.cloud.osconfig.v1beta.DesiredState\x12>\n\x07manager\x18\x03 \x01(\x0e2-.google.cloud.osconfig.v1beta.Package.Manager"R\n\x07Manager\x12\x17\n\x13MANAGER_UNSPECIFIED\x10\x00\x12\x07\n\x03ANY\x10\x01\x12\x07\n\x03APT\x10\x02\x12\x07\n\x03YUM\x10\x03\x12\n\n\x06ZYPPER\x10\x04\x12\x07\n\x03GOO\x10\x05"\xf8\x01\n\rAptRepository\x12M\n\x0carchive_type\x18\x01 \x01(\x0e27.google.cloud.osconfig.v1beta.AptRepository.ArchiveType\x12\x10\n\x03uri\x18\x02 \x01(\tB\x03\xe0A\x02\x12\x19\n\x0cdistribution\x18\x03 \x01(\tB\x03\xe0A\x02\x12\x17\n\ncomponents\x18\x04 \x03(\tB\x03\xe0A\x02\x12\x0f\n\x07gpg_key\x18\x05 \x01(\t"A\n\x0bArchiveType\x12\x1c\n\x18ARCHIVE_TYPE_UNSPECIFIED\x10\x00\x12\x07\n\x03DEB\x10\x01\x12\x0b\n\x07DEB_SRC\x10\x02"_\n\rYumRepository\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x14\n\x0cdisplay_name\x18\x02 \x01(\t\x12\x15\n\x08base_url\x18\x03 \x01(\tB\x03\xe0A\x02\x12\x10\n\x08gpg_keys\x18\x04 \x03(\t"b\n\x10ZypperRepository\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x14\n\x0cdisplay_name\x18\x02 \x01(\t\x12\x15\n\x08base_url\x18\x03 \x01(\tB\x03\xe0A\x02\x12\x10\n\x08gpg_keys\x18\x04 \x03(\t"4\n\rGooRepository\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x10\n\x03url\x18\x02 \x01(\tB\x03\xe0A\x02"\x97\x02\n\x11PackageRepository\x12:\n\x03apt\x18\x01 \x01(\x0b2+.google.cloud.osconfig.v1beta.AptRepositoryH\x00\x12:\n\x03yum\x18\x02 \x01(\x0b2+.google.cloud.osconfig.v1beta.YumRepositoryH\x00\x12@\n\x06zypper\x18\x03 \x01(\x0b2..google.cloud.osconfig.v1beta.ZypperRepositoryH\x00\x12:\n\x03goo\x18\x04 \x01(\x0b2+.google.cloud.osconfig.v1beta.GooRepositoryH\x00B\x0c\n\nrepository"\x86\x11\n\x0eSoftwareRecipe\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x0f\n\x07version\x18\x02 \x01(\t\x12H\n\tartifacts\x18\x03 \x03(\x0b25.google.cloud.osconfig.v1beta.SoftwareRecipe.Artifact\x12H\n\rinstall_steps\x18\x04 \x03(\x0b21.google.cloud.osconfig.v1beta.SoftwareRecipe.Step\x12G\n\x0cupdate_steps\x18\x05 \x03(\x0b21.google.cloud.osconfig.v1beta.SoftwareRecipe.Step\x12A\n\rdesired_state\x18\x06 \x01(\x0e2*.google.cloud.osconfig.v1beta.DesiredState\x1a\xbd\x02\n\x08Artifact\x12\x0f\n\x02id\x18\x01 \x01(\tB\x03\xe0A\x02\x12N\n\x06remote\x18\x02 \x01(\x0b2<.google.cloud.osconfig.v1beta.SoftwareRecipe.Artifact.RemoteH\x00\x12H\n\x03gcs\x18\x03 \x01(\x0b29.google.cloud.osconfig.v1beta.SoftwareRecipe.Artifact.GcsH\x00\x12\x16\n\x0eallow_insecure\x18\x04 \x01(\x08\x1a\'\n\x06Remote\x12\x0b\n\x03uri\x18\x01 \x01(\t\x12\x10\n\x08checksum\x18\x02 \x01(\t\x1a9\n\x03Gcs\x12\x0e\n\x06bucket\x18\x01 \x01(\t\x12\x0e\n\x06object\x18\x02 \x01(\t\x12\x12\n\ngeneration\x18\x03 \x01(\x03B\n\n\x08artifact\x1a\xef\x0b\n\x04Step\x12O\n\tfile_copy\x18\x01 \x01(\x0b2:.google.cloud.osconfig.v1beta.SoftwareRecipe.Step.CopyFileH\x00\x12^\n\x12archive_extraction\x18\x02 \x01(\x0b2@.google.cloud.osconfig.v1beta.SoftwareRecipe.Step.ExtractArchiveH\x00\x12X\n\x10msi_installation\x18\x03 \x01(\x0b2<.google.cloud.osconfig.v1beta.SoftwareRecipe.Step.InstallMsiH\x00\x12Z\n\x11dpkg_installation\x18\x04 \x01(\x0b2=.google.cloud.osconfig.v1beta.SoftwareRecipe.Step.InstallDpkgH\x00\x12X\n\x10rpm_installation\x18\x05 \x01(\x0b2<.google.cloud.osconfig.v1beta.SoftwareRecipe.Step.InstallRpmH\x00\x12O\n\tfile_exec\x18\x06 \x01(\x0b2:.google.cloud.osconfig.v1beta.SoftwareRecipe.Step.ExecFileH\x00\x12Q\n\nscript_run\x18\x07 \x01(\x0b2;.google.cloud.osconfig.v1beta.SoftwareRecipe.Step.RunScriptH\x00\x1af\n\x08CopyFile\x12\x18\n\x0bartifact_id\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x18\n\x0bdestination\x18\x02 \x01(\tB\x03\xe0A\x02\x12\x11\n\toverwrite\x18\x03 \x01(\x08\x12\x13\n\x0bpermissions\x18\x04 \x01(\t\x1a\x95\x02\n\x0eExtractArchive\x12\x18\n\x0bartifact_id\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x13\n\x0bdestination\x18\x02 \x01(\t\x12_\n\x04type\x18\x03 \x01(\x0e2L.google.cloud.osconfig.v1beta.SoftwareRecipe.Step.ExtractArchive.ArchiveTypeB\x03\xe0A\x02"s\n\x0bArchiveType\x12\x1c\n\x18ARCHIVE_TYPE_UNSPECIFIED\x10\x00\x12\x07\n\x03TAR\x10\x01\x12\x0c\n\x08TAR_GZIP\x10\x02\x12\x0c\n\x08TAR_BZIP\x10\x03\x12\x0c\n\x08TAR_LZMA\x10\x04\x12\n\n\x06TAR_XZ\x10\x05\x12\x07\n\x03ZIP\x10\x0b\x1aQ\n\nInstallMsi\x12\x18\n\x0bartifact_id\x18\x01 \x01(\tB\x03\xe0A\x02\x12\r\n\x05flags\x18\x02 \x03(\t\x12\x1a\n\x12allowed_exit_codes\x18\x03 \x03(\x05\x1a\'\n\x0bInstallDpkg\x12\x18\n\x0bartifact_id\x18\x01 \x01(\tB\x03\xe0A\x02\x1a&\n\nInstallRpm\x12\x18\n\x0bartifact_id\x18\x01 \x01(\tB\x03\xe0A\x02\x1ar\n\x08ExecFile\x12\x15\n\x0bartifact_id\x18\x01 \x01(\tH\x00\x12\x14\n\nlocal_path\x18\x02 \x01(\tH\x00\x12\x0c\n\x04args\x18\x03 \x03(\t\x12\x1a\n\x12allowed_exit_codes\x18\x04 \x03(\x05B\x0f\n\rlocation_type\x1a\xe1\x01\n\tRunScript\x12\x13\n\x06script\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x1a\n\x12allowed_exit_codes\x18\x02 \x03(\x05\x12\\\n\x0binterpreter\x18\x03 \x01(\x0e2G.google.cloud.osconfig.v1beta.SoftwareRecipe.Step.RunScript.Interpreter"E\n\x0bInterpreter\x12\x1b\n\x17INTERPRETER_UNSPECIFIED\x10\x00\x12\t\n\x05SHELL\x10\x01\x12\x0e\n\nPOWERSHELL\x10\x03B\x06\n\x04step"\xbb\x01\n\x18CreateGuestPolicyRequest\x12;\n\x06parent\x18\x01 \x01(\tB+\xe0A\x02\xfaA%\x12#osconfig.googleapis.com/GuestPolicy\x12\x1c\n\x0fguest_policy_id\x18\x02 \x01(\tB\x03\xe0A\x02\x12D\n\x0cguest_policy\x18\x03 \x01(\x0b2).google.cloud.osconfig.v1beta.GuestPolicyB\x03\xe0A\x02"R\n\x15GetGuestPolicyRequest\x129\n\x04name\x18\x01 \x01(\tB+\xe0A\x02\xfaA%\n#osconfig.googleapis.com/GuestPolicy"~\n\x18ListGuestPoliciesRequest\x12;\n\x06parent\x18\x01 \x01(\tB+\xe0A\x02\xfaA%\x12#osconfig.googleapis.com/GuestPolicy\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t"w\n\x19ListGuestPoliciesResponse\x12A\n\x0eguest_policies\x18\x01 \x03(\x0b2).google.cloud.osconfig.v1beta.GuestPolicy\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"\x91\x01\n\x18UpdateGuestPolicyRequest\x12D\n\x0cguest_policy\x18\x01 \x01(\x0b2).google.cloud.osconfig.v1beta.GuestPolicyB\x03\xe0A\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMask"U\n\x18DeleteGuestPolicyRequest\x129\n\x04name\x18\x01 \x01(\tB+\xe0A\x02\xfaA%\n#osconfig.googleapis.com/GuestPolicy"~\n!LookupEffectiveGuestPolicyRequest\x12\x15\n\x08instance\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x15\n\ros_short_name\x18\x02 \x01(\t\x12\x12\n\nos_version\x18\x03 \x01(\t\x12\x17\n\x0fos_architecture\x18\x04 \x01(\t"\xfd\x04\n\x14EffectiveGuestPolicy\x12S\n\x08packages\x18\x01 \x03(\x0b2A.google.cloud.osconfig.v1beta.EffectiveGuestPolicy.SourcedPackage\x12i\n\x14package_repositories\x18\x02 \x03(\x0b2K.google.cloud.osconfig.v1beta.EffectiveGuestPolicy.SourcedPackageRepository\x12b\n\x10software_recipes\x18\x03 \x03(\x0b2H.google.cloud.osconfig.v1beta.EffectiveGuestPolicy.SourcedSoftwareRecipe\x1aX\n\x0eSourcedPackage\x12\x0e\n\x06source\x18\x01 \x01(\t\x126\n\x07package\x18\x02 \x01(\x0b2%.google.cloud.osconfig.v1beta.Package\x1aw\n\x18SourcedPackageRepository\x12\x0e\n\x06source\x18\x01 \x01(\t\x12K\n\x12package_repository\x18\x02 \x01(\x0b2/.google.cloud.osconfig.v1beta.PackageRepository\x1an\n\x15SourcedSoftwareRecipe\x12\x0e\n\x06source\x18\x01 \x01(\t\x12E\n\x0fsoftware_recipe\x18\x02 \x01(\x0b2,.google.cloud.osconfig.v1beta.SoftwareRecipe*V\n\x0cDesiredState\x12\x1d\n\x19DESIRED_STATE_UNSPECIFIED\x10\x00\x12\r\n\tINSTALLED\x10\x01\x12\x0b\n\x07UPDATED\x10\x02\x12\x0b\n\x07REMOVED\x10\x03Bo\n com.google.cloud.osconfig.v1betaB\rGuestPoliciesZ<cloud.google.com/go/osconfig/apiv1beta/osconfigpb;osconfigpbb\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.osconfig.v1beta.guest_policies_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n com.google.cloud.osconfig.v1betaB\rGuestPoliciesZ<cloud.google.com/go/osconfig/apiv1beta/osconfigpb;osconfigpb'
+    _globals['_GUESTPOLICY'].fields_by_name['name']._loaded_options = None
+    _globals['_GUESTPOLICY'].fields_by_name['name']._serialized_options = b'\xe0A\x02'
+    _globals['_GUESTPOLICY'].fields_by_name['create_time']._loaded_options = None
+    _globals['_GUESTPOLICY'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_GUESTPOLICY'].fields_by_name['update_time']._loaded_options = None
+    _globals['_GUESTPOLICY'].fields_by_name['update_time']._serialized_options = b'\xe0A\x03'
+    _globals['_GUESTPOLICY'].fields_by_name['assignment']._loaded_options = None
+    _globals['_GUESTPOLICY'].fields_by_name['assignment']._serialized_options = b'\xe0A\x02'
+    _globals['_GUESTPOLICY']._loaded_options = None
+    _globals['_GUESTPOLICY']._serialized_options = b'\xeaAV\n#osconfig.googleapis.com/GuestPolicy\x12/projects/{project}/guestPolicies/{guest_policy}'
+    _globals['_ASSIGNMENT_GROUPLABEL_LABELSENTRY']._loaded_options = None
+    _globals['_ASSIGNMENT_GROUPLABEL_LABELSENTRY']._serialized_options = b'8\x01'
+    _globals['_PACKAGE'].fields_by_name['name']._loaded_options = None
+    _globals['_PACKAGE'].fields_by_name['name']._serialized_options = b'\xe0A\x02'
+    _globals['_APTREPOSITORY'].fields_by_name['uri']._loaded_options = None
+    _globals['_APTREPOSITORY'].fields_by_name['uri']._serialized_options = b'\xe0A\x02'
+    _globals['_APTREPOSITORY'].fields_by_name['distribution']._loaded_options = None
+    _globals['_APTREPOSITORY'].fields_by_name['distribution']._serialized_options = b'\xe0A\x02'
+    _globals['_APTREPOSITORY'].fields_by_name['components']._loaded_options = None
+    _globals['_APTREPOSITORY'].fields_by_name['components']._serialized_options = b'\xe0A\x02'
+    _globals['_YUMREPOSITORY'].fields_by_name['id']._loaded_options = None
+    _globals['_YUMREPOSITORY'].fields_by_name['id']._serialized_options = b'\xe0A\x02'
+    _globals['_YUMREPOSITORY'].fields_by_name['base_url']._loaded_options = None
+    _globals['_YUMREPOSITORY'].fields_by_name['base_url']._serialized_options = b'\xe0A\x02'
+    _globals['_ZYPPERREPOSITORY'].fields_by_name['id']._loaded_options = None
+    _globals['_ZYPPERREPOSITORY'].fields_by_name['id']._serialized_options = b'\xe0A\x02'
+    _globals['_ZYPPERREPOSITORY'].fields_by_name['base_url']._loaded_options = None
+    _globals['_ZYPPERREPOSITORY'].fields_by_name['base_url']._serialized_options = b'\xe0A\x02'
+    _globals['_GOOREPOSITORY'].fields_by_name['name']._loaded_options = None
+    _globals['_GOOREPOSITORY'].fields_by_name['name']._serialized_options = b'\xe0A\x02'
+    _globals['_GOOREPOSITORY'].fields_by_name['url']._loaded_options = None
+    _globals['_GOOREPOSITORY'].fields_by_name['url']._serialized_options = b'\xe0A\x02'
+    _globals['_SOFTWARERECIPE_ARTIFACT'].fields_by_name['id']._loaded_options = None
+    _globals['_SOFTWARERECIPE_ARTIFACT'].fields_by_name['id']._serialized_options = b'\xe0A\x02'
+    _globals['_SOFTWARERECIPE_STEP_COPYFILE'].fields_by_name['artifact_id']._loaded_options = None
+    _globals['_SOFTWARERECIPE_STEP_COPYFILE'].fields_by_name['artifact_id']._serialized_options = b'\xe0A\x02'
+    _globals['_SOFTWARERECIPE_STEP_COPYFILE'].fields_by_name['destination']._loaded_options = None
+    _globals['_SOFTWARERECIPE_STEP_COPYFILE'].fields_by_name['destination']._serialized_options = b'\xe0A\x02'
+    _globals['_SOFTWARERECIPE_STEP_EXTRACTARCHIVE'].fields_by_name['artifact_id']._loaded_options = None
+    _globals['_SOFTWARERECIPE_STEP_EXTRACTARCHIVE'].fields_by_name['artifact_id']._serialized_options = b'\xe0A\x02'
+    _globals['_SOFTWARERECIPE_STEP_EXTRACTARCHIVE'].fields_by_name['type']._loaded_options = None
+    _globals['_SOFTWARERECIPE_STEP_EXTRACTARCHIVE'].fields_by_name['type']._serialized_options = b'\xe0A\x02'
+    _globals['_SOFTWARERECIPE_STEP_INSTALLMSI'].fields_by_name['artifact_id']._loaded_options = None
+    _globals['_SOFTWARERECIPE_STEP_INSTALLMSI'].fields_by_name['artifact_id']._serialized_options = b'\xe0A\x02'
+    _globals['_SOFTWARERECIPE_STEP_INSTALLDPKG'].fields_by_name['artifact_id']._loaded_options = None
+    _globals['_SOFTWARERECIPE_STEP_INSTALLDPKG'].fields_by_name['artifact_id']._serialized_options = b'\xe0A\x02'
+    _globals['_SOFTWARERECIPE_STEP_INSTALLRPM'].fields_by_name['artifact_id']._loaded_options = None
+    _globals['_SOFTWARERECIPE_STEP_INSTALLRPM'].fields_by_name['artifact_id']._serialized_options = b'\xe0A\x02'
+    _globals['_SOFTWARERECIPE_STEP_RUNSCRIPT'].fields_by_name['script']._loaded_options = None
+    _globals['_SOFTWARERECIPE_STEP_RUNSCRIPT'].fields_by_name['script']._serialized_options = b'\xe0A\x02'
+    _globals['_SOFTWARERECIPE'].fields_by_name['name']._loaded_options = None
+    _globals['_SOFTWARERECIPE'].fields_by_name['name']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEGUESTPOLICYREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEGUESTPOLICYREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA%\x12#osconfig.googleapis.com/GuestPolicy'
+    _globals['_CREATEGUESTPOLICYREQUEST'].fields_by_name['guest_policy_id']._loaded_options = None
+    _globals['_CREATEGUESTPOLICYREQUEST'].fields_by_name['guest_policy_id']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEGUESTPOLICYREQUEST'].fields_by_name['guest_policy']._loaded_options = None
+    _globals['_CREATEGUESTPOLICYREQUEST'].fields_by_name['guest_policy']._serialized_options = b'\xe0A\x02'
+    _globals['_GETGUESTPOLICYREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETGUESTPOLICYREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA%\n#osconfig.googleapis.com/GuestPolicy'
+    _globals['_LISTGUESTPOLICIESREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTGUESTPOLICIESREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA%\x12#osconfig.googleapis.com/GuestPolicy'
+    _globals['_UPDATEGUESTPOLICYREQUEST'].fields_by_name['guest_policy']._loaded_options = None
+    _globals['_UPDATEGUESTPOLICYREQUEST'].fields_by_name['guest_policy']._serialized_options = b'\xe0A\x02'
+    _globals['_DELETEGUESTPOLICYREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEGUESTPOLICYREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA%\n#osconfig.googleapis.com/GuestPolicy'
+    _globals['_LOOKUPEFFECTIVEGUESTPOLICYREQUEST'].fields_by_name['instance']._loaded_options = None
+    _globals['_LOOKUPEFFECTIVEGUESTPOLICYREQUEST'].fields_by_name['instance']._serialized_options = b'\xe0A\x02'
+    _globals['_DESIREDSTATE']._serialized_start = 5930
+    _globals['_DESIREDSTATE']._serialized_end = 6016
+    _globals['_GUESTPOLICY']._serialized_start = 211
+    _globals['_GUESTPOLICY']._serialized_end = 743
+    _globals['_ASSIGNMENT']._serialized_start = 746
+    _globals['_ASSIGNMENT']._serialized_end = 1187
+    _globals['_ASSIGNMENT_GROUPLABEL']._serialized_start = 969
+    _globals['_ASSIGNMENT_GROUPLABEL']._serialized_end = 1109
+    _globals['_ASSIGNMENT_GROUPLABEL_LABELSENTRY']._serialized_start = 1064
+    _globals['_ASSIGNMENT_GROUPLABEL_LABELSENTRY']._serialized_end = 1109
+    _globals['_ASSIGNMENT_OSTYPE']._serialized_start = 1111
+    _globals['_ASSIGNMENT_OSTYPE']._serialized_end = 1187
+    _globals['_PACKAGE']._serialized_start = 1190
+    _globals['_PACKAGE']._serialized_end = 1433
+    _globals['_PACKAGE_MANAGER']._serialized_start = 1351
+    _globals['_PACKAGE_MANAGER']._serialized_end = 1433
+    _globals['_APTREPOSITORY']._serialized_start = 1436
+    _globals['_APTREPOSITORY']._serialized_end = 1684
+    _globals['_APTREPOSITORY_ARCHIVETYPE']._serialized_start = 1619
+    _globals['_APTREPOSITORY_ARCHIVETYPE']._serialized_end = 1684
+    _globals['_YUMREPOSITORY']._serialized_start = 1686
+    _globals['_YUMREPOSITORY']._serialized_end = 1781
+    _globals['_ZYPPERREPOSITORY']._serialized_start = 1783
+    _globals['_ZYPPERREPOSITORY']._serialized_end = 1881
+    _globals['_GOOREPOSITORY']._serialized_start = 1883
+    _globals['_GOOREPOSITORY']._serialized_end = 1935
+    _globals['_PACKAGEREPOSITORY']._serialized_start = 1938
+    _globals['_PACKAGEREPOSITORY']._serialized_end = 2217
+    _globals['_SOFTWARERECIPE']._serialized_start = 2220
+    _globals['_SOFTWARERECIPE']._serialized_end = 4402
+    _globals['_SOFTWARERECIPE_ARTIFACT']._serialized_start = 2563
+    _globals['_SOFTWARERECIPE_ARTIFACT']._serialized_end = 2880
+    _globals['_SOFTWARERECIPE_ARTIFACT_REMOTE']._serialized_start = 2770
+    _globals['_SOFTWARERECIPE_ARTIFACT_REMOTE']._serialized_end = 2809
+    _globals['_SOFTWARERECIPE_ARTIFACT_GCS']._serialized_start = 2811
+    _globals['_SOFTWARERECIPE_ARTIFACT_GCS']._serialized_end = 2868
+    _globals['_SOFTWARERECIPE_STEP']._serialized_start = 2883
+    _globals['_SOFTWARERECIPE_STEP']._serialized_end = 4402
+    _globals['_SOFTWARERECIPE_STEP_COPYFILE']._serialized_start = 3504
+    _globals['_SOFTWARERECIPE_STEP_COPYFILE']._serialized_end = 3606
+    _globals['_SOFTWARERECIPE_STEP_EXTRACTARCHIVE']._serialized_start = 3609
+    _globals['_SOFTWARERECIPE_STEP_EXTRACTARCHIVE']._serialized_end = 3886
+    _globals['_SOFTWARERECIPE_STEP_EXTRACTARCHIVE_ARCHIVETYPE']._serialized_start = 3771
+    _globals['_SOFTWARERECIPE_STEP_EXTRACTARCHIVE_ARCHIVETYPE']._serialized_end = 3886
+    _globals['_SOFTWARERECIPE_STEP_INSTALLMSI']._serialized_start = 3888
+    _globals['_SOFTWARERECIPE_STEP_INSTALLMSI']._serialized_end = 3969
+    _globals['_SOFTWARERECIPE_STEP_INSTALLDPKG']._serialized_start = 3971
+    _globals['_SOFTWARERECIPE_STEP_INSTALLDPKG']._serialized_end = 4010
+    _globals['_SOFTWARERECIPE_STEP_INSTALLRPM']._serialized_start = 4012
+    _globals['_SOFTWARERECIPE_STEP_INSTALLRPM']._serialized_end = 4050
+    _globals['_SOFTWARERECIPE_STEP_EXECFILE']._serialized_start = 4052
+    _globals['_SOFTWARERECIPE_STEP_EXECFILE']._serialized_end = 4166
+    _globals['_SOFTWARERECIPE_STEP_RUNSCRIPT']._serialized_start = 4169
+    _globals['_SOFTWARERECIPE_STEP_RUNSCRIPT']._serialized_end = 4394
+    _globals['_SOFTWARERECIPE_STEP_RUNSCRIPT_INTERPRETER']._serialized_start = 4325
+    _globals['_SOFTWARERECIPE_STEP_RUNSCRIPT_INTERPRETER']._serialized_end = 4394
+    _globals['_CREATEGUESTPOLICYREQUEST']._serialized_start = 4405
+    _globals['_CREATEGUESTPOLICYREQUEST']._serialized_end = 4592
+    _globals['_GETGUESTPOLICYREQUEST']._serialized_start = 4594
+    _globals['_GETGUESTPOLICYREQUEST']._serialized_end = 4676
+    _globals['_LISTGUESTPOLICIESREQUEST']._serialized_start = 4678
+    _globals['_LISTGUESTPOLICIESREQUEST']._serialized_end = 4804
+    _globals['_LISTGUESTPOLICIESRESPONSE']._serialized_start = 4806
+    _globals['_LISTGUESTPOLICIESRESPONSE']._serialized_end = 4925
+    _globals['_UPDATEGUESTPOLICYREQUEST']._serialized_start = 4928
+    _globals['_UPDATEGUESTPOLICYREQUEST']._serialized_end = 5073
+    _globals['_DELETEGUESTPOLICYREQUEST']._serialized_start = 5075
+    _globals['_DELETEGUESTPOLICYREQUEST']._serialized_end = 5160
+    _globals['_LOOKUPEFFECTIVEGUESTPOLICYREQUEST']._serialized_start = 5162
+    _globals['_LOOKUPEFFECTIVEGUESTPOLICYREQUEST']._serialized_end = 5288
+    _globals['_EFFECTIVEGUESTPOLICY']._serialized_start = 5291
+    _globals['_EFFECTIVEGUESTPOLICY']._serialized_end = 5928
+    _globals['_EFFECTIVEGUESTPOLICY_SOURCEDPACKAGE']._serialized_start = 5607
+    _globals['_EFFECTIVEGUESTPOLICY_SOURCEDPACKAGE']._serialized_end = 5695
+    _globals['_EFFECTIVEGUESTPOLICY_SOURCEDPACKAGEREPOSITORY']._serialized_start = 5697
+    _globals['_EFFECTIVEGUESTPOLICY_SOURCEDPACKAGEREPOSITORY']._serialized_end = 5816
+    _globals['_EFFECTIVEGUESTPOLICY_SOURCEDSOFTWARERECIPE']._serialized_start = 5818
+    _globals['_EFFECTIVEGUESTPOLICY_SOURCEDSOFTWARERECIPE']._serialized_end = 5928

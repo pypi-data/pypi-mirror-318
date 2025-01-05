@@ -1,0 +1,63 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/apps/drive/labels/v2/label_service.proto')
+_sym_db = _symbol_database.Default()
+from ......google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from ......google.api import client_pb2 as google_dot_api_dot_client__pb2
+from ......google.apps.drive.labels.v2 import label_pb2 as google_dot_apps_dot_drive_dot_labels_dot_v2_dot_label__pb2
+from ......google.apps.drive.labels.v2 import label_limits_pb2 as google_dot_apps_dot_drive_dot_labels_dot_v2_dot_label__limits__pb2
+from ......google.apps.drive.labels.v2 import label_permission_pb2 as google_dot_apps_dot_drive_dot_labels_dot_v2_dot_label__permission__pb2
+from ......google.apps.drive.labels.v2 import requests_pb2 as google_dot_apps_dot_drive_dot_labels_dot_v2_dot_requests__pb2
+from ......google.apps.drive.labels.v2 import user_capabilities_pb2 as google_dot_apps_dot_drive_dot_labels_dot_v2_dot_user__capabilities__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n/google/apps/drive/labels/v2/label_service.proto\x12\x1bgoogle.apps.drive.labels.v2\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\'google/apps/drive/labels/v2/label.proto\x1a.google/apps/drive/labels/v2/label_limits.proto\x1a2google/apps/drive/labels/v2/label_permission.proto\x1a*google/apps/drive/labels/v2/requests.proto\x1a3google/apps/drive/labels/v2/user_capabilities.proto\x1a\x1bgoogle/protobuf/empty.proto2\xce\x1c\n\x0cLabelService\x12\xad\x01\n\x13GetUserCapabilities\x127.google.apps.drive.labels.v2.GetUserCapabilitiesRequest\x1a-.google.apps.drive.labels.v2.UserCapabilities".\xdaA\x04name\x82\xd3\xe4\x93\x02!\x12\x1f/v2/{name=users/*/capabilities}\x12\x81\x01\n\nListLabels\x12..google.apps.drive.labels.v2.ListLabelsRequest\x1a/.google.apps.drive.labels.v2.ListLabelsResponse"\x12\x82\xd3\xe4\x93\x02\x0c\x12\n/v2/labels\x12\x80\x01\n\x08GetLabel\x12,.google.apps.drive.labels.v2.GetLabelRequest\x1a".google.apps.drive.labels.v2.Label""\xdaA\x04name\x82\xd3\xe4\x93\x02\x15\x12\x13/v2/{name=labels/*}\x12\x88\x01\n\x0eGetLabelLimits\x122.google.apps.drive.labels.v2.GetLabelLimitsRequest\x1a(.google.apps.drive.labels.v2.LabelLimits"\x18\x82\xd3\xe4\x93\x02\x12\x12\x10/v2/limits/label\x12\x85\x01\n\x0bCreateLabel\x12/.google.apps.drive.labels.v2.CreateLabelRequest\x1a".google.apps.drive.labels.v2.Label"!\xdaA\x05label\x82\xd3\xe4\x93\x02\x13"\n/v2/labels:\x05label\x12\xac\x01\n\x10DeltaUpdateLabel\x124.google.apps.drive.labels.v2.DeltaUpdateLabelRequest\x1a5.google.apps.drive.labels.v2.DeltaUpdateLabelResponse"+\xdaA\x04name\x82\xd3\xe4\x93\x02\x1e"\x19/v2/{name=labels/*}:delta:\x01*\x12\xad\x01\n\x13UpdateLabelCopyMode\x127.google.apps.drive.labels.v2.UpdateLabelCopyModeRequest\x1a".google.apps.drive.labels.v2.Label"9\xdaA\x04name\x82\xd3\xe4\x93\x02,"\'/v2/{name=labels/*}:updateLabelCopyMode:\x01*\x12\x93\x01\n\x0cPublishLabel\x120.google.apps.drive.labels.v2.PublishLabelRequest\x1a".google.apps.drive.labels.v2.Label"-\xdaA\x04name\x82\xd3\xe4\x93\x02 "\x1b/v2/{name=labels/*}:publish:\x01*\x12\x93\x01\n\x0cDisableLabel\x120.google.apps.drive.labels.v2.DisableLabelRequest\x1a".google.apps.drive.labels.v2.Label"-\xdaA\x04name\x82\xd3\xe4\x93\x02 "\x1b/v2/{name=labels/*}:disable:\x01*\x12\x90\x01\n\x0bEnableLabel\x12/.google.apps.drive.labels.v2.EnableLabelRequest\x1a".google.apps.drive.labels.v2.Label",\xdaA\x04name\x82\xd3\xe4\x93\x02\x1f"\x1a/v2/{name=labels/*}:enable:\x01*\x12z\n\x0bDeleteLabel\x12/.google.apps.drive.labels.v2.DeleteLabelRequest\x1a\x16.google.protobuf.Empty""\xdaA\x04name\x82\xd3\xe4\x93\x02\x15*\x13/v2/{name=labels/*}\x12\xf0\x01\n\x14ListLabelPermissions\x128.google.apps.drive.labels.v2.ListLabelPermissionsRequest\x1a9.google.apps.drive.labels.v2.ListLabelPermissionsResponse"c\xdaA\x06parent\x82\xd3\xe4\x93\x02T\x12!/v2/{parent=labels/*}/permissionsZ/\x12-/v2/{parent=labels/*/revisions/*}/permissions\x12\x9b\x02\n\x15CreateLabelPermission\x129.google.apps.drive.labels.v2.CreateLabelPermissionRequest\x1a,.google.apps.drive.labels.v2.LabelPermission"\x98\x01\xdaA\x17parent,label_permission\x82\xd3\xe4\x93\x02x"!/v2/{parent=labels/*}/permissions:\x10label_permissionZA"-/v2/{parent=labels/*/revisions/*}/permissions:\x10label_permission\x12\x8a\x02\n\x15UpdateLabelPermission\x129.google.apps.drive.labels.v2.UpdateLabelPermissionRequest\x1a,.google.apps.drive.labels.v2.LabelPermission"\x87\x01\xdaA\x06parent\x82\xd3\xe4\x93\x02x2!/v2/{parent=labels/*}/permissions:\x10label_permissionZA2-/v2/{parent=labels/*/revisions/*}/permissions:\x10label_permission\x12\xcd\x01\n\x15DeleteLabelPermission\x129.google.apps.drive.labels.v2.DeleteLabelPermissionRequest\x1a\x16.google.protobuf.Empty"a\xdaA\x04name\x82\xd3\xe4\x93\x02T*!/v2/{name=labels/*/permissions/*}Z/*-/v2/{name=labels/*/revisions/*/permissions/*}\x12\xa4\x02\n\x1bBatchUpdateLabelPermissions\x12?.google.apps.drive.labels.v2.BatchUpdateLabelPermissionsRequest\x1a@.google.apps.drive.labels.v2.BatchUpdateLabelPermissionsResponse"\x81\x01\xdaA\x06parent\x82\xd3\xe4\x93\x02r"-/v2/{parent=labels/*}/permissions:batchUpdate:\x01*Z>"9/v2/{parent=labels/*/revisions/*}/permissions:batchUpdate:\x01*\x12\xfa\x01\n\x1bBatchDeleteLabelPermissions\x12?.google.apps.drive.labels.v2.BatchDeleteLabelPermissionsRequest\x1a\x16.google.protobuf.Empty"\x81\x01\xdaA\x06parent\x82\xd3\xe4\x93\x02r"-/v2/{parent=labels/*}/permissions:batchDelete:\x01*Z>"9/v2/{parent=labels/*/revisions/*}/permissions:batchDelete:\x01*\x12\xd2\x01\n\x0eListLabelLocks\x122.google.apps.drive.labels.v2.ListLabelLocksRequest\x1a3.google.apps.drive.labels.v2.ListLabelLocksResponse"W\xdaA\x06parent\x82\xd3\xe4\x93\x02H\x12\x1b/v2/{parent=labels/*}/locksZ)\x12\'/v2/{parent=labels/*/revisions/*}/locks\x1a\xf2\x01\xcaA\x1adrivelabels.googleapis.com\xd2A\xd1\x01https://www.googleapis.com/auth/drive.admin.labels,https://www.googleapis.com/auth/drive.admin.labels.readonly,https://www.googleapis.com/auth/drive.labels,https://www.googleapis.com/auth/drive.labels.readonlyB\x80\x01\n\x1fcom.google.apps.drive.labels.v2B\x11LabelServiceProtoP\x01ZAgoogle.golang.org/genproto/googleapis/apps/drive/labels/v2;labels\xa2\x02\x04DLBLb\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.apps.drive.labels.v2.label_service_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n\x1fcom.google.apps.drive.labels.v2B\x11LabelServiceProtoP\x01ZAgoogle.golang.org/genproto/googleapis/apps/drive/labels/v2;labels\xa2\x02\x04DLBL'
+    _globals['_LABELSERVICE']._loaded_options = None
+    _globals['_LABELSERVICE']._serialized_options = b'\xcaA\x1adrivelabels.googleapis.com\xd2A\xd1\x01https://www.googleapis.com/auth/drive.admin.labels,https://www.googleapis.com/auth/drive.admin.labels.readonly,https://www.googleapis.com/auth/drive.labels,https://www.googleapis.com/auth/drive.labels.readonly'
+    _globals['_LABELSERVICE'].methods_by_name['GetUserCapabilities']._loaded_options = None
+    _globals['_LABELSERVICE'].methods_by_name['GetUserCapabilities']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02!\x12\x1f/v2/{name=users/*/capabilities}'
+    _globals['_LABELSERVICE'].methods_by_name['ListLabels']._loaded_options = None
+    _globals['_LABELSERVICE'].methods_by_name['ListLabels']._serialized_options = b'\x82\xd3\xe4\x93\x02\x0c\x12\n/v2/labels'
+    _globals['_LABELSERVICE'].methods_by_name['GetLabel']._loaded_options = None
+    _globals['_LABELSERVICE'].methods_by_name['GetLabel']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02\x15\x12\x13/v2/{name=labels/*}'
+    _globals['_LABELSERVICE'].methods_by_name['GetLabelLimits']._loaded_options = None
+    _globals['_LABELSERVICE'].methods_by_name['GetLabelLimits']._serialized_options = b'\x82\xd3\xe4\x93\x02\x12\x12\x10/v2/limits/label'
+    _globals['_LABELSERVICE'].methods_by_name['CreateLabel']._loaded_options = None
+    _globals['_LABELSERVICE'].methods_by_name['CreateLabel']._serialized_options = b'\xdaA\x05label\x82\xd3\xe4\x93\x02\x13"\n/v2/labels:\x05label'
+    _globals['_LABELSERVICE'].methods_by_name['DeltaUpdateLabel']._loaded_options = None
+    _globals['_LABELSERVICE'].methods_by_name['DeltaUpdateLabel']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02\x1e"\x19/v2/{name=labels/*}:delta:\x01*'
+    _globals['_LABELSERVICE'].methods_by_name['UpdateLabelCopyMode']._loaded_options = None
+    _globals['_LABELSERVICE'].methods_by_name['UpdateLabelCopyMode']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02,"\'/v2/{name=labels/*}:updateLabelCopyMode:\x01*'
+    _globals['_LABELSERVICE'].methods_by_name['PublishLabel']._loaded_options = None
+    _globals['_LABELSERVICE'].methods_by_name['PublishLabel']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02 "\x1b/v2/{name=labels/*}:publish:\x01*'
+    _globals['_LABELSERVICE'].methods_by_name['DisableLabel']._loaded_options = None
+    _globals['_LABELSERVICE'].methods_by_name['DisableLabel']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02 "\x1b/v2/{name=labels/*}:disable:\x01*'
+    _globals['_LABELSERVICE'].methods_by_name['EnableLabel']._loaded_options = None
+    _globals['_LABELSERVICE'].methods_by_name['EnableLabel']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02\x1f"\x1a/v2/{name=labels/*}:enable:\x01*'
+    _globals['_LABELSERVICE'].methods_by_name['DeleteLabel']._loaded_options = None
+    _globals['_LABELSERVICE'].methods_by_name['DeleteLabel']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02\x15*\x13/v2/{name=labels/*}'
+    _globals['_LABELSERVICE'].methods_by_name['ListLabelPermissions']._loaded_options = None
+    _globals['_LABELSERVICE'].methods_by_name['ListLabelPermissions']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02T\x12!/v2/{parent=labels/*}/permissionsZ/\x12-/v2/{parent=labels/*/revisions/*}/permissions'
+    _globals['_LABELSERVICE'].methods_by_name['CreateLabelPermission']._loaded_options = None
+    _globals['_LABELSERVICE'].methods_by_name['CreateLabelPermission']._serialized_options = b'\xdaA\x17parent,label_permission\x82\xd3\xe4\x93\x02x"!/v2/{parent=labels/*}/permissions:\x10label_permissionZA"-/v2/{parent=labels/*/revisions/*}/permissions:\x10label_permission'
+    _globals['_LABELSERVICE'].methods_by_name['UpdateLabelPermission']._loaded_options = None
+    _globals['_LABELSERVICE'].methods_by_name['UpdateLabelPermission']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02x2!/v2/{parent=labels/*}/permissions:\x10label_permissionZA2-/v2/{parent=labels/*/revisions/*}/permissions:\x10label_permission'
+    _globals['_LABELSERVICE'].methods_by_name['DeleteLabelPermission']._loaded_options = None
+    _globals['_LABELSERVICE'].methods_by_name['DeleteLabelPermission']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02T*!/v2/{name=labels/*/permissions/*}Z/*-/v2/{name=labels/*/revisions/*/permissions/*}'
+    _globals['_LABELSERVICE'].methods_by_name['BatchUpdateLabelPermissions']._loaded_options = None
+    _globals['_LABELSERVICE'].methods_by_name['BatchUpdateLabelPermissions']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02r"-/v2/{parent=labels/*}/permissions:batchUpdate:\x01*Z>"9/v2/{parent=labels/*/revisions/*}/permissions:batchUpdate:\x01*'
+    _globals['_LABELSERVICE'].methods_by_name['BatchDeleteLabelPermissions']._loaded_options = None
+    _globals['_LABELSERVICE'].methods_by_name['BatchDeleteLabelPermissions']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02r"-/v2/{parent=labels/*}/permissions:batchDelete:\x01*Z>"9/v2/{parent=labels/*/revisions/*}/permissions:batchDelete:\x01*'
+    _globals['_LABELSERVICE'].methods_by_name['ListLabelLocks']._loaded_options = None
+    _globals['_LABELSERVICE'].methods_by_name['ListLabelLocks']._serialized_options = b"\xdaA\x06parent\x82\xd3\xe4\x93\x02H\x12\x1b/v2/{parent=labels/*}/locksZ)\x12'/v2/{parent=labels/*/revisions/*}/locks"
+    _globals['_LABELSERVICE']._serialized_start = 403
+    _globals['_LABELSERVICE']._serialized_end = 4065

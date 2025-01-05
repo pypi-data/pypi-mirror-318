@@ -1,0 +1,196 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/cloud/videointelligence/v1p3beta1/video_intelligence.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from .....google.api import client_pb2 as google_dot_api_dot_client__pb2
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.longrunning import operations_pb2 as google_dot_longrunning_dot_operations__pb2
+from google.protobuf import duration_pb2 as google_dot_protobuf_dot_duration__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+from .....google.rpc import status_pb2 as google_dot_rpc_dot_status__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nAgoogle/cloud/videointelligence/v1p3beta1/video_intelligence.proto\x12(google.cloud.videointelligence.v1p3beta1\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a#google/longrunning/operations.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x17google/rpc/status.proto"\x8c\x02\n\x14AnnotateVideoRequest\x12\x11\n\tinput_uri\x18\x01 \x01(\t\x12\x15\n\rinput_content\x18\x06 \x01(\x0c\x12H\n\x08features\x18\x02 \x03(\x0e21.google.cloud.videointelligence.v1p3beta1.FeatureB\x03\xe0A\x02\x12M\n\rvideo_context\x18\x03 \x01(\x0b26.google.cloud.videointelligence.v1p3beta1.VideoContext\x12\x17\n\noutput_uri\x18\x04 \x01(\tB\x03\xe0A\x01\x12\x18\n\x0blocation_id\x18\x05 \x01(\tB\x03\xe0A\x01"\x80\x07\n\x0cVideoContext\x12H\n\x08segments\x18\x01 \x03(\x0b26.google.cloud.videointelligence.v1p3beta1.VideoSegment\x12^\n\x16label_detection_config\x18\x02 \x01(\x0b2>.google.cloud.videointelligence.v1p3beta1.LabelDetectionConfig\x12i\n\x1cshot_change_detection_config\x18\x03 \x01(\x0b2C.google.cloud.videointelligence.v1p3beta1.ShotChangeDetectionConfig\x12s\n!explicit_content_detection_config\x18\x04 \x01(\x0b2H.google.cloud.videointelligence.v1p3beta1.ExplicitContentDetectionConfig\x12\\\n\x15face_detection_config\x18\x05 \x01(\x0b2=.google.cloud.videointelligence.v1p3beta1.FaceDetectionConfig\x12h\n\x1bspeech_transcription_config\x18\x06 \x01(\x0b2C.google.cloud.videointelligence.v1p3beta1.SpeechTranscriptionConfig\x12\\\n\x15text_detection_config\x18\x08 \x01(\x0b2=.google.cloud.videointelligence.v1p3beta1.TextDetectionConfig\x12`\n\x17person_detection_config\x18\x0b \x01(\x0b2?.google.cloud.videointelligence.v1p3beta1.PersonDetectionConfig\x12^\n\x16object_tracking_config\x18\r \x01(\x0b2>.google.cloud.videointelligence.v1p3beta1.ObjectTrackingConfig"\xe4\x01\n\x14LabelDetectionConfig\x12Z\n\x14label_detection_mode\x18\x01 \x01(\x0e2<.google.cloud.videointelligence.v1p3beta1.LabelDetectionMode\x12\x19\n\x11stationary_camera\x18\x02 \x01(\x08\x12\r\n\x05model\x18\x03 \x01(\t\x12"\n\x1aframe_confidence_threshold\x18\x04 \x01(\x02\x12"\n\x1avideo_confidence_threshold\x18\x05 \x01(\x02"*\n\x19ShotChangeDetectionConfig\x12\r\n\x05model\x18\x01 \x01(\t"%\n\x14ObjectTrackingConfig\x12\r\n\x05model\x18\x01 \x01(\t"/\n\x1eExplicitContentDetectionConfig\x12\r\n\x05model\x18\x01 \x01(\t"`\n\x13FaceDetectionConfig\x12\r\n\x05model\x18\x01 \x01(\t\x12\x1e\n\x16include_bounding_boxes\x18\x02 \x01(\x08\x12\x1a\n\x12include_attributes\x18\x05 \x01(\x08"s\n\x15PersonDetectionConfig\x12\x1e\n\x16include_bounding_boxes\x18\x01 \x01(\x08\x12\x1e\n\x16include_pose_landmarks\x18\x02 \x01(\x08\x12\x1a\n\x12include_attributes\x18\x03 \x01(\x08"<\n\x13TextDetectionConfig\x12\x16\n\x0elanguage_hints\x18\x01 \x03(\t\x12\r\n\x05model\x18\x02 \x01(\t"x\n\x0cVideoSegment\x124\n\x11start_time_offset\x18\x01 \x01(\x0b2\x19.google.protobuf.Duration\x122\n\x0fend_time_offset\x18\x02 \x01(\x0b2\x19.google.protobuf.Duration"k\n\x0cLabelSegment\x12G\n\x07segment\x18\x01 \x01(\x0b26.google.cloud.videointelligence.v1p3beta1.VideoSegment\x12\x12\n\nconfidence\x18\x02 \x01(\x02"P\n\nLabelFrame\x12.\n\x0btime_offset\x18\x01 \x01(\x0b2\x19.google.protobuf.Duration\x12\x12\n\nconfidence\x18\x02 \x01(\x02"G\n\x06Entity\x12\x11\n\tentity_id\x18\x01 \x01(\t\x12\x13\n\x0bdescription\x18\x02 \x01(\t\x12\x15\n\rlanguage_code\x18\x03 \x01(\t"\xb0\x02\n\x0fLabelAnnotation\x12@\n\x06entity\x18\x01 \x01(\x0b20.google.cloud.videointelligence.v1p3beta1.Entity\x12K\n\x11category_entities\x18\x02 \x03(\x0b20.google.cloud.videointelligence.v1p3beta1.Entity\x12H\n\x08segments\x18\x03 \x03(\x0b26.google.cloud.videointelligence.v1p3beta1.LabelSegment\x12D\n\x06frames\x18\x04 \x03(\x0b24.google.cloud.videointelligence.v1p3beta1.LabelFrame"\x9c\x01\n\x14ExplicitContentFrame\x12.\n\x0btime_offset\x18\x01 \x01(\x0b2\x19.google.protobuf.Duration\x12T\n\x16pornography_likelihood\x18\x02 \x01(\x0e24.google.cloud.videointelligence.v1p3beta1.Likelihood"k\n\x19ExplicitContentAnnotation\x12N\n\x06frames\x18\x01 \x03(\x0b2>.google.cloud.videointelligence.v1p3beta1.ExplicitContentFrame"Q\n\x15NormalizedBoundingBox\x12\x0c\n\x04left\x18\x01 \x01(\x02\x12\x0b\n\x03top\x18\x02 \x01(\x02\x12\r\n\x05right\x18\x03 \x01(\x02\x12\x0e\n\x06bottom\x18\x04 \x01(\x02"\xcf\x02\n\x11TimestampedObject\x12`\n\x17normalized_bounding_box\x18\x01 \x01(\x0b2?.google.cloud.videointelligence.v1p3beta1.NormalizedBoundingBox\x12.\n\x0btime_offset\x18\x02 \x01(\x0b2\x19.google.protobuf.Duration\x12T\n\nattributes\x18\x03 \x03(\x0b2;.google.cloud.videointelligence.v1p3beta1.DetectedAttributeB\x03\xe0A\x01\x12R\n\tlandmarks\x18\x04 \x03(\x0b2:.google.cloud.videointelligence.v1p3beta1.DetectedLandmarkB\x03\xe0A\x01"\x99\x02\n\x05Track\x12G\n\x07segment\x18\x01 \x01(\x0b26.google.cloud.videointelligence.v1p3beta1.VideoSegment\x12X\n\x13timestamped_objects\x18\x02 \x03(\x0b2;.google.cloud.videointelligence.v1p3beta1.TimestampedObject\x12T\n\nattributes\x18\x03 \x03(\x0b2;.google.cloud.videointelligence.v1p3beta1.DetectedAttributeB\x03\xe0A\x01\x12\x17\n\nconfidence\x18\x04 \x01(\x02B\x03\xe0A\x01"D\n\x11DetectedAttribute\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x12\n\nconfidence\x18\x02 \x01(\x02\x12\r\n\x05value\x18\x03 \x01(\t"D\n\tCelebrity\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0cdisplay_name\x18\x02 \x01(\t\x12\x13\n\x0bdescription\x18\x03 \x01(\t"\xab\x02\n\x0eCelebrityTrack\x12a\n\x0bcelebrities\x18\x01 \x03(\x0b2L.google.cloud.videointelligence.v1p3beta1.CelebrityTrack.RecognizedCelebrity\x12C\n\nface_track\x18\x03 \x01(\x0b2/.google.cloud.videointelligence.v1p3beta1.Track\x1aq\n\x13RecognizedCelebrity\x12F\n\tcelebrity\x18\x01 \x01(\x0b23.google.cloud.videointelligence.v1p3beta1.Celebrity\x12\x12\n\nconfidence\x18\x02 \x01(\x02"t\n\x1eCelebrityRecognitionAnnotation\x12R\n\x10celebrity_tracks\x18\x01 \x03(\x0b28.google.cloud.videointelligence.v1p3beta1.CelebrityTrack"\x7f\n\x10DetectedLandmark\x12\x0c\n\x04name\x18\x01 \x01(\t\x12I\n\x05point\x18\x02 \x01(\x0b2:.google.cloud.videointelligence.v1p3beta1.NormalizedVertex\x12\x12\n\nconfidence\x18\x03 \x01(\x02"m\n\x17FaceDetectionAnnotation\x12?\n\x06tracks\x18\x03 \x03(\x0b2/.google.cloud.videointelligence.v1p3beta1.Track\x12\x11\n\tthumbnail\x18\x04 \x01(\x0c"\\\n\x19PersonDetectionAnnotation\x12?\n\x06tracks\x18\x01 \x03(\x0b2/.google.cloud.videointelligence.v1p3beta1.Track"\xef\x0b\n\x16VideoAnnotationResults\x12\x11\n\tinput_uri\x18\x01 \x01(\t\x12G\n\x07segment\x18\n \x01(\x0b26.google.cloud.videointelligence.v1p3beta1.VideoSegment\x12\\\n\x19segment_label_annotations\x18\x02 \x03(\x0b29.google.cloud.videointelligence.v1p3beta1.LabelAnnotation\x12e\n"segment_presence_label_annotations\x18\x17 \x03(\x0b29.google.cloud.videointelligence.v1p3beta1.LabelAnnotation\x12Y\n\x16shot_label_annotations\x18\x03 \x03(\x0b29.google.cloud.videointelligence.v1p3beta1.LabelAnnotation\x12b\n\x1fshot_presence_label_annotations\x18\x18 \x03(\x0b29.google.cloud.videointelligence.v1p3beta1.LabelAnnotation\x12Z\n\x17frame_label_annotations\x18\x04 \x03(\x0b29.google.cloud.videointelligence.v1p3beta1.LabelAnnotation\x12e\n\x1aface_detection_annotations\x18\r \x03(\x0b2A.google.cloud.videointelligence.v1p3beta1.FaceDetectionAnnotation\x12P\n\x10shot_annotations\x18\x06 \x03(\x0b26.google.cloud.videointelligence.v1p3beta1.VideoSegment\x12`\n\x13explicit_annotation\x18\x07 \x01(\x0b2C.google.cloud.videointelligence.v1p3beta1.ExplicitContentAnnotation\x12\\\n\x15speech_transcriptions\x18\x0b \x03(\x0b2=.google.cloud.videointelligence.v1p3beta1.SpeechTranscription\x12R\n\x10text_annotations\x18\x0c \x03(\x0b28.google.cloud.videointelligence.v1p3beta1.TextAnnotation\x12^\n\x12object_annotations\x18\x0e \x03(\x0b2B.google.cloud.videointelligence.v1p3beta1.ObjectTrackingAnnotation\x12i\n\x1clogo_recognition_annotations\x18\x13 \x03(\x0b2C.google.cloud.videointelligence.v1p3beta1.LogoRecognitionAnnotation\x12i\n\x1cperson_detection_annotations\x18\x14 \x03(\x0b2C.google.cloud.videointelligence.v1p3beta1.PersonDetectionAnnotation\x12s\n!celebrity_recognition_annotations\x18\x15 \x01(\x0b2H.google.cloud.videointelligence.v1p3beta1.CelebrityRecognitionAnnotation\x12!\n\x05error\x18\t \x01(\x0b2\x12.google.rpc.Status"u\n\x15AnnotateVideoResponse\x12\\\n\x12annotation_results\x18\x01 \x03(\x0b2@.google.cloud.videointelligence.v1p3beta1.VideoAnnotationResults"\xb4\x02\n\x17VideoAnnotationProgress\x12\x11\n\tinput_uri\x18\x01 \x01(\t\x12\x18\n\x10progress_percent\x18\x02 \x01(\x05\x12.\n\nstart_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12/\n\x0bupdate_time\x18\x04 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12B\n\x07feature\x18\x05 \x01(\x0e21.google.cloud.videointelligence.v1p3beta1.Feature\x12G\n\x07segment\x18\x06 \x01(\x0b26.google.cloud.videointelligence.v1p3beta1.VideoSegment"w\n\x15AnnotateVideoProgress\x12^\n\x13annotation_progress\x18\x01 \x03(\x0b2A.google.cloud.videointelligence.v1p3beta1.VideoAnnotationProgress"\x88\x03\n\x19SpeechTranscriptionConfig\x12\x1a\n\rlanguage_code\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x1d\n\x10max_alternatives\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x1d\n\x10filter_profanity\x18\x03 \x01(\x08B\x03\xe0A\x01\x12U\n\x0fspeech_contexts\x18\x04 \x03(\x0b27.google.cloud.videointelligence.v1p3beta1.SpeechContextB\x03\xe0A\x01\x12)\n\x1cenable_automatic_punctuation\x18\x05 \x01(\x08B\x03\xe0A\x01\x12\x19\n\x0caudio_tracks\x18\x06 \x03(\x05B\x03\xe0A\x01\x12\'\n\x1aenable_speaker_diarization\x18\x07 \x01(\x08B\x03\xe0A\x01\x12&\n\x19diarization_speaker_count\x18\x08 \x01(\x05B\x03\xe0A\x01\x12#\n\x16enable_word_confidence\x18\t \x01(\x08B\x03\xe0A\x01"%\n\rSpeechContext\x12\x14\n\x07phrases\x18\x01 \x03(\tB\x03\xe0A\x01"\x8f\x01\n\x13SpeechTranscription\x12\\\n\x0calternatives\x18\x01 \x03(\x0b2F.google.cloud.videointelligence.v1p3beta1.SpeechRecognitionAlternative\x12\x1a\n\rlanguage_code\x18\x02 \x01(\tB\x03\xe0A\x03"\x93\x01\n\x1cSpeechRecognitionAlternative\x12\x12\n\ntranscript\x18\x01 \x01(\t\x12\x17\n\nconfidence\x18\x02 \x01(\x02B\x03\xe0A\x03\x12F\n\x05words\x18\x03 \x03(\x0b22.google.cloud.videointelligence.v1p3beta1.WordInfoB\x03\xe0A\x03"\xa7\x01\n\x08WordInfo\x12-\n\nstart_time\x18\x01 \x01(\x0b2\x19.google.protobuf.Duration\x12+\n\x08end_time\x18\x02 \x01(\x0b2\x19.google.protobuf.Duration\x12\x0c\n\x04word\x18\x03 \x01(\t\x12\x17\n\nconfidence\x18\x04 \x01(\x02B\x03\xe0A\x03\x12\x18\n\x0bspeaker_tag\x18\x05 \x01(\x05B\x03\xe0A\x03"(\n\x10NormalizedVertex\x12\t\n\x01x\x18\x01 \x01(\x02\x12\t\n\x01y\x18\x02 \x01(\x02"f\n\x16NormalizedBoundingPoly\x12L\n\x08vertices\x18\x01 \x03(\x0b2:.google.cloud.videointelligence.v1p3beta1.NormalizedVertex"\xaf\x01\n\x0bTextSegment\x12G\n\x07segment\x18\x01 \x01(\x0b26.google.cloud.videointelligence.v1p3beta1.VideoSegment\x12\x12\n\nconfidence\x18\x02 \x01(\x02\x12C\n\x06frames\x18\x03 \x03(\x0b23.google.cloud.videointelligence.v1p3beta1.TextFrame"\x9b\x01\n\tTextFrame\x12^\n\x14rotated_bounding_box\x18\x01 \x01(\x0b2@.google.cloud.videointelligence.v1p3beta1.NormalizedBoundingPoly\x12.\n\x0btime_offset\x18\x02 \x01(\x0b2\x19.google.protobuf.Duration"g\n\x0eTextAnnotation\x12\x0c\n\x04text\x18\x01 \x01(\t\x12G\n\x08segments\x18\x02 \x03(\x0b25.google.cloud.videointelligence.v1p3beta1.TextSegment"\xa7\x01\n\x13ObjectTrackingFrame\x12`\n\x17normalized_bounding_box\x18\x01 \x01(\x0b2?.google.cloud.videointelligence.v1p3beta1.NormalizedBoundingBox\x12.\n\x0btime_offset\x18\x02 \x01(\x0b2\x19.google.protobuf.Duration"\xac\x02\n\x18ObjectTrackingAnnotation\x12I\n\x07segment\x18\x03 \x01(\x0b26.google.cloud.videointelligence.v1p3beta1.VideoSegmentH\x00\x12\x12\n\x08track_id\x18\x05 \x01(\x03H\x00\x12@\n\x06entity\x18\x01 \x01(\x0b20.google.cloud.videointelligence.v1p3beta1.Entity\x12\x12\n\nconfidence\x18\x04 \x01(\x02\x12M\n\x06frames\x18\x02 \x03(\x0b2=.google.cloud.videointelligence.v1p3beta1.ObjectTrackingFrameB\x0c\n\ntrack_info"\xe8\x01\n\x19LogoRecognitionAnnotation\x12@\n\x06entity\x18\x01 \x01(\x0b20.google.cloud.videointelligence.v1p3beta1.Entity\x12?\n\x06tracks\x18\x02 \x03(\x0b2/.google.cloud.videointelligence.v1p3beta1.Track\x12H\n\x08segments\x18\x03 \x03(\x0b26.google.cloud.videointelligence.v1p3beta1.VideoSegment"\xa5\x01\n\x1dStreamingAnnotateVideoRequest\x12V\n\x0cvideo_config\x18\x01 \x01(\x0b2>.google.cloud.videointelligence.v1p3beta1.StreamingVideoConfigH\x00\x12\x17\n\rinput_content\x18\x02 \x01(\x0cH\x00B\x13\n\x11streaming_request"\x8a\x08\n\x14StreamingVideoConfig\x12t\n\x1cshot_change_detection_config\x18\x02 \x01(\x0b2L.google.cloud.videointelligence.v1p3beta1.StreamingShotChangeDetectionConfigH\x00\x12i\n\x16label_detection_config\x18\x03 \x01(\x0b2G.google.cloud.videointelligence.v1p3beta1.StreamingLabelDetectionConfigH\x00\x12~\n!explicit_content_detection_config\x18\x04 \x01(\x0b2Q.google.cloud.videointelligence.v1p3beta1.StreamingExplicitContentDetectionConfigH\x00\x12i\n\x16object_tracking_config\x18\x05 \x01(\x0b2G.google.cloud.videointelligence.v1p3beta1.StreamingObjectTrackingConfigH\x00\x12|\n automl_action_recognition_config\x18\x17 \x01(\x0b2P.google.cloud.videointelligence.v1p3beta1.StreamingAutomlActionRecognitionConfigH\x00\x12u\n\x1cautoml_classification_config\x18\x15 \x01(\x0b2M.google.cloud.videointelligence.v1p3beta1.StreamingAutomlClassificationConfigH\x00\x12v\n\x1dautoml_object_tracking_config\x18\x16 \x01(\x0b2M.google.cloud.videointelligence.v1p3beta1.StreamingAutomlObjectTrackingConfigH\x00\x12K\n\x07feature\x18\x01 \x01(\x0e2:.google.cloud.videointelligence.v1p3beta1.StreamingFeature\x12X\n\x0estorage_config\x18\x1e \x01(\x0b2@.google.cloud.videointelligence.v1p3beta1.StreamingStorageConfigB\x12\n\x10streaming_config"\xca\x01\n\x1eStreamingAnnotateVideoResponse\x12!\n\x05error\x18\x01 \x01(\x0b2\x12.google.rpc.Status\x12e\n\x12annotation_results\x18\x02 \x01(\x0b2I.google.cloud.videointelligence.v1p3beta1.StreamingVideoAnnotationResults\x12\x1e\n\x16annotation_results_uri\x18\x03 \x01(\t"\x8b\x03\n\x1fStreamingVideoAnnotationResults\x12P\n\x10shot_annotations\x18\x01 \x03(\x0b26.google.cloud.videointelligence.v1p3beta1.VideoSegment\x12T\n\x11label_annotations\x18\x02 \x03(\x0b29.google.cloud.videointelligence.v1p3beta1.LabelAnnotation\x12`\n\x13explicit_annotation\x18\x03 \x01(\x0b2C.google.cloud.videointelligence.v1p3beta1.ExplicitContentAnnotation\x12^\n\x12object_annotations\x18\x04 \x03(\x0b2B.google.cloud.videointelligence.v1p3beta1.ObjectTrackingAnnotation"$\n"StreamingShotChangeDetectionConfig":\n\x1dStreamingLabelDetectionConfig\x12\x19\n\x11stationary_camera\x18\x01 \x01(\x08")\n\'StreamingExplicitContentDetectionConfig"\x1f\n\x1dStreamingObjectTrackingConfig"<\n&StreamingAutomlActionRecognitionConfig\x12\x12\n\nmodel_name\x18\x01 \x01(\t"9\n#StreamingAutomlClassificationConfig\x12\x12\n\nmodel_name\x18\x01 \x01(\t"9\n#StreamingAutomlObjectTrackingConfig\x12\x12\n\nmodel_name\x18\x01 \x01(\t"o\n\x16StreamingStorageConfig\x12(\n enable_storage_annotation_result\x18\x01 \x01(\x08\x12+\n#annotation_result_storage_directory\x18\x03 \x01(\t*r\n\x12LabelDetectionMode\x12$\n LABEL_DETECTION_MODE_UNSPECIFIED\x10\x00\x12\r\n\tSHOT_MODE\x10\x01\x12\x0e\n\nFRAME_MODE\x10\x02\x12\x17\n\x13SHOT_AND_FRAME_MODE\x10\x03*t\n\nLikelihood\x12\x1a\n\x16LIKELIHOOD_UNSPECIFIED\x10\x00\x12\x11\n\rVERY_UNLIKELY\x10\x01\x12\x0c\n\x08UNLIKELY\x10\x02\x12\x0c\n\x08POSSIBLE\x10\x03\x12\n\n\x06LIKELY\x10\x04\x12\x0f\n\x0bVERY_LIKELY\x10\x05*\xb6\x02\n\x10StreamingFeature\x12!\n\x1dSTREAMING_FEATURE_UNSPECIFIED\x10\x00\x12\x1d\n\x19STREAMING_LABEL_DETECTION\x10\x01\x12#\n\x1fSTREAMING_SHOT_CHANGE_DETECTION\x10\x02\x12(\n$STREAMING_EXPLICIT_CONTENT_DETECTION\x10\x03\x12\x1d\n\x19STREAMING_OBJECT_TRACKING\x10\x04\x12\'\n#STREAMING_AUTOML_ACTION_RECOGNITION\x10\x17\x12#\n\x1fSTREAMING_AUTOML_CLASSIFICATION\x10\x15\x12$\n STREAMING_AUTOML_OBJECT_TRACKING\x10\x16*\x90\x02\n\x07Feature\x12\x17\n\x13FEATURE_UNSPECIFIED\x10\x00\x12\x13\n\x0fLABEL_DETECTION\x10\x01\x12\x19\n\x15SHOT_CHANGE_DETECTION\x10\x02\x12\x1e\n\x1aEXPLICIT_CONTENT_DETECTION\x10\x03\x12\x12\n\x0eFACE_DETECTION\x10\x04\x12\x18\n\x14SPEECH_TRANSCRIPTION\x10\x06\x12\x12\n\x0eTEXT_DETECTION\x10\x07\x12\x13\n\x0fOBJECT_TRACKING\x10\t\x12\x14\n\x10LOGO_RECOGNITION\x10\x0c\x12\x19\n\x15CELEBRITY_RECOGNITION\x10\r\x12\x14\n\x10PERSON_DETECTION\x10\x0e2\xce\x02\n\x18VideoIntelligenceService\x12\xdb\x01\n\rAnnotateVideo\x12>.google.cloud.videointelligence.v1p3beta1.AnnotateVideoRequest\x1a\x1d.google.longrunning.Operation"k\xcaA.\n\x15AnnotateVideoResponse\x12\x15AnnotateVideoProgress\xdaA\x12input_uri,features\x82\xd3\xe4\x93\x02\x1f"\x1a/v1p3beta1/videos:annotate:\x01*\x1aT\xcaA videointelligence.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platform2\xad\x02\n!StreamingVideoIntelligenceService\x12\xb1\x01\n\x16StreamingAnnotateVideo\x12G.google.cloud.videointelligence.v1p3beta1.StreamingAnnotateVideoRequest\x1aH.google.cloud.videointelligence.v1p3beta1.StreamingAnnotateVideoResponse"\x00(\x010\x01\x1aT\xcaA videointelligence.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platformB\xaf\x02\n,com.google.cloud.videointelligence.v1p3beta1B\x1dVideoIntelligenceServiceProtoP\x01ZZcloud.google.com/go/videointelligence/apiv1p3beta1/videointelligencepb;videointelligencepb\xaa\x02(Google.Cloud.VideoIntelligence.V1P3Beta1\xca\x02(Google\\Cloud\\VideoIntelligence\\V1p3beta1\xea\x02+Google::Cloud::VideoIntelligence::V1p3beta1b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.videointelligence.v1p3beta1.video_intelligence_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n,com.google.cloud.videointelligence.v1p3beta1B\x1dVideoIntelligenceServiceProtoP\x01ZZcloud.google.com/go/videointelligence/apiv1p3beta1/videointelligencepb;videointelligencepb\xaa\x02(Google.Cloud.VideoIntelligence.V1P3Beta1\xca\x02(Google\\Cloud\\VideoIntelligence\\V1p3beta1\xea\x02+Google::Cloud::VideoIntelligence::V1p3beta1'
+    _globals['_ANNOTATEVIDEOREQUEST'].fields_by_name['features']._loaded_options = None
+    _globals['_ANNOTATEVIDEOREQUEST'].fields_by_name['features']._serialized_options = b'\xe0A\x02'
+    _globals['_ANNOTATEVIDEOREQUEST'].fields_by_name['output_uri']._loaded_options = None
+    _globals['_ANNOTATEVIDEOREQUEST'].fields_by_name['output_uri']._serialized_options = b'\xe0A\x01'
+    _globals['_ANNOTATEVIDEOREQUEST'].fields_by_name['location_id']._loaded_options = None
+    _globals['_ANNOTATEVIDEOREQUEST'].fields_by_name['location_id']._serialized_options = b'\xe0A\x01'
+    _globals['_TIMESTAMPEDOBJECT'].fields_by_name['attributes']._loaded_options = None
+    _globals['_TIMESTAMPEDOBJECT'].fields_by_name['attributes']._serialized_options = b'\xe0A\x01'
+    _globals['_TIMESTAMPEDOBJECT'].fields_by_name['landmarks']._loaded_options = None
+    _globals['_TIMESTAMPEDOBJECT'].fields_by_name['landmarks']._serialized_options = b'\xe0A\x01'
+    _globals['_TRACK'].fields_by_name['attributes']._loaded_options = None
+    _globals['_TRACK'].fields_by_name['attributes']._serialized_options = b'\xe0A\x01'
+    _globals['_TRACK'].fields_by_name['confidence']._loaded_options = None
+    _globals['_TRACK'].fields_by_name['confidence']._serialized_options = b'\xe0A\x01'
+    _globals['_SPEECHTRANSCRIPTIONCONFIG'].fields_by_name['language_code']._loaded_options = None
+    _globals['_SPEECHTRANSCRIPTIONCONFIG'].fields_by_name['language_code']._serialized_options = b'\xe0A\x02'
+    _globals['_SPEECHTRANSCRIPTIONCONFIG'].fields_by_name['max_alternatives']._loaded_options = None
+    _globals['_SPEECHTRANSCRIPTIONCONFIG'].fields_by_name['max_alternatives']._serialized_options = b'\xe0A\x01'
+    _globals['_SPEECHTRANSCRIPTIONCONFIG'].fields_by_name['filter_profanity']._loaded_options = None
+    _globals['_SPEECHTRANSCRIPTIONCONFIG'].fields_by_name['filter_profanity']._serialized_options = b'\xe0A\x01'
+    _globals['_SPEECHTRANSCRIPTIONCONFIG'].fields_by_name['speech_contexts']._loaded_options = None
+    _globals['_SPEECHTRANSCRIPTIONCONFIG'].fields_by_name['speech_contexts']._serialized_options = b'\xe0A\x01'
+    _globals['_SPEECHTRANSCRIPTIONCONFIG'].fields_by_name['enable_automatic_punctuation']._loaded_options = None
+    _globals['_SPEECHTRANSCRIPTIONCONFIG'].fields_by_name['enable_automatic_punctuation']._serialized_options = b'\xe0A\x01'
+    _globals['_SPEECHTRANSCRIPTIONCONFIG'].fields_by_name['audio_tracks']._loaded_options = None
+    _globals['_SPEECHTRANSCRIPTIONCONFIG'].fields_by_name['audio_tracks']._serialized_options = b'\xe0A\x01'
+    _globals['_SPEECHTRANSCRIPTIONCONFIG'].fields_by_name['enable_speaker_diarization']._loaded_options = None
+    _globals['_SPEECHTRANSCRIPTIONCONFIG'].fields_by_name['enable_speaker_diarization']._serialized_options = b'\xe0A\x01'
+    _globals['_SPEECHTRANSCRIPTIONCONFIG'].fields_by_name['diarization_speaker_count']._loaded_options = None
+    _globals['_SPEECHTRANSCRIPTIONCONFIG'].fields_by_name['diarization_speaker_count']._serialized_options = b'\xe0A\x01'
+    _globals['_SPEECHTRANSCRIPTIONCONFIG'].fields_by_name['enable_word_confidence']._loaded_options = None
+    _globals['_SPEECHTRANSCRIPTIONCONFIG'].fields_by_name['enable_word_confidence']._serialized_options = b'\xe0A\x01'
+    _globals['_SPEECHCONTEXT'].fields_by_name['phrases']._loaded_options = None
+    _globals['_SPEECHCONTEXT'].fields_by_name['phrases']._serialized_options = b'\xe0A\x01'
+    _globals['_SPEECHTRANSCRIPTION'].fields_by_name['language_code']._loaded_options = None
+    _globals['_SPEECHTRANSCRIPTION'].fields_by_name['language_code']._serialized_options = b'\xe0A\x03'
+    _globals['_SPEECHRECOGNITIONALTERNATIVE'].fields_by_name['confidence']._loaded_options = None
+    _globals['_SPEECHRECOGNITIONALTERNATIVE'].fields_by_name['confidence']._serialized_options = b'\xe0A\x03'
+    _globals['_SPEECHRECOGNITIONALTERNATIVE'].fields_by_name['words']._loaded_options = None
+    _globals['_SPEECHRECOGNITIONALTERNATIVE'].fields_by_name['words']._serialized_options = b'\xe0A\x03'
+    _globals['_WORDINFO'].fields_by_name['confidence']._loaded_options = None
+    _globals['_WORDINFO'].fields_by_name['confidence']._serialized_options = b'\xe0A\x03'
+    _globals['_WORDINFO'].fields_by_name['speaker_tag']._loaded_options = None
+    _globals['_WORDINFO'].fields_by_name['speaker_tag']._serialized_options = b'\xe0A\x03'
+    _globals['_VIDEOINTELLIGENCESERVICE']._loaded_options = None
+    _globals['_VIDEOINTELLIGENCESERVICE']._serialized_options = b'\xcaA videointelligence.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platform'
+    _globals['_VIDEOINTELLIGENCESERVICE'].methods_by_name['AnnotateVideo']._loaded_options = None
+    _globals['_VIDEOINTELLIGENCESERVICE'].methods_by_name['AnnotateVideo']._serialized_options = b'\xcaA.\n\x15AnnotateVideoResponse\x12\x15AnnotateVideoProgress\xdaA\x12input_uri,features\x82\xd3\xe4\x93\x02\x1f"\x1a/v1p3beta1/videos:annotate:\x01*'
+    _globals['_STREAMINGVIDEOINTELLIGENCESERVICE']._loaded_options = None
+    _globals['_STREAMINGVIDEOINTELLIGENCESERVICE']._serialized_options = b'\xcaA videointelligence.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platform'
+    _globals['_LABELDETECTIONMODE']._serialized_start = 11239
+    _globals['_LABELDETECTIONMODE']._serialized_end = 11353
+    _globals['_LIKELIHOOD']._serialized_start = 11355
+    _globals['_LIKELIHOOD']._serialized_end = 11471
+    _globals['_STREAMINGFEATURE']._serialized_start = 11474
+    _globals['_STREAMINGFEATURE']._serialized_end = 11784
+    _globals['_FEATURE']._serialized_start = 11787
+    _globals['_FEATURE']._serialized_end = 12059
+    _globals['_ANNOTATEVIDEOREQUEST']._serialized_start = 327
+    _globals['_ANNOTATEVIDEOREQUEST']._serialized_end = 595
+    _globals['_VIDEOCONTEXT']._serialized_start = 598
+    _globals['_VIDEOCONTEXT']._serialized_end = 1494
+    _globals['_LABELDETECTIONCONFIG']._serialized_start = 1497
+    _globals['_LABELDETECTIONCONFIG']._serialized_end = 1725
+    _globals['_SHOTCHANGEDETECTIONCONFIG']._serialized_start = 1727
+    _globals['_SHOTCHANGEDETECTIONCONFIG']._serialized_end = 1769
+    _globals['_OBJECTTRACKINGCONFIG']._serialized_start = 1771
+    _globals['_OBJECTTRACKINGCONFIG']._serialized_end = 1808
+    _globals['_EXPLICITCONTENTDETECTIONCONFIG']._serialized_start = 1810
+    _globals['_EXPLICITCONTENTDETECTIONCONFIG']._serialized_end = 1857
+    _globals['_FACEDETECTIONCONFIG']._serialized_start = 1859
+    _globals['_FACEDETECTIONCONFIG']._serialized_end = 1955
+    _globals['_PERSONDETECTIONCONFIG']._serialized_start = 1957
+    _globals['_PERSONDETECTIONCONFIG']._serialized_end = 2072
+    _globals['_TEXTDETECTIONCONFIG']._serialized_start = 2074
+    _globals['_TEXTDETECTIONCONFIG']._serialized_end = 2134
+    _globals['_VIDEOSEGMENT']._serialized_start = 2136
+    _globals['_VIDEOSEGMENT']._serialized_end = 2256
+    _globals['_LABELSEGMENT']._serialized_start = 2258
+    _globals['_LABELSEGMENT']._serialized_end = 2365
+    _globals['_LABELFRAME']._serialized_start = 2367
+    _globals['_LABELFRAME']._serialized_end = 2447
+    _globals['_ENTITY']._serialized_start = 2449
+    _globals['_ENTITY']._serialized_end = 2520
+    _globals['_LABELANNOTATION']._serialized_start = 2523
+    _globals['_LABELANNOTATION']._serialized_end = 2827
+    _globals['_EXPLICITCONTENTFRAME']._serialized_start = 2830
+    _globals['_EXPLICITCONTENTFRAME']._serialized_end = 2986
+    _globals['_EXPLICITCONTENTANNOTATION']._serialized_start = 2988
+    _globals['_EXPLICITCONTENTANNOTATION']._serialized_end = 3095
+    _globals['_NORMALIZEDBOUNDINGBOX']._serialized_start = 3097
+    _globals['_NORMALIZEDBOUNDINGBOX']._serialized_end = 3178
+    _globals['_TIMESTAMPEDOBJECT']._serialized_start = 3181
+    _globals['_TIMESTAMPEDOBJECT']._serialized_end = 3516
+    _globals['_TRACK']._serialized_start = 3519
+    _globals['_TRACK']._serialized_end = 3800
+    _globals['_DETECTEDATTRIBUTE']._serialized_start = 3802
+    _globals['_DETECTEDATTRIBUTE']._serialized_end = 3870
+    _globals['_CELEBRITY']._serialized_start = 3872
+    _globals['_CELEBRITY']._serialized_end = 3940
+    _globals['_CELEBRITYTRACK']._serialized_start = 3943
+    _globals['_CELEBRITYTRACK']._serialized_end = 4242
+    _globals['_CELEBRITYTRACK_RECOGNIZEDCELEBRITY']._serialized_start = 4129
+    _globals['_CELEBRITYTRACK_RECOGNIZEDCELEBRITY']._serialized_end = 4242
+    _globals['_CELEBRITYRECOGNITIONANNOTATION']._serialized_start = 4244
+    _globals['_CELEBRITYRECOGNITIONANNOTATION']._serialized_end = 4360
+    _globals['_DETECTEDLANDMARK']._serialized_start = 4362
+    _globals['_DETECTEDLANDMARK']._serialized_end = 4489
+    _globals['_FACEDETECTIONANNOTATION']._serialized_start = 4491
+    _globals['_FACEDETECTIONANNOTATION']._serialized_end = 4600
+    _globals['_PERSONDETECTIONANNOTATION']._serialized_start = 4602
+    _globals['_PERSONDETECTIONANNOTATION']._serialized_end = 4694
+    _globals['_VIDEOANNOTATIONRESULTS']._serialized_start = 4697
+    _globals['_VIDEOANNOTATIONRESULTS']._serialized_end = 6216
+    _globals['_ANNOTATEVIDEORESPONSE']._serialized_start = 6218
+    _globals['_ANNOTATEVIDEORESPONSE']._serialized_end = 6335
+    _globals['_VIDEOANNOTATIONPROGRESS']._serialized_start = 6338
+    _globals['_VIDEOANNOTATIONPROGRESS']._serialized_end = 6646
+    _globals['_ANNOTATEVIDEOPROGRESS']._serialized_start = 6648
+    _globals['_ANNOTATEVIDEOPROGRESS']._serialized_end = 6767
+    _globals['_SPEECHTRANSCRIPTIONCONFIG']._serialized_start = 6770
+    _globals['_SPEECHTRANSCRIPTIONCONFIG']._serialized_end = 7162
+    _globals['_SPEECHCONTEXT']._serialized_start = 7164
+    _globals['_SPEECHCONTEXT']._serialized_end = 7201
+    _globals['_SPEECHTRANSCRIPTION']._serialized_start = 7204
+    _globals['_SPEECHTRANSCRIPTION']._serialized_end = 7347
+    _globals['_SPEECHRECOGNITIONALTERNATIVE']._serialized_start = 7350
+    _globals['_SPEECHRECOGNITIONALTERNATIVE']._serialized_end = 7497
+    _globals['_WORDINFO']._serialized_start = 7500
+    _globals['_WORDINFO']._serialized_end = 7667
+    _globals['_NORMALIZEDVERTEX']._serialized_start = 7669
+    _globals['_NORMALIZEDVERTEX']._serialized_end = 7709
+    _globals['_NORMALIZEDBOUNDINGPOLY']._serialized_start = 7711
+    _globals['_NORMALIZEDBOUNDINGPOLY']._serialized_end = 7813
+    _globals['_TEXTSEGMENT']._serialized_start = 7816
+    _globals['_TEXTSEGMENT']._serialized_end = 7991
+    _globals['_TEXTFRAME']._serialized_start = 7994
+    _globals['_TEXTFRAME']._serialized_end = 8149
+    _globals['_TEXTANNOTATION']._serialized_start = 8151
+    _globals['_TEXTANNOTATION']._serialized_end = 8254
+    _globals['_OBJECTTRACKINGFRAME']._serialized_start = 8257
+    _globals['_OBJECTTRACKINGFRAME']._serialized_end = 8424
+    _globals['_OBJECTTRACKINGANNOTATION']._serialized_start = 8427
+    _globals['_OBJECTTRACKINGANNOTATION']._serialized_end = 8727
+    _globals['_LOGORECOGNITIONANNOTATION']._serialized_start = 8730
+    _globals['_LOGORECOGNITIONANNOTATION']._serialized_end = 8962
+    _globals['_STREAMINGANNOTATEVIDEOREQUEST']._serialized_start = 8965
+    _globals['_STREAMINGANNOTATEVIDEOREQUEST']._serialized_end = 9130
+    _globals['_STREAMINGVIDEOCONFIG']._serialized_start = 9133
+    _globals['_STREAMINGVIDEOCONFIG']._serialized_end = 10167
+    _globals['_STREAMINGANNOTATEVIDEORESPONSE']._serialized_start = 10170
+    _globals['_STREAMINGANNOTATEVIDEORESPONSE']._serialized_end = 10372
+    _globals['_STREAMINGVIDEOANNOTATIONRESULTS']._serialized_start = 10375
+    _globals['_STREAMINGVIDEOANNOTATIONRESULTS']._serialized_end = 10770
+    _globals['_STREAMINGSHOTCHANGEDETECTIONCONFIG']._serialized_start = 10772
+    _globals['_STREAMINGSHOTCHANGEDETECTIONCONFIG']._serialized_end = 10808
+    _globals['_STREAMINGLABELDETECTIONCONFIG']._serialized_start = 10810
+    _globals['_STREAMINGLABELDETECTIONCONFIG']._serialized_end = 10868
+    _globals['_STREAMINGEXPLICITCONTENTDETECTIONCONFIG']._serialized_start = 10870
+    _globals['_STREAMINGEXPLICITCONTENTDETECTIONCONFIG']._serialized_end = 10911
+    _globals['_STREAMINGOBJECTTRACKINGCONFIG']._serialized_start = 10913
+    _globals['_STREAMINGOBJECTTRACKINGCONFIG']._serialized_end = 10944
+    _globals['_STREAMINGAUTOMLACTIONRECOGNITIONCONFIG']._serialized_start = 10946
+    _globals['_STREAMINGAUTOMLACTIONRECOGNITIONCONFIG']._serialized_end = 11006
+    _globals['_STREAMINGAUTOMLCLASSIFICATIONCONFIG']._serialized_start = 11008
+    _globals['_STREAMINGAUTOMLCLASSIFICATIONCONFIG']._serialized_end = 11065
+    _globals['_STREAMINGAUTOMLOBJECTTRACKINGCONFIG']._serialized_start = 11067
+    _globals['_STREAMINGAUTOMLOBJECTTRACKINGCONFIG']._serialized_end = 11124
+    _globals['_STREAMINGSTORAGECONFIG']._serialized_start = 11126
+    _globals['_STREAMINGSTORAGECONFIG']._serialized_end = 11237
+    _globals['_VIDEOINTELLIGENCESERVICE']._serialized_start = 12062
+    _globals['_VIDEOINTELLIGENCESERVICE']._serialized_end = 12396
+    _globals['_STREAMINGVIDEOINTELLIGENCESERVICE']._serialized_start = 12399
+    _globals['_STREAMINGVIDEOINTELLIGENCESERVICE']._serialized_end = 12700

@@ -1,0 +1,148 @@
+from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import message as _message
+from typing import ClassVar as _ClassVar
+DESCRIPTOR: _descriptor.FileDescriptor
+
+class ExtensionSettingErrorEnum(_message.Message):
+    __slots__ = ()
+
+    class ExtensionSettingError(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+        __slots__ = ()
+        UNSPECIFIED: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        UNKNOWN: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        EXTENSIONS_REQUIRED: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        FEED_TYPE_EXTENSION_TYPE_MISMATCH: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        INVALID_FEED_TYPE: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        INVALID_FEED_TYPE_FOR_CUSTOMER_EXTENSION_SETTING: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        CANNOT_CHANGE_FEED_ITEM_ON_CREATE: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        CANNOT_UPDATE_NEWLY_CREATED_EXTENSION: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        NO_EXISTING_AD_GROUP_EXTENSION_SETTING_FOR_TYPE: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        NO_EXISTING_CAMPAIGN_EXTENSION_SETTING_FOR_TYPE: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        NO_EXISTING_CUSTOMER_EXTENSION_SETTING_FOR_TYPE: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        AD_GROUP_EXTENSION_SETTING_ALREADY_EXISTS: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        CAMPAIGN_EXTENSION_SETTING_ALREADY_EXISTS: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        CUSTOMER_EXTENSION_SETTING_ALREADY_EXISTS: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        AD_GROUP_FEED_ALREADY_EXISTS_FOR_PLACEHOLDER_TYPE: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        CAMPAIGN_FEED_ALREADY_EXISTS_FOR_PLACEHOLDER_TYPE: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        CUSTOMER_FEED_ALREADY_EXISTS_FOR_PLACEHOLDER_TYPE: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        VALUE_OUT_OF_RANGE: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        CANNOT_SET_FIELD_WITH_FINAL_URLS: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        FINAL_URLS_NOT_SET: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        INVALID_PHONE_NUMBER: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        PHONE_NUMBER_NOT_SUPPORTED_FOR_COUNTRY: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        CARRIER_SPECIFIC_SHORT_NUMBER_NOT_ALLOWED: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        PREMIUM_RATE_NUMBER_NOT_ALLOWED: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        DISALLOWED_NUMBER_TYPE: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        INVALID_DOMESTIC_PHONE_NUMBER_FORMAT: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        VANITY_PHONE_NUMBER_NOT_ALLOWED: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        INVALID_COUNTRY_CODE: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        INVALID_CALL_CONVERSION_TYPE_ID: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        CUSTOMER_NOT_IN_ALLOWLIST_FOR_CALLTRACKING: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        CALLTRACKING_NOT_SUPPORTED_FOR_COUNTRY: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        INVALID_APP_ID: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        QUOTES_IN_REVIEW_EXTENSION_SNIPPET: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        HYPHENS_IN_REVIEW_EXTENSION_SNIPPET: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        REVIEW_EXTENSION_SOURCE_NOT_ELIGIBLE: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        SOURCE_NAME_IN_REVIEW_EXTENSION_TEXT: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        MISSING_FIELD: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        INCONSISTENT_CURRENCY_CODES: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        PRICE_EXTENSION_HAS_DUPLICATED_HEADERS: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        PRICE_ITEM_HAS_DUPLICATED_HEADER_AND_DESCRIPTION: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        PRICE_EXTENSION_HAS_TOO_FEW_ITEMS: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        PRICE_EXTENSION_HAS_TOO_MANY_ITEMS: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        UNSUPPORTED_VALUE: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        INVALID_DEVICE_PREFERENCE: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        INVALID_SCHEDULE_END: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        DATE_TIME_MUST_BE_IN_ACCOUNT_TIME_ZONE: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        OVERLAPPING_SCHEDULES_NOT_ALLOWED: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        SCHEDULE_END_NOT_AFTER_START: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        TOO_MANY_SCHEDULES_PER_DAY: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        DUPLICATE_EXTENSION_FEED_ITEM_EDIT: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        INVALID_SNIPPETS_HEADER: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        PHONE_NUMBER_NOT_SUPPORTED_WITH_CALLTRACKING_FOR_COUNTRY: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        CAMPAIGN_TARGETING_MISMATCH: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        CANNOT_OPERATE_ON_REMOVED_FEED: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        EXTENSION_TYPE_REQUIRED: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        INCOMPATIBLE_UNDERLYING_MATCHING_FUNCTION: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        START_DATE_AFTER_END_DATE: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        INVALID_PRICE_FORMAT: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        PROMOTION_INVALID_TIME: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        PROMOTION_CANNOT_SET_PERCENT_DISCOUNT_AND_MONEY_DISCOUNT: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        PROMOTION_CANNOT_SET_PROMOTION_CODE_AND_ORDERS_OVER_AMOUNT: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        TOO_MANY_DECIMAL_PLACES_SPECIFIED: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        INVALID_LANGUAGE_CODE: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        UNSUPPORTED_LANGUAGE: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        CUSTOMER_CONSENT_FOR_CALL_RECORDING_REQUIRED: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        EXTENSION_SETTING_UPDATE_IS_A_NOOP: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+        DISALLOWED_TEXT: _ClassVar[ExtensionSettingErrorEnum.ExtensionSettingError]
+    UNSPECIFIED: ExtensionSettingErrorEnum.ExtensionSettingError
+    UNKNOWN: ExtensionSettingErrorEnum.ExtensionSettingError
+    EXTENSIONS_REQUIRED: ExtensionSettingErrorEnum.ExtensionSettingError
+    FEED_TYPE_EXTENSION_TYPE_MISMATCH: ExtensionSettingErrorEnum.ExtensionSettingError
+    INVALID_FEED_TYPE: ExtensionSettingErrorEnum.ExtensionSettingError
+    INVALID_FEED_TYPE_FOR_CUSTOMER_EXTENSION_SETTING: ExtensionSettingErrorEnum.ExtensionSettingError
+    CANNOT_CHANGE_FEED_ITEM_ON_CREATE: ExtensionSettingErrorEnum.ExtensionSettingError
+    CANNOT_UPDATE_NEWLY_CREATED_EXTENSION: ExtensionSettingErrorEnum.ExtensionSettingError
+    NO_EXISTING_AD_GROUP_EXTENSION_SETTING_FOR_TYPE: ExtensionSettingErrorEnum.ExtensionSettingError
+    NO_EXISTING_CAMPAIGN_EXTENSION_SETTING_FOR_TYPE: ExtensionSettingErrorEnum.ExtensionSettingError
+    NO_EXISTING_CUSTOMER_EXTENSION_SETTING_FOR_TYPE: ExtensionSettingErrorEnum.ExtensionSettingError
+    AD_GROUP_EXTENSION_SETTING_ALREADY_EXISTS: ExtensionSettingErrorEnum.ExtensionSettingError
+    CAMPAIGN_EXTENSION_SETTING_ALREADY_EXISTS: ExtensionSettingErrorEnum.ExtensionSettingError
+    CUSTOMER_EXTENSION_SETTING_ALREADY_EXISTS: ExtensionSettingErrorEnum.ExtensionSettingError
+    AD_GROUP_FEED_ALREADY_EXISTS_FOR_PLACEHOLDER_TYPE: ExtensionSettingErrorEnum.ExtensionSettingError
+    CAMPAIGN_FEED_ALREADY_EXISTS_FOR_PLACEHOLDER_TYPE: ExtensionSettingErrorEnum.ExtensionSettingError
+    CUSTOMER_FEED_ALREADY_EXISTS_FOR_PLACEHOLDER_TYPE: ExtensionSettingErrorEnum.ExtensionSettingError
+    VALUE_OUT_OF_RANGE: ExtensionSettingErrorEnum.ExtensionSettingError
+    CANNOT_SET_FIELD_WITH_FINAL_URLS: ExtensionSettingErrorEnum.ExtensionSettingError
+    FINAL_URLS_NOT_SET: ExtensionSettingErrorEnum.ExtensionSettingError
+    INVALID_PHONE_NUMBER: ExtensionSettingErrorEnum.ExtensionSettingError
+    PHONE_NUMBER_NOT_SUPPORTED_FOR_COUNTRY: ExtensionSettingErrorEnum.ExtensionSettingError
+    CARRIER_SPECIFIC_SHORT_NUMBER_NOT_ALLOWED: ExtensionSettingErrorEnum.ExtensionSettingError
+    PREMIUM_RATE_NUMBER_NOT_ALLOWED: ExtensionSettingErrorEnum.ExtensionSettingError
+    DISALLOWED_NUMBER_TYPE: ExtensionSettingErrorEnum.ExtensionSettingError
+    INVALID_DOMESTIC_PHONE_NUMBER_FORMAT: ExtensionSettingErrorEnum.ExtensionSettingError
+    VANITY_PHONE_NUMBER_NOT_ALLOWED: ExtensionSettingErrorEnum.ExtensionSettingError
+    INVALID_COUNTRY_CODE: ExtensionSettingErrorEnum.ExtensionSettingError
+    INVALID_CALL_CONVERSION_TYPE_ID: ExtensionSettingErrorEnum.ExtensionSettingError
+    CUSTOMER_NOT_IN_ALLOWLIST_FOR_CALLTRACKING: ExtensionSettingErrorEnum.ExtensionSettingError
+    CALLTRACKING_NOT_SUPPORTED_FOR_COUNTRY: ExtensionSettingErrorEnum.ExtensionSettingError
+    INVALID_APP_ID: ExtensionSettingErrorEnum.ExtensionSettingError
+    QUOTES_IN_REVIEW_EXTENSION_SNIPPET: ExtensionSettingErrorEnum.ExtensionSettingError
+    HYPHENS_IN_REVIEW_EXTENSION_SNIPPET: ExtensionSettingErrorEnum.ExtensionSettingError
+    REVIEW_EXTENSION_SOURCE_NOT_ELIGIBLE: ExtensionSettingErrorEnum.ExtensionSettingError
+    SOURCE_NAME_IN_REVIEW_EXTENSION_TEXT: ExtensionSettingErrorEnum.ExtensionSettingError
+    MISSING_FIELD: ExtensionSettingErrorEnum.ExtensionSettingError
+    INCONSISTENT_CURRENCY_CODES: ExtensionSettingErrorEnum.ExtensionSettingError
+    PRICE_EXTENSION_HAS_DUPLICATED_HEADERS: ExtensionSettingErrorEnum.ExtensionSettingError
+    PRICE_ITEM_HAS_DUPLICATED_HEADER_AND_DESCRIPTION: ExtensionSettingErrorEnum.ExtensionSettingError
+    PRICE_EXTENSION_HAS_TOO_FEW_ITEMS: ExtensionSettingErrorEnum.ExtensionSettingError
+    PRICE_EXTENSION_HAS_TOO_MANY_ITEMS: ExtensionSettingErrorEnum.ExtensionSettingError
+    UNSUPPORTED_VALUE: ExtensionSettingErrorEnum.ExtensionSettingError
+    INVALID_DEVICE_PREFERENCE: ExtensionSettingErrorEnum.ExtensionSettingError
+    INVALID_SCHEDULE_END: ExtensionSettingErrorEnum.ExtensionSettingError
+    DATE_TIME_MUST_BE_IN_ACCOUNT_TIME_ZONE: ExtensionSettingErrorEnum.ExtensionSettingError
+    OVERLAPPING_SCHEDULES_NOT_ALLOWED: ExtensionSettingErrorEnum.ExtensionSettingError
+    SCHEDULE_END_NOT_AFTER_START: ExtensionSettingErrorEnum.ExtensionSettingError
+    TOO_MANY_SCHEDULES_PER_DAY: ExtensionSettingErrorEnum.ExtensionSettingError
+    DUPLICATE_EXTENSION_FEED_ITEM_EDIT: ExtensionSettingErrorEnum.ExtensionSettingError
+    INVALID_SNIPPETS_HEADER: ExtensionSettingErrorEnum.ExtensionSettingError
+    PHONE_NUMBER_NOT_SUPPORTED_WITH_CALLTRACKING_FOR_COUNTRY: ExtensionSettingErrorEnum.ExtensionSettingError
+    CAMPAIGN_TARGETING_MISMATCH: ExtensionSettingErrorEnum.ExtensionSettingError
+    CANNOT_OPERATE_ON_REMOVED_FEED: ExtensionSettingErrorEnum.ExtensionSettingError
+    EXTENSION_TYPE_REQUIRED: ExtensionSettingErrorEnum.ExtensionSettingError
+    INCOMPATIBLE_UNDERLYING_MATCHING_FUNCTION: ExtensionSettingErrorEnum.ExtensionSettingError
+    START_DATE_AFTER_END_DATE: ExtensionSettingErrorEnum.ExtensionSettingError
+    INVALID_PRICE_FORMAT: ExtensionSettingErrorEnum.ExtensionSettingError
+    PROMOTION_INVALID_TIME: ExtensionSettingErrorEnum.ExtensionSettingError
+    PROMOTION_CANNOT_SET_PERCENT_DISCOUNT_AND_MONEY_DISCOUNT: ExtensionSettingErrorEnum.ExtensionSettingError
+    PROMOTION_CANNOT_SET_PROMOTION_CODE_AND_ORDERS_OVER_AMOUNT: ExtensionSettingErrorEnum.ExtensionSettingError
+    TOO_MANY_DECIMAL_PLACES_SPECIFIED: ExtensionSettingErrorEnum.ExtensionSettingError
+    INVALID_LANGUAGE_CODE: ExtensionSettingErrorEnum.ExtensionSettingError
+    UNSUPPORTED_LANGUAGE: ExtensionSettingErrorEnum.ExtensionSettingError
+    CUSTOMER_CONSENT_FOR_CALL_RECORDING_REQUIRED: ExtensionSettingErrorEnum.ExtensionSettingError
+    EXTENSION_SETTING_UPDATE_IS_A_NOOP: ExtensionSettingErrorEnum.ExtensionSettingError
+    DISALLOWED_TEXT: ExtensionSettingErrorEnum.ExtensionSettingError
+
+    def __init__(self) -> None:
+        ...

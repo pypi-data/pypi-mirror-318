@@ -1,0 +1,150 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/cloud/kms/v1/resources.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from google.protobuf import duration_pb2 as google_dot_protobuf_dot_duration__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+from google.protobuf import wrappers_pb2 as google_dot_protobuf_dot_wrappers__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n#google/cloud/kms/v1/resources.proto\x12\x13google.cloud.kms.v1\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1egoogle/protobuf/wrappers.proto"\xb5\x01\n\x07KeyRing\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x03\x124\n\x0bcreate_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03:a\xeaA^\n\x1fcloudkms.googleapis.com/KeyRing\x12;projects/{project}/locations/{location}/keyRings/{key_ring}"\x91\x08\n\tCryptoKey\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x03\x12;\n\x07primary\x18\x02 \x01(\x0b2%.google.cloud.kms.v1.CryptoKeyVersionB\x03\xe0A\x03\x12E\n\x07purpose\x18\x03 \x01(\x0e2/.google.cloud.kms.v1.CryptoKey.CryptoKeyPurposeB\x03\xe0A\x05\x124\n\x0bcreate_time\x18\x05 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x126\n\x12next_rotation_time\x18\x07 \x01(\x0b2\x1a.google.protobuf.Timestamp\x124\n\x0frotation_period\x18\x08 \x01(\x0b2\x19.google.protobuf.DurationH\x00\x12G\n\x10version_template\x18\x0b \x01(\x0b2-.google.cloud.kms.v1.CryptoKeyVersionTemplate\x12:\n\x06labels\x18\n \x03(\x0b2*.google.cloud.kms.v1.CryptoKey.LabelsEntry\x12\x18\n\x0bimport_only\x18\r \x01(\x08B\x03\xe0A\x05\x12B\n\x1adestroy_scheduled_duration\x18\x0e \x01(\x0b2\x19.google.protobuf.DurationB\x03\xe0A\x05\x12%\n\x12crypto_key_backend\x18\x0f \x01(\tB\t\xe0A\x05\xfaA\x03\n\x01*\x12a\n key_access_justifications_policy\x18\x11 \x01(\x0b22.google.cloud.kms.v1.KeyAccessJustificationsPolicyB\x03\xe0A\x01\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x028\x01"\x9a\x01\n\x10CryptoKeyPurpose\x12"\n\x1eCRYPTO_KEY_PURPOSE_UNSPECIFIED\x10\x00\x12\x13\n\x0fENCRYPT_DECRYPT\x10\x01\x12\x13\n\x0fASYMMETRIC_SIGN\x10\x05\x12\x16\n\x12ASYMMETRIC_DECRYPT\x10\x06\x12\x17\n\x13RAW_ENCRYPT_DECRYPT\x10\x07\x12\x07\n\x03MAC\x10\t:{\xeaAx\n!cloudkms.googleapis.com/CryptoKey\x12Sprojects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}B\x13\n\x11rotation_schedule"\xb3\x01\n\x18CryptoKeyVersionTemplate\x12>\n\x10protection_level\x18\x01 \x01(\x0e2$.google.cloud.kms.v1.ProtectionLevel\x12W\n\talgorithm\x18\x03 \x01(\x0e2?.google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithmB\x03\xe0A\x02"\xb1\x03\n\x17KeyOperationAttestation\x12S\n\x06format\x18\x04 \x01(\x0e2>.google.cloud.kms.v1.KeyOperationAttestation.AttestationFormatB\x03\xe0A\x03\x12\x14\n\x07content\x18\x05 \x01(\x0cB\x03\xe0A\x03\x12X\n\x0bcert_chains\x18\x06 \x01(\x0b2>.google.cloud.kms.v1.KeyOperationAttestation.CertificateChainsB\x03\xe0A\x03\x1ad\n\x11CertificateChains\x12\x14\n\x0ccavium_certs\x18\x01 \x03(\t\x12\x19\n\x11google_card_certs\x18\x02 \x03(\t\x12\x1e\n\x16google_partition_certs\x18\x03 \x03(\t"k\n\x11AttestationFormat\x12"\n\x1eATTESTATION_FORMAT_UNSPECIFIED\x10\x00\x12\x18\n\x14CAVIUM_V1_COMPRESSED\x10\x03\x12\x18\n\x14CAVIUM_V2_COMPRESSED\x10\x04"\x81\x13\n\x10CryptoKeyVersion\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x03\x12J\n\x05state\x18\x03 \x01(\x0e2;.google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState\x12C\n\x10protection_level\x18\x07 \x01(\x0e2$.google.cloud.kms.v1.ProtectionLevelB\x03\xe0A\x03\x12W\n\talgorithm\x18\n \x01(\x0e2?.google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithmB\x03\xe0A\x03\x12F\n\x0battestation\x18\x08 \x01(\x0b2,.google.cloud.kms.v1.KeyOperationAttestationB\x03\xe0A\x03\x124\n\x0bcreate_time\x18\x04 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x126\n\rgenerate_time\x18\x0b \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x125\n\x0cdestroy_time\x18\x05 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12;\n\x12destroy_event_time\x18\x06 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12\x17\n\nimport_job\x18\x0e \x01(\tB\x03\xe0A\x03\x124\n\x0bimport_time\x18\x0f \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12"\n\x15import_failure_reason\x18\x10 \x01(\tB\x03\xe0A\x03\x12&\n\x19generation_failure_reason\x18\x13 \x01(\tB\x03\xe0A\x03\x120\n#external_destruction_failure_reason\x18\x14 \x01(\tB\x03\xe0A\x03\x12^\n!external_protection_level_options\x18\x11 \x01(\x0b23.google.cloud.kms.v1.ExternalProtectionLevelOptions\x12\x1e\n\x11reimport_eligible\x18\x12 \x01(\x08B\x03\xe0A\x03"\xe2\x07\n\x19CryptoKeyVersionAlgorithm\x12,\n(CRYPTO_KEY_VERSION_ALGORITHM_UNSPECIFIED\x10\x00\x12\x1f\n\x1bGOOGLE_SYMMETRIC_ENCRYPTION\x10\x01\x12\x0f\n\x0bAES_128_GCM\x10)\x12\x0f\n\x0bAES_256_GCM\x10\x13\x12\x0f\n\x0bAES_128_CBC\x10*\x12\x0f\n\x0bAES_256_CBC\x10+\x12\x0f\n\x0bAES_128_CTR\x10,\x12\x0f\n\x0bAES_256_CTR\x10-\x12\x1c\n\x18RSA_SIGN_PSS_2048_SHA256\x10\x02\x12\x1c\n\x18RSA_SIGN_PSS_3072_SHA256\x10\x03\x12\x1c\n\x18RSA_SIGN_PSS_4096_SHA256\x10\x04\x12\x1c\n\x18RSA_SIGN_PSS_4096_SHA512\x10\x0f\x12\x1e\n\x1aRSA_SIGN_PKCS1_2048_SHA256\x10\x05\x12\x1e\n\x1aRSA_SIGN_PKCS1_3072_SHA256\x10\x06\x12\x1e\n\x1aRSA_SIGN_PKCS1_4096_SHA256\x10\x07\x12\x1e\n\x1aRSA_SIGN_PKCS1_4096_SHA512\x10\x10\x12\x1b\n\x17RSA_SIGN_RAW_PKCS1_2048\x10\x1c\x12\x1b\n\x17RSA_SIGN_RAW_PKCS1_3072\x10\x1d\x12\x1b\n\x17RSA_SIGN_RAW_PKCS1_4096\x10\x1e\x12 \n\x1cRSA_DECRYPT_OAEP_2048_SHA256\x10\x08\x12 \n\x1cRSA_DECRYPT_OAEP_3072_SHA256\x10\t\x12 \n\x1cRSA_DECRYPT_OAEP_4096_SHA256\x10\n\x12 \n\x1cRSA_DECRYPT_OAEP_4096_SHA512\x10\x11\x12\x1e\n\x1aRSA_DECRYPT_OAEP_2048_SHA1\x10%\x12\x1e\n\x1aRSA_DECRYPT_OAEP_3072_SHA1\x10&\x12\x1e\n\x1aRSA_DECRYPT_OAEP_4096_SHA1\x10\'\x12\x17\n\x13EC_SIGN_P256_SHA256\x10\x0c\x12\x17\n\x13EC_SIGN_P384_SHA384\x10\r\x12\x1c\n\x18EC_SIGN_SECP256K1_SHA256\x10\x1f\x12\x13\n\x0fEC_SIGN_ED25519\x10(\x12\x0f\n\x0bHMAC_SHA256\x10 \x12\r\n\tHMAC_SHA1\x10!\x12\x0f\n\x0bHMAC_SHA384\x10"\x12\x0f\n\x0bHMAC_SHA512\x10#\x12\x0f\n\x0bHMAC_SHA224\x10$\x12!\n\x1dEXTERNAL_SYMMETRIC_ENCRYPTION\x10\x12"\x9b\x02\n\x15CryptoKeyVersionState\x12(\n$CRYPTO_KEY_VERSION_STATE_UNSPECIFIED\x10\x00\x12\x16\n\x12PENDING_GENERATION\x10\x05\x12\x0b\n\x07ENABLED\x10\x01\x12\x0c\n\x08DISABLED\x10\x02\x12\r\n\tDESTROYED\x10\x03\x12\x15\n\x11DESTROY_SCHEDULED\x10\x04\x12\x12\n\x0ePENDING_IMPORT\x10\x06\x12\x11\n\rIMPORT_FAILED\x10\x07\x12\x15\n\x11GENERATION_FAILED\x10\x08\x12 \n\x1cPENDING_EXTERNAL_DESTRUCTION\x10\t\x12\x1f\n\x1bEXTERNAL_DESTRUCTION_FAILED\x10\n"I\n\x14CryptoKeyVersionView\x12\'\n#CRYPTO_KEY_VERSION_VIEW_UNSPECIFIED\x10\x00\x12\x08\n\x04FULL\x10\x01:\xaa\x01\xeaA\xa6\x01\n(cloudkms.googleapis.com/CryptoKeyVersion\x12zprojects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_key_version}"\x9c\x03\n\tPublicKey\x12\x0b\n\x03pem\x18\x01 \x01(\t\x12R\n\talgorithm\x18\x02 \x01(\x0e2?.google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm\x12/\n\npem_crc32c\x18\x03 \x01(\x0b2\x1b.google.protobuf.Int64Value\x12\x0c\n\x04name\x18\x04 \x01(\t\x12>\n\x10protection_level\x18\x05 \x01(\x0e2$.google.cloud.kms.v1.ProtectionLevel:\xae\x01\xeaA\xaa\x01\n!cloudkms.googleapis.com/PublicKey\x12\x84\x01projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_key_version}/publicKey"\xd4\x08\n\tImportJob\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x03\x12J\n\rimport_method\x18\x02 \x01(\x0e2+.google.cloud.kms.v1.ImportJob.ImportMethodB\x06\xe0A\x02\xe0A\x05\x12F\n\x10protection_level\x18\t \x01(\x0e2$.google.cloud.kms.v1.ProtectionLevelB\x06\xe0A\x02\xe0A\x05\x124\n\x0bcreate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x126\n\rgenerate_time\x18\x04 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bexpire_time\x18\x05 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12:\n\x11expire_event_time\x18\n \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12A\n\x05state\x18\x06 \x01(\x0e2-.google.cloud.kms.v1.ImportJob.ImportJobStateB\x03\xe0A\x03\x12I\n\npublic_key\x18\x07 \x01(\x0b20.google.cloud.kms.v1.ImportJob.WrappingPublicKeyB\x03\xe0A\x03\x12F\n\x0battestation\x18\x08 \x01(\x0b2,.google.cloud.kms.v1.KeyOperationAttestationB\x03\xe0A\x03\x1a \n\x11WrappingPublicKey\x12\x0b\n\x03pem\x18\x01 \x01(\t"\xe5\x01\n\x0cImportMethod\x12\x1d\n\x19IMPORT_METHOD_UNSPECIFIED\x10\x00\x12\x1e\n\x1aRSA_OAEP_3072_SHA1_AES_256\x10\x01\x12\x1e\n\x1aRSA_OAEP_4096_SHA1_AES_256\x10\x02\x12 \n\x1cRSA_OAEP_3072_SHA256_AES_256\x10\x03\x12 \n\x1cRSA_OAEP_4096_SHA256_AES_256\x10\x04\x12\x18\n\x14RSA_OAEP_3072_SHA256\x10\x05\x12\x18\n\x14RSA_OAEP_4096_SHA256\x10\x06"c\n\x0eImportJobState\x12 \n\x1cIMPORT_JOB_STATE_UNSPECIFIED\x10\x00\x12\x16\n\x12PENDING_GENERATION\x10\x01\x12\n\n\x06ACTIVE\x10\x02\x12\x0b\n\x07EXPIRED\x10\x03:{\xeaAx\n!cloudkms.googleapis.com/ImportJob\x12Sprojects/{project}/locations/{location}/keyRings/{key_ring}/importJobs/{import_job}"[\n\x1eExternalProtectionLevelOptions\x12\x18\n\x10external_key_uri\x18\x01 \x01(\t\x12\x1f\n\x17ekm_connection_key_path\x18\x02 \x01(\t"b\n\x1dKeyAccessJustificationsPolicy\x12A\n\x16allowed_access_reasons\x18\x01 \x03(\x0e2!.google.cloud.kms.v1.AccessReason*j\n\x0fProtectionLevel\x12 \n\x1cPROTECTION_LEVEL_UNSPECIFIED\x10\x00\x12\x0c\n\x08SOFTWARE\x10\x01\x12\x07\n\x03HSM\x10\x02\x12\x0c\n\x08EXTERNAL\x10\x03\x12\x10\n\x0cEXTERNAL_VPC\x10\x04*\xab\x03\n\x0cAccessReason\x12\x16\n\x12REASON_UNSPECIFIED\x10\x00\x12\x1e\n\x1aCUSTOMER_INITIATED_SUPPORT\x10\x01\x12\x1c\n\x18GOOGLE_INITIATED_SERVICE\x10\x02\x12\x1c\n\x18THIRD_PARTY_DATA_REQUEST\x10\x03\x12\x1b\n\x17GOOGLE_INITIATED_REVIEW\x10\x04\x12\x1d\n\x19CUSTOMER_INITIATED_ACCESS\x10\x05\x12%\n!GOOGLE_INITIATED_SYSTEM_OPERATION\x10\x06\x12\x17\n\x13REASON_NOT_EXPECTED\x10\x07\x12&\n"MODIFIED_CUSTOMER_INITIATED_ACCESS\x10\x08\x12.\n*MODIFIED_GOOGLE_INITIATED_SYSTEM_OPERATION\x10\t\x12\'\n#GOOGLE_RESPONSE_TO_PRODUCTION_ALERT\x10\n\x12*\n&CUSTOMER_AUTHORIZED_WORKFLOW_SERVICING\x10\x0bB\x85\x01\n\x17com.google.cloud.kms.v1B\x11KmsResourcesProtoP\x01Z)cloud.google.com/go/kms/apiv1/kmspb;kmspb\xaa\x02\x13Google.Cloud.Kms.V1\xca\x02\x13Google\\Cloud\\Kms\\V1b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.kms.v1.resources_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n\x17com.google.cloud.kms.v1B\x11KmsResourcesProtoP\x01Z)cloud.google.com/go/kms/apiv1/kmspb;kmspb\xaa\x02\x13Google.Cloud.Kms.V1\xca\x02\x13Google\\Cloud\\Kms\\V1'
+    _globals['_KEYRING'].fields_by_name['name']._loaded_options = None
+    _globals['_KEYRING'].fields_by_name['name']._serialized_options = b'\xe0A\x03'
+    _globals['_KEYRING'].fields_by_name['create_time']._loaded_options = None
+    _globals['_KEYRING'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_KEYRING']._loaded_options = None
+    _globals['_KEYRING']._serialized_options = b'\xeaA^\n\x1fcloudkms.googleapis.com/KeyRing\x12;projects/{project}/locations/{location}/keyRings/{key_ring}'
+    _globals['_CRYPTOKEY_LABELSENTRY']._loaded_options = None
+    _globals['_CRYPTOKEY_LABELSENTRY']._serialized_options = b'8\x01'
+    _globals['_CRYPTOKEY'].fields_by_name['name']._loaded_options = None
+    _globals['_CRYPTOKEY'].fields_by_name['name']._serialized_options = b'\xe0A\x03'
+    _globals['_CRYPTOKEY'].fields_by_name['primary']._loaded_options = None
+    _globals['_CRYPTOKEY'].fields_by_name['primary']._serialized_options = b'\xe0A\x03'
+    _globals['_CRYPTOKEY'].fields_by_name['purpose']._loaded_options = None
+    _globals['_CRYPTOKEY'].fields_by_name['purpose']._serialized_options = b'\xe0A\x05'
+    _globals['_CRYPTOKEY'].fields_by_name['create_time']._loaded_options = None
+    _globals['_CRYPTOKEY'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_CRYPTOKEY'].fields_by_name['import_only']._loaded_options = None
+    _globals['_CRYPTOKEY'].fields_by_name['import_only']._serialized_options = b'\xe0A\x05'
+    _globals['_CRYPTOKEY'].fields_by_name['destroy_scheduled_duration']._loaded_options = None
+    _globals['_CRYPTOKEY'].fields_by_name['destroy_scheduled_duration']._serialized_options = b'\xe0A\x05'
+    _globals['_CRYPTOKEY'].fields_by_name['crypto_key_backend']._loaded_options = None
+    _globals['_CRYPTOKEY'].fields_by_name['crypto_key_backend']._serialized_options = b'\xe0A\x05\xfaA\x03\n\x01*'
+    _globals['_CRYPTOKEY'].fields_by_name['key_access_justifications_policy']._loaded_options = None
+    _globals['_CRYPTOKEY'].fields_by_name['key_access_justifications_policy']._serialized_options = b'\xe0A\x01'
+    _globals['_CRYPTOKEY']._loaded_options = None
+    _globals['_CRYPTOKEY']._serialized_options = b'\xeaAx\n!cloudkms.googleapis.com/CryptoKey\x12Sprojects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}'
+    _globals['_CRYPTOKEYVERSIONTEMPLATE'].fields_by_name['algorithm']._loaded_options = None
+    _globals['_CRYPTOKEYVERSIONTEMPLATE'].fields_by_name['algorithm']._serialized_options = b'\xe0A\x02'
+    _globals['_KEYOPERATIONATTESTATION'].fields_by_name['format']._loaded_options = None
+    _globals['_KEYOPERATIONATTESTATION'].fields_by_name['format']._serialized_options = b'\xe0A\x03'
+    _globals['_KEYOPERATIONATTESTATION'].fields_by_name['content']._loaded_options = None
+    _globals['_KEYOPERATIONATTESTATION'].fields_by_name['content']._serialized_options = b'\xe0A\x03'
+    _globals['_KEYOPERATIONATTESTATION'].fields_by_name['cert_chains']._loaded_options = None
+    _globals['_KEYOPERATIONATTESTATION'].fields_by_name['cert_chains']._serialized_options = b'\xe0A\x03'
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['name']._loaded_options = None
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['name']._serialized_options = b'\xe0A\x03'
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['protection_level']._loaded_options = None
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['protection_level']._serialized_options = b'\xe0A\x03'
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['algorithm']._loaded_options = None
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['algorithm']._serialized_options = b'\xe0A\x03'
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['attestation']._loaded_options = None
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['attestation']._serialized_options = b'\xe0A\x03'
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['create_time']._loaded_options = None
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['generate_time']._loaded_options = None
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['generate_time']._serialized_options = b'\xe0A\x03'
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['destroy_time']._loaded_options = None
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['destroy_time']._serialized_options = b'\xe0A\x03'
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['destroy_event_time']._loaded_options = None
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['destroy_event_time']._serialized_options = b'\xe0A\x03'
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['import_job']._loaded_options = None
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['import_job']._serialized_options = b'\xe0A\x03'
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['import_time']._loaded_options = None
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['import_time']._serialized_options = b'\xe0A\x03'
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['import_failure_reason']._loaded_options = None
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['import_failure_reason']._serialized_options = b'\xe0A\x03'
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['generation_failure_reason']._loaded_options = None
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['generation_failure_reason']._serialized_options = b'\xe0A\x03'
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['external_destruction_failure_reason']._loaded_options = None
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['external_destruction_failure_reason']._serialized_options = b'\xe0A\x03'
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['reimport_eligible']._loaded_options = None
+    _globals['_CRYPTOKEYVERSION'].fields_by_name['reimport_eligible']._serialized_options = b'\xe0A\x03'
+    _globals['_CRYPTOKEYVERSION']._loaded_options = None
+    _globals['_CRYPTOKEYVERSION']._serialized_options = b'\xeaA\xa6\x01\n(cloudkms.googleapis.com/CryptoKeyVersion\x12zprojects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_key_version}'
+    _globals['_PUBLICKEY']._loaded_options = None
+    _globals['_PUBLICKEY']._serialized_options = b'\xeaA\xaa\x01\n!cloudkms.googleapis.com/PublicKey\x12\x84\x01projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_key_version}/publicKey'
+    _globals['_IMPORTJOB'].fields_by_name['name']._loaded_options = None
+    _globals['_IMPORTJOB'].fields_by_name['name']._serialized_options = b'\xe0A\x03'
+    _globals['_IMPORTJOB'].fields_by_name['import_method']._loaded_options = None
+    _globals['_IMPORTJOB'].fields_by_name['import_method']._serialized_options = b'\xe0A\x02\xe0A\x05'
+    _globals['_IMPORTJOB'].fields_by_name['protection_level']._loaded_options = None
+    _globals['_IMPORTJOB'].fields_by_name['protection_level']._serialized_options = b'\xe0A\x02\xe0A\x05'
+    _globals['_IMPORTJOB'].fields_by_name['create_time']._loaded_options = None
+    _globals['_IMPORTJOB'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_IMPORTJOB'].fields_by_name['generate_time']._loaded_options = None
+    _globals['_IMPORTJOB'].fields_by_name['generate_time']._serialized_options = b'\xe0A\x03'
+    _globals['_IMPORTJOB'].fields_by_name['expire_time']._loaded_options = None
+    _globals['_IMPORTJOB'].fields_by_name['expire_time']._serialized_options = b'\xe0A\x03'
+    _globals['_IMPORTJOB'].fields_by_name['expire_event_time']._loaded_options = None
+    _globals['_IMPORTJOB'].fields_by_name['expire_event_time']._serialized_options = b'\xe0A\x03'
+    _globals['_IMPORTJOB'].fields_by_name['state']._loaded_options = None
+    _globals['_IMPORTJOB'].fields_by_name['state']._serialized_options = b'\xe0A\x03'
+    _globals['_IMPORTJOB'].fields_by_name['public_key']._loaded_options = None
+    _globals['_IMPORTJOB'].fields_by_name['public_key']._serialized_options = b'\xe0A\x03'
+    _globals['_IMPORTJOB'].fields_by_name['attestation']._loaded_options = None
+    _globals['_IMPORTJOB'].fields_by_name['attestation']._serialized_options = b'\xe0A\x03'
+    _globals['_IMPORTJOB']._loaded_options = None
+    _globals['_IMPORTJOB']._serialized_options = b'\xeaAx\n!cloudkms.googleapis.com/ImportJob\x12Sprojects/{project}/locations/{location}/keyRings/{key_ring}/importJobs/{import_job}'
+    _globals['_PROTECTIONLEVEL']._serialized_start = 6218
+    _globals['_PROTECTIONLEVEL']._serialized_end = 6324
+    _globals['_ACCESSREASON']._serialized_start = 6327
+    _globals['_ACCESSREASON']._serialized_end = 6754
+    _globals['_KEYRING']._serialized_start = 218
+    _globals['_KEYRING']._serialized_end = 399
+    _globals['_CRYPTOKEY']._serialized_start = 402
+    _globals['_CRYPTOKEY']._serialized_end = 1443
+    _globals['_CRYPTOKEY_LABELSENTRY']._serialized_start = 1095
+    _globals['_CRYPTOKEY_LABELSENTRY']._serialized_end = 1140
+    _globals['_CRYPTOKEY_CRYPTOKEYPURPOSE']._serialized_start = 1143
+    _globals['_CRYPTOKEY_CRYPTOKEYPURPOSE']._serialized_end = 1297
+    _globals['_CRYPTOKEYVERSIONTEMPLATE']._serialized_start = 1446
+    _globals['_CRYPTOKEYVERSIONTEMPLATE']._serialized_end = 1625
+    _globals['_KEYOPERATIONATTESTATION']._serialized_start = 1628
+    _globals['_KEYOPERATIONATTESTATION']._serialized_end = 2061
+    _globals['_KEYOPERATIONATTESTATION_CERTIFICATECHAINS']._serialized_start = 1852
+    _globals['_KEYOPERATIONATTESTATION_CERTIFICATECHAINS']._serialized_end = 1952
+    _globals['_KEYOPERATIONATTESTATION_ATTESTATIONFORMAT']._serialized_start = 1954
+    _globals['_KEYOPERATIONATTESTATION_ATTESTATIONFORMAT']._serialized_end = 2061
+    _globals['_CRYPTOKEYVERSION']._serialized_start = 2064
+    _globals['_CRYPTOKEYVERSION']._serialized_end = 4497
+    _globals['_CRYPTOKEYVERSION_CRYPTOKEYVERSIONALGORITHM']._serialized_start = 2969
+    _globals['_CRYPTOKEYVERSION_CRYPTOKEYVERSIONALGORITHM']._serialized_end = 3963
+    _globals['_CRYPTOKEYVERSION_CRYPTOKEYVERSIONSTATE']._serialized_start = 3966
+    _globals['_CRYPTOKEYVERSION_CRYPTOKEYVERSIONSTATE']._serialized_end = 4249
+    _globals['_CRYPTOKEYVERSION_CRYPTOKEYVERSIONVIEW']._serialized_start = 4251
+    _globals['_CRYPTOKEYVERSION_CRYPTOKEYVERSIONVIEW']._serialized_end = 4324
+    _globals['_PUBLICKEY']._serialized_start = 4500
+    _globals['_PUBLICKEY']._serialized_end = 4912
+    _globals['_IMPORTJOB']._serialized_start = 4915
+    _globals['_IMPORTJOB']._serialized_end = 6023
+    _globals['_IMPORTJOB_WRAPPINGPUBLICKEY']._serialized_start = 5533
+    _globals['_IMPORTJOB_WRAPPINGPUBLICKEY']._serialized_end = 5565
+    _globals['_IMPORTJOB_IMPORTMETHOD']._serialized_start = 5568
+    _globals['_IMPORTJOB_IMPORTMETHOD']._serialized_end = 5797
+    _globals['_IMPORTJOB_IMPORTJOBSTATE']._serialized_start = 5799
+    _globals['_IMPORTJOB_IMPORTJOBSTATE']._serialized_end = 5898
+    _globals['_EXTERNALPROTECTIONLEVELOPTIONS']._serialized_start = 6025
+    _globals['_EXTERNALPROTECTIONLEVELOPTIONS']._serialized_end = 6116
+    _globals['_KEYACCESSJUSTIFICATIONSPOLICY']._serialized_start = 6118
+    _globals['_KEYACCESSJUSTIFICATIONSPOLICY']._serialized_end = 6216

@@ -1,0 +1,19 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/ads/googleads/v17/enums/conversion_action_type.proto')
+_sym_db = _symbol_database.Default()
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n;google/ads/googleads/v17/enums/conversion_action_type.proto\x12\x1egoogle.ads.googleads.v17.enums"\x82\n\n\x18ConversionActionTypeEnum"\xe5\t\n\x14ConversionActionType\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\x0b\n\x07UNKNOWN\x10\x01\x12\x0b\n\x07AD_CALL\x10\x02\x12\x11\n\rCLICK_TO_CALL\x10\x03\x12\x18\n\x14GOOGLE_PLAY_DOWNLOAD\x10\x04\x12\x1f\n\x1bGOOGLE_PLAY_IN_APP_PURCHASE\x10\x05\x12\x10\n\x0cUPLOAD_CALLS\x10\x06\x12\x11\n\rUPLOAD_CLICKS\x10\x07\x12\x0b\n\x07WEBPAGE\x10\x08\x12\x10\n\x0cWEBSITE_CALL\x10\t\x12\x1d\n\x19STORE_SALES_DIRECT_UPLOAD\x10\n\x12\x0f\n\x0bSTORE_SALES\x10\x0b\x12\x1f\n\x1bFIREBASE_ANDROID_FIRST_OPEN\x10\x0c\x12$\n FIREBASE_ANDROID_IN_APP_PURCHASE\x10\r\x12\x1b\n\x17FIREBASE_ANDROID_CUSTOM\x10\x0e\x12\x1b\n\x17FIREBASE_IOS_FIRST_OPEN\x10\x0f\x12 \n\x1cFIREBASE_IOS_IN_APP_PURCHASE\x10\x10\x12\x17\n\x13FIREBASE_IOS_CUSTOM\x10\x11\x120\n,THIRD_PARTY_APP_ANALYTICS_ANDROID_FIRST_OPEN\x10\x12\x125\n1THIRD_PARTY_APP_ANALYTICS_ANDROID_IN_APP_PURCHASE\x10\x13\x12,\n(THIRD_PARTY_APP_ANALYTICS_ANDROID_CUSTOM\x10\x14\x12,\n(THIRD_PARTY_APP_ANALYTICS_IOS_FIRST_OPEN\x10\x15\x121\n-THIRD_PARTY_APP_ANALYTICS_IOS_IN_APP_PURCHASE\x10\x16\x12(\n$THIRD_PARTY_APP_ANALYTICS_IOS_CUSTOM\x10\x17\x12 \n\x1cANDROID_APP_PRE_REGISTRATION\x10\x18\x12#\n\x1fANDROID_INSTALLS_ALL_OTHER_APPS\x10\x19\x12\x15\n\x11FLOODLIGHT_ACTION\x10\x1a\x12\x1a\n\x16FLOODLIGHT_TRANSACTION\x10\x1b\x12\x11\n\rGOOGLE_HOSTED\x10\x1c\x12\x14\n\x10LEAD_FORM_SUBMIT\x10\x1d\x12\x0e\n\nSALESFORCE\x10\x1e\x12\x12\n\x0eSEARCH_ADS_360\x10\x1f\x12$\n SMART_CAMPAIGN_AD_CLICKS_TO_CALL\x10 \x12%\n!SMART_CAMPAIGN_MAP_CLICKS_TO_CALL\x10!\x12!\n\x1dSMART_CAMPAIGN_MAP_DIRECTIONS\x10"\x12 \n\x1cSMART_CAMPAIGN_TRACKED_CALLS\x10#\x12\x10\n\x0cSTORE_VISITS\x10$\x12\x14\n\x10WEBPAGE_CODELESS\x10%\x12\x1c\n\x18UNIVERSAL_ANALYTICS_GOAL\x10&\x12#\n\x1fUNIVERSAL_ANALYTICS_TRANSACTION\x10\'\x12\x1d\n\x19GOOGLE_ANALYTICS_4_CUSTOM\x10(\x12\x1f\n\x1bGOOGLE_ANALYTICS_4_PURCHASE\x10)B\xf3\x01\n"com.google.ads.googleads.v17.enumsB\x19ConversionActionTypeProtoP\x01ZCgoogle.golang.org/genproto/googleapis/ads/googleads/v17/enums;enums\xa2\x02\x03GAA\xaa\x02\x1eGoogle.Ads.GoogleAds.V17.Enums\xca\x02\x1eGoogle\\Ads\\GoogleAds\\V17\\Enums\xea\x02"Google::Ads::GoogleAds::V17::Enumsb\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.ads.googleads.v17.enums.conversion_action_type_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n"com.google.ads.googleads.v17.enumsB\x19ConversionActionTypeProtoP\x01ZCgoogle.golang.org/genproto/googleapis/ads/googleads/v17/enums;enums\xa2\x02\x03GAA\xaa\x02\x1eGoogle.Ads.GoogleAds.V17.Enums\xca\x02\x1eGoogle\\Ads\\GoogleAds\\V17\\Enums\xea\x02"Google::Ads::GoogleAds::V17::Enums'
+    _globals['_CONVERSIONACTIONTYPEENUM']._serialized_start = 96
+    _globals['_CONVERSIONACTIONTYPEENUM']._serialized_end = 1378
+    _globals['_CONVERSIONACTIONTYPEENUM_CONVERSIONACTIONTYPE']._serialized_start = 125
+    _globals['_CONVERSIONACTIONTYPEENUM_CONVERSIONACTIONTYPE']._serialized_end = 1378
