@@ -1,0 +1,10 @@
+fgdata/__init__.py,sha256=peWthwIJwekXwE9UgpuhTQiG_HFBv7ucms0P667PKLY,117
+fgdata/futures/__init__.py,sha256=F1fDzXP1a2NqwjwzZDpcxezWepFz9PV9qIIm02A-2zU,68
+fgdata/futures/future_news.py,sha256=HZlNlHxzsAKaFDMKoroZc5VXiXvy38_D-rCIar6oUoU,1484
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/futures/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/futures/test_future_news.py,sha256=skMkE85tpINrRJJBIiQBtsETkXO-OeSkuyIwVfpvOA8,318
+fgdata-0.1.1.dist-info/METADATA,sha256=iZV1eZ4HltQ1ue_hpahbx5yBW0TPiExxJoh3aILo5h8,794
+fgdata-0.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+fgdata-0.1.1.dist-info/top_level.txt,sha256=V5GIIXJapEMHUvUzWuLAQDXYQ3O_u9Piq0I_M838xVo,12
+fgdata-0.1.1.dist-info/RECORD,,
