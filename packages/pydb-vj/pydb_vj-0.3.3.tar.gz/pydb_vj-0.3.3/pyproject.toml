@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "pydb-vj"
+version = "0.3.3"
+description = "SCDB with json"
+authors = ["Drag-GameStudio <sinica911@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    {include="pydb_vj"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
