@@ -1,0 +1,4 @@
+# Perplexity Provider Dependencies
+# Uses direct API calls (https://api.perplexity.ai)
+requests>=2.31.0  # For API requests
+aiohttp>=3.9.0   # For async API requests 
