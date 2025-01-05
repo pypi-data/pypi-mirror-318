@@ -1,0 +1,170 @@
+Metadata-Version: 2.1
+Name: ChemDescriptors
+Version: 0.0.2
+Summary: Chemical descriptors is a powerful Python package facilitating calculation of fingerprints for CSV files
+Home-page: https://github.com/AhmedAlhilal14/chemical-descriptors.git
+Author: Ahmed Alhilal
+Author-email: aalhilal@udel.edu
+License: MIT
+Keywords: Cheminformatics,Molecular Descriptors,Fingerprints,RDKit,Mordred,Padelpy
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENCE.txt
+Requires-Dist: rdkit
+Requires-Dist: mordred
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: padelpy
+Requires-Dist: molfeat
+Requires-Dist: matplotlib-venn
+
+# Python Library: `Chemical_Descriptors`
+
+This library provides various functions for calculating molecular descriptors and fingerprints in cheminformatics. It supports the calculation of a wide range of molecular descriptors and fingerprints, such as RDKit, Lipinski, Morgan, Mordred, and more.
+
+## Importance of Fingerprint Types:
+- **Distinct Representation:** Different fingerprint types capture various aspects of a molecule’s structure, allowing for versatile molecular comparisons.
+- **Diverse Applications:** Depending on the task (such as similarity searching, classification, or clustering), choosing the right fingerprint type ensures better performance in chemical analysis and predictive modeling.
+- **Accuracy in Modeling:** The right fingerprint type can significantly improve the accuracy of machine learning models and predictions based on molecular features.
+
+## Number of Fingerprints:
+The library supports a wide variety of fingerprint types, enabling a range of analyses for molecular datasets.
+
+## Functions
+
+### **cal_rdkit_descriptor**(input_file, output_file, smiles_column)
+
+**Description:**  
+This function calculates RDKit molecular descriptors for molecules specified in a CSV file (`input_file`) using SMILES strings from a specified column (`smiles_column`). The calculated descriptors are appended as additional columns to the original data and saved in a new CSV file named `<input_file_name>_rdkit_descriptor.csv`.
+
+**Parameters:**
+- `input_file` (str): Path to the input CSV file containing molecular data in SMILES format.
+- `output_file` (str): Path where the output CSV file will be saved (optional if using the default naming convention).
+- `smiles_column` (str): The name of the column in the input CSV file that contains the SMILES strings.
+
+**Output:**  
+The output will be saved as a CSV file named `<input_file_name>_rdkit_descriptor.csv`.
+
+---
+
+### **cal_lipinski_descriptors**(file_path, smiles_column, verbose=False)
+
+**Description:**  
+This function calculates Lipinski descriptors for molecules specified in a CSV file (`file_path`) using SMILES strings from a specified column (`smiles_column`). It automatically saves the calculated descriptors to an output file named `<input_file_name>_lipinski_descriptors.csv`.
+
+**Parameters:**
+- `file_path` (str): Path to the input CSV file containing molecular data in SMILES format.
+- `smiles_column` (str): The name of the column in the input CSV file that contains the SMILES strings.
+- `verbose` (bool, optional): If `True`, the function will print additional processing details. Default is `False`.
+
+**Output:**  
+The output will be saved as a CSV file named `<input_file_name>_lipinski_descriptors.csv`.
+
+---
+
+### **cal_morgan_fpts**(input_file, smiles_column)
+
+**Description:**  
+Calculates Morgan fingerprints for molecules specified in a CSV file (`input_file`) using SMILES strings from a specified column (`smiles_column`). The function saves the calculated fingerprints to an output file named `<input_file_name>_calculate_morgan_fpts.csv`.
+
+**Parameters:**
+- `input_file` (str): Path to the input CSV file containing molecular data in SMILES format.
+- `smiles_column` (str): The name of the column in the input CSV file that contains the SMILES strings.
+
+**Output:**  
+The output will be saved as a CSV file named `<input_file_name>_calculate_morgan_fpts.csv`.
+
+---
+
+### **cal_mordred_descriptors**(input_file, smiles_column)
+
+**Description:**  
+Computes Mordred descriptors for molecules specified in a CSV file (`input_file`) using SMILES strings from a specified column (`smiles_column`). The function saves the computed descriptors to an output file named `<input_file_name>_mordred_descriptors.csv`.
+
+**Parameters:**
+- `input_file` (str): Path to the input CSV file containing molecular data in SMILES format.
+- `smiles_column` (str): The name of the column in the input CSV file that contains the SMILES strings.
+
+**Output:**  
+The output will be saved as a CSV file named `<input_file_name>_mordred_descriptors.csv`.
+
+---
+
+### **calculate_selected_fingerprints**(input_file, smiles_column)
+
+**Description:**  
+This function calculates 12 different types of molecular fingerprints. The supported fingerprints include:
+
+- `AtomPairs2DCount`
+- `AtomPairs2D`
+- `EState`
+- `CDKextended`
+- `CDK`
+- `CDKgraphonly`
+- `KlekotaRothCount`
+- `KlekotaRoth`
+- `MACCS`
+- `PubChem`
+- `SubstructureCount`
+- `Substructure`
+
+Each enhanced dataset with fingerprints is saved as separate CSV files, appended with the respective fingerprint type name.
+
+**Parameters:**
+- `input_file` (str): Path to the input CSV file containing molecular data in SMILES format.
+- `smiles_column` (str): The name of the column in the input CSV file that contains the SMILES strings.
+
+**Output:**  
+Each fingerprint type will be saved as a separate CSV file with the respective fingerprint type name appended.  
+For example: `<input_file_name>_AtomPairs2DCount.csv`.
+
+---
+
+### **fps**(filename, smiles_column, fp_type)
+
+**Description:**  
+This function calculates a specified molecular fingerprint (`fp_type`) for each molecule in a CSV file. The user must provide:
+- The CSV file (`filename`)
+- The SMILES column name in the file (`smiles_column`)
+- One of the following fingerprint types:
+
+  - `maccs`
+  - `avalon`
+  - `pattern`
+  - `layered`
+  - `map4`
+  - `secfp`
+  - `erg`
+  - `estate`
+  - `avalon-count`
+  - `ecfp`
+  - `fcfp`
+  - `topological`
+  - `atompair`
+  - `rdkit`
+  - `ecfp-count`
+  - `fcfp-count`
+  - `topological-count`
+  - `atompair-count`
+  - `rdkit-count`
+
+### Parameters:
+- `filename` (str): Path to the input CSV file containing molecular data in SMILES format.
+- `smiles_column` (str): The name of the column in the input CSV file that contains the SMILES strings.
+- `fp_type` (str): The type of molecular fingerprint to calculate (choose from the list of fingerprint types above).
+
+### Output:
+The output will be saved as a CSV file named `<input_file_name>_<fp_type>.csv` depending on the fingerprint type chosen.
+
+
+Ahmed Alhilal
+=============
+
+0.0.2 (05/01/2025)
+-------------------
+- First Release
