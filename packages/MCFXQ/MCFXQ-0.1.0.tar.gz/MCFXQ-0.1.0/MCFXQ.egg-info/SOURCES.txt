@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+MCFXQ/__init__.py
+MCFXQ/music.py
+MCFXQ.egg-info/PKG-INFO
+MCFXQ.egg-info/SOURCES.txt
+MCFXQ.egg-info/dependency_links.txt
+MCFXQ.egg-info/requires.txt
+MCFXQ.egg-info/top_level.txt
