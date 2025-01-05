@@ -1,0 +1,65 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: 'Publish build'
+        required: true
+        default: true
+        type: boolean
+
+      overrideVersion:
+        description: 'Override version'
+        required: false
+        type: string
+
+env:
+  FORCE_COLOR: "1"
+
+jobs:
+  release:
+    permissions:
+      contents: read
+      id-token: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Setup UV
+        uses: astral-sh/setup-uv@v5
+
+      - name: Install nox
+        run: uv pip install nox --system
+
+      - name: Set version from tag
+        if: github.event_name == 'release' && startsWith(github.ref, 'refs/tags/v')
+        run: |
+          TAG=${{ github.event.release.tag_name }}
+          echo "SETUPTOOLS_SCM_PRETEND_VERSION=${TAG#v}" >> "$GITHUB_ENV"
+
+      - name: Set version manually
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          echo "SETUPTOOLS_SCM_PRETEND_VERSION=${{ inputs.overrideVersion }}" >> "$GITHUB_ENV"
+
+      - name: Build package
+        run: nox -s build
+
+        # waiting for the release of native twine support: https://github.com/pypa/twine/pull/1194
+      - name: Publish release distribution to PyPI
+        uses: pypa/gh-action-pypi-publish@67339c736fd9354cd4f8cb0b744f2b82a74b5c70
+        if: github.event_name == 'release' || (github.event_name == 'workflow_dispatch' && inputs.publish)
+        with:
+          packages-dir: dist/
+          print-hash: true

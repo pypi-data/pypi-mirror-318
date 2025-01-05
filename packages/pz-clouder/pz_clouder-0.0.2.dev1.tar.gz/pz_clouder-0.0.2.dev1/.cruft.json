@@ -1,0 +1,23 @@
+{
+  "template": "/Users/oded/prisma/workspace/py-template",
+  "commit": "0ed0431f800a94cc7f0affd610d27b15c9b8c91b",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "clouder",
+      "package_name": "clouder",
+      "friendly_name": "Clouder",
+      "author": "PrismaPhotonics",
+      "email": "evgeny.ilievsky@prismaphotonics.com",
+      "github_user": "PrismaPhotonics",
+      "version": "0.0.0",
+      "copyright_year": "2024",
+      "license": "Copyright",
+      "docs": false,
+      "short_description": "Cloud wrapper for ML workloads",
+      "development_status": "Development Status :: 2 - Pre-Alpha",
+      "_template": "/Users/oded/prisma/workspace/py-template"
+    }
+  },
+  "directory": null
+}
