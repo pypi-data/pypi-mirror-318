@@ -1,0 +1,9 @@
+telecomcredit/__init__.py,sha256=tbcT36T1Hog0akDVlmnEECgA17ydaFEsw-tDRShJYag,95
+telecomcredit/_base.py,sha256=GHNfnB1-8zxgcZw6AvsJmL3Y1R33gYWE8sgyJ0nvJL0,302
+telecomcredit/_client.py,sha256=5UYqrQhU3jLMwCtIahKFfNnz9Pwy2dAnk9tnToaaEUc,659
+telecomcredit/_credit_card.py,sha256=HOGohda1ms9hw4XL1MPGFYdgCjuey4CZtB1ns1-yd8I,1319
+telecomcredit/_webhook.py,sha256=24NDLDhklxbxAZ81RNTrM9xLAhM1QZTiAQPxoFjRlK0,745
+telecomcredit-1.0.0.dist-info/METADATA,sha256=famAOhXKhpA0R-RyPYv-YqRNufRRstfi0LSZTxogv94,579
+telecomcredit-1.0.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+telecomcredit-1.0.0.dist-info/top_level.txt,sha256=b44MZ52-lCmayIWNrthMH6iiKPCxPmXr1UC-BF1c0RQ,14
+telecomcredit-1.0.0.dist-info/RECORD,,
