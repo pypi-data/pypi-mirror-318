@@ -1,0 +1,5 @@
+setuptools
+numpy
+Pillow
+fonttools
+opencv-contrib-python

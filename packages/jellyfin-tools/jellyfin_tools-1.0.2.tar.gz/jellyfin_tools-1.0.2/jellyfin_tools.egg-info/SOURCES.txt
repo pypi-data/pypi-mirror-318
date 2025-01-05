@@ -1,0 +1,18 @@
+LICENSE.txt
+README.md
+setup.py
+cli/__init__.py
+cli/cli.py
+cli/config.py
+cli/image.py
+cli/fonts/Prima Sans Bold.otf
+cli/fonts/__init__.py
+install/__init__.py
+install/config.py
+install/fix_install.py
+jellyfin_tools.egg-info/PKG-INFO
+jellyfin_tools.egg-info/SOURCES.txt
+jellyfin_tools.egg-info/dependency_links.txt
+jellyfin_tools.egg-info/entry_points.txt
+jellyfin_tools.egg-info/requires.txt
+jellyfin_tools.egg-info/top_level.txt
