@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+PyCrawlBot/PyCrawlBot.py
+PyCrawlBot/__init__.py
+PyCrawlBot.egg-info/PKG-INFO
+PyCrawlBot.egg-info/SOURCES.txt
+PyCrawlBot.egg-info/dependency_links.txt
+PyCrawlBot.egg-info/requires.txt
+PyCrawlBot.egg-info/top_level.txt
