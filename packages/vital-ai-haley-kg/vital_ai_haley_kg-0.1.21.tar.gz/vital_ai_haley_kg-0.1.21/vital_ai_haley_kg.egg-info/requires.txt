@@ -1,0 +1,3 @@
+vital-ai-haley>=0.1.7
+vital-ai-haley-question>=0.1.6
+vital-ai-vitalsigns>=0.1.21
