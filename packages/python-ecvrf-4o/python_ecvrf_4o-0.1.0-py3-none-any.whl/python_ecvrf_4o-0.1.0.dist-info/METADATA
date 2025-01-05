@@ -1,0 +1,103 @@
+Metadata-Version: 2.1
+Name: python-ecvrf-4o
+Version: 0.1.0
+Summary: An Elliptic Curve Verifiable Random Function (ECVRF) library, initially designed for Omne.
+Home-page: https://github.com/OmneDAO/python-ecvrf
+Author: OmneDAO Foundation
+Author-email: leadership@omne.foundation
+License: MIT
+Project-URL: Documentation, https://github.com/OmneDAO/python-ecvrf#readme
+Project-URL: Source, https://github.com/OmneDAO/python-ecvrf
+Project-URL: Tracker, https://github.com/OmneDAO/python-ecvrf/issues
+Keywords: ecvrf cryptography vrf elliptic-curve verifiable-random-function
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Security :: Cryptography
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cryptography<4.0,>=3.4.7
+Requires-Dist: PyCryptodome<4.0,>=3.10.1
+Requires-Dist: ecdsa<1.0,>=0.17.0
+Provides-Extra: dev
+Requires-Dist: pytest<7.0,>=6.2.4; extra == "dev"
+Requires-Dist: flake8<4.0,>=3.8.4; extra == "dev"
+Requires-Dist: black<22.0,>=21.7b0; extra == "dev"
+Requires-Dist: isort<6.0,>=5.8.0; extra == "dev"
+Requires-Dist: mypy<1.0,>=0.910; extra == "dev"
+Requires-Dist: sphinx<5.0,>=4.2.0; extra == "dev"
+Requires-Dist: sphinx_rtd_theme<1.0,>=0.5.0; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx<5.0,>=4.2.0; extra == "docs"
+Requires-Dist: sphinx_rtd_theme<1.0,>=0.5.0; extra == "docs"
+
+# ECVRF Library
+
+A custom Elliptic Curve Verifiable Random Function (ECVRF) implementation.
+
+## Features
+
+- Key Generation and Management
+- Proof Generation and Verification
+- Hash-to-Curve Mapping
+- Comprehensive Testing Suite
+- Security Audits and Static Analysis
+
+## Installation
+
+```bash
+pip install -e .
+```
+
+## Usage
+```python
+from ecvrf import KeyManager, VRF, VRFVerifier
+```
+
+# Initialize KeyManager
+```python
+km = KeyManager()
+```
+
+# Generate Key Pair
+```python
+private_pem, public_pem = km.generate_keypair()
+```
+
+# Initialize VRF and Verifier
+```python
+vrf = VRF(km)
+verifier = VRFVerifier(km)
+```
+
+# Input Data
+```python
+alpha = b"Sample input for ECVRF."
+```
+
+# Generate Proof and Beta
+```python
+beta, proof = vrf.prove(private_pem, alpha)
+```
+
+# Verify Proof
+```python
+is_valid = verifier.verify(public_pem, alpha, beta, proof)
+print(f"Verification successful: {is_valid}")
+```
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request.
+
+## License
+
+MIT License
