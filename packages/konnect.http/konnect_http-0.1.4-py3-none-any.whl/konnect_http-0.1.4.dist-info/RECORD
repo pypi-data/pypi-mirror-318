@@ -1,0 +1,16 @@
+konnect/http/__init__.py,sha256=1wdgAIYjjKJtW_lwxRJG6y4eiR0OKhWXBwDpFRnhttI,225
+konnect/http/authenticators.py,sha256=RfdO5iD8mer9YIK63B-pDjtgd9HAADQDnsMNZY3qXBw,3187
+konnect/http/certificates.py,sha256=FmzB16LsPtPzv259CaN7uNy3h2I18u2Fk2esjbG5bTU,1125
+konnect/http/exceptions.py,sha256=ammumby_nnJuPMBXmbTltRmWBlZeEp0XANa0uEgvcTI,503
+konnect/http/headers.py,sha256=JO-KhL9c1rUHLbAYyOUmrWayN7gk5g9Oshj0eQRM8lI,218
+konnect/http/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+konnect/http/request.py,sha256=vsafYBPTuYaMdEfFGzO-cPVEmnxmnkmgJATkDlTGVLA,15462
+konnect/http/response.py,sha256=TX4hfGYYzXNXwrlPAWfwgK1zLA3knlAYIN8keEDC204,5415
+konnect/http/session.py,sha256=qmBjp31L3YuYNQAZ6TWLsRDH22r_MkX4XBd_qbyqgpE,6142
+konnect/http/cookies/__init__.py,sha256=CoRhCKOnLmFqqQ-OX7ANf-zpHZOPxi1cqNLrNirP8SQ,145
+konnect/http/cookies/cookie.py,sha256=GLCbxPB3HRIYJs1Co9Xwf5jZjmWSRWCYIDgyl_H5I_k,3781
+konnect/http/cookies/dates.py,sha256=6EVd0zQD0Df2lEDk7iabzgEVlUkBToynek3TBXc6seE,2692
+konnect/http/cookies/set_cookie_parser.py,sha256=jmTaDL5SMi9KSo2S92titXDKPyVtU4WiL14nEGZOqZE,3876
+konnect_http-0.1.4.dist-info/WHEEL,sha256=CpUCUxeHQbRN5UGRQHYRJorO5Af-Qy_fHMctcQ8DSGI,82
+konnect_http-0.1.4.dist-info/METADATA,sha256=2Z56Gw6vlPsg5lTQNkDOyJxuHABRiQRq6XplikSqPSk,435
+konnect_http-0.1.4.dist-info/RECORD,,
