@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: ptpl-transcoder
+Version: 1.0.0
+Summary: A CLI tool to to decode .ptpl files into .xml and encode .xml files back into .ptpl format.
+Home-page: https://github.com/KRWCLASSIC/PTPL-CLI-Transcoder
+Author: KRW CLASSIC
+Author-email: classic.krw@gmail.com
+Requires-Dist: lxml
+
