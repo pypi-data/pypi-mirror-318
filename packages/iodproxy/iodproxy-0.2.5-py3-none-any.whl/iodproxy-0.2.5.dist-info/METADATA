@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: iodproxy
+Version: 0.2.5
+Summary: A proxy for IOD MCP servers
+License-File: LICENSE
+Requires-Python: >=3.12
+Requires-Dist: logfire>=2.11.1
+Requires-Dist: omproxy>=0.3.0
+Description-Content-Type: text/markdown
+
+# IOD Proxy
+
+A proxy adding telemetry with logfire to the MCP protocol.
+
+it enables to provide lively information about our MCP servers, bring down unhealthy MCP or MCP with outage, report anonymous usage statitistics and fix bugs and issues.
+
+## Usage
+
+```bash
+uvx iodproxy --name mcp-server-name command arg1 arg2
+```
