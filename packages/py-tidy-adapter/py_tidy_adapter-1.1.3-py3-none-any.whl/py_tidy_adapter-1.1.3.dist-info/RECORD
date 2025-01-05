@@ -1,0 +1,11 @@
+py_tidy_adapter/__init__.py,sha256=syZtwgNJB-O5ohBtN1Z2nv9a8E555XtDGgjaXy6mFAY,839
+py_tidy_adapter/adapter.py,sha256=B8m75KebETFin4hYfGEFWE463Jg9XMum9jdb_O3ka_I,45485
+py_tidy_adapter/bsc_elements.py,sha256=KuiHXyk59XTRSutlAiC9HrPFp1QRlwKdsogs_mM3dcg,21091
+py_tidy_adapter/class_business.py,sha256=tCUmiZYJTM5cRO_GVSfat9tJ9Lt7Rrq90l-4qrUGL8g,15441
+py_tidy_adapter/document.py,sha256=E4BTAA-2mwVe7vKu8-apssekuqp9zsqmKzqwMQ8nbUA,23462
+py_tidy_adapter/exception.py,sha256=ZWUrypI5MW2TWMLA2J2i3nmaeqyMvgwLH2CLOdlS1vU,301
+py_tidy_adapter/tidy.py,sha256=6rmrt79UiNSZaRBms2AVMI_e2qAKkq3tp2D5JF8PcBU,12479
+py_tidy_adapter-1.1.3.dist-info/METADATA,sha256=iRPPBfXOgbNs8fRv3aujG3yzZTiETcuQl2y8XDIAXQU,300
+py_tidy_adapter-1.1.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+py_tidy_adapter-1.1.3.dist-info/top_level.txt,sha256=uxijB7WWXIeyCuIHZTBv5u3W9QiPtIp6KRdOGS0rrO4,16
+py_tidy_adapter-1.1.3.dist-info/RECORD,,
