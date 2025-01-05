@@ -1,0 +1,3 @@
+konsole -e
+# more common: gnome-terminal --geometry=120x40+100+200 --
+# I like this better: konsole -e
