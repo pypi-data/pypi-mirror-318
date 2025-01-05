@@ -1,0 +1,11 @@
+_scs_direct.cpython-313-x86_64-linux-musl.so,sha256=qnw_K-sFhc3FlsmPR4yo3NOj-3QiNvH0ym_Vu0EIR8Q,140969
+_scs_indirect.cpython-313-x86_64-linux-musl.so,sha256=C9RN20guP0Oh56QNaWd66nX4-BzfzlTKzxYpm0qif5E,120473
+scs.libs/libopenblasp-r0-79c4374e.3.28.so,sha256=Gt3fLyLK4FuVoiXbxe_f5uR7lWWwwKTMa-XeI9nyPwI,33060881
+scs.libs/libgcc_s-a0b57c20.so.1,sha256=XPAr2giQZFaQKDEig3i_sQM7zfbaGkuhwmZ9ryvu-Vk,148041
+scs.libs/libgfortran-a63d0bbe.so.5.0.0,sha256=_lAhX2HGq403xGW24BB4GZT3oy2-T_gmFxmf8fgVs7c,3187713
+scs.libs/libquadmath-2ce5a29f.so.0.0.0,sha256=1wBSZXfNozJ-X6g11Gjaimnng7VoZhGbAFnp7gKvmL4,293489
+scs/__init__.py,sha256=UVvImr-amS2iP4PjeNZp2jar0y3Xu8IjthfEJTRkZic,6136
+scs-3.2.7.dist-info/METADATA,sha256=ZbYsyDzwxeMH9THdg0u_uKGIYkPaj3rv58zFy31qvVE,2084
+scs-3.2.7.dist-info/RECORD,,
+scs-3.2.7.dist-info/WHEEL,sha256=16P1dVoUbm5uCnX4_0HA4A4M5fz_mdKD_eflEQTA39E,98
+scs-3.2.7.dist-info/LICENSE,sha256=lxIl5g3kUJCLfZjb72Z7K6XviabPAckIClya6BP-0Bg,1075
