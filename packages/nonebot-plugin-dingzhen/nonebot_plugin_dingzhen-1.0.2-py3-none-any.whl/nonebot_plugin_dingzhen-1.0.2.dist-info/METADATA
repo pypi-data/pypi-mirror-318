@@ -1,0 +1,18 @@
+Metadata-Version: 2.3
+Name: nonebot_plugin_dingzhen
+Version: 1.0.2
+Summary: 一个nonebot2的QQ丁真语音生成器
+Home-page: https://github.com/iidamie/https://github.com/Pochinki98/nonebot_plugin_dingzhen
+Author: Noobie III
+Author-email: admin@noobie.top
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: httpx (>=0.24.0)
+Requires-Dist: nonebot2 (>=2.0.0-beta.1)
+Project-URL: Repository, https://github.com/iidamie/https://github.com/Pochinki98/nonebot_plugin_dingzhen
