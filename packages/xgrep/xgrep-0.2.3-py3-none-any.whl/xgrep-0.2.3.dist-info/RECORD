@@ -1,0 +1,13 @@
+xgrep/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xgrep/cell.py,sha256=sUTI5LCy97vCM7R_-jdKdaF6lSJ3HXze5ntEspCvq_A,1071
+xgrep/cli.py,sha256=UZvNB654P1i4J0DsOJHOHon_cmh8ZqfwKOc_GNpvKAQ,6202
+xgrep/col.py,sha256=auG4Sh9YXI4Bl01mKnA1JvzquTpBNl4GtZDkxuLUhuo,348
+xgrep/excel.py,sha256=nHbPC88NBqTc0nYM963WB8dcMolEb6nIGQB6BJGHQoE,361
+xgrep/grid.py,sha256=U7_DUIMu8CrhPNKXaB4YpVFOnZfUCaxynvoPSgqXFVg,2379
+xgrep/match.py,sha256=Bq9zjycys8fjxPXuesz8i-xHt_IcnYzgEIgdmwW__zg,5821
+xgrep/row.py,sha256=FlgO7WUC0sCDcFowqkkV0B7zjvH94-Kxc53VkYQxvgw,491
+xgrep-0.2.3.dist-info/METADATA,sha256=i9ZUZeSueuKPHnVBkOcMLGvj0Eh2rzW5Pfg6fNkBAmc,5933
+xgrep-0.2.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+xgrep-0.2.3.dist-info/entry_points.txt,sha256=uJfsSbTfkgFoyrLhMfWtJkhIUwxERd1XnylB3igSHZE,40
+xgrep-0.2.3.dist-info/licenses/LICENSE,sha256=p9L4S9TN9Rqz7KeiraRjySlpG7u_fV0Prw1PJnapum0,1060
+xgrep-0.2.3.dist-info/RECORD,,
