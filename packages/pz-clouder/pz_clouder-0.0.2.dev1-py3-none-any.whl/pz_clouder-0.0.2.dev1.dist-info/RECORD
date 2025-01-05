@@ -1,0 +1,12 @@
+pz_clouder/__init__.py,sha256=EVS7jow8eofMM_YQJYayzp2VTjRGTAWvDDfQhKYIl_A,18
+pz_clouder/_version.py,sha256=FVb6l2m5UDPho0l9yH8nSOGbwLvN4vU_02fCV42jysA,424
+pz_clouder/pz_aws_cloudwatch.py,sha256=fBiQuMH1O8y2FBwpk9FTJFAcrPx8GrnEqCDnrv0ndK4,2691
+pz_clouder/pz_aws_ec2.py,sha256=60Dbua4MygB2-g8Id7Mg_XAOwCB8dDoknl4sdoiqrbQ,1836
+pz_clouder/pz_aws_master.py,sha256=WJ9CdtZ_j2xHp9eUDPSlMRWxFgst_z67tt8fAObhAIg,636
+pz_clouder/pz_aws_s3.py,sha256=reskXjRVdhudFjsaqymqssFPqve7wisYa82l_cd1yUA,478
+pz_clouder/pz_aws_sqs.py,sha256=SGyVdjURs_dPGSPUl-aVaa6bMssrrZLi_Iude86GbIs,879
+pz_clouder-0.0.2.dev1.dist-info/LICENSE,sha256=5djWISpYhprGFUKMrntZjHiiFyVMa5E8vl12DAN6Mk4,11385
+pz_clouder-0.0.2.dev1.dist-info/METADATA,sha256=6ddT1t-LnKmENB1wFME93W9zcWCIwOk0y2cRnuv3oNU,3492
+pz_clouder-0.0.2.dev1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pz_clouder-0.0.2.dev1.dist-info/top_level.txt,sha256=aGLxHXPbkiR0cCrreVNg1-afhREGEy_26PuOHgPi2_I,11
+pz_clouder-0.0.2.dev1.dist-info/RECORD,,
