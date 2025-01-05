@@ -1,0 +1,9 @@
+pyproject.toml
+setup.py
+transcoder.py
+ptpl_transcoder.egg-info/PKG-INFO
+ptpl_transcoder.egg-info/SOURCES.txt
+ptpl_transcoder.egg-info/dependency_links.txt
+ptpl_transcoder.egg-info/entry_points.txt
+ptpl_transcoder.egg-info/requires.txt
+ptpl_transcoder.egg-info/top_level.txt
