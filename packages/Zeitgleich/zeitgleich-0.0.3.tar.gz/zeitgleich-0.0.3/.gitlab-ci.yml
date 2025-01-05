@@ -1,0 +1,36 @@
+image: docker
+
+services:
+  - docker:dind
+
+stages:
+- build
+- test
+
+variables:
+  DOCKER_TLS_CERTDIR: "/certs"
+  CONTAINER_IMAGE: "pandastso:latest"
+  CONTAINER_NAME: "pandastso"
+
+before_script:
+  - hostname
+  - docker -v
+  - docker info
+
+build:
+  stage: build
+  tags:
+    - docker
+    - build
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+  script:
+    - docker build --pull --build-arg CI_JOB_TOKEN=$CI_JOB_TOKEN -t $CONTAINER_IMAGE .
+
+test:
+  stage: test
+  tags:
+    - docker
+    - test
+  script:
+    - docker run --rm $CONTAINER_IMAGE make test
