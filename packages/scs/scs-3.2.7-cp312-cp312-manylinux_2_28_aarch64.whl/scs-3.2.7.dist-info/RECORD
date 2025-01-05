@@ -1,0 +1,9 @@
+_scs_direct.cpython-312-aarch64-linux-gnu.so,sha256=NC0a1nDjlb_QgR9Mzihdrk2WV86i2x8st7uuHSoAph4,394881
+_scs_indirect.cpython-312-aarch64-linux-gnu.so,sha256=ZmwwVIUEXCKTHdtQs8OOnVMRMZIYaSfhhBxAn-vxmxA,329329
+scs.libs/libopenblas-r0-e9c9f581.3.15.so,sha256=PfcP8xg_RXp3dcjLPcem-2mhNtMsTgGVdWRy9n2cUzo,10044585
+scs.libs/libgfortran-4435c6db.so.5.0.0,sha256=Egr_HDqCMbODwSFU6DBJ8Qmu19X8kng9iQPY19ANu_M,1484433
+scs/__init__.py,sha256=UVvImr-amS2iP4PjeNZp2jar0y3Xu8IjthfEJTRkZic,6136
+scs-3.2.7.dist-info/METADATA,sha256=ZbYsyDzwxeMH9THdg0u_uKGIYkPaj3rv58zFy31qvVE,2084
+scs-3.2.7.dist-info/RECORD,,
+scs-3.2.7.dist-info/WHEEL,sha256=Gd_L6-Rh7KUwJ2glnQkB8funWv1gS_7Iixacg5gYSiE,100
+scs-3.2.7.dist-info/LICENSE,sha256=lxIl5g3kUJCLfZjb72Z7K6XviabPAckIClya6BP-0Bg,1075
