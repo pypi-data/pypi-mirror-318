@@ -1,0 +1,8 @@
+rdkit
+mordred
+pandas
+numpy
+matplotlib
+padelpy
+molfeat
+matplotlib-venn
