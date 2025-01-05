@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: offlinesec-connector
+Version: 0.0.1
+Summary: Offline Security Connector
+Home-page: https://offlinesec.com
+Author: Offline Security
+Author-email: info@offlinesec.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# offlinesec_connector
+RFC Connector for offlinesec_client
+
+
