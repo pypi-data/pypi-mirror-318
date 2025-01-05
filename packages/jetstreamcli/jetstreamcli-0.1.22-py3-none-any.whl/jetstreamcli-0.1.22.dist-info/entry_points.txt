@@ -1,0 +1,3 @@
+[console_scripts]
+jetstream=jetstreamcli.jetstream:cli
+
