@@ -1,0 +1,63 @@
+Metadata-Version: 2.4
+Name: EvoLite
+Version: 0.0.1
+Summary: An Evolutionary Approach to Neural Network Compression
+Project-URL: Documentation, https://brunofaria1322.github.io/EvoLite/
+Project-URL: Issues, https://github.com/brunofaria1322/EvoLite/issues
+Project-URL: Source, https://github.com/brunofaria1322/EvoLite
+Author-email: Bruno Faria <brunofaria@dei.uc.pt>
+Maintainer-email: Bruno Faria <brunofaria@dei.uc.pt>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: compression,evolutionary,neural networks,optimization
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# EvoLite
+
+[![PyPI - Version](https://img.shields.io/pypi/v/evolite.svg)](https://pypi.org/project/evolite)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/evolite.svg)](https://pypi.org/project/evolite)
+[![Tests](https://github.com/brunofaria1322/EvoLite/actions/workflows/test.yml/badge.svg)](https://github.com/brunofaria1322/EvoLite/actions/workflows/test.yml)
+[![Docs](https://github.com/brunofaria1322/EvoLite/actions/workflows/docs.yml/badge.svg)](https://github.com/brunofaria1322/EvoLite/actions/workflows/docs.yml)
+---
+
+EvoLite is an open-source Python library designed to optimize and compress neural networks seamlessly.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Installation
+
+```console
+pip install evolite
+```
+
+## Usage
+
+```python
+import evolite
+
+# TODO: ...
+```
+
+## Contributing
+
+Contributions are welcome! For bug reports or requests please [submit an issue](https://github.com/brunofaria1322/evolite/issues).
+
+## License
+
+`evolite` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
