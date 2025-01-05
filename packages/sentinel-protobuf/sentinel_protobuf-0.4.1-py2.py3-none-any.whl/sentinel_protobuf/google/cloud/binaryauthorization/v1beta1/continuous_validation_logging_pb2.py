@@ -1,0 +1,36 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/cloud/binaryauthorization/v1beta1/continuous_validation_logging.proto')
+_sym_db = _symbol_database.Default()
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nLgoogle/cloud/binaryauthorization/v1beta1/continuous_validation_logging.proto\x12(google.cloud.binaryauthorization.v1beta1\x1a\x1fgoogle/protobuf/timestamp.proto"\x85\x11\n\x19ContinuousValidationEvent\x12u\n\tpod_event\x18\x01 \x01(\x0b2`.google.cloud.binaryauthorization.v1beta1.ContinuousValidationEvent.ContinuousValidationPodEventH\x00\x12r\n\x12config_error_event\x18\x04 \x01(\x0b2T.google.cloud.binaryauthorization.v1beta1.ContinuousValidationEvent.ConfigErrorEventH\x00\x1a\xc5\x0e\n\x1cContinuousValidationPodEvent\x12\x15\n\rpod_namespace\x18\x07 \x01(\t\x12\x0b\n\x03pod\x18\x01 \x01(\t\x12\x13\n\x0bpolicy_name\x18\x08 \x01(\t\x12/\n\x0bdeploy_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12,\n\x08end_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12\x8a\x01\n\x07verdict\x18\x04 \x01(\x0e2y.google.cloud.binaryauthorization.v1beta1.ContinuousValidationEvent.ContinuousValidationPodEvent.PolicyConformanceVerdict\x12}\n\x06images\x18\x05 \x03(\x0b2m.google.cloud.binaryauthorization.v1beta1.ContinuousValidationEvent.ContinuousValidationPodEvent.ImageDetails\x1a\xa3\n\n\x0cImageDetails\x12\r\n\x05image\x18\x01 \x01(\t\x12\x16\n\x0econtainer_name\x18\x05 \x01(\t\x12\x93\x01\n\x0econtainer_type\x18\x06 \x01(\x0e2{.google.cloud.binaryauthorization.v1beta1.ContinuousValidationEvent.ContinuousValidationPodEvent.ImageDetails.ContainerType\x12\x89\x01\n\x06result\x18\x02 \x01(\x0e2y.google.cloud.binaryauthorization.v1beta1.ContinuousValidationEvent.ContinuousValidationPodEvent.ImageDetails.AuditResult\x12\x13\n\x0bdescription\x18\x03 \x01(\t\x12\x90\x01\n\rcheck_results\x18\x04 \x03(\x0b2y.google.cloud.binaryauthorization.v1beta1.ContinuousValidationEvent.ContinuousValidationPodEvent.ImageDetails.CheckResult\x1a\xf2\x04\n\x0bCheckResult\x12\x17\n\x0fcheck_set_index\x18\x01 \x01(\t\x12\x16\n\x0echeck_set_name\x18\x02 \x01(\t\x12\xa1\x01\n\x0fcheck_set_scope\x18\x03 \x01(\x0b2\x87\x01.google.cloud.binaryauthorization.v1beta1.ContinuousValidationEvent.ContinuousValidationPodEvent.ImageDetails.CheckResult.CheckSetScope\x12\x13\n\x0bcheck_index\x18\x04 \x01(\t\x12\x12\n\ncheck_name\x18\x05 \x01(\t\x12\x12\n\ncheck_type\x18\x06 \x01(\t\x12\x98\x01\n\x07verdict\x18\x07 \x01(\x0e2\x86\x01.google.cloud.binaryauthorization.v1beta1.ContinuousValidationEvent.ContinuousValidationPodEvent.ImageDetails.CheckResult.CheckVerdict\x12\x13\n\x0bexplanation\x18\x08 \x01(\t\x1a^\n\rCheckSetScope\x12$\n\x1akubernetes_service_account\x18\x01 \x01(\tH\x00\x12\x1e\n\x14kubernetes_namespace\x18\x02 \x01(\tH\x00B\x07\n\x05scope"A\n\x0cCheckVerdict\x12\x1d\n\x19CHECK_VERDICT_UNSPECIFIED\x10\x00\x12\x12\n\x0eNON_CONFORMANT\x10\x01"k\n\rContainerType\x12\x1e\n\x1aCONTAINER_TYPE_UNSPECIFIED\x10\x00\x12\r\n\tCONTAINER\x10\x01\x12\x12\n\x0eINIT_CONTAINER\x10\x02\x12\x17\n\x13EPHEMERAL_CONTAINER\x10\x03"@\n\x0bAuditResult\x12\x1c\n\x18AUDIT_RESULT_UNSPECIFIED\x10\x00\x12\t\n\x05ALLOW\x10\x01\x12\x08\n\x04DENY\x10\x02"[\n\x18PolicyConformanceVerdict\x12*\n&POLICY_CONFORMANCE_VERDICT_UNSPECIFIED\x10\x00\x12\x13\n\x0fVIOLATES_POLICY\x10\x01\x1a\'\n\x10ConfigErrorEvent\x12\x13\n\x0bdescription\x18\x01 \x01(\tB\x0c\n\nevent_typeB\xb9\x02\n,com.google.cloud.binaryauthorization.v1beta1B ContinuousValidationLoggingProtoP\x01Z^cloud.google.com/go/binaryauthorization/apiv1beta1/binaryauthorizationpb;binaryauthorizationpb\xf8\x01\x01\xaa\x02(Google.Cloud.BinaryAuthorization.V1Beta1\xca\x02(Google\\Cloud\\BinaryAuthorization\\V1beta1\xea\x02+Google::Cloud::BinaryAuthorization::V1beta1b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.binaryauthorization.v1beta1.continuous_validation_logging_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n,com.google.cloud.binaryauthorization.v1beta1B ContinuousValidationLoggingProtoP\x01Z^cloud.google.com/go/binaryauthorization/apiv1beta1/binaryauthorizationpb;binaryauthorizationpb\xf8\x01\x01\xaa\x02(Google.Cloud.BinaryAuthorization.V1Beta1\xca\x02(Google\\Cloud\\BinaryAuthorization\\V1beta1\xea\x02+Google::Cloud::BinaryAuthorization::V1beta1'
+    _globals['_CONTINUOUSVALIDATIONEVENT']._serialized_start = 156
+    _globals['_CONTINUOUSVALIDATIONEVENT']._serialized_end = 2337
+    _globals['_CONTINUOUSVALIDATIONEVENT_CONTINUOUSVALIDATIONPODEVENT']._serialized_start = 421
+    _globals['_CONTINUOUSVALIDATIONEVENT_CONTINUOUSVALIDATIONPODEVENT']._serialized_end = 2282
+    _globals['_CONTINUOUSVALIDATIONEVENT_CONTINUOUSVALIDATIONPODEVENT_IMAGEDETAILS']._serialized_start = 874
+    _globals['_CONTINUOUSVALIDATIONEVENT_CONTINUOUSVALIDATIONPODEVENT_IMAGEDETAILS']._serialized_end = 2189
+    _globals['_CONTINUOUSVALIDATIONEVENT_CONTINUOUSVALIDATIONPODEVENT_IMAGEDETAILS_CHECKRESULT']._serialized_start = 1388
+    _globals['_CONTINUOUSVALIDATIONEVENT_CONTINUOUSVALIDATIONPODEVENT_IMAGEDETAILS_CHECKRESULT']._serialized_end = 2014
+    _globals['_CONTINUOUSVALIDATIONEVENT_CONTINUOUSVALIDATIONPODEVENT_IMAGEDETAILS_CHECKRESULT_CHECKSETSCOPE']._serialized_start = 1853
+    _globals['_CONTINUOUSVALIDATIONEVENT_CONTINUOUSVALIDATIONPODEVENT_IMAGEDETAILS_CHECKRESULT_CHECKSETSCOPE']._serialized_end = 1947
+    _globals['_CONTINUOUSVALIDATIONEVENT_CONTINUOUSVALIDATIONPODEVENT_IMAGEDETAILS_CHECKRESULT_CHECKVERDICT']._serialized_start = 1949
+    _globals['_CONTINUOUSVALIDATIONEVENT_CONTINUOUSVALIDATIONPODEVENT_IMAGEDETAILS_CHECKRESULT_CHECKVERDICT']._serialized_end = 2014
+    _globals['_CONTINUOUSVALIDATIONEVENT_CONTINUOUSVALIDATIONPODEVENT_IMAGEDETAILS_CONTAINERTYPE']._serialized_start = 2016
+    _globals['_CONTINUOUSVALIDATIONEVENT_CONTINUOUSVALIDATIONPODEVENT_IMAGEDETAILS_CONTAINERTYPE']._serialized_end = 2123
+    _globals['_CONTINUOUSVALIDATIONEVENT_CONTINUOUSVALIDATIONPODEVENT_IMAGEDETAILS_AUDITRESULT']._serialized_start = 2125
+    _globals['_CONTINUOUSVALIDATIONEVENT_CONTINUOUSVALIDATIONPODEVENT_IMAGEDETAILS_AUDITRESULT']._serialized_end = 2189
+    _globals['_CONTINUOUSVALIDATIONEVENT_CONTINUOUSVALIDATIONPODEVENT_POLICYCONFORMANCEVERDICT']._serialized_start = 2191
+    _globals['_CONTINUOUSVALIDATIONEVENT_CONTINUOUSVALIDATIONPODEVENT_POLICYCONFORMANCEVERDICT']._serialized_end = 2282
+    _globals['_CONTINUOUSVALIDATIONEVENT_CONFIGERROREVENT']._serialized_start = 2284
+    _globals['_CONTINUOUSVALIDATIONEVENT_CONFIGERROREVENT']._serialized_end = 2323

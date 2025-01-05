@@ -1,0 +1,188 @@
+from google.protobuf.internal import containers as _containers
+from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import message as _message
+from typing import ClassVar as _ClassVar, Iterable as _Iterable, Optional as _Optional, Union as _Union
+DESCRIPTOR: _descriptor.FileDescriptor
+
+class MitreAttack(_message.Message):
+    __slots__ = ('primary_tactic', 'primary_techniques', 'additional_tactics', 'additional_techniques', 'version')
+
+    class Tactic(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+        __slots__ = ()
+        TACTIC_UNSPECIFIED: _ClassVar[MitreAttack.Tactic]
+        RECONNAISSANCE: _ClassVar[MitreAttack.Tactic]
+        RESOURCE_DEVELOPMENT: _ClassVar[MitreAttack.Tactic]
+        INITIAL_ACCESS: _ClassVar[MitreAttack.Tactic]
+        EXECUTION: _ClassVar[MitreAttack.Tactic]
+        PERSISTENCE: _ClassVar[MitreAttack.Tactic]
+        PRIVILEGE_ESCALATION: _ClassVar[MitreAttack.Tactic]
+        DEFENSE_EVASION: _ClassVar[MitreAttack.Tactic]
+        CREDENTIAL_ACCESS: _ClassVar[MitreAttack.Tactic]
+        DISCOVERY: _ClassVar[MitreAttack.Tactic]
+        LATERAL_MOVEMENT: _ClassVar[MitreAttack.Tactic]
+        COLLECTION: _ClassVar[MitreAttack.Tactic]
+        COMMAND_AND_CONTROL: _ClassVar[MitreAttack.Tactic]
+        EXFILTRATION: _ClassVar[MitreAttack.Tactic]
+        IMPACT: _ClassVar[MitreAttack.Tactic]
+    TACTIC_UNSPECIFIED: MitreAttack.Tactic
+    RECONNAISSANCE: MitreAttack.Tactic
+    RESOURCE_DEVELOPMENT: MitreAttack.Tactic
+    INITIAL_ACCESS: MitreAttack.Tactic
+    EXECUTION: MitreAttack.Tactic
+    PERSISTENCE: MitreAttack.Tactic
+    PRIVILEGE_ESCALATION: MitreAttack.Tactic
+    DEFENSE_EVASION: MitreAttack.Tactic
+    CREDENTIAL_ACCESS: MitreAttack.Tactic
+    DISCOVERY: MitreAttack.Tactic
+    LATERAL_MOVEMENT: MitreAttack.Tactic
+    COLLECTION: MitreAttack.Tactic
+    COMMAND_AND_CONTROL: MitreAttack.Tactic
+    EXFILTRATION: MitreAttack.Tactic
+    IMPACT: MitreAttack.Tactic
+
+    class Technique(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+        __slots__ = ()
+        TECHNIQUE_UNSPECIFIED: _ClassVar[MitreAttack.Technique]
+        MASQUERADING: _ClassVar[MitreAttack.Technique]
+        MATCH_LEGITIMATE_NAME_OR_LOCATION: _ClassVar[MitreAttack.Technique]
+        BOOT_OR_LOGON_INITIALIZATION_SCRIPTS: _ClassVar[MitreAttack.Technique]
+        STARTUP_ITEMS: _ClassVar[MitreAttack.Technique]
+        NETWORK_SERVICE_DISCOVERY: _ClassVar[MitreAttack.Technique]
+        PROCESS_DISCOVERY: _ClassVar[MitreAttack.Technique]
+        COMMAND_AND_SCRIPTING_INTERPRETER: _ClassVar[MitreAttack.Technique]
+        UNIX_SHELL: _ClassVar[MitreAttack.Technique]
+        PYTHON: _ClassVar[MitreAttack.Technique]
+        EXPLOITATION_FOR_PRIVILEGE_ESCALATION: _ClassVar[MitreAttack.Technique]
+        PERMISSION_GROUPS_DISCOVERY: _ClassVar[MitreAttack.Technique]
+        CLOUD_GROUPS: _ClassVar[MitreAttack.Technique]
+        INDICATOR_REMOVAL_FILE_DELETION: _ClassVar[MitreAttack.Technique]
+        APPLICATION_LAYER_PROTOCOL: _ClassVar[MitreAttack.Technique]
+        DNS: _ClassVar[MitreAttack.Technique]
+        SOFTWARE_DEPLOYMENT_TOOLS: _ClassVar[MitreAttack.Technique]
+        VALID_ACCOUNTS: _ClassVar[MitreAttack.Technique]
+        DEFAULT_ACCOUNTS: _ClassVar[MitreAttack.Technique]
+        LOCAL_ACCOUNTS: _ClassVar[MitreAttack.Technique]
+        CLOUD_ACCOUNTS: _ClassVar[MitreAttack.Technique]
+        PROXY: _ClassVar[MitreAttack.Technique]
+        EXTERNAL_PROXY: _ClassVar[MitreAttack.Technique]
+        MULTI_HOP_PROXY: _ClassVar[MitreAttack.Technique]
+        ACCOUNT_MANIPULATION: _ClassVar[MitreAttack.Technique]
+        ADDITIONAL_CLOUD_CREDENTIALS: _ClassVar[MitreAttack.Technique]
+        SSH_AUTHORIZED_KEYS: _ClassVar[MitreAttack.Technique]
+        ADDITIONAL_CONTAINER_CLUSTER_ROLES: _ClassVar[MitreAttack.Technique]
+        INGRESS_TOOL_TRANSFER: _ClassVar[MitreAttack.Technique]
+        NATIVE_API: _ClassVar[MitreAttack.Technique]
+        BRUTE_FORCE: _ClassVar[MitreAttack.Technique]
+        SHARED_MODULES: _ClassVar[MitreAttack.Technique]
+        ACCESS_TOKEN_MANIPULATION: _ClassVar[MitreAttack.Technique]
+        TOKEN_IMPERSONATION_OR_THEFT: _ClassVar[MitreAttack.Technique]
+        EXPLOIT_PUBLIC_FACING_APPLICATION: _ClassVar[MitreAttack.Technique]
+        DOMAIN_POLICY_MODIFICATION: _ClassVar[MitreAttack.Technique]
+        DATA_DESTRUCTION: _ClassVar[MitreAttack.Technique]
+        SERVICE_STOP: _ClassVar[MitreAttack.Technique]
+        INHIBIT_SYSTEM_RECOVERY: _ClassVar[MitreAttack.Technique]
+        RESOURCE_HIJACKING: _ClassVar[MitreAttack.Technique]
+        NETWORK_DENIAL_OF_SERVICE: _ClassVar[MitreAttack.Technique]
+        CLOUD_SERVICE_DISCOVERY: _ClassVar[MitreAttack.Technique]
+        STEAL_APPLICATION_ACCESS_TOKEN: _ClassVar[MitreAttack.Technique]
+        ACCOUNT_ACCESS_REMOVAL: _ClassVar[MitreAttack.Technique]
+        STEAL_WEB_SESSION_COOKIE: _ClassVar[MitreAttack.Technique]
+        CREATE_OR_MODIFY_SYSTEM_PROCESS: _ClassVar[MitreAttack.Technique]
+        ABUSE_ELEVATION_CONTROL_MECHANISM: _ClassVar[MitreAttack.Technique]
+        UNSECURED_CREDENTIALS: _ClassVar[MitreAttack.Technique]
+        MODIFY_AUTHENTICATION_PROCESS: _ClassVar[MitreAttack.Technique]
+        IMPAIR_DEFENSES: _ClassVar[MitreAttack.Technique]
+        DISABLE_OR_MODIFY_TOOLS: _ClassVar[MitreAttack.Technique]
+        EXFILTRATION_OVER_WEB_SERVICE: _ClassVar[MitreAttack.Technique]
+        EXFILTRATION_TO_CLOUD_STORAGE: _ClassVar[MitreAttack.Technique]
+        DYNAMIC_RESOLUTION: _ClassVar[MitreAttack.Technique]
+        LATERAL_TOOL_TRANSFER: _ClassVar[MitreAttack.Technique]
+        MODIFY_CLOUD_COMPUTE_INFRASTRUCTURE: _ClassVar[MitreAttack.Technique]
+        CREATE_SNAPSHOT: _ClassVar[MitreAttack.Technique]
+        CLOUD_INFRASTRUCTURE_DISCOVERY: _ClassVar[MitreAttack.Technique]
+        OBTAIN_CAPABILITIES: _ClassVar[MitreAttack.Technique]
+        ACTIVE_SCANNING: _ClassVar[MitreAttack.Technique]
+        SCANNING_IP_BLOCKS: _ClassVar[MitreAttack.Technique]
+        CONTAINER_ADMINISTRATION_COMMAND: _ClassVar[MitreAttack.Technique]
+        ESCAPE_TO_HOST: _ClassVar[MitreAttack.Technique]
+        CONTAINER_AND_RESOURCE_DISCOVERY: _ClassVar[MitreAttack.Technique]
+        STEAL_OR_FORGE_AUTHENTICATION_CERTIFICATES: _ClassVar[MitreAttack.Technique]
+    TECHNIQUE_UNSPECIFIED: MitreAttack.Technique
+    MASQUERADING: MitreAttack.Technique
+    MATCH_LEGITIMATE_NAME_OR_LOCATION: MitreAttack.Technique
+    BOOT_OR_LOGON_INITIALIZATION_SCRIPTS: MitreAttack.Technique
+    STARTUP_ITEMS: MitreAttack.Technique
+    NETWORK_SERVICE_DISCOVERY: MitreAttack.Technique
+    PROCESS_DISCOVERY: MitreAttack.Technique
+    COMMAND_AND_SCRIPTING_INTERPRETER: MitreAttack.Technique
+    UNIX_SHELL: MitreAttack.Technique
+    PYTHON: MitreAttack.Technique
+    EXPLOITATION_FOR_PRIVILEGE_ESCALATION: MitreAttack.Technique
+    PERMISSION_GROUPS_DISCOVERY: MitreAttack.Technique
+    CLOUD_GROUPS: MitreAttack.Technique
+    INDICATOR_REMOVAL_FILE_DELETION: MitreAttack.Technique
+    APPLICATION_LAYER_PROTOCOL: MitreAttack.Technique
+    DNS: MitreAttack.Technique
+    SOFTWARE_DEPLOYMENT_TOOLS: MitreAttack.Technique
+    VALID_ACCOUNTS: MitreAttack.Technique
+    DEFAULT_ACCOUNTS: MitreAttack.Technique
+    LOCAL_ACCOUNTS: MitreAttack.Technique
+    CLOUD_ACCOUNTS: MitreAttack.Technique
+    PROXY: MitreAttack.Technique
+    EXTERNAL_PROXY: MitreAttack.Technique
+    MULTI_HOP_PROXY: MitreAttack.Technique
+    ACCOUNT_MANIPULATION: MitreAttack.Technique
+    ADDITIONAL_CLOUD_CREDENTIALS: MitreAttack.Technique
+    SSH_AUTHORIZED_KEYS: MitreAttack.Technique
+    ADDITIONAL_CONTAINER_CLUSTER_ROLES: MitreAttack.Technique
+    INGRESS_TOOL_TRANSFER: MitreAttack.Technique
+    NATIVE_API: MitreAttack.Technique
+    BRUTE_FORCE: MitreAttack.Technique
+    SHARED_MODULES: MitreAttack.Technique
+    ACCESS_TOKEN_MANIPULATION: MitreAttack.Technique
+    TOKEN_IMPERSONATION_OR_THEFT: MitreAttack.Technique
+    EXPLOIT_PUBLIC_FACING_APPLICATION: MitreAttack.Technique
+    DOMAIN_POLICY_MODIFICATION: MitreAttack.Technique
+    DATA_DESTRUCTION: MitreAttack.Technique
+    SERVICE_STOP: MitreAttack.Technique
+    INHIBIT_SYSTEM_RECOVERY: MitreAttack.Technique
+    RESOURCE_HIJACKING: MitreAttack.Technique
+    NETWORK_DENIAL_OF_SERVICE: MitreAttack.Technique
+    CLOUD_SERVICE_DISCOVERY: MitreAttack.Technique
+    STEAL_APPLICATION_ACCESS_TOKEN: MitreAttack.Technique
+    ACCOUNT_ACCESS_REMOVAL: MitreAttack.Technique
+    STEAL_WEB_SESSION_COOKIE: MitreAttack.Technique
+    CREATE_OR_MODIFY_SYSTEM_PROCESS: MitreAttack.Technique
+    ABUSE_ELEVATION_CONTROL_MECHANISM: MitreAttack.Technique
+    UNSECURED_CREDENTIALS: MitreAttack.Technique
+    MODIFY_AUTHENTICATION_PROCESS: MitreAttack.Technique
+    IMPAIR_DEFENSES: MitreAttack.Technique
+    DISABLE_OR_MODIFY_TOOLS: MitreAttack.Technique
+    EXFILTRATION_OVER_WEB_SERVICE: MitreAttack.Technique
+    EXFILTRATION_TO_CLOUD_STORAGE: MitreAttack.Technique
+    DYNAMIC_RESOLUTION: MitreAttack.Technique
+    LATERAL_TOOL_TRANSFER: MitreAttack.Technique
+    MODIFY_CLOUD_COMPUTE_INFRASTRUCTURE: MitreAttack.Technique
+    CREATE_SNAPSHOT: MitreAttack.Technique
+    CLOUD_INFRASTRUCTURE_DISCOVERY: MitreAttack.Technique
+    OBTAIN_CAPABILITIES: MitreAttack.Technique
+    ACTIVE_SCANNING: MitreAttack.Technique
+    SCANNING_IP_BLOCKS: MitreAttack.Technique
+    CONTAINER_ADMINISTRATION_COMMAND: MitreAttack.Technique
+    ESCAPE_TO_HOST: MitreAttack.Technique
+    CONTAINER_AND_RESOURCE_DISCOVERY: MitreAttack.Technique
+    STEAL_OR_FORGE_AUTHENTICATION_CERTIFICATES: MitreAttack.Technique
+    PRIMARY_TACTIC_FIELD_NUMBER: _ClassVar[int]
+    PRIMARY_TECHNIQUES_FIELD_NUMBER: _ClassVar[int]
+    ADDITIONAL_TACTICS_FIELD_NUMBER: _ClassVar[int]
+    ADDITIONAL_TECHNIQUES_FIELD_NUMBER: _ClassVar[int]
+    VERSION_FIELD_NUMBER: _ClassVar[int]
+    primary_tactic: MitreAttack.Tactic
+    primary_techniques: _containers.RepeatedScalarFieldContainer[MitreAttack.Technique]
+    additional_tactics: _containers.RepeatedScalarFieldContainer[MitreAttack.Tactic]
+    additional_techniques: _containers.RepeatedScalarFieldContainer[MitreAttack.Technique]
+    version: str
+
+    def __init__(self, primary_tactic: _Optional[_Union[MitreAttack.Tactic, str]]=..., primary_techniques: _Optional[_Iterable[_Union[MitreAttack.Technique, str]]]=..., additional_tactics: _Optional[_Iterable[_Union[MitreAttack.Tactic, str]]]=..., additional_techniques: _Optional[_Iterable[_Union[MitreAttack.Technique, str]]]=..., version: _Optional[str]=...) -> None:
+        ...

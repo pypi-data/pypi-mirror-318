@@ -1,0 +1,385 @@
+from google.api import annotations_pb2 as _annotations_pb2
+from google.api import client_pb2 as _client_pb2
+from google.api import field_behavior_pb2 as _field_behavior_pb2
+from google.api import resource_pb2 as _resource_pb2
+from google.longrunning import operations_pb2 as _operations_pb2
+from google.protobuf import duration_pb2 as _duration_pb2
+from google.protobuf import empty_pb2 as _empty_pb2
+from google.protobuf import field_mask_pb2 as _field_mask_pb2
+from google.protobuf import timestamp_pb2 as _timestamp_pb2
+from google.protobuf.internal import containers as _containers
+from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import message as _message
+from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Mapping, Optional as _Optional, Union as _Union
+
+DESCRIPTOR: _descriptor.FileDescriptor
+
+class CreateWorkloadRequest(_message.Message):
+    __slots__ = ("parent", "workload", "external_id")
+    PARENT_FIELD_NUMBER: _ClassVar[int]
+    WORKLOAD_FIELD_NUMBER: _ClassVar[int]
+    EXTERNAL_ID_FIELD_NUMBER: _ClassVar[int]
+    parent: str
+    workload: Workload
+    external_id: str
+    def __init__(self, parent: _Optional[str] = ..., workload: _Optional[_Union[Workload, _Mapping]] = ..., external_id: _Optional[str] = ...) -> None: ...
+
+class UpdateWorkloadRequest(_message.Message):
+    __slots__ = ("workload", "update_mask")
+    WORKLOAD_FIELD_NUMBER: _ClassVar[int]
+    UPDATE_MASK_FIELD_NUMBER: _ClassVar[int]
+    workload: Workload
+    update_mask: _field_mask_pb2.FieldMask
+    def __init__(self, workload: _Optional[_Union[Workload, _Mapping]] = ..., update_mask: _Optional[_Union[_field_mask_pb2.FieldMask, _Mapping]] = ...) -> None: ...
+
+class DeleteWorkloadRequest(_message.Message):
+    __slots__ = ("name", "etag")
+    NAME_FIELD_NUMBER: _ClassVar[int]
+    ETAG_FIELD_NUMBER: _ClassVar[int]
+    name: str
+    etag: str
+    def __init__(self, name: _Optional[str] = ..., etag: _Optional[str] = ...) -> None: ...
+
+class GetWorkloadRequest(_message.Message):
+    __slots__ = ("name",)
+    NAME_FIELD_NUMBER: _ClassVar[int]
+    name: str
+    def __init__(self, name: _Optional[str] = ...) -> None: ...
+
+class ListWorkloadsRequest(_message.Message):
+    __slots__ = ("parent", "page_size", "page_token", "filter")
+    PARENT_FIELD_NUMBER: _ClassVar[int]
+    PAGE_SIZE_FIELD_NUMBER: _ClassVar[int]
+    PAGE_TOKEN_FIELD_NUMBER: _ClassVar[int]
+    FILTER_FIELD_NUMBER: _ClassVar[int]
+    parent: str
+    page_size: int
+    page_token: str
+    filter: str
+    def __init__(self, parent: _Optional[str] = ..., page_size: _Optional[int] = ..., page_token: _Optional[str] = ..., filter: _Optional[str] = ...) -> None: ...
+
+class ListWorkloadsResponse(_message.Message):
+    __slots__ = ("workloads", "next_page_token")
+    WORKLOADS_FIELD_NUMBER: _ClassVar[int]
+    NEXT_PAGE_TOKEN_FIELD_NUMBER: _ClassVar[int]
+    workloads: _containers.RepeatedCompositeFieldContainer[Workload]
+    next_page_token: str
+    def __init__(self, workloads: _Optional[_Iterable[_Union[Workload, _Mapping]]] = ..., next_page_token: _Optional[str] = ...) -> None: ...
+
+class Workload(_message.Message):
+    __slots__ = ("name", "display_name", "resources", "compliance_regime", "create_time", "billing_account", "etag", "labels", "provisioned_resources_parent", "kms_settings", "resource_settings", "kaj_enrollment_state", "enable_sovereign_controls", "saa_enrollment_response", "compliant_but_disallowed_services", "partner")
+    class ComplianceRegime(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+        __slots__ = ()
+        COMPLIANCE_REGIME_UNSPECIFIED: _ClassVar[Workload.ComplianceRegime]
+        IL4: _ClassVar[Workload.ComplianceRegime]
+        CJIS: _ClassVar[Workload.ComplianceRegime]
+        FEDRAMP_HIGH: _ClassVar[Workload.ComplianceRegime]
+        FEDRAMP_MODERATE: _ClassVar[Workload.ComplianceRegime]
+        US_REGIONAL_ACCESS: _ClassVar[Workload.ComplianceRegime]
+        HIPAA: _ClassVar[Workload.ComplianceRegime]
+        HITRUST: _ClassVar[Workload.ComplianceRegime]
+        EU_REGIONS_AND_SUPPORT: _ClassVar[Workload.ComplianceRegime]
+        CA_REGIONS_AND_SUPPORT: _ClassVar[Workload.ComplianceRegime]
+        ITAR: _ClassVar[Workload.ComplianceRegime]
+        AU_REGIONS_AND_US_SUPPORT: _ClassVar[Workload.ComplianceRegime]
+        ASSURED_WORKLOADS_FOR_PARTNERS: _ClassVar[Workload.ComplianceRegime]
+    COMPLIANCE_REGIME_UNSPECIFIED: Workload.ComplianceRegime
+    IL4: Workload.ComplianceRegime
+    CJIS: Workload.ComplianceRegime
+    FEDRAMP_HIGH: Workload.ComplianceRegime
+    FEDRAMP_MODERATE: Workload.ComplianceRegime
+    US_REGIONAL_ACCESS: Workload.ComplianceRegime
+    HIPAA: Workload.ComplianceRegime
+    HITRUST: Workload.ComplianceRegime
+    EU_REGIONS_AND_SUPPORT: Workload.ComplianceRegime
+    CA_REGIONS_AND_SUPPORT: Workload.ComplianceRegime
+    ITAR: Workload.ComplianceRegime
+    AU_REGIONS_AND_US_SUPPORT: Workload.ComplianceRegime
+    ASSURED_WORKLOADS_FOR_PARTNERS: Workload.ComplianceRegime
+    class KajEnrollmentState(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+        __slots__ = ()
+        KAJ_ENROLLMENT_STATE_UNSPECIFIED: _ClassVar[Workload.KajEnrollmentState]
+        KAJ_ENROLLMENT_STATE_PENDING: _ClassVar[Workload.KajEnrollmentState]
+        KAJ_ENROLLMENT_STATE_COMPLETE: _ClassVar[Workload.KajEnrollmentState]
+    KAJ_ENROLLMENT_STATE_UNSPECIFIED: Workload.KajEnrollmentState
+    KAJ_ENROLLMENT_STATE_PENDING: Workload.KajEnrollmentState
+    KAJ_ENROLLMENT_STATE_COMPLETE: Workload.KajEnrollmentState
+    class Partner(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+        __slots__ = ()
+        PARTNER_UNSPECIFIED: _ClassVar[Workload.Partner]
+        LOCAL_CONTROLS_BY_S3NS: _ClassVar[Workload.Partner]
+    PARTNER_UNSPECIFIED: Workload.Partner
+    LOCAL_CONTROLS_BY_S3NS: Workload.Partner
+    class ResourceInfo(_message.Message):
+        __slots__ = ("resource_id", "resource_type")
+        class ResourceType(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+            __slots__ = ()
+            RESOURCE_TYPE_UNSPECIFIED: _ClassVar[Workload.ResourceInfo.ResourceType]
+            CONSUMER_PROJECT: _ClassVar[Workload.ResourceInfo.ResourceType]
+            CONSUMER_FOLDER: _ClassVar[Workload.ResourceInfo.ResourceType]
+            ENCRYPTION_KEYS_PROJECT: _ClassVar[Workload.ResourceInfo.ResourceType]
+            KEYRING: _ClassVar[Workload.ResourceInfo.ResourceType]
+        RESOURCE_TYPE_UNSPECIFIED: Workload.ResourceInfo.ResourceType
+        CONSUMER_PROJECT: Workload.ResourceInfo.ResourceType
+        CONSUMER_FOLDER: Workload.ResourceInfo.ResourceType
+        ENCRYPTION_KEYS_PROJECT: Workload.ResourceInfo.ResourceType
+        KEYRING: Workload.ResourceInfo.ResourceType
+        RESOURCE_ID_FIELD_NUMBER: _ClassVar[int]
+        RESOURCE_TYPE_FIELD_NUMBER: _ClassVar[int]
+        resource_id: int
+        resource_type: Workload.ResourceInfo.ResourceType
+        def __init__(self, resource_id: _Optional[int] = ..., resource_type: _Optional[_Union[Workload.ResourceInfo.ResourceType, str]] = ...) -> None: ...
+    class KMSSettings(_message.Message):
+        __slots__ = ("next_rotation_time", "rotation_period")
+        NEXT_ROTATION_TIME_FIELD_NUMBER: _ClassVar[int]
+        ROTATION_PERIOD_FIELD_NUMBER: _ClassVar[int]
+        next_rotation_time: _timestamp_pb2.Timestamp
+        rotation_period: _duration_pb2.Duration
+        def __init__(self, next_rotation_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., rotation_period: _Optional[_Union[_duration_pb2.Duration, _Mapping]] = ...) -> None: ...
+    class ResourceSettings(_message.Message):
+        __slots__ = ("resource_id", "resource_type", "display_name")
+        RESOURCE_ID_FIELD_NUMBER: _ClassVar[int]
+        RESOURCE_TYPE_FIELD_NUMBER: _ClassVar[int]
+        DISPLAY_NAME_FIELD_NUMBER: _ClassVar[int]
+        resource_id: str
+        resource_type: Workload.ResourceInfo.ResourceType
+        display_name: str
+        def __init__(self, resource_id: _Optional[str] = ..., resource_type: _Optional[_Union[Workload.ResourceInfo.ResourceType, str]] = ..., display_name: _Optional[str] = ...) -> None: ...
+    class SaaEnrollmentResponse(_message.Message):
+        __slots__ = ("setup_status", "setup_errors")
+        class SetupState(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+            __slots__ = ()
+            SETUP_STATE_UNSPECIFIED: _ClassVar[Workload.SaaEnrollmentResponse.SetupState]
+            STATUS_PENDING: _ClassVar[Workload.SaaEnrollmentResponse.SetupState]
+            STATUS_COMPLETE: _ClassVar[Workload.SaaEnrollmentResponse.SetupState]
+        SETUP_STATE_UNSPECIFIED: Workload.SaaEnrollmentResponse.SetupState
+        STATUS_PENDING: Workload.SaaEnrollmentResponse.SetupState
+        STATUS_COMPLETE: Workload.SaaEnrollmentResponse.SetupState
+        class SetupError(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+            __slots__ = ()
+            SETUP_ERROR_UNSPECIFIED: _ClassVar[Workload.SaaEnrollmentResponse.SetupError]
+            ERROR_INVALID_BASE_SETUP: _ClassVar[Workload.SaaEnrollmentResponse.SetupError]
+            ERROR_MISSING_EXTERNAL_SIGNING_KEY: _ClassVar[Workload.SaaEnrollmentResponse.SetupError]
+            ERROR_NOT_ALL_SERVICES_ENROLLED: _ClassVar[Workload.SaaEnrollmentResponse.SetupError]
+            ERROR_SETUP_CHECK_FAILED: _ClassVar[Workload.SaaEnrollmentResponse.SetupError]
+        SETUP_ERROR_UNSPECIFIED: Workload.SaaEnrollmentResponse.SetupError
+        ERROR_INVALID_BASE_SETUP: Workload.SaaEnrollmentResponse.SetupError
+        ERROR_MISSING_EXTERNAL_SIGNING_KEY: Workload.SaaEnrollmentResponse.SetupError
+        ERROR_NOT_ALL_SERVICES_ENROLLED: Workload.SaaEnrollmentResponse.SetupError
+        ERROR_SETUP_CHECK_FAILED: Workload.SaaEnrollmentResponse.SetupError
+        SETUP_STATUS_FIELD_NUMBER: _ClassVar[int]
+        SETUP_ERRORS_FIELD_NUMBER: _ClassVar[int]
+        setup_status: Workload.SaaEnrollmentResponse.SetupState
+        setup_errors: _containers.RepeatedScalarFieldContainer[Workload.SaaEnrollmentResponse.SetupError]
+        def __init__(self, setup_status: _Optional[_Union[Workload.SaaEnrollmentResponse.SetupState, str]] = ..., setup_errors: _Optional[_Iterable[_Union[Workload.SaaEnrollmentResponse.SetupError, str]]] = ...) -> None: ...
+    class LabelsEntry(_message.Message):
+        __slots__ = ("key", "value")
+        KEY_FIELD_NUMBER: _ClassVar[int]
+        VALUE_FIELD_NUMBER: _ClassVar[int]
+        key: str
+        value: str
+        def __init__(self, key: _Optional[str] = ..., value: _Optional[str] = ...) -> None: ...
+    NAME_FIELD_NUMBER: _ClassVar[int]
+    DISPLAY_NAME_FIELD_NUMBER: _ClassVar[int]
+    RESOURCES_FIELD_NUMBER: _ClassVar[int]
+    COMPLIANCE_REGIME_FIELD_NUMBER: _ClassVar[int]
+    CREATE_TIME_FIELD_NUMBER: _ClassVar[int]
+    BILLING_ACCOUNT_FIELD_NUMBER: _ClassVar[int]
+    ETAG_FIELD_NUMBER: _ClassVar[int]
+    LABELS_FIELD_NUMBER: _ClassVar[int]
+    PROVISIONED_RESOURCES_PARENT_FIELD_NUMBER: _ClassVar[int]
+    KMS_SETTINGS_FIELD_NUMBER: _ClassVar[int]
+    RESOURCE_SETTINGS_FIELD_NUMBER: _ClassVar[int]
+    KAJ_ENROLLMENT_STATE_FIELD_NUMBER: _ClassVar[int]
+    ENABLE_SOVEREIGN_CONTROLS_FIELD_NUMBER: _ClassVar[int]
+    SAA_ENROLLMENT_RESPONSE_FIELD_NUMBER: _ClassVar[int]
+    COMPLIANT_BUT_DISALLOWED_SERVICES_FIELD_NUMBER: _ClassVar[int]
+    PARTNER_FIELD_NUMBER: _ClassVar[int]
+    name: str
+    display_name: str
+    resources: _containers.RepeatedCompositeFieldContainer[Workload.ResourceInfo]
+    compliance_regime: Workload.ComplianceRegime
+    create_time: _timestamp_pb2.Timestamp
+    billing_account: str
+    etag: str
+    labels: _containers.ScalarMap[str, str]
+    provisioned_resources_parent: str
+    kms_settings: Workload.KMSSettings
+    resource_settings: _containers.RepeatedCompositeFieldContainer[Workload.ResourceSettings]
+    kaj_enrollment_state: Workload.KajEnrollmentState
+    enable_sovereign_controls: bool
+    saa_enrollment_response: Workload.SaaEnrollmentResponse
+    compliant_but_disallowed_services: _containers.RepeatedScalarFieldContainer[str]
+    partner: Workload.Partner
+    def __init__(self, name: _Optional[str] = ..., display_name: _Optional[str] = ..., resources: _Optional[_Iterable[_Union[Workload.ResourceInfo, _Mapping]]] = ..., compliance_regime: _Optional[_Union[Workload.ComplianceRegime, str]] = ..., create_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., billing_account: _Optional[str] = ..., etag: _Optional[str] = ..., labels: _Optional[_Mapping[str, str]] = ..., provisioned_resources_parent: _Optional[str] = ..., kms_settings: _Optional[_Union[Workload.KMSSettings, _Mapping]] = ..., resource_settings: _Optional[_Iterable[_Union[Workload.ResourceSettings, _Mapping]]] = ..., kaj_enrollment_state: _Optional[_Union[Workload.KajEnrollmentState, str]] = ..., enable_sovereign_controls: bool = ..., saa_enrollment_response: _Optional[_Union[Workload.SaaEnrollmentResponse, _Mapping]] = ..., compliant_but_disallowed_services: _Optional[_Iterable[str]] = ..., partner: _Optional[_Union[Workload.Partner, str]] = ...) -> None: ...
+
+class CreateWorkloadOperationMetadata(_message.Message):
+    __slots__ = ("create_time", "display_name", "parent", "compliance_regime")
+    CREATE_TIME_FIELD_NUMBER: _ClassVar[int]
+    DISPLAY_NAME_FIELD_NUMBER: _ClassVar[int]
+    PARENT_FIELD_NUMBER: _ClassVar[int]
+    COMPLIANCE_REGIME_FIELD_NUMBER: _ClassVar[int]
+    create_time: _timestamp_pb2.Timestamp
+    display_name: str
+    parent: str
+    compliance_regime: Workload.ComplianceRegime
+    def __init__(self, create_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., display_name: _Optional[str] = ..., parent: _Optional[str] = ..., compliance_regime: _Optional[_Union[Workload.ComplianceRegime, str]] = ...) -> None: ...
+
+class RestrictAllowedResourcesRequest(_message.Message):
+    __slots__ = ("name", "restriction_type")
+    class RestrictionType(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+        __slots__ = ()
+        RESTRICTION_TYPE_UNSPECIFIED: _ClassVar[RestrictAllowedResourcesRequest.RestrictionType]
+        ALLOW_ALL_GCP_RESOURCES: _ClassVar[RestrictAllowedResourcesRequest.RestrictionType]
+        ALLOW_COMPLIANT_RESOURCES: _ClassVar[RestrictAllowedResourcesRequest.RestrictionType]
+    RESTRICTION_TYPE_UNSPECIFIED: RestrictAllowedResourcesRequest.RestrictionType
+    ALLOW_ALL_GCP_RESOURCES: RestrictAllowedResourcesRequest.RestrictionType
+    ALLOW_COMPLIANT_RESOURCES: RestrictAllowedResourcesRequest.RestrictionType
+    NAME_FIELD_NUMBER: _ClassVar[int]
+    RESTRICTION_TYPE_FIELD_NUMBER: _ClassVar[int]
+    name: str
+    restriction_type: RestrictAllowedResourcesRequest.RestrictionType
+    def __init__(self, name: _Optional[str] = ..., restriction_type: _Optional[_Union[RestrictAllowedResourcesRequest.RestrictionType, str]] = ...) -> None: ...
+
+class RestrictAllowedResourcesResponse(_message.Message):
+    __slots__ = ()
+    def __init__(self) -> None: ...
+
+class AcknowledgeViolationRequest(_message.Message):
+    __slots__ = ("name", "comment", "non_compliant_org_policy")
+    NAME_FIELD_NUMBER: _ClassVar[int]
+    COMMENT_FIELD_NUMBER: _ClassVar[int]
+    NON_COMPLIANT_ORG_POLICY_FIELD_NUMBER: _ClassVar[int]
+    name: str
+    comment: str
+    non_compliant_org_policy: str
+    def __init__(self, name: _Optional[str] = ..., comment: _Optional[str] = ..., non_compliant_org_policy: _Optional[str] = ...) -> None: ...
+
+class AcknowledgeViolationResponse(_message.Message):
+    __slots__ = ()
+    def __init__(self) -> None: ...
+
+class TimeWindow(_message.Message):
+    __slots__ = ("start_time", "end_time")
+    START_TIME_FIELD_NUMBER: _ClassVar[int]
+    END_TIME_FIELD_NUMBER: _ClassVar[int]
+    start_time: _timestamp_pb2.Timestamp
+    end_time: _timestamp_pb2.Timestamp
+    def __init__(self, start_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., end_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ...) -> None: ...
+
+class ListViolationsRequest(_message.Message):
+    __slots__ = ("parent", "interval", "page_size", "page_token", "filter")
+    PARENT_FIELD_NUMBER: _ClassVar[int]
+    INTERVAL_FIELD_NUMBER: _ClassVar[int]
+    PAGE_SIZE_FIELD_NUMBER: _ClassVar[int]
+    PAGE_TOKEN_FIELD_NUMBER: _ClassVar[int]
+    FILTER_FIELD_NUMBER: _ClassVar[int]
+    parent: str
+    interval: TimeWindow
+    page_size: int
+    page_token: str
+    filter: str
+    def __init__(self, parent: _Optional[str] = ..., interval: _Optional[_Union[TimeWindow, _Mapping]] = ..., page_size: _Optional[int] = ..., page_token: _Optional[str] = ..., filter: _Optional[str] = ...) -> None: ...
+
+class ListViolationsResponse(_message.Message):
+    __slots__ = ("violations", "next_page_token")
+    VIOLATIONS_FIELD_NUMBER: _ClassVar[int]
+    NEXT_PAGE_TOKEN_FIELD_NUMBER: _ClassVar[int]
+    violations: _containers.RepeatedCompositeFieldContainer[Violation]
+    next_page_token: str
+    def __init__(self, violations: _Optional[_Iterable[_Union[Violation, _Mapping]]] = ..., next_page_token: _Optional[str] = ...) -> None: ...
+
+class GetViolationRequest(_message.Message):
+    __slots__ = ("name",)
+    NAME_FIELD_NUMBER: _ClassVar[int]
+    name: str
+    def __init__(self, name: _Optional[str] = ...) -> None: ...
+
+class Violation(_message.Message):
+    __slots__ = ("name", "description", "begin_time", "update_time", "resolve_time", "category", "state", "org_policy_constraint", "audit_log_link", "non_compliant_org_policy", "remediation", "acknowledged", "acknowledgement_time", "exception_audit_log_link")
+    class State(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+        __slots__ = ()
+        STATE_UNSPECIFIED: _ClassVar[Violation.State]
+        RESOLVED: _ClassVar[Violation.State]
+        UNRESOLVED: _ClassVar[Violation.State]
+        EXCEPTION: _ClassVar[Violation.State]
+    STATE_UNSPECIFIED: Violation.State
+    RESOLVED: Violation.State
+    UNRESOLVED: Violation.State
+    EXCEPTION: Violation.State
+    class Remediation(_message.Message):
+        __slots__ = ("instructions", "compliant_values", "remediation_type")
+        class RemediationType(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+            __slots__ = ()
+            REMEDIATION_TYPE_UNSPECIFIED: _ClassVar[Violation.Remediation.RemediationType]
+            REMEDIATION_BOOLEAN_ORG_POLICY_VIOLATION: _ClassVar[Violation.Remediation.RemediationType]
+            REMEDIATION_LIST_ALLOWED_VALUES_ORG_POLICY_VIOLATION: _ClassVar[Violation.Remediation.RemediationType]
+            REMEDIATION_LIST_DENIED_VALUES_ORG_POLICY_VIOLATION: _ClassVar[Violation.Remediation.RemediationType]
+            REMEDIATION_RESTRICT_CMEK_CRYPTO_KEY_PROJECTS_ORG_POLICY_VIOLATION: _ClassVar[Violation.Remediation.RemediationType]
+        REMEDIATION_TYPE_UNSPECIFIED: Violation.Remediation.RemediationType
+        REMEDIATION_BOOLEAN_ORG_POLICY_VIOLATION: Violation.Remediation.RemediationType
+        REMEDIATION_LIST_ALLOWED_VALUES_ORG_POLICY_VIOLATION: Violation.Remediation.RemediationType
+        REMEDIATION_LIST_DENIED_VALUES_ORG_POLICY_VIOLATION: Violation.Remediation.RemediationType
+        REMEDIATION_RESTRICT_CMEK_CRYPTO_KEY_PROJECTS_ORG_POLICY_VIOLATION: Violation.Remediation.RemediationType
+        class Instructions(_message.Message):
+            __slots__ = ("gcloud_instructions", "console_instructions")
+            class Gcloud(_message.Message):
+                __slots__ = ("gcloud_commands", "steps", "additional_links")
+                GCLOUD_COMMANDS_FIELD_NUMBER: _ClassVar[int]
+                STEPS_FIELD_NUMBER: _ClassVar[int]
+                ADDITIONAL_LINKS_FIELD_NUMBER: _ClassVar[int]
+                gcloud_commands: _containers.RepeatedScalarFieldContainer[str]
+                steps: _containers.RepeatedScalarFieldContainer[str]
+                additional_links: _containers.RepeatedScalarFieldContainer[str]
+                def __init__(self, gcloud_commands: _Optional[_Iterable[str]] = ..., steps: _Optional[_Iterable[str]] = ..., additional_links: _Optional[_Iterable[str]] = ...) -> None: ...
+            class Console(_message.Message):
+                __slots__ = ("console_uris", "steps", "additional_links")
+                CONSOLE_URIS_FIELD_NUMBER: _ClassVar[int]
+                STEPS_FIELD_NUMBER: _ClassVar[int]
+                ADDITIONAL_LINKS_FIELD_NUMBER: _ClassVar[int]
+                console_uris: _containers.RepeatedScalarFieldContainer[str]
+                steps: _containers.RepeatedScalarFieldContainer[str]
+                additional_links: _containers.RepeatedScalarFieldContainer[str]
+                def __init__(self, console_uris: _Optional[_Iterable[str]] = ..., steps: _Optional[_Iterable[str]] = ..., additional_links: _Optional[_Iterable[str]] = ...) -> None: ...
+            GCLOUD_INSTRUCTIONS_FIELD_NUMBER: _ClassVar[int]
+            CONSOLE_INSTRUCTIONS_FIELD_NUMBER: _ClassVar[int]
+            gcloud_instructions: Violation.Remediation.Instructions.Gcloud
+            console_instructions: Violation.Remediation.Instructions.Console
+            def __init__(self, gcloud_instructions: _Optional[_Union[Violation.Remediation.Instructions.Gcloud, _Mapping]] = ..., console_instructions: _Optional[_Union[Violation.Remediation.Instructions.Console, _Mapping]] = ...) -> None: ...
+        INSTRUCTIONS_FIELD_NUMBER: _ClassVar[int]
+        COMPLIANT_VALUES_FIELD_NUMBER: _ClassVar[int]
+        REMEDIATION_TYPE_FIELD_NUMBER: _ClassVar[int]
+        instructions: Violation.Remediation.Instructions
+        compliant_values: _containers.RepeatedScalarFieldContainer[str]
+        remediation_type: Violation.Remediation.RemediationType
+        def __init__(self, instructions: _Optional[_Union[Violation.Remediation.Instructions, _Mapping]] = ..., compliant_values: _Optional[_Iterable[str]] = ..., remediation_type: _Optional[_Union[Violation.Remediation.RemediationType, str]] = ...) -> None: ...
+    NAME_FIELD_NUMBER: _ClassVar[int]
+    DESCRIPTION_FIELD_NUMBER: _ClassVar[int]
+    BEGIN_TIME_FIELD_NUMBER: _ClassVar[int]
+    UPDATE_TIME_FIELD_NUMBER: _ClassVar[int]
+    RESOLVE_TIME_FIELD_NUMBER: _ClassVar[int]
+    CATEGORY_FIELD_NUMBER: _ClassVar[int]
+    STATE_FIELD_NUMBER: _ClassVar[int]
+    ORG_POLICY_CONSTRAINT_FIELD_NUMBER: _ClassVar[int]
+    AUDIT_LOG_LINK_FIELD_NUMBER: _ClassVar[int]
+    NON_COMPLIANT_ORG_POLICY_FIELD_NUMBER: _ClassVar[int]
+    REMEDIATION_FIELD_NUMBER: _ClassVar[int]
+    ACKNOWLEDGED_FIELD_NUMBER: _ClassVar[int]
+    ACKNOWLEDGEMENT_TIME_FIELD_NUMBER: _ClassVar[int]
+    EXCEPTION_AUDIT_LOG_LINK_FIELD_NUMBER: _ClassVar[int]
+    name: str
+    description: str
+    begin_time: _timestamp_pb2.Timestamp
+    update_time: _timestamp_pb2.Timestamp
+    resolve_time: _timestamp_pb2.Timestamp
+    category: str
+    state: Violation.State
+    org_policy_constraint: str
+    audit_log_link: str
+    non_compliant_org_policy: str
+    remediation: Violation.Remediation
+    acknowledged: bool
+    acknowledgement_time: _timestamp_pb2.Timestamp
+    exception_audit_log_link: str
+    def __init__(self, name: _Optional[str] = ..., description: _Optional[str] = ..., begin_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., update_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., resolve_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., category: _Optional[str] = ..., state: _Optional[_Union[Violation.State, str]] = ..., org_policy_constraint: _Optional[str] = ..., audit_log_link: _Optional[str] = ..., non_compliant_org_policy: _Optional[str] = ..., remediation: _Optional[_Union[Violation.Remediation, _Mapping]] = ..., acknowledged: bool = ..., acknowledgement_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., exception_audit_log_link: _Optional[str] = ...) -> None: ...

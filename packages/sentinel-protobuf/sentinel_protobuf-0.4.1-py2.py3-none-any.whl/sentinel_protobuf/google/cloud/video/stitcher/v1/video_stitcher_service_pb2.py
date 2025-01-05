@@ -1,0 +1,272 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/cloud/video/stitcher/v1/video_stitcher_service.proto')
+_sym_db = _symbol_database.Default()
+from ......google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from ......google.api import client_pb2 as google_dot_api_dot_client__pb2
+from ......google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from ......google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from ......google.cloud.video.stitcher.v1 import ad_tag_details_pb2 as google_dot_cloud_dot_video_dot_stitcher_dot_v1_dot_ad__tag__details__pb2
+from ......google.cloud.video.stitcher.v1 import cdn_keys_pb2 as google_dot_cloud_dot_video_dot_stitcher_dot_v1_dot_cdn__keys__pb2
+from ......google.cloud.video.stitcher.v1 import live_configs_pb2 as google_dot_cloud_dot_video_dot_stitcher_dot_v1_dot_live__configs__pb2
+from ......google.cloud.video.stitcher.v1 import sessions_pb2 as google_dot_cloud_dot_video_dot_stitcher_dot_v1_dot_sessions__pb2
+from ......google.cloud.video.stitcher.v1 import slates_pb2 as google_dot_cloud_dot_video_dot_stitcher_dot_v1_dot_slates__pb2
+from ......google.cloud.video.stitcher.v1 import stitch_details_pb2 as google_dot_cloud_dot_video_dot_stitcher_dot_v1_dot_stitch__details__pb2
+from ......google.cloud.video.stitcher.v1 import vod_configs_pb2 as google_dot_cloud_dot_video_dot_stitcher_dot_v1_dot_vod__configs__pb2
+from ......google.longrunning import operations_pb2 as google_dot_longrunning_dot_operations__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
+from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n;google/cloud/video/stitcher/v1/video_stitcher_service.proto\x12\x1egoogle.cloud.video.stitcher.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a3google/cloud/video/stitcher/v1/ad_tag_details.proto\x1a-google/cloud/video/stitcher/v1/cdn_keys.proto\x1a1google/cloud/video/stitcher/v1/live_configs.proto\x1a-google/cloud/video/stitcher/v1/sessions.proto\x1a+google/cloud/video/stitcher/v1/slates.proto\x1a3google/cloud/video/stitcher/v1/stitch_details.proto\x1a0google/cloud/video/stitcher/v1/vod_configs.proto\x1a#google/longrunning/operations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto\x1a\x1fgoogle/protobuf/timestamp.proto"\xa9\x01\n\x13CreateCdnKeyRequest\x12;\n\x06parent\x18\x01 \x01(\tB+\xe0A\x02\xfaA%\x12#videostitcher.googleapis.com/CdnKey\x12<\n\x07cdn_key\x18\x02 \x01(\x0b2&.google.cloud.video.stitcher.v1.CdnKeyB\x03\xe0A\x02\x12\x17\n\ncdn_key_id\x18\x03 \x01(\tB\x03\xe0A\x02"\x9a\x01\n\x12ListCdnKeysRequest\x12;\n\x06parent\x18\x01 \x01(\tB+\xe0A\x02\xfaA%\x12#videostitcher.googleapis.com/CdnKey\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t\x12\x0e\n\x06filter\x18\x04 \x01(\t\x12\x10\n\x08order_by\x18\x05 \x01(\t"}\n\x13ListCdnKeysResponse\x128\n\x08cdn_keys\x18\x01 \x03(\x0b2&.google.cloud.video.stitcher.v1.CdnKey\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x13\n\x0bunreachable\x18\x03 \x03(\t"M\n\x10GetCdnKeyRequest\x129\n\x04name\x18\x01 \x01(\tB+\xe0A\x02\xfaA%\n#videostitcher.googleapis.com/CdnKey"P\n\x13DeleteCdnKeyRequest\x129\n\x04name\x18\x01 \x01(\tB+\xe0A\x02\xfaA%\n#videostitcher.googleapis.com/CdnKey"\x89\x01\n\x13UpdateCdnKeyRequest\x12<\n\x07cdn_key\x18\x01 \x01(\x0b2&.google.cloud.video.stitcher.v1.CdnKeyB\x03\xe0A\x02\x124\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x02"\xa0\x01\n\x17CreateVodSessionRequest\x12?\n\x06parent\x18\x01 \x01(\tB/\xe0A\x02\xfaA)\x12\'videostitcher.googleapis.com/VodSession\x12D\n\x0bvod_session\x18\x02 \x01(\x0b2*.google.cloud.video.stitcher.v1.VodSessionB\x03\xe0A\x02"U\n\x14GetVodSessionRequest\x12=\n\x04name\x18\x01 \x01(\tB/\xe0A\x02\xfaA)\n\'videostitcher.googleapis.com/VodSession"\x8a\x01\n\x1bListVodStitchDetailsRequest\x12D\n\x06parent\x18\x01 \x01(\tB4\xe0A\x02\xfaA.\x12,videostitcher.googleapis.com/VodStitchDetail\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t"\x84\x01\n\x1cListVodStitchDetailsResponse\x12K\n\x12vod_stitch_details\x18\x01 \x03(\x0b2/.google.cloud.video.stitcher.v1.VodStitchDetail\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"_\n\x19GetVodStitchDetailRequest\x12B\n\x04name\x18\x01 \x01(\tB4\xe0A\x02\xfaA.\n,videostitcher.googleapis.com/VodStitchDetail"\x88\x01\n\x1aListVodAdTagDetailsRequest\x12C\n\x06parent\x18\x01 \x01(\tB3\xe0A\x02\xfaA-\x12+videostitcher.googleapis.com/VodAdTagDetail\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t"\x82\x01\n\x1bListVodAdTagDetailsResponse\x12J\n\x12vod_ad_tag_details\x18\x01 \x03(\x0b2..google.cloud.video.stitcher.v1.VodAdTagDetail\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"]\n\x18GetVodAdTagDetailRequest\x12A\n\x04name\x18\x01 \x01(\tB3\xe0A\x02\xfaA-\n+videostitcher.googleapis.com/VodAdTagDetail"\x8a\x01\n\x1bListLiveAdTagDetailsRequest\x12D\n\x06parent\x18\x01 \x01(\tB4\xe0A\x02\xfaA.\x12,videostitcher.googleapis.com/LiveAdTagDetail\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t"\x85\x01\n\x1cListLiveAdTagDetailsResponse\x12L\n\x13live_ad_tag_details\x18\x01 \x03(\x0b2/.google.cloud.video.stitcher.v1.LiveAdTagDetail\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"_\n\x19GetLiveAdTagDetailRequest\x12B\n\x04name\x18\x01 \x01(\tB4\xe0A\x02\xfaA.\n,videostitcher.googleapis.com/LiveAdTagDetail"\xb6\x01\n\x12CreateSlateRequest\x12:\n\x06parent\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\x12"videostitcher.googleapis.com/Slate\x12\x15\n\x08slate_id\x18\x02 \x01(\tB\x03\xe0A\x02\x129\n\x05slate\x18\x03 \x01(\x0b2%.google.cloud.video.stitcher.v1.SlateB\x03\xe0A\x02\x12\x12\n\nrequest_id\x18\x04 \x01(\t"K\n\x0fGetSlateRequest\x128\n\x04name\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\n"videostitcher.googleapis.com/Slate"\x98\x01\n\x11ListSlatesRequest\x12:\n\x06parent\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\x12"videostitcher.googleapis.com/Slate\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t\x12\x0e\n\x06filter\x18\x04 \x01(\t\x12\x10\n\x08order_by\x18\x05 \x01(\t"y\n\x12ListSlatesResponse\x125\n\x06slates\x18\x01 \x03(\x0b2%.google.cloud.video.stitcher.v1.Slate\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x13\n\x0bunreachable\x18\x03 \x03(\t"\x85\x01\n\x12UpdateSlateRequest\x129\n\x05slate\x18\x01 \x01(\x0b2%.google.cloud.video.stitcher.v1.SlateB\x03\xe0A\x02\x124\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x02"N\n\x12DeleteSlateRequest\x128\n\x04name\x18\x01 \x01(\tB*\xe0A\x02\xfaA$\n"videostitcher.googleapis.com/Slate"\xa4\x01\n\x18CreateLiveSessionRequest\x12@\n\x06parent\x18\x01 \x01(\tB0\xe0A\x02\xfaA*\x12(videostitcher.googleapis.com/LiveSession\x12F\n\x0clive_session\x18\x02 \x01(\x0b2+.google.cloud.video.stitcher.v1.LiveSessionB\x03\xe0A\x02"W\n\x15GetLiveSessionRequest\x12>\n\x04name\x18\x01 \x01(\tB0\xe0A\x02\xfaA*\n(videostitcher.googleapis.com/LiveSession"\xd1\x01\n\x17CreateLiveConfigRequest\x12?\n\x06parent\x18\x01 \x01(\tB/\xe0A\x02\xfaA)\x12\'videostitcher.googleapis.com/LiveConfig\x12\x1b\n\x0elive_config_id\x18\x02 \x01(\tB\x03\xe0A\x02\x12D\n\x0blive_config\x18\x03 \x01(\x0b2*.google.cloud.video.stitcher.v1.LiveConfigB\x03\xe0A\x02\x12\x12\n\nrequest_id\x18\x04 \x01(\t"\xac\x01\n\x16ListLiveConfigsRequest\x12?\n\x06parent\x18\x01 \x01(\tB/\xe0A\x02\xfaA)\x12\'videostitcher.googleapis.com/LiveConfig\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t\x12\x13\n\x06filter\x18\x04 \x01(\tB\x03\xe0A\x01\x12\x15\n\x08order_by\x18\x05 \x01(\tB\x03\xe0A\x01"\x89\x01\n\x17ListLiveConfigsResponse\x12@\n\x0clive_configs\x18\x01 \x03(\x0b2*.google.cloud.video.stitcher.v1.LiveConfig\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x13\n\x0bunreachable\x18\x03 \x03(\t"U\n\x14GetLiveConfigRequest\x12=\n\x04name\x18\x01 \x01(\tB/\xe0A\x02\xfaA)\n\'videostitcher.googleapis.com/LiveConfig"X\n\x17DeleteLiveConfigRequest\x12=\n\x04name\x18\x01 \x01(\tB/\xe0A\x02\xfaA)\n\'videostitcher.googleapis.com/LiveConfig"\x95\x01\n\x17UpdateLiveConfigRequest\x12D\n\x0blive_config\x18\x01 \x01(\x0b2*.google.cloud.video.stitcher.v1.LiveConfigB\x03\xe0A\x02\x124\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x02"\xd1\x01\n\x16CreateVodConfigRequest\x12>\n\x06parent\x18\x01 \x01(\tB.\xe0A\x02\xfaA(\x12&videostitcher.googleapis.com/VodConfig\x12\x1a\n\rvod_config_id\x18\x02 \x01(\tB\x03\xe0A\x02\x12B\n\nvod_config\x18\x03 \x01(\x0b2).google.cloud.video.stitcher.v1.VodConfigB\x03\xe0A\x02\x12\x17\n\nrequest_id\x18\x04 \x01(\tB\x03\xe0A\x01"\xb4\x01\n\x15ListVodConfigsRequest\x12>\n\x06parent\x18\x01 \x01(\tB.\xe0A\x02\xfaA(\x12&videostitcher.googleapis.com/VodConfig\x12\x16\n\tpage_size\x18\x02 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x03 \x01(\tB\x03\xe0A\x01\x12\x13\n\x06filter\x18\x04 \x01(\tB\x03\xe0A\x01\x12\x15\n\x08order_by\x18\x05 \x01(\tB\x03\xe0A\x01"\x86\x01\n\x16ListVodConfigsResponse\x12>\n\x0bvod_configs\x18\x01 \x03(\x0b2).google.cloud.video.stitcher.v1.VodConfig\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x13\n\x0bunreachable\x18\x03 \x03(\t"S\n\x13GetVodConfigRequest\x12<\n\x04name\x18\x01 \x01(\tB.\xe0A\x02\xfaA(\n&videostitcher.googleapis.com/VodConfig"V\n\x16DeleteVodConfigRequest\x12<\n\x04name\x18\x01 \x01(\tB.\xe0A\x02\xfaA(\n&videostitcher.googleapis.com/VodConfig"\x92\x01\n\x16UpdateVodConfigRequest\x12B\n\nvod_config\x18\x01 \x01(\x0b2).google.cloud.video.stitcher.v1.VodConfigB\x03\xe0A\x02\x124\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x02"\x90\x01\n\x11OperationMetadata\x12/\n\x0bcreate_time\x18\x01 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12,\n\x08end_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12\x0e\n\x06target\x18\x03 \x01(\t\x12\x0c\n\x04verb\x18\x04 \x01(\t2\xd76\n\x14VideoStitcherService\x12\x99\x02\n\x0cCreateCdnKey\x123.google.cloud.video.stitcher.v1.CreateCdnKeyRequest\x1a\x1d.google.longrunning.Operation"\xb4\x01\xcaAY\n%google.cloud.video.stitcher.v1.CdnKey\x120google.cloud.video.stitcher.v1.OperationMetadata\xdaA\x19parent,cdn_key,cdn_key_id\x82\xd3\xe4\x93\x026"+/v1/{parent=projects/*/locations/*}/cdnKeys:\x07cdn_key\x12\xb4\x01\n\x0bListCdnKeys\x122.google.cloud.video.stitcher.v1.ListCdnKeysRequest\x1a3.google.cloud.video.stitcher.v1.ListCdnKeysResponse"<\xdaA\x06parent\x82\xd3\xe4\x93\x02-\x12+/v1/{parent=projects/*/locations/*}/cdnKeys\x12\xa1\x01\n\tGetCdnKey\x120.google.cloud.video.stitcher.v1.GetCdnKeyRequest\x1a&.google.cloud.video.stitcher.v1.CdnKey":\xdaA\x04name\x82\xd3\xe4\x93\x02-\x12+/v1/{name=projects/*/locations/*/cdnKeys/*}\x12\xeb\x01\n\x0cDeleteCdnKey\x123.google.cloud.video.stitcher.v1.DeleteCdnKeyRequest\x1a\x1d.google.longrunning.Operation"\x86\x01\xcaAI\n\x15google.protobuf.Empty\x120google.cloud.video.stitcher.v1.OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02-*+/v1/{name=projects/*/locations/*/cdnKeys/*}\x12\x9b\x02\n\x0cUpdateCdnKey\x123.google.cloud.video.stitcher.v1.UpdateCdnKeyRequest\x1a\x1d.google.longrunning.Operation"\xb6\x01\xcaAY\n%google.cloud.video.stitcher.v1.CdnKey\x120google.cloud.video.stitcher.v1.OperationMetadata\xdaA\x13cdn_key,update_mask\x82\xd3\xe4\x93\x02>23/v1/{cdn_key.name=projects/*/locations/*/cdnKeys/*}:\x07cdn_key\x12\xd2\x01\n\x10CreateVodSession\x127.google.cloud.video.stitcher.v1.CreateVodSessionRequest\x1a*.google.cloud.video.stitcher.v1.VodSession"Y\xdaA\x12parent,vod_session\x82\xd3\xe4\x93\x02>"//v1/{parent=projects/*/locations/*}/vodSessions:\x0bvod_session\x12\xb1\x01\n\rGetVodSession\x124.google.cloud.video.stitcher.v1.GetVodSessionRequest\x1a*.google.cloud.video.stitcher.v1.VodSession">\xdaA\x04name\x82\xd3\xe4\x93\x021\x12//v1/{name=projects/*/locations/*/vodSessions/*}\x12\xe6\x01\n\x14ListVodStitchDetails\x12;.google.cloud.video.stitcher.v1.ListVodStitchDetailsRequest\x1a<.google.cloud.video.stitcher.v1.ListVodStitchDetailsResponse"S\xdaA\x06parent\x82\xd3\xe4\x93\x02D\x12B/v1/{parent=projects/*/locations/*/vodSessions/*}/vodStitchDetails\x12\xd3\x01\n\x12GetVodStitchDetail\x129.google.cloud.video.stitcher.v1.GetVodStitchDetailRequest\x1a/.google.cloud.video.stitcher.v1.VodStitchDetail"Q\xdaA\x04name\x82\xd3\xe4\x93\x02D\x12B/v1/{name=projects/*/locations/*/vodSessions/*/vodStitchDetails/*}\x12\xe2\x01\n\x13ListVodAdTagDetails\x12:.google.cloud.video.stitcher.v1.ListVodAdTagDetailsRequest\x1a;.google.cloud.video.stitcher.v1.ListVodAdTagDetailsResponse"R\xdaA\x06parent\x82\xd3\xe4\x93\x02C\x12A/v1/{parent=projects/*/locations/*/vodSessions/*}/vodAdTagDetails\x12\xcf\x01\n\x11GetVodAdTagDetail\x128.google.cloud.video.stitcher.v1.GetVodAdTagDetailRequest\x1a..google.cloud.video.stitcher.v1.VodAdTagDetail"P\xdaA\x04name\x82\xd3\xe4\x93\x02C\x12A/v1/{name=projects/*/locations/*/vodSessions/*/vodAdTagDetails/*}\x12\xe7\x01\n\x14ListLiveAdTagDetails\x12;.google.cloud.video.stitcher.v1.ListLiveAdTagDetailsRequest\x1a<.google.cloud.video.stitcher.v1.ListLiveAdTagDetailsResponse"T\xdaA\x06parent\x82\xd3\xe4\x93\x02E\x12C/v1/{parent=projects/*/locations/*/liveSessions/*}/liveAdTagDetails\x12\xd4\x01\n\x12GetLiveAdTagDetail\x129.google.cloud.video.stitcher.v1.GetLiveAdTagDetailRequest\x1a/.google.cloud.video.stitcher.v1.LiveAdTagDetail"R\xdaA\x04name\x82\xd3\xe4\x93\x02E\x12C/v1/{name=projects/*/locations/*/liveSessions/*/liveAdTagDetails/*}\x12\x8f\x02\n\x0bCreateSlate\x122.google.cloud.video.stitcher.v1.CreateSlateRequest\x1a\x1d.google.longrunning.Operation"\xac\x01\xcaAX\n$google.cloud.video.stitcher.v1.Slate\x120google.cloud.video.stitcher.v1.OperationMetadata\xdaA\x15parent,slate,slate_id\x82\xd3\xe4\x93\x023"*/v1/{parent=projects/*/locations/*}/slates:\x05slate\x12\xb0\x01\n\nListSlates\x121.google.cloud.video.stitcher.v1.ListSlatesRequest\x1a2.google.cloud.video.stitcher.v1.ListSlatesResponse";\xdaA\x06parent\x82\xd3\xe4\x93\x02,\x12*/v1/{parent=projects/*/locations/*}/slates\x12\x9d\x01\n\x08GetSlate\x12/.google.cloud.video.stitcher.v1.GetSlateRequest\x1a%.google.cloud.video.stitcher.v1.Slate"9\xdaA\x04name\x82\xd3\xe4\x93\x02,\x12*/v1/{name=projects/*/locations/*/slates/*}\x12\x91\x02\n\x0bUpdateSlate\x122.google.cloud.video.stitcher.v1.UpdateSlateRequest\x1a\x1d.google.longrunning.Operation"\xae\x01\xcaAX\n$google.cloud.video.stitcher.v1.Slate\x120google.cloud.video.stitcher.v1.OperationMetadata\xdaA\x11slate,update_mask\x82\xd3\xe4\x93\x02920/v1/{slate.name=projects/*/locations/*/slates/*}:\x05slate\x12\xe8\x01\n\x0bDeleteSlate\x122.google.cloud.video.stitcher.v1.DeleteSlateRequest\x1a\x1d.google.longrunning.Operation"\x85\x01\xcaAI\n\x15google.protobuf.Empty\x120google.cloud.video.stitcher.v1.OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02,**/v1/{name=projects/*/locations/*/slates/*}\x12\xd8\x01\n\x11CreateLiveSession\x128.google.cloud.video.stitcher.v1.CreateLiveSessionRequest\x1a+.google.cloud.video.stitcher.v1.LiveSession"\\\xdaA\x13parent,live_session\x82\xd3\xe4\x93\x02@"0/v1/{parent=projects/*/locations/*}/liveSessions:\x0clive_session\x12\xb5\x01\n\x0eGetLiveSession\x125.google.cloud.video.stitcher.v1.GetLiveSessionRequest\x1a+.google.cloud.video.stitcher.v1.LiveSession"?\xdaA\x04name\x82\xd3\xe4\x93\x022\x120/v1/{name=projects/*/locations/*/liveSessions/*}\x12\xb5\x02\n\x10CreateLiveConfig\x127.google.cloud.video.stitcher.v1.CreateLiveConfigRequest\x1a\x1d.google.longrunning.Operation"\xc8\x01\xcaA]\n)google.cloud.video.stitcher.v1.LiveConfig\x120google.cloud.video.stitcher.v1.OperationMetadata\xdaA!parent,live_config,live_config_id\x82\xd3\xe4\x93\x02>"//v1/{parent=projects/*/locations/*}/liveConfigs:\x0blive_config\x12\xc4\x01\n\x0fListLiveConfigs\x126.google.cloud.video.stitcher.v1.ListLiveConfigsRequest\x1a7.google.cloud.video.stitcher.v1.ListLiveConfigsResponse"@\xdaA\x06parent\x82\xd3\xe4\x93\x021\x12//v1/{parent=projects/*/locations/*}/liveConfigs\x12\xb1\x01\n\rGetLiveConfig\x124.google.cloud.video.stitcher.v1.GetLiveConfigRequest\x1a*.google.cloud.video.stitcher.v1.LiveConfig">\xdaA\x04name\x82\xd3\xe4\x93\x021\x12//v1/{name=projects/*/locations/*/liveConfigs/*}\x12\xf7\x01\n\x10DeleteLiveConfig\x127.google.cloud.video.stitcher.v1.DeleteLiveConfigRequest\x1a\x1d.google.longrunning.Operation"\x8a\x01\xcaAI\n\x15google.protobuf.Empty\x120google.cloud.video.stitcher.v1.OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x021*//v1/{name=projects/*/locations/*/liveConfigs/*}\x12\xb7\x02\n\x10UpdateLiveConfig\x127.google.cloud.video.stitcher.v1.UpdateLiveConfigRequest\x1a\x1d.google.longrunning.Operation"\xca\x01\xcaA]\n)google.cloud.video.stitcher.v1.LiveConfig\x120google.cloud.video.stitcher.v1.OperationMetadata\xdaA\x17live_config,update_mask\x82\xd3\xe4\x93\x02J2;/v1/{live_config.name=projects/*/locations/*/liveConfigs/*}:\x0blive_config\x12\xae\x02\n\x0fCreateVodConfig\x126.google.cloud.video.stitcher.v1.CreateVodConfigRequest\x1a\x1d.google.longrunning.Operation"\xc3\x01\xcaA\\\n(google.cloud.video.stitcher.v1.VodConfig\x120google.cloud.video.stitcher.v1.OperationMetadata\xdaA\x1fparent,vod_config,vod_config_id\x82\xd3\xe4\x93\x02<"./v1/{parent=projects/*/locations/*}/vodConfigs:\nvod_config\x12\xc0\x01\n\x0eListVodConfigs\x125.google.cloud.video.stitcher.v1.ListVodConfigsRequest\x1a6.google.cloud.video.stitcher.v1.ListVodConfigsResponse"?\xdaA\x06parent\x82\xd3\xe4\x93\x020\x12./v1/{parent=projects/*/locations/*}/vodConfigs\x12\xad\x01\n\x0cGetVodConfig\x123.google.cloud.video.stitcher.v1.GetVodConfigRequest\x1a).google.cloud.video.stitcher.v1.VodConfig"=\xdaA\x04name\x82\xd3\xe4\x93\x020\x12./v1/{name=projects/*/locations/*/vodConfigs/*}\x12\xf4\x01\n\x0fDeleteVodConfig\x126.google.cloud.video.stitcher.v1.DeleteVodConfigRequest\x1a\x1d.google.longrunning.Operation"\x89\x01\xcaAI\n\x15google.protobuf.Empty\x120google.cloud.video.stitcher.v1.OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x020*./v1/{name=projects/*/locations/*/vodConfigs/*}\x12\xb0\x02\n\x0fUpdateVodConfig\x126.google.cloud.video.stitcher.v1.UpdateVodConfigRequest\x1a\x1d.google.longrunning.Operation"\xc5\x01\xcaA\\\n(google.cloud.video.stitcher.v1.VodConfig\x120google.cloud.video.stitcher.v1.OperationMetadata\xdaA\x16vod_config,update_mask\x82\xd3\xe4\x93\x02G29/v1/{vod_config.name=projects/*/locations/*/vodConfigs/*}:\nvod_config\x1aP\xcaA\x1cvideostitcher.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platformB\x81\x01\n"com.google.cloud.video.stitcher.v1B\x19VideoStitcherServiceProtoP\x01Z>cloud.google.com/go/video/stitcher/apiv1/stitcherpb;stitcherpbb\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.video.stitcher.v1.video_stitcher_service_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n"com.google.cloud.video.stitcher.v1B\x19VideoStitcherServiceProtoP\x01Z>cloud.google.com/go/video/stitcher/apiv1/stitcherpb;stitcherpb'
+    _globals['_CREATECDNKEYREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATECDNKEYREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA%\x12#videostitcher.googleapis.com/CdnKey'
+    _globals['_CREATECDNKEYREQUEST'].fields_by_name['cdn_key']._loaded_options = None
+    _globals['_CREATECDNKEYREQUEST'].fields_by_name['cdn_key']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATECDNKEYREQUEST'].fields_by_name['cdn_key_id']._loaded_options = None
+    _globals['_CREATECDNKEYREQUEST'].fields_by_name['cdn_key_id']._serialized_options = b'\xe0A\x02'
+    _globals['_LISTCDNKEYSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTCDNKEYSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA%\x12#videostitcher.googleapis.com/CdnKey'
+    _globals['_GETCDNKEYREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETCDNKEYREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA%\n#videostitcher.googleapis.com/CdnKey'
+    _globals['_DELETECDNKEYREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETECDNKEYREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA%\n#videostitcher.googleapis.com/CdnKey'
+    _globals['_UPDATECDNKEYREQUEST'].fields_by_name['cdn_key']._loaded_options = None
+    _globals['_UPDATECDNKEYREQUEST'].fields_by_name['cdn_key']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATECDNKEYREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATECDNKEYREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEVODSESSIONREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEVODSESSIONREQUEST'].fields_by_name['parent']._serialized_options = b"\xe0A\x02\xfaA)\x12'videostitcher.googleapis.com/VodSession"
+    _globals['_CREATEVODSESSIONREQUEST'].fields_by_name['vod_session']._loaded_options = None
+    _globals['_CREATEVODSESSIONREQUEST'].fields_by_name['vod_session']._serialized_options = b'\xe0A\x02'
+    _globals['_GETVODSESSIONREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETVODSESSIONREQUEST'].fields_by_name['name']._serialized_options = b"\xe0A\x02\xfaA)\n'videostitcher.googleapis.com/VodSession"
+    _globals['_LISTVODSTITCHDETAILSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTVODSTITCHDETAILSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA.\x12,videostitcher.googleapis.com/VodStitchDetail'
+    _globals['_GETVODSTITCHDETAILREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETVODSTITCHDETAILREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA.\n,videostitcher.googleapis.com/VodStitchDetail'
+    _globals['_LISTVODADTAGDETAILSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTVODADTAGDETAILSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA-\x12+videostitcher.googleapis.com/VodAdTagDetail'
+    _globals['_GETVODADTAGDETAILREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETVODADTAGDETAILREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA-\n+videostitcher.googleapis.com/VodAdTagDetail'
+    _globals['_LISTLIVEADTAGDETAILSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTLIVEADTAGDETAILSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA.\x12,videostitcher.googleapis.com/LiveAdTagDetail'
+    _globals['_GETLIVEADTAGDETAILREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETLIVEADTAGDETAILREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA.\n,videostitcher.googleapis.com/LiveAdTagDetail'
+    _globals['_CREATESLATEREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATESLATEREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA$\x12"videostitcher.googleapis.com/Slate'
+    _globals['_CREATESLATEREQUEST'].fields_by_name['slate_id']._loaded_options = None
+    _globals['_CREATESLATEREQUEST'].fields_by_name['slate_id']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATESLATEREQUEST'].fields_by_name['slate']._loaded_options = None
+    _globals['_CREATESLATEREQUEST'].fields_by_name['slate']._serialized_options = b'\xe0A\x02'
+    _globals['_GETSLATEREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETSLATEREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA$\n"videostitcher.googleapis.com/Slate'
+    _globals['_LISTSLATESREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTSLATESREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA$\x12"videostitcher.googleapis.com/Slate'
+    _globals['_UPDATESLATEREQUEST'].fields_by_name['slate']._loaded_options = None
+    _globals['_UPDATESLATEREQUEST'].fields_by_name['slate']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATESLATEREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATESLATEREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x02'
+    _globals['_DELETESLATEREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETESLATEREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA$\n"videostitcher.googleapis.com/Slate'
+    _globals['_CREATELIVESESSIONREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATELIVESESSIONREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA*\x12(videostitcher.googleapis.com/LiveSession'
+    _globals['_CREATELIVESESSIONREQUEST'].fields_by_name['live_session']._loaded_options = None
+    _globals['_CREATELIVESESSIONREQUEST'].fields_by_name['live_session']._serialized_options = b'\xe0A\x02'
+    _globals['_GETLIVESESSIONREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETLIVESESSIONREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA*\n(videostitcher.googleapis.com/LiveSession'
+    _globals['_CREATELIVECONFIGREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATELIVECONFIGREQUEST'].fields_by_name['parent']._serialized_options = b"\xe0A\x02\xfaA)\x12'videostitcher.googleapis.com/LiveConfig"
+    _globals['_CREATELIVECONFIGREQUEST'].fields_by_name['live_config_id']._loaded_options = None
+    _globals['_CREATELIVECONFIGREQUEST'].fields_by_name['live_config_id']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATELIVECONFIGREQUEST'].fields_by_name['live_config']._loaded_options = None
+    _globals['_CREATELIVECONFIGREQUEST'].fields_by_name['live_config']._serialized_options = b'\xe0A\x02'
+    _globals['_LISTLIVECONFIGSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTLIVECONFIGSREQUEST'].fields_by_name['parent']._serialized_options = b"\xe0A\x02\xfaA)\x12'videostitcher.googleapis.com/LiveConfig"
+    _globals['_LISTLIVECONFIGSREQUEST'].fields_by_name['filter']._loaded_options = None
+    _globals['_LISTLIVECONFIGSREQUEST'].fields_by_name['filter']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTLIVECONFIGSREQUEST'].fields_by_name['order_by']._loaded_options = None
+    _globals['_LISTLIVECONFIGSREQUEST'].fields_by_name['order_by']._serialized_options = b'\xe0A\x01'
+    _globals['_GETLIVECONFIGREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETLIVECONFIGREQUEST'].fields_by_name['name']._serialized_options = b"\xe0A\x02\xfaA)\n'videostitcher.googleapis.com/LiveConfig"
+    _globals['_DELETELIVECONFIGREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETELIVECONFIGREQUEST'].fields_by_name['name']._serialized_options = b"\xe0A\x02\xfaA)\n'videostitcher.googleapis.com/LiveConfig"
+    _globals['_UPDATELIVECONFIGREQUEST'].fields_by_name['live_config']._loaded_options = None
+    _globals['_UPDATELIVECONFIGREQUEST'].fields_by_name['live_config']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATELIVECONFIGREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATELIVECONFIGREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEVODCONFIGREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEVODCONFIGREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA(\x12&videostitcher.googleapis.com/VodConfig'
+    _globals['_CREATEVODCONFIGREQUEST'].fields_by_name['vod_config_id']._loaded_options = None
+    _globals['_CREATEVODCONFIGREQUEST'].fields_by_name['vod_config_id']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEVODCONFIGREQUEST'].fields_by_name['vod_config']._loaded_options = None
+    _globals['_CREATEVODCONFIGREQUEST'].fields_by_name['vod_config']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEVODCONFIGREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_CREATEVODCONFIGREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTVODCONFIGSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTVODCONFIGSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA(\x12&videostitcher.googleapis.com/VodConfig'
+    _globals['_LISTVODCONFIGSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTVODCONFIGSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTVODCONFIGSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTVODCONFIGSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTVODCONFIGSREQUEST'].fields_by_name['filter']._loaded_options = None
+    _globals['_LISTVODCONFIGSREQUEST'].fields_by_name['filter']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTVODCONFIGSREQUEST'].fields_by_name['order_by']._loaded_options = None
+    _globals['_LISTVODCONFIGSREQUEST'].fields_by_name['order_by']._serialized_options = b'\xe0A\x01'
+    _globals['_GETVODCONFIGREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETVODCONFIGREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA(\n&videostitcher.googleapis.com/VodConfig'
+    _globals['_DELETEVODCONFIGREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEVODCONFIGREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA(\n&videostitcher.googleapis.com/VodConfig'
+    _globals['_UPDATEVODCONFIGREQUEST'].fields_by_name['vod_config']._loaded_options = None
+    _globals['_UPDATEVODCONFIGREQUEST'].fields_by_name['vod_config']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATEVODCONFIGREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATEVODCONFIGREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x02'
+    _globals['_VIDEOSTITCHERSERVICE']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE']._serialized_options = b'\xcaA\x1cvideostitcher.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platform'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['CreateCdnKey']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['CreateCdnKey']._serialized_options = b'\xcaAY\n%google.cloud.video.stitcher.v1.CdnKey\x120google.cloud.video.stitcher.v1.OperationMetadata\xdaA\x19parent,cdn_key,cdn_key_id\x82\xd3\xe4\x93\x026"+/v1/{parent=projects/*/locations/*}/cdnKeys:\x07cdn_key'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['ListCdnKeys']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['ListCdnKeys']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02-\x12+/v1/{parent=projects/*/locations/*}/cdnKeys'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['GetCdnKey']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['GetCdnKey']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02-\x12+/v1/{name=projects/*/locations/*/cdnKeys/*}'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['DeleteCdnKey']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['DeleteCdnKey']._serialized_options = b'\xcaAI\n\x15google.protobuf.Empty\x120google.cloud.video.stitcher.v1.OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02-*+/v1/{name=projects/*/locations/*/cdnKeys/*}'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['UpdateCdnKey']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['UpdateCdnKey']._serialized_options = b'\xcaAY\n%google.cloud.video.stitcher.v1.CdnKey\x120google.cloud.video.stitcher.v1.OperationMetadata\xdaA\x13cdn_key,update_mask\x82\xd3\xe4\x93\x02>23/v1/{cdn_key.name=projects/*/locations/*/cdnKeys/*}:\x07cdn_key'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['CreateVodSession']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['CreateVodSession']._serialized_options = b'\xdaA\x12parent,vod_session\x82\xd3\xe4\x93\x02>"//v1/{parent=projects/*/locations/*}/vodSessions:\x0bvod_session'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['GetVodSession']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['GetVodSession']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x021\x12//v1/{name=projects/*/locations/*/vodSessions/*}'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['ListVodStitchDetails']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['ListVodStitchDetails']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02D\x12B/v1/{parent=projects/*/locations/*/vodSessions/*}/vodStitchDetails'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['GetVodStitchDetail']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['GetVodStitchDetail']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02D\x12B/v1/{name=projects/*/locations/*/vodSessions/*/vodStitchDetails/*}'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['ListVodAdTagDetails']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['ListVodAdTagDetails']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02C\x12A/v1/{parent=projects/*/locations/*/vodSessions/*}/vodAdTagDetails'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['GetVodAdTagDetail']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['GetVodAdTagDetail']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02C\x12A/v1/{name=projects/*/locations/*/vodSessions/*/vodAdTagDetails/*}'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['ListLiveAdTagDetails']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['ListLiveAdTagDetails']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02E\x12C/v1/{parent=projects/*/locations/*/liveSessions/*}/liveAdTagDetails'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['GetLiveAdTagDetail']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['GetLiveAdTagDetail']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02E\x12C/v1/{name=projects/*/locations/*/liveSessions/*/liveAdTagDetails/*}'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['CreateSlate']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['CreateSlate']._serialized_options = b'\xcaAX\n$google.cloud.video.stitcher.v1.Slate\x120google.cloud.video.stitcher.v1.OperationMetadata\xdaA\x15parent,slate,slate_id\x82\xd3\xe4\x93\x023"*/v1/{parent=projects/*/locations/*}/slates:\x05slate'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['ListSlates']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['ListSlates']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02,\x12*/v1/{parent=projects/*/locations/*}/slates'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['GetSlate']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['GetSlate']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02,\x12*/v1/{name=projects/*/locations/*/slates/*}'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['UpdateSlate']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['UpdateSlate']._serialized_options = b'\xcaAX\n$google.cloud.video.stitcher.v1.Slate\x120google.cloud.video.stitcher.v1.OperationMetadata\xdaA\x11slate,update_mask\x82\xd3\xe4\x93\x02920/v1/{slate.name=projects/*/locations/*/slates/*}:\x05slate'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['DeleteSlate']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['DeleteSlate']._serialized_options = b'\xcaAI\n\x15google.protobuf.Empty\x120google.cloud.video.stitcher.v1.OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02,**/v1/{name=projects/*/locations/*/slates/*}'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['CreateLiveSession']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['CreateLiveSession']._serialized_options = b'\xdaA\x13parent,live_session\x82\xd3\xe4\x93\x02@"0/v1/{parent=projects/*/locations/*}/liveSessions:\x0clive_session'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['GetLiveSession']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['GetLiveSession']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x022\x120/v1/{name=projects/*/locations/*/liveSessions/*}'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['CreateLiveConfig']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['CreateLiveConfig']._serialized_options = b'\xcaA]\n)google.cloud.video.stitcher.v1.LiveConfig\x120google.cloud.video.stitcher.v1.OperationMetadata\xdaA!parent,live_config,live_config_id\x82\xd3\xe4\x93\x02>"//v1/{parent=projects/*/locations/*}/liveConfigs:\x0blive_config'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['ListLiveConfigs']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['ListLiveConfigs']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x021\x12//v1/{parent=projects/*/locations/*}/liveConfigs'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['GetLiveConfig']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['GetLiveConfig']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x021\x12//v1/{name=projects/*/locations/*/liveConfigs/*}'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['DeleteLiveConfig']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['DeleteLiveConfig']._serialized_options = b'\xcaAI\n\x15google.protobuf.Empty\x120google.cloud.video.stitcher.v1.OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x021*//v1/{name=projects/*/locations/*/liveConfigs/*}'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['UpdateLiveConfig']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['UpdateLiveConfig']._serialized_options = b'\xcaA]\n)google.cloud.video.stitcher.v1.LiveConfig\x120google.cloud.video.stitcher.v1.OperationMetadata\xdaA\x17live_config,update_mask\x82\xd3\xe4\x93\x02J2;/v1/{live_config.name=projects/*/locations/*/liveConfigs/*}:\x0blive_config'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['CreateVodConfig']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['CreateVodConfig']._serialized_options = b'\xcaA\\\n(google.cloud.video.stitcher.v1.VodConfig\x120google.cloud.video.stitcher.v1.OperationMetadata\xdaA\x1fparent,vod_config,vod_config_id\x82\xd3\xe4\x93\x02<"./v1/{parent=projects/*/locations/*}/vodConfigs:\nvod_config'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['ListVodConfigs']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['ListVodConfigs']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x020\x12./v1/{parent=projects/*/locations/*}/vodConfigs'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['GetVodConfig']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['GetVodConfig']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x020\x12./v1/{name=projects/*/locations/*/vodConfigs/*}'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['DeleteVodConfig']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['DeleteVodConfig']._serialized_options = b'\xcaAI\n\x15google.protobuf.Empty\x120google.cloud.video.stitcher.v1.OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x020*./v1/{name=projects/*/locations/*/vodConfigs/*}'
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['UpdateVodConfig']._loaded_options = None
+    _globals['_VIDEOSTITCHERSERVICE'].methods_by_name['UpdateVodConfig']._serialized_options = b'\xcaA\\\n(google.cloud.video.stitcher.v1.VodConfig\x120google.cloud.video.stitcher.v1.OperationMetadata\xdaA\x16vod_config,update_mask\x82\xd3\xe4\x93\x02G29/v1/{vod_config.name=projects/*/locations/*/vodConfigs/*}:\nvod_config'
+    _globals['_CREATECDNKEYREQUEST']._serialized_start = 690
+    _globals['_CREATECDNKEYREQUEST']._serialized_end = 859
+    _globals['_LISTCDNKEYSREQUEST']._serialized_start = 862
+    _globals['_LISTCDNKEYSREQUEST']._serialized_end = 1016
+    _globals['_LISTCDNKEYSRESPONSE']._serialized_start = 1018
+    _globals['_LISTCDNKEYSRESPONSE']._serialized_end = 1143
+    _globals['_GETCDNKEYREQUEST']._serialized_start = 1145
+    _globals['_GETCDNKEYREQUEST']._serialized_end = 1222
+    _globals['_DELETECDNKEYREQUEST']._serialized_start = 1224
+    _globals['_DELETECDNKEYREQUEST']._serialized_end = 1304
+    _globals['_UPDATECDNKEYREQUEST']._serialized_start = 1307
+    _globals['_UPDATECDNKEYREQUEST']._serialized_end = 1444
+    _globals['_CREATEVODSESSIONREQUEST']._serialized_start = 1447
+    _globals['_CREATEVODSESSIONREQUEST']._serialized_end = 1607
+    _globals['_GETVODSESSIONREQUEST']._serialized_start = 1609
+    _globals['_GETVODSESSIONREQUEST']._serialized_end = 1694
+    _globals['_LISTVODSTITCHDETAILSREQUEST']._serialized_start = 1697
+    _globals['_LISTVODSTITCHDETAILSREQUEST']._serialized_end = 1835
+    _globals['_LISTVODSTITCHDETAILSRESPONSE']._serialized_start = 1838
+    _globals['_LISTVODSTITCHDETAILSRESPONSE']._serialized_end = 1970
+    _globals['_GETVODSTITCHDETAILREQUEST']._serialized_start = 1972
+    _globals['_GETVODSTITCHDETAILREQUEST']._serialized_end = 2067
+    _globals['_LISTVODADTAGDETAILSREQUEST']._serialized_start = 2070
+    _globals['_LISTVODADTAGDETAILSREQUEST']._serialized_end = 2206
+    _globals['_LISTVODADTAGDETAILSRESPONSE']._serialized_start = 2209
+    _globals['_LISTVODADTAGDETAILSRESPONSE']._serialized_end = 2339
+    _globals['_GETVODADTAGDETAILREQUEST']._serialized_start = 2341
+    _globals['_GETVODADTAGDETAILREQUEST']._serialized_end = 2434
+    _globals['_LISTLIVEADTAGDETAILSREQUEST']._serialized_start = 2437
+    _globals['_LISTLIVEADTAGDETAILSREQUEST']._serialized_end = 2575
+    _globals['_LISTLIVEADTAGDETAILSRESPONSE']._serialized_start = 2578
+    _globals['_LISTLIVEADTAGDETAILSRESPONSE']._serialized_end = 2711
+    _globals['_GETLIVEADTAGDETAILREQUEST']._serialized_start = 2713
+    _globals['_GETLIVEADTAGDETAILREQUEST']._serialized_end = 2808
+    _globals['_CREATESLATEREQUEST']._serialized_start = 2811
+    _globals['_CREATESLATEREQUEST']._serialized_end = 2993
+    _globals['_GETSLATEREQUEST']._serialized_start = 2995
+    _globals['_GETSLATEREQUEST']._serialized_end = 3070
+    _globals['_LISTSLATESREQUEST']._serialized_start = 3073
+    _globals['_LISTSLATESREQUEST']._serialized_end = 3225
+    _globals['_LISTSLATESRESPONSE']._serialized_start = 3227
+    _globals['_LISTSLATESRESPONSE']._serialized_end = 3348
+    _globals['_UPDATESLATEREQUEST']._serialized_start = 3351
+    _globals['_UPDATESLATEREQUEST']._serialized_end = 3484
+    _globals['_DELETESLATEREQUEST']._serialized_start = 3486
+    _globals['_DELETESLATEREQUEST']._serialized_end = 3564
+    _globals['_CREATELIVESESSIONREQUEST']._serialized_start = 3567
+    _globals['_CREATELIVESESSIONREQUEST']._serialized_end = 3731
+    _globals['_GETLIVESESSIONREQUEST']._serialized_start = 3733
+    _globals['_GETLIVESESSIONREQUEST']._serialized_end = 3820
+    _globals['_CREATELIVECONFIGREQUEST']._serialized_start = 3823
+    _globals['_CREATELIVECONFIGREQUEST']._serialized_end = 4032
+    _globals['_LISTLIVECONFIGSREQUEST']._serialized_start = 4035
+    _globals['_LISTLIVECONFIGSREQUEST']._serialized_end = 4207
+    _globals['_LISTLIVECONFIGSRESPONSE']._serialized_start = 4210
+    _globals['_LISTLIVECONFIGSRESPONSE']._serialized_end = 4347
+    _globals['_GETLIVECONFIGREQUEST']._serialized_start = 4349
+    _globals['_GETLIVECONFIGREQUEST']._serialized_end = 4434
+    _globals['_DELETELIVECONFIGREQUEST']._serialized_start = 4436
+    _globals['_DELETELIVECONFIGREQUEST']._serialized_end = 4524
+    _globals['_UPDATELIVECONFIGREQUEST']._serialized_start = 4527
+    _globals['_UPDATELIVECONFIGREQUEST']._serialized_end = 4676
+    _globals['_CREATEVODCONFIGREQUEST']._serialized_start = 4679
+    _globals['_CREATEVODCONFIGREQUEST']._serialized_end = 4888
+    _globals['_LISTVODCONFIGSREQUEST']._serialized_start = 4891
+    _globals['_LISTVODCONFIGSREQUEST']._serialized_end = 5071
+    _globals['_LISTVODCONFIGSRESPONSE']._serialized_start = 5074
+    _globals['_LISTVODCONFIGSRESPONSE']._serialized_end = 5208
+    _globals['_GETVODCONFIGREQUEST']._serialized_start = 5210
+    _globals['_GETVODCONFIGREQUEST']._serialized_end = 5293
+    _globals['_DELETEVODCONFIGREQUEST']._serialized_start = 5295
+    _globals['_DELETEVODCONFIGREQUEST']._serialized_end = 5381
+    _globals['_UPDATEVODCONFIGREQUEST']._serialized_start = 5384
+    _globals['_UPDATEVODCONFIGREQUEST']._serialized_end = 5530
+    _globals['_OPERATIONMETADATA']._serialized_start = 5533
+    _globals['_OPERATIONMETADATA']._serialized_end = 5677
+    _globals['_VIDEOSTITCHERSERVICE']._serialized_start = 5680
+    _globals['_VIDEOSTITCHERSERVICE']._serialized_end = 12679

@@ -1,0 +1,37 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/api/expr/v1beta1/expr.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api.expr.v1beta1 import source_pb2 as google_dot_api_dot_expr_dot_v1beta1_dot_source__pb2
+from google.protobuf import struct_pb2 as google_dot_protobuf_dot_struct__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n"google/api/expr/v1beta1/expr.proto\x12\x17google.api.expr.v1beta1\x1a$google/api/expr/v1beta1/source.proto\x1a\x1cgoogle/protobuf/struct.proto"\x8b\x01\n\nParsedExpr\x12+\n\x04expr\x18\x02 \x01(\x0b2\x1d.google.api.expr.v1beta1.Expr\x128\n\x0bsource_info\x18\x03 \x01(\x0b2#.google.api.expr.v1beta1.SourceInfo\x12\x16\n\x0esyntax_version\x18\x04 \x01(\t"\xab\n\n\x04Expr\x12\n\n\x02id\x18\x02 \x01(\x05\x128\n\x0cliteral_expr\x18\x03 \x01(\x0b2 .google.api.expr.v1beta1.LiteralH\x00\x129\n\nident_expr\x18\x04 \x01(\x0b2#.google.api.expr.v1beta1.Expr.IdentH\x00\x12;\n\x0bselect_expr\x18\x05 \x01(\x0b2$.google.api.expr.v1beta1.Expr.SelectH\x00\x127\n\tcall_expr\x18\x06 \x01(\x0b2".google.api.expr.v1beta1.Expr.CallH\x00\x12=\n\tlist_expr\x18\x07 \x01(\x0b2(.google.api.expr.v1beta1.Expr.CreateListH\x00\x12A\n\x0bstruct_expr\x18\x08 \x01(\x0b2*.google.api.expr.v1beta1.Expr.CreateStructH\x00\x12I\n\x12comprehension_expr\x18\t \x01(\x0b2+.google.api.expr.v1beta1.Expr.ComprehensionH\x00\x1a\x15\n\x05Ident\x12\x0c\n\x04name\x18\x01 \x01(\t\x1aZ\n\x06Select\x12.\n\x07operand\x18\x01 \x01(\x0b2\x1d.google.api.expr.v1beta1.Expr\x12\r\n\x05field\x18\x02 \x01(\t\x12\x11\n\ttest_only\x18\x03 \x01(\x08\x1at\n\x04Call\x12-\n\x06target\x18\x01 \x01(\x0b2\x1d.google.api.expr.v1beta1.Expr\x12\x10\n\x08function\x18\x02 \x01(\t\x12+\n\x04args\x18\x03 \x03(\x0b2\x1d.google.api.expr.v1beta1.Expr\x1a=\n\nCreateList\x12/\n\x08elements\x18\x01 \x03(\x0b2\x1d.google.api.expr.v1beta1.Expr\x1a\xf6\x01\n\x0cCreateStruct\x12\x0c\n\x04type\x18\x01 \x01(\t\x12A\n\x07entries\x18\x02 \x03(\x0b20.google.api.expr.v1beta1.Expr.CreateStruct.Entry\x1a\x94\x01\n\x05Entry\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x13\n\tfield_key\x18\x02 \x01(\tH\x00\x120\n\x07map_key\x18\x03 \x01(\x0b2\x1d.google.api.expr.v1beta1.ExprH\x00\x12,\n\x05value\x18\x04 \x01(\x0b2\x1d.google.api.expr.v1beta1.ExprB\n\n\x08key_kind\x1a\xb0\x02\n\rComprehension\x12\x10\n\x08iter_var\x18\x01 \x01(\t\x121\n\niter_range\x18\x02 \x01(\x0b2\x1d.google.api.expr.v1beta1.Expr\x12\x10\n\x08accu_var\x18\x03 \x01(\t\x120\n\taccu_init\x18\x04 \x01(\x0b2\x1d.google.api.expr.v1beta1.Expr\x125\n\x0eloop_condition\x18\x05 \x01(\x0b2\x1d.google.api.expr.v1beta1.Expr\x120\n\tloop_step\x18\x06 \x01(\x0b2\x1d.google.api.expr.v1beta1.Expr\x12-\n\x06result\x18\x07 \x01(\x0b2\x1d.google.api.expr.v1beta1.ExprB\x0b\n\texpr_kind"\xd8\x01\n\x07Literal\x120\n\nnull_value\x18\x01 \x01(\x0e2\x1a.google.protobuf.NullValueH\x00\x12\x14\n\nbool_value\x18\x02 \x01(\x08H\x00\x12\x15\n\x0bint64_value\x18\x03 \x01(\x03H\x00\x12\x16\n\x0cuint64_value\x18\x04 \x01(\x04H\x00\x12\x16\n\x0cdouble_value\x18\x05 \x01(\x01H\x00\x12\x16\n\x0cstring_value\x18\x06 \x01(\tH\x00\x12\x15\n\x0bbytes_value\x18\x07 \x01(\x0cH\x00B\x0f\n\rconstant_kindBj\n\x1bcom.google.api.expr.v1beta1B\tExprProtoP\x01Z;google.golang.org/genproto/googleapis/api/expr/v1beta1;expr\xf8\x01\x01b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.api.expr.v1beta1.expr_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n\x1bcom.google.api.expr.v1beta1B\tExprProtoP\x01Z;google.golang.org/genproto/googleapis/api/expr/v1beta1;expr\xf8\x01\x01'
+    _globals['_PARSEDEXPR']._serialized_start = 132
+    _globals['_PARSEDEXPR']._serialized_end = 271
+    _globals['_EXPR']._serialized_start = 274
+    _globals['_EXPR']._serialized_end = 1597
+    _globals['_EXPR_IDENT']._serialized_start = 734
+    _globals['_EXPR_IDENT']._serialized_end = 755
+    _globals['_EXPR_SELECT']._serialized_start = 757
+    _globals['_EXPR_SELECT']._serialized_end = 847
+    _globals['_EXPR_CALL']._serialized_start = 849
+    _globals['_EXPR_CALL']._serialized_end = 965
+    _globals['_EXPR_CREATELIST']._serialized_start = 967
+    _globals['_EXPR_CREATELIST']._serialized_end = 1028
+    _globals['_EXPR_CREATESTRUCT']._serialized_start = 1031
+    _globals['_EXPR_CREATESTRUCT']._serialized_end = 1277
+    _globals['_EXPR_CREATESTRUCT_ENTRY']._serialized_start = 1129
+    _globals['_EXPR_CREATESTRUCT_ENTRY']._serialized_end = 1277
+    _globals['_EXPR_COMPREHENSION']._serialized_start = 1280
+    _globals['_EXPR_COMPREHENSION']._serialized_end = 1584
+    _globals['_LITERAL']._serialized_start = 1600
+    _globals['_LITERAL']._serialized_end = 1816

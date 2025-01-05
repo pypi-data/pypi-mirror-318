@@ -1,0 +1,146 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/apps/meet/v2/resource.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n"google/apps/meet/v2/resource.proto\x12\x13google.apps.meet.v2\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a\x1fgoogle/protobuf/timestamp.proto"\xf3\x01\n\x05Space\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x05\x12\x18\n\x0bmeeting_uri\x18\x02 \x01(\tB\x03\xe0A\x03\x12\x19\n\x0cmeeting_code\x18\x03 \x01(\tB\x03\xe0A\x03\x120\n\x06config\x18\x05 \x01(\x0b2 .google.apps.meet.v2.SpaceConfig\x12@\n\x11active_conference\x18\x06 \x01(\x0b2%.google.apps.meet.v2.ActiveConference:.\xeaA+\n\x19meet.googleapis.com/Space\x12\x0espaces/{space}"[\n\x10ActiveConference\x12G\n\x11conference_record\x18\x01 \x01(\tB,\xe0A\x03\xfaA&\n$meet.googleapis.com/ConferenceRecord"\xc7\x02\n\x0bSpaceConfig\x12@\n\x0baccess_type\x18\x01 \x01(\x0e2+.google.apps.meet.v2.SpaceConfig.AccessType\x12M\n\x12entry_point_access\x18\x02 \x01(\x0e21.google.apps.meet.v2.SpaceConfig.EntryPointAccess"P\n\nAccessType\x12\x1b\n\x17ACCESS_TYPE_UNSPECIFIED\x10\x00\x12\x08\n\x04OPEN\x10\x01\x12\x0b\n\x07TRUSTED\x10\x02\x12\x0e\n\nRESTRICTED\x10\x03"U\n\x10EntryPointAccess\x12"\n\x1eENTRY_POINT_ACCESS_UNSPECIFIED\x10\x00\x12\x07\n\x03ALL\x10\x01\x12\x14\n\x10CREATOR_APP_ONLY\x10\x02"\xec\x02\n\x10ConferenceRecord\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x08\x123\n\nstart_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x121\n\x08end_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bexpire_time\x18\x04 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x120\n\x05space\x18\x05 \x01(\tB!\xe0A\x03\xfaA\x1b\n\x19meet.googleapis.com/Space:u\xeaAr\n$meet.googleapis.com/ConferenceRecord\x12%conferenceRecords/{conference_record}*\x11conferenceRecords2\x10conferenceRecord"\xd4\x03\n\x0bParticipant\x12:\n\rsignedin_user\x18\x04 \x01(\x0b2!.google.apps.meet.v2.SignedinUserH\x00\x12<\n\x0eanonymous_user\x18\x05 \x01(\x0b2".google.apps.meet.v2.AnonymousUserH\x00\x124\n\nphone_user\x18\x06 \x01(\x0b2\x1e.google.apps.meet.v2.PhoneUserH\x00\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x03\x12<\n\x13earliest_start_time\x18\x07 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x128\n\x0flatest_end_time\x18\x08 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03:\x81\x01\xeaA~\n\x1fmeet.googleapis.com/Participant\x12@conferenceRecords/{conference_record}/participants/{participant}*\x0cparticipants2\x0bparticipantB\x06\n\x04user"\xd3\x02\n\x12ParticipantSession\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x08\x123\n\nstart_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x121\n\x08end_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03:\xc1\x01\xeaA\xbd\x01\n&meet.googleapis.com/ParticipantSession\x12jconferenceRecords/{conference_record}/participants/{participant}/participantSessions/{participant_session}*\x13participantSessions2\x12participantSession"<\n\x0cSignedinUser\x12\x11\n\x04user\x18\x01 \x01(\tB\x03\xe0A\x03\x12\x19\n\x0cdisplay_name\x18\x02 \x01(\tB\x03\xe0A\x03"*\n\rAnonymousUser\x12\x19\n\x0cdisplay_name\x18\x01 \x01(\tB\x03\xe0A\x03"&\n\tPhoneUser\x12\x19\n\x0cdisplay_name\x18\x01 \x01(\tB\x03\xe0A\x03"\xdd\x03\n\tRecording\x12G\n\x11drive_destination\x18\x06 \x01(\x0b2%.google.apps.meet.v2.DriveDestinationB\x03\xe0A\x03H\x00\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x03\x128\n\x05state\x18\x03 \x01(\x0e2$.google.apps.meet.v2.Recording.StateB\x03\xe0A\x03\x123\n\nstart_time\x18\x04 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x121\n\x08end_time\x18\x05 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03"J\n\x05State\x12\x15\n\x11STATE_UNSPECIFIED\x10\x00\x12\x0b\n\x07STARTED\x10\x01\x12\t\n\x05ENDED\x10\x02\x12\x12\n\x0eFILE_GENERATED\x10\x03:w\xeaAt\n\x1dmeet.googleapis.com/Recording\x12<conferenceRecords/{conference_record}/recordings/{recording}*\nrecordings2\trecordingB\r\n\x0bdestination">\n\x10DriveDestination\x12\x11\n\x04file\x18\x01 \x01(\tB\x03\xe0A\x03\x12\x17\n\nexport_uri\x18\x02 \x01(\tB\x03\xe0A\x03"\xe2\x03\n\nTranscript\x12E\n\x10docs_destination\x18\x06 \x01(\x0b2$.google.apps.meet.v2.DocsDestinationB\x03\xe0A\x03H\x00\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x03\x129\n\x05state\x18\x03 \x01(\x0e2%.google.apps.meet.v2.Transcript.StateB\x03\xe0A\x03\x123\n\nstart_time\x18\x04 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x121\n\x08end_time\x18\x05 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03"J\n\x05State\x12\x15\n\x11STATE_UNSPECIFIED\x10\x00\x12\x0b\n\x07STARTED\x10\x01\x12\t\n\x05ENDED\x10\x02\x12\x12\n\x0eFILE_GENERATED\x10\x03:|\xeaAy\n\x1emeet.googleapis.com/Transcript\x12>conferenceRecords/{conference_record}/transcripts/{transcript}*\x0btranscripts2\ntranscriptB\r\n\x0bdestination"A\n\x0fDocsDestination\x12\x15\n\x08document\x18\x01 \x01(\tB\x03\xe0A\x03\x12\x17\n\nexport_uri\x18\x02 \x01(\tB\x03\xe0A\x03"\x99\x03\n\x0fTranscriptEntry\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x03\x12<\n\x0bparticipant\x18\x02 \x01(\tB\'\xe0A\x03\xfaA!\n\x1fmeet.googleapis.com/Participant\x12\x11\n\x04text\x18\x03 \x01(\tB\x03\xe0A\x03\x12\x1a\n\rlanguage_code\x18\x04 \x01(\tB\x03\xe0A\x03\x123\n\nstart_time\x18\x05 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x121\n\x08end_time\x18\x06 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03:\x9d\x01\xeaA\x99\x01\n#meet.googleapis.com/TranscriptEntry\x12NconferenceRecords/{conference_record}/transcripts/{transcript}/entries/{entry}*\x11transcriptEntries2\x0ftranscriptEntryB\xa2\x01\n\x17com.google.apps.meet.v2B\rResourceProtoP\x01Z1cloud.google.com/go/apps/meet/apiv2/meetpb;meetpb\xaa\x02\x13Google.Apps.Meet.V2\xca\x02\x13Google\\Apps\\Meet\\V2\xea\x02\x16Google::Apps::Meet::V2b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.apps.meet.v2.resource_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n\x17com.google.apps.meet.v2B\rResourceProtoP\x01Z1cloud.google.com/go/apps/meet/apiv2/meetpb;meetpb\xaa\x02\x13Google.Apps.Meet.V2\xca\x02\x13Google\\Apps\\Meet\\V2\xea\x02\x16Google::Apps::Meet::V2'
+    _globals['_SPACE'].fields_by_name['name']._loaded_options = None
+    _globals['_SPACE'].fields_by_name['name']._serialized_options = b'\xe0A\x05'
+    _globals['_SPACE'].fields_by_name['meeting_uri']._loaded_options = None
+    _globals['_SPACE'].fields_by_name['meeting_uri']._serialized_options = b'\xe0A\x03'
+    _globals['_SPACE'].fields_by_name['meeting_code']._loaded_options = None
+    _globals['_SPACE'].fields_by_name['meeting_code']._serialized_options = b'\xe0A\x03'
+    _globals['_SPACE']._loaded_options = None
+    _globals['_SPACE']._serialized_options = b'\xeaA+\n\x19meet.googleapis.com/Space\x12\x0espaces/{space}'
+    _globals['_ACTIVECONFERENCE'].fields_by_name['conference_record']._loaded_options = None
+    _globals['_ACTIVECONFERENCE'].fields_by_name['conference_record']._serialized_options = b'\xe0A\x03\xfaA&\n$meet.googleapis.com/ConferenceRecord'
+    _globals['_CONFERENCERECORD'].fields_by_name['name']._loaded_options = None
+    _globals['_CONFERENCERECORD'].fields_by_name['name']._serialized_options = b'\xe0A\x08'
+    _globals['_CONFERENCERECORD'].fields_by_name['start_time']._loaded_options = None
+    _globals['_CONFERENCERECORD'].fields_by_name['start_time']._serialized_options = b'\xe0A\x03'
+    _globals['_CONFERENCERECORD'].fields_by_name['end_time']._loaded_options = None
+    _globals['_CONFERENCERECORD'].fields_by_name['end_time']._serialized_options = b'\xe0A\x03'
+    _globals['_CONFERENCERECORD'].fields_by_name['expire_time']._loaded_options = None
+    _globals['_CONFERENCERECORD'].fields_by_name['expire_time']._serialized_options = b'\xe0A\x03'
+    _globals['_CONFERENCERECORD'].fields_by_name['space']._loaded_options = None
+    _globals['_CONFERENCERECORD'].fields_by_name['space']._serialized_options = b'\xe0A\x03\xfaA\x1b\n\x19meet.googleapis.com/Space'
+    _globals['_CONFERENCERECORD']._loaded_options = None
+    _globals['_CONFERENCERECORD']._serialized_options = b'\xeaAr\n$meet.googleapis.com/ConferenceRecord\x12%conferenceRecords/{conference_record}*\x11conferenceRecords2\x10conferenceRecord'
+    _globals['_PARTICIPANT'].fields_by_name['name']._loaded_options = None
+    _globals['_PARTICIPANT'].fields_by_name['name']._serialized_options = b'\xe0A\x03'
+    _globals['_PARTICIPANT'].fields_by_name['earliest_start_time']._loaded_options = None
+    _globals['_PARTICIPANT'].fields_by_name['earliest_start_time']._serialized_options = b'\xe0A\x03'
+    _globals['_PARTICIPANT'].fields_by_name['latest_end_time']._loaded_options = None
+    _globals['_PARTICIPANT'].fields_by_name['latest_end_time']._serialized_options = b'\xe0A\x03'
+    _globals['_PARTICIPANT']._loaded_options = None
+    _globals['_PARTICIPANT']._serialized_options = b'\xeaA~\n\x1fmeet.googleapis.com/Participant\x12@conferenceRecords/{conference_record}/participants/{participant}*\x0cparticipants2\x0bparticipant'
+    _globals['_PARTICIPANTSESSION'].fields_by_name['name']._loaded_options = None
+    _globals['_PARTICIPANTSESSION'].fields_by_name['name']._serialized_options = b'\xe0A\x08'
+    _globals['_PARTICIPANTSESSION'].fields_by_name['start_time']._loaded_options = None
+    _globals['_PARTICIPANTSESSION'].fields_by_name['start_time']._serialized_options = b'\xe0A\x03'
+    _globals['_PARTICIPANTSESSION'].fields_by_name['end_time']._loaded_options = None
+    _globals['_PARTICIPANTSESSION'].fields_by_name['end_time']._serialized_options = b'\xe0A\x03'
+    _globals['_PARTICIPANTSESSION']._loaded_options = None
+    _globals['_PARTICIPANTSESSION']._serialized_options = b'\xeaA\xbd\x01\n&meet.googleapis.com/ParticipantSession\x12jconferenceRecords/{conference_record}/participants/{participant}/participantSessions/{participant_session}*\x13participantSessions2\x12participantSession'
+    _globals['_SIGNEDINUSER'].fields_by_name['user']._loaded_options = None
+    _globals['_SIGNEDINUSER'].fields_by_name['user']._serialized_options = b'\xe0A\x03'
+    _globals['_SIGNEDINUSER'].fields_by_name['display_name']._loaded_options = None
+    _globals['_SIGNEDINUSER'].fields_by_name['display_name']._serialized_options = b'\xe0A\x03'
+    _globals['_ANONYMOUSUSER'].fields_by_name['display_name']._loaded_options = None
+    _globals['_ANONYMOUSUSER'].fields_by_name['display_name']._serialized_options = b'\xe0A\x03'
+    _globals['_PHONEUSER'].fields_by_name['display_name']._loaded_options = None
+    _globals['_PHONEUSER'].fields_by_name['display_name']._serialized_options = b'\xe0A\x03'
+    _globals['_RECORDING'].fields_by_name['drive_destination']._loaded_options = None
+    _globals['_RECORDING'].fields_by_name['drive_destination']._serialized_options = b'\xe0A\x03'
+    _globals['_RECORDING'].fields_by_name['name']._loaded_options = None
+    _globals['_RECORDING'].fields_by_name['name']._serialized_options = b'\xe0A\x03'
+    _globals['_RECORDING'].fields_by_name['state']._loaded_options = None
+    _globals['_RECORDING'].fields_by_name['state']._serialized_options = b'\xe0A\x03'
+    _globals['_RECORDING'].fields_by_name['start_time']._loaded_options = None
+    _globals['_RECORDING'].fields_by_name['start_time']._serialized_options = b'\xe0A\x03'
+    _globals['_RECORDING'].fields_by_name['end_time']._loaded_options = None
+    _globals['_RECORDING'].fields_by_name['end_time']._serialized_options = b'\xe0A\x03'
+    _globals['_RECORDING']._loaded_options = None
+    _globals['_RECORDING']._serialized_options = b'\xeaAt\n\x1dmeet.googleapis.com/Recording\x12<conferenceRecords/{conference_record}/recordings/{recording}*\nrecordings2\trecording'
+    _globals['_DRIVEDESTINATION'].fields_by_name['file']._loaded_options = None
+    _globals['_DRIVEDESTINATION'].fields_by_name['file']._serialized_options = b'\xe0A\x03'
+    _globals['_DRIVEDESTINATION'].fields_by_name['export_uri']._loaded_options = None
+    _globals['_DRIVEDESTINATION'].fields_by_name['export_uri']._serialized_options = b'\xe0A\x03'
+    _globals['_TRANSCRIPT'].fields_by_name['docs_destination']._loaded_options = None
+    _globals['_TRANSCRIPT'].fields_by_name['docs_destination']._serialized_options = b'\xe0A\x03'
+    _globals['_TRANSCRIPT'].fields_by_name['name']._loaded_options = None
+    _globals['_TRANSCRIPT'].fields_by_name['name']._serialized_options = b'\xe0A\x03'
+    _globals['_TRANSCRIPT'].fields_by_name['state']._loaded_options = None
+    _globals['_TRANSCRIPT'].fields_by_name['state']._serialized_options = b'\xe0A\x03'
+    _globals['_TRANSCRIPT'].fields_by_name['start_time']._loaded_options = None
+    _globals['_TRANSCRIPT'].fields_by_name['start_time']._serialized_options = b'\xe0A\x03'
+    _globals['_TRANSCRIPT'].fields_by_name['end_time']._loaded_options = None
+    _globals['_TRANSCRIPT'].fields_by_name['end_time']._serialized_options = b'\xe0A\x03'
+    _globals['_TRANSCRIPT']._loaded_options = None
+    _globals['_TRANSCRIPT']._serialized_options = b'\xeaAy\n\x1emeet.googleapis.com/Transcript\x12>conferenceRecords/{conference_record}/transcripts/{transcript}*\x0btranscripts2\ntranscript'
+    _globals['_DOCSDESTINATION'].fields_by_name['document']._loaded_options = None
+    _globals['_DOCSDESTINATION'].fields_by_name['document']._serialized_options = b'\xe0A\x03'
+    _globals['_DOCSDESTINATION'].fields_by_name['export_uri']._loaded_options = None
+    _globals['_DOCSDESTINATION'].fields_by_name['export_uri']._serialized_options = b'\xe0A\x03'
+    _globals['_TRANSCRIPTENTRY'].fields_by_name['name']._loaded_options = None
+    _globals['_TRANSCRIPTENTRY'].fields_by_name['name']._serialized_options = b'\xe0A\x03'
+    _globals['_TRANSCRIPTENTRY'].fields_by_name['participant']._loaded_options = None
+    _globals['_TRANSCRIPTENTRY'].fields_by_name['participant']._serialized_options = b'\xe0A\x03\xfaA!\n\x1fmeet.googleapis.com/Participant'
+    _globals['_TRANSCRIPTENTRY'].fields_by_name['text']._loaded_options = None
+    _globals['_TRANSCRIPTENTRY'].fields_by_name['text']._serialized_options = b'\xe0A\x03'
+    _globals['_TRANSCRIPTENTRY'].fields_by_name['language_code']._loaded_options = None
+    _globals['_TRANSCRIPTENTRY'].fields_by_name['language_code']._serialized_options = b'\xe0A\x03'
+    _globals['_TRANSCRIPTENTRY'].fields_by_name['start_time']._loaded_options = None
+    _globals['_TRANSCRIPTENTRY'].fields_by_name['start_time']._serialized_options = b'\xe0A\x03'
+    _globals['_TRANSCRIPTENTRY'].fields_by_name['end_time']._loaded_options = None
+    _globals['_TRANSCRIPTENTRY'].fields_by_name['end_time']._serialized_options = b'\xe0A\x03'
+    _globals['_TRANSCRIPTENTRY']._loaded_options = None
+    _globals['_TRANSCRIPTENTRY']._serialized_options = b'\xeaA\x99\x01\n#meet.googleapis.com/TranscriptEntry\x12NconferenceRecords/{conference_record}/transcripts/{transcript}/entries/{entry}*\x11transcriptEntries2\x0ftranscriptEntry'
+    _globals['_SPACE']._serialized_start = 153
+    _globals['_SPACE']._serialized_end = 396
+    _globals['_ACTIVECONFERENCE']._serialized_start = 398
+    _globals['_ACTIVECONFERENCE']._serialized_end = 489
+    _globals['_SPACECONFIG']._serialized_start = 492
+    _globals['_SPACECONFIG']._serialized_end = 819
+    _globals['_SPACECONFIG_ACCESSTYPE']._serialized_start = 652
+    _globals['_SPACECONFIG_ACCESSTYPE']._serialized_end = 732
+    _globals['_SPACECONFIG_ENTRYPOINTACCESS']._serialized_start = 734
+    _globals['_SPACECONFIG_ENTRYPOINTACCESS']._serialized_end = 819
+    _globals['_CONFERENCERECORD']._serialized_start = 822
+    _globals['_CONFERENCERECORD']._serialized_end = 1186
+    _globals['_PARTICIPANT']._serialized_start = 1189
+    _globals['_PARTICIPANT']._serialized_end = 1657
+    _globals['_PARTICIPANTSESSION']._serialized_start = 1660
+    _globals['_PARTICIPANTSESSION']._serialized_end = 1999
+    _globals['_SIGNEDINUSER']._serialized_start = 2001
+    _globals['_SIGNEDINUSER']._serialized_end = 2061
+    _globals['_ANONYMOUSUSER']._serialized_start = 2063
+    _globals['_ANONYMOUSUSER']._serialized_end = 2105
+    _globals['_PHONEUSER']._serialized_start = 2107
+    _globals['_PHONEUSER']._serialized_end = 2145
+    _globals['_RECORDING']._serialized_start = 2148
+    _globals['_RECORDING']._serialized_end = 2625
+    _globals['_RECORDING_STATE']._serialized_start = 2415
+    _globals['_RECORDING_STATE']._serialized_end = 2489
+    _globals['_DRIVEDESTINATION']._serialized_start = 2627
+    _globals['_DRIVEDESTINATION']._serialized_end = 2689
+    _globals['_TRANSCRIPT']._serialized_start = 2692
+    _globals['_TRANSCRIPT']._serialized_end = 3174
+    _globals['_TRANSCRIPT_STATE']._serialized_start = 2415
+    _globals['_TRANSCRIPT_STATE']._serialized_end = 2489
+    _globals['_DOCSDESTINATION']._serialized_start = 3176
+    _globals['_DOCSDESTINATION']._serialized_end = 3241
+    _globals['_TRANSCRIPTENTRY']._serialized_start = 3244
+    _globals['_TRANSCRIPTENTRY']._serialized_end = 3653

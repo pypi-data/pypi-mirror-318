@@ -1,0 +1,214 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/cloud/bigquery/dataexchange/v1beta1/dataexchange.proto')
+_sym_db = _symbol_database.Default()
+from ......google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from ......google.api import client_pb2 as google_dot_api_dot_client__pb2
+from ......google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from ......google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from ......google.iam.v1 import iam_policy_pb2 as google_dot_iam_dot_v1_dot_iam__policy__pb2
+from ......google.iam.v1 import policy_pb2 as google_dot_iam_dot_v1_dot_policy__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
+from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
+from google.protobuf import wrappers_pb2 as google_dot_protobuf_dot_wrappers__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n=google/cloud/bigquery/dataexchange/v1beta1/dataexchange.proto\x12*google.cloud.bigquery.dataexchange.v1beta1\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a\x1egoogle/iam/v1/iam_policy.proto\x1a\x1agoogle/iam/v1/policy.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto\x1a\x1egoogle/protobuf/wrappers.proto"\xb5\x02\n\x0cDataExchange\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x03\x12\x19\n\x0cdisplay_name\x18\x02 \x01(\tB\x03\xe0A\x02\x12\x18\n\x0bdescription\x18\x03 \x01(\tB\x03\xe0A\x01\x12\x1c\n\x0fprimary_contact\x18\x04 \x01(\tB\x03\xe0A\x01\x12\x1a\n\rdocumentation\x18\x05 \x01(\tB\x03\xe0A\x01\x12\x1a\n\rlisting_count\x18\x06 \x01(\x05B\x03\xe0A\x03\x12\x11\n\x04icon\x18\x07 \x01(\x0cB\x03\xe0A\x01:t\xeaAq\n(analyticshub.googleapis.com/DataExchange\x12Eprojects/{project}/locations/{location}/dataExchanges/{data_exchange}"?\n\x0cDataProvider\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x01\x12\x1c\n\x0fprimary_contact\x18\x02 \x01(\tB\x03\xe0A\x01"<\n\tPublisher\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x01\x12\x1c\n\x0fprimary_contact\x18\x02 \x01(\tB\x03\xe0A\x01"O\n\x1bDestinationDatasetReference\x12\x17\n\ndataset_id\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x17\n\nproject_id\x18\x02 \x01(\tB\x03\xe0A\x02"\x96\x03\n\x12DestinationDataset\x12g\n\x11dataset_reference\x18\x01 \x01(\x0b2G.google.cloud.bigquery.dataexchange.v1beta1.DestinationDatasetReferenceB\x03\xe0A\x02\x128\n\rfriendly_name\x18\x02 \x01(\x0b2\x1c.google.protobuf.StringValueB\x03\xe0A\x01\x126\n\x0bdescription\x18\x03 \x01(\x0b2\x1c.google.protobuf.StringValueB\x03\xe0A\x01\x12_\n\x06labels\x18\x04 \x03(\x0b2J.google.cloud.bigquery.dataexchange.v1beta1.DestinationDataset.LabelsEntryB\x03\xe0A\x01\x12\x15\n\x08location\x18\x05 \x01(\tB\x03\xe0A\x02\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x028\x01"\xb7\x0b\n\x07Listing\x12j\n\x10bigquery_dataset\x18\x06 \x01(\x0b2I.google.cloud.bigquery.dataexchange.v1beta1.Listing.BigQueryDatasetSourceB\x03\xe0A\x02H\x00\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x03\x12\x19\n\x0cdisplay_name\x18\x02 \x01(\tB\x03\xe0A\x02\x12\x18\n\x0bdescription\x18\x03 \x01(\tB\x03\xe0A\x01\x12\x1c\n\x0fprimary_contact\x18\x04 \x01(\tB\x03\xe0A\x01\x12\x1a\n\rdocumentation\x18\x05 \x01(\tB\x03\xe0A\x01\x12M\n\x05state\x18\x07 \x01(\x0e29.google.cloud.bigquery.dataexchange.v1beta1.Listing.StateB\x03\xe0A\x03\x12\x11\n\x04icon\x18\x08 \x01(\x0cB\x03\xe0A\x01\x12T\n\rdata_provider\x18\t \x01(\x0b28.google.cloud.bigquery.dataexchange.v1beta1.DataProviderB\x03\xe0A\x01\x12U\n\ncategories\x18\n \x03(\x0e2<.google.cloud.bigquery.dataexchange.v1beta1.Listing.CategoryB\x03\xe0A\x01\x12M\n\tpublisher\x18\x0b \x01(\x0b25.google.cloud.bigquery.dataexchange.v1beta1.PublisherB\x03\xe0A\x01\x12\x1b\n\x0erequest_access\x18\x0c \x01(\tB\x03\xe0A\x01\x1aN\n\x15BigQueryDatasetSource\x125\n\x07dataset\x18\x01 \x01(\tB$\xfaA!\n\x1fbigquery.googleapis.com/Dataset"*\n\x05State\x12\x15\n\x11STATE_UNSPECIFIED\x10\x00\x12\n\n\x06ACTIVE\x10\x01"\xb7\x04\n\x08Category\x12\x18\n\x14CATEGORY_UNSPECIFIED\x10\x00\x12\x13\n\x0fCATEGORY_OTHERS\x10\x01\x12&\n"CATEGORY_ADVERTISING_AND_MARKETING\x10\x02\x12\x15\n\x11CATEGORY_COMMERCE\x10\x03\x12$\n CATEGORY_CLIMATE_AND_ENVIRONMENT\x10\x04\x12\x19\n\x15CATEGORY_DEMOGRAPHICS\x10\x05\x12\x16\n\x12CATEGORY_ECONOMICS\x10\x06\x12\x16\n\x12CATEGORY_EDUCATION\x10\x07\x12\x13\n\x0fCATEGORY_ENERGY\x10\x08\x12\x16\n\x12CATEGORY_FINANCIAL\x10\t\x12\x13\n\x0fCATEGORY_GAMING\x10\n\x12\x17\n\x13CATEGORY_GEOSPATIAL\x10\x0b\x12(\n$CATEGORY_HEALTHCARE_AND_LIFE_SCIENCE\x10\x0c\x12\x12\n\x0eCATEGORY_MEDIA\x10\r\x12\x1a\n\x16CATEGORY_PUBLIC_SECTOR\x10\x0e\x12\x13\n\x0fCATEGORY_RETAIL\x10\x0f\x12\x13\n\x0fCATEGORY_SPORTS\x10\x10\x12!\n\x1dCATEGORY_SCIENCE_AND_RESEARCH\x10\x11\x12)\n%CATEGORY_TRANSPORTATION_AND_LOGISTICS\x10\x12\x12\x1f\n\x1bCATEGORY_TRAVEL_AND_TOURISM\x10\x13:\x82\x01\xeaA\x7f\n#analyticshub.googleapis.com/Listing\x12Xprojects/{project}/locations/{location}/dataExchanges/{data_exchange}/listings/{listing}B\x08\n\x06source"|\n\x18ListDataExchangesRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!locations.googleapis.com/Location\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t"\x86\x01\n\x19ListDataExchangesResponse\x12P\n\x0edata_exchanges\x18\x01 \x03(\x0b28.google.cloud.bigquery.dataexchange.v1beta1.DataExchange\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"_\n\x1bListOrgDataExchangesRequest\x12\x19\n\x0corganization\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t"\x89\x01\n\x1cListOrgDataExchangesResponse\x12P\n\x0edata_exchanges\x18\x01 \x03(\x0b28.google.cloud.bigquery.dataexchange.v1beta1.DataExchange\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"X\n\x16GetDataExchangeRequest\x12>\n\x04name\x18\x01 \x01(\tB0\xe0A\x02\xfaA*\n(analyticshub.googleapis.com/DataExchange"\xcb\x01\n\x19CreateDataExchangeRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!locations.googleapis.com/Location\x12\x1d\n\x10data_exchange_id\x18\x02 \x01(\tB\x03\xe0A\x02\x12T\n\rdata_exchange\x18\x03 \x01(\x0b28.google.cloud.bigquery.dataexchange.v1beta1.DataExchangeB\x03\xe0A\x02"\xa7\x01\n\x19UpdateDataExchangeRequest\x124\n\x0bupdate_mask\x18\x01 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x02\x12T\n\rdata_exchange\x18\x02 \x01(\x0b28.google.cloud.bigquery.dataexchange.v1beta1.DataExchangeB\x03\xe0A\x02"[\n\x19DeleteDataExchangeRequest\x12>\n\x04name\x18\x01 \x01(\tB0\xe0A\x02\xfaA*\n(analyticshub.googleapis.com/DataExchange"~\n\x13ListListingsRequest\x12@\n\x06parent\x18\x01 \x01(\tB0\xe0A\x02\xfaA*\n(analyticshub.googleapis.com/DataExchange\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t"v\n\x14ListListingsResponse\x12E\n\x08listings\x18\x01 \x03(\x0b23.google.cloud.bigquery.dataexchange.v1beta1.Listing\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"N\n\x11GetListingRequest\x129\n\x04name\x18\x01 \x01(\tB+\xe0A\x02\xfaA%\n#analyticshub.googleapis.com/Listing"\xbc\x01\n\x14CreateListingRequest\x12@\n\x06parent\x18\x01 \x01(\tB0\xe0A\x02\xfaA*\n(analyticshub.googleapis.com/DataExchange\x12\x17\n\nlisting_id\x18\x02 \x01(\tB\x03\xe0A\x02\x12I\n\x07listing\x18\x03 \x01(\x0b23.google.cloud.bigquery.dataexchange.v1beta1.ListingB\x03\xe0A\x02"\x97\x01\n\x14UpdateListingRequest\x124\n\x0bupdate_mask\x18\x01 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x02\x12I\n\x07listing\x18\x02 \x01(\x0b23.google.cloud.bigquery.dataexchange.v1beta1.ListingB\x03\xe0A\x02"Q\n\x14DeleteListingRequest\x129\n\x04name\x18\x01 \x01(\tB+\xe0A\x02\xfaA%\n#analyticshub.googleapis.com/Listing"\xc2\x01\n\x17SubscribeListingRequest\x12]\n\x13destination_dataset\x18\x03 \x01(\x0b2>.google.cloud.bigquery.dataexchange.v1beta1.DestinationDatasetH\x00\x129\n\x04name\x18\x01 \x01(\tB+\xe0A\x02\xfaA%\n#analyticshub.googleapis.com/ListingB\r\n\x0bdestination"\x1a\n\x18SubscribeListingResponse2\xa6\x1d\n\x13AnalyticsHubService\x12\xe9\x01\n\x11ListDataExchanges\x12D.google.cloud.bigquery.dataexchange.v1beta1.ListDataExchangesRequest\x1aE.google.cloud.bigquery.dataexchange.v1beta1.ListDataExchangesResponse"G\xdaA\x06parent\x82\xd3\xe4\x93\x028\x126/v1beta1/{parent=projects/*/locations/*}/dataExchanges\x12\x83\x02\n\x14ListOrgDataExchanges\x12G.google.cloud.bigquery.dataexchange.v1beta1.ListOrgDataExchangesRequest\x1aH.google.cloud.bigquery.dataexchange.v1beta1.ListOrgDataExchangesResponse"X\xdaA\x0corganization\x82\xd3\xe4\x93\x02C\x12A/v1beta1/{organization=organizations/*/locations/*}/dataExchanges\x12\xd6\x01\n\x0fGetDataExchange\x12B.google.cloud.bigquery.dataexchange.v1beta1.GetDataExchangeRequest\x1a8.google.cloud.bigquery.dataexchange.v1beta1.DataExchange"E\xdaA\x04name\x82\xd3\xe4\x93\x028\x126/v1beta1/{name=projects/*/locations/*/dataExchanges/*}\x12\xfb\x01\n\x12CreateDataExchange\x12E.google.cloud.bigquery.dataexchange.v1beta1.CreateDataExchangeRequest\x1a8.google.cloud.bigquery.dataexchange.v1beta1.DataExchange"d\xdaA\x14parent,data_exchange\x82\xd3\xe4\x93\x02G"6/v1beta1/{parent=projects/*/locations/*}/dataExchanges:\rdata_exchange\x12\x8e\x02\n\x12UpdateDataExchange\x12E.google.cloud.bigquery.dataexchange.v1beta1.UpdateDataExchangeRequest\x1a8.google.cloud.bigquery.dataexchange.v1beta1.DataExchange"w\xdaA\x19data_exchange,update_mask\x82\xd3\xe4\x93\x02U2D/v1beta1/{data_exchange.name=projects/*/locations/*/dataExchanges/*}:\rdata_exchange\x12\xba\x01\n\x12DeleteDataExchange\x12E.google.cloud.bigquery.dataexchange.v1beta1.DeleteDataExchangeRequest\x1a\x16.google.protobuf.Empty"E\xdaA\x04name\x82\xd3\xe4\x93\x028*6/v1beta1/{name=projects/*/locations/*/dataExchanges/*}\x12\xe5\x01\n\x0cListListings\x12?.google.cloud.bigquery.dataexchange.v1beta1.ListListingsRequest\x1a@.google.cloud.bigquery.dataexchange.v1beta1.ListListingsResponse"R\xdaA\x06parent\x82\xd3\xe4\x93\x02C\x12A/v1beta1/{parent=projects/*/locations/*/dataExchanges/*}/listings\x12\xd2\x01\n\nGetListing\x12=.google.cloud.bigquery.dataexchange.v1beta1.GetListingRequest\x1a3.google.cloud.bigquery.dataexchange.v1beta1.Listing"P\xdaA\x04name\x82\xd3\xe4\x93\x02C\x12A/v1beta1/{name=projects/*/locations/*/dataExchanges/*/listings/*}\x12\xeb\x01\n\rCreateListing\x12@.google.cloud.bigquery.dataexchange.v1beta1.CreateListingRequest\x1a3.google.cloud.bigquery.dataexchange.v1beta1.Listing"c\xdaA\x0eparent,listing\x82\xd3\xe4\x93\x02L"A/v1beta1/{parent=projects/*/locations/*/dataExchanges/*}/listings:\x07listing\x12\xf8\x01\n\rUpdateListing\x12@.google.cloud.bigquery.dataexchange.v1beta1.UpdateListingRequest\x1a3.google.cloud.bigquery.dataexchange.v1beta1.Listing"p\xdaA\x13listing,update_mask\x82\xd3\xe4\x93\x02T2I/v1beta1/{listing.name=projects/*/locations/*/dataExchanges/*/listings/*}:\x07listing\x12\xbb\x01\n\rDeleteListing\x12@.google.cloud.bigquery.dataexchange.v1beta1.DeleteListingRequest\x1a\x16.google.protobuf.Empty"P\xdaA\x04name\x82\xd3\xe4\x93\x02C*A/v1beta1/{name=projects/*/locations/*/dataExchanges/*/listings/*}\x12\xfc\x01\n\x10SubscribeListing\x12C.google.cloud.bigquery.dataexchange.v1beta1.SubscribeListingRequest\x1aD.google.cloud.bigquery.dataexchange.v1beta1.SubscribeListingResponse"]\xdaA\x04name\x82\xd3\xe4\x93\x02P"K/v1beta1/{name=projects/*/locations/*/dataExchanges/*/listings/*}:subscribe:\x01*\x12\xf8\x01\n\x0cGetIamPolicy\x12".google.iam.v1.GetIamPolicyRequest\x1a\x15.google.iam.v1.Policy"\xac\x01\x82\xd3\xe4\x93\x02\xa5\x01"G/v1beta1/{resource=projects/*/locations/*/dataExchanges/*}:getIamPolicy:\x01*ZW"R/v1beta1/{resource=projects/*/locations/*/dataExchanges/*/listings/*}:getIamPolicy:\x01*\x12\xf8\x01\n\x0cSetIamPolicy\x12".google.iam.v1.SetIamPolicyRequest\x1a\x15.google.iam.v1.Policy"\xac\x01\x82\xd3\xe4\x93\x02\xa5\x01"G/v1beta1/{resource=projects/*/locations/*/dataExchanges/*}:setIamPolicy:\x01*ZW"R/v1beta1/{resource=projects/*/locations/*/dataExchanges/*/listings/*}:setIamPolicy:\x01*\x12\xa4\x02\n\x12TestIamPermissions\x12(.google.iam.v1.TestIamPermissionsRequest\x1a).google.iam.v1.TestIamPermissionsResponse"\xb8\x01\x82\xd3\xe4\x93\x02\xb1\x01"M/v1beta1/{resource=projects/*/locations/*/dataExchanges/*}:testIamPermissions:\x01*Z]"X/v1beta1/{resource=projects/*/locations/*/dataExchanges/*/listings/*}:testIamPermissions:\x01*\x1ax\xcaA\x1banalyticshub.googleapis.com\xd2AWhttps://www.googleapis.com/auth/bigquery,https://www.googleapis.com/auth/cloud-platformB\xef\x02\n.com.google.cloud.bigquery.dataexchange.v1beta1B\x11DataExchangeProtoP\x01ZRcloud.google.com/go/bigquery/dataexchange/apiv1beta1/dataexchangepb;dataexchangepb\xaa\x02*Google.Cloud.BigQuery.DataExchange.V1Beta1\xca\x02*Google\\Cloud\\BigQuery\\DataExchange\\V1beta1\xea\x02.Google::Cloud::Bigquery::DataExchange::V1beta1\xeaAH\n\x1fbigquery.googleapis.com/Dataset\x12%projects/{project}/datasets/{dataset}b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.bigquery.dataexchange.v1beta1.dataexchange_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n.com.google.cloud.bigquery.dataexchange.v1beta1B\x11DataExchangeProtoP\x01ZRcloud.google.com/go/bigquery/dataexchange/apiv1beta1/dataexchangepb;dataexchangepb\xaa\x02*Google.Cloud.BigQuery.DataExchange.V1Beta1\xca\x02*Google\\Cloud\\BigQuery\\DataExchange\\V1beta1\xea\x02.Google::Cloud::Bigquery::DataExchange::V1beta1\xeaAH\n\x1fbigquery.googleapis.com/Dataset\x12%projects/{project}/datasets/{dataset}'
+    _globals['_DATAEXCHANGE'].fields_by_name['name']._loaded_options = None
+    _globals['_DATAEXCHANGE'].fields_by_name['name']._serialized_options = b'\xe0A\x03'
+    _globals['_DATAEXCHANGE'].fields_by_name['display_name']._loaded_options = None
+    _globals['_DATAEXCHANGE'].fields_by_name['display_name']._serialized_options = b'\xe0A\x02'
+    _globals['_DATAEXCHANGE'].fields_by_name['description']._loaded_options = None
+    _globals['_DATAEXCHANGE'].fields_by_name['description']._serialized_options = b'\xe0A\x01'
+    _globals['_DATAEXCHANGE'].fields_by_name['primary_contact']._loaded_options = None
+    _globals['_DATAEXCHANGE'].fields_by_name['primary_contact']._serialized_options = b'\xe0A\x01'
+    _globals['_DATAEXCHANGE'].fields_by_name['documentation']._loaded_options = None
+    _globals['_DATAEXCHANGE'].fields_by_name['documentation']._serialized_options = b'\xe0A\x01'
+    _globals['_DATAEXCHANGE'].fields_by_name['listing_count']._loaded_options = None
+    _globals['_DATAEXCHANGE'].fields_by_name['listing_count']._serialized_options = b'\xe0A\x03'
+    _globals['_DATAEXCHANGE'].fields_by_name['icon']._loaded_options = None
+    _globals['_DATAEXCHANGE'].fields_by_name['icon']._serialized_options = b'\xe0A\x01'
+    _globals['_DATAEXCHANGE']._loaded_options = None
+    _globals['_DATAEXCHANGE']._serialized_options = b'\xeaAq\n(analyticshub.googleapis.com/DataExchange\x12Eprojects/{project}/locations/{location}/dataExchanges/{data_exchange}'
+    _globals['_DATAPROVIDER'].fields_by_name['name']._loaded_options = None
+    _globals['_DATAPROVIDER'].fields_by_name['name']._serialized_options = b'\xe0A\x01'
+    _globals['_DATAPROVIDER'].fields_by_name['primary_contact']._loaded_options = None
+    _globals['_DATAPROVIDER'].fields_by_name['primary_contact']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHER'].fields_by_name['name']._loaded_options = None
+    _globals['_PUBLISHER'].fields_by_name['name']._serialized_options = b'\xe0A\x01'
+    _globals['_PUBLISHER'].fields_by_name['primary_contact']._loaded_options = None
+    _globals['_PUBLISHER'].fields_by_name['primary_contact']._serialized_options = b'\xe0A\x01'
+    _globals['_DESTINATIONDATASETREFERENCE'].fields_by_name['dataset_id']._loaded_options = None
+    _globals['_DESTINATIONDATASETREFERENCE'].fields_by_name['dataset_id']._serialized_options = b'\xe0A\x02'
+    _globals['_DESTINATIONDATASETREFERENCE'].fields_by_name['project_id']._loaded_options = None
+    _globals['_DESTINATIONDATASETREFERENCE'].fields_by_name['project_id']._serialized_options = b'\xe0A\x02'
+    _globals['_DESTINATIONDATASET_LABELSENTRY']._loaded_options = None
+    _globals['_DESTINATIONDATASET_LABELSENTRY']._serialized_options = b'8\x01'
+    _globals['_DESTINATIONDATASET'].fields_by_name['dataset_reference']._loaded_options = None
+    _globals['_DESTINATIONDATASET'].fields_by_name['dataset_reference']._serialized_options = b'\xe0A\x02'
+    _globals['_DESTINATIONDATASET'].fields_by_name['friendly_name']._loaded_options = None
+    _globals['_DESTINATIONDATASET'].fields_by_name['friendly_name']._serialized_options = b'\xe0A\x01'
+    _globals['_DESTINATIONDATASET'].fields_by_name['description']._loaded_options = None
+    _globals['_DESTINATIONDATASET'].fields_by_name['description']._serialized_options = b'\xe0A\x01'
+    _globals['_DESTINATIONDATASET'].fields_by_name['labels']._loaded_options = None
+    _globals['_DESTINATIONDATASET'].fields_by_name['labels']._serialized_options = b'\xe0A\x01'
+    _globals['_DESTINATIONDATASET'].fields_by_name['location']._loaded_options = None
+    _globals['_DESTINATIONDATASET'].fields_by_name['location']._serialized_options = b'\xe0A\x02'
+    _globals['_LISTING_BIGQUERYDATASETSOURCE'].fields_by_name['dataset']._loaded_options = None
+    _globals['_LISTING_BIGQUERYDATASETSOURCE'].fields_by_name['dataset']._serialized_options = b'\xfaA!\n\x1fbigquery.googleapis.com/Dataset'
+    _globals['_LISTING'].fields_by_name['bigquery_dataset']._loaded_options = None
+    _globals['_LISTING'].fields_by_name['bigquery_dataset']._serialized_options = b'\xe0A\x02'
+    _globals['_LISTING'].fields_by_name['name']._loaded_options = None
+    _globals['_LISTING'].fields_by_name['name']._serialized_options = b'\xe0A\x03'
+    _globals['_LISTING'].fields_by_name['display_name']._loaded_options = None
+    _globals['_LISTING'].fields_by_name['display_name']._serialized_options = b'\xe0A\x02'
+    _globals['_LISTING'].fields_by_name['description']._loaded_options = None
+    _globals['_LISTING'].fields_by_name['description']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTING'].fields_by_name['primary_contact']._loaded_options = None
+    _globals['_LISTING'].fields_by_name['primary_contact']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTING'].fields_by_name['documentation']._loaded_options = None
+    _globals['_LISTING'].fields_by_name['documentation']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTING'].fields_by_name['state']._loaded_options = None
+    _globals['_LISTING'].fields_by_name['state']._serialized_options = b'\xe0A\x03'
+    _globals['_LISTING'].fields_by_name['icon']._loaded_options = None
+    _globals['_LISTING'].fields_by_name['icon']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTING'].fields_by_name['data_provider']._loaded_options = None
+    _globals['_LISTING'].fields_by_name['data_provider']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTING'].fields_by_name['categories']._loaded_options = None
+    _globals['_LISTING'].fields_by_name['categories']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTING'].fields_by_name['publisher']._loaded_options = None
+    _globals['_LISTING'].fields_by_name['publisher']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTING'].fields_by_name['request_access']._loaded_options = None
+    _globals['_LISTING'].fields_by_name['request_access']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTING']._loaded_options = None
+    _globals['_LISTING']._serialized_options = b'\xeaA\x7f\n#analyticshub.googleapis.com/Listing\x12Xprojects/{project}/locations/{location}/dataExchanges/{data_exchange}/listings/{listing}'
+    _globals['_LISTDATAEXCHANGESREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTDATAEXCHANGESREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\n!locations.googleapis.com/Location'
+    _globals['_LISTORGDATAEXCHANGESREQUEST'].fields_by_name['organization']._loaded_options = None
+    _globals['_LISTORGDATAEXCHANGESREQUEST'].fields_by_name['organization']._serialized_options = b'\xe0A\x02'
+    _globals['_GETDATAEXCHANGEREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETDATAEXCHANGEREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA*\n(analyticshub.googleapis.com/DataExchange'
+    _globals['_CREATEDATAEXCHANGEREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEDATAEXCHANGEREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\n!locations.googleapis.com/Location'
+    _globals['_CREATEDATAEXCHANGEREQUEST'].fields_by_name['data_exchange_id']._loaded_options = None
+    _globals['_CREATEDATAEXCHANGEREQUEST'].fields_by_name['data_exchange_id']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEDATAEXCHANGEREQUEST'].fields_by_name['data_exchange']._loaded_options = None
+    _globals['_CREATEDATAEXCHANGEREQUEST'].fields_by_name['data_exchange']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATEDATAEXCHANGEREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATEDATAEXCHANGEREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATEDATAEXCHANGEREQUEST'].fields_by_name['data_exchange']._loaded_options = None
+    _globals['_UPDATEDATAEXCHANGEREQUEST'].fields_by_name['data_exchange']._serialized_options = b'\xe0A\x02'
+    _globals['_DELETEDATAEXCHANGEREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEDATAEXCHANGEREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA*\n(analyticshub.googleapis.com/DataExchange'
+    _globals['_LISTLISTINGSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTLISTINGSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA*\n(analyticshub.googleapis.com/DataExchange'
+    _globals['_GETLISTINGREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETLISTINGREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA%\n#analyticshub.googleapis.com/Listing'
+    _globals['_CREATELISTINGREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATELISTINGREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA*\n(analyticshub.googleapis.com/DataExchange'
+    _globals['_CREATELISTINGREQUEST'].fields_by_name['listing_id']._loaded_options = None
+    _globals['_CREATELISTINGREQUEST'].fields_by_name['listing_id']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATELISTINGREQUEST'].fields_by_name['listing']._loaded_options = None
+    _globals['_CREATELISTINGREQUEST'].fields_by_name['listing']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATELISTINGREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATELISTINGREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATELISTINGREQUEST'].fields_by_name['listing']._loaded_options = None
+    _globals['_UPDATELISTINGREQUEST'].fields_by_name['listing']._serialized_options = b'\xe0A\x02'
+    _globals['_DELETELISTINGREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETELISTINGREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA%\n#analyticshub.googleapis.com/Listing'
+    _globals['_SUBSCRIBELISTINGREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_SUBSCRIBELISTINGREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA%\n#analyticshub.googleapis.com/Listing'
+    _globals['_ANALYTICSHUBSERVICE']._loaded_options = None
+    _globals['_ANALYTICSHUBSERVICE']._serialized_options = b'\xcaA\x1banalyticshub.googleapis.com\xd2AWhttps://www.googleapis.com/auth/bigquery,https://www.googleapis.com/auth/cloud-platform'
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['ListDataExchanges']._loaded_options = None
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['ListDataExchanges']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x028\x126/v1beta1/{parent=projects/*/locations/*}/dataExchanges'
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['ListOrgDataExchanges']._loaded_options = None
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['ListOrgDataExchanges']._serialized_options = b'\xdaA\x0corganization\x82\xd3\xe4\x93\x02C\x12A/v1beta1/{organization=organizations/*/locations/*}/dataExchanges'
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['GetDataExchange']._loaded_options = None
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['GetDataExchange']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x028\x126/v1beta1/{name=projects/*/locations/*/dataExchanges/*}'
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['CreateDataExchange']._loaded_options = None
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['CreateDataExchange']._serialized_options = b'\xdaA\x14parent,data_exchange\x82\xd3\xe4\x93\x02G"6/v1beta1/{parent=projects/*/locations/*}/dataExchanges:\rdata_exchange'
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['UpdateDataExchange']._loaded_options = None
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['UpdateDataExchange']._serialized_options = b'\xdaA\x19data_exchange,update_mask\x82\xd3\xe4\x93\x02U2D/v1beta1/{data_exchange.name=projects/*/locations/*/dataExchanges/*}:\rdata_exchange'
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['DeleteDataExchange']._loaded_options = None
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['DeleteDataExchange']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x028*6/v1beta1/{name=projects/*/locations/*/dataExchanges/*}'
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['ListListings']._loaded_options = None
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['ListListings']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02C\x12A/v1beta1/{parent=projects/*/locations/*/dataExchanges/*}/listings'
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['GetListing']._loaded_options = None
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['GetListing']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02C\x12A/v1beta1/{name=projects/*/locations/*/dataExchanges/*/listings/*}'
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['CreateListing']._loaded_options = None
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['CreateListing']._serialized_options = b'\xdaA\x0eparent,listing\x82\xd3\xe4\x93\x02L"A/v1beta1/{parent=projects/*/locations/*/dataExchanges/*}/listings:\x07listing'
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['UpdateListing']._loaded_options = None
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['UpdateListing']._serialized_options = b'\xdaA\x13listing,update_mask\x82\xd3\xe4\x93\x02T2I/v1beta1/{listing.name=projects/*/locations/*/dataExchanges/*/listings/*}:\x07listing'
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['DeleteListing']._loaded_options = None
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['DeleteListing']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02C*A/v1beta1/{name=projects/*/locations/*/dataExchanges/*/listings/*}'
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['SubscribeListing']._loaded_options = None
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['SubscribeListing']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02P"K/v1beta1/{name=projects/*/locations/*/dataExchanges/*/listings/*}:subscribe:\x01*'
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['GetIamPolicy']._loaded_options = None
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['GetIamPolicy']._serialized_options = b'\x82\xd3\xe4\x93\x02\xa5\x01"G/v1beta1/{resource=projects/*/locations/*/dataExchanges/*}:getIamPolicy:\x01*ZW"R/v1beta1/{resource=projects/*/locations/*/dataExchanges/*/listings/*}:getIamPolicy:\x01*'
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['SetIamPolicy']._loaded_options = None
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['SetIamPolicy']._serialized_options = b'\x82\xd3\xe4\x93\x02\xa5\x01"G/v1beta1/{resource=projects/*/locations/*/dataExchanges/*}:setIamPolicy:\x01*ZW"R/v1beta1/{resource=projects/*/locations/*/dataExchanges/*/listings/*}:setIamPolicy:\x01*'
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['TestIamPermissions']._loaded_options = None
+    _globals['_ANALYTICSHUBSERVICE'].methods_by_name['TestIamPermissions']._serialized_options = b'\x82\xd3\xe4\x93\x02\xb1\x01"M/v1beta1/{resource=projects/*/locations/*/dataExchanges/*}:testIamPermissions:\x01*Z]"X/v1beta1/{resource=projects/*/locations/*/dataExchanges/*/listings/*}:testIamPermissions:\x01*'
+    _globals['_DATAEXCHANGE']._serialized_start = 380
+    _globals['_DATAEXCHANGE']._serialized_end = 689
+    _globals['_DATAPROVIDER']._serialized_start = 691
+    _globals['_DATAPROVIDER']._serialized_end = 754
+    _globals['_PUBLISHER']._serialized_start = 756
+    _globals['_PUBLISHER']._serialized_end = 816
+    _globals['_DESTINATIONDATASETREFERENCE']._serialized_start = 818
+    _globals['_DESTINATIONDATASETREFERENCE']._serialized_end = 897
+    _globals['_DESTINATIONDATASET']._serialized_start = 900
+    _globals['_DESTINATIONDATASET']._serialized_end = 1306
+    _globals['_DESTINATIONDATASET_LABELSENTRY']._serialized_start = 1261
+    _globals['_DESTINATIONDATASET_LABELSENTRY']._serialized_end = 1306
+    _globals['_LISTING']._serialized_start = 1309
+    _globals['_LISTING']._serialized_end = 2772
+    _globals['_LISTING_BIGQUERYDATASETSOURCE']._serialized_start = 1937
+    _globals['_LISTING_BIGQUERYDATASETSOURCE']._serialized_end = 2015
+    _globals['_LISTING_STATE']._serialized_start = 2017
+    _globals['_LISTING_STATE']._serialized_end = 2059
+    _globals['_LISTING_CATEGORY']._serialized_start = 2062
+    _globals['_LISTING_CATEGORY']._serialized_end = 2629
+    _globals['_LISTDATAEXCHANGESREQUEST']._serialized_start = 2774
+    _globals['_LISTDATAEXCHANGESREQUEST']._serialized_end = 2898
+    _globals['_LISTDATAEXCHANGESRESPONSE']._serialized_start = 2901
+    _globals['_LISTDATAEXCHANGESRESPONSE']._serialized_end = 3035
+    _globals['_LISTORGDATAEXCHANGESREQUEST']._serialized_start = 3037
+    _globals['_LISTORGDATAEXCHANGESREQUEST']._serialized_end = 3132
+    _globals['_LISTORGDATAEXCHANGESRESPONSE']._serialized_start = 3135
+    _globals['_LISTORGDATAEXCHANGESRESPONSE']._serialized_end = 3272
+    _globals['_GETDATAEXCHANGEREQUEST']._serialized_start = 3274
+    _globals['_GETDATAEXCHANGEREQUEST']._serialized_end = 3362
+    _globals['_CREATEDATAEXCHANGEREQUEST']._serialized_start = 3365
+    _globals['_CREATEDATAEXCHANGEREQUEST']._serialized_end = 3568
+    _globals['_UPDATEDATAEXCHANGEREQUEST']._serialized_start = 3571
+    _globals['_UPDATEDATAEXCHANGEREQUEST']._serialized_end = 3738
+    _globals['_DELETEDATAEXCHANGEREQUEST']._serialized_start = 3740
+    _globals['_DELETEDATAEXCHANGEREQUEST']._serialized_end = 3831
+    _globals['_LISTLISTINGSREQUEST']._serialized_start = 3833
+    _globals['_LISTLISTINGSREQUEST']._serialized_end = 3959
+    _globals['_LISTLISTINGSRESPONSE']._serialized_start = 3961
+    _globals['_LISTLISTINGSRESPONSE']._serialized_end = 4079
+    _globals['_GETLISTINGREQUEST']._serialized_start = 4081
+    _globals['_GETLISTINGREQUEST']._serialized_end = 4159
+    _globals['_CREATELISTINGREQUEST']._serialized_start = 4162
+    _globals['_CREATELISTINGREQUEST']._serialized_end = 4350
+    _globals['_UPDATELISTINGREQUEST']._serialized_start = 4353
+    _globals['_UPDATELISTINGREQUEST']._serialized_end = 4504
+    _globals['_DELETELISTINGREQUEST']._serialized_start = 4506
+    _globals['_DELETELISTINGREQUEST']._serialized_end = 4587
+    _globals['_SUBSCRIBELISTINGREQUEST']._serialized_start = 4590
+    _globals['_SUBSCRIBELISTINGREQUEST']._serialized_end = 4784
+    _globals['_SUBSCRIBELISTINGRESPONSE']._serialized_start = 4786
+    _globals['_SUBSCRIBELISTINGRESPONSE']._serialized_end = 4812
+    _globals['_ANALYTICSHUBSERVICE']._serialized_start = 4815
+    _globals['_ANALYTICSHUBSERVICE']._serialized_end = 8565

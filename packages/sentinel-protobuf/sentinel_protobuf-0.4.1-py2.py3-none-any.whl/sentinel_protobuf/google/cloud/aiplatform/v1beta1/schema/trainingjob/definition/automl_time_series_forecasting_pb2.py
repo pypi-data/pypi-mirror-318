@@ -1,0 +1,36 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/cloud/aiplatform/v1beta1/schema/trainingjob/definition/automl_time_series_forecasting.proto')
+_sym_db = _symbol_database.Default()
+from ........google.cloud.aiplatform.v1beta1.schema.trainingjob.definition import export_evaluated_data_items_config_pb2 as google_dot_cloud_dot_aiplatform_dot_v1beta1_dot_schema_dot_trainingjob_dot_definition_dot_export__evaluated__data__items__config__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nbgoogle/cloud/aiplatform/v1beta1/schema/trainingjob/definition/automl_time_series_forecasting.proto\x12=google.cloud.aiplatform.v1beta1.schema.trainingjob.definition\x1afgoogle/cloud/aiplatform/v1beta1/schema/trainingjob/definition/export_evaluated_data_items_config.proto"\xe7\x01\n\x11AutoMlForecasting\x12f\n\x06inputs\x18\x01 \x01(\x0b2V.google.cloud.aiplatform.v1beta1.schema.trainingjob.definition.AutoMlForecastingInputs\x12j\n\x08metadata\x18\x02 \x01(\x0b2X.google.cloud.aiplatform.v1beta1.schema.trainingjob.definition.AutoMlForecastingMetadata"\xf7\x0e\n\x17AutoMlForecastingInputs\x12\x15\n\rtarget_column\x18\x01 \x01(\t\x12%\n\x1dtime_series_identifier_column\x18\x02 \x01(\t\x12\x13\n\x0btime_column\x18\x03 \x01(\t\x12~\n\x0ftransformations\x18\x04 \x03(\x0b2e.google.cloud.aiplatform.v1beta1.schema.trainingjob.definition.AutoMlForecastingInputs.Transformation\x12\x1e\n\x16optimization_objective\x18\x05 \x01(\t\x12%\n\x1dtrain_budget_milli_node_hours\x18\x06 \x01(\x03\x12\x15\n\rweight_column\x18\x07 \x01(\t\x12%\n\x1dtime_series_attribute_columns\x18\x13 \x03(\t\x12\'\n\x1funavailable_at_forecast_columns\x18\x14 \x03(\t\x12%\n\x1davailable_at_forecast_columns\x18\x15 \x03(\t\x12|\n\x10data_granularity\x18\x16 \x01(\x0b2b.google.cloud.aiplatform.v1beta1.schema.trainingjob.definition.AutoMlForecastingInputs.Granularity\x12\x18\n\x10forecast_horizon\x18\x17 \x01(\x03\x12\x16\n\x0econtext_window\x18\x18 \x01(\x03\x12\x89\x01\n"export_evaluated_data_items_config\x18\x0f \x01(\x0b2].google.cloud.aiplatform.v1beta1.schema.trainingjob.definition.ExportEvaluatedDataItemsConfig\x12\x11\n\tquantiles\x18\x10 \x03(\x01\x12\x1a\n\x12validation_options\x18\x11 \x01(\t\x12\x1e\n\x16additional_experiments\x18\x19 \x03(\t\x1a\xf9\x07\n\x0eTransformation\x12\x88\x01\n\x04auto\x18\x01 \x01(\x0b2x.google.cloud.aiplatform.v1beta1.schema.trainingjob.definition.AutoMlForecastingInputs.Transformation.AutoTransformationH\x00\x12\x8e\x01\n\x07numeric\x18\x02 \x01(\x0b2{.google.cloud.aiplatform.v1beta1.schema.trainingjob.definition.AutoMlForecastingInputs.Transformation.NumericTransformationH\x00\x12\x96\x01\n\x0bcategorical\x18\x03 \x01(\x0b2\x7f.google.cloud.aiplatform.v1beta1.schema.trainingjob.definition.AutoMlForecastingInputs.Transformation.CategoricalTransformationH\x00\x12\x92\x01\n\ttimestamp\x18\x04 \x01(\x0b2}.google.cloud.aiplatform.v1beta1.schema.trainingjob.definition.AutoMlForecastingInputs.Transformation.TimestampTransformationH\x00\x12\x88\x01\n\x04text\x18\x05 \x01(\x0b2x.google.cloud.aiplatform.v1beta1.schema.trainingjob.definition.AutoMlForecastingInputs.Transformation.TextTransformationH\x00\x1a)\n\x12AutoTransformation\x12\x13\n\x0bcolumn_name\x18\x01 \x01(\t\x1a,\n\x15NumericTransformation\x12\x13\n\x0bcolumn_name\x18\x01 \x01(\t\x1a0\n\x19CategoricalTransformation\x12\x13\n\x0bcolumn_name\x18\x01 \x01(\t\x1aC\n\x17TimestampTransformation\x12\x13\n\x0bcolumn_name\x18\x01 \x01(\t\x12\x13\n\x0btime_format\x18\x02 \x01(\t\x1a)\n\x12TextTransformation\x12\x13\n\x0bcolumn_name\x18\x01 \x01(\tB\x17\n\x15transformation_detail\x1a-\n\x0bGranularity\x12\x0c\n\x04unit\x18\x01 \x01(\t\x12\x10\n\x08quantity\x18\x02 \x01(\x03"@\n\x19AutoMlForecastingMetadata\x12#\n\x1btrain_cost_milli_node_hours\x18\x01 \x01(\x03B\x86\x03\nAcom.google.cloud.aiplatform.v1beta1.schema.trainingjob.definitionB\x16AutoMLForecastingProtoP\x01Zacloud.google.com/go/aiplatform/apiv1beta1/schema/trainingjob/definition/definitionpb;definitionpb\xaa\x02=Google.Cloud.AIPlatform.V1Beta1.Schema.TrainingJob.Definition\xca\x02=Google\\Cloud\\AIPlatform\\V1beta1\\Schema\\TrainingJob\\Definition\xea\x02CGoogle::Cloud::AIPlatform::V1beta1::Schema::TrainingJob::Definitionb\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.aiplatform.v1beta1.schema.trainingjob.definition.automl_time_series_forecasting_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\nAcom.google.cloud.aiplatform.v1beta1.schema.trainingjob.definitionB\x16AutoMLForecastingProtoP\x01Zacloud.google.com/go/aiplatform/apiv1beta1/schema/trainingjob/definition/definitionpb;definitionpb\xaa\x02=Google.Cloud.AIPlatform.V1Beta1.Schema.TrainingJob.Definition\xca\x02=Google\\Cloud\\AIPlatform\\V1beta1\\Schema\\TrainingJob\\Definition\xea\x02CGoogle::Cloud::AIPlatform::V1beta1::Schema::TrainingJob::Definition'
+    _globals['_AUTOMLFORECASTING']._serialized_start = 270
+    _globals['_AUTOMLFORECASTING']._serialized_end = 501
+    _globals['_AUTOMLFORECASTINGINPUTS']._serialized_start = 504
+    _globals['_AUTOMLFORECASTINGINPUTS']._serialized_end = 2415
+    _globals['_AUTOMLFORECASTINGINPUTS_TRANSFORMATION']._serialized_start = 1351
+    _globals['_AUTOMLFORECASTINGINPUTS_TRANSFORMATION']._serialized_end = 2368
+    _globals['_AUTOMLFORECASTINGINPUTS_TRANSFORMATION_AUTOTRANSFORMATION']._serialized_start = 2094
+    _globals['_AUTOMLFORECASTINGINPUTS_TRANSFORMATION_AUTOTRANSFORMATION']._serialized_end = 2135
+    _globals['_AUTOMLFORECASTINGINPUTS_TRANSFORMATION_NUMERICTRANSFORMATION']._serialized_start = 2137
+    _globals['_AUTOMLFORECASTINGINPUTS_TRANSFORMATION_NUMERICTRANSFORMATION']._serialized_end = 2181
+    _globals['_AUTOMLFORECASTINGINPUTS_TRANSFORMATION_CATEGORICALTRANSFORMATION']._serialized_start = 2183
+    _globals['_AUTOMLFORECASTINGINPUTS_TRANSFORMATION_CATEGORICALTRANSFORMATION']._serialized_end = 2231
+    _globals['_AUTOMLFORECASTINGINPUTS_TRANSFORMATION_TIMESTAMPTRANSFORMATION']._serialized_start = 2233
+    _globals['_AUTOMLFORECASTINGINPUTS_TRANSFORMATION_TIMESTAMPTRANSFORMATION']._serialized_end = 2300
+    _globals['_AUTOMLFORECASTINGINPUTS_TRANSFORMATION_TEXTTRANSFORMATION']._serialized_start = 2302
+    _globals['_AUTOMLFORECASTINGINPUTS_TRANSFORMATION_TEXTTRANSFORMATION']._serialized_end = 2343
+    _globals['_AUTOMLFORECASTINGINPUTS_GRANULARITY']._serialized_start = 2370
+    _globals['_AUTOMLFORECASTINGINPUTS_GRANULARITY']._serialized_end = 2415
+    _globals['_AUTOMLFORECASTINGMETADATA']._serialized_start = 2417
+    _globals['_AUTOMLFORECASTINGMETADATA']._serialized_end = 2481

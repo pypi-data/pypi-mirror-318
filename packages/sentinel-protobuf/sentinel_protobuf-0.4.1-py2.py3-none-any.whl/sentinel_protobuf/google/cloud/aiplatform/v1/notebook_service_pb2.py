@@ -1,0 +1,199 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/cloud/aiplatform/v1/notebook_service.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from .....google.api import client_pb2 as google_dot_api_dot_client__pb2
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from .....google.cloud.aiplatform.v1 import notebook_execution_job_pb2 as google_dot_cloud_dot_aiplatform_dot_v1_dot_notebook__execution__job__pb2
+from .....google.cloud.aiplatform.v1 import notebook_runtime_pb2 as google_dot_cloud_dot_aiplatform_dot_v1_dot_notebook__runtime__pb2
+from .....google.cloud.aiplatform.v1 import operation_pb2 as google_dot_cloud_dot_aiplatform_dot_v1_dot_operation__pb2
+from .....google.longrunning import operations_pb2 as google_dot_longrunning_dot_operations__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
+from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n1google/cloud/aiplatform/v1/notebook_service.proto\x12\x1agoogle.cloud.aiplatform.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a7google/cloud/aiplatform/v1/notebook_execution_job.proto\x1a1google/cloud/aiplatform/v1/notebook_runtime.proto\x1a*google/cloud/aiplatform/v1/operation.proto\x1a#google/longrunning/operations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto"\xe9\x01\n$CreateNotebookRuntimeTemplateRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!locations.googleapis.com/Location\x12[\n\x19notebook_runtime_template\x18\x02 \x01(\x0b23.google.cloud.aiplatform.v1.NotebookRuntimeTemplateB\x03\xe0A\x02\x12)\n\x1cnotebook_runtime_template_id\x18\x03 \x01(\tB\x03\xe0A\x01"\x80\x01\n.CreateNotebookRuntimeTemplateOperationMetadata\x12N\n\x10generic_metadata\x18\x01 \x01(\x0b24.google.cloud.aiplatform.v1.GenericOperationMetadata"l\n!GetNotebookRuntimeTemplateRequest\x12G\n\x04name\x18\x01 \x01(\tB9\xe0A\x02\xfaA3\n1aiplatform.googleapis.com/NotebookRuntimeTemplate"\xf1\x01\n#ListNotebookRuntimeTemplatesRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!locations.googleapis.com/Location\x12\x13\n\x06filter\x18\x02 \x01(\tB\x03\xe0A\x01\x12\x16\n\tpage_size\x18\x03 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x04 \x01(\tB\x03\xe0A\x01\x122\n\tread_mask\x18\x05 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x01\x12\x15\n\x08order_by\x18\x06 \x01(\tB\x03\xe0A\x01"\x98\x01\n$ListNotebookRuntimeTemplatesResponse\x12W\n\x1anotebook_runtime_templates\x18\x01 \x03(\x0b23.google.cloud.aiplatform.v1.NotebookRuntimeTemplate\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"o\n$DeleteNotebookRuntimeTemplateRequest\x12G\n\x04name\x18\x01 \x01(\tB9\xe0A\x02\xfaA3\n1aiplatform.googleapis.com/NotebookRuntimeTemplate"\xb9\x01\n$UpdateNotebookRuntimeTemplateRequest\x12[\n\x19notebook_runtime_template\x18\x01 \x01(\x0b23.google.cloud.aiplatform.v1.NotebookRuntimeTemplateB\x03\xe0A\x02\x124\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x02"\xa5\x02\n\x1cAssignNotebookRuntimeRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!locations.googleapis.com/Location\x12\\\n\x19notebook_runtime_template\x18\x02 \x01(\tB9\xe0A\x02\xfaA3\n1aiplatform.googleapis.com/NotebookRuntimeTemplate\x12J\n\x10notebook_runtime\x18\x03 \x01(\x0b2+.google.cloud.aiplatform.v1.NotebookRuntimeB\x03\xe0A\x02\x12 \n\x13notebook_runtime_id\x18\x04 \x01(\tB\x03\xe0A\x01"\x92\x01\n&AssignNotebookRuntimeOperationMetadata\x12N\n\x10generic_metadata\x18\x01 \x01(\x0b24.google.cloud.aiplatform.v1.GenericOperationMetadata\x12\x18\n\x10progress_message\x18\x02 \x01(\t"\\\n\x19GetNotebookRuntimeRequest\x12?\n\x04name\x18\x01 \x01(\tB1\xe0A\x02\xfaA+\n)aiplatform.googleapis.com/NotebookRuntime"\xe9\x01\n\x1bListNotebookRuntimesRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!locations.googleapis.com/Location\x12\x13\n\x06filter\x18\x02 \x01(\tB\x03\xe0A\x01\x12\x16\n\tpage_size\x18\x03 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x04 \x01(\tB\x03\xe0A\x01\x122\n\tread_mask\x18\x05 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x01\x12\x15\n\x08order_by\x18\x06 \x01(\tB\x03\xe0A\x01"\x7f\n\x1cListNotebookRuntimesResponse\x12F\n\x11notebook_runtimes\x18\x01 \x03(\x0b2+.google.cloud.aiplatform.v1.NotebookRuntime\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"_\n\x1cDeleteNotebookRuntimeRequest\x12?\n\x04name\x18\x01 \x01(\tB1\xe0A\x02\xfaA+\n)aiplatform.googleapis.com/NotebookRuntime"`\n\x1dUpgradeNotebookRuntimeRequest\x12?\n\x04name\x18\x01 \x01(\tB1\xe0A\x02\xfaA+\n)aiplatform.googleapis.com/NotebookRuntime"\x93\x01\n\'UpgradeNotebookRuntimeOperationMetadata\x12N\n\x10generic_metadata\x18\x01 \x01(\x0b24.google.cloud.aiplatform.v1.GenericOperationMetadata\x12\x18\n\x10progress_message\x18\x02 \x01(\t" \n\x1eUpgradeNotebookRuntimeResponse"^\n\x1bStartNotebookRuntimeRequest\x12?\n\x04name\x18\x01 \x01(\tB1\xe0A\x02\xfaA+\n)aiplatform.googleapis.com/NotebookRuntime"\x91\x01\n%StartNotebookRuntimeOperationMetadata\x12N\n\x10generic_metadata\x18\x01 \x01(\x0b24.google.cloud.aiplatform.v1.GenericOperationMetadata\x12\x18\n\x10progress_message\x18\x02 \x01(\t"\x1e\n\x1cStartNotebookRuntimeResponse"]\n\x1aStopNotebookRuntimeRequest\x12?\n\x04name\x18\x01 \x01(\tB1\xe0A\x02\xfaA+\n)aiplatform.googleapis.com/NotebookRuntime"v\n$StopNotebookRuntimeOperationMetadata\x12N\n\x10generic_metadata\x18\x01 \x01(\x0b24.google.cloud.aiplatform.v1.GenericOperationMetadata"\x1d\n\x1bStopNotebookRuntimeResponse"\xdd\x01\n!CreateNotebookExecutionJobRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!locations.googleapis.com/Location\x12U\n\x16notebook_execution_job\x18\x02 \x01(\x0b20.google.cloud.aiplatform.v1.NotebookExecutionJobB\x03\xe0A\x02\x12&\n\x19notebook_execution_job_id\x18\x03 \x01(\tB\x03\xe0A\x01"\x97\x01\n+CreateNotebookExecutionJobOperationMetadata\x12N\n\x10generic_metadata\x18\x01 \x01(\x0b24.google.cloud.aiplatform.v1.GenericOperationMetadata\x12\x18\n\x10progress_message\x18\x02 \x01(\t"\xaf\x01\n\x1eGetNotebookExecutionJobRequest\x12D\n\x04name\x18\x01 \x01(\tB6\xe0A\x02\xfaA0\n.aiplatform.googleapis.com/NotebookExecutionJob\x12G\n\x04view\x18\x06 \x01(\x0e24.google.cloud.aiplatform.v1.NotebookExecutionJobViewB\x03\xe0A\x01"\x83\x02\n ListNotebookExecutionJobsRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!locations.googleapis.com/Location\x12\x13\n\x06filter\x18\x02 \x01(\tB\x03\xe0A\x01\x12\x16\n\tpage_size\x18\x03 \x01(\x05B\x03\xe0A\x01\x12\x17\n\npage_token\x18\x04 \x01(\tB\x03\xe0A\x01\x12\x15\n\x08order_by\x18\x05 \x01(\tB\x03\xe0A\x01\x12G\n\x04view\x18\x06 \x01(\x0e24.google.cloud.aiplatform.v1.NotebookExecutionJobViewB\x03\xe0A\x01"\x8f\x01\n!ListNotebookExecutionJobsResponse\x12Q\n\x17notebook_execution_jobs\x18\x01 \x03(\x0b20.google.cloud.aiplatform.v1.NotebookExecutionJob\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"i\n!DeleteNotebookExecutionJobRequest\x12D\n\x04name\x18\x01 \x01(\tB6\xe0A\x02\xfaA0\n.aiplatform.googleapis.com/NotebookExecutionJob*\x94\x01\n\x18NotebookExecutionJobView\x12+\n\'NOTEBOOK_EXECUTION_JOB_VIEW_UNSPECIFIED\x10\x00\x12%\n!NOTEBOOK_EXECUTION_JOB_VIEW_BASIC\x10\x01\x12$\n NOTEBOOK_EXECUTION_JOB_VIEW_FULL\x10\x022\xcd!\n\x0fNotebookService\x12\xee\x02\n\x1dCreateNotebookRuntimeTemplate\x12@.google.cloud.aiplatform.v1.CreateNotebookRuntimeTemplateRequest\x1a\x1d.google.longrunning.Operation"\xeb\x01\xcaAI\n\x17NotebookRuntimeTemplate\x12.CreateNotebookRuntimeTemplateOperationMetadata\xdaA=parent,notebook_runtime_template,notebook_runtime_template_id\x82\xd3\xe4\x93\x02Y"</v1/{parent=projects/*/locations/*}/notebookRuntimeTemplates:\x19notebook_runtime_template\x12\xdd\x01\n\x1aGetNotebookRuntimeTemplate\x12=.google.cloud.aiplatform.v1.GetNotebookRuntimeTemplateRequest\x1a3.google.cloud.aiplatform.v1.NotebookRuntimeTemplate"K\xdaA\x04name\x82\xd3\xe4\x93\x02>\x12</v1/{name=projects/*/locations/*/notebookRuntimeTemplates/*}\x12\xf0\x01\n\x1cListNotebookRuntimeTemplates\x12?.google.cloud.aiplatform.v1.ListNotebookRuntimeTemplatesRequest\x1a@.google.cloud.aiplatform.v1.ListNotebookRuntimeTemplatesResponse"M\xdaA\x06parent\x82\xd3\xe4\x93\x02>\x12</v1/{parent=projects/*/locations/*}/notebookRuntimeTemplates\x12\x80\x02\n\x1dDeleteNotebookRuntimeTemplate\x12@.google.cloud.aiplatform.v1.DeleteNotebookRuntimeTemplateRequest\x1a\x1d.google.longrunning.Operation"~\xcaA0\n\x15google.protobuf.Empty\x12\x17DeleteOperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02>*</v1/{name=projects/*/locations/*/notebookRuntimeTemplates/*}\x12\xba\x02\n\x1dUpdateNotebookRuntimeTemplate\x12@.google.cloud.aiplatform.v1.UpdateNotebookRuntimeTemplateRequest\x1a3.google.cloud.aiplatform.v1.NotebookRuntimeTemplate"\xa1\x01\xdaA%notebook_runtime_template,update_mask\x82\xd3\xe4\x93\x02s2V/v1/{notebook_runtime_template.name=projects/*/locations/*/notebookRuntimeTemplates/*}:\x19notebook_runtime_template\x12\xbd\x02\n\x15AssignNotebookRuntime\x128.google.cloud.aiplatform.v1.AssignNotebookRuntimeRequest\x1a\x1d.google.longrunning.Operation"\xca\x01\xcaA9\n\x0fNotebookRuntime\x12&AssignNotebookRuntimeOperationMetadata\xdaAEparent,notebook_runtime_template,notebook_runtime,notebook_runtime_id\x82\xd3\xe4\x93\x02@";/v1/{parent=projects/*/locations/*}/notebookRuntimes:assign:\x01*\x12\xbd\x01\n\x12GetNotebookRuntime\x125.google.cloud.aiplatform.v1.GetNotebookRuntimeRequest\x1a+.google.cloud.aiplatform.v1.NotebookRuntime"C\xdaA\x04name\x82\xd3\xe4\x93\x026\x124/v1/{name=projects/*/locations/*/notebookRuntimes/*}\x12\xd0\x01\n\x14ListNotebookRuntimes\x127.google.cloud.aiplatform.v1.ListNotebookRuntimesRequest\x1a8.google.cloud.aiplatform.v1.ListNotebookRuntimesResponse"E\xdaA\x06parent\x82\xd3\xe4\x93\x026\x124/v1/{parent=projects/*/locations/*}/notebookRuntimes\x12\xe8\x01\n\x15DeleteNotebookRuntime\x128.google.cloud.aiplatform.v1.DeleteNotebookRuntimeRequest\x1a\x1d.google.longrunning.Operation"v\xcaA0\n\x15google.protobuf.Empty\x12\x17DeleteOperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x026*4/v1/{name=projects/*/locations/*/notebookRuntimes/*}\x12\x8f\x02\n\x16UpgradeNotebookRuntime\x129.google.cloud.aiplatform.v1.UpgradeNotebookRuntimeRequest\x1a\x1d.google.longrunning.Operation"\x9a\x01\xcaAI\n\x1eUpgradeNotebookRuntimeResponse\x12\'UpgradeNotebookRuntimeOperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02A"</v1/{name=projects/*/locations/*/notebookRuntimes/*}:upgrade:\x01*\x12\x85\x02\n\x14StartNotebookRuntime\x127.google.cloud.aiplatform.v1.StartNotebookRuntimeRequest\x1a\x1d.google.longrunning.Operation"\x94\x01\xcaAE\n\x1cStartNotebookRuntimeResponse\x12%StartNotebookRuntimeOperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02?":/v1/{name=projects/*/locations/*/notebookRuntimes/*}:start:\x01*\x12\x80\x02\n\x13StopNotebookRuntime\x126.google.cloud.aiplatform.v1.StopNotebookRuntimeRequest\x1a\x1d.google.longrunning.Operation"\x91\x01\xcaAC\n\x1bStopNotebookRuntimeResponse\x12$StopNotebookRuntimeOperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02>"9/v1/{name=projects/*/locations/*/notebookRuntimes/*}:stop:\x01*\x12\xd6\x02\n\x1aCreateNotebookExecutionJob\x12=.google.cloud.aiplatform.v1.CreateNotebookExecutionJobRequest\x1a\x1d.google.longrunning.Operation"\xd9\x01\xcaAC\n\x14NotebookExecutionJob\x12+CreateNotebookExecutionJobOperationMetadata\xdaA7parent,notebook_execution_job,notebook_execution_job_id\x82\xd3\xe4\x93\x02S"9/v1/{parent=projects/*/locations/*}/notebookExecutionJobs:\x16notebook_execution_job\x12\xd1\x01\n\x17GetNotebookExecutionJob\x12:.google.cloud.aiplatform.v1.GetNotebookExecutionJobRequest\x1a0.google.cloud.aiplatform.v1.NotebookExecutionJob"H\xdaA\x04name\x82\xd3\xe4\x93\x02;\x129/v1/{name=projects/*/locations/*/notebookExecutionJobs/*}\x12\xe4\x01\n\x19ListNotebookExecutionJobs\x12<.google.cloud.aiplatform.v1.ListNotebookExecutionJobsRequest\x1a=.google.cloud.aiplatform.v1.ListNotebookExecutionJobsResponse"J\xdaA\x06parent\x82\xd3\xe4\x93\x02;\x129/v1/{parent=projects/*/locations/*}/notebookExecutionJobs\x12\xf7\x01\n\x1aDeleteNotebookExecutionJob\x12=.google.cloud.aiplatform.v1.DeleteNotebookExecutionJobRequest\x1a\x1d.google.longrunning.Operation"{\xcaA0\n\x15google.protobuf.Empty\x12\x17DeleteOperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02;*9/v1/{name=projects/*/locations/*/notebookExecutionJobs/*}\x1aM\xcaA\x19aiplatform.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platformB\xd2\x01\n\x1ecom.google.cloud.aiplatform.v1B\x14NotebookServiceProtoP\x01Z>cloud.google.com/go/aiplatform/apiv1/aiplatformpb;aiplatformpb\xaa\x02\x1aGoogle.Cloud.AIPlatform.V1\xca\x02\x1aGoogle\\Cloud\\AIPlatform\\V1\xea\x02\x1dGoogle::Cloud::AIPlatform::V1b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.aiplatform.v1.notebook_service_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n\x1ecom.google.cloud.aiplatform.v1B\x14NotebookServiceProtoP\x01Z>cloud.google.com/go/aiplatform/apiv1/aiplatformpb;aiplatformpb\xaa\x02\x1aGoogle.Cloud.AIPlatform.V1\xca\x02\x1aGoogle\\Cloud\\AIPlatform\\V1\xea\x02\x1dGoogle::Cloud::AIPlatform::V1'
+    _globals['_CREATENOTEBOOKRUNTIMETEMPLATEREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATENOTEBOOKRUNTIMETEMPLATEREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\n!locations.googleapis.com/Location'
+    _globals['_CREATENOTEBOOKRUNTIMETEMPLATEREQUEST'].fields_by_name['notebook_runtime_template']._loaded_options = None
+    _globals['_CREATENOTEBOOKRUNTIMETEMPLATEREQUEST'].fields_by_name['notebook_runtime_template']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATENOTEBOOKRUNTIMETEMPLATEREQUEST'].fields_by_name['notebook_runtime_template_id']._loaded_options = None
+    _globals['_CREATENOTEBOOKRUNTIMETEMPLATEREQUEST'].fields_by_name['notebook_runtime_template_id']._serialized_options = b'\xe0A\x01'
+    _globals['_GETNOTEBOOKRUNTIMETEMPLATEREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETNOTEBOOKRUNTIMETEMPLATEREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA3\n1aiplatform.googleapis.com/NotebookRuntimeTemplate'
+    _globals['_LISTNOTEBOOKRUNTIMETEMPLATESREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTNOTEBOOKRUNTIMETEMPLATESREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\n!locations.googleapis.com/Location'
+    _globals['_LISTNOTEBOOKRUNTIMETEMPLATESREQUEST'].fields_by_name['filter']._loaded_options = None
+    _globals['_LISTNOTEBOOKRUNTIMETEMPLATESREQUEST'].fields_by_name['filter']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTNOTEBOOKRUNTIMETEMPLATESREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTNOTEBOOKRUNTIMETEMPLATESREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTNOTEBOOKRUNTIMETEMPLATESREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTNOTEBOOKRUNTIMETEMPLATESREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTNOTEBOOKRUNTIMETEMPLATESREQUEST'].fields_by_name['read_mask']._loaded_options = None
+    _globals['_LISTNOTEBOOKRUNTIMETEMPLATESREQUEST'].fields_by_name['read_mask']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTNOTEBOOKRUNTIMETEMPLATESREQUEST'].fields_by_name['order_by']._loaded_options = None
+    _globals['_LISTNOTEBOOKRUNTIMETEMPLATESREQUEST'].fields_by_name['order_by']._serialized_options = b'\xe0A\x01'
+    _globals['_DELETENOTEBOOKRUNTIMETEMPLATEREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETENOTEBOOKRUNTIMETEMPLATEREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA3\n1aiplatform.googleapis.com/NotebookRuntimeTemplate'
+    _globals['_UPDATENOTEBOOKRUNTIMETEMPLATEREQUEST'].fields_by_name['notebook_runtime_template']._loaded_options = None
+    _globals['_UPDATENOTEBOOKRUNTIMETEMPLATEREQUEST'].fields_by_name['notebook_runtime_template']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATENOTEBOOKRUNTIMETEMPLATEREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATENOTEBOOKRUNTIMETEMPLATEREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x02'
+    _globals['_ASSIGNNOTEBOOKRUNTIMEREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_ASSIGNNOTEBOOKRUNTIMEREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\n!locations.googleapis.com/Location'
+    _globals['_ASSIGNNOTEBOOKRUNTIMEREQUEST'].fields_by_name['notebook_runtime_template']._loaded_options = None
+    _globals['_ASSIGNNOTEBOOKRUNTIMEREQUEST'].fields_by_name['notebook_runtime_template']._serialized_options = b'\xe0A\x02\xfaA3\n1aiplatform.googleapis.com/NotebookRuntimeTemplate'
+    _globals['_ASSIGNNOTEBOOKRUNTIMEREQUEST'].fields_by_name['notebook_runtime']._loaded_options = None
+    _globals['_ASSIGNNOTEBOOKRUNTIMEREQUEST'].fields_by_name['notebook_runtime']._serialized_options = b'\xe0A\x02'
+    _globals['_ASSIGNNOTEBOOKRUNTIMEREQUEST'].fields_by_name['notebook_runtime_id']._loaded_options = None
+    _globals['_ASSIGNNOTEBOOKRUNTIMEREQUEST'].fields_by_name['notebook_runtime_id']._serialized_options = b'\xe0A\x01'
+    _globals['_GETNOTEBOOKRUNTIMEREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETNOTEBOOKRUNTIMEREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA+\n)aiplatform.googleapis.com/NotebookRuntime'
+    _globals['_LISTNOTEBOOKRUNTIMESREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTNOTEBOOKRUNTIMESREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\n!locations.googleapis.com/Location'
+    _globals['_LISTNOTEBOOKRUNTIMESREQUEST'].fields_by_name['filter']._loaded_options = None
+    _globals['_LISTNOTEBOOKRUNTIMESREQUEST'].fields_by_name['filter']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTNOTEBOOKRUNTIMESREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTNOTEBOOKRUNTIMESREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTNOTEBOOKRUNTIMESREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTNOTEBOOKRUNTIMESREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTNOTEBOOKRUNTIMESREQUEST'].fields_by_name['read_mask']._loaded_options = None
+    _globals['_LISTNOTEBOOKRUNTIMESREQUEST'].fields_by_name['read_mask']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTNOTEBOOKRUNTIMESREQUEST'].fields_by_name['order_by']._loaded_options = None
+    _globals['_LISTNOTEBOOKRUNTIMESREQUEST'].fields_by_name['order_by']._serialized_options = b'\xe0A\x01'
+    _globals['_DELETENOTEBOOKRUNTIMEREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETENOTEBOOKRUNTIMEREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA+\n)aiplatform.googleapis.com/NotebookRuntime'
+    _globals['_UPGRADENOTEBOOKRUNTIMEREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_UPGRADENOTEBOOKRUNTIMEREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA+\n)aiplatform.googleapis.com/NotebookRuntime'
+    _globals['_STARTNOTEBOOKRUNTIMEREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_STARTNOTEBOOKRUNTIMEREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA+\n)aiplatform.googleapis.com/NotebookRuntime'
+    _globals['_STOPNOTEBOOKRUNTIMEREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_STOPNOTEBOOKRUNTIMEREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA+\n)aiplatform.googleapis.com/NotebookRuntime'
+    _globals['_CREATENOTEBOOKEXECUTIONJOBREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATENOTEBOOKEXECUTIONJOBREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\n!locations.googleapis.com/Location'
+    _globals['_CREATENOTEBOOKEXECUTIONJOBREQUEST'].fields_by_name['notebook_execution_job']._loaded_options = None
+    _globals['_CREATENOTEBOOKEXECUTIONJOBREQUEST'].fields_by_name['notebook_execution_job']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATENOTEBOOKEXECUTIONJOBREQUEST'].fields_by_name['notebook_execution_job_id']._loaded_options = None
+    _globals['_CREATENOTEBOOKEXECUTIONJOBREQUEST'].fields_by_name['notebook_execution_job_id']._serialized_options = b'\xe0A\x01'
+    _globals['_GETNOTEBOOKEXECUTIONJOBREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETNOTEBOOKEXECUTIONJOBREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA0\n.aiplatform.googleapis.com/NotebookExecutionJob'
+    _globals['_GETNOTEBOOKEXECUTIONJOBREQUEST'].fields_by_name['view']._loaded_options = None
+    _globals['_GETNOTEBOOKEXECUTIONJOBREQUEST'].fields_by_name['view']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTNOTEBOOKEXECUTIONJOBSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTNOTEBOOKEXECUTIONJOBSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\n!locations.googleapis.com/Location'
+    _globals['_LISTNOTEBOOKEXECUTIONJOBSREQUEST'].fields_by_name['filter']._loaded_options = None
+    _globals['_LISTNOTEBOOKEXECUTIONJOBSREQUEST'].fields_by_name['filter']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTNOTEBOOKEXECUTIONJOBSREQUEST'].fields_by_name['page_size']._loaded_options = None
+    _globals['_LISTNOTEBOOKEXECUTIONJOBSREQUEST'].fields_by_name['page_size']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTNOTEBOOKEXECUTIONJOBSREQUEST'].fields_by_name['page_token']._loaded_options = None
+    _globals['_LISTNOTEBOOKEXECUTIONJOBSREQUEST'].fields_by_name['page_token']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTNOTEBOOKEXECUTIONJOBSREQUEST'].fields_by_name['order_by']._loaded_options = None
+    _globals['_LISTNOTEBOOKEXECUTIONJOBSREQUEST'].fields_by_name['order_by']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTNOTEBOOKEXECUTIONJOBSREQUEST'].fields_by_name['view']._loaded_options = None
+    _globals['_LISTNOTEBOOKEXECUTIONJOBSREQUEST'].fields_by_name['view']._serialized_options = b'\xe0A\x01'
+    _globals['_DELETENOTEBOOKEXECUTIONJOBREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETENOTEBOOKEXECUTIONJOBREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA0\n.aiplatform.googleapis.com/NotebookExecutionJob'
+    _globals['_NOTEBOOKSERVICE']._loaded_options = None
+    _globals['_NOTEBOOKSERVICE']._serialized_options = b'\xcaA\x19aiplatform.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platform'
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['CreateNotebookRuntimeTemplate']._loaded_options = None
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['CreateNotebookRuntimeTemplate']._serialized_options = b'\xcaAI\n\x17NotebookRuntimeTemplate\x12.CreateNotebookRuntimeTemplateOperationMetadata\xdaA=parent,notebook_runtime_template,notebook_runtime_template_id\x82\xd3\xe4\x93\x02Y"</v1/{parent=projects/*/locations/*}/notebookRuntimeTemplates:\x19notebook_runtime_template'
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['GetNotebookRuntimeTemplate']._loaded_options = None
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['GetNotebookRuntimeTemplate']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02>\x12</v1/{name=projects/*/locations/*/notebookRuntimeTemplates/*}'
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['ListNotebookRuntimeTemplates']._loaded_options = None
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['ListNotebookRuntimeTemplates']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02>\x12</v1/{parent=projects/*/locations/*}/notebookRuntimeTemplates'
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['DeleteNotebookRuntimeTemplate']._loaded_options = None
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['DeleteNotebookRuntimeTemplate']._serialized_options = b'\xcaA0\n\x15google.protobuf.Empty\x12\x17DeleteOperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02>*</v1/{name=projects/*/locations/*/notebookRuntimeTemplates/*}'
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['UpdateNotebookRuntimeTemplate']._loaded_options = None
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['UpdateNotebookRuntimeTemplate']._serialized_options = b'\xdaA%notebook_runtime_template,update_mask\x82\xd3\xe4\x93\x02s2V/v1/{notebook_runtime_template.name=projects/*/locations/*/notebookRuntimeTemplates/*}:\x19notebook_runtime_template'
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['AssignNotebookRuntime']._loaded_options = None
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['AssignNotebookRuntime']._serialized_options = b'\xcaA9\n\x0fNotebookRuntime\x12&AssignNotebookRuntimeOperationMetadata\xdaAEparent,notebook_runtime_template,notebook_runtime,notebook_runtime_id\x82\xd3\xe4\x93\x02@";/v1/{parent=projects/*/locations/*}/notebookRuntimes:assign:\x01*'
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['GetNotebookRuntime']._loaded_options = None
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['GetNotebookRuntime']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x026\x124/v1/{name=projects/*/locations/*/notebookRuntimes/*}'
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['ListNotebookRuntimes']._loaded_options = None
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['ListNotebookRuntimes']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x026\x124/v1/{parent=projects/*/locations/*}/notebookRuntimes'
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['DeleteNotebookRuntime']._loaded_options = None
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['DeleteNotebookRuntime']._serialized_options = b'\xcaA0\n\x15google.protobuf.Empty\x12\x17DeleteOperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x026*4/v1/{name=projects/*/locations/*/notebookRuntimes/*}'
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['UpgradeNotebookRuntime']._loaded_options = None
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['UpgradeNotebookRuntime']._serialized_options = b'\xcaAI\n\x1eUpgradeNotebookRuntimeResponse\x12\'UpgradeNotebookRuntimeOperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02A"</v1/{name=projects/*/locations/*/notebookRuntimes/*}:upgrade:\x01*'
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['StartNotebookRuntime']._loaded_options = None
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['StartNotebookRuntime']._serialized_options = b'\xcaAE\n\x1cStartNotebookRuntimeResponse\x12%StartNotebookRuntimeOperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02?":/v1/{name=projects/*/locations/*/notebookRuntimes/*}:start:\x01*'
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['StopNotebookRuntime']._loaded_options = None
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['StopNotebookRuntime']._serialized_options = b'\xcaAC\n\x1bStopNotebookRuntimeResponse\x12$StopNotebookRuntimeOperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02>"9/v1/{name=projects/*/locations/*/notebookRuntimes/*}:stop:\x01*'
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['CreateNotebookExecutionJob']._loaded_options = None
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['CreateNotebookExecutionJob']._serialized_options = b'\xcaAC\n\x14NotebookExecutionJob\x12+CreateNotebookExecutionJobOperationMetadata\xdaA7parent,notebook_execution_job,notebook_execution_job_id\x82\xd3\xe4\x93\x02S"9/v1/{parent=projects/*/locations/*}/notebookExecutionJobs:\x16notebook_execution_job'
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['GetNotebookExecutionJob']._loaded_options = None
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['GetNotebookExecutionJob']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02;\x129/v1/{name=projects/*/locations/*/notebookExecutionJobs/*}'
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['ListNotebookExecutionJobs']._loaded_options = None
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['ListNotebookExecutionJobs']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02;\x129/v1/{parent=projects/*/locations/*}/notebookExecutionJobs'
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['DeleteNotebookExecutionJob']._loaded_options = None
+    _globals['_NOTEBOOKSERVICE'].methods_by_name['DeleteNotebookExecutionJob']._serialized_options = b'\xcaA0\n\x15google.protobuf.Empty\x12\x17DeleteOperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02;*9/v1/{name=projects/*/locations/*/notebookExecutionJobs/*}'
+    _globals['_NOTEBOOKEXECUTIONJOBVIEW']._serialized_start = 4502
+    _globals['_NOTEBOOKEXECUTIONJOBVIEW']._serialized_end = 4650
+    _globals['_CREATENOTEBOOKRUNTIMETEMPLATEREQUEST']._serialized_start = 449
+    _globals['_CREATENOTEBOOKRUNTIMETEMPLATEREQUEST']._serialized_end = 682
+    _globals['_CREATENOTEBOOKRUNTIMETEMPLATEOPERATIONMETADATA']._serialized_start = 685
+    _globals['_CREATENOTEBOOKRUNTIMETEMPLATEOPERATIONMETADATA']._serialized_end = 813
+    _globals['_GETNOTEBOOKRUNTIMETEMPLATEREQUEST']._serialized_start = 815
+    _globals['_GETNOTEBOOKRUNTIMETEMPLATEREQUEST']._serialized_end = 923
+    _globals['_LISTNOTEBOOKRUNTIMETEMPLATESREQUEST']._serialized_start = 926
+    _globals['_LISTNOTEBOOKRUNTIMETEMPLATESREQUEST']._serialized_end = 1167
+    _globals['_LISTNOTEBOOKRUNTIMETEMPLATESRESPONSE']._serialized_start = 1170
+    _globals['_LISTNOTEBOOKRUNTIMETEMPLATESRESPONSE']._serialized_end = 1322
+    _globals['_DELETENOTEBOOKRUNTIMETEMPLATEREQUEST']._serialized_start = 1324
+    _globals['_DELETENOTEBOOKRUNTIMETEMPLATEREQUEST']._serialized_end = 1435
+    _globals['_UPDATENOTEBOOKRUNTIMETEMPLATEREQUEST']._serialized_start = 1438
+    _globals['_UPDATENOTEBOOKRUNTIMETEMPLATEREQUEST']._serialized_end = 1623
+    _globals['_ASSIGNNOTEBOOKRUNTIMEREQUEST']._serialized_start = 1626
+    _globals['_ASSIGNNOTEBOOKRUNTIMEREQUEST']._serialized_end = 1919
+    _globals['_ASSIGNNOTEBOOKRUNTIMEOPERATIONMETADATA']._serialized_start = 1922
+    _globals['_ASSIGNNOTEBOOKRUNTIMEOPERATIONMETADATA']._serialized_end = 2068
+    _globals['_GETNOTEBOOKRUNTIMEREQUEST']._serialized_start = 2070
+    _globals['_GETNOTEBOOKRUNTIMEREQUEST']._serialized_end = 2162
+    _globals['_LISTNOTEBOOKRUNTIMESREQUEST']._serialized_start = 2165
+    _globals['_LISTNOTEBOOKRUNTIMESREQUEST']._serialized_end = 2398
+    _globals['_LISTNOTEBOOKRUNTIMESRESPONSE']._serialized_start = 2400
+    _globals['_LISTNOTEBOOKRUNTIMESRESPONSE']._serialized_end = 2527
+    _globals['_DELETENOTEBOOKRUNTIMEREQUEST']._serialized_start = 2529
+    _globals['_DELETENOTEBOOKRUNTIMEREQUEST']._serialized_end = 2624
+    _globals['_UPGRADENOTEBOOKRUNTIMEREQUEST']._serialized_start = 2626
+    _globals['_UPGRADENOTEBOOKRUNTIMEREQUEST']._serialized_end = 2722
+    _globals['_UPGRADENOTEBOOKRUNTIMEOPERATIONMETADATA']._serialized_start = 2725
+    _globals['_UPGRADENOTEBOOKRUNTIMEOPERATIONMETADATA']._serialized_end = 2872
+    _globals['_UPGRADENOTEBOOKRUNTIMERESPONSE']._serialized_start = 2874
+    _globals['_UPGRADENOTEBOOKRUNTIMERESPONSE']._serialized_end = 2906
+    _globals['_STARTNOTEBOOKRUNTIMEREQUEST']._serialized_start = 2908
+    _globals['_STARTNOTEBOOKRUNTIMEREQUEST']._serialized_end = 3002
+    _globals['_STARTNOTEBOOKRUNTIMEOPERATIONMETADATA']._serialized_start = 3005
+    _globals['_STARTNOTEBOOKRUNTIMEOPERATIONMETADATA']._serialized_end = 3150
+    _globals['_STARTNOTEBOOKRUNTIMERESPONSE']._serialized_start = 3152
+    _globals['_STARTNOTEBOOKRUNTIMERESPONSE']._serialized_end = 3182
+    _globals['_STOPNOTEBOOKRUNTIMEREQUEST']._serialized_start = 3184
+    _globals['_STOPNOTEBOOKRUNTIMEREQUEST']._serialized_end = 3277
+    _globals['_STOPNOTEBOOKRUNTIMEOPERATIONMETADATA']._serialized_start = 3279
+    _globals['_STOPNOTEBOOKRUNTIMEOPERATIONMETADATA']._serialized_end = 3397
+    _globals['_STOPNOTEBOOKRUNTIMERESPONSE']._serialized_start = 3399
+    _globals['_STOPNOTEBOOKRUNTIMERESPONSE']._serialized_end = 3428
+    _globals['_CREATENOTEBOOKEXECUTIONJOBREQUEST']._serialized_start = 3431
+    _globals['_CREATENOTEBOOKEXECUTIONJOBREQUEST']._serialized_end = 3652
+    _globals['_CREATENOTEBOOKEXECUTIONJOBOPERATIONMETADATA']._serialized_start = 3655
+    _globals['_CREATENOTEBOOKEXECUTIONJOBOPERATIONMETADATA']._serialized_end = 3806
+    _globals['_GETNOTEBOOKEXECUTIONJOBREQUEST']._serialized_start = 3809
+    _globals['_GETNOTEBOOKEXECUTIONJOBREQUEST']._serialized_end = 3984
+    _globals['_LISTNOTEBOOKEXECUTIONJOBSREQUEST']._serialized_start = 3987
+    _globals['_LISTNOTEBOOKEXECUTIONJOBSREQUEST']._serialized_end = 4246
+    _globals['_LISTNOTEBOOKEXECUTIONJOBSRESPONSE']._serialized_start = 4249
+    _globals['_LISTNOTEBOOKEXECUTIONJOBSRESPONSE']._serialized_end = 4392
+    _globals['_DELETENOTEBOOKEXECUTIONJOBREQUEST']._serialized_start = 4394
+    _globals['_DELETENOTEBOOKEXECUTIONJOBREQUEST']._serialized_end = 4499
+    _globals['_NOTEBOOKSERVICE']._serialized_start = 4653
+    _globals['_NOTEBOOKSERVICE']._serialized_end = 8954

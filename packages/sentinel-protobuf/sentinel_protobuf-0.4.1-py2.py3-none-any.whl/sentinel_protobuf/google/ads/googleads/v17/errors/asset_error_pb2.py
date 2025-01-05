@@ -1,0 +1,19 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/ads/googleads/v17/errors/asset_error.proto')
+_sym_db = _symbol_database.Default()
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n1google/ads/googleads/v17/errors/asset_error.proto\x12\x1fgoogle.ads.googleads.v17.errors"\xd7\x0b\n\x0eAssetErrorEnum"\xc4\x0b\n\nAssetError\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\x0b\n\x07UNKNOWN\x10\x01\x12,\n(CUSTOMER_NOT_ON_ALLOWLIST_FOR_ASSET_TYPE\x10\r\x12\x13\n\x0fDUPLICATE_ASSET\x10\x03\x12\x18\n\x14DUPLICATE_ASSET_NAME\x10\x04\x12\x19\n\x15ASSET_DATA_IS_MISSING\x10\x05\x12\x1c\n\x18CANNOT_MODIFY_ASSET_NAME\x10\x06\x12&\n"FIELD_INCOMPATIBLE_WITH_ASSET_TYPE\x10\x07\x12\x1f\n\x1bINVALID_CALL_TO_ACTION_TEXT\x10\x08\x12(\n$LEAD_FORM_INVALID_FIELDS_COMBINATION\x10\t\x12\x1f\n\x1bLEAD_FORM_MISSING_AGREEMENT\x10\n\x12\x18\n\x14INVALID_ASSET_STATUS\x10\x0b\x12+\n\'FIELD_CANNOT_BE_MODIFIED_FOR_ASSET_TYPE\x10\x0c\x12\x1c\n\x18SCHEDULES_CANNOT_OVERLAP\x10\x0e\x129\n5PROMOTION_CANNOT_SET_PERCENT_OFF_AND_MONEY_AMOUNT_OFF\x10\x0f\x12>\n:PROMOTION_CANNOT_SET_PROMOTION_CODE_AND_ORDERS_OVER_AMOUNT\x10\x10\x12%\n!TOO_MANY_DECIMAL_PLACES_SPECIFIED\x10\x11\x12/\n+DUPLICATE_ASSETS_WITH_DIFFERENT_FIELD_VALUE\x10\x12\x122\n.CALL_CARRIER_SPECIFIC_SHORT_NUMBER_NOT_ALLOWED\x10\x13\x125\n1CALL_CUSTOMER_CONSENT_FOR_CALL_RECORDING_REQUIRED\x10\x14\x12\x1f\n\x1bCALL_DISALLOWED_NUMBER_TYPE\x10\x15\x12"\n\x1eCALL_INVALID_CONVERSION_ACTION\x10\x16\x12\x1d\n\x19CALL_INVALID_COUNTRY_CODE\x10\x17\x12-\n)CALL_INVALID_DOMESTIC_PHONE_NUMBER_FORMAT\x10\x18\x12\x1d\n\x19CALL_INVALID_PHONE_NUMBER\x10\x19\x12/\n+CALL_PHONE_NUMBER_NOT_SUPPORTED_FOR_COUNTRY\x10\x1a\x12(\n$CALL_PREMIUM_RATE_NUMBER_NOT_ALLOWED\x10\x1b\x12(\n$CALL_VANITY_PHONE_NUMBER_NOT_ALLOWED\x10\x1c\x12$\n PRICE_HEADER_SAME_AS_DESCRIPTION\x10\x1d\x12\x1d\n\x19MOBILE_APP_INVALID_APP_ID\x10\x1e\x125\n1MOBILE_APP_INVALID_FINAL_URL_FOR_APP_DOWNLOAD_URL\x10\x1f\x12 \n\x1cNAME_REQUIRED_FOR_ASSET_TYPE\x10 \x124\n0LEAD_FORM_LEGACY_QUALIFYING_QUESTIONS_DISALLOWED\x10!\x12 \n\x1cNAME_CONFLICT_FOR_ASSET_TYPE\x10"\x12\x1e\n\x1aCANNOT_MODIFY_ASSET_SOURCE\x10#\x12-\n)CANNOT_MODIFY_AUTOMATICALLY_CREATED_ASSET\x10$\x12-\n)LEAD_FORM_LOCATION_ANSWER_TYPE_DISALLOWED\x10%\x12 \n\x1cPAGE_FEED_INVALID_LABEL_TEXT\x10&B\xef\x01\n#com.google.ads.googleads.v17.errorsB\x0fAssetErrorProtoP\x01ZEgoogle.golang.org/genproto/googleapis/ads/googleads/v17/errors;errors\xa2\x02\x03GAA\xaa\x02\x1fGoogle.Ads.GoogleAds.V17.Errors\xca\x02\x1fGoogle\\Ads\\GoogleAds\\V17\\Errors\xea\x02#Google::Ads::GoogleAds::V17::Errorsb\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.ads.googleads.v17.errors.asset_error_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n#com.google.ads.googleads.v17.errorsB\x0fAssetErrorProtoP\x01ZEgoogle.golang.org/genproto/googleapis/ads/googleads/v17/errors;errors\xa2\x02\x03GAA\xaa\x02\x1fGoogle.Ads.GoogleAds.V17.Errors\xca\x02\x1fGoogle\\Ads\\GoogleAds\\V17\\Errors\xea\x02#Google::Ads::GoogleAds::V17::Errors'
+    _globals['_ASSETERRORENUM']._serialized_start = 87
+    _globals['_ASSETERRORENUM']._serialized_end = 1582
+    _globals['_ASSETERRORENUM_ASSETERROR']._serialized_start = 106
+    _globals['_ASSETERRORENUM_ASSETERROR']._serialized_end = 1582

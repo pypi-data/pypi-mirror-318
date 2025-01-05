@@ -1,0 +1,150 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/cloud/language/v1beta2/language_service.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from .....google.api import client_pb2 as google_dot_api_dot_client__pb2
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n4google/cloud/language/v1beta2/language_service.proto\x12\x1dgoogle.cloud.language.v1beta2\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto"\xa7\x03\n\x08Document\x12:\n\x04type\x18\x01 \x01(\x0e2,.google.cloud.language.v1beta2.Document.Type\x12\x11\n\x07content\x18\x02 \x01(\tH\x00\x12\x19\n\x0fgcs_content_uri\x18\x03 \x01(\tH\x00\x12\x10\n\x08language\x18\x04 \x01(\t\x12\x19\n\x11reference_web_uri\x18\x05 \x01(\t\x12Y\n\x14boilerplate_handling\x18\x06 \x01(\x0e2;.google.cloud.language.v1beta2.Document.BoilerplateHandling"6\n\x04Type\x12\x14\n\x10TYPE_UNSPECIFIED\x10\x00\x12\x0e\n\nPLAIN_TEXT\x10\x01\x12\x08\n\x04HTML\x10\x02"g\n\x13BoilerplateHandling\x12$\n BOILERPLATE_HANDLING_UNSPECIFIED\x10\x00\x12\x14\n\x10SKIP_BOILERPLATE\x10\x01\x12\x14\n\x10KEEP_BOILERPLATE\x10\x02B\x08\n\x06source"~\n\x08Sentence\x125\n\x04text\x18\x01 \x01(\x0b2\'.google.cloud.language.v1beta2.TextSpan\x12;\n\tsentiment\x18\x02 \x01(\x0b2(.google.cloud.language.v1beta2.Sentiment"\x93\x04\n\x06Entity\x12\x0c\n\x04name\x18\x01 \x01(\t\x128\n\x04type\x18\x02 \x01(\x0e2*.google.cloud.language.v1beta2.Entity.Type\x12E\n\x08metadata\x18\x03 \x03(\x0b23.google.cloud.language.v1beta2.Entity.MetadataEntry\x12\x10\n\x08salience\x18\x04 \x01(\x02\x12>\n\x08mentions\x18\x05 \x03(\x0b2,.google.cloud.language.v1beta2.EntityMention\x12;\n\tsentiment\x18\x06 \x01(\x0b2(.google.cloud.language.v1beta2.Sentiment\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x028\x01"\xb9\x01\n\x04Type\x12\x0b\n\x07UNKNOWN\x10\x00\x12\n\n\x06PERSON\x10\x01\x12\x0c\n\x08LOCATION\x10\x02\x12\x10\n\x0cORGANIZATION\x10\x03\x12\t\n\x05EVENT\x10\x04\x12\x0f\n\x0bWORK_OF_ART\x10\x05\x12\x11\n\rCONSUMER_GOOD\x10\x06\x12\t\n\x05OTHER\x10\x07\x12\x10\n\x0cPHONE_NUMBER\x10\t\x12\x0b\n\x07ADDRESS\x10\n\x12\x08\n\x04DATE\x10\x0b\x12\n\n\x06NUMBER\x10\x0c\x12\t\n\x05PRICE\x10\r"\xda\x01\n\x05Token\x125\n\x04text\x18\x01 \x01(\x0b2\'.google.cloud.language.v1beta2.TextSpan\x12C\n\x0epart_of_speech\x18\x02 \x01(\x0b2+.google.cloud.language.v1beta2.PartOfSpeech\x12F\n\x0fdependency_edge\x18\x03 \x01(\x0b2-.google.cloud.language.v1beta2.DependencyEdge\x12\r\n\x05lemma\x18\x04 \x01(\t"-\n\tSentiment\x12\x11\n\tmagnitude\x18\x02 \x01(\x02\x12\r\n\x05score\x18\x03 \x01(\x02"\xdf\x10\n\x0cPartOfSpeech\x12<\n\x03tag\x18\x01 \x01(\x0e2/.google.cloud.language.v1beta2.PartOfSpeech.Tag\x12B\n\x06aspect\x18\x02 \x01(\x0e22.google.cloud.language.v1beta2.PartOfSpeech.Aspect\x12>\n\x04case\x18\x03 \x01(\x0e20.google.cloud.language.v1beta2.PartOfSpeech.Case\x12>\n\x04form\x18\x04 \x01(\x0e20.google.cloud.language.v1beta2.PartOfSpeech.Form\x12B\n\x06gender\x18\x05 \x01(\x0e22.google.cloud.language.v1beta2.PartOfSpeech.Gender\x12>\n\x04mood\x18\x06 \x01(\x0e20.google.cloud.language.v1beta2.PartOfSpeech.Mood\x12B\n\x06number\x18\x07 \x01(\x0e22.google.cloud.language.v1beta2.PartOfSpeech.Number\x12B\n\x06person\x18\x08 \x01(\x0e22.google.cloud.language.v1beta2.PartOfSpeech.Person\x12B\n\x06proper\x18\t \x01(\x0e22.google.cloud.language.v1beta2.PartOfSpeech.Proper\x12L\n\x0breciprocity\x18\n \x01(\x0e27.google.cloud.language.v1beta2.PartOfSpeech.Reciprocity\x12@\n\x05tense\x18\x0b \x01(\x0e21.google.cloud.language.v1beta2.PartOfSpeech.Tense\x12@\n\x05voice\x18\x0c \x01(\x0e21.google.cloud.language.v1beta2.PartOfSpeech.Voice"\x8d\x01\n\x03Tag\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x07\n\x03ADJ\x10\x01\x12\x07\n\x03ADP\x10\x02\x12\x07\n\x03ADV\x10\x03\x12\x08\n\x04CONJ\x10\x04\x12\x07\n\x03DET\x10\x05\x12\x08\n\x04NOUN\x10\x06\x12\x07\n\x03NUM\x10\x07\x12\x08\n\x04PRON\x10\x08\x12\x07\n\x03PRT\x10\t\x12\t\n\x05PUNCT\x10\n\x12\x08\n\x04VERB\x10\x0b\x12\x05\n\x01X\x10\x0c\x12\t\n\x05AFFIX\x10\r"O\n\x06Aspect\x12\x12\n\x0eASPECT_UNKNOWN\x10\x00\x12\x0e\n\nPERFECTIVE\x10\x01\x12\x10\n\x0cIMPERFECTIVE\x10\x02\x12\x0f\n\x0bPROGRESSIVE\x10\x03"\xf8\x01\n\x04Case\x12\x10\n\x0cCASE_UNKNOWN\x10\x00\x12\x0e\n\nACCUSATIVE\x10\x01\x12\r\n\tADVERBIAL\x10\x02\x12\x11\n\rCOMPLEMENTIVE\x10\x03\x12\n\n\x06DATIVE\x10\x04\x12\x0c\n\x08GENITIVE\x10\x05\x12\x10\n\x0cINSTRUMENTAL\x10\x06\x12\x0c\n\x08LOCATIVE\x10\x07\x12\x0e\n\nNOMINATIVE\x10\x08\x12\x0b\n\x07OBLIQUE\x10\t\x12\r\n\tPARTITIVE\x10\n\x12\x11\n\rPREPOSITIONAL\x10\x0b\x12\x12\n\x0eREFLEXIVE_CASE\x10\x0c\x12\x11\n\rRELATIVE_CASE\x10\r\x12\x0c\n\x08VOCATIVE\x10\x0e"\xaf\x01\n\x04Form\x12\x10\n\x0cFORM_UNKNOWN\x10\x00\x12\x0c\n\x08ADNOMIAL\x10\x01\x12\r\n\tAUXILIARY\x10\x02\x12\x12\n\x0eCOMPLEMENTIZER\x10\x03\x12\x10\n\x0cFINAL_ENDING\x10\x04\x12\n\n\x06GERUND\x10\x05\x12\n\n\x06REALIS\x10\x06\x12\x0c\n\x08IRREALIS\x10\x07\x12\t\n\x05SHORT\x10\x08\x12\x08\n\x04LONG\x10\t\x12\t\n\x05ORDER\x10\n\x12\x0c\n\x08SPECIFIC\x10\x0b"E\n\x06Gender\x12\x12\n\x0eGENDER_UNKNOWN\x10\x00\x12\x0c\n\x08FEMININE\x10\x01\x12\r\n\tMASCULINE\x10\x02\x12\n\n\x06NEUTER\x10\x03"\x7f\n\x04Mood\x12\x10\n\x0cMOOD_UNKNOWN\x10\x00\x12\x14\n\x10CONDITIONAL_MOOD\x10\x01\x12\x0e\n\nIMPERATIVE\x10\x02\x12\x0e\n\nINDICATIVE\x10\x03\x12\x11\n\rINTERROGATIVE\x10\x04\x12\x0b\n\x07JUSSIVE\x10\x05\x12\x0f\n\x0bSUBJUNCTIVE\x10\x06"@\n\x06Number\x12\x12\n\x0eNUMBER_UNKNOWN\x10\x00\x12\x0c\n\x08SINGULAR\x10\x01\x12\n\n\x06PLURAL\x10\x02\x12\x08\n\x04DUAL\x10\x03"T\n\x06Person\x12\x12\n\x0ePERSON_UNKNOWN\x10\x00\x12\t\n\x05FIRST\x10\x01\x12\n\n\x06SECOND\x10\x02\x12\t\n\x05THIRD\x10\x03\x12\x14\n\x10REFLEXIVE_PERSON\x10\x04"8\n\x06Proper\x12\x12\n\x0ePROPER_UNKNOWN\x10\x00\x12\n\n\x06PROPER\x10\x01\x12\x0e\n\nNOT_PROPER\x10\x02"J\n\x0bReciprocity\x12\x17\n\x13RECIPROCITY_UNKNOWN\x10\x00\x12\x0e\n\nRECIPROCAL\x10\x01\x12\x12\n\x0eNON_RECIPROCAL\x10\x02"s\n\x05Tense\x12\x11\n\rTENSE_UNKNOWN\x10\x00\x12\x15\n\x11CONDITIONAL_TENSE\x10\x01\x12\n\n\x06FUTURE\x10\x02\x12\x08\n\x04PAST\x10\x03\x12\x0b\n\x07PRESENT\x10\x04\x12\r\n\tIMPERFECT\x10\x05\x12\x0e\n\nPLUPERFECT\x10\x06"B\n\x05Voice\x12\x11\n\rVOICE_UNKNOWN\x10\x00\x12\n\n\x06ACTIVE\x10\x01\x12\r\n\tCAUSATIVE\x10\x02\x12\x0b\n\x07PASSIVE\x10\x03"\x9a\x08\n\x0eDependencyEdge\x12\x18\n\x10head_token_index\x18\x01 \x01(\x05\x12B\n\x05label\x18\x02 \x01(\x0e23.google.cloud.language.v1beta2.DependencyEdge.Label"\xa9\x07\n\x05Label\x12\x0b\n\x07UNKNOWN\x10\x00\x12\n\n\x06ABBREV\x10\x01\x12\t\n\x05ACOMP\x10\x02\x12\t\n\x05ADVCL\x10\x03\x12\n\n\x06ADVMOD\x10\x04\x12\x08\n\x04AMOD\x10\x05\x12\t\n\x05APPOS\x10\x06\x12\x08\n\x04ATTR\x10\x07\x12\x07\n\x03AUX\x10\x08\x12\x0b\n\x07AUXPASS\x10\t\x12\x06\n\x02CC\x10\n\x12\t\n\x05CCOMP\x10\x0b\x12\x08\n\x04CONJ\x10\x0c\x12\t\n\x05CSUBJ\x10\r\x12\r\n\tCSUBJPASS\x10\x0e\x12\x07\n\x03DEP\x10\x0f\x12\x07\n\x03DET\x10\x10\x12\r\n\tDISCOURSE\x10\x11\x12\x08\n\x04DOBJ\x10\x12\x12\x08\n\x04EXPL\x10\x13\x12\x0c\n\x08GOESWITH\x10\x14\x12\x08\n\x04IOBJ\x10\x15\x12\x08\n\x04MARK\x10\x16\x12\x07\n\x03MWE\x10\x17\x12\x07\n\x03MWV\x10\x18\x12\x07\n\x03NEG\x10\x19\x12\x06\n\x02NN\x10\x1a\x12\x0c\n\x08NPADVMOD\x10\x1b\x12\t\n\x05NSUBJ\x10\x1c\x12\r\n\tNSUBJPASS\x10\x1d\x12\x07\n\x03NUM\x10\x1e\x12\n\n\x06NUMBER\x10\x1f\x12\x05\n\x01P\x10 \x12\r\n\tPARATAXIS\x10!\x12\x0b\n\x07PARTMOD\x10"\x12\t\n\x05PCOMP\x10#\x12\x08\n\x04POBJ\x10$\x12\x08\n\x04POSS\x10%\x12\x0b\n\x07POSTNEG\x10&\x12\x0b\n\x07PRECOMP\x10\'\x12\x0b\n\x07PRECONJ\x10(\x12\n\n\x06PREDET\x10)\x12\x08\n\x04PREF\x10*\x12\x08\n\x04PREP\x10+\x12\t\n\x05PRONL\x10,\x12\x07\n\x03PRT\x10-\x12\x06\n\x02PS\x10.\x12\x0c\n\x08QUANTMOD\x10/\x12\t\n\x05RCMOD\x100\x12\x0c\n\x08RCMODREL\x101\x12\t\n\x05RDROP\x102\x12\x07\n\x03REF\x103\x12\x0b\n\x07REMNANT\x104\x12\x0e\n\nREPARANDUM\x105\x12\x08\n\x04ROOT\x106\x12\x08\n\x04SNUM\x107\x12\x08\n\x04SUFF\x108\x12\x08\n\x04TMOD\x109\x12\t\n\x05TOPIC\x10:\x12\x08\n\x04VMOD\x10;\x12\x0c\n\x08VOCATIVE\x10<\x12\t\n\x05XCOMP\x10=\x12\n\n\x06SUFFIX\x10>\x12\t\n\x05TITLE\x10?\x12\x0c\n\x08ADVPHMOD\x10@\x12\x0b\n\x07AUXCAUS\x10A\x12\t\n\x05AUXVV\x10B\x12\t\n\x05DTMOD\x10C\x12\x0b\n\x07FOREIGN\x10D\x12\x06\n\x02KW\x10E\x12\x08\n\x04LIST\x10F\x12\x08\n\x04NOMC\x10G\x12\x0c\n\x08NOMCSUBJ\x10H\x12\x10\n\x0cNOMCSUBJPASS\x10I\x12\x08\n\x04NUMC\x10J\x12\x07\n\x03COP\x10K\x12\x0e\n\nDISLOCATED\x10L\x12\x07\n\x03ASP\x10M\x12\x08\n\x04GMOD\x10N\x12\x08\n\x04GOBJ\x10O\x12\n\n\x06INFMOD\x10P\x12\x07\n\x03MES\x10Q\x12\t\n\x05NCOMP\x10R"\xf6\x01\n\rEntityMention\x125\n\x04text\x18\x01 \x01(\x0b2\'.google.cloud.language.v1beta2.TextSpan\x12?\n\x04type\x18\x02 \x01(\x0e21.google.cloud.language.v1beta2.EntityMention.Type\x12;\n\tsentiment\x18\x03 \x01(\x0b2(.google.cloud.language.v1beta2.Sentiment"0\n\x04Type\x12\x10\n\x0cTYPE_UNKNOWN\x10\x00\x12\n\n\x06PROPER\x10\x01\x12\n\n\x06COMMON\x10\x02"1\n\x08TextSpan\x12\x0f\n\x07content\x18\x01 \x01(\t\x12\x14\n\x0cbegin_offset\x18\x02 \x01(\x05":\n\x16ClassificationCategory\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x12\n\nconfidence\x18\x02 \x01(\x02"\xc7\x03\n\x1aClassificationModelOptions\x12U\n\x08v1_model\x18\x01 \x01(\x0b2A.google.cloud.language.v1beta2.ClassificationModelOptions.V1ModelH\x00\x12U\n\x08v2_model\x18\x02 \x01(\x0b2A.google.cloud.language.v1beta2.ClassificationModelOptions.V2ModelH\x00\x1a\t\n\x07V1Model\x1a\xe1\x01\n\x07V2Model\x12~\n\x1acontent_categories_version\x18\x01 \x01(\x0e2Z.google.cloud.language.v1beta2.ClassificationModelOptions.V2Model.ContentCategoriesVersion"V\n\x18ContentCategoriesVersion\x12*\n&CONTENT_CATEGORIES_VERSION_UNSPECIFIED\x10\x00\x12\x06\n\x02V1\x10\x01\x12\x06\n\x02V2\x10\x02B\x0c\n\nmodel_type"\x9d\x01\n\x17AnalyzeSentimentRequest\x12>\n\x08document\x18\x01 \x01(\x0b2\'.google.cloud.language.v1beta2.DocumentB\x03\xe0A\x02\x12B\n\rencoding_type\x18\x02 \x01(\x0e2+.google.cloud.language.v1beta2.EncodingType"\xae\x01\n\x18AnalyzeSentimentResponse\x12D\n\x12document_sentiment\x18\x01 \x01(\x0b2(.google.cloud.language.v1beta2.Sentiment\x12\x10\n\x08language\x18\x02 \x01(\t\x12:\n\tsentences\x18\x03 \x03(\x0b2\'.google.cloud.language.v1beta2.Sentence"\xa3\x01\n\x1dAnalyzeEntitySentimentRequest\x12>\n\x08document\x18\x01 \x01(\x0b2\'.google.cloud.language.v1beta2.DocumentB\x03\xe0A\x02\x12B\n\rencoding_type\x18\x02 \x01(\x0e2+.google.cloud.language.v1beta2.EncodingType"k\n\x1eAnalyzeEntitySentimentResponse\x127\n\x08entities\x18\x01 \x03(\x0b2%.google.cloud.language.v1beta2.Entity\x12\x10\n\x08language\x18\x02 \x01(\t"\x9c\x01\n\x16AnalyzeEntitiesRequest\x12>\n\x08document\x18\x01 \x01(\x0b2\'.google.cloud.language.v1beta2.DocumentB\x03\xe0A\x02\x12B\n\rencoding_type\x18\x02 \x01(\x0e2+.google.cloud.language.v1beta2.EncodingType"d\n\x17AnalyzeEntitiesResponse\x127\n\x08entities\x18\x01 \x03(\x0b2%.google.cloud.language.v1beta2.Entity\x12\x10\n\x08language\x18\x02 \x01(\t"\x9a\x01\n\x14AnalyzeSyntaxRequest\x12>\n\x08document\x18\x01 \x01(\x0b2\'.google.cloud.language.v1beta2.DocumentB\x03\xe0A\x02\x12B\n\rencoding_type\x18\x02 \x01(\x0e2+.google.cloud.language.v1beta2.EncodingType"\x9b\x01\n\x15AnalyzeSyntaxResponse\x12:\n\tsentences\x18\x01 \x03(\x0b2\'.google.cloud.language.v1beta2.Sentence\x124\n\x06tokens\x18\x02 \x03(\x0b2$.google.cloud.language.v1beta2.Token\x12\x10\n\x08language\x18\x03 \x01(\t"\xb6\x01\n\x13ClassifyTextRequest\x12>\n\x08document\x18\x01 \x01(\x0b2\'.google.cloud.language.v1beta2.DocumentB\x03\xe0A\x02\x12_\n\x1cclassification_model_options\x18\x03 \x01(\x0b29.google.cloud.language.v1beta2.ClassificationModelOptions"a\n\x14ClassifyTextResponse\x12I\n\ncategories\x18\x01 \x03(\x0b25.google.cloud.language.v1beta2.ClassificationCategory"U\n\x13ModerateTextRequest\x12>\n\x08document\x18\x01 \x01(\x0b2\'.google.cloud.language.v1beta2.DocumentB\x03\xe0A\x02"l\n\x14ModerateTextResponse\x12T\n\x15moderation_categories\x18\x01 \x03(\x0b25.google.cloud.language.v1beta2.ClassificationCategory"\x81\x04\n\x13AnnotateTextRequest\x12>\n\x08document\x18\x01 \x01(\x0b2\'.google.cloud.language.v1beta2.DocumentB\x03\xe0A\x02\x12R\n\x08features\x18\x02 \x01(\x0b2;.google.cloud.language.v1beta2.AnnotateTextRequest.FeaturesB\x03\xe0A\x02\x12B\n\rencoding_type\x18\x03 \x01(\x0e2+.google.cloud.language.v1beta2.EncodingType\x1a\x91\x02\n\x08Features\x12\x16\n\x0eextract_syntax\x18\x01 \x01(\x08\x12\x18\n\x10extract_entities\x18\x02 \x01(\x08\x12"\n\x1aextract_document_sentiment\x18\x03 \x01(\x08\x12 \n\x18extract_entity_sentiment\x18\x04 \x01(\x08\x12\x15\n\rclassify_text\x18\x06 \x01(\x08\x12\x15\n\rmoderate_text\x18\x0b \x01(\x08\x12_\n\x1cclassification_model_options\x18\n \x01(\x0b29.google.cloud.language.v1beta2.ClassificationModelOptions"\xba\x03\n\x14AnnotateTextResponse\x12:\n\tsentences\x18\x01 \x03(\x0b2\'.google.cloud.language.v1beta2.Sentence\x124\n\x06tokens\x18\x02 \x03(\x0b2$.google.cloud.language.v1beta2.Token\x127\n\x08entities\x18\x03 \x03(\x0b2%.google.cloud.language.v1beta2.Entity\x12D\n\x12document_sentiment\x18\x04 \x01(\x0b2(.google.cloud.language.v1beta2.Sentiment\x12\x10\n\x08language\x18\x05 \x01(\t\x12I\n\ncategories\x18\x06 \x03(\x0b25.google.cloud.language.v1beta2.ClassificationCategory\x12T\n\x15moderation_categories\x18\x08 \x03(\x0b25.google.cloud.language.v1beta2.ClassificationCategory*8\n\x0cEncodingType\x12\x08\n\x04NONE\x10\x00\x12\x08\n\x04UTF8\x10\x01\x12\t\n\x05UTF16\x10\x02\x12\t\n\x05UTF32\x10\x032\xbb\x0c\n\x0fLanguageService\x12\xd7\x01\n\x10AnalyzeSentiment\x126.google.cloud.language.v1beta2.AnalyzeSentimentRequest\x1a7.google.cloud.language.v1beta2.AnalyzeSentimentResponse"R\xdaA\x16document,encoding_type\xdaA\x08document\x82\xd3\xe4\x93\x02("#/v1beta2/documents:analyzeSentiment:\x01*\x12\xd3\x01\n\x0fAnalyzeEntities\x125.google.cloud.language.v1beta2.AnalyzeEntitiesRequest\x1a6.google.cloud.language.v1beta2.AnalyzeEntitiesResponse"Q\xdaA\x16document,encoding_type\xdaA\x08document\x82\xd3\xe4\x93\x02\'""/v1beta2/documents:analyzeEntities:\x01*\x12\xef\x01\n\x16AnalyzeEntitySentiment\x12<.google.cloud.language.v1beta2.AnalyzeEntitySentimentRequest\x1a=.google.cloud.language.v1beta2.AnalyzeEntitySentimentResponse"X\xdaA\x16document,encoding_type\xdaA\x08document\x82\xd3\xe4\x93\x02.")/v1beta2/documents:analyzeEntitySentiment:\x01*\x12\xcb\x01\n\rAnalyzeSyntax\x123.google.cloud.language.v1beta2.AnalyzeSyntaxRequest\x1a4.google.cloud.language.v1beta2.AnalyzeSyntaxResponse"O\xdaA\x16document,encoding_type\xdaA\x08document\x82\xd3\xe4\x93\x02%" /v1beta2/documents:analyzeSyntax:\x01*\x12\xae\x01\n\x0cClassifyText\x122.google.cloud.language.v1beta2.ClassifyTextRequest\x1a3.google.cloud.language.v1beta2.ClassifyTextResponse"5\xdaA\x08document\x82\xd3\xe4\x93\x02$"\x1f/v1beta2/documents:classifyText:\x01*\x12\xae\x01\n\x0cModerateText\x122.google.cloud.language.v1beta2.ModerateTextRequest\x1a3.google.cloud.language.v1beta2.ModerateTextResponse"5\xdaA\x08document\x82\xd3\xe4\x93\x02$"\x1f/v1beta2/documents:moderateText:\x01*\x12\xd9\x01\n\x0cAnnotateText\x122.google.cloud.language.v1beta2.AnnotateTextRequest\x1a3.google.cloud.language.v1beta2.AnnotateTextResponse"`\xdaA\x1fdocument,features,encoding_type\xdaA\x11document,features\x82\xd3\xe4\x93\x02$"\x1f/v1beta2/documents:annotateText:\x01*\x1az\xcaA\x17language.googleapis.com\xd2A]https://www.googleapis.com/auth/cloud-language,https://www.googleapis.com/auth/cloud-platformBz\n!com.google.cloud.language.v1beta2B\x14LanguageServiceProtoP\x01Z=cloud.google.com/go/language/apiv1beta2/languagepb;languagepbb\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.language.v1beta2.language_service_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n!com.google.cloud.language.v1beta2B\x14LanguageServiceProtoP\x01Z=cloud.google.com/go/language/apiv1beta2/languagepb;languagepb'
+    _globals['_ENTITY_METADATAENTRY']._loaded_options = None
+    _globals['_ENTITY_METADATAENTRY']._serialized_options = b'8\x01'
+    _globals['_ANALYZESENTIMENTREQUEST'].fields_by_name['document']._loaded_options = None
+    _globals['_ANALYZESENTIMENTREQUEST'].fields_by_name['document']._serialized_options = b'\xe0A\x02'
+    _globals['_ANALYZEENTITYSENTIMENTREQUEST'].fields_by_name['document']._loaded_options = None
+    _globals['_ANALYZEENTITYSENTIMENTREQUEST'].fields_by_name['document']._serialized_options = b'\xe0A\x02'
+    _globals['_ANALYZEENTITIESREQUEST'].fields_by_name['document']._loaded_options = None
+    _globals['_ANALYZEENTITIESREQUEST'].fields_by_name['document']._serialized_options = b'\xe0A\x02'
+    _globals['_ANALYZESYNTAXREQUEST'].fields_by_name['document']._loaded_options = None
+    _globals['_ANALYZESYNTAXREQUEST'].fields_by_name['document']._serialized_options = b'\xe0A\x02'
+    _globals['_CLASSIFYTEXTREQUEST'].fields_by_name['document']._loaded_options = None
+    _globals['_CLASSIFYTEXTREQUEST'].fields_by_name['document']._serialized_options = b'\xe0A\x02'
+    _globals['_MODERATETEXTREQUEST'].fields_by_name['document']._loaded_options = None
+    _globals['_MODERATETEXTREQUEST'].fields_by_name['document']._serialized_options = b'\xe0A\x02'
+    _globals['_ANNOTATETEXTREQUEST'].fields_by_name['document']._loaded_options = None
+    _globals['_ANNOTATETEXTREQUEST'].fields_by_name['document']._serialized_options = b'\xe0A\x02'
+    _globals['_ANNOTATETEXTREQUEST'].fields_by_name['features']._loaded_options = None
+    _globals['_ANNOTATETEXTREQUEST'].fields_by_name['features']._serialized_options = b'\xe0A\x02'
+    _globals['_LANGUAGESERVICE']._loaded_options = None
+    _globals['_LANGUAGESERVICE']._serialized_options = b'\xcaA\x17language.googleapis.com\xd2A]https://www.googleapis.com/auth/cloud-language,https://www.googleapis.com/auth/cloud-platform'
+    _globals['_LANGUAGESERVICE'].methods_by_name['AnalyzeSentiment']._loaded_options = None
+    _globals['_LANGUAGESERVICE'].methods_by_name['AnalyzeSentiment']._serialized_options = b'\xdaA\x16document,encoding_type\xdaA\x08document\x82\xd3\xe4\x93\x02("#/v1beta2/documents:analyzeSentiment:\x01*'
+    _globals['_LANGUAGESERVICE'].methods_by_name['AnalyzeEntities']._loaded_options = None
+    _globals['_LANGUAGESERVICE'].methods_by_name['AnalyzeEntities']._serialized_options = b'\xdaA\x16document,encoding_type\xdaA\x08document\x82\xd3\xe4\x93\x02\'""/v1beta2/documents:analyzeEntities:\x01*'
+    _globals['_LANGUAGESERVICE'].methods_by_name['AnalyzeEntitySentiment']._loaded_options = None
+    _globals['_LANGUAGESERVICE'].methods_by_name['AnalyzeEntitySentiment']._serialized_options = b'\xdaA\x16document,encoding_type\xdaA\x08document\x82\xd3\xe4\x93\x02.")/v1beta2/documents:analyzeEntitySentiment:\x01*'
+    _globals['_LANGUAGESERVICE'].methods_by_name['AnalyzeSyntax']._loaded_options = None
+    _globals['_LANGUAGESERVICE'].methods_by_name['AnalyzeSyntax']._serialized_options = b'\xdaA\x16document,encoding_type\xdaA\x08document\x82\xd3\xe4\x93\x02%" /v1beta2/documents:analyzeSyntax:\x01*'
+    _globals['_LANGUAGESERVICE'].methods_by_name['ClassifyText']._loaded_options = None
+    _globals['_LANGUAGESERVICE'].methods_by_name['ClassifyText']._serialized_options = b'\xdaA\x08document\x82\xd3\xe4\x93\x02$"\x1f/v1beta2/documents:classifyText:\x01*'
+    _globals['_LANGUAGESERVICE'].methods_by_name['ModerateText']._loaded_options = None
+    _globals['_LANGUAGESERVICE'].methods_by_name['ModerateText']._serialized_options = b'\xdaA\x08document\x82\xd3\xe4\x93\x02$"\x1f/v1beta2/documents:moderateText:\x01*'
+    _globals['_LANGUAGESERVICE'].methods_by_name['AnnotateText']._loaded_options = None
+    _globals['_LANGUAGESERVICE'].methods_by_name['AnnotateText']._serialized_options = b'\xdaA\x1fdocument,features,encoding_type\xdaA\x11document,features\x82\xd3\xe4\x93\x02$"\x1f/v1beta2/documents:annotateText:\x01*'
+    _globals['_ENCODINGTYPE']._serialized_start = 8178
+    _globals['_ENCODINGTYPE']._serialized_end = 8234
+    _globals['_DOCUMENT']._serialized_start = 176
+    _globals['_DOCUMENT']._serialized_end = 599
+    _globals['_DOCUMENT_TYPE']._serialized_start = 430
+    _globals['_DOCUMENT_TYPE']._serialized_end = 484
+    _globals['_DOCUMENT_BOILERPLATEHANDLING']._serialized_start = 486
+    _globals['_DOCUMENT_BOILERPLATEHANDLING']._serialized_end = 589
+    _globals['_SENTENCE']._serialized_start = 601
+    _globals['_SENTENCE']._serialized_end = 727
+    _globals['_ENTITY']._serialized_start = 730
+    _globals['_ENTITY']._serialized_end = 1261
+    _globals['_ENTITY_METADATAENTRY']._serialized_start = 1026
+    _globals['_ENTITY_METADATAENTRY']._serialized_end = 1073
+    _globals['_ENTITY_TYPE']._serialized_start = 1076
+    _globals['_ENTITY_TYPE']._serialized_end = 1261
+    _globals['_TOKEN']._serialized_start = 1264
+    _globals['_TOKEN']._serialized_end = 1482
+    _globals['_SENTIMENT']._serialized_start = 1484
+    _globals['_SENTIMENT']._serialized_end = 1529
+    _globals['_PARTOFSPEECH']._serialized_start = 1532
+    _globals['_PARTOFSPEECH']._serialized_end = 3675
+    _globals['_PARTOFSPEECH_TAG']._serialized_start = 2353
+    _globals['_PARTOFSPEECH_TAG']._serialized_end = 2494
+    _globals['_PARTOFSPEECH_ASPECT']._serialized_start = 2496
+    _globals['_PARTOFSPEECH_ASPECT']._serialized_end = 2575
+    _globals['_PARTOFSPEECH_CASE']._serialized_start = 2578
+    _globals['_PARTOFSPEECH_CASE']._serialized_end = 2826
+    _globals['_PARTOFSPEECH_FORM']._serialized_start = 2829
+    _globals['_PARTOFSPEECH_FORM']._serialized_end = 3004
+    _globals['_PARTOFSPEECH_GENDER']._serialized_start = 3006
+    _globals['_PARTOFSPEECH_GENDER']._serialized_end = 3075
+    _globals['_PARTOFSPEECH_MOOD']._serialized_start = 3077
+    _globals['_PARTOFSPEECH_MOOD']._serialized_end = 3204
+    _globals['_PARTOFSPEECH_NUMBER']._serialized_start = 3206
+    _globals['_PARTOFSPEECH_NUMBER']._serialized_end = 3270
+    _globals['_PARTOFSPEECH_PERSON']._serialized_start = 3272
+    _globals['_PARTOFSPEECH_PERSON']._serialized_end = 3356
+    _globals['_PARTOFSPEECH_PROPER']._serialized_start = 3358
+    _globals['_PARTOFSPEECH_PROPER']._serialized_end = 3414
+    _globals['_PARTOFSPEECH_RECIPROCITY']._serialized_start = 3416
+    _globals['_PARTOFSPEECH_RECIPROCITY']._serialized_end = 3490
+    _globals['_PARTOFSPEECH_TENSE']._serialized_start = 3492
+    _globals['_PARTOFSPEECH_TENSE']._serialized_end = 3607
+    _globals['_PARTOFSPEECH_VOICE']._serialized_start = 3609
+    _globals['_PARTOFSPEECH_VOICE']._serialized_end = 3675
+    _globals['_DEPENDENCYEDGE']._serialized_start = 3678
+    _globals['_DEPENDENCYEDGE']._serialized_end = 4728
+    _globals['_DEPENDENCYEDGE_LABEL']._serialized_start = 3791
+    _globals['_DEPENDENCYEDGE_LABEL']._serialized_end = 4728
+    _globals['_ENTITYMENTION']._serialized_start = 4731
+    _globals['_ENTITYMENTION']._serialized_end = 4977
+    _globals['_ENTITYMENTION_TYPE']._serialized_start = 4929
+    _globals['_ENTITYMENTION_TYPE']._serialized_end = 4977
+    _globals['_TEXTSPAN']._serialized_start = 4979
+    _globals['_TEXTSPAN']._serialized_end = 5028
+    _globals['_CLASSIFICATIONCATEGORY']._serialized_start = 5030
+    _globals['_CLASSIFICATIONCATEGORY']._serialized_end = 5088
+    _globals['_CLASSIFICATIONMODELOPTIONS']._serialized_start = 5091
+    _globals['_CLASSIFICATIONMODELOPTIONS']._serialized_end = 5546
+    _globals['_CLASSIFICATIONMODELOPTIONS_V1MODEL']._serialized_start = 5295
+    _globals['_CLASSIFICATIONMODELOPTIONS_V1MODEL']._serialized_end = 5304
+    _globals['_CLASSIFICATIONMODELOPTIONS_V2MODEL']._serialized_start = 5307
+    _globals['_CLASSIFICATIONMODELOPTIONS_V2MODEL']._serialized_end = 5532
+    _globals['_CLASSIFICATIONMODELOPTIONS_V2MODEL_CONTENTCATEGORIESVERSION']._serialized_start = 5446
+    _globals['_CLASSIFICATIONMODELOPTIONS_V2MODEL_CONTENTCATEGORIESVERSION']._serialized_end = 5532
+    _globals['_ANALYZESENTIMENTREQUEST']._serialized_start = 5549
+    _globals['_ANALYZESENTIMENTREQUEST']._serialized_end = 5706
+    _globals['_ANALYZESENTIMENTRESPONSE']._serialized_start = 5709
+    _globals['_ANALYZESENTIMENTRESPONSE']._serialized_end = 5883
+    _globals['_ANALYZEENTITYSENTIMENTREQUEST']._serialized_start = 5886
+    _globals['_ANALYZEENTITYSENTIMENTREQUEST']._serialized_end = 6049
+    _globals['_ANALYZEENTITYSENTIMENTRESPONSE']._serialized_start = 6051
+    _globals['_ANALYZEENTITYSENTIMENTRESPONSE']._serialized_end = 6158
+    _globals['_ANALYZEENTITIESREQUEST']._serialized_start = 6161
+    _globals['_ANALYZEENTITIESREQUEST']._serialized_end = 6317
+    _globals['_ANALYZEENTITIESRESPONSE']._serialized_start = 6319
+    _globals['_ANALYZEENTITIESRESPONSE']._serialized_end = 6419
+    _globals['_ANALYZESYNTAXREQUEST']._serialized_start = 6422
+    _globals['_ANALYZESYNTAXREQUEST']._serialized_end = 6576
+    _globals['_ANALYZESYNTAXRESPONSE']._serialized_start = 6579
+    _globals['_ANALYZESYNTAXRESPONSE']._serialized_end = 6734
+    _globals['_CLASSIFYTEXTREQUEST']._serialized_start = 6737
+    _globals['_CLASSIFYTEXTREQUEST']._serialized_end = 6919
+    _globals['_CLASSIFYTEXTRESPONSE']._serialized_start = 6921
+    _globals['_CLASSIFYTEXTRESPONSE']._serialized_end = 7018
+    _globals['_MODERATETEXTREQUEST']._serialized_start = 7020
+    _globals['_MODERATETEXTREQUEST']._serialized_end = 7105
+    _globals['_MODERATETEXTRESPONSE']._serialized_start = 7107
+    _globals['_MODERATETEXTRESPONSE']._serialized_end = 7215
+    _globals['_ANNOTATETEXTREQUEST']._serialized_start = 7218
+    _globals['_ANNOTATETEXTREQUEST']._serialized_end = 7731
+    _globals['_ANNOTATETEXTREQUEST_FEATURES']._serialized_start = 7458
+    _globals['_ANNOTATETEXTREQUEST_FEATURES']._serialized_end = 7731
+    _globals['_ANNOTATETEXTRESPONSE']._serialized_start = 7734
+    _globals['_ANNOTATETEXTRESPONSE']._serialized_end = 8176
+    _globals['_LANGUAGESERVICE']._serialized_start = 8237
+    _globals['_LANGUAGESERVICE']._serialized_end = 9832

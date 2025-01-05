@@ -1,0 +1,19 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/ads/googleads/v17/errors/offline_user_data_job_error.proto')
+_sym_db = _symbol_database.Default()
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nAgoogle/ads/googleads/v17/errors/offline_user_data_job_error.proto\x12\x1fgoogle.ads.googleads.v17.errors"\xf4\n\n\x1bOfflineUserDataJobErrorEnum"\xd4\n\n\x17OfflineUserDataJobError\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\x0b\n\x07UNKNOWN\x10\x01\x12\x18\n\x14INVALID_USER_LIST_ID\x10\x03\x12\x1a\n\x16INVALID_USER_LIST_TYPE\x10\x04\x12 \n\x1cNOT_ON_ALLOWLIST_FOR_USER_ID\x10!\x12 \n\x1cINCOMPATIBLE_UPLOAD_KEY_TYPE\x10\x06\x12\x1b\n\x17MISSING_USER_IDENTIFIER\x10\x07\x12\x1c\n\x18INVALID_MOBILE_ID_FORMAT\x10\x08\x12\x1d\n\x19TOO_MANY_USER_IDENTIFIERS\x10\t\x12+\n\'NOT_ON_ALLOWLIST_FOR_STORE_SALES_DIRECT\x10\x1f\x12,\n(NOT_ON_ALLOWLIST_FOR_UNIFIED_STORE_SALES\x10 \x12\x16\n\x12INVALID_PARTNER_ID\x10\x0b\x12\x14\n\x10INVALID_ENCODING\x10\x0c\x12\x18\n\x14INVALID_COUNTRY_CODE\x10\r\x12 \n\x1cINCOMPATIBLE_USER_IDENTIFIER\x10\x0e\x12\x1b\n\x17FUTURE_TRANSACTION_TIME\x10\x0f\x12\x1d\n\x19INVALID_CONVERSION_ACTION\x10\x10\x12\x1b\n\x17MOBILE_ID_NOT_SUPPORTED\x10\x11\x12\x1b\n\x17INVALID_OPERATION_ORDER\x10\x12\x12\x19\n\x15CONFLICTING_OPERATION\x10\x13\x12%\n!EXTERNAL_UPDATE_ID_ALREADY_EXISTS\x10\x15\x12\x17\n\x13JOB_ALREADY_STARTED\x10\x16\x12\x18\n\x14REMOVE_NOT_SUPPORTED\x10\x17\x12\x1c\n\x18REMOVE_ALL_NOT_SUPPORTED\x10\x18\x12\x19\n\x15INVALID_SHA256_FORMAT\x10\x19\x12\x17\n\x13CUSTOM_KEY_DISABLED\x10\x1a\x12\x1d\n\x19CUSTOM_KEY_NOT_PREDEFINED\x10\x1b\x12\x16\n\x12CUSTOM_KEY_NOT_SET\x10\x1d\x12-\n)CUSTOMER_NOT_ACCEPTED_CUSTOMER_DATA_TERMS\x10\x1e\x12:\n6ATTRIBUTES_NOT_APPLICABLE_FOR_CUSTOMER_MATCH_USER_LIST\x10"\x12&\n"LIFETIME_VALUE_BUCKET_NOT_IN_RANGE\x10#\x12/\n+INCOMPATIBLE_USER_IDENTIFIER_FOR_ATTRIBUTES\x10$\x12\x1b\n\x17FUTURE_TIME_NOT_ALLOWED\x10%\x121\n-LAST_PURCHASE_TIME_LESS_THAN_ACQUISITION_TIME\x10&\x12#\n\x1fCUSTOMER_IDENTIFIER_NOT_ALLOWED\x10\'\x12\x13\n\x0fINVALID_ITEM_ID\x10(\x127\n3FIRST_PURCHASE_TIME_GREATER_THAN_LAST_PURCHASE_TIME\x10*\x12\x1b\n\x17INVALID_LIFECYCLE_STAGE\x10+\x12\x17\n\x13INVALID_EVENT_VALUE\x10,\x12+\n\'EVENT_ATTRIBUTE_ALL_FIELDS_ARE_REQUIRED\x10-\x12$\n OPERATION_LEVEL_CONSENT_PROVIDED\x100B\xfc\x01\n#com.google.ads.googleads.v17.errorsB\x1cOfflineUserDataJobErrorProtoP\x01ZEgoogle.golang.org/genproto/googleapis/ads/googleads/v17/errors;errors\xa2\x02\x03GAA\xaa\x02\x1fGoogle.Ads.GoogleAds.V17.Errors\xca\x02\x1fGoogle\\Ads\\GoogleAds\\V17\\Errors\xea\x02#Google::Ads::GoogleAds::V17::Errorsb\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.ads.googleads.v17.errors.offline_user_data_job_error_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n#com.google.ads.googleads.v17.errorsB\x1cOfflineUserDataJobErrorProtoP\x01ZEgoogle.golang.org/genproto/googleapis/ads/googleads/v17/errors;errors\xa2\x02\x03GAA\xaa\x02\x1fGoogle.Ads.GoogleAds.V17.Errors\xca\x02\x1fGoogle\\Ads\\GoogleAds\\V17\\Errors\xea\x02#Google::Ads::GoogleAds::V17::Errors'
+    _globals['_OFFLINEUSERDATAJOBERRORENUM']._serialized_start = 103
+    _globals['_OFFLINEUSERDATAJOBERRORENUM']._serialized_end = 1499
+    _globals['_OFFLINEUSERDATAJOBERRORENUM_OFFLINEUSERDATAJOBERROR']._serialized_start = 135
+    _globals['_OFFLINEUSERDATAJOBERRORENUM_OFFLINEUSERDATAJOBERROR']._serialized_end = 1499

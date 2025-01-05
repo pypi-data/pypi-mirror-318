@@ -1,0 +1,36 @@
+from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import message as _message
+from typing import ClassVar as _ClassVar
+DESCRIPTOR: _descriptor.FileDescriptor
+
+class LocalServicesBusinessRegistrationCheckRejectionReasonEnum(_message.Message):
+    __slots__ = ()
+
+    class LocalServicesBusinessRegistrationCheckRejectionReason(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+        __slots__ = ()
+        UNSPECIFIED: _ClassVar[LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason]
+        UNKNOWN: _ClassVar[LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason]
+        BUSINESS_NAME_MISMATCH: _ClassVar[LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason]
+        BUSINESS_DETAILS_MISMATCH: _ClassVar[LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason]
+        ID_NOT_FOUND: _ClassVar[LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason]
+        POOR_DOCUMENT_IMAGE_QUALITY: _ClassVar[LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason]
+        DOCUMENT_EXPIRED: _ClassVar[LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason]
+        DOCUMENT_INVALID: _ClassVar[LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason]
+        DOCUMENT_TYPE_MISMATCH: _ClassVar[LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason]
+        DOCUMENT_UNVERIFIABLE: _ClassVar[LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason]
+        OTHER: _ClassVar[LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason]
+    UNSPECIFIED: LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason
+    UNKNOWN: LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason
+    BUSINESS_NAME_MISMATCH: LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason
+    BUSINESS_DETAILS_MISMATCH: LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason
+    ID_NOT_FOUND: LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason
+    POOR_DOCUMENT_IMAGE_QUALITY: LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason
+    DOCUMENT_EXPIRED: LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason
+    DOCUMENT_INVALID: LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason
+    DOCUMENT_TYPE_MISMATCH: LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason
+    DOCUMENT_UNVERIFIABLE: LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason
+    OTHER: LocalServicesBusinessRegistrationCheckRejectionReasonEnum.LocalServicesBusinessRegistrationCheckRejectionReason
+
+    def __init__(self) -> None:
+        ...

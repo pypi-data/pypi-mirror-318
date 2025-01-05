@@ -1,0 +1,122 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/apps/card/v1/card.proto')
+_sym_db = _symbol_database.Default()
+from .....google.type import color_pb2 as google_dot_type_dot_color__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1egoogle/apps/card/v1/card.proto\x12\x13google.apps.card.v1\x1a\x17google/type/color.proto"\xc7\x08\n\x04Card\x124\n\x06header\x18\x01 \x01(\x0b2$.google.apps.card.v1.Card.CardHeader\x123\n\x08sections\x18\x02 \x03(\x0b2!.google.apps.card.v1.Card.Section\x12E\n\x15section_divider_style\x18\t \x01(\x0e2&.google.apps.card.v1.Card.DividerStyle\x12:\n\x0ccard_actions\x18\x03 \x03(\x0b2$.google.apps.card.v1.Card.CardAction\x12\x0c\n\x04name\x18\x04 \x01(\t\x12?\n\x0cfixed_footer\x18\x05 \x01(\x0b2).google.apps.card.v1.Card.CardFixedFooter\x12=\n\rdisplay_style\x18\x06 \x01(\x0e2&.google.apps.card.v1.Card.DisplayStyle\x12>\n\x10peek_card_header\x18\x07 \x01(\x0b2$.google.apps.card.v1.Card.CardHeader\x1a\x93\x01\n\nCardHeader\x12\r\n\x05title\x18\x01 \x01(\t\x12\x10\n\x08subtitle\x18\x02 \x01(\t\x129\n\nimage_type\x18\x03 \x01(\x0e2%.google.apps.card.v1.Widget.ImageType\x12\x11\n\timage_url\x18\x04 \x01(\t\x12\x16\n\x0eimage_alt_text\x18\x05 \x01(\t\x1a\x81\x01\n\x07Section\x12\x0e\n\x06header\x18\x01 \x01(\t\x12,\n\x07widgets\x18\x02 \x03(\x0b2\x1b.google.apps.card.v1.Widget\x12\x13\n\x0bcollapsible\x18\x05 \x01(\x08\x12#\n\x1buncollapsible_widgets_count\x18\x06 \x01(\x05\x1aR\n\nCardAction\x12\x14\n\x0caction_label\x18\x01 \x01(\t\x12.\n\x08on_click\x18\x02 \x01(\x0b2\x1c.google.apps.card.v1.OnClick\x1a}\n\x0fCardFixedFooter\x123\n\x0eprimary_button\x18\x01 \x01(\x0b2\x1b.google.apps.card.v1.Button\x125\n\x10secondary_button\x18\x02 \x01(\x0b2\x1b.google.apps.card.v1.Button"P\n\x0cDividerStyle\x12\x1d\n\x19DIVIDER_STYLE_UNSPECIFIED\x10\x00\x12\x11\n\rSOLID_DIVIDER\x10\x01\x12\x0e\n\nNO_DIVIDER\x10\x02"D\n\x0cDisplayStyle\x12\x1d\n\x19DISPLAY_STYLE_UNSPECIFIED\x10\x00\x12\x08\n\x04PEEK\x10\x01\x12\x0b\n\x07REPLACE\x10\x02"\x86\x06\n\x06Widget\x12<\n\x0etext_paragraph\x18\x01 \x01(\x0b2".google.apps.card.v1.TextParagraphH\x00\x12+\n\x05image\x18\x02 \x01(\x0b2\x1a.google.apps.card.v1.ImageH\x00\x12<\n\x0edecorated_text\x18\x03 \x01(\x0b2".google.apps.card.v1.DecoratedTextH\x00\x126\n\x0bbutton_list\x18\x04 \x01(\x0b2\x1f.google.apps.card.v1.ButtonListH\x00\x124\n\ntext_input\x18\x05 \x01(\x0b2\x1e.google.apps.card.v1.TextInputH\x00\x12>\n\x0fselection_input\x18\x06 \x01(\x0b2#.google.apps.card.v1.SelectionInputH\x00\x12?\n\x10date_time_picker\x18\x07 \x01(\x0b2#.google.apps.card.v1.DateTimePickerH\x00\x12/\n\x07divider\x18\t \x01(\x0b2\x1c.google.apps.card.v1.DividerH\x00\x12)\n\x04grid\x18\n \x01(\x0b2\x19.google.apps.card.v1.GridH\x00\x12/\n\x07columns\x18\x0b \x01(\x0b2\x1c.google.apps.card.v1.ColumnsH\x00\x12M\n\x14horizontal_alignment\x18\x08 \x01(\x0e2/.google.apps.card.v1.Widget.HorizontalAlignment"#\n\tImageType\x12\n\n\x06SQUARE\x10\x00\x12\n\n\x06CIRCLE\x10\x01"[\n\x13HorizontalAlignment\x12$\n HORIZONTAL_ALIGNMENT_UNSPECIFIED\x10\x00\x12\t\n\x05START\x10\x01\x12\n\n\x06CENTER\x10\x02\x12\x07\n\x03END\x10\x03B\x06\n\x04data"\x1d\n\rTextParagraph\x12\x0c\n\x04text\x18\x01 \x01(\t"\\\n\x05Image\x12\x11\n\timage_url\x18\x01 \x01(\t\x12.\n\x08on_click\x18\x02 \x01(\x0b2\x1c.google.apps.card.v1.OnClick\x12\x10\n\x08alt_text\x18\x03 \x01(\t"\t\n\x07Divider"\x9e\x05\n\rDecoratedText\x12+\n\x04icon\x18\x01 \x01(\x0b2\x19.google.apps.card.v1.IconB\x02\x18\x01\x12-\n\nstart_icon\x18\x0c \x01(\x0b2\x19.google.apps.card.v1.Icon\x12\x11\n\ttop_label\x18\x03 \x01(\t\x12\x0c\n\x04text\x18\x04 \x01(\t\x12\x11\n\twrap_text\x18\x05 \x01(\x08\x12\x14\n\x0cbottom_label\x18\x06 \x01(\t\x12.\n\x08on_click\x18\x07 \x01(\x0b2\x1c.google.apps.card.v1.OnClick\x12-\n\x06button\x18\x08 \x01(\x0b2\x1b.google.apps.card.v1.ButtonH\x00\x12J\n\x0eswitch_control\x18\t \x01(\x0b20.google.apps.card.v1.DecoratedText.SwitchControlH\x00\x12-\n\x08end_icon\x18\x0b \x01(\x0b2\x19.google.apps.card.v1.IconH\x00\x1a\x81\x02\n\rSwitchControl\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x12\x10\n\x08selected\x18\x03 \x01(\x08\x125\n\x10on_change_action\x18\x04 \x01(\x0b2\x1b.google.apps.card.v1.Action\x12R\n\x0ccontrol_type\x18\x05 \x01(\x0e2<.google.apps.card.v1.DecoratedText.SwitchControl.ControlType"6\n\x0bControlType\x12\n\n\x06SWITCH\x10\x00\x12\x0c\n\x08CHECKBOX\x10\x01\x12\r\n\tCHECK_BOX\x10\x02B\t\n\x07control"\xf4\x02\n\tTextInput\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05label\x18\x02 \x01(\t\x12\x11\n\thint_text\x18\x03 \x01(\t\x12\r\n\x05value\x18\x04 \x01(\t\x121\n\x04type\x18\x05 \x01(\x0e2#.google.apps.card.v1.TextInput.Type\x125\n\x10on_change_action\x18\x06 \x01(\x0b2\x1b.google.apps.card.v1.Action\x12=\n\x13initial_suggestions\x18\x07 \x01(\x0b2 .google.apps.card.v1.Suggestions\x129\n\x14auto_complete_action\x18\x08 \x01(\x0b2\x1b.google.apps.card.v1.Action\x12\x18\n\x10placeholder_text\x18\x0c \x01(\t"*\n\x04Type\x12\x0f\n\x0bSINGLE_LINE\x10\x00\x12\x11\n\rMULTIPLE_LINE\x10\x01"z\n\x0bSuggestions\x12>\n\x05items\x18\x01 \x03(\x0b2/.google.apps.card.v1.Suggestions.SuggestionItem\x1a+\n\x0eSuggestionItem\x12\x0e\n\x04text\x18\x01 \x01(\tH\x00B\t\n\x07content":\n\nButtonList\x12,\n\x07buttons\x18\x01 \x03(\x0b2\x1b.google.apps.card.v1.Button"\xeb\x06\n\x0eSelectionInput\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05label\x18\x02 \x01(\t\x12?\n\x04type\x18\x03 \x01(\x0e21.google.apps.card.v1.SelectionInput.SelectionType\x12@\n\x05items\x18\x04 \x03(\x0b21.google.apps.card.v1.SelectionInput.SelectionItem\x125\n\x10on_change_action\x18\x05 \x01(\x0b2\x1b.google.apps.card.v1.Action\x12\'\n\x1fmulti_select_max_selected_items\x18\x06 \x01(\x05\x12%\n\x1dmulti_select_min_query_length\x18\x07 \x01(\x05\x12;\n\x14external_data_source\x18\x08 \x01(\x0b2\x1b.google.apps.card.v1.ActionH\x00\x12V\n\x14platform_data_source\x18\t \x01(\x0b26.google.apps.card.v1.SelectionInput.PlatformDataSourceH\x00\x1ak\n\rSelectionItem\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x12\x10\n\x08selected\x18\x03 \x01(\x08\x12\x16\n\x0estart_icon_uri\x18\x04 \x01(\t\x12\x13\n\x0bbottom_text\x18\x05 \x01(\t\x1a\xb5\x01\n\x12PlatformDataSource\x12e\n\x12common_data_source\x18\x01 \x01(\x0e2G.google.apps.card.v1.SelectionInput.PlatformDataSource.CommonDataSourceH\x00")\n\x10CommonDataSource\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x08\n\x04USER\x10\x01B\r\n\x0bdata_source"\\\n\rSelectionType\x12\r\n\tCHECK_BOX\x10\x00\x12\x10\n\x0cRADIO_BUTTON\x10\x01\x12\n\n\x06SWITCH\x10\x02\x12\x0c\n\x08DROPDOWN\x10\x03\x12\x10\n\x0cMULTI_SELECT\x10\x04B\x1a\n\x18multi_select_data_source"\xa7\x02\n\x0eDateTimePicker\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05label\x18\x02 \x01(\t\x12D\n\x04type\x18\x03 \x01(\x0e26.google.apps.card.v1.DateTimePicker.DateTimePickerType\x12\x16\n\x0evalue_ms_epoch\x18\x04 \x01(\x03\x12\x1c\n\x14timezone_offset_date\x18\x05 \x01(\x05\x125\n\x10on_change_action\x18\x06 \x01(\x0b2\x1b.google.apps.card.v1.Action"E\n\x12DateTimePickerType\x12\x11\n\rDATE_AND_TIME\x10\x00\x12\r\n\tDATE_ONLY\x10\x01\x12\r\n\tTIME_ONLY\x10\x02"\xb6\x01\n\x06Button\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\'\n\x04icon\x18\x02 \x01(\x0b2\x19.google.apps.card.v1.Icon\x12!\n\x05color\x18\x03 \x01(\x0b2\x12.google.type.Color\x12.\n\x08on_click\x18\x04 \x01(\x0b2\x1c.google.apps.card.v1.OnClick\x12\x10\n\x08disabled\x18\x05 \x01(\x08\x12\x10\n\x08alt_text\x18\x06 \x01(\t"\xc2\x01\n\x04Icon\x12\x14\n\nknown_icon\x18\x01 \x01(\tH\x00\x12\x12\n\x08icon_url\x18\x02 \x01(\tH\x00\x12:\n\rmaterial_icon\x18\x05 \x01(\x0b2!.google.apps.card.v1.MaterialIconH\x00\x12\x10\n\x08alt_text\x18\x03 \x01(\t\x129\n\nimage_type\x18\x04 \x01(\x0e2%.google.apps.card.v1.Widget.ImageTypeB\x07\n\x05icons"I\n\x0cMaterialIcon\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04fill\x18\x02 \x01(\x08\x12\x0e\n\x06weight\x18\x03 \x01(\x05\x12\r\n\x05grade\x18\x04 \x01(\x05"\xda\x01\n\x0eImageCropStyle\x12?\n\x04type\x18\x01 \x01(\x0e21.google.apps.card.v1.ImageCropStyle.ImageCropType\x12\x14\n\x0caspect_ratio\x18\x02 \x01(\x01"q\n\rImageCropType\x12\x1f\n\x1bIMAGE_CROP_TYPE_UNSPECIFIED\x10\x00\x12\n\n\x06SQUARE\x10\x01\x12\n\n\x06CIRCLE\x10\x02\x12\x14\n\x10RECTANGLE_CUSTOM\x10\x03\x12\x11\n\rRECTANGLE_4_3\x10\x04"\xcf\x01\n\x0bBorderStyle\x129\n\x04type\x18\x01 \x01(\x0e2+.google.apps.card.v1.BorderStyle.BorderType\x12(\n\x0cstroke_color\x18\x02 \x01(\x0b2\x12.google.type.Color\x12\x15\n\rcorner_radius\x18\x03 \x01(\x05"D\n\nBorderType\x12\x1b\n\x17BORDER_TYPE_UNSPECIFIED\x10\x00\x12\r\n\tNO_BORDER\x10\x01\x12\n\n\x06STROKE\x10\x02"\xa6\x01\n\x0eImageComponent\x12\x11\n\timage_uri\x18\x01 \x01(\t\x12\x10\n\x08alt_text\x18\x02 \x01(\t\x127\n\ncrop_style\x18\x03 \x01(\x0b2#.google.apps.card.v1.ImageCropStyle\x126\n\x0cborder_style\x18\x04 \x01(\x0b2 .google.apps.card.v1.BorderStyle"\xcb\x03\n\x04Grid\x12\r\n\x05title\x18\x01 \x01(\t\x121\n\x05items\x18\x02 \x03(\x0b2".google.apps.card.v1.Grid.GridItem\x126\n\x0cborder_style\x18\x03 \x01(\x0b2 .google.apps.card.v1.BorderStyle\x12\x14\n\x0ccolumn_count\x18\x04 \x01(\x05\x12.\n\x08on_click\x18\x05 \x01(\x0b2\x1c.google.apps.card.v1.OnClick\x1a\x82\x02\n\x08GridItem\x12\n\n\x02id\x18\x01 \x01(\t\x122\n\x05image\x18\x02 \x01(\x0b2#.google.apps.card.v1.ImageComponent\x12\r\n\x05title\x18\x03 \x01(\t\x12\x10\n\x08subtitle\x18\x04 \x01(\t\x12A\n\x06layout\x18\t \x01(\x0e21.google.apps.card.v1.Grid.GridItem.GridItemLayout"R\n\x0eGridItemLayout\x12 \n\x1cGRID_ITEM_LAYOUT_UNSPECIFIED\x10\x00\x12\x0e\n\nTEXT_BELOW\x10\x01\x12\x0e\n\nTEXT_ABOVE\x10\x02"\xfd\x07\n\x07Columns\x129\n\x0ccolumn_items\x18\x02 \x03(\x0b2#.google.apps.card.v1.Columns.Column\x1a\xb6\x07\n\x06Column\x12V\n\x15horizontal_size_style\x18\x01 \x01(\x0e27.google.apps.card.v1.Columns.Column.HorizontalSizeStyle\x12M\n\x14horizontal_alignment\x18\x02 \x01(\x0e2/.google.apps.card.v1.Widget.HorizontalAlignment\x12Q\n\x12vertical_alignment\x18\x03 \x01(\x0e25.google.apps.card.v1.Columns.Column.VerticalAlignment\x12<\n\x07widgets\x18\x04 \x03(\x0b2+.google.apps.card.v1.Columns.Column.Widgets\x1a\xa9\x03\n\x07Widgets\x12<\n\x0etext_paragraph\x18\x01 \x01(\x0b2".google.apps.card.v1.TextParagraphH\x00\x12+\n\x05image\x18\x02 \x01(\x0b2\x1a.google.apps.card.v1.ImageH\x00\x12<\n\x0edecorated_text\x18\x03 \x01(\x0b2".google.apps.card.v1.DecoratedTextH\x00\x126\n\x0bbutton_list\x18\x04 \x01(\x0b2\x1f.google.apps.card.v1.ButtonListH\x00\x124\n\ntext_input\x18\x05 \x01(\x0b2\x1e.google.apps.card.v1.TextInputH\x00\x12>\n\x0fselection_input\x18\x06 \x01(\x0b2#.google.apps.card.v1.SelectionInputH\x00\x12?\n\x10date_time_picker\x18\x07 \x01(\x0b2#.google.apps.card.v1.DateTimePickerH\x00B\x06\n\x04data"n\n\x13HorizontalSizeStyle\x12%\n!HORIZONTAL_SIZE_STYLE_UNSPECIFIED\x10\x00\x12\x18\n\x14FILL_AVAILABLE_SPACE\x10\x01\x12\x16\n\x12FILL_MINIMUM_SPACE\x10\x02"X\n\x11VerticalAlignment\x12"\n\x1eVERTICAL_ALIGNMENT_UNSPECIFIED\x10\x00\x12\n\n\x06CENTER\x10\x01\x12\x07\n\x03TOP\x10\x02\x12\n\n\x06BOTTOM\x10\x03"\xe0\x01\n\x07OnClick\x12-\n\x06action\x18\x01 \x01(\x0b2\x1b.google.apps.card.v1.ActionH\x00\x122\n\topen_link\x18\x02 \x01(\x0b2\x1d.google.apps.card.v1.OpenLinkH\x00\x12?\n\x18open_dynamic_link_action\x18\x03 \x01(\x0b2\x1b.google.apps.card.v1.ActionH\x00\x12)\n\x04card\x18\x04 \x01(\x0b2\x19.google.apps.card.v1.CardH\x00B\x06\n\x04data"\xd1\x01\n\x08OpenLink\x12\x0b\n\x03url\x18\x01 \x01(\t\x125\n\x07open_as\x18\x02 \x01(\x0e2$.google.apps.card.v1.OpenLink.OpenAs\x127\n\x08on_close\x18\x03 \x01(\x0e2%.google.apps.card.v1.OpenLink.OnClose"$\n\x06OpenAs\x12\r\n\tFULL_SIZE\x10\x00\x12\x0b\n\x07OVERLAY\x10\x01""\n\x07OnClose\x12\x0b\n\x07NOTHING\x10\x00\x12\n\n\x06RELOAD\x10\x01"\x88\x03\n\x06Action\x12\x10\n\x08function\x18\x01 \x01(\t\x12?\n\nparameters\x18\x02 \x03(\x0b2+.google.apps.card.v1.Action.ActionParameter\x12A\n\x0eload_indicator\x18\x03 \x01(\x0e2).google.apps.card.v1.Action.LoadIndicator\x12\x16\n\x0epersist_values\x18\x04 \x01(\x08\x12<\n\x0binteraction\x18\x05 \x01(\x0e2\'.google.apps.card.v1.Action.Interaction\x1a-\n\x0fActionParameter\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t"&\n\rLoadIndicator\x12\x0b\n\x07SPINNER\x10\x00\x12\x08\n\x04NONE\x10\x01";\n\x0bInteraction\x12\x1b\n\x17INTERACTION_UNSPECIFIED\x10\x00\x12\x0f\n\x0bOPEN_DIALOG\x10\x01B\xa4\x01\n\x17com.google.apps.card.v1B\tCardProtoP\x01Z7google.golang.org/genproto/googleapis/apps/card/v1;card\xaa\x02\x13Google.Apps.Card.V1\xca\x02\x13Google\\Apps\\Card\\V1\xea\x02\x16Google::Apps::Card::V1b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.apps.card.v1.card_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n\x17com.google.apps.card.v1B\tCardProtoP\x01Z7google.golang.org/genproto/googleapis/apps/card/v1;card\xaa\x02\x13Google.Apps.Card.V1\xca\x02\x13Google\\Apps\\Card\\V1\xea\x02\x16Google::Apps::Card::V1'
+    _globals['_DECORATEDTEXT'].fields_by_name['icon']._loaded_options = None
+    _globals['_DECORATEDTEXT'].fields_by_name['icon']._serialized_options = b'\x18\x01'
+    _globals['_CARD']._serialized_start = 81
+    _globals['_CARD']._serialized_end = 1176
+    _globals['_CARD_CARDHEADER']._serialized_start = 534
+    _globals['_CARD_CARDHEADER']._serialized_end = 681
+    _globals['_CARD_SECTION']._serialized_start = 684
+    _globals['_CARD_SECTION']._serialized_end = 813
+    _globals['_CARD_CARDACTION']._serialized_start = 815
+    _globals['_CARD_CARDACTION']._serialized_end = 897
+    _globals['_CARD_CARDFIXEDFOOTER']._serialized_start = 899
+    _globals['_CARD_CARDFIXEDFOOTER']._serialized_end = 1024
+    _globals['_CARD_DIVIDERSTYLE']._serialized_start = 1026
+    _globals['_CARD_DIVIDERSTYLE']._serialized_end = 1106
+    _globals['_CARD_DISPLAYSTYLE']._serialized_start = 1108
+    _globals['_CARD_DISPLAYSTYLE']._serialized_end = 1176
+    _globals['_WIDGET']._serialized_start = 1179
+    _globals['_WIDGET']._serialized_end = 1953
+    _globals['_WIDGET_IMAGETYPE']._serialized_start = 1817
+    _globals['_WIDGET_IMAGETYPE']._serialized_end = 1852
+    _globals['_WIDGET_HORIZONTALALIGNMENT']._serialized_start = 1854
+    _globals['_WIDGET_HORIZONTALALIGNMENT']._serialized_end = 1945
+    _globals['_TEXTPARAGRAPH']._serialized_start = 1955
+    _globals['_TEXTPARAGRAPH']._serialized_end = 1984
+    _globals['_IMAGE']._serialized_start = 1986
+    _globals['_IMAGE']._serialized_end = 2078
+    _globals['_DIVIDER']._serialized_start = 2080
+    _globals['_DIVIDER']._serialized_end = 2089
+    _globals['_DECORATEDTEXT']._serialized_start = 2092
+    _globals['_DECORATEDTEXT']._serialized_end = 2762
+    _globals['_DECORATEDTEXT_SWITCHCONTROL']._serialized_start = 2494
+    _globals['_DECORATEDTEXT_SWITCHCONTROL']._serialized_end = 2751
+    _globals['_DECORATEDTEXT_SWITCHCONTROL_CONTROLTYPE']._serialized_start = 2697
+    _globals['_DECORATEDTEXT_SWITCHCONTROL_CONTROLTYPE']._serialized_end = 2751
+    _globals['_TEXTINPUT']._serialized_start = 2765
+    _globals['_TEXTINPUT']._serialized_end = 3137
+    _globals['_TEXTINPUT_TYPE']._serialized_start = 3095
+    _globals['_TEXTINPUT_TYPE']._serialized_end = 3137
+    _globals['_SUGGESTIONS']._serialized_start = 3139
+    _globals['_SUGGESTIONS']._serialized_end = 3261
+    _globals['_SUGGESTIONS_SUGGESTIONITEM']._serialized_start = 3218
+    _globals['_SUGGESTIONS_SUGGESTIONITEM']._serialized_end = 3261
+    _globals['_BUTTONLIST']._serialized_start = 3263
+    _globals['_BUTTONLIST']._serialized_end = 3321
+    _globals['_SELECTIONINPUT']._serialized_start = 3324
+    _globals['_SELECTIONINPUT']._serialized_end = 4199
+    _globals['_SELECTIONINPUT_SELECTIONITEM']._serialized_start = 3786
+    _globals['_SELECTIONINPUT_SELECTIONITEM']._serialized_end = 3893
+    _globals['_SELECTIONINPUT_PLATFORMDATASOURCE']._serialized_start = 3896
+    _globals['_SELECTIONINPUT_PLATFORMDATASOURCE']._serialized_end = 4077
+    _globals['_SELECTIONINPUT_PLATFORMDATASOURCE_COMMONDATASOURCE']._serialized_start = 4021
+    _globals['_SELECTIONINPUT_PLATFORMDATASOURCE_COMMONDATASOURCE']._serialized_end = 4062
+    _globals['_SELECTIONINPUT_SELECTIONTYPE']._serialized_start = 4079
+    _globals['_SELECTIONINPUT_SELECTIONTYPE']._serialized_end = 4171
+    _globals['_DATETIMEPICKER']._serialized_start = 4202
+    _globals['_DATETIMEPICKER']._serialized_end = 4497
+    _globals['_DATETIMEPICKER_DATETIMEPICKERTYPE']._serialized_start = 4428
+    _globals['_DATETIMEPICKER_DATETIMEPICKERTYPE']._serialized_end = 4497
+    _globals['_BUTTON']._serialized_start = 4500
+    _globals['_BUTTON']._serialized_end = 4682
+    _globals['_ICON']._serialized_start = 4685
+    _globals['_ICON']._serialized_end = 4879
+    _globals['_MATERIALICON']._serialized_start = 4881
+    _globals['_MATERIALICON']._serialized_end = 4954
+    _globals['_IMAGECROPSTYLE']._serialized_start = 4957
+    _globals['_IMAGECROPSTYLE']._serialized_end = 5175
+    _globals['_IMAGECROPSTYLE_IMAGECROPTYPE']._serialized_start = 5062
+    _globals['_IMAGECROPSTYLE_IMAGECROPTYPE']._serialized_end = 5175
+    _globals['_BORDERSTYLE']._serialized_start = 5178
+    _globals['_BORDERSTYLE']._serialized_end = 5385
+    _globals['_BORDERSTYLE_BORDERTYPE']._serialized_start = 5317
+    _globals['_BORDERSTYLE_BORDERTYPE']._serialized_end = 5385
+    _globals['_IMAGECOMPONENT']._serialized_start = 5388
+    _globals['_IMAGECOMPONENT']._serialized_end = 5554
+    _globals['_GRID']._serialized_start = 5557
+    _globals['_GRID']._serialized_end = 6016
+    _globals['_GRID_GRIDITEM']._serialized_start = 5758
+    _globals['_GRID_GRIDITEM']._serialized_end = 6016
+    _globals['_GRID_GRIDITEM_GRIDITEMLAYOUT']._serialized_start = 5934
+    _globals['_GRID_GRIDITEM_GRIDITEMLAYOUT']._serialized_end = 6016
+    _globals['_COLUMNS']._serialized_start = 6019
+    _globals['_COLUMNS']._serialized_end = 7040
+    _globals['_COLUMNS_COLUMN']._serialized_start = 6090
+    _globals['_COLUMNS_COLUMN']._serialized_end = 7040
+    _globals['_COLUMNS_COLUMN_WIDGETS']._serialized_start = 6413
+    _globals['_COLUMNS_COLUMN_WIDGETS']._serialized_end = 6838
+    _globals['_COLUMNS_COLUMN_HORIZONTALSIZESTYLE']._serialized_start = 6840
+    _globals['_COLUMNS_COLUMN_HORIZONTALSIZESTYLE']._serialized_end = 6950
+    _globals['_COLUMNS_COLUMN_VERTICALALIGNMENT']._serialized_start = 6952
+    _globals['_COLUMNS_COLUMN_VERTICALALIGNMENT']._serialized_end = 7040
+    _globals['_ONCLICK']._serialized_start = 7043
+    _globals['_ONCLICK']._serialized_end = 7267
+    _globals['_OPENLINK']._serialized_start = 7270
+    _globals['_OPENLINK']._serialized_end = 7479
+    _globals['_OPENLINK_OPENAS']._serialized_start = 7407
+    _globals['_OPENLINK_OPENAS']._serialized_end = 7443
+    _globals['_OPENLINK_ONCLOSE']._serialized_start = 7445
+    _globals['_OPENLINK_ONCLOSE']._serialized_end = 7479
+    _globals['_ACTION']._serialized_start = 7482
+    _globals['_ACTION']._serialized_end = 7874
+    _globals['_ACTION_ACTIONPARAMETER']._serialized_start = 7728
+    _globals['_ACTION_ACTIONPARAMETER']._serialized_end = 7773
+    _globals['_ACTION_LOADINDICATOR']._serialized_start = 7775
+    _globals['_ACTION_LOADINDICATOR']._serialized_end = 7813
+    _globals['_ACTION_INTERACTION']._serialized_start = 7815
+    _globals['_ACTION_INTERACTION']._serialized_end = 7874

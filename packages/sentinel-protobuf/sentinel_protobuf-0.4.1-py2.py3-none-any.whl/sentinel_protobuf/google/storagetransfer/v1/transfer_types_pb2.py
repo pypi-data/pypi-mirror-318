@@ -1,0 +1,176 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/storagetransfer/v1/transfer_types.proto')
+_sym_db = _symbol_database.Default()
+from ....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from ....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from google.protobuf import duration_pb2 as google_dot_protobuf_dot_duration__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+from ....google.rpc import code_pb2 as google_dot_rpc_dot_code__pb2
+from ....google.type import date_pb2 as google_dot_type_dot_date__pb2
+from ....google.type import timeofday_pb2 as google_dot_type_dot_timeofday__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n.google/storagetransfer/v1/transfer_types.proto\x12\x19google.storagetransfer.v1\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x15google/rpc/code.proto\x1a\x16google/type/date.proto\x1a\x1bgoogle/type/timeofday.proto"A\n\x14GoogleServiceAccount\x12\x15\n\raccount_email\x18\x01 \x01(\t\x12\x12\n\nsubject_id\x18\x02 \x01(\t"J\n\x0cAwsAccessKey\x12\x1a\n\raccess_key_id\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x1e\n\x11secret_access_key\x18\x02 \x01(\tB\x03\xe0A\x02"*\n\x10AzureCredentials\x12\x16\n\tsas_token\x18\x02 \x01(\tB\x03\xe0A\x02"\xd3\x02\n\x10ObjectConditions\x12K\n(min_time_elapsed_since_last_modification\x18\x01 \x01(\x0b2\x19.google.protobuf.Duration\x12K\n(max_time_elapsed_since_last_modification\x18\x02 \x01(\x0b2\x19.google.protobuf.Duration\x12\x18\n\x10include_prefixes\x18\x03 \x03(\t\x12\x18\n\x10exclude_prefixes\x18\x04 \x03(\t\x127\n\x13last_modified_since\x18\x05 \x01(\x0b2\x1a.google.protobuf.Timestamp\x128\n\x14last_modified_before\x18\x06 \x01(\x0b2\x1a.google.protobuf.Timestamp"Z\n\x07GcsData\x12\x18\n\x0bbucket_name\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x0c\n\x04path\x18\x03 \x01(\t\x12\'\n\x1fmanaged_folder_transfer_enabled\x18\x04 \x01(\x08"\x82\x02\n\tAwsS3Data\x12\x18\n\x0bbucket_name\x18\x01 \x01(\tB\x03\xe0A\x02\x12D\n\x0eaws_access_key\x18\x02 \x01(\x0b2\'.google.storagetransfer.v1.AwsAccessKeyB\x03\xe0A\x04\x12\x0c\n\x04path\x18\x03 \x01(\t\x12\x10\n\x08role_arn\x18\x04 \x01(\t\x12\x1e\n\x11cloudfront_domain\x18\x06 \x01(\tB\x03\xe0A\x01\x12\x1f\n\x12credentials_secret\x18\x07 \x01(\tB\x03\xe0A\x01\x12!\n\x17managed_private_network\x18\x08 \x01(\x08H\x00B\x11\n\x0fprivate_network"\xcb\x01\n\x14AzureBlobStorageData\x12\x1c\n\x0fstorage_account\x18\x01 \x01(\tB\x03\xe0A\x02\x12N\n\x11azure_credentials\x18\x02 \x01(\x0b2+.google.storagetransfer.v1.AzureCredentialsB\x06\xe0A\x02\xe0A\x04\x12\x16\n\tcontainer\x18\x04 \x01(\tB\x03\xe0A\x02\x12\x0c\n\x04path\x18\x05 \x01(\t\x12\x1f\n\x12credentials_secret\x18\x07 \x01(\tB\x03\xe0A\x01"!\n\x08HttpData\x12\x15\n\x08list_url\x18\x01 \x01(\tB\x03\xe0A\x02")\n\x0fPosixFilesystem\x12\x16\n\x0eroot_directory\x18\x01 \x01(\t"\x18\n\x08HdfsData\x12\x0c\n\x04path\x18\x01 \x01(\t"\xbd\x01\n\x13AwsS3CompatibleData\x12\x18\n\x0bbucket_name\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x0c\n\x04path\x18\x02 \x01(\t\x12\x15\n\x08endpoint\x18\x03 \x01(\tB\x03\xe0A\x02\x12\x0e\n\x06region\x18\x05 \x01(\t\x12F\n\x0bs3_metadata\x18\x04 \x01(\x0b2/.google.storagetransfer.v1.S3CompatibleMetadataH\x00B\x0f\n\rdata_provider"\xf6\x05\n\x14S3CompatibleMetadata\x12O\n\x0bauth_method\x18\x01 \x01(\x0e2:.google.storagetransfer.v1.S3CompatibleMetadata.AuthMethod\x12S\n\rrequest_model\x18\x02 \x01(\x0e2<.google.storagetransfer.v1.S3CompatibleMetadata.RequestModel\x12Q\n\x08protocol\x18\x03 \x01(\x0e2?.google.storagetransfer.v1.S3CompatibleMetadata.NetworkProtocol\x12I\n\x08list_api\x18\x04 \x01(\x0e27.google.storagetransfer.v1.S3CompatibleMetadata.ListApi"m\n\nAuthMethod\x12\x1b\n\x17AUTH_METHOD_UNSPECIFIED\x10\x00\x12 \n\x1cAUTH_METHOD_AWS_SIGNATURE_V4\x10\x01\x12 \n\x1cAUTH_METHOD_AWS_SIGNATURE_V2\x10\x02"s\n\x0cRequestModel\x12\x1d\n\x19REQUEST_MODEL_UNSPECIFIED\x10\x00\x12&\n"REQUEST_MODEL_VIRTUAL_HOSTED_STYLE\x10\x01\x12\x1c\n\x18REQUEST_MODEL_PATH_STYLE\x10\x02"j\n\x0fNetworkProtocol\x12 \n\x1cNETWORK_PROTOCOL_UNSPECIFIED\x10\x00\x12\x1a\n\x16NETWORK_PROTOCOL_HTTPS\x10\x01\x12\x19\n\x15NETWORK_PROTOCOL_HTTP\x10\x02"J\n\x07ListApi\x12\x18\n\x14LIST_API_UNSPECIFIED\x10\x00\x12\x13\n\x0fLIST_OBJECTS_V2\x10\x01\x12\x10\n\x0cLIST_OBJECTS\x10\x02"\x93\x03\n\tAgentPool\x12\x11\n\x04name\x18\x02 \x01(\tB\x03\xe0A\x02\x12\x14\n\x0cdisplay_name\x18\x03 \x01(\t\x12>\n\x05state\x18\x04 \x01(\x0e2*.google.storagetransfer.v1.AgentPool.StateB\x03\xe0A\x03\x12L\n\x0fbandwidth_limit\x18\x05 \x01(\x0b23.google.storagetransfer.v1.AgentPool.BandwidthLimit\x1a$\n\x0eBandwidthLimit\x12\x12\n\nlimit_mbps\x18\x01 \x01(\x03"G\n\x05State\x12\x15\n\x11STATE_UNSPECIFIED\x10\x00\x12\x0c\n\x08CREATING\x10\x01\x12\x0b\n\x07CREATED\x10\x02\x12\x0c\n\x08DELETING\x10\x03:`\xeaA]\n)storagetransfer.googleapis.com/agentPools\x120projects/{project_id}/agentPools/{agent_pool_id}"\x8e\x03\n\x0fTransferOptions\x122\n*overwrite_objects_already_existing_in_sink\x18\x01 \x01(\x08\x12%\n\x1ddelete_objects_unique_in_sink\x18\x02 \x01(\x08\x121\n)delete_objects_from_source_after_transfer\x18\x03 \x01(\x08\x12P\n\x0eoverwrite_when\x18\x04 \x01(\x0e28.google.storagetransfer.v1.TransferOptions.OverwriteWhen\x12D\n\x10metadata_options\x18\x05 \x01(\x0b2*.google.storagetransfer.v1.MetadataOptions"U\n\rOverwriteWhen\x12\x1e\n\x1aOVERWRITE_WHEN_UNSPECIFIED\x10\x00\x12\r\n\tDIFFERENT\x10\x01\x12\t\n\x05NEVER\x10\x02\x12\n\n\x06ALWAYS\x10\x03"\xb0\x08\n\x0cTransferSpec\x12;\n\rgcs_data_sink\x18\x04 \x01(\x0b2".google.storagetransfer.v1.GcsDataH\x00\x12E\n\x0fposix_data_sink\x18\r \x01(\x0b2*.google.storagetransfer.v1.PosixFilesystemH\x00\x12=\n\x0fgcs_data_source\x18\x01 \x01(\x0b2".google.storagetransfer.v1.GcsDataH\x01\x12B\n\x12aws_s3_data_source\x18\x02 \x01(\x0b2$.google.storagetransfer.v1.AwsS3DataH\x01\x12?\n\x10http_data_source\x18\x03 \x01(\x0b2#.google.storagetransfer.v1.HttpDataH\x01\x12G\n\x11posix_data_source\x18\x0e \x01(\x0b2*.google.storagetransfer.v1.PosixFilesystemH\x01\x12Y\n\x1eazure_blob_storage_data_source\x18\x08 \x01(\x0b2/.google.storagetransfer.v1.AzureBlobStorageDataH\x01\x12W\n\x1daws_s3_compatible_data_source\x18\x13 \x01(\x0b2..google.storagetransfer.v1.AwsS3CompatibleDataH\x01\x12?\n\x10hdfs_data_source\x18\x14 \x01(\x0b2#.google.storagetransfer.v1.HdfsDataH\x01\x12L\n\x1egcs_intermediate_data_location\x18\x10 \x01(\x0b2".google.storagetransfer.v1.GcsDataH\x02\x12F\n\x11object_conditions\x18\x05 \x01(\x0b2+.google.storagetransfer.v1.ObjectConditions\x12D\n\x10transfer_options\x18\x06 \x01(\x0b2*.google.storagetransfer.v1.TransferOptions\x12F\n\x11transfer_manifest\x18\x0f \x01(\x0b2+.google.storagetransfer.v1.TransferManifest\x12\x1e\n\x16source_agent_pool_name\x18\x11 \x01(\t\x12\x1c\n\x14sink_agent_pool_name\x18\x12 \x01(\tB\x0b\n\tdata_sinkB\r\n\x0bdata_sourceB\x1c\n\x1aintermediate_data_location"\xb7\x02\n\x0fReplicationSpec\x12=\n\x0fgcs_data_source\x18\x01 \x01(\x0b2".google.storagetransfer.v1.GcsDataH\x00\x12;\n\rgcs_data_sink\x18\x02 \x01(\x0b2".google.storagetransfer.v1.GcsDataH\x01\x12F\n\x11object_conditions\x18\x03 \x01(\x0b2+.google.storagetransfer.v1.ObjectConditions\x12D\n\x10transfer_options\x18\x04 \x01(\x0b2*.google.storagetransfer.v1.TransferOptionsB\r\n\x0bdata_sourceB\x0b\n\tdata_sink"\xf1\x0b\n\x0fMetadataOptions\x12C\n\x07symlink\x18\x01 \x01(\x0e22.google.storagetransfer.v1.MetadataOptions.Symlink\x12=\n\x04mode\x18\x02 \x01(\x0e2/.google.storagetransfer.v1.MetadataOptions.Mode\x12;\n\x03gid\x18\x03 \x01(\x0e2..google.storagetransfer.v1.MetadataOptions.GID\x12;\n\x03uid\x18\x04 \x01(\x0e2..google.storagetransfer.v1.MetadataOptions.UID\x12;\n\x03acl\x18\x05 \x01(\x0e2..google.storagetransfer.v1.MetadataOptions.Acl\x12N\n\rstorage_class\x18\x06 \x01(\x0e27.google.storagetransfer.v1.MetadataOptions.StorageClass\x12P\n\x0etemporary_hold\x18\x07 \x01(\x0e28.google.storagetransfer.v1.MetadataOptions.TemporaryHold\x12B\n\x07kms_key\x18\x08 \x01(\x0e21.google.storagetransfer.v1.MetadataOptions.KmsKey\x12L\n\x0ctime_created\x18\t \x01(\x0e26.google.storagetransfer.v1.MetadataOptions.TimeCreated"J\n\x07Symlink\x12\x17\n\x13SYMLINK_UNSPECIFIED\x10\x00\x12\x10\n\x0cSYMLINK_SKIP\x10\x01\x12\x14\n\x10SYMLINK_PRESERVE\x10\x02">\n\x04Mode\x12\x14\n\x10MODE_UNSPECIFIED\x10\x00\x12\r\n\tMODE_SKIP\x10\x01\x12\x11\n\rMODE_PRESERVE\x10\x02"8\n\x03GID\x12\x13\n\x0fGID_UNSPECIFIED\x10\x00\x12\x0c\n\x08GID_SKIP\x10\x01\x12\x0e\n\nGID_NUMBER\x10\x02"8\n\x03UID\x12\x13\n\x0fUID_UNSPECIFIED\x10\x00\x12\x0c\n\x08UID_SKIP\x10\x01\x12\x0e\n\nUID_NUMBER\x10\x02"P\n\x03Acl\x12\x13\n\x0fACL_UNSPECIFIED\x10\x00\x12"\n\x1eACL_DESTINATION_BUCKET_DEFAULT\x10\x01\x12\x10\n\x0cACL_PRESERVE\x10\x02"\xe6\x01\n\x0cStorageClass\x12\x1d\n\x19STORAGE_CLASS_UNSPECIFIED\x10\x00\x12,\n(STORAGE_CLASS_DESTINATION_BUCKET_DEFAULT\x10\x01\x12\x1a\n\x16STORAGE_CLASS_PRESERVE\x10\x02\x12\x1a\n\x16STORAGE_CLASS_STANDARD\x10\x03\x12\x1a\n\x16STORAGE_CLASS_NEARLINE\x10\x04\x12\x1a\n\x16STORAGE_CLASS_COLDLINE\x10\x05\x12\x19\n\x15STORAGE_CLASS_ARCHIVE\x10\x06"e\n\rTemporaryHold\x12\x1e\n\x1aTEMPORARY_HOLD_UNSPECIFIED\x10\x00\x12\x17\n\x13TEMPORARY_HOLD_SKIP\x10\x01\x12\x1b\n\x17TEMPORARY_HOLD_PRESERVE\x10\x02"_\n\x06KmsKey\x12\x17\n\x13KMS_KEY_UNSPECIFIED\x10\x00\x12&\n"KMS_KEY_DESTINATION_BUCKET_DEFAULT\x10\x01\x12\x14\n\x10KMS_KEY_PRESERVE\x10\x02"l\n\x0bTimeCreated\x12\x1c\n\x18TIME_CREATED_UNSPECIFIED\x10\x00\x12\x15\n\x11TIME_CREATED_SKIP\x10\x01\x12(\n$TIME_CREATED_PRESERVE_AS_CUSTOM_TIME\x10\x02"$\n\x10TransferManifest\x12\x10\n\x08location\x18\x01 \x01(\t"\x85\x02\n\x08Schedule\x123\n\x13schedule_start_date\x18\x01 \x01(\x0b2\x11.google.type.DateB\x03\xe0A\x02\x12,\n\x11schedule_end_date\x18\x02 \x01(\x0b2\x11.google.type.Date\x121\n\x11start_time_of_day\x18\x03 \x01(\x0b2\x16.google.type.TimeOfDay\x12/\n\x0fend_time_of_day\x18\x04 \x01(\x0b2\x16.google.type.TimeOfDay\x122\n\x0frepeat_interval\x18\x05 \x01(\x0b2\x19.google.protobuf.Duration"\x9f\x01\n\x0bEventStream\x12\x11\n\x04name\x18\x01 \x01(\tB\x03\xe0A\x02\x12;\n\x17event_stream_start_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12@\n\x1cevent_stream_expiration_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.Timestamp"\xa6\x06\n\x0bTransferJob\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0bdescription\x18\x02 \x01(\t\x12\x12\n\nproject_id\x18\x03 \x01(\t\x12>\n\rtransfer_spec\x18\x04 \x01(\x0b2\'.google.storagetransfer.v1.TransferSpec\x12D\n\x10replication_spec\x18\x11 \x01(\x0b2*.google.storagetransfer.v1.ReplicationSpec\x12J\n\x13notification_config\x18\x0b \x01(\x0b2-.google.storagetransfer.v1.NotificationConfig\x12@\n\x0elogging_config\x18\x0e \x01(\x0b2(.google.storagetransfer.v1.LoggingConfig\x125\n\x08schedule\x18\x05 \x01(\x0b2#.google.storagetransfer.v1.Schedule\x12<\n\x0cevent_stream\x18\x0f \x01(\x0b2&.google.storagetransfer.v1.EventStream\x12=\n\x06status\x18\x06 \x01(\x0e2-.google.storagetransfer.v1.TransferJob.Status\x126\n\rcreation_time\x18\x07 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12?\n\x16last_modification_time\x18\x08 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x126\n\rdeletion_time\x18\t \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12\x1d\n\x15latest_operation_name\x18\x0c \x01(\t"H\n\x06Status\x12\x16\n\x12STATUS_UNSPECIFIED\x10\x00\x12\x0b\n\x07ENABLED\x10\x01\x12\x0c\n\x08DISABLED\x10\x02\x12\x0b\n\x07DELETED\x10\x03"8\n\rErrorLogEntry\x12\x10\n\x03url\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x15\n\rerror_details\x18\x03 \x03(\t"\x98\x01\n\x0cErrorSummary\x12)\n\nerror_code\x18\x01 \x01(\x0e2\x10.google.rpc.CodeB\x03\xe0A\x02\x12\x18\n\x0berror_count\x18\x02 \x01(\x03B\x03\xe0A\x02\x12C\n\x11error_log_entries\x18\x03 \x03(\x0b2(.google.storagetransfer.v1.ErrorLogEntry"\xc3\x06\n\x10TransferCounters\x12!\n\x19objects_found_from_source\x18\x01 \x01(\x03\x12\x1f\n\x17bytes_found_from_source\x18\x02 \x01(\x03\x12$\n\x1cobjects_found_only_from_sink\x18\x03 \x01(\x03\x12"\n\x1abytes_found_only_from_sink\x18\x04 \x01(\x03\x12+\n#objects_from_source_skipped_by_sync\x18\x05 \x01(\x03\x12)\n!bytes_from_source_skipped_by_sync\x18\x06 \x01(\x03\x12\x1e\n\x16objects_copied_to_sink\x18\x07 \x01(\x03\x12\x1c\n\x14bytes_copied_to_sink\x18\x08 \x01(\x03\x12#\n\x1bobjects_deleted_from_source\x18\t \x01(\x03\x12!\n\x19bytes_deleted_from_source\x18\n \x01(\x03\x12!\n\x19objects_deleted_from_sink\x18\x0b \x01(\x03\x12\x1f\n\x17bytes_deleted_from_sink\x18\x0c \x01(\x03\x12"\n\x1aobjects_from_source_failed\x18\r \x01(\x03\x12 \n\x18bytes_from_source_failed\x18\x0e \x01(\x03\x12*\n"objects_failed_to_delete_from_sink\x18\x0f \x01(\x03\x12(\n bytes_failed_to_delete_from_sink\x18\x10 \x01(\x03\x12%\n\x1ddirectories_found_from_source\x18\x11 \x01(\x03\x12.\n&directories_failed_to_list_from_source\x18\x12 \x01(\x03\x123\n+directories_successfully_listed_from_source\x18\x13 \x01(\x03\x12\'\n\x1fintermediate_objects_cleaned_up\x18\x16 \x01(\x03\x12.\n&intermediate_objects_failed_cleaned_up\x18\x17 \x01(\x03"\xa5\x03\n\x12NotificationConfig\x12\x19\n\x0cpubsub_topic\x18\x01 \x01(\tB\x03\xe0A\x02\x12L\n\x0bevent_types\x18\x02 \x03(\x0e27.google.storagetransfer.v1.NotificationConfig.EventType\x12X\n\x0epayload_format\x18\x03 \x01(\x0e2;.google.storagetransfer.v1.NotificationConfig.PayloadFormatB\x03\xe0A\x02"\x86\x01\n\tEventType\x12\x1a\n\x16EVENT_TYPE_UNSPECIFIED\x10\x00\x12\x1e\n\x1aTRANSFER_OPERATION_SUCCESS\x10\x01\x12\x1d\n\x19TRANSFER_OPERATION_FAILED\x10\x02\x12\x1e\n\x1aTRANSFER_OPERATION_ABORTED\x10\x03"C\n\rPayloadFormat\x12\x1e\n\x1aPAYLOAD_FORMAT_UNSPECIFIED\x10\x00\x12\x08\n\x04NONE\x10\x01\x12\x08\n\x04JSON\x10\x02"\x8b\x03\n\rLoggingConfig\x12L\n\x0blog_actions\x18\x01 \x03(\x0e27.google.storagetransfer.v1.LoggingConfig.LoggableAction\x12W\n\x11log_action_states\x18\x02 \x03(\x0e2<.google.storagetransfer.v1.LoggingConfig.LoggableActionState\x12\'\n\x1fenable_onprem_gcs_transfer_logs\x18\x03 \x01(\x08"Q\n\x0eLoggableAction\x12\x1f\n\x1bLOGGABLE_ACTION_UNSPECIFIED\x10\x00\x12\x08\n\x04FIND\x10\x01\x12\n\n\x06DELETE\x10\x02\x12\x08\n\x04COPY\x10\x03"W\n\x13LoggableActionState\x12%\n!LOGGABLE_ACTION_STATE_UNSPECIFIED\x10\x00\x12\r\n\tSUCCEEDED\x10\x01\x12\n\n\x06FAILED\x10\x02"\xc4\x05\n\x11TransferOperation\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x12\n\nproject_id\x18\x02 \x01(\t\x12>\n\rtransfer_spec\x18\x03 \x01(\x0b2\'.google.storagetransfer.v1.TransferSpec\x12J\n\x13notification_config\x18\n \x01(\x0b2-.google.storagetransfer.v1.NotificationConfig\x12@\n\x0elogging_config\x18\x0c \x01(\x0b2(.google.storagetransfer.v1.LoggingConfig\x12.\n\nstart_time\x18\x04 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12,\n\x08end_time\x18\x05 \x01(\x0b2\x1a.google.protobuf.Timestamp\x12C\n\x06status\x18\x06 \x01(\x0e23.google.storagetransfer.v1.TransferOperation.Status\x12=\n\x08counters\x18\x07 \x01(\x0b2+.google.storagetransfer.v1.TransferCounters\x12A\n\x10error_breakdowns\x18\x08 \x03(\x0b2\'.google.storagetransfer.v1.ErrorSummary\x12\x19\n\x11transfer_job_name\x18\t \x01(\t"\x7f\n\x06Status\x12\x16\n\x12STATUS_UNSPECIFIED\x10\x00\x12\x0f\n\x0bIN_PROGRESS\x10\x01\x12\n\n\x06PAUSED\x10\x02\x12\x0b\n\x07SUCCESS\x10\x03\x12\n\n\x06FAILED\x10\x04\x12\x0b\n\x07ABORTED\x10\x05\x12\n\n\x06QUEUED\x10\x06\x12\x0e\n\nSUSPENDING\x10\x07B\xec\x01\n#com.google.storagetransfer.v1.protoB\rTransferTypesZMcloud.google.com/go/storagetransfer/apiv1/storagetransferpb;storagetransferpb\xaa\x02\x1fGoogle.Cloud.StorageTransfer.V1\xca\x02\x1fGoogle\\Cloud\\StorageTransfer\\V1\xea\x02"Google::Cloud::StorageTransfer::V1b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.storagetransfer.v1.transfer_types_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n#com.google.storagetransfer.v1.protoB\rTransferTypesZMcloud.google.com/go/storagetransfer/apiv1/storagetransferpb;storagetransferpb\xaa\x02\x1fGoogle.Cloud.StorageTransfer.V1\xca\x02\x1fGoogle\\Cloud\\StorageTransfer\\V1\xea\x02"Google::Cloud::StorageTransfer::V1'
+    _globals['_AWSACCESSKEY'].fields_by_name['access_key_id']._loaded_options = None
+    _globals['_AWSACCESSKEY'].fields_by_name['access_key_id']._serialized_options = b'\xe0A\x02'
+    _globals['_AWSACCESSKEY'].fields_by_name['secret_access_key']._loaded_options = None
+    _globals['_AWSACCESSKEY'].fields_by_name['secret_access_key']._serialized_options = b'\xe0A\x02'
+    _globals['_AZURECREDENTIALS'].fields_by_name['sas_token']._loaded_options = None
+    _globals['_AZURECREDENTIALS'].fields_by_name['sas_token']._serialized_options = b'\xe0A\x02'
+    _globals['_GCSDATA'].fields_by_name['bucket_name']._loaded_options = None
+    _globals['_GCSDATA'].fields_by_name['bucket_name']._serialized_options = b'\xe0A\x02'
+    _globals['_AWSS3DATA'].fields_by_name['bucket_name']._loaded_options = None
+    _globals['_AWSS3DATA'].fields_by_name['bucket_name']._serialized_options = b'\xe0A\x02'
+    _globals['_AWSS3DATA'].fields_by_name['aws_access_key']._loaded_options = None
+    _globals['_AWSS3DATA'].fields_by_name['aws_access_key']._serialized_options = b'\xe0A\x04'
+    _globals['_AWSS3DATA'].fields_by_name['cloudfront_domain']._loaded_options = None
+    _globals['_AWSS3DATA'].fields_by_name['cloudfront_domain']._serialized_options = b'\xe0A\x01'
+    _globals['_AWSS3DATA'].fields_by_name['credentials_secret']._loaded_options = None
+    _globals['_AWSS3DATA'].fields_by_name['credentials_secret']._serialized_options = b'\xe0A\x01'
+    _globals['_AZUREBLOBSTORAGEDATA'].fields_by_name['storage_account']._loaded_options = None
+    _globals['_AZUREBLOBSTORAGEDATA'].fields_by_name['storage_account']._serialized_options = b'\xe0A\x02'
+    _globals['_AZUREBLOBSTORAGEDATA'].fields_by_name['azure_credentials']._loaded_options = None
+    _globals['_AZUREBLOBSTORAGEDATA'].fields_by_name['azure_credentials']._serialized_options = b'\xe0A\x02\xe0A\x04'
+    _globals['_AZUREBLOBSTORAGEDATA'].fields_by_name['container']._loaded_options = None
+    _globals['_AZUREBLOBSTORAGEDATA'].fields_by_name['container']._serialized_options = b'\xe0A\x02'
+    _globals['_AZUREBLOBSTORAGEDATA'].fields_by_name['credentials_secret']._loaded_options = None
+    _globals['_AZUREBLOBSTORAGEDATA'].fields_by_name['credentials_secret']._serialized_options = b'\xe0A\x01'
+    _globals['_HTTPDATA'].fields_by_name['list_url']._loaded_options = None
+    _globals['_HTTPDATA'].fields_by_name['list_url']._serialized_options = b'\xe0A\x02'
+    _globals['_AWSS3COMPATIBLEDATA'].fields_by_name['bucket_name']._loaded_options = None
+    _globals['_AWSS3COMPATIBLEDATA'].fields_by_name['bucket_name']._serialized_options = b'\xe0A\x02'
+    _globals['_AWSS3COMPATIBLEDATA'].fields_by_name['endpoint']._loaded_options = None
+    _globals['_AWSS3COMPATIBLEDATA'].fields_by_name['endpoint']._serialized_options = b'\xe0A\x02'
+    _globals['_AGENTPOOL'].fields_by_name['name']._loaded_options = None
+    _globals['_AGENTPOOL'].fields_by_name['name']._serialized_options = b'\xe0A\x02'
+    _globals['_AGENTPOOL'].fields_by_name['state']._loaded_options = None
+    _globals['_AGENTPOOL'].fields_by_name['state']._serialized_options = b'\xe0A\x03'
+    _globals['_AGENTPOOL']._loaded_options = None
+    _globals['_AGENTPOOL']._serialized_options = b'\xeaA]\n)storagetransfer.googleapis.com/agentPools\x120projects/{project_id}/agentPools/{agent_pool_id}'
+    _globals['_SCHEDULE'].fields_by_name['schedule_start_date']._loaded_options = None
+    _globals['_SCHEDULE'].fields_by_name['schedule_start_date']._serialized_options = b'\xe0A\x02'
+    _globals['_EVENTSTREAM'].fields_by_name['name']._loaded_options = None
+    _globals['_EVENTSTREAM'].fields_by_name['name']._serialized_options = b'\xe0A\x02'
+    _globals['_TRANSFERJOB'].fields_by_name['creation_time']._loaded_options = None
+    _globals['_TRANSFERJOB'].fields_by_name['creation_time']._serialized_options = b'\xe0A\x03'
+    _globals['_TRANSFERJOB'].fields_by_name['last_modification_time']._loaded_options = None
+    _globals['_TRANSFERJOB'].fields_by_name['last_modification_time']._serialized_options = b'\xe0A\x03'
+    _globals['_TRANSFERJOB'].fields_by_name['deletion_time']._loaded_options = None
+    _globals['_TRANSFERJOB'].fields_by_name['deletion_time']._serialized_options = b'\xe0A\x03'
+    _globals['_ERRORLOGENTRY'].fields_by_name['url']._loaded_options = None
+    _globals['_ERRORLOGENTRY'].fields_by_name['url']._serialized_options = b'\xe0A\x02'
+    _globals['_ERRORSUMMARY'].fields_by_name['error_code']._loaded_options = None
+    _globals['_ERRORSUMMARY'].fields_by_name['error_code']._serialized_options = b'\xe0A\x02'
+    _globals['_ERRORSUMMARY'].fields_by_name['error_count']._loaded_options = None
+    _globals['_ERRORSUMMARY'].fields_by_name['error_count']._serialized_options = b'\xe0A\x02'
+    _globals['_NOTIFICATIONCONFIG'].fields_by_name['pubsub_topic']._loaded_options = None
+    _globals['_NOTIFICATIONCONFIG'].fields_by_name['pubsub_topic']._serialized_options = b'\xe0A\x02'
+    _globals['_NOTIFICATIONCONFIG'].fields_by_name['payload_format']._loaded_options = None
+    _globals['_NOTIFICATIONCONFIG'].fields_by_name['payload_format']._serialized_options = b'\xe0A\x02'
+    _globals['_GOOGLESERVICEACCOUNT']._serialized_start = 278
+    _globals['_GOOGLESERVICEACCOUNT']._serialized_end = 343
+    _globals['_AWSACCESSKEY']._serialized_start = 345
+    _globals['_AWSACCESSKEY']._serialized_end = 419
+    _globals['_AZURECREDENTIALS']._serialized_start = 421
+    _globals['_AZURECREDENTIALS']._serialized_end = 463
+    _globals['_OBJECTCONDITIONS']._serialized_start = 466
+    _globals['_OBJECTCONDITIONS']._serialized_end = 805
+    _globals['_GCSDATA']._serialized_start = 807
+    _globals['_GCSDATA']._serialized_end = 897
+    _globals['_AWSS3DATA']._serialized_start = 900
+    _globals['_AWSS3DATA']._serialized_end = 1158
+    _globals['_AZUREBLOBSTORAGEDATA']._serialized_start = 1161
+    _globals['_AZUREBLOBSTORAGEDATA']._serialized_end = 1364
+    _globals['_HTTPDATA']._serialized_start = 1366
+    _globals['_HTTPDATA']._serialized_end = 1399
+    _globals['_POSIXFILESYSTEM']._serialized_start = 1401
+    _globals['_POSIXFILESYSTEM']._serialized_end = 1442
+    _globals['_HDFSDATA']._serialized_start = 1444
+    _globals['_HDFSDATA']._serialized_end = 1468
+    _globals['_AWSS3COMPATIBLEDATA']._serialized_start = 1471
+    _globals['_AWSS3COMPATIBLEDATA']._serialized_end = 1660
+    _globals['_S3COMPATIBLEMETADATA']._serialized_start = 1663
+    _globals['_S3COMPATIBLEMETADATA']._serialized_end = 2421
+    _globals['_S3COMPATIBLEMETADATA_AUTHMETHOD']._serialized_start = 2011
+    _globals['_S3COMPATIBLEMETADATA_AUTHMETHOD']._serialized_end = 2120
+    _globals['_S3COMPATIBLEMETADATA_REQUESTMODEL']._serialized_start = 2122
+    _globals['_S3COMPATIBLEMETADATA_REQUESTMODEL']._serialized_end = 2237
+    _globals['_S3COMPATIBLEMETADATA_NETWORKPROTOCOL']._serialized_start = 2239
+    _globals['_S3COMPATIBLEMETADATA_NETWORKPROTOCOL']._serialized_end = 2345
+    _globals['_S3COMPATIBLEMETADATA_LISTAPI']._serialized_start = 2347
+    _globals['_S3COMPATIBLEMETADATA_LISTAPI']._serialized_end = 2421
+    _globals['_AGENTPOOL']._serialized_start = 2424
+    _globals['_AGENTPOOL']._serialized_end = 2827
+    _globals['_AGENTPOOL_BANDWIDTHLIMIT']._serialized_start = 2620
+    _globals['_AGENTPOOL_BANDWIDTHLIMIT']._serialized_end = 2656
+    _globals['_AGENTPOOL_STATE']._serialized_start = 2658
+    _globals['_AGENTPOOL_STATE']._serialized_end = 2729
+    _globals['_TRANSFEROPTIONS']._serialized_start = 2830
+    _globals['_TRANSFEROPTIONS']._serialized_end = 3228
+    _globals['_TRANSFEROPTIONS_OVERWRITEWHEN']._serialized_start = 3143
+    _globals['_TRANSFEROPTIONS_OVERWRITEWHEN']._serialized_end = 3228
+    _globals['_TRANSFERSPEC']._serialized_start = 3231
+    _globals['_TRANSFERSPEC']._serialized_end = 4303
+    _globals['_REPLICATIONSPEC']._serialized_start = 4306
+    _globals['_REPLICATIONSPEC']._serialized_end = 4617
+    _globals['_METADATAOPTIONS']._serialized_start = 4620
+    _globals['_METADATAOPTIONS']._serialized_end = 6141
+    _globals['_METADATAOPTIONS_SYMLINK']._serialized_start = 5262
+    _globals['_METADATAOPTIONS_SYMLINK']._serialized_end = 5336
+    _globals['_METADATAOPTIONS_MODE']._serialized_start = 5338
+    _globals['_METADATAOPTIONS_MODE']._serialized_end = 5400
+    _globals['_METADATAOPTIONS_GID']._serialized_start = 5402
+    _globals['_METADATAOPTIONS_GID']._serialized_end = 5458
+    _globals['_METADATAOPTIONS_UID']._serialized_start = 5460
+    _globals['_METADATAOPTIONS_UID']._serialized_end = 5516
+    _globals['_METADATAOPTIONS_ACL']._serialized_start = 5518
+    _globals['_METADATAOPTIONS_ACL']._serialized_end = 5598
+    _globals['_METADATAOPTIONS_STORAGECLASS']._serialized_start = 5601
+    _globals['_METADATAOPTIONS_STORAGECLASS']._serialized_end = 5831
+    _globals['_METADATAOPTIONS_TEMPORARYHOLD']._serialized_start = 5833
+    _globals['_METADATAOPTIONS_TEMPORARYHOLD']._serialized_end = 5934
+    _globals['_METADATAOPTIONS_KMSKEY']._serialized_start = 5936
+    _globals['_METADATAOPTIONS_KMSKEY']._serialized_end = 6031
+    _globals['_METADATAOPTIONS_TIMECREATED']._serialized_start = 6033
+    _globals['_METADATAOPTIONS_TIMECREATED']._serialized_end = 6141
+    _globals['_TRANSFERMANIFEST']._serialized_start = 6143
+    _globals['_TRANSFERMANIFEST']._serialized_end = 6179
+    _globals['_SCHEDULE']._serialized_start = 6182
+    _globals['_SCHEDULE']._serialized_end = 6443
+    _globals['_EVENTSTREAM']._serialized_start = 6446
+    _globals['_EVENTSTREAM']._serialized_end = 6605
+    _globals['_TRANSFERJOB']._serialized_start = 6608
+    _globals['_TRANSFERJOB']._serialized_end = 7414
+    _globals['_TRANSFERJOB_STATUS']._serialized_start = 7342
+    _globals['_TRANSFERJOB_STATUS']._serialized_end = 7414
+    _globals['_ERRORLOGENTRY']._serialized_start = 7416
+    _globals['_ERRORLOGENTRY']._serialized_end = 7472
+    _globals['_ERRORSUMMARY']._serialized_start = 7475
+    _globals['_ERRORSUMMARY']._serialized_end = 7627
+    _globals['_TRANSFERCOUNTERS']._serialized_start = 7630
+    _globals['_TRANSFERCOUNTERS']._serialized_end = 8465
+    _globals['_NOTIFICATIONCONFIG']._serialized_start = 8468
+    _globals['_NOTIFICATIONCONFIG']._serialized_end = 8889
+    _globals['_NOTIFICATIONCONFIG_EVENTTYPE']._serialized_start = 8686
+    _globals['_NOTIFICATIONCONFIG_EVENTTYPE']._serialized_end = 8820
+    _globals['_NOTIFICATIONCONFIG_PAYLOADFORMAT']._serialized_start = 8822
+    _globals['_NOTIFICATIONCONFIG_PAYLOADFORMAT']._serialized_end = 8889
+    _globals['_LOGGINGCONFIG']._serialized_start = 8892
+    _globals['_LOGGINGCONFIG']._serialized_end = 9287
+    _globals['_LOGGINGCONFIG_LOGGABLEACTION']._serialized_start = 9117
+    _globals['_LOGGINGCONFIG_LOGGABLEACTION']._serialized_end = 9198
+    _globals['_LOGGINGCONFIG_LOGGABLEACTIONSTATE']._serialized_start = 9200
+    _globals['_LOGGINGCONFIG_LOGGABLEACTIONSTATE']._serialized_end = 9287
+    _globals['_TRANSFEROPERATION']._serialized_start = 9290
+    _globals['_TRANSFEROPERATION']._serialized_end = 9998
+    _globals['_TRANSFEROPERATION_STATUS']._serialized_start = 9871
+    _globals['_TRANSFEROPERATION_STATUS']._serialized_end = 9998

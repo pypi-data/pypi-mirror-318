@@ -1,0 +1,6 @@
+from . import image_classification_pb2
+from . import image_object_detection_pb2
+from . import image_segmentation_pb2
+from . import video_action_recognition_pb2
+from . import video_classification_pb2
+from . import video_object_tracking_pb2

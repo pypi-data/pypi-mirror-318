@@ -1,0 +1,242 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/cloud/bigquery/biglake/v1alpha1/metastore.proto')
+_sym_db = _symbol_database.Default()
+from ......google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from ......google.api import client_pb2 as google_dot_api_dot_client__pb2
+from ......google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from ......google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
+from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n6google/cloud/bigquery/biglake/v1alpha1/metastore.proto\x12&google.cloud.bigquery.biglake.v1alpha1\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto\x1a\x1fgoogle/protobuf/timestamp.proto"\xf8\x02\n\x07Catalog\x124\n\x04name\x18\x01 \x01(\tB&\xe0A\x03\xfaA \n\x1ebiglake.googleapis.com/Catalog\x124\n\x0bcreate_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bupdate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bdelete_time\x18\x04 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bexpire_time\x18\x05 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03:_\xeaA\\\n\x1ebiglake.googleapis.com/Catalog\x12:projects/{project}/locations/{location}/catalogs/{catalog}"\xdd\x04\n\x08Database\x12S\n\x0chive_options\x18\x07 \x01(\x0b2;.google.cloud.bigquery.biglake.v1alpha1.HiveDatabaseOptionsH\x00\x125\n\x04name\x18\x01 \x01(\tB\'\xe0A\x03\xfaA!\n\x1fbiglake.googleapis.com/Database\x124\n\x0bcreate_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bupdate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bdelete_time\x18\x04 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bexpire_time\x18\x05 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12C\n\x04type\x18\x06 \x01(\x0e25.google.cloud.bigquery.biglake.v1alpha1.Database.Type"&\n\x04Type\x12\x14\n\x10TYPE_UNSPECIFIED\x10\x00\x12\x08\n\x04HIVE\x10\x01:u\xeaAr\n\x1fbiglake.googleapis.com/Database\x12Oprojects/{project}/locations/{location}/catalogs/{catalog}/databases/{database}B\t\n\x07options"\xec\x04\n\x05Table\x12P\n\x0chive_options\x18\x07 \x01(\x0b28.google.cloud.bigquery.biglake.v1alpha1.HiveTableOptionsH\x00\x122\n\x04name\x18\x01 \x01(\tB$\xe0A\x03\xfaA\x1e\n\x1cbiglake.googleapis.com/Table\x124\n\x0bcreate_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bupdate_time\x18\x03 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bdelete_time\x18\x04 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x124\n\x0bexpire_time\x18\x05 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12@\n\x04type\x18\x06 \x01(\x0e22.google.cloud.bigquery.biglake.v1alpha1.Table.Type\x12\x0c\n\x04etag\x18\x08 \x01(\t"&\n\x04Type\x12\x14\n\x10TYPE_UNSPECIFIED\x10\x00\x12\x08\n\x04HIVE\x10\x01:\x81\x01\xeaA~\n\x1cbiglake.googleapis.com/Table\x12^projects/{project}/locations/{location}/catalogs/{catalog}/databases/{database}/tables/{table}B\t\n\x07options"\x81\x04\n\x04Lock\x12\x12\n\x08table_id\x18\x05 \x01(\tH\x00\x121\n\x04name\x18\x01 \x01(\tB#\xe0A\x03\xfaA\x1d\n\x1bbiglake.googleapis.com/Lock\x124\n\x0bcreate_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.TimestampB\x03\xe0A\x03\x12?\n\x04type\x18\x03 \x01(\x0e21.google.cloud.bigquery.biglake.v1alpha1.Lock.Type\x12F\n\x05state\x18\x04 \x01(\x0e22.google.cloud.bigquery.biglake.v1alpha1.Lock.StateB\x03\xe0A\x03"+\n\x04Type\x12\x14\n\x10TYPE_UNSPECIFIED\x10\x00\x12\r\n\tEXCLUSIVE\x10\x01"9\n\x05State\x12\x15\n\x11STATE_UNSPECIFIED\x10\x00\x12\x0b\n\x07WAITING\x10\x01\x12\x0c\n\x08ACQUIRED\x10\x02:~\xeaA{\n\x1bbiglake.googleapis.com/Lock\x12\\projects/{project}/locations/{location}/catalogs/{catalog}/databases/{database}/locks/{lock}B\x0b\n\tresources"\xb1\x01\n\x14CreateCatalogRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!locations.googleapis.com/Location\x12E\n\x07catalog\x18\x02 \x01(\x0b2/.google.cloud.bigquery.biglake.v1alpha1.CatalogB\x03\xe0A\x02\x12\x17\n\ncatalog_id\x18\x03 \x01(\tB\x03\xe0A\x02"L\n\x14DeleteCatalogRequest\x124\n\x04name\x18\x01 \x01(\tB&\xe0A\x02\xfaA \n\x1ebiglake.googleapis.com/Catalog"I\n\x11GetCatalogRequest\x124\n\x04name\x18\x01 \x01(\tB&\xe0A\x02\xfaA \n\x1ebiglake.googleapis.com/Catalog"w\n\x13ListCatalogsRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!locations.googleapis.com/Location\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t"r\n\x14ListCatalogsResponse\x12A\n\x08catalogs\x18\x01 \x03(\x0b2/.google.cloud.bigquery.biglake.v1alpha1.Catalog\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"\xb2\x01\n\x15CreateDatabaseRequest\x126\n\x06parent\x18\x01 \x01(\tB&\xe0A\x02\xfaA \n\x1ebiglake.googleapis.com/Catalog\x12G\n\x08database\x18\x02 \x01(\x0b20.google.cloud.bigquery.biglake.v1alpha1.DatabaseB\x03\xe0A\x02\x12\x18\n\x0bdatabase_id\x18\x03 \x01(\tB\x03\xe0A\x02"N\n\x15DeleteDatabaseRequest\x125\n\x04name\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\n\x1fbiglake.googleapis.com/Database"\x91\x01\n\x15UpdateDatabaseRequest\x12G\n\x08database\x18\x01 \x01(\x0b20.google.cloud.bigquery.biglake.v1alpha1.DatabaseB\x03\xe0A\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMask"K\n\x12GetDatabaseRequest\x125\n\x04name\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\n\x1fbiglake.googleapis.com/Database"u\n\x14ListDatabasesRequest\x126\n\x06parent\x18\x01 \x01(\tB&\xe0A\x02\xfaA \n\x1ebiglake.googleapis.com/Catalog\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t"u\n\x15ListDatabasesResponse\x12C\n\tdatabases\x18\x01 \x03(\x0b20.google.cloud.bigquery.biglake.v1alpha1.Database\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"\xa7\x01\n\x12CreateTableRequest\x127\n\x06parent\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\n\x1fbiglake.googleapis.com/Database\x12A\n\x05table\x18\x02 \x01(\x0b2-.google.cloud.bigquery.biglake.v1alpha1.TableB\x03\xe0A\x02\x12\x15\n\x08table_id\x18\x03 \x01(\tB\x03\xe0A\x02"H\n\x12DeleteTableRequest\x122\n\x04name\x18\x01 \x01(\tB$\xe0A\x02\xfaA\x1e\n\x1cbiglake.googleapis.com/Table"\x88\x01\n\x12UpdateTableRequest\x12A\n\x05table\x18\x01 \x01(\x0b2-.google.cloud.bigquery.biglake.v1alpha1.TableB\x03\xe0A\x02\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b2\x1a.google.protobuf.FieldMask"\x80\x01\n\x12RenameTableRequest\x122\n\x04name\x18\x01 \x01(\tB$\xe0A\x02\xfaA\x1e\n\x1cbiglake.googleapis.com/Table\x126\n\x08new_name\x18\x02 \x01(\tB$\xe0A\x02\xfaA\x1e\n\x1cbiglake.googleapis.com/Table"E\n\x0fGetTableRequest\x122\n\x04name\x18\x01 \x01(\tB$\xe0A\x02\xfaA\x1e\n\x1cbiglake.googleapis.com/Table"\xb4\x01\n\x11ListTablesRequest\x127\n\x06parent\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\n\x1fbiglake.googleapis.com/Database\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t\x12?\n\x04view\x18\x04 \x01(\x0e21.google.cloud.bigquery.biglake.v1alpha1.TableView"l\n\x12ListTablesResponse\x12=\n\x06tables\x18\x01 \x03(\x0b2-.google.cloud.bigquery.biglake.v1alpha1.Table\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"\x8d\x01\n\x11CreateLockRequest\x127\n\x06parent\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\n\x1fbiglake.googleapis.com/Database\x12?\n\x04lock\x18\x02 \x01(\x0b2,.google.cloud.bigquery.biglake.v1alpha1.LockB\x03\xe0A\x02"F\n\x11DeleteLockRequest\x121\n\x04name\x18\x01 \x01(\tB#\xe0A\x02\xfaA\x1d\n\x1bbiglake.googleapis.com/Lock"E\n\x10CheckLockRequest\x121\n\x04name\x18\x01 \x01(\tB#\xe0A\x02\xfaA\x1d\n\x1bbiglake.googleapis.com/Lock"r\n\x10ListLocksRequest\x127\n\x06parent\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\n\x1fbiglake.googleapis.com/Database\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t"i\n\x11ListLocksResponse\x12;\n\x05locks\x18\x01 \x03(\x0b2,.google.cloud.bigquery.biglake.v1alpha1.Lock\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t"\xbf\x01\n\x13HiveDatabaseOptions\x12\x14\n\x0clocation_uri\x18\x01 \x01(\t\x12_\n\nparameters\x18\x02 \x03(\x0b2K.google.cloud.bigquery.biglake.v1alpha1.HiveDatabaseOptions.ParametersEntry\x1a1\n\x0fParametersEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x028\x01"\xf8\x03\n\x10HiveTableOptions\x12\\\n\nparameters\x18\x01 \x03(\x0b2H.google.cloud.bigquery.biglake.v1alpha1.HiveTableOptions.ParametersEntry\x12\x12\n\ntable_type\x18\x02 \x01(\t\x12f\n\x12storage_descriptor\x18\x03 \x01(\x0b2J.google.cloud.bigquery.biglake.v1alpha1.HiveTableOptions.StorageDescriptor\x1a&\n\tSerDeInfo\x12\x19\n\x11serialization_lib\x18\x01 \x01(\t\x1a\xae\x01\n\x11StorageDescriptor\x12\x14\n\x0clocation_uri\x18\x01 \x01(\t\x12\x14\n\x0cinput_format\x18\x02 \x01(\t\x12\x15\n\routput_format\x18\x03 \x01(\t\x12V\n\nserde_info\x18\x04 \x01(\x0b2B.google.cloud.bigquery.biglake.v1alpha1.HiveTableOptions.SerDeInfo\x1a1\n\x0fParametersEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x028\x01*<\n\tTableView\x12\x1a\n\x16TABLE_VIEW_UNSPECIFIED\x10\x00\x12\t\n\x05BASIC\x10\x01\x12\x08\n\x04FULL\x10\x022\xab!\n\x10MetastoreService\x12\xdf\x01\n\rCreateCatalog\x12<.google.cloud.bigquery.biglake.v1alpha1.CreateCatalogRequest\x1a/.google.cloud.bigquery.biglake.v1alpha1.Catalog"_\xdaA\x19parent,catalog,catalog_id\x82\xd3\xe4\x93\x02="2/v1alpha1/{parent=projects/*/locations/*}/catalogs:\x07catalog\x12\xc1\x01\n\rDeleteCatalog\x12<.google.cloud.bigquery.biglake.v1alpha1.DeleteCatalogRequest\x1a/.google.cloud.bigquery.biglake.v1alpha1.Catalog"A\xdaA\x04name\x82\xd3\xe4\x93\x024*2/v1alpha1/{name=projects/*/locations/*/catalogs/*}\x12\xbb\x01\n\nGetCatalog\x129.google.cloud.bigquery.biglake.v1alpha1.GetCatalogRequest\x1a/.google.cloud.bigquery.biglake.v1alpha1.Catalog"A\xdaA\x04name\x82\xd3\xe4\x93\x024\x122/v1alpha1/{name=projects/*/locations/*/catalogs/*}\x12\xce\x01\n\x0cListCatalogs\x12;.google.cloud.bigquery.biglake.v1alpha1.ListCatalogsRequest\x1a<.google.cloud.bigquery.biglake.v1alpha1.ListCatalogsResponse"C\xdaA\x06parent\x82\xd3\xe4\x93\x024\x122/v1alpha1/{parent=projects/*/locations/*}/catalogs\x12\xf1\x01\n\x0eCreateDatabase\x12=.google.cloud.bigquery.biglake.v1alpha1.CreateDatabaseRequest\x1a0.google.cloud.bigquery.biglake.v1alpha1.Database"n\xdaA\x1bparent,database,database_id\x82\xd3\xe4\x93\x02J">/v1alpha1/{parent=projects/*/locations/*/catalogs/*}/databases:\x08database\x12\xd0\x01\n\x0eDeleteDatabase\x12=.google.cloud.bigquery.biglake.v1alpha1.DeleteDatabaseRequest\x1a0.google.cloud.bigquery.biglake.v1alpha1.Database"M\xdaA\x04name\x82\xd3\xe4\x93\x02@*>/v1alpha1/{name=projects/*/locations/*/catalogs/*/databases/*}\x12\xf3\x01\n\x0eUpdateDatabase\x12=.google.cloud.bigquery.biglake.v1alpha1.UpdateDatabaseRequest\x1a0.google.cloud.bigquery.biglake.v1alpha1.Database"p\xdaA\x14database,update_mask\x82\xd3\xe4\x93\x02S2G/v1alpha1/{database.name=projects/*/locations/*/catalogs/*/databases/*}:\x08database\x12\xca\x01\n\x0bGetDatabase\x12:.google.cloud.bigquery.biglake.v1alpha1.GetDatabaseRequest\x1a0.google.cloud.bigquery.biglake.v1alpha1.Database"M\xdaA\x04name\x82\xd3\xe4\x93\x02@\x12>/v1alpha1/{name=projects/*/locations/*/catalogs/*/databases/*}\x12\xdd\x01\n\rListDatabases\x12<.google.cloud.bigquery.biglake.v1alpha1.ListDatabasesRequest\x1a=.google.cloud.bigquery.biglake.v1alpha1.ListDatabasesResponse"O\xdaA\x06parent\x82\xd3\xe4\x93\x02@\x12>/v1alpha1/{parent=projects/*/locations/*/catalogs/*}/databases\x12\xe8\x01\n\x0bCreateTable\x12:.google.cloud.bigquery.biglake.v1alpha1.CreateTableRequest\x1a-.google.cloud.bigquery.biglake.v1alpha1.Table"n\xdaA\x15parent,table,table_id\x82\xd3\xe4\x93\x02P"G/v1alpha1/{parent=projects/*/locations/*/catalogs/*/databases/*}/tables:\x05table\x12\xd0\x01\n\x0bDeleteTable\x12:.google.cloud.bigquery.biglake.v1alpha1.DeleteTableRequest\x1a-.google.cloud.bigquery.biglake.v1alpha1.Table"V\xdaA\x04name\x82\xd3\xe4\x93\x02I*G/v1alpha1/{name=projects/*/locations/*/catalogs/*/databases/*/tables/*}\x12\xea\x01\n\x0bUpdateTable\x12:.google.cloud.bigquery.biglake.v1alpha1.UpdateTableRequest\x1a-.google.cloud.bigquery.biglake.v1alpha1.Table"p\xdaA\x11table,update_mask\x82\xd3\xe4\x93\x02V2M/v1alpha1/{table.name=projects/*/locations/*/catalogs/*/databases/*/tables/*}:\x05table\x12\xe3\x01\n\x0bRenameTable\x12:.google.cloud.bigquery.biglake.v1alpha1.RenameTableRequest\x1a-.google.cloud.bigquery.biglake.v1alpha1.Table"i\xdaA\rname,new_name\x82\xd3\xe4\x93\x02S"N/v1alpha1/{name=projects/*/locations/*/catalogs/*/databases/*/tables/*}:rename:\x01*\x12\xca\x01\n\x08GetTable\x127.google.cloud.bigquery.biglake.v1alpha1.GetTableRequest\x1a-.google.cloud.bigquery.biglake.v1alpha1.Table"V\xdaA\x04name\x82\xd3\xe4\x93\x02I\x12G/v1alpha1/{name=projects/*/locations/*/catalogs/*/databases/*/tables/*}\x12\xdd\x01\n\nListTables\x129.google.cloud.bigquery.biglake.v1alpha1.ListTablesRequest\x1a:.google.cloud.bigquery.biglake.v1alpha1.ListTablesResponse"X\xdaA\x06parent\x82\xd3\xe4\x93\x02I\x12G/v1alpha1/{parent=projects/*/locations/*/catalogs/*/databases/*}/tables\x12\xd9\x01\n\nCreateLock\x129.google.cloud.bigquery.biglake.v1alpha1.CreateLockRequest\x1a,.google.cloud.bigquery.biglake.v1alpha1.Lock"b\xdaA\x0bparent,lock\x82\xd3\xe4\x93\x02N"F/v1alpha1/{parent=projects/*/locations/*/catalogs/*/databases/*}/locks:\x04lock\x12\xb6\x01\n\nDeleteLock\x129.google.cloud.bigquery.biglake.v1alpha1.DeleteLockRequest\x1a\x16.google.protobuf.Empty"U\xdaA\x04name\x82\xd3\xe4\x93\x02H*F/v1alpha1/{name=projects/*/locations/*/catalogs/*/databases/*/locks/*}\x12\xd3\x01\n\tCheckLock\x128.google.cloud.bigquery.biglake.v1alpha1.CheckLockRequest\x1a,.google.cloud.bigquery.biglake.v1alpha1.Lock"^\xdaA\x04name\x82\xd3\xe4\x93\x02Q"L/v1alpha1/{name=projects/*/locations/*/catalogs/*/databases/*/locks/*}:check:\x01*\x12\xd9\x01\n\tListLocks\x128.google.cloud.bigquery.biglake.v1alpha1.ListLocksRequest\x1a9.google.cloud.bigquery.biglake.v1alpha1.ListLocksResponse"W\xdaA\x06parent\x82\xd3\xe4\x93\x02H\x12F/v1alpha1/{parent=projects/*/locations/*/catalogs/*/databases/*}/locks\x1as\xcaA\x16biglake.googleapis.com\xd2AWhttps://www.googleapis.com/auth/bigquery,https://www.googleapis.com/auth/cloud-platformB\x84\x01\n*com.google.cloud.bigquery.biglake.v1alpha1B\x0eMetastoreProtoP\x01ZDcloud.google.com/go/bigquery/biglake/apiv1alpha1/biglakepb;biglakepbb\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.bigquery.biglake.v1alpha1.metastore_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n*com.google.cloud.bigquery.biglake.v1alpha1B\x0eMetastoreProtoP\x01ZDcloud.google.com/go/bigquery/biglake/apiv1alpha1/biglakepb;biglakepb'
+    _globals['_CATALOG'].fields_by_name['name']._loaded_options = None
+    _globals['_CATALOG'].fields_by_name['name']._serialized_options = b'\xe0A\x03\xfaA \n\x1ebiglake.googleapis.com/Catalog'
+    _globals['_CATALOG'].fields_by_name['create_time']._loaded_options = None
+    _globals['_CATALOG'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_CATALOG'].fields_by_name['update_time']._loaded_options = None
+    _globals['_CATALOG'].fields_by_name['update_time']._serialized_options = b'\xe0A\x03'
+    _globals['_CATALOG'].fields_by_name['delete_time']._loaded_options = None
+    _globals['_CATALOG'].fields_by_name['delete_time']._serialized_options = b'\xe0A\x03'
+    _globals['_CATALOG'].fields_by_name['expire_time']._loaded_options = None
+    _globals['_CATALOG'].fields_by_name['expire_time']._serialized_options = b'\xe0A\x03'
+    _globals['_CATALOG']._loaded_options = None
+    _globals['_CATALOG']._serialized_options = b'\xeaA\\\n\x1ebiglake.googleapis.com/Catalog\x12:projects/{project}/locations/{location}/catalogs/{catalog}'
+    _globals['_DATABASE'].fields_by_name['name']._loaded_options = None
+    _globals['_DATABASE'].fields_by_name['name']._serialized_options = b'\xe0A\x03\xfaA!\n\x1fbiglake.googleapis.com/Database'
+    _globals['_DATABASE'].fields_by_name['create_time']._loaded_options = None
+    _globals['_DATABASE'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_DATABASE'].fields_by_name['update_time']._loaded_options = None
+    _globals['_DATABASE'].fields_by_name['update_time']._serialized_options = b'\xe0A\x03'
+    _globals['_DATABASE'].fields_by_name['delete_time']._loaded_options = None
+    _globals['_DATABASE'].fields_by_name['delete_time']._serialized_options = b'\xe0A\x03'
+    _globals['_DATABASE'].fields_by_name['expire_time']._loaded_options = None
+    _globals['_DATABASE'].fields_by_name['expire_time']._serialized_options = b'\xe0A\x03'
+    _globals['_DATABASE']._loaded_options = None
+    _globals['_DATABASE']._serialized_options = b'\xeaAr\n\x1fbiglake.googleapis.com/Database\x12Oprojects/{project}/locations/{location}/catalogs/{catalog}/databases/{database}'
+    _globals['_TABLE'].fields_by_name['name']._loaded_options = None
+    _globals['_TABLE'].fields_by_name['name']._serialized_options = b'\xe0A\x03\xfaA\x1e\n\x1cbiglake.googleapis.com/Table'
+    _globals['_TABLE'].fields_by_name['create_time']._loaded_options = None
+    _globals['_TABLE'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_TABLE'].fields_by_name['update_time']._loaded_options = None
+    _globals['_TABLE'].fields_by_name['update_time']._serialized_options = b'\xe0A\x03'
+    _globals['_TABLE'].fields_by_name['delete_time']._loaded_options = None
+    _globals['_TABLE'].fields_by_name['delete_time']._serialized_options = b'\xe0A\x03'
+    _globals['_TABLE'].fields_by_name['expire_time']._loaded_options = None
+    _globals['_TABLE'].fields_by_name['expire_time']._serialized_options = b'\xe0A\x03'
+    _globals['_TABLE']._loaded_options = None
+    _globals['_TABLE']._serialized_options = b'\xeaA~\n\x1cbiglake.googleapis.com/Table\x12^projects/{project}/locations/{location}/catalogs/{catalog}/databases/{database}/tables/{table}'
+    _globals['_LOCK'].fields_by_name['name']._loaded_options = None
+    _globals['_LOCK'].fields_by_name['name']._serialized_options = b'\xe0A\x03\xfaA\x1d\n\x1bbiglake.googleapis.com/Lock'
+    _globals['_LOCK'].fields_by_name['create_time']._loaded_options = None
+    _globals['_LOCK'].fields_by_name['create_time']._serialized_options = b'\xe0A\x03'
+    _globals['_LOCK'].fields_by_name['state']._loaded_options = None
+    _globals['_LOCK'].fields_by_name['state']._serialized_options = b'\xe0A\x03'
+    _globals['_LOCK']._loaded_options = None
+    _globals['_LOCK']._serialized_options = b'\xeaA{\n\x1bbiglake.googleapis.com/Lock\x12\\projects/{project}/locations/{location}/catalogs/{catalog}/databases/{database}/locks/{lock}'
+    _globals['_CREATECATALOGREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATECATALOGREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\n!locations.googleapis.com/Location'
+    _globals['_CREATECATALOGREQUEST'].fields_by_name['catalog']._loaded_options = None
+    _globals['_CREATECATALOGREQUEST'].fields_by_name['catalog']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATECATALOGREQUEST'].fields_by_name['catalog_id']._loaded_options = None
+    _globals['_CREATECATALOGREQUEST'].fields_by_name['catalog_id']._serialized_options = b'\xe0A\x02'
+    _globals['_DELETECATALOGREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETECATALOGREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA \n\x1ebiglake.googleapis.com/Catalog'
+    _globals['_GETCATALOGREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETCATALOGREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA \n\x1ebiglake.googleapis.com/Catalog'
+    _globals['_LISTCATALOGSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTCATALOGSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\n!locations.googleapis.com/Location'
+    _globals['_CREATEDATABASEREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEDATABASEREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA \n\x1ebiglake.googleapis.com/Catalog'
+    _globals['_CREATEDATABASEREQUEST'].fields_by_name['database']._loaded_options = None
+    _globals['_CREATEDATABASEREQUEST'].fields_by_name['database']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEDATABASEREQUEST'].fields_by_name['database_id']._loaded_options = None
+    _globals['_CREATEDATABASEREQUEST'].fields_by_name['database_id']._serialized_options = b'\xe0A\x02'
+    _globals['_DELETEDATABASEREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEDATABASEREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA!\n\x1fbiglake.googleapis.com/Database'
+    _globals['_UPDATEDATABASEREQUEST'].fields_by_name['database']._loaded_options = None
+    _globals['_UPDATEDATABASEREQUEST'].fields_by_name['database']._serialized_options = b'\xe0A\x02'
+    _globals['_GETDATABASEREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETDATABASEREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA!\n\x1fbiglake.googleapis.com/Database'
+    _globals['_LISTDATABASESREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTDATABASESREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA \n\x1ebiglake.googleapis.com/Catalog'
+    _globals['_CREATETABLEREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATETABLEREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA!\n\x1fbiglake.googleapis.com/Database'
+    _globals['_CREATETABLEREQUEST'].fields_by_name['table']._loaded_options = None
+    _globals['_CREATETABLEREQUEST'].fields_by_name['table']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATETABLEREQUEST'].fields_by_name['table_id']._loaded_options = None
+    _globals['_CREATETABLEREQUEST'].fields_by_name['table_id']._serialized_options = b'\xe0A\x02'
+    _globals['_DELETETABLEREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETETABLEREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA\x1e\n\x1cbiglake.googleapis.com/Table'
+    _globals['_UPDATETABLEREQUEST'].fields_by_name['table']._loaded_options = None
+    _globals['_UPDATETABLEREQUEST'].fields_by_name['table']._serialized_options = b'\xe0A\x02'
+    _globals['_RENAMETABLEREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_RENAMETABLEREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA\x1e\n\x1cbiglake.googleapis.com/Table'
+    _globals['_RENAMETABLEREQUEST'].fields_by_name['new_name']._loaded_options = None
+    _globals['_RENAMETABLEREQUEST'].fields_by_name['new_name']._serialized_options = b'\xe0A\x02\xfaA\x1e\n\x1cbiglake.googleapis.com/Table'
+    _globals['_GETTABLEREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETTABLEREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA\x1e\n\x1cbiglake.googleapis.com/Table'
+    _globals['_LISTTABLESREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTTABLESREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA!\n\x1fbiglake.googleapis.com/Database'
+    _globals['_CREATELOCKREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATELOCKREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA!\n\x1fbiglake.googleapis.com/Database'
+    _globals['_CREATELOCKREQUEST'].fields_by_name['lock']._loaded_options = None
+    _globals['_CREATELOCKREQUEST'].fields_by_name['lock']._serialized_options = b'\xe0A\x02'
+    _globals['_DELETELOCKREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETELOCKREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA\x1d\n\x1bbiglake.googleapis.com/Lock'
+    _globals['_CHECKLOCKREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_CHECKLOCKREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA\x1d\n\x1bbiglake.googleapis.com/Lock'
+    _globals['_LISTLOCKSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTLOCKSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA!\n\x1fbiglake.googleapis.com/Database'
+    _globals['_HIVEDATABASEOPTIONS_PARAMETERSENTRY']._loaded_options = None
+    _globals['_HIVEDATABASEOPTIONS_PARAMETERSENTRY']._serialized_options = b'8\x01'
+    _globals['_HIVETABLEOPTIONS_PARAMETERSENTRY']._loaded_options = None
+    _globals['_HIVETABLEOPTIONS_PARAMETERSENTRY']._serialized_options = b'8\x01'
+    _globals['_METASTORESERVICE']._loaded_options = None
+    _globals['_METASTORESERVICE']._serialized_options = b'\xcaA\x16biglake.googleapis.com\xd2AWhttps://www.googleapis.com/auth/bigquery,https://www.googleapis.com/auth/cloud-platform'
+    _globals['_METASTORESERVICE'].methods_by_name['CreateCatalog']._loaded_options = None
+    _globals['_METASTORESERVICE'].methods_by_name['CreateCatalog']._serialized_options = b'\xdaA\x19parent,catalog,catalog_id\x82\xd3\xe4\x93\x02="2/v1alpha1/{parent=projects/*/locations/*}/catalogs:\x07catalog'
+    _globals['_METASTORESERVICE'].methods_by_name['DeleteCatalog']._loaded_options = None
+    _globals['_METASTORESERVICE'].methods_by_name['DeleteCatalog']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x024*2/v1alpha1/{name=projects/*/locations/*/catalogs/*}'
+    _globals['_METASTORESERVICE'].methods_by_name['GetCatalog']._loaded_options = None
+    _globals['_METASTORESERVICE'].methods_by_name['GetCatalog']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x024\x122/v1alpha1/{name=projects/*/locations/*/catalogs/*}'
+    _globals['_METASTORESERVICE'].methods_by_name['ListCatalogs']._loaded_options = None
+    _globals['_METASTORESERVICE'].methods_by_name['ListCatalogs']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x024\x122/v1alpha1/{parent=projects/*/locations/*}/catalogs'
+    _globals['_METASTORESERVICE'].methods_by_name['CreateDatabase']._loaded_options = None
+    _globals['_METASTORESERVICE'].methods_by_name['CreateDatabase']._serialized_options = b'\xdaA\x1bparent,database,database_id\x82\xd3\xe4\x93\x02J">/v1alpha1/{parent=projects/*/locations/*/catalogs/*}/databases:\x08database'
+    _globals['_METASTORESERVICE'].methods_by_name['DeleteDatabase']._loaded_options = None
+    _globals['_METASTORESERVICE'].methods_by_name['DeleteDatabase']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02@*>/v1alpha1/{name=projects/*/locations/*/catalogs/*/databases/*}'
+    _globals['_METASTORESERVICE'].methods_by_name['UpdateDatabase']._loaded_options = None
+    _globals['_METASTORESERVICE'].methods_by_name['UpdateDatabase']._serialized_options = b'\xdaA\x14database,update_mask\x82\xd3\xe4\x93\x02S2G/v1alpha1/{database.name=projects/*/locations/*/catalogs/*/databases/*}:\x08database'
+    _globals['_METASTORESERVICE'].methods_by_name['GetDatabase']._loaded_options = None
+    _globals['_METASTORESERVICE'].methods_by_name['GetDatabase']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02@\x12>/v1alpha1/{name=projects/*/locations/*/catalogs/*/databases/*}'
+    _globals['_METASTORESERVICE'].methods_by_name['ListDatabases']._loaded_options = None
+    _globals['_METASTORESERVICE'].methods_by_name['ListDatabases']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02@\x12>/v1alpha1/{parent=projects/*/locations/*/catalogs/*}/databases'
+    _globals['_METASTORESERVICE'].methods_by_name['CreateTable']._loaded_options = None
+    _globals['_METASTORESERVICE'].methods_by_name['CreateTable']._serialized_options = b'\xdaA\x15parent,table,table_id\x82\xd3\xe4\x93\x02P"G/v1alpha1/{parent=projects/*/locations/*/catalogs/*/databases/*}/tables:\x05table'
+    _globals['_METASTORESERVICE'].methods_by_name['DeleteTable']._loaded_options = None
+    _globals['_METASTORESERVICE'].methods_by_name['DeleteTable']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02I*G/v1alpha1/{name=projects/*/locations/*/catalogs/*/databases/*/tables/*}'
+    _globals['_METASTORESERVICE'].methods_by_name['UpdateTable']._loaded_options = None
+    _globals['_METASTORESERVICE'].methods_by_name['UpdateTable']._serialized_options = b'\xdaA\x11table,update_mask\x82\xd3\xe4\x93\x02V2M/v1alpha1/{table.name=projects/*/locations/*/catalogs/*/databases/*/tables/*}:\x05table'
+    _globals['_METASTORESERVICE'].methods_by_name['RenameTable']._loaded_options = None
+    _globals['_METASTORESERVICE'].methods_by_name['RenameTable']._serialized_options = b'\xdaA\rname,new_name\x82\xd3\xe4\x93\x02S"N/v1alpha1/{name=projects/*/locations/*/catalogs/*/databases/*/tables/*}:rename:\x01*'
+    _globals['_METASTORESERVICE'].methods_by_name['GetTable']._loaded_options = None
+    _globals['_METASTORESERVICE'].methods_by_name['GetTable']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02I\x12G/v1alpha1/{name=projects/*/locations/*/catalogs/*/databases/*/tables/*}'
+    _globals['_METASTORESERVICE'].methods_by_name['ListTables']._loaded_options = None
+    _globals['_METASTORESERVICE'].methods_by_name['ListTables']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02I\x12G/v1alpha1/{parent=projects/*/locations/*/catalogs/*/databases/*}/tables'
+    _globals['_METASTORESERVICE'].methods_by_name['CreateLock']._loaded_options = None
+    _globals['_METASTORESERVICE'].methods_by_name['CreateLock']._serialized_options = b'\xdaA\x0bparent,lock\x82\xd3\xe4\x93\x02N"F/v1alpha1/{parent=projects/*/locations/*/catalogs/*/databases/*}/locks:\x04lock'
+    _globals['_METASTORESERVICE'].methods_by_name['DeleteLock']._loaded_options = None
+    _globals['_METASTORESERVICE'].methods_by_name['DeleteLock']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02H*F/v1alpha1/{name=projects/*/locations/*/catalogs/*/databases/*/locks/*}'
+    _globals['_METASTORESERVICE'].methods_by_name['CheckLock']._loaded_options = None
+    _globals['_METASTORESERVICE'].methods_by_name['CheckLock']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02Q"L/v1alpha1/{name=projects/*/locations/*/catalogs/*/databases/*/locks/*}:check:\x01*'
+    _globals['_METASTORESERVICE'].methods_by_name['ListLocks']._loaded_options = None
+    _globals['_METASTORESERVICE'].methods_by_name['ListLocks']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02H\x12F/v1alpha1/{parent=projects/*/locations/*/catalogs/*/databases/*}/locks'
+    _globals['_TABLEVIEW']._serialized_start = 5818
+    _globals['_TABLEVIEW']._serialized_end = 5878
+    _globals['_CATALOG']._serialized_start = 310
+    _globals['_CATALOG']._serialized_end = 686
+    _globals['_DATABASE']._serialized_start = 689
+    _globals['_DATABASE']._serialized_end = 1294
+    _globals['_DATABASE_TYPE']._serialized_start = 1126
+    _globals['_DATABASE_TYPE']._serialized_end = 1164
+    _globals['_TABLE']._serialized_start = 1297
+    _globals['_TABLE']._serialized_end = 1917
+    _globals['_TABLE_TYPE']._serialized_start = 1126
+    _globals['_TABLE_TYPE']._serialized_end = 1164
+    _globals['_LOCK']._serialized_start = 1920
+    _globals['_LOCK']._serialized_end = 2433
+    _globals['_LOCK_TYPE']._serialized_start = 2190
+    _globals['_LOCK_TYPE']._serialized_end = 2233
+    _globals['_LOCK_STATE']._serialized_start = 2235
+    _globals['_LOCK_STATE']._serialized_end = 2292
+    _globals['_CREATECATALOGREQUEST']._serialized_start = 2436
+    _globals['_CREATECATALOGREQUEST']._serialized_end = 2613
+    _globals['_DELETECATALOGREQUEST']._serialized_start = 2615
+    _globals['_DELETECATALOGREQUEST']._serialized_end = 2691
+    _globals['_GETCATALOGREQUEST']._serialized_start = 2693
+    _globals['_GETCATALOGREQUEST']._serialized_end = 2766
+    _globals['_LISTCATALOGSREQUEST']._serialized_start = 2768
+    _globals['_LISTCATALOGSREQUEST']._serialized_end = 2887
+    _globals['_LISTCATALOGSRESPONSE']._serialized_start = 2889
+    _globals['_LISTCATALOGSRESPONSE']._serialized_end = 3003
+    _globals['_CREATEDATABASEREQUEST']._serialized_start = 3006
+    _globals['_CREATEDATABASEREQUEST']._serialized_end = 3184
+    _globals['_DELETEDATABASEREQUEST']._serialized_start = 3186
+    _globals['_DELETEDATABASEREQUEST']._serialized_end = 3264
+    _globals['_UPDATEDATABASEREQUEST']._serialized_start = 3267
+    _globals['_UPDATEDATABASEREQUEST']._serialized_end = 3412
+    _globals['_GETDATABASEREQUEST']._serialized_start = 3414
+    _globals['_GETDATABASEREQUEST']._serialized_end = 3489
+    _globals['_LISTDATABASESREQUEST']._serialized_start = 3491
+    _globals['_LISTDATABASESREQUEST']._serialized_end = 3608
+    _globals['_LISTDATABASESRESPONSE']._serialized_start = 3610
+    _globals['_LISTDATABASESRESPONSE']._serialized_end = 3727
+    _globals['_CREATETABLEREQUEST']._serialized_start = 3730
+    _globals['_CREATETABLEREQUEST']._serialized_end = 3897
+    _globals['_DELETETABLEREQUEST']._serialized_start = 3899
+    _globals['_DELETETABLEREQUEST']._serialized_end = 3971
+    _globals['_UPDATETABLEREQUEST']._serialized_start = 3974
+    _globals['_UPDATETABLEREQUEST']._serialized_end = 4110
+    _globals['_RENAMETABLEREQUEST']._serialized_start = 4113
+    _globals['_RENAMETABLEREQUEST']._serialized_end = 4241
+    _globals['_GETTABLEREQUEST']._serialized_start = 4243
+    _globals['_GETTABLEREQUEST']._serialized_end = 4312
+    _globals['_LISTTABLESREQUEST']._serialized_start = 4315
+    _globals['_LISTTABLESREQUEST']._serialized_end = 4495
+    _globals['_LISTTABLESRESPONSE']._serialized_start = 4497
+    _globals['_LISTTABLESRESPONSE']._serialized_end = 4605
+    _globals['_CREATELOCKREQUEST']._serialized_start = 4608
+    _globals['_CREATELOCKREQUEST']._serialized_end = 4749
+    _globals['_DELETELOCKREQUEST']._serialized_start = 4751
+    _globals['_DELETELOCKREQUEST']._serialized_end = 4821
+    _globals['_CHECKLOCKREQUEST']._serialized_start = 4823
+    _globals['_CHECKLOCKREQUEST']._serialized_end = 4892
+    _globals['_LISTLOCKSREQUEST']._serialized_start = 4894
+    _globals['_LISTLOCKSREQUEST']._serialized_end = 5008
+    _globals['_LISTLOCKSRESPONSE']._serialized_start = 5010
+    _globals['_LISTLOCKSRESPONSE']._serialized_end = 5115
+    _globals['_HIVEDATABASEOPTIONS']._serialized_start = 5118
+    _globals['_HIVEDATABASEOPTIONS']._serialized_end = 5309
+    _globals['_HIVEDATABASEOPTIONS_PARAMETERSENTRY']._serialized_start = 5260
+    _globals['_HIVEDATABASEOPTIONS_PARAMETERSENTRY']._serialized_end = 5309
+    _globals['_HIVETABLEOPTIONS']._serialized_start = 5312
+    _globals['_HIVETABLEOPTIONS']._serialized_end = 5816
+    _globals['_HIVETABLEOPTIONS_SERDEINFO']._serialized_start = 5550
+    _globals['_HIVETABLEOPTIONS_SERDEINFO']._serialized_end = 5588
+    _globals['_HIVETABLEOPTIONS_STORAGEDESCRIPTOR']._serialized_start = 5591
+    _globals['_HIVETABLEOPTIONS_STORAGEDESCRIPTOR']._serialized_end = 5765
+    _globals['_HIVETABLEOPTIONS_PARAMETERSENTRY']._serialized_start = 5260
+    _globals['_HIVETABLEOPTIONS_PARAMETERSENTRY']._serialized_end = 5309
+    _globals['_METASTORESERVICE']._serialized_start = 5881
+    _globals['_METASTORESERVICE']._serialized_end = 10148

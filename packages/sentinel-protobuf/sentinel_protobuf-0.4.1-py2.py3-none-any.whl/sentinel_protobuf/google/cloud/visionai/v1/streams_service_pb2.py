@@ -1,0 +1,239 @@
+"""Generated protocol buffer code."""
+from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
+from google.protobuf import runtime_version as _runtime_version
+from google.protobuf import symbol_database as _symbol_database
+from google.protobuf.internal import builder as _builder
+_runtime_version.ValidateProtobufRuntimeVersion(_runtime_version.Domain.PUBLIC, 5, 28, 1, '', 'google/cloud/visionai/v1/streams_service.proto')
+_sym_db = _symbol_database.Default()
+from .....google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from .....google.api import client_pb2 as google_dot_api_dot_client__pb2
+from .....google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+from .....google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+from .....google.cloud.visionai.v1 import common_pb2 as google_dot_cloud_dot_visionai_dot_v1_dot_common__pb2
+from .....google.cloud.visionai.v1 import streams_resources_pb2 as google_dot_cloud_dot_visionai_dot_v1_dot_streams__resources__pb2
+from .....google.longrunning import operations_pb2 as google_dot_longrunning_dot_operations__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
+from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n.google/cloud/visionai/v1/streams_service.proto\x12\x18google.cloud.visionai.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a%google/cloud/visionai/v1/common.proto\x1a0google/cloud/visionai/v1/streams_resources.proto\x1a#google/longrunning/operations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto\x1a\x1fgoogle/protobuf/timestamp.proto"\x99\x01\n\x13ListClustersRequest\x129\n\x06parent\x18\x01 \x01(\tB)\xe0A\x02\xfaA#\n!locations.googleapis.com/Location\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t\x12\x0e\n\x06filter\x18\x04 \x01(\t\x12\x10\n\x08order_by\x18\x05 \x01(\t"y\n\x14ListClustersResponse\x123\n\x08clusters\x18\x01 \x03(\x0b2!.google.cloud.visionai.v1.Cluster\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x13\n\x0bunreachable\x18\x03 \x03(\t"J\n\x11GetClusterRequest\x125\n\x04name\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\n\x1fvisionai.googleapis.com/Cluster"\xba\x01\n\x14CreateClusterRequest\x127\n\x06parent\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\x12\x1fvisionai.googleapis.com/Cluster\x12\x17\n\ncluster_id\x18\x02 \x01(\tB\x03\xe0A\x02\x127\n\x07cluster\x18\x03 \x01(\x0b2!.google.cloud.visionai.v1.ClusterB\x03\xe0A\x02\x12\x17\n\nrequest_id\x18\x04 \x01(\tB\x03\xe0A\x01"\x9e\x01\n\x14UpdateClusterRequest\x124\n\x0bupdate_mask\x18\x01 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x02\x127\n\x07cluster\x18\x02 \x01(\x0b2!.google.cloud.visionai.v1.ClusterB\x03\xe0A\x02\x12\x17\n\nrequest_id\x18\x03 \x01(\tB\x03\xe0A\x01"f\n\x14DeleteClusterRequest\x125\n\x04name\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\n\x1fvisionai.googleapis.com/Cluster\x12\x17\n\nrequest_id\x18\x02 \x01(\tB\x03\xe0A\x01"\x96\x01\n\x12ListStreamsRequest\x127\n\x06parent\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\n\x1fvisionai.googleapis.com/Cluster\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t\x12\x0e\n\x06filter\x18\x04 \x01(\t\x12\x10\n\x08order_by\x18\x05 \x01(\t"v\n\x13ListStreamsResponse\x121\n\x07streams\x18\x01 \x03(\x0b2 .google.cloud.visionai.v1.Stream\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x13\n\x0bunreachable\x18\x03 \x03(\t"H\n\x10GetStreamRequest\x124\n\x04name\x18\x01 \x01(\tB&\xe0A\x02\xfaA \n\x1evisionai.googleapis.com/Stream"\xb6\x01\n\x13CreateStreamRequest\x127\n\x06parent\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\n\x1fvisionai.googleapis.com/Cluster\x12\x16\n\tstream_id\x18\x02 \x01(\tB\x03\xe0A\x02\x125\n\x06stream\x18\x03 \x01(\x0b2 .google.cloud.visionai.v1.StreamB\x03\xe0A\x02\x12\x17\n\nrequest_id\x18\x04 \x01(\tB\x03\xe0A\x01"\x9b\x01\n\x13UpdateStreamRequest\x124\n\x0bupdate_mask\x18\x01 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x02\x125\n\x06stream\x18\x02 \x01(\x0b2 .google.cloud.visionai.v1.StreamB\x03\xe0A\x02\x12\x17\n\nrequest_id\x18\x03 \x01(\tB\x03\xe0A\x01"d\n\x13DeleteStreamRequest\x124\n\x04name\x18\x01 \x01(\tB&\xe0A\x02\xfaA \n\x1evisionai.googleapis.com/Stream\x12\x17\n\nrequest_id\x18\x02 \x01(\tB\x03\xe0A\x01"{\n\x19GetStreamThumbnailRequest\x12\x13\n\x06stream\x18\x01 \x01(\tB\x03\xe0A\x02\x12\x1c\n\x0fgcs_object_name\x18\x02 \x01(\tB\x03\xe0A\x02\x12\x12\n\x05event\x18\x03 \x01(\tB\x03\xe0A\x01\x12\x17\n\nrequest_id\x18\x04 \x01(\tB\x03\xe0A\x01"\x1c\n\x1aGetStreamThumbnailResponse"4\n\x1dGenerateStreamHlsTokenRequest\x12\x13\n\x06stream\x18\x01 \x01(\tB\x03\xe0A\x02"d\n\x1eGenerateStreamHlsTokenResponse\x12\r\n\x05token\x18\x01 \x01(\t\x123\n\x0fexpiration_time\x18\x02 \x01(\x0b2\x1a.google.protobuf.Timestamp"\x95\x01\n\x11ListEventsRequest\x127\n\x06parent\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\n\x1fvisionai.googleapis.com/Cluster\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t\x12\x0e\n\x06filter\x18\x04 \x01(\t\x12\x10\n\x08order_by\x18\x05 \x01(\t"s\n\x12ListEventsResponse\x12/\n\x06events\x18\x01 \x03(\x0b2\x1f.google.cloud.visionai.v1.Event\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x13\n\x0bunreachable\x18\x03 \x03(\t"F\n\x0fGetEventRequest\x123\n\x04name\x18\x01 \x01(\tB%\xe0A\x02\xfaA\x1f\n\x1dvisionai.googleapis.com/Event"\xb2\x01\n\x12CreateEventRequest\x127\n\x06parent\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\n\x1fvisionai.googleapis.com/Cluster\x12\x15\n\x08event_id\x18\x02 \x01(\tB\x03\xe0A\x02\x123\n\x05event\x18\x03 \x01(\x0b2\x1f.google.cloud.visionai.v1.EventB\x03\xe0A\x02\x12\x17\n\nrequest_id\x18\x04 \x01(\tB\x03\xe0A\x01"\x98\x01\n\x12UpdateEventRequest\x124\n\x0bupdate_mask\x18\x01 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x02\x123\n\x05event\x18\x02 \x01(\x0b2\x1f.google.cloud.visionai.v1.EventB\x03\xe0A\x02\x12\x17\n\nrequest_id\x18\x03 \x01(\tB\x03\xe0A\x01"b\n\x12DeleteEventRequest\x123\n\x04name\x18\x01 \x01(\tB%\xe0A\x02\xfaA\x1f\n\x1dvisionai.googleapis.com/Event\x12\x17\n\nrequest_id\x18\x02 \x01(\tB\x03\xe0A\x01"\x95\x01\n\x11ListSeriesRequest\x127\n\x06parent\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\n\x1fvisionai.googleapis.com/Cluster\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t\x12\x0e\n\x06filter\x18\x04 \x01(\t\x12\x10\n\x08order_by\x18\x05 \x01(\t"t\n\x12ListSeriesResponse\x120\n\x06series\x18\x01 \x03(\x0b2 .google.cloud.visionai.v1.Series\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x13\n\x0bunreachable\x18\x03 \x03(\t"H\n\x10GetSeriesRequest\x124\n\x04name\x18\x01 \x01(\tB&\xe0A\x02\xfaA \n\x1evisionai.googleapis.com/Series"\xb6\x01\n\x13CreateSeriesRequest\x127\n\x06parent\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\n\x1fvisionai.googleapis.com/Cluster\x12\x16\n\tseries_id\x18\x02 \x01(\tB\x03\xe0A\x02\x125\n\x06series\x18\x03 \x01(\x0b2 .google.cloud.visionai.v1.SeriesB\x03\xe0A\x02\x12\x17\n\nrequest_id\x18\x04 \x01(\tB\x03\xe0A\x01"\x9b\x01\n\x13UpdateSeriesRequest\x124\n\x0bupdate_mask\x18\x01 \x01(\x0b2\x1a.google.protobuf.FieldMaskB\x03\xe0A\x02\x125\n\x06series\x18\x02 \x01(\x0b2 .google.cloud.visionai.v1.SeriesB\x03\xe0A\x02\x12\x17\n\nrequest_id\x18\x03 \x01(\tB\x03\xe0A\x01"d\n\x13DeleteSeriesRequest\x124\n\x04name\x18\x01 \x01(\tB&\xe0A\x02\xfaA \n\x1evisionai.googleapis.com/Series\x12\x17\n\nrequest_id\x18\x02 \x01(\tB\x03\xe0A\x01"\xbf\x01\n\x19MaterializeChannelRequest\x127\n\x06parent\x18\x01 \x01(\tB\'\xe0A\x02\xfaA!\n\x1fvisionai.googleapis.com/Cluster\x12\x17\n\nchannel_id\x18\x02 \x01(\tB\x03\xe0A\x02\x127\n\x07channel\x18\x03 \x01(\x0b2!.google.cloud.visionai.v1.ChannelB\x03\xe0A\x02\x12\x17\n\nrequest_id\x18\x04 \x01(\tB\x03\xe0A\x012\xbc%\n\x0eStreamsService\x12\xac\x01\n\x0cListClusters\x12-.google.cloud.visionai.v1.ListClustersRequest\x1a..google.cloud.visionai.v1.ListClustersResponse"=\xdaA\x06parent\x82\xd3\xe4\x93\x02.\x12,/v1/{parent=projects/*/locations/*}/clusters\x12\x99\x01\n\nGetCluster\x12+.google.cloud.visionai.v1.GetClusterRequest\x1a!.google.cloud.visionai.v1.Cluster";\xdaA\x04name\x82\xd3\xe4\x93\x02.\x12,/v1/{name=projects/*/locations/*/clusters/*}\x12\xd8\x01\n\rCreateCluster\x12..google.cloud.visionai.v1.CreateClusterRequest\x1a\x1d.google.longrunning.Operation"x\xcaA\x1c\n\x07Cluster\x12\x11OperationMetadata\xdaA\x19parent,cluster,cluster_id\x82\xd3\xe4\x93\x027",/v1/{parent=projects/*/locations/*}/clusters:\x07cluster\x12\xda\x01\n\rUpdateCluster\x12..google.cloud.visionai.v1.UpdateClusterRequest\x1a\x1d.google.longrunning.Operation"z\xcaA\x1c\n\x07Cluster\x12\x11OperationMetadata\xdaA\x13cluster,update_mask\x82\xd3\xe4\x93\x02?24/v1/{cluster.name=projects/*/locations/*/clusters/*}:\x07cluster\x12\xc8\x01\n\rDeleteCluster\x12..google.cloud.visionai.v1.DeleteClusterRequest\x1a\x1d.google.longrunning.Operation"h\xcaA*\n\x15google.protobuf.Empty\x12\x11OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02.*,/v1/{name=projects/*/locations/*/clusters/*}\x12\xb3\x01\n\x0bListStreams\x12,.google.cloud.visionai.v1.ListStreamsRequest\x1a-.google.cloud.visionai.v1.ListStreamsResponse"G\xdaA\x06parent\x82\xd3\xe4\x93\x028\x126/v1/{parent=projects/*/locations/*/clusters/*}/streams\x12\xa0\x01\n\tGetStream\x12*.google.cloud.visionai.v1.GetStreamRequest\x1a .google.cloud.visionai.v1.Stream"E\xdaA\x04name\x82\xd3\xe4\x93\x028\x126/v1/{name=projects/*/locations/*/clusters/*/streams/*}\x12\xdc\x01\n\x0cCreateStream\x12-.google.cloud.visionai.v1.CreateStreamRequest\x1a\x1d.google.longrunning.Operation"~\xcaA\x1b\n\x06Stream\x12\x11OperationMetadata\xdaA\x17parent,stream,stream_id\x82\xd3\xe4\x93\x02@"6/v1/{parent=projects/*/locations/*/clusters/*}/streams:\x06stream\x12\xdf\x01\n\x0cUpdateStream\x12-.google.cloud.visionai.v1.UpdateStreamRequest\x1a\x1d.google.longrunning.Operation"\x80\x01\xcaA\x1b\n\x06Stream\x12\x11OperationMetadata\xdaA\x12stream,update_mask\x82\xd3\xe4\x93\x02G2=/v1/{stream.name=projects/*/locations/*/clusters/*/streams/*}:\x06stream\x12\xd0\x01\n\x0cDeleteStream\x12-.google.cloud.visionai.v1.DeleteStreamRequest\x1a\x1d.google.longrunning.Operation"r\xcaA*\n\x15google.protobuf.Empty\x12\x11OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x028*6/v1/{name=projects/*/locations/*/clusters/*/streams/*}\x12\x86\x02\n\x12GetStreamThumbnail\x123.google.cloud.visionai.v1.GetStreamThumbnailRequest\x1a\x1d.google.longrunning.Operation"\x9b\x01\xcaA/\n\x1aGetStreamThumbnailResponse\x12\x11OperationMetadata\xdaA\x16stream,gcs_object_name\x82\xd3\xe4\x93\x02J"E/v1/{stream=projects/*/locations/*/clusters/*/streams/*}:getThumbnail:\x01*\x12\xf0\x01\n\x16GenerateStreamHlsToken\x127.google.cloud.visionai.v1.GenerateStreamHlsTokenRequest\x1a8.google.cloud.visionai.v1.GenerateStreamHlsTokenResponse"c\xdaA\x06stream\x82\xd3\xe4\x93\x02T"O/v1/{stream=projects/*/locations/*/clusters/*/streams/*}:generateStreamHlsToken:\x01*\x12\xaf\x01\n\nListEvents\x12+.google.cloud.visionai.v1.ListEventsRequest\x1a,.google.cloud.visionai.v1.ListEventsResponse"F\xdaA\x06parent\x82\xd3\xe4\x93\x027\x125/v1/{parent=projects/*/locations/*/clusters/*}/events\x12\x9c\x01\n\x08GetEvent\x12).google.cloud.visionai.v1.GetEventRequest\x1a\x1f.google.cloud.visionai.v1.Event"D\xdaA\x04name\x82\xd3\xe4\x93\x027\x125/v1/{name=projects/*/locations/*/clusters/*/events/*}\x12\xd5\x01\n\x0bCreateEvent\x12,.google.cloud.visionai.v1.CreateEventRequest\x1a\x1d.google.longrunning.Operation"y\xcaA\x1a\n\x05Event\x12\x11OperationMetadata\xdaA\x15parent,event,event_id\x82\xd3\xe4\x93\x02>"5/v1/{parent=projects/*/locations/*/clusters/*}/events:\x05event\x12\xd7\x01\n\x0bUpdateEvent\x12,.google.cloud.visionai.v1.UpdateEventRequest\x1a\x1d.google.longrunning.Operation"{\xcaA\x1a\n\x05Event\x12\x11OperationMetadata\xdaA\x11event,update_mask\x82\xd3\xe4\x93\x02D2;/v1/{event.name=projects/*/locations/*/clusters/*/events/*}:\x05event\x12\xcd\x01\n\x0bDeleteEvent\x12,.google.cloud.visionai.v1.DeleteEventRequest\x1a\x1d.google.longrunning.Operation"q\xcaA*\n\x15google.protobuf.Empty\x12\x11OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x027*5/v1/{name=projects/*/locations/*/clusters/*/events/*}\x12\xaf\x01\n\nListSeries\x12+.google.cloud.visionai.v1.ListSeriesRequest\x1a,.google.cloud.visionai.v1.ListSeriesResponse"F\xdaA\x06parent\x82\xd3\xe4\x93\x027\x125/v1/{parent=projects/*/locations/*/clusters/*}/series\x12\x9f\x01\n\tGetSeries\x12*.google.cloud.visionai.v1.GetSeriesRequest\x1a .google.cloud.visionai.v1.Series"D\xdaA\x04name\x82\xd3\xe4\x93\x027\x125/v1/{name=projects/*/locations/*/clusters/*/series/*}\x12\xdb\x01\n\x0cCreateSeries\x12-.google.cloud.visionai.v1.CreateSeriesRequest\x1a\x1d.google.longrunning.Operation"}\xcaA\x1b\n\x06Series\x12\x11OperationMetadata\xdaA\x17parent,series,series_id\x82\xd3\xe4\x93\x02?"5/v1/{parent=projects/*/locations/*/clusters/*}/series:\x06series\x12\xdd\x01\n\x0cUpdateSeries\x12-.google.cloud.visionai.v1.UpdateSeriesRequest\x1a\x1d.google.longrunning.Operation"\x7f\xcaA\x1b\n\x06Series\x12\x11OperationMetadata\xdaA\x12series,update_mask\x82\xd3\xe4\x93\x02F2</v1/{series.name=projects/*/locations/*/clusters/*/series/*}:\x06series\x12\xcf\x01\n\x0cDeleteSeries\x12-.google.cloud.visionai.v1.DeleteSeriesRequest\x1a\x1d.google.longrunning.Operation"q\xcaA*\n\x15google.protobuf.Empty\x12\x11OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x027*5/v1/{name=projects/*/locations/*/clusters/*/series/*}\x12\xee\x01\n\x12MaterializeChannel\x123.google.cloud.visionai.v1.MaterializeChannelRequest\x1a\x1d.google.longrunning.Operation"\x83\x01\xcaA\x1c\n\x07Channel\x12\x11OperationMetadata\xdaA\x19parent,channel,channel_id\x82\xd3\xe4\x93\x02B"7/v1/{parent=projects/*/locations/*/clusters/*}/channels:\x07channel\x1aK\xcaA\x17visionai.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platformB\xc3\x01\n\x1ccom.google.cloud.visionai.v1B\x13StreamsServiceProtoP\x01Z8cloud.google.com/go/visionai/apiv1/visionaipb;visionaipb\xaa\x02\x18Google.Cloud.VisionAI.V1\xca\x02\x18Google\\Cloud\\VisionAI\\V1\xea\x02\x1bGoogle::Cloud::VisionAI::V1b\x06proto3')
+_globals = globals()
+_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.visionai.v1.streams_service_pb2', _globals)
+if not _descriptor._USE_C_DESCRIPTORS:
+    _globals['DESCRIPTOR']._loaded_options = None
+    _globals['DESCRIPTOR']._serialized_options = b'\n\x1ccom.google.cloud.visionai.v1B\x13StreamsServiceProtoP\x01Z8cloud.google.com/go/visionai/apiv1/visionaipb;visionaipb\xaa\x02\x18Google.Cloud.VisionAI.V1\xca\x02\x18Google\\Cloud\\VisionAI\\V1\xea\x02\x1bGoogle::Cloud::VisionAI::V1'
+    _globals['_LISTCLUSTERSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTCLUSTERSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA#\n!locations.googleapis.com/Location'
+    _globals['_GETCLUSTERREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETCLUSTERREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA!\n\x1fvisionai.googleapis.com/Cluster'
+    _globals['_CREATECLUSTERREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATECLUSTERREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA!\x12\x1fvisionai.googleapis.com/Cluster'
+    _globals['_CREATECLUSTERREQUEST'].fields_by_name['cluster_id']._loaded_options = None
+    _globals['_CREATECLUSTERREQUEST'].fields_by_name['cluster_id']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATECLUSTERREQUEST'].fields_by_name['cluster']._loaded_options = None
+    _globals['_CREATECLUSTERREQUEST'].fields_by_name['cluster']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATECLUSTERREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_CREATECLUSTERREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01'
+    _globals['_UPDATECLUSTERREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATECLUSTERREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATECLUSTERREQUEST'].fields_by_name['cluster']._loaded_options = None
+    _globals['_UPDATECLUSTERREQUEST'].fields_by_name['cluster']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATECLUSTERREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_UPDATECLUSTERREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01'
+    _globals['_DELETECLUSTERREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETECLUSTERREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA!\n\x1fvisionai.googleapis.com/Cluster'
+    _globals['_DELETECLUSTERREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_DELETECLUSTERREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTSTREAMSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTSTREAMSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA!\n\x1fvisionai.googleapis.com/Cluster'
+    _globals['_GETSTREAMREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETSTREAMREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA \n\x1evisionai.googleapis.com/Stream'
+    _globals['_CREATESTREAMREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATESTREAMREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA!\n\x1fvisionai.googleapis.com/Cluster'
+    _globals['_CREATESTREAMREQUEST'].fields_by_name['stream_id']._loaded_options = None
+    _globals['_CREATESTREAMREQUEST'].fields_by_name['stream_id']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATESTREAMREQUEST'].fields_by_name['stream']._loaded_options = None
+    _globals['_CREATESTREAMREQUEST'].fields_by_name['stream']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATESTREAMREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_CREATESTREAMREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01'
+    _globals['_UPDATESTREAMREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATESTREAMREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATESTREAMREQUEST'].fields_by_name['stream']._loaded_options = None
+    _globals['_UPDATESTREAMREQUEST'].fields_by_name['stream']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATESTREAMREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_UPDATESTREAMREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01'
+    _globals['_DELETESTREAMREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETESTREAMREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA \n\x1evisionai.googleapis.com/Stream'
+    _globals['_DELETESTREAMREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_DELETESTREAMREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01'
+    _globals['_GETSTREAMTHUMBNAILREQUEST'].fields_by_name['stream']._loaded_options = None
+    _globals['_GETSTREAMTHUMBNAILREQUEST'].fields_by_name['stream']._serialized_options = b'\xe0A\x02'
+    _globals['_GETSTREAMTHUMBNAILREQUEST'].fields_by_name['gcs_object_name']._loaded_options = None
+    _globals['_GETSTREAMTHUMBNAILREQUEST'].fields_by_name['gcs_object_name']._serialized_options = b'\xe0A\x02'
+    _globals['_GETSTREAMTHUMBNAILREQUEST'].fields_by_name['event']._loaded_options = None
+    _globals['_GETSTREAMTHUMBNAILREQUEST'].fields_by_name['event']._serialized_options = b'\xe0A\x01'
+    _globals['_GETSTREAMTHUMBNAILREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_GETSTREAMTHUMBNAILREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01'
+    _globals['_GENERATESTREAMHLSTOKENREQUEST'].fields_by_name['stream']._loaded_options = None
+    _globals['_GENERATESTREAMHLSTOKENREQUEST'].fields_by_name['stream']._serialized_options = b'\xe0A\x02'
+    _globals['_LISTEVENTSREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTEVENTSREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA!\n\x1fvisionai.googleapis.com/Cluster'
+    _globals['_GETEVENTREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETEVENTREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA\x1f\n\x1dvisionai.googleapis.com/Event'
+    _globals['_CREATEEVENTREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATEEVENTREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA!\n\x1fvisionai.googleapis.com/Cluster'
+    _globals['_CREATEEVENTREQUEST'].fields_by_name['event_id']._loaded_options = None
+    _globals['_CREATEEVENTREQUEST'].fields_by_name['event_id']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEEVENTREQUEST'].fields_by_name['event']._loaded_options = None
+    _globals['_CREATEEVENTREQUEST'].fields_by_name['event']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATEEVENTREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_CREATEEVENTREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01'
+    _globals['_UPDATEEVENTREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATEEVENTREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATEEVENTREQUEST'].fields_by_name['event']._loaded_options = None
+    _globals['_UPDATEEVENTREQUEST'].fields_by_name['event']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATEEVENTREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_UPDATEEVENTREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01'
+    _globals['_DELETEEVENTREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETEEVENTREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA\x1f\n\x1dvisionai.googleapis.com/Event'
+    _globals['_DELETEEVENTREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_DELETEEVENTREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01'
+    _globals['_LISTSERIESREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_LISTSERIESREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA!\n\x1fvisionai.googleapis.com/Cluster'
+    _globals['_GETSERIESREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_GETSERIESREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA \n\x1evisionai.googleapis.com/Series'
+    _globals['_CREATESERIESREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_CREATESERIESREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA!\n\x1fvisionai.googleapis.com/Cluster'
+    _globals['_CREATESERIESREQUEST'].fields_by_name['series_id']._loaded_options = None
+    _globals['_CREATESERIESREQUEST'].fields_by_name['series_id']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATESERIESREQUEST'].fields_by_name['series']._loaded_options = None
+    _globals['_CREATESERIESREQUEST'].fields_by_name['series']._serialized_options = b'\xe0A\x02'
+    _globals['_CREATESERIESREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_CREATESERIESREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01'
+    _globals['_UPDATESERIESREQUEST'].fields_by_name['update_mask']._loaded_options = None
+    _globals['_UPDATESERIESREQUEST'].fields_by_name['update_mask']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATESERIESREQUEST'].fields_by_name['series']._loaded_options = None
+    _globals['_UPDATESERIESREQUEST'].fields_by_name['series']._serialized_options = b'\xe0A\x02'
+    _globals['_UPDATESERIESREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_UPDATESERIESREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01'
+    _globals['_DELETESERIESREQUEST'].fields_by_name['name']._loaded_options = None
+    _globals['_DELETESERIESREQUEST'].fields_by_name['name']._serialized_options = b'\xe0A\x02\xfaA \n\x1evisionai.googleapis.com/Series'
+    _globals['_DELETESERIESREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_DELETESERIESREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01'
+    _globals['_MATERIALIZECHANNELREQUEST'].fields_by_name['parent']._loaded_options = None
+    _globals['_MATERIALIZECHANNELREQUEST'].fields_by_name['parent']._serialized_options = b'\xe0A\x02\xfaA!\n\x1fvisionai.googleapis.com/Cluster'
+    _globals['_MATERIALIZECHANNELREQUEST'].fields_by_name['channel_id']._loaded_options = None
+    _globals['_MATERIALIZECHANNELREQUEST'].fields_by_name['channel_id']._serialized_options = b'\xe0A\x02'
+    _globals['_MATERIALIZECHANNELREQUEST'].fields_by_name['channel']._loaded_options = None
+    _globals['_MATERIALIZECHANNELREQUEST'].fields_by_name['channel']._serialized_options = b'\xe0A\x02'
+    _globals['_MATERIALIZECHANNELREQUEST'].fields_by_name['request_id']._loaded_options = None
+    _globals['_MATERIALIZECHANNELREQUEST'].fields_by_name['request_id']._serialized_options = b'\xe0A\x01'
+    _globals['_STREAMSSERVICE']._loaded_options = None
+    _globals['_STREAMSSERVICE']._serialized_options = b'\xcaA\x17visionai.googleapis.com\xd2A.https://www.googleapis.com/auth/cloud-platform'
+    _globals['_STREAMSSERVICE'].methods_by_name['ListClusters']._loaded_options = None
+    _globals['_STREAMSSERVICE'].methods_by_name['ListClusters']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x02.\x12,/v1/{parent=projects/*/locations/*}/clusters'
+    _globals['_STREAMSSERVICE'].methods_by_name['GetCluster']._loaded_options = None
+    _globals['_STREAMSSERVICE'].methods_by_name['GetCluster']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x02.\x12,/v1/{name=projects/*/locations/*/clusters/*}'
+    _globals['_STREAMSSERVICE'].methods_by_name['CreateCluster']._loaded_options = None
+    _globals['_STREAMSSERVICE'].methods_by_name['CreateCluster']._serialized_options = b'\xcaA\x1c\n\x07Cluster\x12\x11OperationMetadata\xdaA\x19parent,cluster,cluster_id\x82\xd3\xe4\x93\x027",/v1/{parent=projects/*/locations/*}/clusters:\x07cluster'
+    _globals['_STREAMSSERVICE'].methods_by_name['UpdateCluster']._loaded_options = None
+    _globals['_STREAMSSERVICE'].methods_by_name['UpdateCluster']._serialized_options = b'\xcaA\x1c\n\x07Cluster\x12\x11OperationMetadata\xdaA\x13cluster,update_mask\x82\xd3\xe4\x93\x02?24/v1/{cluster.name=projects/*/locations/*/clusters/*}:\x07cluster'
+    _globals['_STREAMSSERVICE'].methods_by_name['DeleteCluster']._loaded_options = None
+    _globals['_STREAMSSERVICE'].methods_by_name['DeleteCluster']._serialized_options = b'\xcaA*\n\x15google.protobuf.Empty\x12\x11OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x02.*,/v1/{name=projects/*/locations/*/clusters/*}'
+    _globals['_STREAMSSERVICE'].methods_by_name['ListStreams']._loaded_options = None
+    _globals['_STREAMSSERVICE'].methods_by_name['ListStreams']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x028\x126/v1/{parent=projects/*/locations/*/clusters/*}/streams'
+    _globals['_STREAMSSERVICE'].methods_by_name['GetStream']._loaded_options = None
+    _globals['_STREAMSSERVICE'].methods_by_name['GetStream']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x028\x126/v1/{name=projects/*/locations/*/clusters/*/streams/*}'
+    _globals['_STREAMSSERVICE'].methods_by_name['CreateStream']._loaded_options = None
+    _globals['_STREAMSSERVICE'].methods_by_name['CreateStream']._serialized_options = b'\xcaA\x1b\n\x06Stream\x12\x11OperationMetadata\xdaA\x17parent,stream,stream_id\x82\xd3\xe4\x93\x02@"6/v1/{parent=projects/*/locations/*/clusters/*}/streams:\x06stream'
+    _globals['_STREAMSSERVICE'].methods_by_name['UpdateStream']._loaded_options = None
+    _globals['_STREAMSSERVICE'].methods_by_name['UpdateStream']._serialized_options = b'\xcaA\x1b\n\x06Stream\x12\x11OperationMetadata\xdaA\x12stream,update_mask\x82\xd3\xe4\x93\x02G2=/v1/{stream.name=projects/*/locations/*/clusters/*/streams/*}:\x06stream'
+    _globals['_STREAMSSERVICE'].methods_by_name['DeleteStream']._loaded_options = None
+    _globals['_STREAMSSERVICE'].methods_by_name['DeleteStream']._serialized_options = b'\xcaA*\n\x15google.protobuf.Empty\x12\x11OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x028*6/v1/{name=projects/*/locations/*/clusters/*/streams/*}'
+    _globals['_STREAMSSERVICE'].methods_by_name['GetStreamThumbnail']._loaded_options = None
+    _globals['_STREAMSSERVICE'].methods_by_name['GetStreamThumbnail']._serialized_options = b'\xcaA/\n\x1aGetStreamThumbnailResponse\x12\x11OperationMetadata\xdaA\x16stream,gcs_object_name\x82\xd3\xe4\x93\x02J"E/v1/{stream=projects/*/locations/*/clusters/*/streams/*}:getThumbnail:\x01*'
+    _globals['_STREAMSSERVICE'].methods_by_name['GenerateStreamHlsToken']._loaded_options = None
+    _globals['_STREAMSSERVICE'].methods_by_name['GenerateStreamHlsToken']._serialized_options = b'\xdaA\x06stream\x82\xd3\xe4\x93\x02T"O/v1/{stream=projects/*/locations/*/clusters/*/streams/*}:generateStreamHlsToken:\x01*'
+    _globals['_STREAMSSERVICE'].methods_by_name['ListEvents']._loaded_options = None
+    _globals['_STREAMSSERVICE'].methods_by_name['ListEvents']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x027\x125/v1/{parent=projects/*/locations/*/clusters/*}/events'
+    _globals['_STREAMSSERVICE'].methods_by_name['GetEvent']._loaded_options = None
+    _globals['_STREAMSSERVICE'].methods_by_name['GetEvent']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x027\x125/v1/{name=projects/*/locations/*/clusters/*/events/*}'
+    _globals['_STREAMSSERVICE'].methods_by_name['CreateEvent']._loaded_options = None
+    _globals['_STREAMSSERVICE'].methods_by_name['CreateEvent']._serialized_options = b'\xcaA\x1a\n\x05Event\x12\x11OperationMetadata\xdaA\x15parent,event,event_id\x82\xd3\xe4\x93\x02>"5/v1/{parent=projects/*/locations/*/clusters/*}/events:\x05event'
+    _globals['_STREAMSSERVICE'].methods_by_name['UpdateEvent']._loaded_options = None
+    _globals['_STREAMSSERVICE'].methods_by_name['UpdateEvent']._serialized_options = b'\xcaA\x1a\n\x05Event\x12\x11OperationMetadata\xdaA\x11event,update_mask\x82\xd3\xe4\x93\x02D2;/v1/{event.name=projects/*/locations/*/clusters/*/events/*}:\x05event'
+    _globals['_STREAMSSERVICE'].methods_by_name['DeleteEvent']._loaded_options = None
+    _globals['_STREAMSSERVICE'].methods_by_name['DeleteEvent']._serialized_options = b'\xcaA*\n\x15google.protobuf.Empty\x12\x11OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x027*5/v1/{name=projects/*/locations/*/clusters/*/events/*}'
+    _globals['_STREAMSSERVICE'].methods_by_name['ListSeries']._loaded_options = None
+    _globals['_STREAMSSERVICE'].methods_by_name['ListSeries']._serialized_options = b'\xdaA\x06parent\x82\xd3\xe4\x93\x027\x125/v1/{parent=projects/*/locations/*/clusters/*}/series'
+    _globals['_STREAMSSERVICE'].methods_by_name['GetSeries']._loaded_options = None
+    _globals['_STREAMSSERVICE'].methods_by_name['GetSeries']._serialized_options = b'\xdaA\x04name\x82\xd3\xe4\x93\x027\x125/v1/{name=projects/*/locations/*/clusters/*/series/*}'
+    _globals['_STREAMSSERVICE'].methods_by_name['CreateSeries']._loaded_options = None
+    _globals['_STREAMSSERVICE'].methods_by_name['CreateSeries']._serialized_options = b'\xcaA\x1b\n\x06Series\x12\x11OperationMetadata\xdaA\x17parent,series,series_id\x82\xd3\xe4\x93\x02?"5/v1/{parent=projects/*/locations/*/clusters/*}/series:\x06series'
+    _globals['_STREAMSSERVICE'].methods_by_name['UpdateSeries']._loaded_options = None
+    _globals['_STREAMSSERVICE'].methods_by_name['UpdateSeries']._serialized_options = b'\xcaA\x1b\n\x06Series\x12\x11OperationMetadata\xdaA\x12series,update_mask\x82\xd3\xe4\x93\x02F2</v1/{series.name=projects/*/locations/*/clusters/*/series/*}:\x06series'
+    _globals['_STREAMSSERVICE'].methods_by_name['DeleteSeries']._loaded_options = None
+    _globals['_STREAMSSERVICE'].methods_by_name['DeleteSeries']._serialized_options = b'\xcaA*\n\x15google.protobuf.Empty\x12\x11OperationMetadata\xdaA\x04name\x82\xd3\xe4\x93\x027*5/v1/{name=projects/*/locations/*/clusters/*/series/*}'
+    _globals['_STREAMSSERVICE'].methods_by_name['MaterializeChannel']._loaded_options = None
+    _globals['_STREAMSSERVICE'].methods_by_name['MaterializeChannel']._serialized_options = b'\xcaA\x1c\n\x07Channel\x12\x11OperationMetadata\xdaA\x19parent,channel,channel_id\x82\xd3\xe4\x93\x02B"7/v1/{parent=projects/*/locations/*/clusters/*}/channels:\x07channel'
+    _globals['_LISTCLUSTERSREQUEST']._serialized_start = 414
+    _globals['_LISTCLUSTERSREQUEST']._serialized_end = 567
+    _globals['_LISTCLUSTERSRESPONSE']._serialized_start = 569
+    _globals['_LISTCLUSTERSRESPONSE']._serialized_end = 690
+    _globals['_GETCLUSTERREQUEST']._serialized_start = 692
+    _globals['_GETCLUSTERREQUEST']._serialized_end = 766
+    _globals['_CREATECLUSTERREQUEST']._serialized_start = 769
+    _globals['_CREATECLUSTERREQUEST']._serialized_end = 955
+    _globals['_UPDATECLUSTERREQUEST']._serialized_start = 958
+    _globals['_UPDATECLUSTERREQUEST']._serialized_end = 1116
+    _globals['_DELETECLUSTERREQUEST']._serialized_start = 1118
+    _globals['_DELETECLUSTERREQUEST']._serialized_end = 1220
+    _globals['_LISTSTREAMSREQUEST']._serialized_start = 1223
+    _globals['_LISTSTREAMSREQUEST']._serialized_end = 1373
+    _globals['_LISTSTREAMSRESPONSE']._serialized_start = 1375
+    _globals['_LISTSTREAMSRESPONSE']._serialized_end = 1493
+    _globals['_GETSTREAMREQUEST']._serialized_start = 1495
+    _globals['_GETSTREAMREQUEST']._serialized_end = 1567
+    _globals['_CREATESTREAMREQUEST']._serialized_start = 1570
+    _globals['_CREATESTREAMREQUEST']._serialized_end = 1752
+    _globals['_UPDATESTREAMREQUEST']._serialized_start = 1755
+    _globals['_UPDATESTREAMREQUEST']._serialized_end = 1910
+    _globals['_DELETESTREAMREQUEST']._serialized_start = 1912
+    _globals['_DELETESTREAMREQUEST']._serialized_end = 2012
+    _globals['_GETSTREAMTHUMBNAILREQUEST']._serialized_start = 2014
+    _globals['_GETSTREAMTHUMBNAILREQUEST']._serialized_end = 2137
+    _globals['_GETSTREAMTHUMBNAILRESPONSE']._serialized_start = 2139
+    _globals['_GETSTREAMTHUMBNAILRESPONSE']._serialized_end = 2167
+    _globals['_GENERATESTREAMHLSTOKENREQUEST']._serialized_start = 2169
+    _globals['_GENERATESTREAMHLSTOKENREQUEST']._serialized_end = 2221
+    _globals['_GENERATESTREAMHLSTOKENRESPONSE']._serialized_start = 2223
+    _globals['_GENERATESTREAMHLSTOKENRESPONSE']._serialized_end = 2323
+    _globals['_LISTEVENTSREQUEST']._serialized_start = 2326
+    _globals['_LISTEVENTSREQUEST']._serialized_end = 2475
+    _globals['_LISTEVENTSRESPONSE']._serialized_start = 2477
+    _globals['_LISTEVENTSRESPONSE']._serialized_end = 2592
+    _globals['_GETEVENTREQUEST']._serialized_start = 2594
+    _globals['_GETEVENTREQUEST']._serialized_end = 2664
+    _globals['_CREATEEVENTREQUEST']._serialized_start = 2667
+    _globals['_CREATEEVENTREQUEST']._serialized_end = 2845
+    _globals['_UPDATEEVENTREQUEST']._serialized_start = 2848
+    _globals['_UPDATEEVENTREQUEST']._serialized_end = 3000
+    _globals['_DELETEEVENTREQUEST']._serialized_start = 3002
+    _globals['_DELETEEVENTREQUEST']._serialized_end = 3100
+    _globals['_LISTSERIESREQUEST']._serialized_start = 3103
+    _globals['_LISTSERIESREQUEST']._serialized_end = 3252
+    _globals['_LISTSERIESRESPONSE']._serialized_start = 3254
+    _globals['_LISTSERIESRESPONSE']._serialized_end = 3370
+    _globals['_GETSERIESREQUEST']._serialized_start = 3372
+    _globals['_GETSERIESREQUEST']._serialized_end = 3444
+    _globals['_CREATESERIESREQUEST']._serialized_start = 3447
+    _globals['_CREATESERIESREQUEST']._serialized_end = 3629
+    _globals['_UPDATESERIESREQUEST']._serialized_start = 3632
+    _globals['_UPDATESERIESREQUEST']._serialized_end = 3787
+    _globals['_DELETESERIESREQUEST']._serialized_start = 3789
+    _globals['_DELETESERIESREQUEST']._serialized_end = 3889
+    _globals['_MATERIALIZECHANNELREQUEST']._serialized_start = 3892
+    _globals['_MATERIALIZECHANNELREQUEST']._serialized_end = 4083
+    _globals['_STREAMSSERVICE']._serialized_start = 4086
+    _globals['_STREAMSSERVICE']._serialized_end = 8882
