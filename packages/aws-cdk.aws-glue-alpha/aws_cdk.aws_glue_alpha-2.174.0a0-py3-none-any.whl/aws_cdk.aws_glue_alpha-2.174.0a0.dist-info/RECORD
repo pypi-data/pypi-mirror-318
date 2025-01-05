@@ -1,0 +1,10 @@
+aws_cdk/aws_glue_alpha/__init__.py,sha256=00ErOIP4i8zjHI3gIXJRYs7afMF1aSrbOCY3Q6ETa0k,570835
+aws_cdk/aws_glue_alpha/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_cdk/aws_glue_alpha/_jsii/__init__.py,sha256=jSKttzVpOZsqMAxfHCtGNpRbRbtTV606gu2QM-1Hn7E,1481
+aws_cdk/aws_glue_alpha/_jsii/aws-glue-alpha@2.174.0-alpha.0.jsii.tgz,sha256=G_R5yc9w-JkE60Ze6yKk37nrY-Gqpo65P2Ae2fd8qoI,215734
+aws_cdk.aws_glue_alpha-2.174.0a0.dist-info/LICENSE,sha256=y47tc38H0C4DpGljYUZDl8XxidQjNxxGLq-K4jwv6Xc,11391
+aws_cdk.aws_glue_alpha-2.174.0a0.dist-info/METADATA,sha256=Zz7yo0ZCjDRBb51qI6AcE19VT2Bc-sfpsgSHH-fFIlY,24513
+aws_cdk.aws_glue_alpha-2.174.0a0.dist-info/NOTICE,sha256=ZDV6_xBfMvhFtjjBh_f6lJjhZ2AEWWAGGkx2kLKHiuc,113
+aws_cdk.aws_glue_alpha-2.174.0a0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+aws_cdk.aws_glue_alpha-2.174.0a0.dist-info/top_level.txt,sha256=1TALAKbuUGsMSrfKWEf268lySCmcqSEO6cDYe_XlLHM,8
+aws_cdk.aws_glue_alpha-2.174.0a0.dist-info/RECORD,,
