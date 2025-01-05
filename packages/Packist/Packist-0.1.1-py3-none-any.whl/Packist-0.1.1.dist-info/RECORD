@@ -1,0 +1,7 @@
+my_pypi/__init__.py,sha256=JWaT06Wt0RctQqYEA0-5Mi5pNp2lkcyz6AMXGa9mOBU,83
+my_pypi/module1.py,sha256=fRgOGvt3d60iSVmWtcDT-jz4355CD0AOLcd4Lc-uyRs,58
+my_pypi/module2.py,sha256=PI_SH-oL4XQsLDF3VG7VMJKXcvQwyJC82_sdoRZRCi4,57
+Packist-0.1.1.dist-info/METADATA,sha256=kwEm_eHVI5bwFKIhAoZiZvA5ShprCFgwDYbH09SFhv4,457
+Packist-0.1.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+Packist-0.1.1.dist-info/top_level.txt,sha256=hDkDG_7PIBnlL_22V299czeVHLo1x62x48-l1XgYesY,8
+Packist-0.1.1.dist-info/RECORD,,
