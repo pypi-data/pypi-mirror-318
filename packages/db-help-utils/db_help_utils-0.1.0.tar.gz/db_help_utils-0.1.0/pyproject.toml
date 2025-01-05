@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "db_help_utils"
+version = "0.1.0"
+description = "A library for database utilities"
+authors = [
+    { name = "Ilya", email = "asuslover4@gmail.com" }
+]
+license = { text = "MIT" }
+dependencies = []
+
+# Указываем, что эти поля динамичные
+dynamic = ["readme", "requires-python"]
+
+[project.urls]
+homepage = "https://github.com/paladinxb"
+
+# Указываем путь к файлу README.md
+readme = "https://github.com/paladinxb/DB_With_Py/blob/main/README.md"

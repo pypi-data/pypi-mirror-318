@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: db_help_utils
+Version: 0.1.0
+Summary: A library for database utilities
+Home-page: https://github.com/paladinxb
+Author: ilya
+Author-email: Ilya <asuslover4@gmail.com>
+License: MIT
+Project-URL: homepage, https://github.com/paladinxb
+Project-URL: readme, https://github.com/paladinxb/DB_With_Py/blob/main/README.md
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# db_help_utils
+
+Утилиты для работы с базами данных на Python.
+
+## Установка
+
+```bash
+pip install db_help_utils
