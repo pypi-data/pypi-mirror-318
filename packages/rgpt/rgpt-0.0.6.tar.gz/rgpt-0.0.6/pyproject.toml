@@ -1,0 +1,16 @@
+[project]
+name = "rgpt"
+version = "0.0.6"
+authors = [
+  { name = "rxy", email = "1302553960@qq.com" },
+]
+dependencies = ['requests']
+description = "gpt3.5"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
