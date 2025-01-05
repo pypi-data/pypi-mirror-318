@@ -1,0 +1,17 @@
+urcl/__init__.py,sha256=bP_yhpoYh68goQhz430LFhEMvGjlG6KsGolYOs1jP40,76
+urcl/_init_urcl.py,sha256=GB4vkm1HFfP_SL4joNlM46kfiyW9am-l3DvleMS2D5E,299
+urcl/_urcl.cp311-win_amd64.pyd,sha256=mhJEEIj5Wp6yKJjKL-he9ZRCK_mXvo7xBJ12aQN4ySk,171520
+urcl/_urcl.pyi,sha256=NiwPAWOwQMgvW2TjVNkYV98ej5el7MMKTRfCz9gsVNY,2024
+urcl/pkgcfg.py,sha256=7vfCj87jirLWozUpPRXkID_6thlVJkWwZjrNXELtmdU,539
+urcl/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+urcl/version.py,sha256=mPIlrvJUAAviALuFdPR0LHhKS3mQC7bRd5GqfPniIOo,170
+urcl/wrapper.cpp,sha256=fqqXOupXfGPcNfDJApN0nokro4-pfTfobrgz3QQW4NY,82
+urcl/__pycache__/__init__.cpython-311.pyc,sha256=1loWY0_Ghmjano8dzcXnY9UbVUsSRk-hYR0Y6ZP861U,303
+urcl/__pycache__/_init_urcl.cpython-311.pyc,sha256=850RZgD9J6Da5vui-trvq5SGgWWdq0AtfcEHxeStb1U,597
+urcl/include/URCL.h,sha256=nFtR0HcPPI9hfDhgmMrD3AQLNNr8Cah3BzuOdCDspR0,2379
+robotpy_urcl-2025.0.0.dist-info/LICENSE,sha256=UZUqNGEj8qz4m2bgf5hVSFXYIVofIJVEALkHXNaEbJo,1109
+robotpy_urcl-2025.0.0.dist-info/METADATA,sha256=ojtZ51kKqn_0JcrT2WQtramuCk92WHUTb-miZotwx0I,1151
+robotpy_urcl-2025.0.0.dist-info/WHEEL,sha256=y4n9_669c4ZQLyT56MHjc_JUbnwtaZfMVMycweN557o,102
+robotpy_urcl-2025.0.0.dist-info/entry_points.txt,sha256=xdZxX6KQSi-GjxxpKhqlfZOP4Lyg_Sgjy2l_iBftNws,34
+robotpy_urcl-2025.0.0.dist-info/top_level.txt,sha256=1Jx9IGiMA00uFgoXW0T9TkV6LTdFPcb4kWaLwavx9Js,5
+robotpy_urcl-2025.0.0.dist-info/RECORD,,
