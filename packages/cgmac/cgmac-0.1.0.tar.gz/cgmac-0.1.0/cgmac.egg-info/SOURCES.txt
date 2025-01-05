@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+cgmac/__init__.py
+cgmac/cgmac.py
+cgmac.egg-info/PKG-INFO
+cgmac.egg-info/SOURCES.txt
+cgmac.egg-info/dependency_links.txt
+cgmac.egg-info/requires.txt
+cgmac.egg-info/top_level.txt
