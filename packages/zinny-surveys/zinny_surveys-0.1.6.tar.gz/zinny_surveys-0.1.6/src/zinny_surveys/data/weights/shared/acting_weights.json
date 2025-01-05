@@ -1,0 +1,14 @@
+{
+  "id": "acting",
+  "name": "Acting default (Even Weights)",
+  "description": "Evenly distributed weights for acting evaluation criteria.",
+  "version": "1.0",
+  "survey_id": "acting",
+  "criteria_weights": {
+    "authenticity": 1.0,
+    "culture": 1.0,
+    "emotion": 1.0,
+    "physicality": 1.0,
+    "story_support": 1.0
+  }
+}

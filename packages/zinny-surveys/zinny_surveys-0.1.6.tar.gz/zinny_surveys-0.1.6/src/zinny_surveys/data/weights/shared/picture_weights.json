@@ -1,0 +1,17 @@
+{
+  "id": "picture",
+  "name": "Picture Overall (Even Weights)",
+  "description": "Evenly weighted criteria for evaluating feature films.",
+  "version": "1.0",
+  "survey_id": "picture_extended",
+  "criteria_weights": {
+      "arts": 1.0,
+      "craft": 1.0,
+      "cultural_impact": 1.0,
+      "emotional_impact": 1.0,
+      "humanity": 1.0,
+      "storytelling": 1.0,
+      "technical_achievement": 1.0,
+      "visual_aesthetics": 1.0
+  }
+}

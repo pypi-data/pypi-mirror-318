@@ -1,0 +1,224 @@
+{
+  "id": "vfx_exhaustive",
+  "name": "Visual Effects - Exhaustive",
+  "version": "1.0",
+  "description": "Extends the extended list with additional criteria for visual effects.",
+  "author": "the-zinny team",
+  "extends": "vfx_extended",
+  "defaults": {
+    "range": [1, 10]
+  },
+    "criteria": [
+    {
+      "id": "artistry",
+      "name": "Artistry",
+      "description": "The artistic quality, creativity, or aesthetic integration of visuals.",
+      "markers": {
+        "1": "Not exceptional artistry",
+        "10": "Exceptional artistry and creativity"
+      }
+    },
+    {
+      "id": "technical_achievement",
+      "name": "Technical Achievement",
+      "description": "The innovation and use of new or improved technology.",
+      "markers": {
+        "1": "No new technology",
+        "10": "Pioneering use of technology"
+      }
+    },
+    {
+      "id": "production",
+      "name": "Production Achievement",
+      "description": "The improvement of support tools and processes, exceptional management of process, or groundbreaking scale of scope.",
+      "markers": {
+        "1": "Lacked support",
+        "5": "Neutral",
+        "10": "Exceptional use of supporting implementations"
+      }
+    },
+    {
+      "id": "craft",
+      "name": "Application Skill",
+      "description": "The skill level in applying VFX techniques effectively.",
+      "markers": {
+        "1": "Turnkey or off-the-shelf",
+        "10": "Masterful"
+      }
+    },
+    {
+      "id": "fidelity",
+      "name": "Overall Fidelity",
+      "description": "The overall realism and believability of the VFX.",
+      "markers": {
+        "1": "Unconvincing VFX",
+        "10": "Highly realistic or immersive"
+      }
+    },
+    {
+      "id": "fidelity_worst",
+      "name": "Worst Case Fidelity",
+      "description": "The quality of the least convincing VFX scenes.",
+      "markers": {
+        "1": "Poor quality",
+        "10": "No shots were out of place"
+      }
+    },
+    {
+      "id": "necessity",
+      "name": "Necessity of VFX",
+      "description": "The importance of visual effects in conveying the story, or overall success.",
+      "markers": {
+        "1": "Not necessary",
+        "10": "Crucial to the story"
+      }
+    },
+    {
+      "id": "contribution",
+      "name": "Contribution to Narrative",
+      "description": "The overall contribution of VFX to the film's narrative.",
+      "markers": {
+        "1": "Detracted from the film",
+        "5": "neural conrtibution",
+        "10": "Significant contribution"
+      }
+    },
+    {
+      "id": "support",
+      "name": "Supporting Role",
+      "description": "The VFX supported or enhanced the process of acting, directing, or other film elements.",
+      "markers": {
+        "1": "impacts outweighed the benefits",
+        "5": "neutral application",
+        "10": "VFX was enhanced other elements"
+      }
+    },
+    {
+      "id": "sfx_overall",
+      "name": "SFX (Overall)",
+      "description": "IRL special effects, like explosions, pyrotechnics, and other practical effects.",
+      "markers": {
+        "1": "Unconvincing or poorly executed",
+        "10": "Seamlessly integrated and highly effective"
+      }
+    },
+    {
+      "id": "cgi_overall",
+      "name": "CGI (Overall)",
+      "description": "Creating animated sequences using computer-generated imagery (CGI).",
+      "markers": {
+        "1": "Unrealistic or poorly rendered",
+        "10": "Highly realistic and immersive"
+      }
+    },
+    {
+      "id": "character_animation",
+      "name": "Character Animation",
+      "description": "Bringing digital characters to life through movement and expression.",
+      "markers": {
+        "1": "Stiff or unconvincing",
+        "10": "Highly expressive and lifelike"
+      }
+    },
+    {
+      "id": "compositing",
+      "name": "Compositing",
+      "description": "Combining multiple visual elements into a single image or sequence.",
+      "markers": {
+        "1": "Poorly integrated elements",
+        "10": "Seamless and cohesive integration"
+      }
+    },
+    {
+      "id": "simulation_effects",
+      "name": "Simulation Effects",
+      "description": "Creating realistic simulations of natural phenomena like water, fire, smoke, and explosions.",
+      "markers": {
+        "1": "Unrealistic or poorly simulated",
+        "10": "Highly realistic and convincing"
+      }
+    },
+    {
+      "id": "stop_motion",
+      "name": "Stop Motion Animation",
+      "description": "Creating animation by physically manipulating objects frame by frame.",
+      "markers": {
+        "1": "Inconsistent or poorly crafted models",
+        "5": "Moderately consistent with some craft",
+        "10": "Exceptionally consistent and expertly crafted models"
+      }
+    },
+    {
+      "id": "humanity_value",
+      "name": "Humanity Value",
+      "description": "The moral or societal value of the film.",
+      "markers": {
+        "1": "No moral value",
+        "10": "Profound impact on viewers"
+      }
+    },
+    {
+      "id": "miniatures",
+      "name": "Miniatures",
+      "description": "Using scale models to create realistic scenes.",
+      "markers": {
+        "1": "Unconvincing",
+        "10": "Highly realistic and detailed"
+      }
+    },
+    {
+      "id": "practical_effects",
+      "name": "Practical Effects",
+      "description": "Using physical effects.",
+      "markers": {
+        "1": "Ineffective",
+        "10": "Seamlessly integrated"
+      }
+    },
+    {
+      "id": "puppeteering",
+      "name": "Puppeteering",
+      "description": "Using puppets for live-action or hybrid productions.",
+      "markers": {
+        "1": "Unconvincing",
+        "10": "Highly expressive or believable"
+      }
+    },
+    {
+      "id": "makeup_prosthetics",
+      "name": "Makeup and Prosthetics",
+      "description": "Applying physical makeup and prosthetics for character effects.",
+      "markers": {
+        "1": "Unrealistic",
+        "10": "Highly realistic or transformative"
+      }
+    },
+    {
+      "id": "pyrotechnics",
+      "name": "Pyrotechnics",
+      "description": "Creating controlled explosions and fire effects.",
+      "markers": {
+        "1": "Unconvincing or unsafe",
+        "10": "Highly realistic and safe"
+      }
+    },
+    {
+      "id": "innovation",
+      "name": "Innovation",
+      "description": "The use of new or experimental techniques.",
+      "markers": {
+        "1": "No innovation",
+        "10": "Pioneering techniques"
+      }
+    },
+    {
+      "id": "community_value",
+      "name": "Community Value",
+      "description": "The VFX work furthers the craft and contributes to future efforts.",
+      "markers": {
+        "1": "No value",
+        "10": "Highly influential"
+      }
+    }
+  ]
+}

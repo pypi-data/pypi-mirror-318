@@ -1,0 +1,14 @@
+{
+  "id": "vfx",
+  "name": "Visual Effects default (Even Weights)",
+  "description": "Evenly distributed weights for evaluating visual effects.",
+  "version": "1.0",
+  "survey_id": "vfx",
+  "criteria_weights": {
+    "artistry": 1.0,
+    "contribution": 1.0,
+    "fidelity": 1.0,
+    "necessity": 1.0,
+    "technical_achievement": 1.0
+  }
+}

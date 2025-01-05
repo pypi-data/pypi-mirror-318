@@ -1,0 +1,37 @@
+{
+  "id": "acting",
+  "name": "Acting Performance",
+  "version": "1.0",
+  "description": "Evaluation criteria for lead and supporting acting roles.",
+  "author": "the-zinny team",
+  "defaults": {
+    "range": [1, 10]
+  },
+  "criteria": [
+    {
+      "id": "emotion",
+      "name": "Emotional Range",
+      "description": "Ability to portray an appropiate spectrum of emotions for the character."
+    },
+    {
+      "id": "authenticity",
+      "name": "Character Authenticity",
+      "description": "Believability and depth in embodying the character."
+    },
+    {
+      "id": "physicality",
+      "name": "Physicality",
+      "description": "Use of body language, movement, and gestures."
+    },
+    {
+      "id": "story_support",
+      "name": "Contribution to Story",
+      "description": "The role's impact on the narrative."
+    },
+    {
+      "id": "culture",
+      "name": "Cultural Relevance",
+      "description": "Significance of the character's themes or representation."
+    }
+  ]
+}
