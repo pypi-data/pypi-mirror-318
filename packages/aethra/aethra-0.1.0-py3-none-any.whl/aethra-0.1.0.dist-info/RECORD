@@ -1,0 +1,11 @@
+aethra/__init__.py,sha256=gRrJVySitMD-pSuFj3fj8EZkqiQuqiXEiq9JidBIlj4,251
+aethra/client.py,sha256=I4VeprjQFAP8PsuDfKHt7kDhTaaAjHMcxXI5YDnE6aI,3420
+aethra/exceptions.py,sha256=xDpSImd9MSCfpkRqJpRX5BSmHXRNmeROUpVeoi_qMCA,1532
+aethra/models.py,sha256=tSpgxiojyEG5-YO2T8YWVPLra5z_fxTguiKjOhhEhCs,675
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_client.py,sha256=j8H_UFYKHWpDxEbzltkWbsM1LNFk8_gIwuIcZTUBlkg,3417
+aethra-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+aethra-0.1.0.dist-info/METADATA,sha256=mVaBNWztiJXXvtebCTKjISmrY306mbgPZ4LQ1teg1ak,6428
+aethra-0.1.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+aethra-0.1.0.dist-info/top_level.txt,sha256=ABkd4GoJ84-8F4gkEQJz4JSOGErpFSewn7q4XXtdU_I,13
+aethra-0.1.0.dist-info/RECORD,,
