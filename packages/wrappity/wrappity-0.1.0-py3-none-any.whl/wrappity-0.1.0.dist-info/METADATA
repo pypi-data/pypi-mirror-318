@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: wrappity
+Version: 0.1.0
+Summary: A package for easier access to deeply nested dictionaries.
+Author-email: Tomas Rollo <tomas.rollo@gmail.com>
+Requires-Python: >=3.13
