@@ -1,0 +1,12 @@
+israwave/__init__.py,sha256=-GHSz9SIuKjV8mc37mTfR6LoQHiRJEM7mM3K9XWdB64,2406
+israwave/config.json,sha256=julFhZNEFC3A1Atm5e4UWIAD3V0EGz5EkeyLyWnG96E,2251
+israwave/helpers.py,sha256=Y9w2aAjkta8R8pjAFCczW7BCGZ7alFky8fMUPcpE4IU,914
+israwave/logging.py,sha256=FAh6ERQQ4mbevbC3YLHhkFL0OhcLRdYQ-pjs2RkxM4c,482
+israwave/model.py,sha256=reAP7lPUyp42IcuQ84oLd0wMh5bDzs7opmD0fU94RlQ,3370
+israwave/segment.py,sha256=g_Mhrf-ko-5661O76H-NBAZ548bri_8ulB2bLGnkWzk,2278
+israwave/symbols.py,sha256=mc9rCjR3Qbp5G-gwJyWRx5iNBbvnPWODCHTTb4eUzds,1228
+israwave/tensors.py,sha256=2ZmiFGl8uu3DNdwyBFiR6mmgKuG5ImLHj0qJnxKjJTM,3921
+israwave/tokenizer.py,sha256=9-Vv2lPAMnFMIh6ZGTDck2hyhtKFvFQV14l3Pt2ry0Q,1622
+israwave-0.1.8.dist-info/METADATA,sha256=KoBh9N3KlQO_nYoP88UWNCTz3bXOhbO2vGUoRs81Cw8,661
+israwave-0.1.8.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+israwave-0.1.8.dist-info/RECORD,,

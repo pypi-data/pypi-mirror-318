@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: israwave
+Version: 0.1.8
+Summary: Hebrew text to speech on the edge
+Author-email: thewh1teagle <61390950+thewh1teagle@users.noreply.github.com>
+Requires-Python: >=3.9
+Requires-Dist: espeakng-loader==0.1.2
+Requires-Dist: nakdimon-ort>=0.1.5
+Requires-Dist: numpy>=2.1.1
+Requires-Dist: onnxruntime>=1.19.2
+Requires-Dist: phonemizer-fork==3.3.1
+Requires-Dist: sounddevice>=0.5.0
+Requires-Dist: soundfile>=0.12.1
+Description-Content-Type: text/markdown
+
+# israwave
+
+Mission to create a Hebrew TTS model as powerful and user-friendly as WaveNet
+
+## Install
+
+```console
+pip install israwave
+```
+
+See https://github.com/thewh1teagle/israwave
