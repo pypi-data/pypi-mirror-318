@@ -1,0 +1,3 @@
+[console_scripts]
+apdl=apdl.cli:main
+

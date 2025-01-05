@@ -1,0 +1,9 @@
+apdl/__init__.py,sha256=e88GpHe7q8dsgy6sku4gel1bszPrjfLeBv30dSEQlN8,586
+apdl/apdl.py,sha256=IBv2ZbEhZ1mqMsCOTe-ZZtJoIZAi32aPEL9iutwhIEk,4978
+apdl/cli.py,sha256=qp_YvS-rjGX1wACpjvgtlsBXvjFOG1eVNAHgtflgWB8,7055
+apdl/utils.py,sha256=7GFRnRW6kTJuTXC9frDhPJw-t2Sn_ZVzwGZFuNCXyi8,358
+apdl-0.0.0.0.0.2.dist-info/entry_points.txt,sha256=CUmnRONbGG_mvfIbw8Ix5LKgqROD8krtolY8RU0tEb8,38
+apdl-0.0.0.0.0.2.dist-info/LICENSE,sha256=XLM-2lh3rk_nw-lWTAx1T41ZCYIhQ0e43XphgN48z48,1076
+apdl-0.0.0.0.0.2.dist-info/WHEEL,sha256=ssQ84EZ5gH1pCOujd3iW7HClo_O_aDaClUbX4B8bjKY,100
+apdl-0.0.0.0.0.2.dist-info/METADATA,sha256=MqcS2vxbOy_i1okiWgUWdNrmhqX76zTwmBOHQwQHpHc,4256
+apdl-0.0.0.0.0.2.dist-info/RECORD,,
