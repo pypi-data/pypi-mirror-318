@@ -1,0 +1,16 @@
+CMakeLists.txt
+COPYING.md
+LICENSE.md
+MANIFEST.in
+README.md
+clangd_version.cmake
+pyproject.toml
+setup.py
+clangd/__init__.py
+clangd.egg-info/PKG-INFO
+clangd.egg-info/SOURCES.txt
+clangd.egg-info/dependency_links.txt
+clangd.egg-info/entry_points.txt
+clangd.egg-info/not-zip-safe
+clangd.egg-info/top_level.txt
+test/test_executable.py
