@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: diffa
+Version: 0.0.3
+Summary: A very simple python package for creating a HTML line diff between two files.
+Author-email: Tom Carter <tomcarter017@gmail.com>
+Maintainer-email: Tom Carter <tomcarter017@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2024 Tom Carter
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/tomcarter23/diffa
+Project-URL: Issues, https://github.com/tomcarter23/diffa/issues
+Keywords: sample,setuptools,development
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: jinja2
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+
+# diffa   
+_A simple CLI tool for generating nice HTML diffs between two files._  
+
+## 🌟 Features  
+- Generates pretty colour-coded **HTML diffs**.  
+- Supports both **unified view** and **side-by-side view**.  
+
+## 📦 Installation  
+Use pip to install diffa from PyPI:  
+```bash
+pip install diffa
+```
+
+## 🛠️ Usage
+Run diffa from the command line to create a shiny HTML diff.
+
+```bash
+diffa file1.txt file2.txt output.html
+````
+
+### Options
+--side-by-side: Adds a side-by-side comparison to the output.
+
+## The Output
+Open the generated HTML file in your browser to see:
+
+- Lines added in green
+- Lines removed in red
+- Matching lines in white
+
+## 💡 Ideas for Use
+- Code Reviews: Quickly generate diffs for commits or branches.
+- Document Comparison: Spot the differences between document revisions.
+- Configuration Changes: Compare config files across environments.
