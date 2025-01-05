@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+frame_API.egg-info/PKG-INFO
+frame_API.egg-info/SOURCES.txt
+frame_API.egg-info/dependency_links.txt
+frame_API.egg-info/requires.txt
+frame_API.egg-info/top_level.txt
+frameapi/__init__.py
+frameapi/core.py
+frameapi/request.py
+frameapi/response.py
+frameapi/templates/default.html
