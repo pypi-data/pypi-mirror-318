@@ -1,0 +1,12 @@
+pybase3/__init__.py,sha256=_BizHmDjTCuWmX4mKYoXp0C23HO9a4q1RonQFkLFJco,234
+pybase3/__main__.py,sha256=3pRB8dKcTrvfdf5i5XYyuz-87o9cLxjZ82ggE2ao7CI,2177
+pybase3/dbase3.py,sha256=w2QrTvGku0pAWumEQq6ZAKfzr5Voq5_DtYUs5MMCSiY,36964
+pybase3/dbfview.py,sha256=-eaxoUYjFcpUxoWUwkDkvMm5juo_QxVjV2qLZPrbdDw,5628
+pybase3/test.py,sha256=2tNvy-OBmIaSP9VTQr3dX7TZ51zhKYRtLM-uhD6bv98,3954
+pybase3/utils.py,sha256=pNPPeugPbSWnXwK0zguo85RV7LnEAtjhDHtH4RwRfkM,972
+pybase3-1.11.13.dist-info/LICENSE,sha256=GuJAxz4RmmYLkLa9SPDpW36RJ4i47lUSLOfqD-hnDf8,1082
+pybase3-1.11.13.dist-info/METADATA,sha256=Zbf-FaqPs9VP_AjJGoDUF-50w43zC7k_alWcXW_orYQ,10771
+pybase3-1.11.13.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pybase3-1.11.13.dist-info/entry_points.txt,sha256=GVooXYQGYimRwAIDhlxaricJG4sDs29fe5pm77FkzBA,112
+pybase3-1.11.13.dist-info/top_level.txt,sha256=yTbVt9S5xVAO2I83lGlpadltasnSomr64sxAIj_Zh7s,8
+pybase3-1.11.13.dist-info/RECORD,,
