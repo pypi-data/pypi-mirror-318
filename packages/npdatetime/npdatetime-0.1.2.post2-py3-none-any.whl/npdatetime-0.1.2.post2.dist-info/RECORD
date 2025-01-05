@@ -1,0 +1,11 @@
+npdatetime/__init__.py,sha256=jwHLOIQFp4WIL2KDAudEcVB-_5un2wjQJNPNu2nxYA4,38205
+npdatetime/__init__.pyi,sha256=JOPIVFiqz6eoxNpPGO9LETNLLf_YPJL5wnvmLN3eq9U,10106
+npdatetime/_custom_strptime.py,sha256=sO1CkAJV_4Ahgr0cqJjc4HncihVt0S0KzoKIblDYZMw,12014
+npdatetime/config.py,sha256=C-ozgMViZyhbIUtP1phZ-xshktPwdbsVssFUTYVP6Os,396
+npdatetime/utils.py,sha256=ZsoAe8mcsKk5aDLOIaUa-IpFBPhtQVi1M4Q2dV_cvs0,371
+npdatetime/data/calendar_bs.csv,sha256=G9KWbb35Ietcz31K2E4R5J2a5rhQl0QJjw1TA_V4M8s,5250
+npdatetime-0.1.2.post2.dist-info/LICENSE,sha256=zVhPTICUPJU67BU1DoMb0SofU9Zo2uY1kV-jn2SqvfI,1082
+npdatetime-0.1.2.post2.dist-info/METADATA,sha256=ISrDEybrgs0XFjnz7OrVh2O7RfgFp_o5umtiyTm3reg,9144
+npdatetime-0.1.2.post2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+npdatetime-0.1.2.post2.dist-info/top_level.txt,sha256=2FR7RutVmSD6SL-iOwUcGrHd1XXgzaqUvAU78WGz_9g,11
+npdatetime-0.1.2.post2.dist-info/RECORD,,
