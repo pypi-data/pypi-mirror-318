@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: dopetracks
+Version: 0.1.0
+Home-page: https://github.com/nmarks/dopeventures
+Author: Nick Marks
+Author-email: nmarkspdx@gmail.com
+Requires-Python: >=3.11.11

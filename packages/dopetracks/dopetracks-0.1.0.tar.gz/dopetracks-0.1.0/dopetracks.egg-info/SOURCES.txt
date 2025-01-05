@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+setup.py
+dopetracks.egg-info/PKG-INFO
+dopetracks.egg-info/SOURCES.txt
+dopetracks.egg-info/dependency_links.txt
+dopetracks.egg-info/top_level.txt
