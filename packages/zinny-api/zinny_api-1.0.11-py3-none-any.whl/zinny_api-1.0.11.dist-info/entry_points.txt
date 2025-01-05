@@ -1,0 +1,2 @@
+[console_scripts]
+zinny-api = zinny_api.cli:main
