@@ -1,0 +1,7 @@
+README.md
+setup.py
+src/CS_MINI_2024Z_AutoML.egg-info/PKG-INFO
+src/CS_MINI_2024Z_AutoML.egg-info/SOURCES.txt
+src/CS_MINI_2024Z_AutoML.egg-info/dependency_links.txt
+src/CS_MINI_2024Z_AutoML.egg-info/requires.txt
+src/CS_MINI_2024Z_AutoML.egg-info/top_level.txt
