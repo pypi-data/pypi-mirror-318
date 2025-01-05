@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: django-axor-auth
+Version: 0.1.6
+Summary: Django authentication API using Django Rest Framework.
+Author: Gauravjot Garaya
+License: MIT LICENSE
+        
+        Copyright (c) 2023 Gauravjot Garaya (Droidheat)
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: homepage, https://github.com/gauravjot/django-axor-auth
+Keywords: django,authentication,rest,api
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyotp>=2.9.0
+Requires-Dist: pyjwt>=2.9.0
+Requires-Dist: bcrypt>=4.1.2
+Requires-Dist: Django>=5.0
+Requires-Dist: djangorestframework>=3.15.0
+Requires-Dist: psycopg2-binary>=2.9.9
+Requires-Dist: django-cors-headers>=4.3.1
+Requires-Dist: pycryptodome>=3.20.0
+Requires-Dist: pytz>=2024.1
+Requires-Dist: sqlparse>=0.4.4
+
+# Django Axor Auth
+
+An opinionated Django authentication app that provides a set of views and forms for user authentication.
+
+It is built so you can skip authentication implementation in your Django project and focus on building your business logic.
+
+## Usage
+
+Please visit the [documentation](https://axor.nzran.com) for detailed usage instructions.
