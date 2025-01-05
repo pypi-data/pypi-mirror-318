@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: raggedy
+Version: 0.0.3
+Summary: The easiest way to attach documents to LLM/VLMs.
+Project-URL: Homepage, https://github.com/HACKERALERT/Raggedy
+Project-URL: Issues, https://github.com/HACKERALERT/Raggedy/issues
+Author: Evan Su
+License-File: LICENSE
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.12
+Requires-Dist: ollama>=0.4.5
+Requires-Dist: pyside6-addons>=6.8.1
+Requires-Dist: pyside6-essentials>=6.8.1
+Requires-Dist: pyside6>=6.8.1
+Description-Content-Type: text/markdown
+
+WORK IN PROGRESS
