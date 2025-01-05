@@ -1,0 +1,12 @@
+minicfg-3.0.1.dist-info/METADATA,sha256=dnv-sKWJNuj8SKGFTES_y1oZg5uO_6O5xgx0eL-7b6I,3644
+minicfg-3.0.1.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+minicfg-3.0.1.dist-info/entry_points.txt,sha256=J-bL-tJcsQtcfYX_55Goao3V7pBSOR_URuI0FstnEXs,66
+minicfg-3.0.1.dist-info/licenses/LICENSE,sha256=Y6pxQ_MahWhlJ12YfZ1om-GkoxhsuTsSNPY-dyapA4U,1061
+minicfg/__init__.py,sha256=dGe2n1fhzcJmmD_5eIGNKc1k1SAgRJZgftSDnzgkmiU,68
+minicfg/__main__.py,sha256=qN7gNxXLipBjkQ3q8rLBcOLMFLP0k55jeanq_1vkgDs,1625
+minicfg/caster.py,sha256=sVu1_ui9yeoy1LQEwxh_xfW_kW29YrrxodSvybC46GI,3594
+minicfg/docs_generator.py,sha256=ShFQiAtgDkuOSd5xQ1SWdpdeTC3k5E2-dH6XAqLHK9U,4041
+minicfg/field.py,sha256=Lt_Zk2aJyyIKntkYltYyzvL8BUDw9_UrTxC3J5fYhr0,5251
+minicfg/minicfg.py,sha256=sJ9eE0dGZNhaXmtJsj1STcBR6RFRavWwqW18YQtxvcg,4978
+minicfg/provider.py,sha256=nmnusdYvIIrmnM-YTOqr7VH5SwJFGso97Ghbukj6jYc,629
+minicfg-3.0.1.dist-info/RECORD,,

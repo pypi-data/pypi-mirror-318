@@ -1,0 +1,5 @@
+[console_scripts]
+minicfg = minicfg.__main__:main
+
+[gui_scripts]
+
