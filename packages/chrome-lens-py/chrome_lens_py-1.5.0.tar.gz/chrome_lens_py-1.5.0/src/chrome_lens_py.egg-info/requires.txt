@@ -1,0 +1,9 @@
+requests
+Pillow
+filetype
+lxml
+json5
+rich
+PySocks
+httpx==0.27.2
+socksio
