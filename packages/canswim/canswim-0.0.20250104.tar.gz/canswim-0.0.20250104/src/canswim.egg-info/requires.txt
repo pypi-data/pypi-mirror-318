@@ -1,0 +1,12 @@
+u8darts[torch]==0.27.2
+numpy<2
+yfinance[nospam]
+pandas_market_calendars
+fmpsdk
+optuna==3.4.0
+huggingface_hub
+gradio
+loguru
+duckdb
+pytest
+pytest-cov
