@@ -1,0 +1,373 @@
+
+# Bayesian Network Generator
+
+**Bayesian Network Generator Package** is a Python library for building, analyzing, and visualizing Bayesian Networks. It leverages libraries like `pgmpy`, `numpy`, and `matplotlib` to help create estimate Bayesian network structures, parameters, construct Conditional Probability Tables (CPTs), and create visualizations for your Bayesian Network models.
+
+The library is currently focused on generating discrete values and the states are informed by the `cardinarlity` variable, this cardinarlity is the number of states a variable can have.
+
+
+## Features
+
+Bayesian network creation tool. Use to generate Bayesian Networks at scale.
+
+- **Create Bayesian Network**: Learn optimal Conditional Probability Distributions (CPDs) using neural networks.
+- **Generate Samples**: Generates samples from the Bayesian Network model, applying noise and missing data to the data. This is pgmpy sampling method with additions for noise and missingness.
+- **Generate DAGs**: Generate random constructs a directed acyclic graph with a specified number of nodes and a maximum in-degree constraint.
+- **Generate CPDs**: Build Conditional Probability Tables using model weights.
+
+- **Visualise Bayesian Networks**: Generate network graphs and visualizations of CPDs.
+- **Utilities**: Includes helper functions to streamline Bayesian Network workflows.
+
+
+
+## Installation
+
+To install this modul run
+
+```bash
+  pip install BayesianNetworkGenerator
+```
+
+A DEFAULT_DIR is set up by default as `outputs/create_bn/`, use bash command:
+
+```bash
+export BN_CREATOR_DEFAULT_DIR=/path/to/custom/directory
+```
+On windows:
+
+```bash
+set BN_CREATOR_DEFAULT_DIR=C:\path\to\custom\directory
+```
+
+## Dependencies
+
+bng has the following non-optional dependencies:
+
+- numpy
+- pandas
+- networkx
+- pgmpy
+- matplotlib
+- sklearn
+- seaborn
+- pickle
+- os
+- pathlib
+- datetime
+- json
+
+## Usage/Examples
+
+The main function is **create_pgm**
+
+Then function is used to create a probabilistic graphical model (PGM) and accompanying sample data.
+
+**Parameters**:
+```python
+num_nodes ( int): Number of nodes in the PGM.
+
+node_cardinality (int or dict): Cardinality of nodes.
+
+max_indegree (int): Maximum in-degree for any node.
+
+density (str): Network density - 'normal', 'sparse', or 'dense'.
+
+skew (float, int, dict): Skew to be applied.
+
+noise (float): Noise level to be added to the data.
+
+missing_data_percentage (float): Percentage of missing data.
+
+sample_size (int): Number of samples to be generated.
+
+visualize (bool): Whether to visualize the network and CPDs.
+
+artifacts_output_dir (str): directory to store created artifacts like the pickle model and sample data
+```
+
+**Returns**:
+```
+dict: Dictionary containing the model, samples, and runtime.
+```
+
+```python
+import bayesian_network_generator as bng
+
+result = bng.create_pgm()
+
+```
+
+Output
+2024-12-16 13:12:55,950 - create_cpds - INFO - Starting PGM creation
+
+INFO:create_cpds:Starting PGM creation
+
+2024-12-16 13:12:55,953 - create_cpds - INFO - Prepared, name_of_nodes, edges, model, node_cardinality_dict = ['N0', 'N1', 'N2'], [('N0', 'N1')], BayesianNetwork with 2 nodes and 1 edges, {'N0': 2, 'N1': 2, 'N2': 2}
+
+INFO:create_cpds:Prepared, name_of_nodes, edges, model, node_cardinality_dict = ['N0', 'N1', 'N2'], [('N0', 'N1')], BayesianNetwork with 2 nodes and 1 edges, {'N0': 2, 'N1': 2, 'N2': 2}
+
+2024-12-16 13:12:55,955 - create_cpds - INFO - Generated {1} edges for the Bayesian Network
+
+INFO:create_cpds:Generated {1} edges for the Bayesian Network
+Generating for node: N1: 100%|██████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 366.76it/s]
+/opt/anaconda3/envs/deep_cpds/lib/python3.11/site-packages/pgmpy/sampling/base.py:598: FutureWarning: Passing a DataFrame to DataFrame.from_records is deprecated. Use set_index and/or drop to modify the DataFrame instead.
+  df = pd.DataFrame.from_records(samples)
+2024-12-16 13:12:55,997 - create_cpds - INFO - PGM creation completed in 0.04613900184631348 seconds
+
+INFO:create_cpds:PGM creation completed in 0.04613900184631348 seconds
+
+```python
+In [3]: result
+Out[3]: 
+{'model': <pgmpy.models.BayesianNetwork.BayesianNetwork at 0x178a0c490>,
+ 'samples':      N0  N1
+ 0     0   0
+ 1     0   1
+ 2     0   0
+ 3     0   1
+ 4     0   1
+ ..   ..  ..
+ 995   0   1
+ 996   0   1
+ 997   0   0
+ 998   0   0
+ 999   0   0
+ 
+ [1000 rows x 2 columns],
+ 'runtime': 0.04613900184631348}
+```
+
+```python
+In [4]: result['model']
+Out[4]: <pgmpy.models.BayesianNetwork.BayesianNetwork at 0x178a0c490>
+
+In [5]: result['model'].edges
+Out[5]: OutEdgeView([('N0', 'N1')])
+
+In [6]: result['model'].nodes
+Out[6]: NodeView(('N0', 'N1'))
+
+In [8]: result['samples']
+Out[8]: 
+     N0  N1
+0     0   0
+1     0   1
+2     0   0
+3     0   1
+4     0   1
+..   ..  ..
+995   0   1
+996   0   1
+997   0   0
+998   0   0
+999   0   0
+
+[1000 rows x 2 columns]
+
+```
+
+```python
+In [12]: bng.create_pgm(num_nodes=7, node_cardinality=5, max_indegree=4, density="normal", skew=0.75, noise=0.1, missing_data_percentag
+    ...: e=0, sample_size=1000, visualize=True)
+
+```
+
+2024-12-16 13:18:38,489 - create_cpds - INFO - Starting PGM creation
+
+INFO:create_cpds:Starting PGM creation
+
+2024-12-16 13:18:38,491 - create_cpds - INFO - Prepared, name_of_nodes, edges, model, node_cardinality_dict = ['N0', 'N1', 'N2', 'N3', 'N4', 'N5', 'N6'], [('N2', 'N5'), ('N0', 'N3'), ('N2', 'N3'), ('N0', 'N1'), ('N2', 'N0'), ('N1', 'N4'), ('N5', 'N4'), ('N3', 'N1'), ('N6', 'N5')], BayesianNetwork with 7 nodes and 9 edges, {'N0': 5, 'N1': 5, 'N2': 5, 'N3': 5, 'N4': 5, 'N5': 5, 'N6': 5}
+
+INFO:create_cpds:Prepared, name_of_nodes, edges, model, node_cardinality_dict = ['N0', 'N1', 'N2', 'N3', 'N4', 'N5', 'N6'], [('N2', 'N5'), ('N0', 'N3'), ('N2', 'N3'), ('N0', 'N1'), ('N2', 'N0'), ('N1', 'N4'), ('N5', 'N4'), ('N3', 'N1'), ('N6', 'N5')], 
+
+BayesianNetwork with 7 nodes and 9 edges, {'N0': 5, 'N1': 5, 'N2': 5, 'N3': 5, 'N4': 5, 'N5': 5, 'N6': 5}
+
+2024-12-16 13:18:38,496 - create_cpds - INFO - Generated {9} edges for the Bayesian Network
+
+INFO:create_cpds:Generated {9} edges for the Bayesian Network
+Generating for node: N4: 100%|█████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 2363.18it/s]
+/opt/anaconda3/envs/deep_cpds/lib/python3.11/site-packages/pgmpy/sampling/base.py:598: FutureWarning: Passing a DataFrame to DataFrame.from_records is deprecated. Use set_index and/or drop to modify the DataFrame instead.
+  df = pd.DataFrame.from_records(samples)
+
+2024-12-16 13:18:38,513 - create_cpds - INFO - PGM creation completed in 0.02447199821472168 seconds
+
+INFO:create_cpds:PGM creation completed in 0.02447199821472168 seconds
+
+```python
+Out[12]: 
+{'model': <pgmpy.models.BayesianNetwork.BayesianNetwork at 0x17b36f590>,
+ 'samples':      N2  N5  N0  N3  N1  N4  N6
+ 0     1   0   0   0   0   0   2
+ 1     1   1   0   0   1   1   1
+ 2     1   1   1   1   0   1   1
+ 3     1   0   1   1   0   1   2
+ 4     1   0   1   0   1   1   2
+ ..   ..  ..  ..  ..  ..  ..  ..
+ 995   0   0   1   0   1   1   2
+ 996   0   1   0   0   1   1   1
+ 997   1   0   1   1   1   1   3
+ 998   1   0   0   0   1   1   0
+ 999   0   0   0   1   1   1   2
+ 
+ [1000 rows x 7 columns],
+ 'runtime': 0.02447199821472168}
+
+In [13]: 
+```
+
+```python
+# Example usage
+num_nodes = 5
+max_indegree = 2
+name_of_nodes = ['A', 'B', 'C', 'D', 'E']
+
+# Generate edges for different densities
+sparse_edges = generate_edges(num_nodes, name_of_nodes, max_indegree, density='sparse')
+normal_edges = generate_edges(num_nodes, name_of_nodes, max_indegree, density='normal')
+dense_edges = generate_edges(num_nodes, name_of_nodes, max_indegree, density='dense')
+
+print("Sparse Edges:", sparse_edges)
+print("Normal Edges:", normal_edges)
+print("Dense Edges:", dense_edges)
+
+Sparse Edges: [('A', 'B'), ('C', 'D'), ('E', 'A')]
+Normal Edges: [('A', 'B'), ('C', 'D'), ('E', 'A'), ('B', 'C'), ('D', 'E')]
+Dense Edges: [('A', 'B'), ('C', 'D'), ('E', 'A'), ('B', 'C'), ('D', 'E'), ('A', 'C'), ('B', 'D'), ('C', 'E'), ('D', 'A'), ('E', 'B')]
+
+```
+
+```python
+# Example usage
+# Define a pgmpy Bayesian Network
+model = BayesianNetwork([('A', 'B'), ('B', 'C')])
+
+# Define CPDs for the model
+cpd_a = TabularCPD(variable='A', variable_card=2, values=[[0.6], [0.4]])
+cpd_b = TabularCPD(variable='B', variable_card=2, values=[[0.7, 0.2], [0.3, 0.8]], evidence=['A'], evidence_card=[2])
+cpd_c = TabularCPD(variable='C', variable_card=2, values=[[0.9, 0.4], [0.1, 0.6]], evidence=['B'], evidence_card=[2])
+
+# Add CPDs to the model
+model.add_cpds(cpd_a, cpd_b, cpd_c)
+
+# Verify the model
+assert model.check_model()
+
+# Generate samples with noise and missing data
+samples = _generate_samples(model, sample_size=100, noise=0.1, missing_data_percentage=0.2)
+
+print("Generated Samples with Noise and Missing Data:")
+print(samples)
+
+Generated Samples with Noise and Missing Data:
+     A    B    C
+0  0.0  0.0  0.0
+1  1.0  1.0  1.0
+2  0.0  0.0  0.0
+3  1.0  1.0  1.0
+4  0.0  0.0  NaN
+5  1.0  1.0  1.0
+6  0.0  0.0  0.0
+7  1.0  1.0  1.0
+8  0.0  0.0  0.0
+9  1.0  1.0  1.0
+
+```
+
+```python
+# Example usage
+# Define a simple Bayesian Network
+model = BayesianNetwork([('A', 'B'), ('B', 'C')])
+
+# Define node cardinalities
+node_cardinality = {'A': 2, 'B': 2, 'C': 2}
+
+# Generate CPDs with skew
+cpds = generate_cpds(model, node_cardinality, max_skew=0.2)
+
+# Print generated CPDs
+print("Generated CPDs:")
+for node, cpd in cpds.items():
+    print(f"Node: {node}")
+    print(cpd)
+
+# Generate CPDs concurrently with skew
+cpds_concurrent = generate_cpds_concurrently(model, node_cardinality, max_skew=2.0)
+
+# Print generated CPDs from concurrent generation
+print("\nGenerated CPDs (Concurrent):")
+for node, cpd in cpds_concurrent.items():
+    print(f"Node: {node}")
+    print(cpd)
+
+Generated CPDs:
+Node: A
++------+-------+
+| A(0) | 0.600 |
++------+-------+
+| A(1) | 0.400 |
++------+-------+
+
+Node: B
++------+-------+-------+
+| A    | A(0)  | A(1)  |
++------+-------+-------+
+| B(0) | 0.700 | 0.200 |
+| B(1) | 0.300 | 0.800 |
++------+-------+-------+
+
+Node: C
++------+-------+-------+
+| B    | B(0)  | B(1)  |
++------+-------+-------+
+| C(0) | 0.900 | 0.400 |
+| C(1) | 0.100 | 0.600 |
++------+-------+-------+
+
+Generated CPDs (Concurrent):
+Node: A
++------+-------+
+| A(0) | 0.600 |
++------+-------+
+| A(1) | 0.400 |
++------+-------+
+
+Node: B
++------+-------+-------+
+| A    | A(0)  | A(1)  |
++------+-------+-------+
+| B(0) | 0.700 | 0.200 |
+| B(1) | 0.300 | 0.800 |
++------+-------+-------+
+
+Node: C
++------+-------+-------+
+| B    | B(0)  | B(1)  |
++------+-------+-------+
+| C(0) | 0.900 | 0.400 |
+| C(1) | 0.100 | 0.600 |
++------+-------+-------+
+```
+
+## Citing
+
+Please use the following bibtex for citing bng in your research:
+
+@{mulaudzi2024bng,
+  title={bng: Bayesian Network Generator in Python},
+  author={Mulaudzi, Rudzani},
+  year={2024},
+  organization={University of Witwaterand}
+}
+
+## Licensing
+
+bng is released under MIT License. 
+
+
+
+
+
+## Contributing
+
+Coming soon. Email rudzani.mulaudzi2@students.wits.ac.za
+
