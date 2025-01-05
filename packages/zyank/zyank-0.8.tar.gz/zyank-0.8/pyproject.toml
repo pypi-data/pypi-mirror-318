@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "zyank"
+version = "0.8"
+authors = [
+ { name="Void Hiko", email="racomarov@gmail.com" },
+]
+description = "library for adding basic functions for collecting data from the cian website"
+readme = "README.md"
+requires-python = ">=3.10.0"
+classifiers = [
+   "Programming Language :: Python :: 3",
+   "License :: OSI Approved :: MIT License",
+   "Operating System :: OS Independent",
+]
