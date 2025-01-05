@@ -1,0 +1,2 @@
+[console_scripts]
+vivosun-thermo = vivosun_thermo.__main__:main

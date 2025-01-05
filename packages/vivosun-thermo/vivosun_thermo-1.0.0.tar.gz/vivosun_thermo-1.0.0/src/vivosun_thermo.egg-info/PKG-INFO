@@ -1,0 +1,123 @@
+Metadata-Version: 2.1
+Name: vivosun-thermo
+Version: 1.0.0
+Summary: Python library and CLI tool for interacting with Vivosun Thermo devices via Bluetooth
+Author-email: Artem Butusov <art.sormy@gmail.com>
+License: Copyright 2025 Artem Butusov <art.sormy@gmail.com>
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+        associated documentation files (the “Software”), to deal in the Software without restriction,
+        including without limitation the rights to use, copy, modify, merge, publish, distribute,
+        sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all copies or substantial
+        portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
+        NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+        NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES
+        OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+        CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/sormy/vivosun-thermo
+Project-URL: Issues, https://github.com/sormy/vivosun-thermo/issues
+Keywords: Vivosun,AeroLab,Hygrometer,Thermometer,Thermo,VS-THB1S
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: bleak~=0.22.3
+
+# Vivosun Thermo Python Library and CLI
+
+Vivosun Thermo is a Python library and CLI tool for interacting with Vivosun Thermo devices via
+Bluetooth. It allows you to:
+
+-   Read the current temperature, humidity, and computed VPD from your device.
+-   Scan for nearby devices.
+-   Use a simple API for custom integrations.
+
+The library supports both a command-line interface (CLI) and a Python API. It is licensed under the
+MIT License.
+
+## Features
+
+-   **CLI**: Command-line interface to scan and read data from Vivosun Thermo devices.
+-   **API**: A Python interface for programmatic access to temperature, humidity, and VPD readings.
+-   **Flexible Output**: Supports text and JSON output formats for integration with other tools.
+
+## Supported Devices
+
+-   **VS-THB1S**: VIVOSUN AeroLab Hygrometer Thermometer
+
+## CLI Usage
+
+### Installation
+
+```sh
+# see details for your OS: https://github.com/pypa/pipx
+brew install pipx
+# install as CLI
+pipx install vivosun_thermo
+```
+
+### Scan for Nearby Devices
+
+Use the `list` command to scan for nearby devices:
+
+```sh
+vivosun-thermo list
+```
+
+Options:
+
+-   `-f`, `--format`: Output format (text or json). Default: text.
+-   `--scan-timeout`: Duration (in seconds) for scanning devices.
+-   `--adapter`: Bluetooth adapter name (e.g., hci0 on Linux).
+
+NOTE: Already connected devices won't show up in the list.
+
+### Read Status from a Device
+
+Use the `status` command to read temperature, humidity, and VPD:
+
+```sh
+vivosun-thermo status <device_address>
+```
+
+Options:
+
+-   `-u`, `--unit`: Temperature unit (c for Celsius, f for Fahrenheit). Default: c.
+-   `-f`, `--format`: Output format (text or json). Default: text.
+-   `--connect-timeout`: Timeout for connecting to the device. Default: 15 seconds.
+-   `--read-timeout`: Timeout for reading data. Default: 0.5 seconds.
+-   `--adapter`: Bluetooth adapter name (e.g., hci0 on Linux).
+
+NOTE: Enable pairing mode on device for initial connection.
+
+## Python API Usage
+
+Example:
+
+```python
+import asyncio
+from vivosun_thermo import VivosunThermoClient, PROBE_MAIN, UNIT_CELSIUS
+
+async def main():
+    async with VivosunThermoClient("device_address") as client:
+        temperature = await client.current_temperature(PROBE_MAIN, UNIT_CELSIUS)
+        humidity = await client.current_humidity(PROBE_MAIN)
+        vpd = await client.current_vpd(PROBE_MAIN)
+        print(f"Temperature: {temperature}°C")
+        print(f"Humidity: {humidity}%")
+        print(f"VPD: {vpd} kPa")
+
+asyncio.run(main())
+```
+
+## License
+
+This project is licensed under the **MIT License**. See the `LICENSE` file for details.
