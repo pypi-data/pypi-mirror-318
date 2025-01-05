@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+pyergo/__init__.py
+pyxsb/__init__.py
+vital_logic.egg-info/PKG-INFO
+vital_logic.egg-info/SOURCES.txt
+vital_logic.egg-info/dependency_links.txt
+vital_logic.egg-info/requires.txt
+vital_logic.egg-info/top_level.txt
