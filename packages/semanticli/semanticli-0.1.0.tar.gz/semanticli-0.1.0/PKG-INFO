@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: semanticli
+Version: 0.1.0
+Summary: Semantic Text Search.
+Author-email: Yair Zafrany <Jair.Zefran@gmail.com>
+Requires-Python: >=3.8
+License-File: LICENSE
