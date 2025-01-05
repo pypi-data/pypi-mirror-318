@@ -1,0 +1,16 @@
+cryptography<4.0,>=3.4.7
+PyCryptodome<4.0,>=3.10.1
+ecdsa<1.0,>=0.17.0
+
+[dev]
+pytest<7.0,>=6.2.4
+flake8<4.0,>=3.8.4
+black<22.0,>=21.7b0
+isort<6.0,>=5.8.0
+mypy<1.0,>=0.910
+sphinx<5.0,>=4.2.0
+sphinx_rtd_theme<1.0,>=0.5.0
+
+[docs]
+sphinx<5.0,>=4.2.0
+sphinx_rtd_theme<1.0,>=0.5.0
