@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+jiraservicemanagement/__init__.py
+jiraservicemanagement/api/__init__.py
+jiraservicemanagement/api/v1.py
+jsm_python_api.egg-info/PKG-INFO
+jsm_python_api.egg-info/SOURCES.txt
+jsm_python_api.egg-info/dependency_links.txt
+jsm_python_api.egg-info/top_level.txt
