@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "cbujo"
+version = "0.0.2"
+description = "Bullet Journal for the CLI"
+authors = ["Joe McCarthy <179146301+joe-mccarthy@users.noreply.github.com>"]
+maintainers = ["Joe McCarthy <179146301+joe-mccarthy@users.noreply.github.com>"]
+documentation = "https://github.com/joe-mccarthy/cbujo"
+license = "GPL-3.0-only"
+readme = "README.md"
+homepage = "https://github.com/joe-mccarthy/cbujo"
+repository = "https://github.com/joe-mccarthy/cbujo"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+pytest-randomly = "^3.16.0"
+pytest-mock = "^3.14.0"
+black = "^24.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

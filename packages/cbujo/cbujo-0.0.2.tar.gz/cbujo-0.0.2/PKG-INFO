@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: cbujo
+Version: 0.0.2
+Summary: Bullet Journal for the CLI
+Home-page: https://github.com/joe-mccarthy/cbujo
+License: GPL-3.0-only
+Author: Joe McCarthy
+Author-email: 179146301+joe-mccarthy@users.noreply.github.com
+Maintainer: Joe McCarthy
+Maintainer-email: 179146301+joe-mccarthy@users.noreply.github.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Project-URL: Documentation, https://github.com/joe-mccarthy/cbujo
+Project-URL: Repository, https://github.com/joe-mccarthy/cbujo
+Description-Content-Type: text/markdown
+
+# cbujo
+
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/joe-mccarthy/cbujo/build-test.yml?style=for-the-badge)
+![Coveralls](https://img.shields.io/coverallsCoverage/github/joe-mccarthy/cbujo?style=for-the-badge)
+![Sonar Quality Gate](https://img.shields.io/sonar/quality_gate/joe-mccarthy_cbujo?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&label=QUALITY)
+![GitHub License](https://img.shields.io/github/license/joe-mccarthy/cbujo?style=for-the-badge)
+![PyPI - Version](https://img.shields.io/pypi/v/cbujo?style=for-the-badge)
+
+Bullet Journal for the CLI
+
