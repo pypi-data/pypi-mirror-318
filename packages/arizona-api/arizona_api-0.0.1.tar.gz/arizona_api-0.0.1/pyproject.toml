@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "arizona-api"
+version = "0.0.1"
+authors = [
+    { name="ailishev", email="moskav8@gmail.com" },
+]
+description = ""
+readme = "README.md"
+requires-python = ">=3.10.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/ailishev/arizona-api"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/arizona_api"]
