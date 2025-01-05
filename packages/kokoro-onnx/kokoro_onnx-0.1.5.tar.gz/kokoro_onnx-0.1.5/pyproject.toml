@@ -1,0 +1,35 @@
+[project]
+name = "kokoro-onnx"
+version = "0.1.5"
+description = "TTS with kokoro and onnx runtime"
+readme = "README.md"
+authors = [
+    { name = "thewh1teagle", email = "61390950+thewh1teagle@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "onnxruntime>=1.20.1",
+    "colorlog>=6.9.0",
+    "phonemizer",
+    "espeakng-loader==0.1.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/thewh1teagle/kokoro-onnx"
+Repository = "https://github.com/thewh1teagle/kokoro-onnx"
+Issues = "https://github.com/thewh1teagle/kokoro-onnx/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.8.6",
+    "sounddevice>=0.5.1",
+    "soundfile>=0.13.0",
+]
+
+[tool.uv.sources]
+phonemizer = { git = "https://github.com/thewh1teagle/phonemizer.git", rev = "feat/custom-espeak-data" }
+
