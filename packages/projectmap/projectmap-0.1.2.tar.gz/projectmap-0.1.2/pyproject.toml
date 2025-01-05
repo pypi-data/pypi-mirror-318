@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "projectmap"
+version = "0.1.2"
+description = "A modern tool for visualizing project structures in the terminal"
+readme = "README.md"
+authors = [{ name = "Ivan Akkerman", email = "akakerman.live@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["project", "structure", "visualization", "tree", "map"]
+dependencies = []
+requires-python = ">=3.7"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/mr-akkerman/projectmap"
+
+[project.scripts]
+projectmap = "projectmap.visualizer:main"
