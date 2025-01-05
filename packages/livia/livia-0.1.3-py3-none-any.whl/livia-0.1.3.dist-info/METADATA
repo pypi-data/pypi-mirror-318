@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: livia
+Version: 0.1.3
+Summary: Add your description here
+Project-URL: Homepage, https://github.com/BoringHappy/livia
+Project-URL: Documentation, https://github.com/BoringHappy/livia/wiki
+Project-URL: Repository, https://github.com/BoringHappy/livia
+Project-URL: Issues, https://github.com/BoringHappy/livia/issues
+Requires-Python: >=3.13
+Requires-Dist: cleo>=2.1.0
+Requires-Dist: langchain-openai>=0.2.14
+Requires-Dist: langchain-qdrant>=0.2.0
+Requires-Dist: langchain>=0.3.14
+Description-Content-Type: text/markdown
+
+# livia
+Partner &amp; Life Saver
