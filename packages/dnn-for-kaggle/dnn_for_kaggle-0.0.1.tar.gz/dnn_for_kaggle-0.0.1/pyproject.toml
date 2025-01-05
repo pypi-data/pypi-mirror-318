@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dnn_for_kaggle"
+version = "0.0.1"
+authors = [
+  { name = "Ali Haidar Ahmad", email = "ali.h.ahmad001@gmail.com" },
+]
+description = "Deep learning tools for tabular data"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/AliHaiderAhmad001/dnn_for_kaggle/tree/main"
+Issues = "https://github.com/AliHaiderAhmad001/dnn_for_kaggle/issues"
+
+

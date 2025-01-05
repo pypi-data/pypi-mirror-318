@@ -1,0 +1,4 @@
+include README.md LICENSE requirements.txt
+recursive-include src *
+recursive-exclude tests *
+
