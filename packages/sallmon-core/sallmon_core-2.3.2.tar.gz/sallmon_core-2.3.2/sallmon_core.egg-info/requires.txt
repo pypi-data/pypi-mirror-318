@@ -1,0 +1,9 @@
+click>=8.1.3
+fastapi
+uvicorn
+websockets
+cryptography
+flask>=3.0.0
+gunicorn
+Pillow
+httpx
