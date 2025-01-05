@@ -1,0 +1,2 @@
+[console_scripts]
+sallmond = sallmon.cli.sallmond:cli
