@@ -1,0 +1,8 @@
+alphadb-1.0.0b30.dist-info/METADATA,sha256=-1plG_VzgDVF6zt4P0DvWVB6I8TrEPbFVzElaHqpK7I,3058
+alphadb-1.0.0b30.dist-info/WHEEL,sha256=nWeKMpvecbFEmBYQM44p2FChzkAyOaqMiofeuspsYro,96
+alphadb-1.0.0b30.dist-info/licenses/LICENSE,sha256=v94f2Uw7F7ifu_pjIWYMgoT2Mb8SbbHgoyyJeUSoQts,35825
+alphadb/__init__.py,sha256=YOevJjpn3KULyawTL3Duaz-gEBuIT3R0OJHOtNgKoUY,111
+alphadb/__init__.pyi,sha256=8qVyGHusKMo48lscDkthuJrn8WQAo8_YUjm8FXvyWlQ,1411
+alphadb/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alphadb/alphadb.cp310-win_amd64.pyd,sha256=_m6SS5Cs9s6hcYOcihB0nhhHQT-KkYveMvIEK1hqq7w,3484672
+alphadb-1.0.0b30.dist-info/RECORD,,
