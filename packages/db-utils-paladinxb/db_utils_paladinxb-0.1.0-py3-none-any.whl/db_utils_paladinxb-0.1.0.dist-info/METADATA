@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: db_utils_paladinxb
+Version: 0.1.0
+Summary: Утилиты для работы с базами данных
+Home-page: https://github.com/paladinxb
+Author: ilya
+Author-email: asuslover4@gmail.com
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# db_utils
+
+РЈС‚РёР»РёС‚С‹ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ Р±Р°Р·Р°РјРё РґР°РЅРЅС‹С… РЅР° Python.
+
+## РЈСЃС‚Р°РЅРѕРІРєР°
+
+```bash
+pip install db_utils
