@@ -1,0 +1,10 @@
+odoo/addons/ssi_work_log_expense_work_log/README.rst,sha256=5f2R6ZN7yQt3edczPfrDv8rTZP1mZpQ1k1EmYbnf9wE,1295
+odoo/addons/ssi_work_log_expense_work_log/__init__.py,sha256=JhPhaZHX2EaxlVGYxnTiJXb4lOWip7fiumVfTPQGruo,200
+odoo/addons/ssi_work_log_expense_work_log/__manifest__.py,sha256=-mrDNq0vg_eRdECrDVCEGt9QsVsY6jryMeH7lrHpPw4,558
+odoo/addons/ssi_work_log_expense_work_log/models/__init__.py,sha256=hrj0ENtSjMzdt3MAJmtI5udWh_dbH7HH4cquFqk3MFA,210
+odoo/addons/ssi_work_log_expense_work_log/models/work_log_expense.py,sha256=B-BzmvN9MznQrhAkM4ZkKJaOEpiPwywzImfHiCDogFU,378
+odoo/addons/ssi_work_log_expense_work_log/static/description/icon.png,sha256=lNGJOSg4cMRfwPTfFKVT6d5B2N1N83iVpEEN1blqu1I,48333
+odoo14_addon_ssi_work_log_expense_work_log-14.0.1.0.0.dist-info/METADATA,sha256=EwWMP_wM8zB1AyLswye-n2qWHHE5mRoC2OWE-9w0_RQ,1913
+odoo14_addon_ssi_work_log_expense_work_log-14.0.1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+odoo14_addon_ssi_work_log_expense_work_log-14.0.1.0.0.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo14_addon_ssi_work_log_expense_work_log-14.0.1.0.0.dist-info/RECORD,,
