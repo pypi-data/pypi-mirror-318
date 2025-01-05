@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+zyank/__init__.py
+zyank/parser.py
+zyank.egg-info/PKG-INFO
+zyank.egg-info/SOURCES.txt
+zyank.egg-info/dependency_links.txt
+zyank.egg-info/requires.txt
+zyank.egg-info/top_level.txt
