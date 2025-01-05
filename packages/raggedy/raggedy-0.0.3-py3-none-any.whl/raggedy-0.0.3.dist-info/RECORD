@@ -1,0 +1,17 @@
+raggedy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+raggedy/exceptions.py,sha256=5hnurYR9xoit3kNMvwb8uwo-Gr8sCpfFs3JJX4Vh5DI,346
+raggedy/chat/attach.py,sha256=JzmW5nstxlSw-MjO6cs_wxmEa1YfxDKgSsRfujj8dF0,1625
+raggedy/chat/chat.py,sha256=LXwF4zGG5nGKxod7YYG5P5h9yGABem54lPAOKxJlNSw,1399
+raggedy/chat/new_chat.py,sha256=C6MwKROS0m7BwyzpbEHnWROt2SqeFfRZO-X6DS803Ng,984
+raggedy/chat/subclasses/ollama.py,sha256=xLIU4_pnNJPi-6NeV8ngvz8T5W559Zr3mVjldxpxODA,3526
+raggedy/document/doctype.py,sha256=41h51k4_5eGKZ9GIVtcS4GataZpSfY0VFVLo9wNATsg,106
+raggedy/document/document.py,sha256=HJkXRNNrM4zvB1NBISFRD_VOP3O6VSLvpc8349C9KPM,677
+raggedy/document/pdf/types.py,sha256=uw2RXOSn1S4HWVHQlhVBW8qePgSOEDETpXnlnph_J_0,2198
+raggedy/document/pdf/utils.py,sha256=fvoxmfkpGmmi7uEvob2OECq9v09rlnwdF6CKfU0Tc_E,1938
+raggedy/document/subclasses/audio.py,sha256=2UJF4lfFQV3cd8fLJtkMhtaD2v47NkVpcbd7UoK84eg,517
+raggedy/document/subclasses/textual.py,sha256=pJM12wA5-lq1qIiQRQ_JtaA7d3r0IAk2aI9Xcn5ejVw,450
+raggedy/document/subclasses/visual.py,sha256=ZWsBt0CFPuh45NB4WsKbKoEpJgbnGqJJ1JjyljGjxi0,502
+raggedy-0.0.3.dist-info/METADATA,sha256=749CTZzg3j0Qy_zafh9TmlX9uwhztixcXebyAwVT6R8,666
+raggedy-0.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+raggedy-0.0.3.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+raggedy-0.0.3.dist-info/RECORD,,
