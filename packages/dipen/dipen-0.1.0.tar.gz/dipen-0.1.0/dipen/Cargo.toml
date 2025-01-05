@@ -1,0 +1,38 @@
+[package]
+name = "dipen"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Distributed petri net runner as workflow engine"
+repository = "https://github.com/valgarf/dipen"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+derive_builder = "0.20.2"
+etcd-client = "0.14.0"
+futures = "0.3.31"
+thiserror = "2.0.7"
+tokio = { version = "1.42.0", features = ["full"] }
+tokio-util = "0.7.13"
+tracing = { version = "0.1.41", features = ["async-await"] }
+unicode-segmentation = "1.12.0"
+
+[dev-dependencies]
+criterion = { version = "0.5.1", features = ["async_tokio", "tokio"] }
+plotly = { version = "0.11.0", features = ["kaleido"] }
+serde = { version = "1.0.217", features = ["derive"] }
+serde_json = "1.0.134"
+tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
+
+[[bench]]
+name = "single_node"
+harness = false
+
+[[bench]]
+name = "locking"
+harness = false
+
+[[bench]]
+name = "plot_throughput"
+harness = false
