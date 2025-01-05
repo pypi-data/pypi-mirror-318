@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: lib-pygame-ui
+Version: 1.1.0
+Summary: gui/elements for pygame.
+Author: azzammuhyala
+Author-email: azzammuhyala@gmail.com
+License: MIT
+Keywords: pyg_ui,pygameui,pygamegui,pygame gui,libpygameui,lib-pygame-ui
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pygame>=2.5.0
+
+# libpygameui module
+Version: 1.1.0
+
+Update Notes:
+- Bug fixes
+- Code structure improvements
+- Cache additions
+- Feature additions
