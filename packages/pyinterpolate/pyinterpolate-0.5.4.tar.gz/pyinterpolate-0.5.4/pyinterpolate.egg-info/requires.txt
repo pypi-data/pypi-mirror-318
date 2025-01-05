@@ -1,0 +1,27 @@
+descartes
+scikit-learn>=1.6.0
+matplotlib>=3.6
+prettytable>=3.3.0
+pyogrio
+rtree>=1.0.0
+shapely>=2.0.1
+pyarrow
+pylibtiff>=0.6.1
+deprecation>=2.1.0
+
+[:python_version <= "3.9"]
+numpy==1.21.2
+tqdm==4.64.0
+
+[:python_version > "3.9"]
+tqdm>=4.64
+
+[:python_version >= "3.10"]
+numpy<2
+
+[:python_version >= "3.9"]
+geopandas
+pandas>=1.4.3
+
+[:python_version >= "3.9" and sys_platform == "darwin"]
+dask==2023.3.2
