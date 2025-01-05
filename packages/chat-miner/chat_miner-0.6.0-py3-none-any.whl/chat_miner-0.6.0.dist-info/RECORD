@@ -1,0 +1,9 @@
+chatminer/__init__.py,sha256=ZsUoXW4uq2Z1OcqIoyH8OiQe1TxxDKgYfIm2aui5g5A,515
+chatminer/chatparsers.py,sha256=HU_MhA44t-w1HK9ElZ1bmBSppZ0APIaQivujMD7p0cQ,13425
+chatminer/cli.py,sha256=n6nNc4LOC1OIWfnKVNL9sANOiO-WjpkR34ML7SaM-jg,2108
+chatminer/visualizations.py,sha256=c-jgoVPc2dAaU0usjvHkbPpiL6JOfzfKG-_1Sd0oXc0,11869
+chat_miner-0.6.0.dist-info/METADATA,sha256=nwV-EitbR7OW740KZJQMIP8Bg2ZDyRQCPoYfZfmAHho,6244
+chat_miner-0.6.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+chat_miner-0.6.0.dist-info/entry_points.txt,sha256=436liPquAOwYnsLSJiZYTjSRweRzl4lKtFeupYcJGkw,49
+chat_miner-0.6.0.dist-info/licenses/LICENSE,sha256=TR5VsRRC4A8UqZlW7ynOpqsZNhTv5Ni05TxzoDhKQjE,1068
+chat_miner-0.6.0.dist-info/RECORD,,
