@@ -1,0 +1,12 @@
+churn_prediction_dani/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+churn_prediction_dani/config.py,sha256=KqB76PlnsuHe-4W_5nhnoyMnkkFS87kU33Sc_-F93zI,945
+churn_prediction_dani/dataset.py,sha256=uqFOEyBDxQH9fQZFBvVepjuJgC3_X7jEe0nuzySuq4U,2979
+churn_prediction_dani/experiments.py,sha256=H08rLnQ9fwx7_0L176FvqU1dDIAXzW_4JE3WEtlub-I,2659
+churn_prediction_dani/features.py,sha256=rtbN_qr4YjyZg53PqIuOp-3dwJYl0C8HHPbGvAi-oJY,4927
+churn_prediction_dani/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+churn_prediction_dani/models/predict.py,sha256=6feDIlsYdRazXEg9COKEOs-J8xcPuWZ9O_FwUCZ55Nc,4088
+churn_prediction_dani/models/train.py,sha256=v-lZ-opWTEh_SdcllbTrj1M0jmnXNmvN3exwcInIb24,3000
+churn_prediction_dani/tests/test_features.py,sha256=EGOMgFme1ZhRNZWzcvwWQ-p_6Huwlaql3yDpfeGdZWI,3332
+churn_prediction_dani-0.1.0.dist-info/METADATA,sha256=fJAj48T0G2Hz1y-JR_1rrgbW-bRUfe8JMQ7kN_ao5sY,3423
+churn_prediction_dani-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+churn_prediction_dani-0.1.0.dist-info/RECORD,,
