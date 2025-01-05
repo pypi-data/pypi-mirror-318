@@ -1,0 +1,3 @@
+[console_scripts]
+repodocify=repomap.cli:main
+
