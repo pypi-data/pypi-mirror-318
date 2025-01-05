@@ -1,0 +1,15 @@
+cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cli/cli.py,sha256=4lV_rGcMJ76ahiFLO61fvmQbVPHrXe1r-uktFDL9xSI,2863
+cli/config.py,sha256=kacLX6x-uIDVK2EPPfvhh4ADqd-u-R1ztWt2MFXYzaQ,422
+cli/image.py,sha256=v8PlpeWnrdvxY77FrOk0CV-nw_vB4NsRDxRIYVmIRGI,8476
+cli/fonts/Prima Sans Bold.otf,sha256=bOgIraQZKio2sS2c9_o60BjaS_H9cZ2uB6pBOHzobRY,25736
+cli/fonts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+install/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+install/config.py,sha256=CkJDD-ZUwI9mgjGxg8MzUxodi8PIs_QtTmKK1_jSTvY,143
+install/fix_install.py,sha256=4BsM4FcGPmBxNaAD6w5qsWpm0Gfm8K1VRorwObgP_Bw,4818
+jellyfin_tools-1.0.2.dist-info/LICENSE.txt,sha256=pAZXnNE2dxxwXFIduGyn1gpvPefJtUYOYZOi3yeGG94,1068
+jellyfin_tools-1.0.2.dist-info/METADATA,sha256=UrR2wjcIPquYfqfzQW-n8nhmtgX2VmuMwiyt66B8CXQ,402
+jellyfin_tools-1.0.2.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+jellyfin_tools-1.0.2.dist-info/entry_points.txt,sha256=SvEhw21gWnlq60SOyeLT0e-hsHJtfMvtMkJjuGBLHo4,48
+jellyfin_tools-1.0.2.dist-info/top_level.txt,sha256=Y7mwFpWnN5MLcd5baKbh4oU6iy72wGkEYoT0BJl9bl8,12
+jellyfin_tools-1.0.2.dist-info/RECORD,,
