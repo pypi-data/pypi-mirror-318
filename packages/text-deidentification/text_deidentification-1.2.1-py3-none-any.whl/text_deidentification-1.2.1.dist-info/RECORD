@@ -1,0 +1,13 @@
+deidentification/__init__.py,sha256=ujYAMSEpvYCHCsKaRkTE_hDHZasgVf-R6KUiWUrZ1yg,517
+deidentification/deidentification.py,sha256=P41ObBzMTMolRrbKipaVt9PGYCVVuPn-rgC9dTqb3-M,18309
+deidentification/deidentification_constants.py,sha256=Sd8R7OASmb-UDD-bjgCPZT9Jnr3zfFcRUfbK1t-M2B8,1281
+deidentification/deidentify.py,sha256=x_o1H0dLQ9yJbEhr3w9FmtdYG7-Ltj-2iTgdCP3st0o,5629
+deidentification/file_detection.py,sha256=LYX4EO0SnBp6ISgxgjllK2YhOhY3ykpBLSL5ythDbBA,1765
+deidentification/normalize_punctuation.py,sha256=AIEda9lb3R3oU1u9Pganldt_qHXryCwpVhHvqzY21XY,3131
+deidentification/safe_print.py,sha256=CchcOaX39Zqw0SHGyPoxbRtkMUvK9s9WTqyRu9bgRz0,976
+text_deidentification-1.2.1.dist-info/LICENSE,sha256=YeUKcZAj40t9BWEFEu0iA8Som95FtgeADbn96sT5Rvc,1068
+text_deidentification-1.2.1.dist-info/METADATA,sha256=XpFWRq702if4ZFIKqiNMFTtRUHRiEtG90Ic84DU2-MU,5358
+text_deidentification-1.2.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+text_deidentification-1.2.1.dist-info/entry_points.txt,sha256=GtdA-nGbSeohcUslUhkpatT89Smnp6rviqBKkz9TK60,64
+text_deidentification-1.2.1.dist-info/top_level.txt,sha256=GSpiiT89fx5gQ9FNme7pujK8xaA6i7iEbiBxs3Dc-qg,17
+text_deidentification-1.2.1.dist-info/RECORD,,
