@@ -1,0 +1,23 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[project]
+dependencies = [
+  "click>=8.1.8",
+  "promptic>=4.0.1",
+  "rich>=13.9.4",
+  "ruamel-yaml>=0.18.8",
+]
+description = "Describe what you want done in your terminal, and Skeet will use AI to make it happen."
+license = {file = "LICENSE"}
+name = "skeet"
+readme = "README.md"
+requires-python = ">=3.11"
+version = "0.5.1"
+
+[project.urls]
+"Source" = "https://github.com/knowsuchagency/skeet"
+
+[project.scripts]
+skeet = "skeet:main"
