@@ -1,0 +1,15 @@
+semanticli/__init__.py,sha256=YkPPUEd60hpwztsZ2hrJAQmH5Bztx3phyfCmrkhsBVY,75
+semanticli/__main__.py,sha256=HwCsrTVbRIXoJvCjuSB1fMvw1ixf4PccXDujY-YD-nw,140
+semanticli/cli/cli.py,sha256=ZDh5x-turKrXEoGvxZZWEVEg9Z5hmWpDpz7q-6Q8LB0,4708
+semanticli/cli/parser_setup.py,sha256=iYqVZ6IwM5XZKAJise5Gt7Enq58nFHNbm6LmvSlFH7s,3217
+semanticli/model/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+semanticli/model/inference.py,sha256=9pXHxAPZrl1zeLYVFAZry9olz8bUoYqPxvSupZ1amUw,1889
+semanticli/model/install.py,sha256=eMhWKcbfkj4T5Bk9QtMhhKYDMe_HvZHDXYKR0wRJb2Q,3007
+semanticli/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+semanticli/utils/logger.py,sha256=I8h0pLqEbmlfoU5ct0LVnPS_qvX91KXNv8XowYG-gCk,613
+semanticli-0.1.0.dist-info/LICENSE,sha256=YEfwUYQI2hl55t4RSWVoM5QSbpEAkKuJz5pqJuqHpig,1068
+semanticli-0.1.0.dist-info/METADATA,sha256=tE2MAXxRboUFhHAlaoR-9pJWIjg1sDI-xr_ud4qAmks,181
+semanticli-0.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+semanticli-0.1.0.dist-info/entry_points.txt,sha256=c3ejUnuONpx_4gM_Ir9uKgSLJ7A_qkjYaAHUe1b8LW8,50
+semanticli-0.1.0.dist-info/top_level.txt,sha256=y8jG7y_-OU7_GydfbFKbrTDcwxleyvHg66ghgKQAtwY,11
+semanticli-0.1.0.dist-info/RECORD,,
