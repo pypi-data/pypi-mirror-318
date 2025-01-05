@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: Cypher-Pilot
+Version: 1.0.0
+Summary: Python Library for Database Interaction with Neo4j
+Author: Yaki Naftali
+Author-email: yaki.naftali@accenture.com
+Keywords: Neo4j,Cypher,Database,Python,CSV Export
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: neo4j>=4.4.0
