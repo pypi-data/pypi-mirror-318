@@ -1,0 +1,35 @@
+[project]
+requires-python = ">=3.11"
+
+[tool.poetry]
+name = "aipm"
+version = "0.1.0"
+description = "AI for Portfolio Management"
+authors = ["nvimts <scrlk1289@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+polars = "^0.20.0"
+pandas = "^2.1.0"
+fastparquet = "^2023.10.1"
+pyarrow = "^13.0.0"
+torch = "^2.1.0"
+
+[tool.poetry.group.dev.dependencies] 
+icecream = "^2.1.3"
+ruff = "0.8.5"
+pretty-errors = "^1.2.25"
+pytest = "^7.1.2"
+mypy = "^1.14.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 79
+exclude = [ "**/migrations/" , "**/manage.py" ]
+
+[tool.ruff.format]   # https://docs.astral.sh/ruff/settings/#format
+quote-style = "double"

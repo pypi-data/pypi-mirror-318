@@ -1,0 +1,230 @@
+=== CONFIG ===
+N_MODELS: 50
+EXP: {'allow_short': False, 'max_leverage': 1, 'n_assets': 2, 'n_features': 1, 'n_collections': 1, 'n_trains': 50, 'n_rounds': 10}
+TRAIN: {'n_epochs': 3, 'n_episodes': 3, 'entropy_regularized': False, 'optimizer': 'Adam', 'lr': 0.05, 'transaction_fee': 0.001}
+ENV: {}
+MODEL: {'initial_gumbel_temperature': 5, 'n_allowed_actions': 51, 'memory_size': 64}
+
+=== TRAINING LOG ===
+Train 0 completed in 0.05s.
+    Final top action probabilities and values:
+    1: Prob=0.022, Value=0.860
+    2: Prob=0.022, Value=0.760
+    3: Prob=0.022, Value=0.820
+
+Train 1 completed in 0.10s.
+    Final top action probabilities and values:
+    1: Prob=0.024, Value=0.760
+    2: Prob=0.024, Value=0.860
+    3: Prob=0.024, Value=0.680
+
+Train 2 completed in 0.18s.
+    Final top action probabilities and values:
+    1: Prob=0.027, Value=0.860
+    2: Prob=0.027, Value=0.920
+    3: Prob=0.027, Value=0.760
+
+Train 3 completed in 0.27s.
+    Final top action probabilities and values:
+    1: Prob=0.030, Value=0.920
+    2: Prob=0.029, Value=0.760
+    3: Prob=0.029, Value=0.720
+
+Train 4 completed in 0.38s.
+    Final top action probabilities and values:
+    1: Prob=0.031, Value=0.920
+    2: Prob=0.031, Value=0.660
+    3: Prob=0.030, Value=0.720
+
+Train 5 completed in 0.51s.
+    Final top action probabilities and values:
+    1: Prob=0.031, Value=0.920
+    2: Prob=0.031, Value=0.660
+    3: Prob=0.030, Value=0.560
+
+Train 6 completed in 0.66s.
+    Final top action probabilities and values:
+    1: Prob=0.031, Value=0.920
+    2: Prob=0.030, Value=0.660
+    3: Prob=0.030, Value=0.560
+
+Train 7 completed in 0.83s.
+    Final top action probabilities and values:
+    1: Prob=0.030, Value=0.920
+    2: Prob=0.030, Value=0.540
+    3: Prob=0.029, Value=0.660
+
+Train 8 completed in 1.01s.
+    Final top action probabilities and values:
+    1: Prob=0.029, Value=0.520
+    2: Prob=0.029, Value=0.920
+    3: Prob=0.029, Value=0.540
+
+Train 9 completed in 1.22s.
+    Final top action probabilities and values:
+    1: Prob=0.030, Value=0.520
+    2: Prob=0.029, Value=0.540
+    3: Prob=0.029, Value=0.920
+
+Train 10 completed in 1.44s.
+    Final top action probabilities and values:
+    1: Prob=0.029, Value=0.520
+    2: Prob=0.029, Value=0.540
+    3: Prob=0.028, Value=0.920
+
+Train 11 completed in 1.69s.
+    Final top action probabilities and values:
+    1: Prob=0.029, Value=0.920
+    2: Prob=0.028, Value=0.540
+    3: Prob=0.028, Value=0.520
+
+Train 12 completed in 1.95s.
+    Final top action probabilities and values:
+    1: Prob=0.030, Value=0.920
+    2: Prob=0.029, Value=0.740
+    3: Prob=0.028, Value=0.540
+
+Train 13 completed in 2.26s.
+    Final top action probabilities and values:
+    1: Prob=0.031, Value=0.920
+    2: Prob=0.030, Value=0.740
+    3: Prob=0.029, Value=0.620
+
+Train 14 completed in 2.55s.
+    Final top action probabilities and values:
+    1: Prob=0.030, Value=0.920
+    2: Prob=0.030, Value=0.740
+    3: Prob=0.029, Value=0.620
+
+Train 15 completed in 2.87s.
+    Final top action probabilities and values:
+    1: Prob=0.030, Value=0.920
+    2: Prob=0.029, Value=0.740
+    3: Prob=0.028, Value=0.540
+
+Train 16 completed in 3.20s.
+    Final top action probabilities and values:
+    1: Prob=0.029, Value=0.920
+    2: Prob=0.029, Value=0.740
+    3: Prob=0.028, Value=0.540
+
+Train 17 completed in 3.56s.
+    Final top action probabilities and values:
+    1: Prob=0.029, Value=0.740
+    2: Prob=0.029, Value=0.920
+    3: Prob=0.028, Value=0.540
+
+Train 18 completed in 3.96s.
+    Final top action probabilities and values:
+    1: Prob=0.027, Value=0.740
+    2: Prob=0.027, Value=0.920
+    3: Prob=0.026, Value=0.540
+
+Train 19 completed in 4.37s.
+    Final top action probabilities and values:
+    1: Prob=0.028, Value=0.500
+    2: Prob=0.024, Value=0.740
+    3: Prob=0.024, Value=0.520
+
+Train 20 completed in 4.85s.
+    Final top action probabilities and values:
+    1: Prob=0.030, Value=0.500
+    2: Prob=0.025, Value=0.060
+    3: Prob=0.022, Value=0.520
+
+Train 21 completed in 5.31s.
+    Final top action probabilities and values:
+    1: Prob=0.032, Value=0.500
+    2: Prob=0.027, Value=0.060
+    3: Prob=0.023, Value=0.380
+
+Train 22 completed in 5.76s.
+    Final top action probabilities and values:
+    1: Prob=0.034, Value=0.500
+    2: Prob=0.028, Value=0.060
+    3: Prob=0.024, Value=0.380
+
+Train 23 completed in 6.25s.
+    Final top action probabilities and values:
+    1: Prob=0.035, Value=0.500
+    2: Prob=0.029, Value=0.060
+    3: Prob=0.025, Value=0.360
+
+Train 24 completed in 6.73s.
+    Final top action probabilities and values:
+    1: Prob=0.036, Value=0.500
+    2: Prob=0.029, Value=0.060
+    3: Prob=0.025, Value=0.360
+
+Train 25 completed in 7.26s.
+    Final top action probabilities and values:
+    1: Prob=0.038, Value=0.500
+    2: Prob=0.028, Value=0.060
+    3: Prob=0.025, Value=0.480
+
+Train 26 completed in 7.78s.
+    Final top action probabilities and values:
+    1: Prob=0.040, Value=0.500
+    2: Prob=0.027, Value=0.060
+    3: Prob=0.025, Value=0.480
+
+Train 27 completed in 8.35s.
+    Final top action probabilities and values:
+    1: Prob=0.042, Value=0.500
+    2: Prob=0.027, Value=0.520
+    3: Prob=0.026, Value=0.060
+
+Train 28 completed in 8.91s.
+    Final top action probabilities and values:
+    1: Prob=0.043, Value=0.500
+    2: Prob=0.028, Value=0.520
+    3: Prob=0.025, Value=0.060
+
+Train 29 completed in 9.53s.
+    Final top action probabilities and values:
+    1: Prob=0.045, Value=0.500
+    2: Prob=0.029, Value=0.520
+    3: Prob=0.025, Value=0.480
+
+Train 30 completed in 10.13s.
+    Final top action probabilities and values:
+    1: Prob=0.046, Value=0.500
+    2: Prob=0.030, Value=0.520
+    3: Prob=0.025, Value=0.480
+
+Train 31 completed in 10.80s.
+    Final top action probabilities and values:
+    1: Prob=0.048, Value=0.500
+    2: Prob=0.031, Value=0.520
+    3: Prob=0.026, Value=0.480
+
+Train 32 completed in 11.45s.
+    Final top action probabilities and values:
+    1: Prob=0.048, Value=0.500
+    2: Prob=0.030, Value=0.520
+    3: Prob=0.026, Value=0.480
+
+Train 33 completed in 12.16s.
+    Final top action probabilities and values:
+    1: Prob=0.049, Value=0.500
+    2: Prob=0.029, Value=0.520
+    3: Prob=0.027, Value=0.480
+
+Train 34 completed in 12.88s.
+    Final top action probabilities and values:
+    1: Prob=0.049, Value=0.500
+    2: Prob=0.028, Value=0.480
+    3: Prob=0.028, Value=0.520
+
+Train 35 completed in 13.59s.
+    Final top action probabilities and values:
+    1: Prob=0.051, Value=0.500
+    2: Prob=0.029, Value=0.480
+    3: Prob=0.028, Value=0.520
+
+Train 36 completed in 14.36s.
+    Final top action probabilities and values:
+    1: Prob=0.051, Value=0.500
+    2: Prob=0.029, Value=0.480
+    3: Prob=0.027, Value=0.520
+
