@@ -1,0 +1,97 @@
+Metadata-Version: 2.1
+Name: evorl
+Version: 0.1.2
+Summary: An evolutionary reinforcement learning framework
+Home-page: https://github.com/evorl-ai/evorl
+Author: Your Name
+Author-email: your.email@example.com
+Project-URL: Bug Tracker, https://github.com/evorl-ai/evorl/issues
+Project-URL: Documentation, https://evorl.readthedocs.io/
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch>=1.8.0
+Requires-Dist: numpy>=1.19.0
+Requires-Dist: gymnasium>=0.26.0
+Requires-Dist: matplotlib>=3.3.0
+Requires-Dist: seaborn>=0.11.0
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0; extra == "dev"
+Requires-Dist: pytest-cov>=2.0; extra == "dev"
+Requires-Dist: black>=22.0; extra == "dev"
+Requires-Dist: isort>=5.0; extra == "dev"
+Requires-Dist: flake8>=3.9; extra == "dev"
+Requires-Dist: mypy>=0.9; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx>=4.0; extra == "docs"
+Requires-Dist: sphinx-rtd-theme>=1.0; extra == "docs"
+Requires-Dist: sphinx-autodoc-typehints>=1.12; extra == "docs"
+Provides-Extra: examples
+Requires-Dist: wandb>=0.12.0; extra == "examples"
+Requires-Dist: mujoco>=2.2.0; extra == "examples"
+
+# EvoRL
+
+An evolutionary reinforcement learning framework that combines evolutionary algorithms with deep RL.
+
+## Installation
+
+```bash
+pip install evorl
+```
+
+## Quick Start
+
+```python
+from evorl import DQNAgent, Population, CEM, NormalizedEnv
+import gymnasium as gym
+
+# Create environment
+env = NormalizedEnv(gym.make("CartPole-v1"))
+
+# Create population of agents
+population = Population(
+    agent_class=DQNAgent,
+    state_dim=env.observation_space.shape[0],
+    action_dim=env.action_space.n,
+    population_size=10
+)
+
+# Create evolution strategy
+strategy = CEM(elite_frac=0.2)
+```
+
+## Features
+
+- 🧬 Evolutionary optimization of RL agents
+- 🤖 Multiple agent types (DQN, PPO)
+- 🔄 Various evolution strategies (CEM, PGPE, NES)
+- 📊 Environment normalization and preprocessing
+- 🚀 Easy to extend and customize
+
+## Development
+
+```bash
+# Clone the repository
+git clone https://github.com/zhangalex1/evorl.git
+cd evorl
+
+# Install in development mode
+pip install -e ".[dev]"
+
+# Run tests
+pytest tests/
+```
+
+## License
+
+MIT License 
