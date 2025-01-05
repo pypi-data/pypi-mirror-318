@@ -1,0 +1,2 @@
+[console_scripts]
+connectivity_tool = connectivity_tool_cli.index:main_function
