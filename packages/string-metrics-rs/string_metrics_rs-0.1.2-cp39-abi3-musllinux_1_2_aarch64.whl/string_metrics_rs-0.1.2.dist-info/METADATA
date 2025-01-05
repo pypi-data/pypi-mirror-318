@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: string-metrics-rs
+Version: 0.1.2
+Summary: Add your description here
+Author-email: Yasufumi Taniguchi <yasufumi.taniguchi@gmail.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# string-metrics-rs
+
+## Basic Usage
+
+```py
+from string_metrics import levenshtein
+
+assert levenshtein("abcde", "abc") == 2
+```
+
+## Installation
+
+```bash
+pip install string-metrics-rs
+```
+
