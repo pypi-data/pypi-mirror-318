@@ -1,0 +1,3 @@
+[console_scripts]
+send2llm = send_2_llm.cli:main
+send_2_llm = send_2_llm.cli:main

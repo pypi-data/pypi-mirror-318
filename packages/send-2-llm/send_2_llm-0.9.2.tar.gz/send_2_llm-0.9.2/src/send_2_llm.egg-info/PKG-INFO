@@ -1,0 +1,177 @@
+Metadata-Version: 2.1
+Name: send_2_llm
+Version: 0.9.2
+Summary: A flexible LLM provider switching library with multiple strategies
+Home-page: https://github.com/ai-tools-team/send_2_llm
+Author: AI Tools Team
+Author-email: AI Tools Team <ai.tools.team@example.com>
+License: MIT License
+        
+        Copyright (c) 2024 AI Tools Team
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE. 
+Project-URL: Homepage, https://github.com/ai-tools-team/send_2_llm
+Project-URL: Documentation, https://ai-tools-team.github.io/send_2_llm
+Project-URL: Repository, https://github.com/ai-tools-team/send_2_llm.git
+Project-URL: Issues, https://github.com/ai-tools-team/send_2_llm/issues
+Keywords: llm,ai,openai,anthropic,machine-learning
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: aiohttp>=3.9.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: click>=8.0.0
+Requires-Dist: rich<14.0.0,>=13.8.1
+Requires-Dist: markdown>=3.5.0
+Requires-Dist: pygments>=2.15.0
+Requires-Dist: commonmark>=0.9.1
+Requires-Dist: tenacity>=8.0.0
+Requires-Dist: tiktoken>=0.6.0
+Requires-Dist: tqdm==4.67.1
+Requires-Dist: jiter==0.8.2
+Provides-Extra: openai
+Requires-Dist: openai>=1.58.1; extra == "openai"
+Provides-Extra: anthropic
+Requires-Dist: anthropic>=0.3.0; extra == "anthropic"
+Provides-Extra: together
+Requires-Dist: together>=0.2.11; extra == "together"
+Provides-Extra: deepseek
+Requires-Dist: openai>=1.58.1; extra == "deepseek"
+Provides-Extra: perplexity
+Requires-Dist: requests>=2.31.0; extra == "perplexity"
+Requires-Dist: aiohttp>=3.9.0; extra == "perplexity"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.20.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: isort>=5.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Requires-Dist: pylint>=2.0.0; extra == "dev"
+Requires-Dist: pre-commit>=3.0.0; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: mkdocs>=1.4.0; extra == "docs"
+Requires-Dist: mkdocs-material>=9.0.0; extra == "docs"
+Requires-Dist: mkdocstrings>=0.20.0; extra == "docs"
+Provides-Extra: all
+Requires-Dist: send_2_llm[anthropic,deepseek,dev,docs,openai,perplexity,together]; extra == "all"
+
+# Send2LLM
+
+[![PyPI version](https://badge.fury.io/py/send-2-llm.svg)](https://badge.fury.io/py/send-2-llm)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Гибкая библиотека для работы с различными LLM провайдерами
+
+## Особенности
+
+- 🔄 Единый интерфейс для всех LLM провайдеров
+- 🚀 Асинхронная работа из коробки
+- 📊 Мониторинг использования и стоимости
+- 🎨 Красивый CLI интерфейс
+- 🔌 Легкое добавление новых провайдеров
+
+## Быстрая установка
+
+### Через pip
+
+```bash
+pip install send-2-llm  # Базовая установка
+```
+
+### С дополнительными провайдерами:
+
+```bash
+pip install "send-2-llm[openai]"    # Только OpenAI
+pip install "send-2-llm[anthropic]"  # Только Anthropic
+pip install "send-2-llm[gemini]"     # Только Gemini
+pip install "send-2-llm[all]"        # Все провайдеры + инструменты разработки
+```
+
+### Через установочные скрипты
+
+```bash
+# Установка Gemini провайдера
+./scripts/install/gemini.sh
+```
+
+## Простой пример
+
+```python
+from send_2_llm import LLMClient
+from send_2_llm.types import ProviderType, LLMRequest
+
+async def main():
+    client = LLMClient(provider_type=ProviderType.OPENAI)
+    
+    response = await client.generate(
+        LLMRequest(
+            prompt="Привет, как дела?",
+            max_tokens=100
+        )
+    )
+    
+    print(response.text)
+
+if __name__ == "__main__":
+    import asyncio
+    asyncio.run(main())
+```
+
+## Документация
+
+Полная документация доступна на [GitHub Pages](https://ai-tools-team.github.io/send_2_llm)
+
+## Разработка
+
+Для разработки установите дополнительные зависимости:
+
+```bash
+pip install "send-2-llm[dev]"
+```
+
+## Структура проекта
+
+```
+send_2_llm/
+├── docs/              # Документация
+├── examples/          # Примеры использования
+├── requirements/      # Зависимости по группам
+│   └── providers/    # Зависимости провайдеров
+├── scripts/          # Скрипты проекта
+│   └── install/      # Установочные скрипты
+├── src/              # Исходный код
+└── tests/            # Тесты
+```
+
+## Лицензия
+
+MIT License - см. файл [LICENSE](LICENSE) 

@@ -1,0 +1,4 @@
+# DeepSeek Provider Dependencies
+# Uses OpenAI SDK for API compatibility (base_url: https://api.deepseek.com)
+openai>=1.58.1  # Required for DeepSeek API compatibility
+tiktoken>=0.6.0  # Required for token counting 

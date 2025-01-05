@@ -1,0 +1,2 @@
+# Together AI Provider Dependencies
+together>=0.2.11 

@@ -1,0 +1,86 @@
+SYSTEM REQUIREMENTS
+
+1. VENV
+- Python 3.11+
+- VENV AUTOMATION:
+
+  * All new scripts must include venv check
+
+2. CODE QUALITY
+- SOLID patterns
+- Clean architecture
+
+3. UI/UX
+- Jacob Nielsen guidelines
+
+4. FEEDBACK
+- Progress bars
+- Clear user feedback
+
+5. ERRORS
+- Error handling
+- Event logging
+- Recovery plans
+- Recovery strategies
+
+
+7. GIT
+- Regular sync with remote
+- Meaningful commits
+- Branch management
+- Always run 'git push' after commit
+
+8. DOCS
+- Comprehensive documentation
+- All levels covered
+
+9. TESTING
+- Unit & integration tests
+- System & acceptance tests
+
+10. STABILITY PROTECTION
+- DO NOT MODIFY OpenAI integration without explicit permission
+- STABLE VERSION TAG: stable_openai_v1 (commit: b25d24a)
+- PROTECTED DEPENDENCIES:
+  * openai>=1.12.0
+  * pytest>=7.0.0
+  * pytest-asyncio>=0.20.0
+  * python-dotenv>=1.0.0
+  * pydantic>=2.0.0
+
+- PROTECTED FILES:
+  * src/send_2_llm/providers/openai.py
+  * src/send_2_llm/types.py (OpenAI related types)
+  * tests/test_providers/test_openai.py
+  * tests/test_openai_connection.py
+
+
+- MODIFICATION RULES:
+  * All changes must maintain 95%+ test coverage
+  * No breaking changes to public interfaces
+  * Must pass all existing OpenAI tests
+  * Document any dependency updates
+  * Create new test cases for new features
+
+  - ENV FILE PROTECTION:
+    * .env file contains critical settings and API keys
+    * STRICTLY PROHIBITED: Any automatic modifications to .env !!!
+
+    - VENV ACTIVATION RULES:
+      * Create: python3.11 -m venv venv
+      * Activate: source venv/bin/activate
+      * Install: pip install -r requirements.txt
+      * Deactivate: deactivate
+      * Run commands only in active venv in terminal
+      
+
+      - ENV FILE RULES:
+        * STRICTLY PROHIBITED: Any automatic .env file modifications
+        * Manual admin changes only
+        * Contains critical settings and API keys
+        * Backup before changes
+        * Verify syntax after changes
+
+# Cursor Protection Rules
+ For detailed list of protected files and modification rules see docs/PROTECTED_FILES.md
+
