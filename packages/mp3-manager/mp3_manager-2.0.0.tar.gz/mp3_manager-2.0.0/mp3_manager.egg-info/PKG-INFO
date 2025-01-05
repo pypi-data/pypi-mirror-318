@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: mp3_manager
+Version: 2.0.0
+License-File: LICENSE
+Requires-Dist: eyed3>=0.9.7
+Requires-Dist: pydub>=0.25.1
