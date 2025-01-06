@@ -1,0 +1,2 @@
+# Anthropic Provider Dependencies
+anthropic>=0.3.0 
