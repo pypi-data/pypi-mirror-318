@@ -1,0 +1,32 @@
+[project]
+name = "one_shot_calculator"
+dynamic=["version"]
+authors = [
+  { name="Matt von Hippel" },
+]
+description = "A package to calculate the probability of one-shotting monsters in Dungeons and Dragons"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "frozendict",
+  "pandas",
+  "numpy",
+  "charset_normalizer",
+  "plotly",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/matt-vonhippel/one-shot-calculator"
+Issues = "https://github.com/matt-vonhippel/one-shot-calculator/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path="src/one_shot_calculator/__init__.py"
