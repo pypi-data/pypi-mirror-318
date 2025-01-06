@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: clashaipy
+Version: 1.0.8
+Summary: An API wrapper for the ClashAI API
+Author: Julianwe17, invalidsian
+License: MIT
+Project-URL: GitHub, https://github.com/clashai/clashai
+Project-URL: Documentation, https://clashai.readthedocs.io
+Project-URL: ClashAI, https://clashai.eu
+Keywords: clash-ai,clashai,api,clashapi,clashai,ai,gpt,llama,mixtral,gemini,clashaipy
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+![ClashAI Wide-Banner](https://i.ibb.co/5czjY5n/Clash-AI-Wide-Banner-No-Background.png)
+# 🚀 | ClashAI Python Package
+**ClashAI Python Package for easy API integration!**
+
+## Installation
+```python
+pip install clashai
+```
+
+## 💭 | Chat Completions
+
+```python
+import clashaipy
+
+client = clashaipy.Client(api_key="[YOUR API KEY]")
+completion = client.chat.completions.create(
+    messages=[
+        {
+            "role": "user",
+            "content": "Hello, World!",
+        }
+    ]
+)
+
+print(completion['choices'][0]['message']['content'])
+```
+
+## 📷 | Image Recognition
+
+```py
+import clashaipy
+
+client = clashaipy.Client(api_key="[YOUR API KEY]")
+
+response = client.chat.completions.create(
+    messages=[
+        {
+            "role": "user",
+            "content": [
+                {"type": "text", "text": "What’s in this image?"},
+                {
+                    "type": "image_url",
+                    "image_url": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Gfp-wisconsin-madison-the-nature-boardwalk.jpg/2560px-Gfp-wisconsin-madison-the-nature-boardwalk.jpg",
+                    },
+                },
+            ],
+        }
+    ]
+)
+
+print(response['choices'][0]['message']['content'])
+```

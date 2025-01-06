@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+requirements.txt
+clashaipy/__init__.py
+clashaipy/chat.py
+clashaipy/client.py
+clashaipy/image.py
+clashaipy.egg-info/PKG-INFO
+clashaipy.egg-info/SOURCES.txt
+clashaipy.egg-info/dependency_links.txt
+clashaipy.egg-info/requires.txt
+clashaipy.egg-info/top_level.txt
