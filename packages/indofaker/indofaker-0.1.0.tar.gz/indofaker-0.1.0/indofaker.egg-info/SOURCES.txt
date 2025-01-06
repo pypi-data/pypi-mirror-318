@@ -1,0 +1,15 @@
+setup.py
+indofaker/__init__.py
+indofaker/base_name.py
+indofaker/family_name.py
+indofaker/first_name.py
+indofaker/gender.py
+indofaker/last_name.py
+indofaker/middle_name.py
+indofaker/name_generator.py
+indofaker/religion.py
+indofaker/tribe.py
+indofaker.egg-info/PKG-INFO
+indofaker.egg-info/SOURCES.txt
+indofaker.egg-info/dependency_links.txt
+indofaker.egg-info/top_level.txt
