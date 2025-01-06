@@ -1,0 +1,27 @@
+fstrent_tools/
+├── src/
+│   ├── __init__.py
+│   └── tools_common.py
+│   └── tools_debug.py
+│   └── tools_decorators.py
+│   └── tools_dicts.py
+│   └── tools_eval.py
+│   └── tools_files.py
+│   └── tools_formatting.py
+│   └── tools_hyperlinks.py
+│   └── tools_logging.py
+│   └── tools_sound.py
+│   └── tools_strings.py
+│   └── tools_terminal.py
+│   └── tools_time.py
+│   └── tools_types.py
+│   └── tools_voice.py
+├── tests/
+│   ├── __init__.py
+│   └── test_fstrent_tools.py
+├── .gitignore
+├── LICENSE
+├── MANIFEST.in
+├── pyproject.toml
+├── README.md
+└── requirements.txt 
