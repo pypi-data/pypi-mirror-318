@@ -1,0 +1,12 @@
+pyproject_to_setup/__init__.py,sha256=khShkLxm79SP0vZ8SteJxn4c7fyHLVfoVQlELr2Iaa0,91
+pyproject_to_setup/cli.py,sha256=Sow3bW_3b64MZsVfZpeTHj8B7XdvGm6r2pyBYl0tIdA,3195
+pyproject_to_setup/converter.py,sha256=jiKDYXt9Ew8kczJfzpD3-F7WIxpl-ljDyd8TaAqwtxA,3748
+pyproject_to_setup/errors.py,sha256=wVD9H_nnOq9GnJ1mwJRZY7OvjFK8xkG4htqmbuKR8rs,285
+pyproject_to_setup/generator.py,sha256=MiaKXAMejocCTl77w59NMrhen0PJxUXzt1Dhb-gJdp4,1700
+pyproject_to_setup/models.py,sha256=5SnzOcWtCpAvJSttrTTZClVinInAF953KetY7I8G3dg,1239
+pyproject_to_setup/validation.py,sha256=905BmhEDAVxP49AdjE3a_IzJaOMNE0NHeTQGlSK88jg,722
+pyproject_to_setup-0.1.1.dist-info/METADATA,sha256=m6y9hATfHIWKIsUGxizPPrfLsJwLTD5sfkB2fUyPKas,2574
+pyproject_to_setup-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pyproject_to_setup-0.1.1.dist-info/entry_points.txt,sha256=w7IQ0G1xdVjhR75mbmFN8ci6hG2CEjImypzMdK3wz9E,67
+pyproject_to_setup-0.1.1.dist-info/licenses/LICENSE,sha256=YLsAdpM8tP0uyigOUJNhkBVW86OG_zvEh1XM7oMfOBg,1066
+pyproject_to_setup-0.1.1.dist-info/RECORD,,

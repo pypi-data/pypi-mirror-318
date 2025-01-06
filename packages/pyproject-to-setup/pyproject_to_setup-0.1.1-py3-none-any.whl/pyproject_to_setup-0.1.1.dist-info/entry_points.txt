@@ -1,0 +1,2 @@
+[console_scripts]
+pyproject-to-setup = pyproject_to_setup.cli:main
