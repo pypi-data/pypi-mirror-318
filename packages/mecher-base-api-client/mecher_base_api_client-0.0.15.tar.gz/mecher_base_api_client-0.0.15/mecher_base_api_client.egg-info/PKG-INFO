@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: mecher_base_api_client
+Version: 0.0.15
+Summary: Base for API clients
+Home-page: https://github.com/MaximChernyak98/mecher_base_api_client
+Maintainer: mecher
+Keywords: testing
+Description-Content-Type: text/plain
+Requires-Dist: allure-pytest==2.13.5
+Requires-Dist: requests==2.32.3
+
+Base for API clients
