@@ -1,0 +1,10 @@
+pyaffalddk/__init__.py,sha256=Meqz_Kzv2vwVX-vDt-VrWiax7wrXpiD4cHLl6HpqqE0,594
+pyaffalddk/api.py,sha256=TqrH5HLDl3d3twafFKlWBJFU-B0njzzjVfiiZHL3Wfg,25872
+pyaffalddk/const.py,sha256=rCPZ2pt2u7_zmRxNkUtvZow83JAL4QSR4A7IYWvzxT4,15939
+pyaffalddk/data.py,sha256=Kheas9r3IXGYLD6DnKCGGAlGMCvxBx8Tr5iBzU2gZmU,2206
+pyaffalddk/images.py,sha256=6on01KjduRSLmaXWFL-q9fx8QlWHTL1EFYdpTlVGlko,810
+pyaffalddk-2.1.3.dist-info/LICENSE,sha256=V_lBwo7u3jb5xyxLhTvun0o1pmWIlCN6ChYW0SFrNvQ,1068
+pyaffalddk-2.1.3.dist-info/METADATA,sha256=8FIZ97w50_L7s6DiZjh-1oG8_93av40gbH9ZmH5d7xM,735
+pyaffalddk-2.1.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+pyaffalddk-2.1.3.dist-info/top_level.txt,sha256=aZETZHx0X0CRxqxOPqbFhukfDD5RvkEXAXCdKzFUAws,11
+pyaffalddk-2.1.3.dist-info/RECORD,,
