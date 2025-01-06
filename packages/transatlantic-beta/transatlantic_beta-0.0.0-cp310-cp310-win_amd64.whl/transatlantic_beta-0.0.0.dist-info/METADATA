@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: transatlantic_beta
+Version: 0.0.0
+Home-page: https://google.com/
+Download-URL: https://google.com/
+License: GNU Affero General Public License v3
+Project-URL: Documentation, https://google.com/
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: Cython
+Requires-Dist: matplotlib
+Requires-Dist: scikit-learn
+Requires-Dist: networkx
+
+# InÅ¼ynierka
+
+# Co robimy
+1. Robimy algorytmy ktÃ³re bÄ™dÄ… **klasteryzowaÄ‡ dane**.
+2. Wiemy do jakich klastrÃ³w naleÅ¼Ä… niektÃ³re z punktÃ³w.
+3. Operujemy tylko na danych liczbowych.
+4. Algorytm tworzy klastry tylko dla danego dataset. O to chodzi w tej transdukcji, Å¼e nie tworzy siÄ™ modelu. Jak mamy klastry i pojawi siÄ™ nowy punkt w danych to trzeba liczyÄ‡ na nowo wszystkie klastry. 
+
+# Linki
+> #### OgÃ³lnie, co to jest ta transdukcja:<br>
+> https://en.wikipedia.org/wiki/Transduction_(machine_learning)<br><br>
+
+> #### To wszystko co robimy moÅ¼na podpiÄ…Ä‡ pod semi-supervised learning:<br>
+> https://arxiv.org/pdf/1307.0252<br><br>
+
+> #### Bardzo moÅ¼liwe Å¼e jednym z algorytmÃ³w to bÄ™dzie zmodyfikowany K-Means:<br> 
+> https://www.ire.pw.edu.pl/~pplonski/papers/PP_KZ_kmeans_icannga2013.pdf - tu zrobili coÅ› takiego<br>
+> > *UPDATE: Pewnie nie bÄ™dzie to K-Means, bo z zaÅ‚oÅ¼enia tworzy on model, ale nadal K-Means moÅ¼na uÅ¼ywaÄ‡ jako pomocnik w algorytmach innych, np: [Spectral Clustering](https://en.wikipedia.org/wiki/Spectral_clustering) (ono teÅ¼ oparte jest na grafach)*<br><br>
+
+> #### Algorytmy oparte na drzewach teÅ¼ warto sprawdziÄ‡, bo Prof. GÄ…golewski napisaÅ‚ paper + drzewa rozpinajÄ…ce sÄ… z zaÅ‚oÅ¼enia transduktywne (wyglÄ…dajÄ… inaczej dla set vs. set+ jeden punkt):<br>
+> https://link.springer.com/content/pdf/10.1007/s00357-024-09483-1.pdf<br><br>
+
+> #### Graph-Based clustering (ogÃ³lniejsze niÅ¼ drzewa, pojawia siÄ™ problem reprezentacji danych za pomocÄ… grafu):<br>
+> https://www.cse.msu.edu/~cse802/S17/slides/Lec_20_21_22_Clustering.pdf
+# Dane do testowania
+Najlepiej skorzystaÄ‡ z gotowych dataset, do testowania, bardzo duÅ¼o jest w [Repozytorium prof. GÄ…golweskiego](https://github.com/gagolews/clustering-data-v1/)
+
+# Nauka
+Pewnie trzeba bÄ™dzie siÄ™ nauczyÄ‡ NetworkX Å¼eby z drzew korzystaÄ‡; zakÅ‚adam Å¼e nie musimy od poczÄ…tku pisaÄ‡ algorytmÃ³w szukajÄ…cych min. drzewa rozpinajÄ…cego:<br>
+https://networkx.org/ <br><br>
+### ***JAK SIÄ˜ PISZE BIBLIOTEKI W PYTHONIE?***<br>
+Nw to siÄ™ wydaje przydatne<br>
+https://www.reddit.com/r/learnpython/comments/13ouob6/how_to_create_a_python_packagelibrary/
+# Do ustalenia
+1. Czy wiemy ile klastrÃ³w ma byÄ‡ w danych
+2. Czy przyjmujemy zaÅ‚oÅ¼enie Å¼e otrzymamy jakiegoÅ› reprezentanta dla kaÅ¼dego z klastrÃ³w
+3. Czy przyjmujemy zaÅ‚oÅ¼enia o tym, ile danych (minimum/maksimum) ma byÄ‡ sklasyfikowanych
+   
