@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: deeptensor
+Version: 0.1.0
+Author-Email: Deependu Jha <deependujha21@gmail.com>
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Description-Content-Type: text/markdown
+
+# DeepTensor
+
+![mexican cat dance](./assets/mexican-cat-dance.gif)
+
+```bash
+pip install deeptensor
+```
+
+---
+
+## Checkout Demo
+
+- [play with demo](./demo/main.ipynb)
+
+![demo](./assets/trained-model.png)
+
+---
+
+## WIP
+
+- Save & Load model
+- Train MNIST model
+- Train a character-level transformer model
+- Add support for DDP
+- Add support for CUDA execution
