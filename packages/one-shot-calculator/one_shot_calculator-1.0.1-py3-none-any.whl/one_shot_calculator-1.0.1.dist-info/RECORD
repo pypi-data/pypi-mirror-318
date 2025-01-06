@@ -1,0 +1,12 @@
+one_shot_calculator/__init__.py,sha256=IHLFZjMb0vgBlKcf9dCRW1U4VxbLccustVvxbxGMxQw,19
+one_shot_calculator/discrete_dists.py,sha256=QR6ZrSldm7HKASv2f1xiQtXR5TWiKZ8rD4HP0JWpIjg,3173
+one_shot_calculator/one_shot_calculator_3p5.py,sha256=FYa_-Xw4njgHCkUwppGEOsQ17qfJMEAOZwckBsvCahM,8350
+one_shot_calculator/one_shot_calculator_adnd.py,sha256=Vrg44adWyGIpQk1uRQz7tJDP7HhubWqBR4_EBFbWYbY,11143
+one_shot_calculator/process_csv.py,sha256=53-_dqJpmVIo2AknjkEHOmHtH601qhpEF0OkX5qJeKY,32936
+one_shot_calculator/csv/Monster Compendium (Graphless).csv,sha256=CyHmn6aNWL_bT95S2emoJny7Kbx8alXUy66qwC8_qng,1626582
+one_shot_calculator/csv/SBLaxman's AD&D Monster List 2.1.csv,sha256=oR2Pi3KzoPpomp0_rEPUbcOSH2frC69pdu2sS4rhu-Y,1449742
+one_shot_calculator/csv/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+one_shot_calculator-1.0.1.dist-info/METADATA,sha256=6M16IU5gTWj8l_9-3Da50-WSiHBxYqxnMdj7fZWb_To,5878
+one_shot_calculator-1.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+one_shot_calculator-1.0.1.dist-info/licenses/LICENSE,sha256=e1aWjqw-1KrrEKPKQZ3EmyQ6azOzW9zGjBlIOetSb2Y,1071
+one_shot_calculator-1.0.1.dist-info/RECORD,,
