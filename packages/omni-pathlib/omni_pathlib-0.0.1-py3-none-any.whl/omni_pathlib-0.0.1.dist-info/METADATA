@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: omni_pathlib
+Version: 0.0.1
+Summary: Add your description here
+Author-email: Haskely <Haskely@live.com>
+Requires-Python: >=3.10
+Requires-Dist: aiohttp>=3.11.11
+Requires-Dist: aiopath>=0.6.11
+Requires-Dist: curl-cffi>=0.7.4
