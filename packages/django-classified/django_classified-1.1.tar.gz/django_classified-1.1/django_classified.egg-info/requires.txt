@@ -1,0 +1,7 @@
+django-bootstrap-form
+django-filter
+Django<5.2,>=4.2
+Pillow
+sorl-thumbnail
+unidecode
+babel
