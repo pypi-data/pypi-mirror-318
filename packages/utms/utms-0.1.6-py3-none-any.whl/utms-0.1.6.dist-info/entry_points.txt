@@ -1,0 +1,3 @@
+[console_scripts]
+utms=utms.cli.shell:main
+
