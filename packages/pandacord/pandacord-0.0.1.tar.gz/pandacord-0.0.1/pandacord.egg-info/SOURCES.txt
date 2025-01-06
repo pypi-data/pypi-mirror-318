@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+readme.txt
+setup.py
+pandacord/__init__.py
+pandacord.egg-info/PKG-INFO
+pandacord.egg-info/SOURCES.txt
+pandacord.egg-info/dependency_links.txt
+pandacord.egg-info/requires.txt
+pandacord.egg-info/top_level.txt

@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pandacord
+Version: 0.0.1
+Summary: A Discord multi-tool.
+Home-page: 
+Author: ozzy0xd
+Author-email: grayozzy11@gmail.com
+License: MIT
+Keywords: discord
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE.txt
+Requires-Dist: requests
+
+# Full documentation on GitHub...
+
+I will not make a function to join a server/guild as such thing is against their ToS.
+
+Change Log
+---------------
+05/01/25 - First release, no content yet.

@@ -1,0 +1,3 @@
+# Full documentation on GitHub...
+
+I will not make a function to join a server/guild as such thing is against their ToS.
