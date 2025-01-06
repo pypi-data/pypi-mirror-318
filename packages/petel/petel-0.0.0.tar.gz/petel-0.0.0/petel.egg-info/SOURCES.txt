@@ -1,0 +1,6 @@
+README.md
+setup.py
+petel.egg-info/PKG-INFO
+petel.egg-info/SOURCES.txt
+petel.egg-info/dependency_links.txt
+petel.egg-info/top_level.txt
