@@ -1,0 +1,2 @@
+[console_scripts]
+xrag-cli = xrag.cli:main
