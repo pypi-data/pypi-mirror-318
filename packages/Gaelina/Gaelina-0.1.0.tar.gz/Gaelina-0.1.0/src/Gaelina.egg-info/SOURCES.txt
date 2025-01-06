@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/Gaelina.egg-info/PKG-INFO
+src/Gaelina.egg-info/SOURCES.txt
+src/Gaelina.egg-info/dependency_links.txt
+src/Gaelina.egg-info/not-zip-safe
+src/Gaelina.egg-info/requires.txt
+src/Gaelina.egg-info/top_level.txt
+src/gaelina/__init__.py
+src/gaelina/exceptions.py
