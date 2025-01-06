@@ -1,0 +1,3 @@
+[console_scripts]
+niftiview-app=niftiview_app.main:main
+
