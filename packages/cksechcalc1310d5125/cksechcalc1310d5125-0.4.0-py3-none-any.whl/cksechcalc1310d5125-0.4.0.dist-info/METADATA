@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: cksechcalc1310d5125
+Version: 0.4.0
+Summary: Calcluator package to test packaging and distribution.
+Author: Trainer
+Author-email: lms@echios.com
+License: MIT
+Requires-Python: >=3.6
+
