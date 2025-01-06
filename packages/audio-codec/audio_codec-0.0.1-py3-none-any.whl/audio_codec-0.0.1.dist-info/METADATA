@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: audio-codec
+Version: 0.0.1
+Summary: Audio Codec
+Home-page: https://github.com/pengzhendong/audio-codec
+Author: Zhendong Peng
+Author-email: pzd17@tsinghua.org.cn
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: modelscope
+Requires-Dist: moshi
+
+# audio-codec
