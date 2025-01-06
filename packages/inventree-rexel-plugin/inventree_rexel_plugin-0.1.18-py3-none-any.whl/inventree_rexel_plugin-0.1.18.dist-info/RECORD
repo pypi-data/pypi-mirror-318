@@ -1,0 +1,15 @@
+inventree_rexel/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+inventree_rexel/core.py,sha256=fAaDO30-WTjr52vqkf-O7VsdgO3wdHTamKCy1iN4KlI,3158
+inventree_rexel/datahandler.py,sha256=8nPXklJpR22NVcbZrm3_PUe6b-W-tcqtSGWZNn7zfcY,5649
+inventree_rexel/demo.py,sha256=DkQ6ctLON0Yx0Nu2ktGkQtb-F5orFJXrhsheIXhHwLY,7099
+inventree_rexel/helpers.py,sha256=Q803WlI8EQmQ1C0wf_Yw2dASHoyCjHLqXTfeBhlqrr4,7528
+inventree_rexel/serializers.py,sha256=pRW-59tX8vM9P-MfiVC3OznvGFD_FLk4KQ15LRSJRs8,292
+inventree_rexel/version.py,sha256=XOpr_PjF5WD_uGUF-AaR5FaBADkCyWo0SCrj0sM1DNg,33
+inventree_rexel/views.py,sha256=hASzkNBpYOmGA7LZlSGtJXkJNUq8pKRpk-BP3aqHnJg,719
+inventree_rexel/static/RexelPanel.js,sha256=7AF2UbSGySbtJUdLwqJ5gnP5nnG9vXiseHyKSrEaVNY,246592
+inventree_rexel_plugin-0.1.18.dist-info/LICENSE,sha256=OKGvb2ygWE3dVeFtoLSYD3szi3glRXoSL1ARBqZvw6A,1069
+inventree_rexel_plugin-0.1.18.dist-info/METADATA,sha256=7gH_aptxcxRVdA8hB-AVltCJbE8cb223RfZXJlySUws,1021
+inventree_rexel_plugin-0.1.18.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+inventree_rexel_plugin-0.1.18.dist-info/entry_points.txt,sha256=ULbGA0pVF7zgiQvw2NGeifEJZ6IX1bUa2Pg_zEDG7zA,67
+inventree_rexel_plugin-0.1.18.dist-info/top_level.txt,sha256=0NiE-c5N1hzDVwP9u-ZFfMVyAxfuBnm_ubDfT5WR3yI,16
+inventree_rexel_plugin-0.1.18.dist-info/RECORD,,
