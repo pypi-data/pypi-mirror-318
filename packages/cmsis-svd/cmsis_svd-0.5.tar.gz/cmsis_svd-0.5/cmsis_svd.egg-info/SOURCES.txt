@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+cmsis_svd/__init__.py
+cmsis_svd/model.py
+cmsis_svd/parser.py
+cmsis_svd.egg-info/PKG-INFO
+cmsis_svd.egg-info/SOURCES.txt
+cmsis_svd.egg-info/dependency_links.txt
+cmsis_svd.egg-info/requires.txt
+cmsis_svd.egg-info/top_level.txt
+cmsis_svd/examples/__init__.py
+cmsis_svd/examples/show_k20_json.py
+cmsis_svd/examples/show_k20_peripherals.py
+cmsis_svd/tests/__init__.py
+cmsis_svd/tests/test_parser.py
