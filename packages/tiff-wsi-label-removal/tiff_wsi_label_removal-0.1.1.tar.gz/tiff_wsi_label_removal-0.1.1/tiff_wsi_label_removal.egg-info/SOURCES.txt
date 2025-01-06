@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+tiff_wsi_label_removal.egg-info/PKG-INFO
+tiff_wsi_label_removal.egg-info/SOURCES.txt
+tiff_wsi_label_removal.egg-info/dependency_links.txt
+tiff_wsi_label_removal.egg-info/requires.txt
+tiff_wsi_label_removal.egg-info/top_level.txt
