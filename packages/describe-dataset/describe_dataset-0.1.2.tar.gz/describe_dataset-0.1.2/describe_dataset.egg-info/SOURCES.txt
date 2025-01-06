@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+describe_dataset/__init__.py
+describe_dataset/describer.py
+describe_dataset.egg-info/PKG-INFO
+describe_dataset.egg-info/SOURCES.txt
+describe_dataset.egg-info/dependency_links.txt
+describe_dataset.egg-info/requires.txt
+describe_dataset.egg-info/top_level.txt
