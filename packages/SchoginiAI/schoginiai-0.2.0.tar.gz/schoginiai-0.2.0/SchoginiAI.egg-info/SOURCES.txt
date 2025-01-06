@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+SchoginiAI/__init__.py
+SchoginiAI/main.py
+SchoginiAI.egg-info/PKG-INFO
+SchoginiAI.egg-info/SOURCES.txt
+SchoginiAI.egg-info/dependency_links.txt
+SchoginiAI.egg-info/requires.txt
+SchoginiAI.egg-info/top_level.txt
+tests/test_chroma.py
+tests/test_faiss.py
+tests/test_main.py
+tests/test_pinecone.py
