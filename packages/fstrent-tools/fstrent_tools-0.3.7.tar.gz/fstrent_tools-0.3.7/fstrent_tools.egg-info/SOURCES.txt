@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+fstrent_tools.egg-info/PKG-INFO
+fstrent_tools.egg-info/SOURCES.txt
+fstrent_tools.egg-info/dependency_links.txt
+fstrent_tools.egg-info/top_level.txt
