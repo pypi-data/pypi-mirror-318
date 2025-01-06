@@ -1,0 +1,81 @@
+site_name: Castella
+site_url: https://i2y.github.io/castella
+repo_url: https://github.com/i2y/castella
+theme:
+  name: material
+  language: "en"
+  logo: images/sweets_kasutera.png
+  favicon: images/sweets_kasutera.png
+  features:
+    # - navigation.tabs
+    - navigation.top
+    - navigation.footer
+    - content.code.annotate
+  palette:
+    - scheme: default
+      primary: red
+      accent: red
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: switch to dark mode
+    - scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/toggle-switch
+        name: switch to light mode
+  font:
+    text: "Roboto"
+    code: "Roboto Mono"
+  icon:
+    repo: fontawesome/brands/github
+copyright: "&copy; 2022 Yasushi Itoh"
+repo_name: i2y/castella
+nav:
+  - Home: index.md
+  - Getting started:
+      - Installation: getting-started.md
+      - Hello World: hello-world.md
+      - Layout: layout.md
+      - Custom Widgets: custom-widgets.md
+      - Built-in Widgets: widgets.md
+      - Style: style.md
+      - Hot restarting: hot-restarting.md
+      - Hot reloading: hot-reloading.md
+  - Packaging: packaging.md
+  - License: license.md
+plugins:
+  search:
+    lang: 'en'
+
+markdown_extensions:
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
+  - md_in_html
+  - admonition
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/i2y_
+      name: i2y on Twitter
+    - icon: fontawesome/brands/github
+      link: https://github.com/i2y/castella/
+  files:
+    - examples/*

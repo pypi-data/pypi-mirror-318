@@ -1,0 +1,75 @@
+[project]
+name = "castella"
+version = "0.2.3"
+description = "Castella is a pure Python cross-platform UI framework"
+authors = [{ name = "Yasushi Itoh", email = "i2y@icloud.com" }]
+license = "MIT"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    'Programming Language :: Python :: 3',
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+readme = "README.md"
+
+requires-python = ">= 3.11"
+
+[project.optional-dependencies]
+glfw = [
+    "glfw>=2.7.0",
+    "PyOpenGL>=3.1.7",
+    "skia-python>=87.6",
+    "darkdetect>=0.8",
+    "pydantic>=2.7.4",
+]
+sdl = [
+    "glcontext>=2.5.0",
+    "pysdl2-dll>=2.30.2",
+    "PySDL2>=0.9.16",
+    "zengl>=2.4.1",
+    "skia-python>=87.6",
+    "darkdetect>=0.8",
+    "pydantic>=2.7.4",
+]
+tui = [
+    "windows-curses>=2.3.3; sys_platform == 'win32'",
+    "prompt-toolkit>=3.0.48",
+    "darkdetect>=0.8",
+    "pydantic>=2.7.4",
+    "pyperclip>=1.9.0",
+]
+[project.urls]
+homepage = "https://github.com/i2y/castella"
+repository = "https://github.com/i2y/castella"
+documentation = "https://i2y.github.io/castella"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "glfw>=2.7.0",
+    "PyOpenGL>=3.1.7",
+    "glcontext>=2.5.0",
+    "pysdl2-dll>=2.30.2",
+    "PySDL2>=0.9.16",
+    "zengl>=2.4.1",
+    "skia-python>=87.6",
+    "darkdetect>=0.5.1",
+    "mkdocs>=1.6.0",
+    "ruff>=0.4.2",
+    "black>=24.4.2",
+    "pip>=24.0",
+    "mkdocs-material>=9.5.20",
+    "mkdocs-video>=1.5.0",
+    "pymdown-extensions>=10.8.1",
+    "pydantic>=2.7.4",
+    "matplotlib>=3.9.0",
+    "windows-curses>=2.3.3; sys_platform == 'win32'",
+    "prompt-toolkit>=3.0.48",
+    "pyperclip>=1.9.0",
+]
+
+[build-system]
+requires = ["hatchling==1.26.3"]
+build-backend = "hatchling.build"
