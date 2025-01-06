@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+src/dispatchly/__init__.py
+src/dispatchly/__main__.py
+src/dispatchly.egg-info/PKG-INFO
+src/dispatchly.egg-info/SOURCES.txt
+src/dispatchly.egg-info/dependency_links.txt
+src/dispatchly.egg-info/top_level.txt
+src/dispatchly/tests/__init__.py
+src/dispatchly/tests/test_1984.py
