@@ -1,0 +1,12 @@
+cmsis_svd/__init__.py,sha256=iGhW8VZKSdQxZLT3IgZkYMZIKfWxGzgJkciJAc4OGhA,620
+cmsis_svd/model.py,sha256=7p0Wzgo5clLGLpIHswU0zPqiHyK9aXCakNhEGf0_3FU,16578
+cmsis_svd/parser.py,sha256=fdZEiv2UeX16WP2mWFB6GACgprzinFK4ICLM-kxanMg,30344
+cmsis_svd/examples/__init__.py,sha256=U8N0FcYPonFLXBm20fzgoNEUL_T9iR7UguNznyjnnCg,600
+cmsis_svd/examples/show_k20_json.py,sha256=OoWPDP1rQNo8d7sqqd1FuLyFfWkf_cAzpPPktKouV0c,1004
+cmsis_svd/examples/show_k20_peripherals.py,sha256=_8IKcIdtCU49IAkwe2kQxM6c2CO3KE4VRPkBVsjgoho,977
+cmsis_svd/tests/__init__.py,sha256=XyyV2TJ8wfxfu6IvVVjFUlBRvW2YHja8XB9498nWecA,599
+cmsis_svd/tests/test_parser.py,sha256=Cledr5VLeGDiIy5Pg8P5Wzbz-W2ME14sS-9bFokwpCk,15998
+cmsis_svd-0.5.dist-info/METADATA,sha256=Kt_9KU9Hrr-xguyZQhyncDjotavhD4ogWHis8yYOAPU,3833
+cmsis_svd-0.5.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+cmsis_svd-0.5.dist-info/top_level.txt,sha256=hW8qZ3mc3uBX4ibyor0xF0W-tNFmKnUihxnQUXE_K1c,10
+cmsis_svd-0.5.dist-info/RECORD,,
