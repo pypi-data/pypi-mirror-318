@@ -1,0 +1,12 @@
+MANIFEST.in
+pyproject.toml
+requirements.txt
+setup.py
+mecher_base_api_client/__init__.py
+mecher_base_api_client/api_client.py
+mecher_base_api_client/utils.py
+mecher_base_api_client.egg-info/PKG-INFO
+mecher_base_api_client.egg-info/SOURCES.txt
+mecher_base_api_client.egg-info/dependency_links.txt
+mecher_base_api_client.egg-info/requires.txt
+mecher_base_api_client.egg-info/top_level.txt
