@@ -1,0 +1,5 @@
+six>=1.10
+lxml
+
+[DEV]
+nose2
