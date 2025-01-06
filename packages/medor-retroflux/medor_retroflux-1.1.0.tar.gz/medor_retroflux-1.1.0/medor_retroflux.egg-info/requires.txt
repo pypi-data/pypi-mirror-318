@@ -1,0 +1,9 @@
+pandas
+matplotlib
+pyyaml
+numpy
+plotly
+yfinance
+kaleido
+openpyxl
+nbformat
