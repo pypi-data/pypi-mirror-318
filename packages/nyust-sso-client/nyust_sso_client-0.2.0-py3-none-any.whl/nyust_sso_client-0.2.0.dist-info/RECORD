@@ -1,0 +1,13 @@
+nyust_sso/__init__.py,sha256=zfKCYgbHrgWLsNboWjCk1OsV-0bdWqQb_9LZgtdNwQo,36
+nyust_sso/_types.py,sha256=bl4eRXqt06UBrm46pZOgcU3wajOwFwA6JLi2hlR6Hzo,1527
+nyust_sso/client.py,sha256=k9U32CE1c7yNUw_5yK2cgx6Wt0Ix9rDsZoirt8HOALw,8805
+nyust_sso/errors.py,sha256=v0hDW0iTz1IhjU0tfLt9329pxZ6JThzrd0k8_lidUtA,750
+nyust_sso/tronclass/__init__.py,sha256=tokayR5GNnKPV7lxsG6NBp6oQGyFSzWiwebcvm3z7T4,6185
+nyust_sso/tronclass/entity/activity.py,sha256=j6e70k-d_Gt6ljuzviE4NKDVzWwv05jefse12R47XC8,4655
+nyust_sso/tronclass/entity/base.py,sha256=5hHBXMVdfS3esG_N7chWfbDMjUOQwgKzxe32yrRjcBg,455
+nyust_sso/tronclass/entity/course.py,sha256=gaxijsgZPuLqlOe2XLpoYFlrAA1P9jZlAkTUEG7CBBI,1104
+nyust_sso/tronclass/utils.py,sha256=gDxcyLylPk3QNcvpgxkU75Z3OiNwbvN8WXrzaHvD3lI,1392
+nyust_sso/utils.py,sha256=Sb6CUfonjsfZTjGAwbYQiQsck08Kc-RYJuestbk63T0,560
+nyust_sso_client-0.2.0.dist-info/METADATA,sha256=qJaUHg8RyfbMvJEEGLoMMuuomqzX7CKvnRkSX9FuAoQ,2232
+nyust_sso_client-0.2.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+nyust_sso_client-0.2.0.dist-info/RECORD,,
