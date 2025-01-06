@@ -1,0 +1,2 @@
+[console_scripts]
+bingsearch = bingsearch.bingsearch:run
