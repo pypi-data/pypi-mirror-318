@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mecher_bs_api_client
+Version: 0.0.13
+Summary: BrowserStack API client
+Home-page: https://github.com/MaximChernyak98/mecher_bs_api_client
+Maintainer: mecher
+Keywords: testing
+Description-Content-Type: text/plain
+Requires-Dist: easydict==1.10
+Requires-Dist: allure-pytest==2.13.5
+Requires-Dist: requests==2.32.3
+Requires-Dist: mecher-base-api-client==0.0.2
+
+BrowserStack API client

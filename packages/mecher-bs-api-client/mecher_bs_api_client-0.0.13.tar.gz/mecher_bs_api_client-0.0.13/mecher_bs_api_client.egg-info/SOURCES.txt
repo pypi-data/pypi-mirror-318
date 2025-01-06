@@ -1,0 +1,11 @@
+MANIFEST.in
+pyproject.toml
+requirements.txt
+setup.py
+mecher_bs_api_client/__init__.py
+mecher_bs_api_client/browserstack_api_init.py
+mecher_bs_api_client.egg-info/PKG-INFO
+mecher_bs_api_client.egg-info/SOURCES.txt
+mecher_bs_api_client.egg-info/dependency_links.txt
+mecher_bs_api_client.egg-info/requires.txt
+mecher_bs_api_client.egg-info/top_level.txt
