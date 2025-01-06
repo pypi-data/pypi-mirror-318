@@ -1,0 +1,7 @@
+**/aux
+**/*.pdf
+**/*.docx
+**/*.log
+**/*.tmp
+tests/test.json
+dist/
