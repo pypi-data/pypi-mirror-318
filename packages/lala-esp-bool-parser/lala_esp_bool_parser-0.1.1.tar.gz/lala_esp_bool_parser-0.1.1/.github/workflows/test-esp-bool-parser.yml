@@ -1,0 +1,52 @@
+name: Test ESP bool parser
+
+on:
+  pull_request:
+    paths:
+      - 'esp_bool_parser/**'
+  push:
+    branches:
+      - main
+
+env:
+  IDF_PATH: /opt/esp/idf
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build-python-packages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.7'
+      - run: |
+          pip install -U pip
+          pip install flit
+          flit build
+      - name: Upload built python packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: wheel
+          path: dist/esp_bool_parser-*.whl
+
+
+  basic-testest:
+    runs-on: ubuntu-latest
+    env:
+      FLIT_ROOT_INSTALL: 1
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the Apps
+        run: |
+          pip install flit
+          flit install -s
+          pytest --cov esp_bool_parser --cov-report term-missing:skip-covered --junit-xml pytest.xml | tee pytest-coverage.txt
+      - name: Pytest coverage comment
+        uses: MishaKav/pytest-coverage-comment@main
+        with:
+          pytest-coverage-path: pytest-coverage.txt
+          junitxml-path: pytest.xml
