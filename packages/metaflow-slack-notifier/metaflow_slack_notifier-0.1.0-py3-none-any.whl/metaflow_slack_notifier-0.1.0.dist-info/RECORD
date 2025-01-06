@@ -1,0 +1,6 @@
+metaflow_extensions/slack/plugins/__init__.py,sha256=T4TzLjv6YIG7oB1oDjYOV9BQurgY2VBLMeCimq5b93c,1508
+metaflow_extensions/slack/plugins/slack.py,sha256=ZkFnecG6ifS5QU6iW0G_Tixlx2iGAw5A_zytOo4jO-o,586
+metaflow_slack_notifier-0.1.0.dist-info/METADATA,sha256=Xr5uXsPGmDA_OAw9v_TghG_NI3xrhHY6fkFxKMJ1xlc,2376
+metaflow_slack_notifier-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+metaflow_slack_notifier-0.1.0.dist-info/licenses/LICENSE.txt,sha256=LF_pnwYdvRHVi3Z2xBjQ0PWdhwisXbCta2i3EqhAEGk,1079
+metaflow_slack_notifier-0.1.0.dist-info/RECORD,,
