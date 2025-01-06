@@ -1,0 +1,16 @@
+acrud/__init__.py,sha256=ufBU2SPfCnOFFFKZhsR2tuEdUVYHg7M9q5Jeeh4FsOU,1271
+acrud/exception.py,sha256=g9KEjHwtf6jKAz7uYmXXmk4C6ls4SMDXFpHPXnqhUhg,594
+acrud/settings.py,sha256=qBc9U2hhkmfbppdnOOBlDRtKRZ8rCp7F5GQCiCdf9Gc,84
+acrud/storage/__init__.py,sha256=QbFRw52-36DBA1vS7gumvo3NhOXmzGZl6dA5TkvAUE8,207
+acrud/storage/base.py,sha256=AnZIXXOnUwtMemTT5tU8Kavo4oKuNG9r4UfbUFwmOWY,1912
+acrud/storage/convert.py,sha256=aXRrh2XTMwB2a24SiMbWOeQsXiYnaVJHbqt5YY9SYY4,2852
+acrud/storage/google_drive/__init__.py,sha256=HuQYmDDllElw1uXFSpScaMJH7ECc2Gra7N1pQjdVcTU,71
+acrud/storage/google_drive/google_drive.py,sha256=5qpXp_9Dx1HPNpDAvzDs_msVtJ4ZRueFCZrXQNBjlH0,8451
+acrud/storage/local/__init__.py,sha256=w2XAmtY0fRDlNCO7mPpJm36BA8oEntng5kZOW_wTUS0,52
+acrud/storage/local/local.py,sha256=OgqHK8mD1FDXBn2LTLK61wIA06WBWJTCUK6vTtW5KaY,4427
+acrud/storage/s3/__init__.py,sha256=vFRZg849PIYoDBhJMtWYack0zpOEeOgHBSqXn0Swca4,43
+acrud/storage/s3/s3.py,sha256=1lR0UOk5ADB0SkymOf7X0RSW2qjuIwtQzfGwRwH524s,5029
+acrud/storage/utils.py,sha256=z_5cp_Ik0RJxzaAju_bduSodr77jYMBTNdCO1Su-3-4,217
+acrud-0.3.0.dist-info/METADATA,sha256=bLREvRMWJv0haqWbqxUck8x7Jw6d_PZme4_V-PyRHCs,2108
+acrud-0.3.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+acrud-0.3.0.dist-info/RECORD,,
